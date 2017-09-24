@@ -65,7 +65,11 @@ public class Parser extends DefaultHandler {
             .setPrettyPrinting()
             .serializeNulls()
             .create();
-        return gson.toJson(modelViewL);
+        Model model = new Model();
+        model.setModelViewL(modelViewL);
+        model.setObjectL(objectL);
+        model.setviewL(viewL);
+        return gson.toJson(model);
     }
 
     private void printJson(){
