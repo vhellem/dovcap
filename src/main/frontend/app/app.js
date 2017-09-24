@@ -8,7 +8,7 @@ class App extends React.Component {
     componentWillMount() {
         getModelsFromBackend().then(res => {
 
-            const json = JSON.parse(res.text); 
+            const json = JSON.parse(res.text);
 
             console.log(json) ;
         })

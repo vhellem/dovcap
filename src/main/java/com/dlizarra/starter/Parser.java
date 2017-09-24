@@ -23,6 +23,7 @@ import com.google.gson.*;
 
 public class Parser extends DefaultHandler {
     List<myObject> objectL;
+    List<myObject> viewL;
     String objectXmlFileName;
     String tmpValue;
     String tmpName;
@@ -32,6 +33,7 @@ public class Parser extends DefaultHandler {
     public Parser(String objectXmlFileName) {
         this.objectXmlFileName = objectXmlFileName;
         objectL = new ArrayList<myObject>();
+        viewL = new ArrayList<myObject>();
         readingValueset = false;
         parseDocument();
         //printAll();
@@ -59,7 +61,7 @@ public class Parser extends DefaultHandler {
             .setPrettyPrinting()
             .serializeNulls()
             .create();
-        return gson.toJson(objectL);
+        return gson.toJson(viewL);
     }
 
     private void printJson(){
@@ -107,6 +109,17 @@ public class Parser extends DefaultHandler {
                 objectL.add(objectTmp);
             }
             objectTmp.setId(attributes.getValue("id"));
+        }
+        if (elementName.equals("objectview")){
+            int index = viewL.indexOf(attributes.getValue("id"));
+            if (index != -1){
+                objectTmp = viewL.get(index);
+            } else {
+                objectTmp = new myObject();
+                viewL.add(objectTmp);
+            }
+            objectTmp.setId(attributes.getValue("id"));
+
         }
         if (readingValueset) {
             tmpName = attributes.getValue("name");
