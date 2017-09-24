@@ -9,10 +9,15 @@ public class myObject {
     String id;
     String name;
     String type;
+    ArrayList<String> viewChildren;
     Map<String, String> valueset;
+    Map<String, String> attributes;
+
 
     public myObject(){
         valueset = new HashMap<String, String>();
+        attributes = new HashMap<String, String>();
+        viewChildren = new ArrayList();
     }
 
     @Override
@@ -28,6 +33,9 @@ public class myObject {
         valueset.put(key, value);
     }
 
+    public void addChild(String ref){
+        viewChildren.add(ref);
+    }
     public void setId(String id){
         if (this.id == null) {
             this.id = id;
@@ -38,6 +46,9 @@ public class myObject {
         if (this.type == null){
             this.type = type;
         }
+    }
+    public void setAttributes(HashMap<String, String> att){
+        this.attributes = att;
     }
 
     public void setName(String name){

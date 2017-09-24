@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.nio.file.*;
 import java.nio.charset.*;
@@ -24,6 +25,8 @@ import com.google.gson.*;
 public class Parser extends DefaultHandler {
     List<myObject> objectL;
     List<myObject> viewL;
+    List<myObject> modelViewL;
+
     String objectXmlFileName;
     String tmpValue;
     String tmpName;
@@ -34,6 +37,7 @@ public class Parser extends DefaultHandler {
         this.objectXmlFileName = objectXmlFileName;
         objectL = new ArrayList<myObject>();
         viewL = new ArrayList<myObject>();
+        modelViewL = new ArrayList<myObject>();
         readingValueset = false;
         parseDocument();
         //printAll();
@@ -61,7 +65,7 @@ public class Parser extends DefaultHandler {
             .setPrettyPrinting()
             .serializeNulls()
             .create();
-        return gson.toJson(viewL);
+        return gson.toJson(modelViewL);
     }
 
     private void printJson(){
@@ -111,6 +115,11 @@ public class Parser extends DefaultHandler {
             objectTmp.setId(attributes.getValue("id"));
         }
         if (elementName.equals("objectview")){
+            HashMap<String, String> att = new HashMap();
+            for (int i =0; i<attributes.getLength(); i++){
+                att.put(attributes.getQName(i), attributes.getValue(i));
+            }
+
             int index = viewL.indexOf(attributes.getValue("id"));
             if (index != -1){
                 objectTmp = viewL.get(index);
@@ -118,11 +127,32 @@ public class Parser extends DefaultHandler {
                 objectTmp = new myObject();
                 viewL.add(objectTmp);
             }
+            objectTmp.setAttributes(att);
             objectTmp.setId(attributes.getValue("id"));
 
         }
+        if (elementName.equals("child-link")){
+            objectTmp.addChild(attributes.getValue("xlink:href"));
+        }
         if (readingValueset) {
             tmpName = attributes.getValue("name");
+        }
+        if(elementName.equals("modelview")){
+            HashMap<String, String> modelAtt = new HashMap();
+            for (int i =0; i<attributes.getLength(); i++){
+                modelAtt.put(attributes.getQName(i), attributes.getValue(i));
+            }
+
+            int index = modelViewL.indexOf(attributes.getValue("id"));
+            if (index != -1){
+                objectTmp = modelViewL.get(index);
+            } else {
+                objectTmp = new myObject();
+                modelViewL.add(objectTmp);
+            }
+            objectTmp.setAttributes(modelAtt);
+            objectTmp.setId(attributes.getValue("id"));
+
         }
         if (elementName.equals("valueset")) {
             readingValueset = true;
