@@ -1,17 +1,13 @@
 package com.dlizarra.starter;
 
 
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ModelController {
 
-
+        @CrossOrigin(origins = "http://localhost:9090")
         @RequestMapping(value = "/api/getModel", method = RequestMethod.GET)
-
         public String getModels() {
             Parser parser = new Parser("simple.kmv");
 

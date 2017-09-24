@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../style/style.css';
+import App from './app.js'
 
 ReactDOM.render(
-  <h1 className="testblue">Hot Reload working</h1>,
-  document.querySelector('.container'),
+  <App/>,
+    document.querySelector('.container'),
 );
