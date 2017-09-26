@@ -1,0 +1,33 @@
+{
+  "env": {
+    "node": true,
+    "jest": true,
+    "jasmine": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    //"react-app"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error", {
+        "singleQuote": true,
+        "trailingComma": "all",
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-console": "off"
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": [
+    "jest",
+    "prettier",
+  ]
+}
