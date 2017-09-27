@@ -1,16 +1,28 @@
 import React from 'react';
 import { getModelsFromBackend } from './utlities.js';
+import {Layer, Rect, Stage, Group} from 'react-konva';
+
 
 class App extends React.Component {
-  componentWillMount() {
-    getModelsFromBackend().then(res => {
-      const json = JSON.parse(res.text);
+    render() {
+      return (
+        <Stage width={700} height={700}>
+          <Layer>
+            <Rect
+              x={10}
+              y={10}
+              width={50}
+              height={50}
+               fill={"red"}
+              shadowBlur={5}
+            />
+          </Layer>
+        </Stage>
 
-      console.log(json);
-    });
+          );
+    }
   }
-  render() {
-    return <h1>React app</h1>;
-  }
-}
+
+
+
 export default App;
