@@ -25,7 +25,11 @@ class App extends React.Component {
   render() {
     console.log(this.state);
     if (this.state.selectedModel === 0) {
-      return <ModelView modelView={this.state.modelViews[this.state.selectedModel]} />;
+      return (
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <ModelView modelView={this.state.modelViews[this.state.selectedModel]} />
+        </div>
+      );
     }
     return <h1>loading</h1>;
   }

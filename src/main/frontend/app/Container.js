@@ -34,8 +34,7 @@ class Container extends React.Component {
         y={this.state.y}
         width={this.state.width}
         height={this.state.height}
-        fill={'red'}
-        shadowBlur={5}
+        stroke={1}
       />
     );
   }
