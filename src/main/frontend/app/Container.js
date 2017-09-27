@@ -51,7 +51,8 @@ class Container extends React.Component {
           y={this.state.y}
           width={this.state.width}
           height={this.state.height}
-          stroke={3}
+          stroke={1}
+          cornerRadius={10}
         />
         {children}
       </Group>
