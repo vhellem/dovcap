@@ -1,5 +1,7 @@
 import React from 'react';
 import { getModelsFromBackend } from './utlities.js';
+import { Layer, Rect, Stage, Group } from 'react-konva';
+import MyRect from './MyRect.js';
 
 class App extends React.Component {
   constructor() {
