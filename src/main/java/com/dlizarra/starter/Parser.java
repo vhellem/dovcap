@@ -32,7 +32,7 @@ public class Parser extends DefaultHandler {
     String tmpName;
     boolean readingValueset;
     myObject objectTmp;
-    
+
     public Parser(String objectXmlFileName) {
         this.objectXmlFileName = objectXmlFileName;
         objectL = new ArrayList<myObject>();
@@ -69,6 +69,7 @@ public class Parser extends DefaultHandler {
         model.setModelViewL(modelViewL);
         model.setObjectL(objectL);
         model.setviewL(viewL);
+        model.preprocess();
         return gson.toJson(model);
     }
 
