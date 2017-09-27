@@ -29,33 +29,17 @@ class ModelView extends React.Component {
     this.setState({ width: window.innerWidth * 0.9, height: window.innerHeight * 0.9 });
   }
   render() {
-    console.log(this.state, 'modelview');
-
-
-    this.state.children.forEach(function())
-    var childrenToCreate = [];
-    var rows = [];
-
-
-
-    childrenToCreate.push(this.state.children[0]);
-
-    while (childrenToCreate.length > 0) {
-      var cont = childrenToCreate.pop();
-      rows.push(
-        <Container
-          container={cont}
-          parentWidth={this.state.width}
-          parentHeight={this.state.height}
-          parentX={this.state.x}
-          parentY={this.state.y}
-        />
-      );
-    }
-
     return (
       <Stage width={this.state.width} height={this.state.height}>
-        <Layer>{rows}</Layer>
+        <Layer>
+          <Container
+            container={this.state.children[0]}
+            parentWidth={this.state.width}
+            parentHeight={this.state.height}
+            parentX={this.state.x}
+            parentY={this.state.y}
+          />
+        </Layer>
       </Stage>
     );
   }
