@@ -11,7 +11,7 @@ class ModelView extends React.Component {
       children: props.modelView.children,
       width: 0,
       height: 0,
-      x: 5, //We dont want the root container to lie at the Stage-border
+      x: 5, //Some space in between stage and top-container is needed
       y: 5
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -34,7 +34,7 @@ class ModelView extends React.Component {
         <Layer>
           <Container
             container={this.state.children[0]}
-            parentWidth={this.state.width * 0.99}
+            parentWidth={this.state.width * 0.99} //Some space in between stage and top-container is needed
             parentHeight={this.state.height * 0.99}
             parentX={this.state.x}
             parentY={this.state.y}
