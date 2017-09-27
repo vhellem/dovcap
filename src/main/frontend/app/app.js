@@ -1,29 +1,16 @@
 import React from 'react';
-import {getModelsFromBackend} from './utlities.js';
-
+import { getModelsFromBackend } from './utlities.js';
 
 class App extends React.Component {
+  componentWillMount() {
+    getModelsFromBackend().then(res => {
+      const json = JSON.parse(res.text);
 
-
-    componentWillMount() {
-        getModelsFromBackend().then(res => {
-
-            const json = JSON.parse(res.text);
-
-            console.log(json) ;
-        })
-
-    }
-    render() {
-
-        return (
-            <h1>React app</h1>
-        )
-    }
-
-
+      console.log(json);
+    });
+  }
+  render() {
+    return <h1>React app</h1>;
+  }
 }
-
-
-
-export default App
+export default App;
