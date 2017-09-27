@@ -26,21 +26,28 @@ public class Parser extends DefaultHandler {
     List<myObject> objectL;
     List<myObject> viewL;
     List<myObject> modelViewL;
+    List<myObject> relationshipL;
+    List<myObject> relationshipViewL;
 
     String objectXmlFileName;
     String tmpValue;
     String tmpName;
     boolean readingValueset;
+    boolean readingRelationshipView;
+    boolean readingRelationship;
     myObject objectTmp;
-    
+
     public Parser(String objectXmlFileName) {
         this.objectXmlFileName = objectXmlFileName;
         objectL = new ArrayList<myObject>();
         viewL = new ArrayList<myObject>();
         modelViewL = new ArrayList<myObject>();
+        relationshipL = new ArrayList<myObject>();
+        relationshipViewL = new ArrayList<myObject>();
         readingValueset = false;
+        readingRelationshipView = false;
+        readingRelationship = false;
         parseDocument();
-        //printAll();
         //printJson();
     }
 
@@ -69,31 +76,14 @@ public class Parser extends DefaultHandler {
         model.setModelViewL(modelViewL);
         model.setObjectL(objectL);
         model.setviewL(viewL);
+        model.setRelationshipL(relationshipL);
+        model.setRelationshipViewL(relationshipViewL);
+        model.preprocess();
         return gson.toJson(model);
     }
 
     private void printJson(){
-        Gson gson = new GsonBuilder()
-            .setPrettyPrinting()
-            .serializeNulls()
-            .create();
-        for (myObject tmpO : objectL) {
-            System.out.println(gson.toJson(tmpO));
-            /*Path file = Paths.get("json_output.txt");
-            try{
-                Files.write(file, gson.toJson(tmpO).getBytes(),// Charset.forName("UTF-8"),
-                    StandardOpenOption.APPEND);
-            } catch (IOException e) {
-                System.out.println("IO error");
-            }
-            */
-        }
-    }
-
-    private void printAll() {
-        for (myObject tmpO : objectL) {
-            System.out.println(tmpO.getInfo());
-        }
+        System.out.println(getJson());
     }
 
     @Override
@@ -159,15 +149,83 @@ public class Parser extends DefaultHandler {
 
         }
         if (elementName.equals("valueset")) {
+            HashMap<String, String> modelAtt = new HashMap();
+            for (int i =0; i<attributes.getLength(); i++){
+                modelAtt.put(attributes.getQName(i), attributes.getValue(i));
+            }
+
             readingValueset = true;
             if (attributes.getValue("xlink:role").equals("type")) {
                 objectTmp.setType(attributes.getValue("xlink:title"));
             }
+            objectTmp.setAttributes(modelAtt);
+        }
+        if (elementName.equals("relationship")) {
+          int index = relationshipL.indexOf(attributes.getValue("id"));
+          if(index != -1){
+            objectTmp = relationshipL.get(index);
+          } else {
+            objectTmp = new myObject();
+            relationshipL.add(objectTmp);
+          }
+          objectTmp.setId(attributes.getValue("id"));
+          readingRelationship = true;
+        }
+        if (elementName.equals("relationshipview")) {
+          HashMap<String, String> modelAtt = new HashMap();
+          for (int i =0; i<attributes.getLength(); i++){
+            modelAtt.put(attributes.getQName(i), attributes.getValue(i));
+          }
+
+          int index = relationshipViewL.indexOf(attributes.getValue("id"));
+          if(index != -1){
+            objectTmp = relationshipViewL.get(index);
+          } else {
+            objectTmp = new myObject();
+            relationshipViewL.add(objectTmp);
+          }
+          objectTmp.setAttributes(modelAtt);
+          objectTmp.setId(attributes.getValue("id"));
+          readingRelationshipView = true;
+        }
+        if (elementName.equals("origin-link")) {
+          if (readingRelationshipView){
+            objectTmp.addValueset("origin_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("origin_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("origin_href", attributes.getValue("xlink:href"));
+          }
+        }
+        if (elementName.equals("target-link")) {
+          if (readingRelationshipView){
+            objectTmp.addValueset("target_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("target_href", attributes.getValue("xlink:href"));
+          }
+        }
+        if (elementName.equals("origin")) {
+          if (readingRelationship) {
+            objectTmp.addValueset("origin_seq", attributes.getValue("seq"));
+            objectTmp.addValueset("origin_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("origin_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("origin_href", attributes.getValue("xlink:href"));
+          }
+        }
+        if (elementName.equals("target")) {
+          if (readingRelationship){
+            objectTmp.addValueset("target_seq", attributes.getValue("seq"));
+            objectTmp.addValueset("target_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("target_href", attributes.getValue("xlink:href"));
+          }
         }
     }
 
     @Override
     public void endElement(String s, String s1, String element) throws SAXException {
+        if (element.equals("valueset")) {
+            readingValueset = false;
+        }
+
         if (readingValueset) {
             if (tmpName.equals("name")){
                 objectTmp.setName(tmpValue);
@@ -177,13 +235,17 @@ public class Parser extends DefaultHandler {
             }
         }
 
-        if (element.equals("valueset")) {
-            readingValueset = false;
-        }
-
         if (element.equals("object")) {
             // End editing of the current object
             objectTmp = new myObject();
+        }
+
+        if (element.equals("relationshipview")) {
+          readingRelationshipView = false;
+        }
+
+        if (element.equals("relationship")) {
+          readingRelationship = false;
         }
     }
 
@@ -200,7 +262,7 @@ public class Parser extends DefaultHandler {
     // Change to public if you want to run just the parser.
     private static void main(String[] args) {
         if(args.length == 0) {
-            new Parser("simple.kmv");
+            new Parser("models/simple.kmv");
         }
         else {
             new Parser(args[0]);

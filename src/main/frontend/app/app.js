@@ -7,6 +7,7 @@ class App extends React.Component {
       const json = JSON.parse(res.text);
 
       console.log(json);
+
     });
   }
   render() {
