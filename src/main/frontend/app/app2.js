@@ -1,7 +1,5 @@
 import React from 'react';
 import { getModelsFromBackend } from './utlities.js';
-import Workspace from './components/workspace.js';
-import '../style/workspace.css';
 
 class App extends React.Component {
   componentWillMount() {
@@ -11,7 +9,7 @@ class App extends React.Component {
     });
   }
   render() {
-    return <Workspace/>
+    return <h1>React apps</h1>;
   }
 }
 export default App;
