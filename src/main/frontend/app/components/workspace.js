@@ -17,7 +17,7 @@ class Workspace extends React.Component {
   }*/
   render() {
     let views = [];
-    for (let i=0; i < 6; i++) {
+    for (let i=0; i < 4; i++) {
       views.push(<View id={i} key={i}/>);
     }
     return (
