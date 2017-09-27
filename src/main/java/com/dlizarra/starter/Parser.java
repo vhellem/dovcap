@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.StringReader;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -89,7 +90,7 @@ public class Parser extends DefaultHandler {
     @Override
     public InputSource resolveEntity(String pId, String sId) throws SAXException, IOException {
         System.out.println("Skipping " + pId + " , " +sId);
-        return new InputSource("");
+        return new InputSource(new StringReader(""));
     }
 
     @Override

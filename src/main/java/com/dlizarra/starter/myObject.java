@@ -60,4 +60,12 @@ public class myObject {
         this.name = name;
     }
 
+    public void updateAttributesWithScales(List<Double> scales){
+      this.attributes.put("scaleX", String.valueOf(scales.get(0)));
+      this.attributes.put("scaleY", String.valueOf(scales.get(1)));
+      this.attributes.put("scaleHeight", String.valueOf(scales.get(2)));
+      this.attributes.put("scaleWidth", String.valueOf(scales.get(3)));
+
+    }
+
 }
