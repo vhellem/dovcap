@@ -200,7 +200,7 @@ public class Parser extends DefaultHandler {
     // Change to public if you want to run just the parser.
     private static void main(String[] args) {
         if(args.length == 0) {
-            new Parser("simple.kmv");
+            new Parser("models/simple.kmv");
         }
         else {
             new Parser(args[0]);
