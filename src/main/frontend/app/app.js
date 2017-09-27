@@ -11,7 +11,7 @@ class App extends React.Component {
             <Rect
               x={10}
               y={10}
-              width={50}
+              width={100}
               height={50}
                fill={"red"}
               shadowBlur={5}
