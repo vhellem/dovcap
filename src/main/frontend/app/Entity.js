@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group } from 'react-konva';
-import Entity from './Entity';
-class Container extends React.Component {
+
+class Entity extends React.Component {
   constructor(props) {
     super(props);
 
@@ -27,9 +27,9 @@ class Container extends React.Component {
   }
 
   render() {
-    console.log(this.state, 'container');
+    console.log(this.state, 'Enntyit');
 
-    var children =
+    /* var children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
             return (
@@ -43,20 +43,18 @@ class Container extends React.Component {
               />
             );
           })
-        : null;
+        : null;*/
     return (
-      <Group>
-        <Rect
-          x={this.state.x}
-          y={this.state.y}
-          width={this.state.width}
-          height={this.state.height}
-          stroke={3}
-        />
-        {children}
-      </Group>
+      <Rect
+        x={this.state.x}
+        y={this.state.y}
+        width={this.state.width}
+        height={this.state.height}
+        fill={'red'}
+        shadowBlur={5}
+      />
     );
   }
 }
 
-export default Container;
+export default Entity;
