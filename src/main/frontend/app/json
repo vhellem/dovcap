@@ -1,0 +1,504 @@
+{
+  "objectL": [
+    {
+      "id": "UUID4_023D52AC-70A7-4F5D-B01C-158C380C585D",
+      "name": "Subsub-Container 2",
+      "type": "Container",
+      "viewChildren": [],
+      "valueset": { "description": null, "externalID": null },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_14943052-D7B5-4A27-AD4E-7260974A78A7",
+      "name": "Sub-Container 2",
+      "type": "Container",
+      "viewChildren": [],
+      "valueset": { "description": null, "externalID": null },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_2CBBD3D6-DF16-42EB-AB43-9693173CC5B5",
+      "name": "Sub-Container 1",
+      "type": "Container",
+      "viewChildren": [],
+      "valueset": { "description": null, "externalID": null },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_3A20F6B9-B18D-4A1D-A767-D9E777BFAB03",
+      "name": "Sub-Container 3",
+      "type": "Container",
+      "viewChildren": [],
+      "valueset": { "description": null, "externalID": null },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_58429F60-E355-4DC7-837A-753A4C861102",
+      "name": "ActionButton",
+      "type": "Action Button",
+      "viewChildren": [],
+      "valueset": {
+        "viewArea.topleft.xCoord": "0",
+        "viewArea.bottomright.yCoord": "0",
+        "autotoolbar": "0",
+        "viewArea.mdlView": null,
+        "scriptEnum": "0",
+        "description": null,
+        "viewArea.topleft.yCoord": "0",
+        "mode": "12",
+        "reference": null,
+        "toolbarlevel": "0",
+        "toolbaricon": null,
+        "viewArea.bottomright.xCoord": "0",
+        "execute_on_parent": "0"
+      },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65",
+      "name": "Organization 1",
+      "type": "Organization",
+      "viewChildren": [],
+      "valueset": {
+        "dbms-admin.system-uploaded": "0",
+        "country": null,
+        "comments": null,
+        "addressPOBox": null,
+        "manager": null,
+        "city": null,
+        "webAddress": null,
+        "journalID": null,
+        "dbms-admin.commitFlag": "1",
+        "externalID": null,
+        "description": null,
+        "textFitFlag": "0",
+        "postalCodeZip": null,
+        "parentId": null,
+        "internalexternal": "-1",
+        "emailAddress": null,
+        "stateregion": null,
+        "phoneNumber": null,
+        "addressStreet": null,
+        "faxNumber": null
+      },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_6CFC1C84-0770-45A3-9FEA-6B61288DBA2D",
+      "name": "ActionButton",
+      "type": "Action Button",
+      "viewChildren": [],
+      "valueset": {
+        "viewArea.topleft.xCoord": "0",
+        "viewArea.bottomright.yCoord": "0",
+        "autotoolbar": "0",
+        "viewArea.mdlView": null,
+        "scriptEnum": "0",
+        "description": null,
+        "viewArea.topleft.yCoord": "0",
+        "mode": "9",
+        "reference": "simple.kmv#UUID4_F545254B-92E9-4B79-A309-DBA2516DF4D7",
+        "toolbarlevel": "0",
+        "toolbaricon": null,
+        "viewArea.bottomright.xCoord": "0",
+        "execute_on_parent": "0"
+      },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_7CB86AA9-D712-46DB-BAE3-251C37647F6F",
+      "name": "Organization 2",
+      "type": "Organization",
+      "viewChildren": [],
+      "valueset": {
+        "dbms-admin.system-uploaded": "0",
+        "country": null,
+        "comments": null,
+        "addressPOBox": null,
+        "manager": null,
+        "city": null,
+        "webAddress": null,
+        "journalID": null,
+        "dbms-admin.commitFlag": "1",
+        "externalID": null,
+        "description": null,
+        "textFitFlag": "0",
+        "postalCodeZip": null,
+        "parentId": null,
+        "internalexternal": "-1",
+        "emailAddress": null,
+        "stateregion": null,
+        "phoneNumber": null,
+        "addressStreet": null,
+        "faxNumber": null
+      },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_99C00679-D416-4755-98DB-1505D8272BAD",
+      "name": "Subsub-Container 1",
+      "type": "Container",
+      "viewChildren": [],
+      "valueset": { "description": null, "externalID": null },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_EB538DC1-8556-438F-A0EE-6B4F8CC6DE3C",
+      "name": "Per Person",
+      "type": "Person",
+      "viewChildren": [],
+      "valueset": {
+        "country": null,
+        "officePhoneNumber": null,
+        "homePhoneNumber": null,
+        "gender": "2",
+        "addressPOBox": null,
+        "city": null,
+        "monetaryUnit": null,
+        "externalID": null,
+        "description": null,
+        "recurringCostInterval": "-1",
+        "postalCodeZip": null,
+        "internalexternal": "-1",
+        "stateregion": null,
+        "emailAddress": null,
+        "recurringCost": "0",
+        "businessTitle": null,
+        "dbms-admin.system-uploaded": "0",
+        "mobilePhoneNumber": null,
+        "allocation": null,
+        "comments": null,
+        "initials": null,
+        "webAddress": null,
+        "journalID": null,
+        "dbms-admin.commitFlag": "1",
+        "dateOfBirth": "00000000",
+        "employment": "-1",
+        "textFitFlag": "0",
+        "userName": null,
+        "parentId": null,
+        "addressStreet": null,
+        "faxNumber": null,
+        "startDate": "00000000"
+      },
+      "attributes": {}
+    },
+    {
+      "id": "UUID4_ED3D6627-7A9A-4E18-8E47-11973D5D3A22",
+      "name": "Top-Container",
+      "type": "Container",
+      "viewChildren": [],
+      "valueset": { "description": null, "externalID": null },
+      "attributes": {}
+    }
+  ],
+  "viewL": [
+    {
+      "id": "UUID4_0BF10BB2-6501-4766-A6B5-65B0E93E6CD7",
+      "name": null,
+      "type": null,
+      "viewChildren": [
+        "#UUID4_8D90DE87-66E2-4B3F-B87A-8C17D6CAEE9E",
+        "#UUID4_ED538A3C-3F1D-4382-A95C-3DAD6DC55306",
+        "#UUID4_F545254B-92E9-4B79-A309-DBA2516DF4D7",
+        "#UUID4_6D2D862F-C77B-473F-9B3F-6229C2FCEC60",
+        "#UUID4_7B14A3EE-4C98-4742-9EB7-04A2B408F39A",
+        "#UUID4_5A43160C-47AC-48AE-BD5E-AFF3DD7F1D6E"
+      ],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "0.125",
+        "top": "-454",
+        "left": "-720.333",
+        "width": "682.667",
+        "xlink:title": "Top-Container",
+        "id": "UUID4_0BF10BB2-6501-4766-A6B5-65B0E93E6CD7",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "nested",
+        "xlink:href": "#UUID4_ED3D6627-7A9A-4E18-8E47-11973D5D3A22",
+        "text-scale": "1.61051",
+        "height": "512"
+      }
+    },
+    {
+      "id": "UUID4_1525C8F5-9385-4948-ABD3-E683B3666292",
+      "name": null,
+      "type": null,
+      "viewChildren": [],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "1.59091",
+        "top": "751.117",
+        "left": "384.16",
+        "width": "4887.27",
+        "xlink:title": "Organization 1",
+        "id": "UUID4_1525C8F5-9385-4948-ABD3-E683B3666292",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "tree",
+        "xlink:href": "#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65",
+        "text-scale": "0.053665",
+        "height": "1629.09"
+      }
+    },
+    {
+      "id": "UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36",
+      "name": null,
+      "type": null,
+      "viewChildren": [],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "1.59091",
+        "top": "1126.68",
+        "left": "194.914",
+        "width": "4887.27",
+        "xlink:title": "Organization 1",
+        "id": "UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "tree",
+        "xlink:href": "#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65",
+        "text-scale": "0.053665",
+        "height": "1629.09"
+      }
+    },
+    {
+      "id": "UUID4_34B448D9-4DA5-4887-AB59-9F0A1CF3D5C8",
+      "name": null,
+      "type": null,
+      "viewChildren": [],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "0.5625",
+        "top": "682.667",
+        "left": "6826.67",
+        "width": "1152",
+        "xlink:title": "ActionButton",
+        "id": "UUID4_34B448D9-4DA5-4887-AB59-9F0A1CF3D5C8",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "tree",
+        "xlink:href": "#UUID4_6CFC1C84-0770-45A3-9FEA-6B61288DBA2D",
+        "text-scale": "0.137983",
+        "height": "1152"
+      }
+    },
+    {
+      "id": "UUID4_3E0308A0-CA10-4201-95FC-C53B290194EF",
+      "name": null,
+      "type": null,
+      "viewChildren": [
+        "#UUID4_B8CD803D-518B-477D-8B4D-FF4F17EC1561",
+        "#UUID4_730FD5F8-8DCB-4FDD-9A64-A9536F9DFBDC",
+        "#UUID4_1525C8F5-9385-4948-ABD3-E683B3666292",
+        "#UUID4_9867C03F-8E06-4ECA-9E3B-0A03B8DEC68B"
+      ],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "1.81774",
+        "top": "1706.67",
+        "left": "11589.7",
+        "width": "9927.27",
+        "xlink:title": "Subsub-Container 2",
+        "id": "UUID4_3E0308A0-CA10-4201-95FC-C53B290194EF",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "nested",
+        "xlink:href": "#UUID4_023D52AC-70A7-4F5D-B01C-158C380C585D",
+        "text-scale": "0.068766",
+        "height": "12970.7"
+      }
+    },
+    {
+      "id": "UUID4_7A4E3F61-4116-4E44-95A9-8CC411DFA0DD",
+      "name": null,
+      "type": null,
+      "viewChildren": [],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "1.59091",
+        "top": "4506.7",
+        "left": "194.914",
+        "width": "4887.27",
+        "xlink:title": "Organization 2",
+        "id": "UUID4_7A4E3F61-4116-4E44-95A9-8CC411DFA0DD",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "tree",
+        "xlink:href": "#UUID4_7CB86AA9-D712-46DB-BAE3-251C37647F6F",
+        "text-scale": "0.053665",
+        "height": "1629.09"
+      }
+    },
+    {
+      "id": "UUID4_7B14A3EE-4C98-4742-9EB7-04A2B408F39A",
+      "name": null,
+      "type": null,
+      "viewChildren": [],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "0.1875",
+        "top": "1008",
+        "left": "258.667",
+        "width": "768",
+        "xlink:title": "Sub-Container 2",
+        "id": "UUID4_7B14A3EE-4C98-4742-9EB7-04A2B408F39A",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "nested",
+        "xlink:href": "#UUID4_14943052-D7B5-4A27-AD4E-7260974A78A7",
+        "text-scale": "0.413948",
+        "height": "2944"
+      }
+    },
+    {
+      "id": "UUID4_8D90DE87-66E2-4B3F-B87A-8C17D6CAEE9E",
+      "name": null,
+      "type": null,
+      "viewChildren": [
+        "#UUID4_34B448D9-4DA5-4887-AB59-9F0A1CF3D5C8",
+        "#UUID4_9B7264E1-595B-47D7-B29B-A0593E3772E2"
+      ],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "0.1875",
+        "top": "432",
+        "left": "258.667",
+        "width": "4992",
+        "xlink:title": "Sub-Container 1",
+        "id": "UUID4_8D90DE87-66E2-4B3F-B87A-8C17D6CAEE9E",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "nested",
+        "xlink:href": "#UUID4_2CBBD3D6-DF16-42EB-AB43-9693173CC5B5",
+        "text-scale": "0.413948",
+        "height": "512"
+      }
+    },
+    {
+      "id": "UUID4_9B7264E1-595B-47D7-B29B-A0593E3772E2",
+      "name": null,
+      "type": null,
+      "viewChildren": [],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "0.5625",
+        "top": "682.667",
+        "left": "9216",
+        "width": "1152",
+        "xlink:title": "ActionButton",
+        "id": "UUID4_9B7264E1-595B-47D7-B29B-A0593E3772E2",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "tree",
+        "xlink:href": "#UUID4_58429F60-E355-4DC7-837A-753A4C861102",
+        "text-scale": "0.137983",
+        "height": "1152"
+      }
+    },
+    {
+      "id": "UUID4_B8CD803D-518B-477D-8B4D-FF4F17EC1561",
+      "name": null,
+      "type": null,
+      "viewChildren": [],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "1.59091",
+        "top": "4506.7",
+        "left": "384.16",
+        "width": "4887.27",
+        "xlink:title": "Per Person",
+        "id": "UUID4_B8CD803D-518B-477D-8B4D-FF4F17EC1561",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "tree",
+        "xlink:href": "#UUID4_EB538DC1-8556-438F-A0EE-6B4F8CC6DE3C",
+        "text-scale": "0.07857",
+        "height": "1629.09"
+      }
+    },
+    {
+      "id": "UUID4_F1443E8F-0FD6-4832-97EB-342B636321FA",
+      "name": null,
+      "type": null,
+      "viewChildren": [
+        "#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36",
+        "#UUID4_510E1D28-3788-45EA-B1AB-9E5D864C17A2",
+        "#UUID4_7A4E3F61-4116-4E44-95A9-8CC411DFA0DD",
+        "#UUID4_C291F08C-97DA-4836-8FA1-2E9A3765BCB9"
+      ],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "1.81774",
+        "top": "1706.67",
+        "left": "669.697",
+        "width": "9927.27",
+        "xlink:title": "Subsub-Container 1",
+        "id": "UUID4_F1443E8F-0FD6-4832-97EB-342B636321FA",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "nested",
+        "xlink:href": "#UUID4_99C00679-D416-4755-98DB-1505D8272BAD",
+        "text-scale": "0.068766",
+        "height": "12970.7"
+      }
+    },
+    {
+      "id": "UUID4_F545254B-92E9-4B79-A309-DBA2516DF4D7",
+      "name": null,
+      "type": null,
+      "viewChildren": [
+        "#UUID4_F1443E8F-0FD6-4832-97EB-342B636321FA",
+        "#UUID4_87D1B9AE-5FD1-492C-B237-271009FA2D15",
+        "#UUID4_3E0308A0-CA10-4201-95FC-C53B290194EF",
+        "#UUID4_D7D7F93A-3DD0-4876-AC0A-A67D72C8F161"
+      ],
+      "valueset": {},
+      "attributes": {
+        "decomp-scale": "0.1875",
+        "top": "1008",
+        "left": "1090.67",
+        "width": "4160",
+        "xlink:title": "Sub-Container 3",
+        "id": "UUID4_F545254B-92E9-4B79-A309-DBA2516DF4D7",
+        "state": "open",
+        "xlink:role": "object",
+        "behavior": "nested",
+        "xlink:href": "#UUID4_3A20F6B9-B18D-4A1D-A767-D9E777BFAB03",
+        "text-scale": "0.413948",
+        "height": "2944"
+      }
+    }
+  ],
+  "modelViewL": [
+    {
+      "id": "oid1",
+      "name": null,
+      "type": null,
+      "viewChildren": [
+        "#UUID4_0BF10BB2-6501-4766-A6B5-65B0E93E6CD7",
+        "#UUID4_7C3BA07D-F2BA-4766-AB45-498DE7EA8544"
+      ],
+      "valueset": {},
+      "attributes": {
+        "zoom-level": "1.39137",
+        "title": "Main",
+        "xlink:role": "model",
+        "standalone-flag": "true",
+        "decomp-scale": "0",
+        "name": "Main",
+        "primary-flag": "true",
+        "x": "-373.25",
+        "y": "-198",
+        "xlink:title": "Semantics model",
+        "id": "oid1",
+        "behavior": "nested",
+        "visible-in": "browser",
+        "seq": "1",
+        "xlink:href": "#UUID4_E9239A45-01A9-47C4-8DB4-A5DACEA11378",
+        "text-scale": "1"
+      }
+    }
+  ]
+}
