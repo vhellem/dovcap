@@ -12,12 +12,13 @@ public class myObject {
     ArrayList<String> viewChildren;
     Map<String, String> valueset;
     Map<String, String> attributes;
-
+    ArrayList<myObject> children;
 
     public myObject(){
         valueset = new HashMap<String, String>();
         attributes = new HashMap<String, String>();
         viewChildren = new ArrayList();
+        children = new ArrayList();
     }
 
     @Override
@@ -36,12 +37,16 @@ public class myObject {
     public void addChild(String ref){
         viewChildren.add(ref);
     }
+
+    public void addModelChild(myObject child){
+      children.add(child);
+    }
     public void setId(String id){
         if (this.id == null) {
             this.id = id;
         }
     }
-    
+
     public void setType(String type){
         if (this.type == null){
             this.type = type;

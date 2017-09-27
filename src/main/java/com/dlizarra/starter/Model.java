@@ -1,7 +1,6 @@
 package com.dlizarra.starter;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Model {
 
@@ -33,5 +32,36 @@ public class Model {
     }
     public void setRelationshipViewL(List<myObject> list){
         this.relationshipViewL=list;
+    }
+
+
+    public void addTypeAndName(){
+      for(myObject view: viewL){
+        String objectRef = view.attributes.get("xlink:href").substring(1);
+        for (myObject object: objectL){
+          if(object.id.equals(objectRef)){
+            view.setType(object.type);
+            view.setName(object.name);
+          }
+        }
+      }
+    }
+
+    public void preprocess(){
+      this.addTypeAndName();
+      //Creates tree structure from the modelViews
+      Queue<myObject> queue = new ArrayDeque<>();
+      queue.add(this.modelViewL.get(0));
+      while(!queue.isEmpty()){
+        myObject curr = queue.remove();
+        for (String childRef: curr.viewChildren){
+          for (myObject child: this.viewL){
+            if (child.id.equals(childRef.substring(1))){
+              curr.addModelChild(child);
+              queue.add(child);
+            }
+          }
+        }
+      }
     }
 }

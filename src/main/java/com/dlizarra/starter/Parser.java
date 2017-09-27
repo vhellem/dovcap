@@ -36,7 +36,7 @@ public class Parser extends DefaultHandler {
     boolean readingRelationshipView;
     boolean readingRelationship;
     myObject objectTmp;
-    
+
     public Parser(String objectXmlFileName) {
         this.objectXmlFileName = objectXmlFileName;
         objectL = new ArrayList<myObject>();
@@ -78,6 +78,7 @@ public class Parser extends DefaultHandler {
         model.setviewL(viewL);
         model.setRelationshipL(relationshipL);
         model.setRelationshipViewL(relationshipViewL);
+        model.preprocess();
         return gson.toJson(model);
     }
 
