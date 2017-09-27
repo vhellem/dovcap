@@ -48,7 +48,7 @@ public class myObject {
         }
     }
     public void setAttributes(HashMap<String, String> att){
-        this.attributes = att;
+        this.attributes.putAll(att);
     }
 
     public void setName(String name){
