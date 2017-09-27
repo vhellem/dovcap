@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './Container.js';
+import { Layer, Rect, Stage, Group } from 'react-konva';
 
 class ModelView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: '',
-      children: [],
+      children: props.modelView.children,
       width: 0,
       height: 0,
       x: 0,
@@ -28,15 +29,17 @@ class ModelView extends React.Component {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
   render() {
-    var modelView = this.props.modelView;
-    this.setState({ children: modelView.children });
+    console.log(this.state, 'modelview');
+
     return (
-      <Stage width={this.width} height={this.height}>
+      <Stage width={this.state.width} height={this.state.height}>
         <Layer>
           <Container
             container={this.state.children[0]}
             parentWidth={this.state.width}
             parentHeight={this.state.height}
+            parentX={this.state.x}
+            parentY={this.state.y}
           />
         </Layer>
       </Stage>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { getModelsFromBackend } from './utlities.js';
-import { Layer, Rect, Stage, Group } from 'react-konva';
-import MyRect from './MyRect.js';
+import ModelView from './ModelView.js';
 
 class App extends React.Component {
   constructor() {
@@ -26,7 +25,7 @@ class App extends React.Component {
   render() {
     console.log(this.state);
     if (this.state.selectedModel === 0) {
-      return <h1 modelView={this.state.modelViews[this.state.selectedModel]}>Selected model</h1>;
+      return <ModelView modelView={this.state.modelViews[this.state.selectedModel]} />;
     }
     return <h1>loading</h1>;
   }
