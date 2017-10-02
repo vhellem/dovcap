@@ -1,7 +1,9 @@
-var request = require('superagent');
+const request = require('superagent');
+
+const PORT = process.env.PORT || 8080;
 
 export function getModelsFromBackend() {
-  const res = request.get('http://localhost:8080/api/getModel');
+  const res = request.get(`http://localhost:${PORT}/api/getModel`);
   return res;
 }
 
