@@ -7,7 +7,7 @@ class App extends React.Component {
     super();
     this.state = {
       selectedModel: false,
-      modelViews: null
+      modelViews: null,
     };
   }
   componentWillMount() {
@@ -17,7 +17,7 @@ class App extends React.Component {
       console.log(json);
       this.setState({
         selectedModel: 0,
-        modelViews: json.modelViewL
+        modelViews: json.modelViewL,
       });
     });
   }
@@ -27,7 +27,9 @@ class App extends React.Component {
     if (this.state.selectedModel === 0) {
       return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <ModelView modelView={this.state.modelViews[this.state.selectedModel]} />
+          <ModelView
+            modelView={this.state.modelViews[this.state.selectedModel]}
+          />
         </div>
       );
     }
