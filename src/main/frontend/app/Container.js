@@ -56,6 +56,17 @@ class Container extends React.Component {
                   key={child.id}
                 />
               );
+            } else {
+              return (
+                <ActionButton>
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                </ActionButton>
+              );
             }
           })
         : null;
