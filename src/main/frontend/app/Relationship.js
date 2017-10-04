@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './Container.js';
-import { Layer, Arrow, Stage, Group } from 'react-konva';
+import { Layer, Arrow, Stage, Group, Text } from 'react-konva';
 import ObjectEmitter from './ObjectEmitter';
 
 class Relationship extends React.Component {
@@ -17,7 +17,9 @@ class Relationship extends React.Component {
       minTo: [0, 0],
       data: props.data,
       fromId: props.data['valueset']['origin_href'].substring(1),
-      toId: props.data['valueset']['target_href'].substring(1)
+      toId: props.data['valueset']['target_href'].substring(1),
+      textFrom: [0, 0],
+      textTo: [0, 0]
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -69,12 +71,14 @@ class Relationship extends React.Component {
     function getTextPosition(x1, y1, x2, y2, distanceFromObject, rightPerpendicular) {
       const perpendicularDistanceFromLine = 20;
 
-      a = Math.sqrt(distanceFromObject ** 2 / (2 * ((x2 - x1) * 2 + (y2 - y1) ** 2)));
+      var a = Math.sqrt(distanceFromObject ** 2 / (2 * ((x2 - x1) * 2 + (y2 - y1) ** 2)));
       var x = x1 + (x2 - x1) * a;
       var y = y1 + (y2 - y1) * a;
       //console.log(a);
 
-      a2 = Math.sqrt(perpendicularDistanceFromLine ** 2 / (2 * ((x2 - x1) * 2 + (y2 - y1) ** 2)));
+      var a2 = Math.sqrt(
+        perpendicularDistanceFromLine ** 2 / (2 * ((x2 - x1) * 2 + (y2 - y1) ** 2))
+      );
 
       if (rightPerpendicular) {
         x += (y2 - y1) * a2;
@@ -115,22 +119,70 @@ class Relationship extends React.Component {
       }
     }
 
+    //todo: make more general
+    var rightPerpendicular = true;
+    if (this.state.minTo[1] < this.state.minFrom[1]) {
+      rightPerpendicular = false;
+    }
+
+    var toDist = 100;
+    if (this.state.minTo[0] < this.state.minFrom[1]) {
+      toDist = 20;
+    }
+
+    this.state.textFrom = getTextPosition(
+      this.state.minFrom[0],
+      this.state.minFrom[1],
+      this.state.minTo[0],
+      this.state.minTo[1],
+      30,
+      rightPerpendicular
+    );
+    this.state.textTo = getTextPosition(
+      this.state.minTo[0],
+      this.state.minTo[1],
+      this.state.minFrom[0],
+      this.state.minFrom[1],
+      toDist,
+      !rightPerpendicular
+    );
+    console.log('textFrom', this.state.textFrom);
+
     return (
-      <Arrow
-        x={this.state.minFrom[0]}
-        y={this.state.minFrom[1]}
-        points={[
-          0,
-          0,
-          this.state.minTo[0] - this.state.minFrom[0],
-          this.state.minTo[1] - this.state.minFrom[1]
-        ]}
-        pointerLength={5}
-        pointerWidth={5}
-        fil="black"
-        stroke="black"
-        strokeWidth={2}
-      />
+      <Group>
+        <Arrow
+          x={this.state.minFrom[0]}
+          y={this.state.minFrom[1]}
+          points={[
+            0,
+            0,
+            this.state.minTo[0] - this.state.minFrom[0],
+            this.state.minTo[1] - this.state.minFrom[1]
+          ]}
+          pointerLength={5}
+          pointerWidth={5}
+          fil="black"
+          stroke="black"
+          strokeWidth={2}
+        />
+        <Text
+          align="center"
+          x={this.state.textFrom[0]}
+          y={this.state.textFrom[1]}
+          text={'Arrowtekst 1'}
+          witdth={14}
+          fontFamily="Calibri"
+        />
+
+        <Text
+          align="center"
+          x={this.state.textTo[0]}
+          y={this.state.textTo[1]}
+          text={'Arrowtekst 2'}
+          witdth={14}
+          fontFamily="Calibri"
+        />
+      </Group>
     );
   }
 }

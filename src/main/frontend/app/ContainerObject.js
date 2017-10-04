@@ -45,6 +45,7 @@ class ContainerObject extends React.Component {
           stroke={1}
           dash={[10, 10]}
           cornerRadius={0}
+          draggable={true}
         />
         <Text
           width={this.state.width}
