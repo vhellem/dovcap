@@ -8,6 +8,7 @@ import java.io.StringReader;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.nio.file.*;
 import java.nio.charset.*;
@@ -29,6 +30,10 @@ public class Parser extends DefaultHandler {
     List<myObject> modelViewL;
     List<myObject> relationshipL;
     List<myObject> relationshipViewL;
+    List<myObject> typeviewL;
+    List<String> linkedDocsL;
+    List<String> loadedDocsL;
+    HashMap<String, String> actualFileName;
 
     String objectXmlFileName;
     String tmpValue;
@@ -45,6 +50,11 @@ public class Parser extends DefaultHandler {
         modelViewL = new ArrayList<myObject>();
         relationshipL = new ArrayList<myObject>();
         relationshipViewL = new ArrayList<myObject>();
+        typeviewL = new ArrayList<myObject>();
+        linkedDocsL = new ArrayList<String>();
+        loadedDocsL = new ArrayList<String>();
+        actualFileName = new HashMap<String, String>();
+        fillActualFileName();
         readingValueset = false;
         readingRelationshipView = false;
         readingRelationship = false;
@@ -52,11 +62,31 @@ public class Parser extends DefaultHandler {
         //printJson();
     }
 
+    public void parseFile(String fileName){
+      this.objectXmlFileName = fileName;
+      parseDocument();
+    }
+
+    private void loadLinkedDocuments(){
+      List<String> currentLinkedDocsL = new ArrayList<String>(linkedDocsL);
+      Iterator<String> currentLinkedDocsIterator = currentLinkedDocsL.iterator();
+      while(currentLinkedDocsIterator.hasNext()){
+        String doc = currentLinkedDocsIterator.next();
+        doc = lookupFileName(doc);
+        if(!loadedDocsL.contains(doc) & doc.equals("models/organization.kmd")){
+          loadedDocsL.add(doc);
+          parseFile(doc);
+        }
+      }
+    }
+
     private void parseDocument() {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser parser = factory.newSAXParser();
             parser.parse(objectXmlFileName, this);
+            loadedDocsL.add(objectXmlFileName);
+            loadLinkedDocuments();
         } catch (ParserConfigurationException e) {
             System.out.println("ParserConfig error");
         } catch (SAXException e) {
@@ -79,12 +109,26 @@ public class Parser extends DefaultHandler {
         model.setviewL(viewL);
         model.setRelationshipL(relationshipL);
         model.setRelationshipViewL(relationshipViewL);
+        model.settypeviewL(typeviewL);
+        model.setParser(this);
         model.preprocess();
         return gson.toJson(model);
     }
 
     private void printJson(){
         System.out.println(getJson());
+    }
+
+    private void fillActualFileName(){
+      actualFileName.put("http://metadata.troux.info/meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID", "models/organization.kmd");
+    }
+
+    public String lookupFileName(String filename) {
+      if(actualFileName.containsKey(filename)) {
+        return actualFileName.get(filename);
+      } else {
+        return filename;
+      }
     }
 
     @Override
@@ -159,6 +203,7 @@ public class Parser extends DefaultHandler {
             if (attributes.getValue("xlink:role").equals("type")) {
                 objectTmp.setType(attributes.getValue("xlink:title"));
             }
+            linkedDocsL.add(attributes.getValue("xlink:href"));
             objectTmp.setAttributes(modelAtt);
         }
         if (elementName.equals("relationship")) {
@@ -217,6 +262,24 @@ public class Parser extends DefaultHandler {
             objectTmp.addValueset("target_role", attributes.getValue("xlink:role"));
             objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
             objectTmp.addValueset("target_href", attributes.getValue("xlink:href"));
+          }
+        }
+        if (elementName.equals("typeview")) {
+          int index = typeviewL.indexOf(objectXmlFileName + ":" + attributes.getValue("id"));
+          if(index != -1){
+            objectTmp = typeviewL.get(index);
+          } else {
+            objectTmp = new myObject();
+            typeviewL.add(objectTmp);
+          }
+          objectTmp.setId(objectXmlFileName + ":" + attributes.getValue("id"));
+        }
+        if (elementName.equals("replace")){
+          if (attributes.getValue("tag").equals("icon")) {
+            String iconLink = attributes.getValue("macro");
+            int dotIndex = iconLink.lastIndexOf(".");
+            int startIndex = iconLink.lastIndexOf("/");
+            objectTmp.addValueset("icon", iconLink.substring(startIndex+1, dotIndex+4));
           }
         }
     }
