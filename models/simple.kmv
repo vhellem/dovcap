@@ -47,7 +47,7 @@
  <object id="UUID4_58429F60-E355-4DC7-837A-753A4C861102">
   <valueset size="14" xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23" xlink:actuate="user">
    <string name="name">ActionButton</string>
-   <string name="description">Msgbox &#34;Hello World!&#34;
+   <string name="description">alert('test');
 </string>
    <integer name="mode">12</integer>
    <integer name="scriptEnum">0</integer>
