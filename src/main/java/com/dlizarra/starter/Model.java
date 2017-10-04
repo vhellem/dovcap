@@ -72,6 +72,7 @@ public class Model {
           height = Double.parseDouble(curr.attributes.get("height"));
           decomp = Double.parseDouble(curr.attributes.get("decomp-scale"));
         }
+        this.findObjectReference(curr);
         for (String childReference: curr.viewChildren){
           String childRef = childReference.substring(1);
           for (myObject child: this.viewL){
@@ -119,6 +120,13 @@ public class Model {
       }
     }
 
+    //Inserts information about the object to the viewModel
+    public void findObjectReference(myObject view){
+      for (myObject object: this.objectL){
+        if (view.attributes.get("xlink:href").substring(1).equals(object.id)){
+          view.addObject(object); }
+      }
+    }
 
     public void putNewScalesOnObjects(Map<String, List<Double>> scales){
       for(myObject obj: this.viewL){

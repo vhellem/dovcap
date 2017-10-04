@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text } from 'react-konva';
 import ContainerObject from './ContainerObject.js';
+import ActionButton from './ActionButton.js';
 
 class Container extends React.Component {
   constructor(props) {
@@ -30,7 +31,6 @@ class Container extends React.Component {
   }
 
   render() {
-    //console.log(this.state, 'container');
     var children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
@@ -48,6 +48,17 @@ class Container extends React.Component {
             } else if (child.type !== 'Action Button') {
               return (
                 <ContainerObject
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                />
+              );
+            } else {
+              return (
+                <ActionButton
                   container={child}
                   parentWidth={this.state.width}
                   parentHeight={this.state.height}
