@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text } from 'react-konva';
-
+import image from '../image/actionbutton.svg';
 class ActionButton extends React.Component {
   constructor(props) {
     super(props);
@@ -32,8 +32,8 @@ class ActionButton extends React.Component {
 
   handleClick = () => {
     var x = String(this.state.action).trim();
-    console.log("Click: " + x);
-debugger;
+    console.log('Click: ' + x);
+    debugger;
     eval(x);
   };
 

@@ -1,7 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
+
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace('./', '')] = r(item);
+  });
+  return images;
+}
+
+const images = importAll(require.context('../image/', false, /\.(png|jpe?g|svg)$/));
+
 import org from '../image/networkdevice.svg';
+
 class ContainerObject extends React.Component {
   constructor(props) {
     super(props);
@@ -17,15 +29,17 @@ class ContainerObject extends React.Component {
       type: containerJson.type
     };
 
-    //TODO: import better
-    const image = new window.Image();
-    image.src = org;
-    image.onload = () => {
-      this.setState({
-        image: image
-      });
-      this.drawImage();
-    };
+    if (containerJson.objectReference.valueset.icon) {
+      const image = new window.Image();
+
+      image.src = images[containerJson.objectReference.valueset.icon];
+      image.onload = () => {
+        this.setState({
+          image: image
+        });
+        this.drawImage();
+      };
+    }
   }
 
   drawImage() {
@@ -55,13 +69,13 @@ class ContainerObject extends React.Component {
       y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
     });
     //fix undefined
+
     if (this.state.image) {
       this.drawImage();
     }
   }
 
   render() {
-    console.log(org);
     return (
       <Group>
         <Rect
