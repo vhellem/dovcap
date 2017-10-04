@@ -33,7 +33,6 @@ public class Parser extends DefaultHandler {
     List<myObject> typeviewL;
     List<String> linkedDocsL;
     List<String> loadedDocsL;
-    HashMap<String, String> actualFileName;
 
     String objectXmlFileName;
     String tmpValue;
@@ -53,8 +52,6 @@ public class Parser extends DefaultHandler {
         typeviewL = new ArrayList<myObject>();
         linkedDocsL = new ArrayList<String>();
         loadedDocsL = new ArrayList<String>();
-        actualFileName = new HashMap<String, String>();
-        fillActualFileName();
         readingValueset = false;
         readingRelationshipView = false;
         readingRelationship = false;
@@ -73,7 +70,7 @@ public class Parser extends DefaultHandler {
       while(currentLinkedDocsIterator.hasNext()){
         String doc = currentLinkedDocsIterator.next();
         doc = lookupFileName(doc);
-        if(!loadedDocsL.contains(doc) & doc.equals("models/organization.kmd")){
+        if(!loadedDocsL.contains(doc)){
           loadedDocsL.add(doc);
           parseFile(doc);
         }
@@ -89,6 +86,7 @@ public class Parser extends DefaultHandler {
             loadLinkedDocuments();
         } catch (ParserConfigurationException e) {
             System.out.println("ParserConfig error");
+            System.out.println(e);
         } catch (SAXException e) {
             System.out.println("SAXException : xml not well formed");
             System.out.println(e);
@@ -119,16 +117,13 @@ public class Parser extends DefaultHandler {
         System.out.println(getJson());
     }
 
-    private void fillActualFileName(){
-      actualFileName.put("http://metadata.troux.info/meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID", "models/organization.kmd");
-    }
-
     public String lookupFileName(String filename) {
-      if(actualFileName.containsKey(filename)) {
-        return actualFileName.get(filename);
-      } else {
+      int dotIndex = filename.lastIndexOf(".");
+      int startIndex = filename.lastIndexOf("/");
+      if (dotIndex == -1 | startIndex == -1){
         return filename;
       }
+      return "models" + filename.substring(startIndex, dotIndex+4);
     }
 
     @Override
