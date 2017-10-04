@@ -98,8 +98,10 @@ public class Model {
           }
 
         }
-      }}
-      this.putNewScalesOnObjects(newScales);
+      }
+        this.putNewScalesOnObjects(newScales);
+      }
+
 
       // Adds the icon as part of the valueset of each object which
       // has a metamodel reference that exists in the parsed file list.
