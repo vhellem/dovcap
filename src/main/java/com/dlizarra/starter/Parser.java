@@ -33,6 +33,7 @@ public class Parser extends DefaultHandler {
     List<myObject> typeviewL;
     List<String> linkedDocsL;
     List<String> loadedDocsL;
+    HashMap<String, String> actualFileName;
 
     String objectXmlFileName;
     String tmpValue;
@@ -52,6 +53,8 @@ public class Parser extends DefaultHandler {
         typeviewL = new ArrayList<myObject>();
         linkedDocsL = new ArrayList<String>();
         loadedDocsL = new ArrayList<String>();
+        actualFileName = new HashMap<String, String>();
+        fillActualFileName();
         readingValueset = false;
         readingRelationshipView = false;
         readingRelationship = false;
@@ -69,9 +72,10 @@ public class Parser extends DefaultHandler {
       Iterator<String> currentLinkedDocsIterator = currentLinkedDocsL.iterator();
       while(currentLinkedDocsIterator.hasNext()){
         String doc = currentLinkedDocsIterator.next();
-        if(!loadedDocsL.contains(doc) & doc.contains("organization.kmd")){
+        doc = lookupFileName(doc);
+        if(!loadedDocsL.contains(doc) & doc.equals("models/organization.kmd")){
           loadedDocsL.add(doc);
-          parseFile("models/organization.kmd");
+          parseFile(doc);
         }
       }
     }
@@ -106,12 +110,25 @@ public class Parser extends DefaultHandler {
         model.setRelationshipL(relationshipL);
         model.setRelationshipViewL(relationshipViewL);
         model.settypeviewL(typeviewL);
+        model.setParser(this);
         model.preprocess();
         return gson.toJson(model);
     }
 
     private void printJson(){
         System.out.println(getJson());
+    }
+
+    private void fillActualFileName(){
+      actualFileName.put("http://metadata.troux.info/meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID", "models/organization.kmd");
+    }
+
+    public String lookupFileName(String filename) {
+      if(actualFileName.containsKey(filename)) {
+        return actualFileName.get(filename);
+      } else {
+        return filename;
+      }
     }
 
     @Override
@@ -248,14 +265,14 @@ public class Parser extends DefaultHandler {
           }
         }
         if (elementName.equals("typeview")) {
-          int index = typeviewL.indexOf(objectXmlFileName + "/" + attributes.getValue("id"));
+          int index = typeviewL.indexOf(objectXmlFileName + ":" + attributes.getValue("id"));
           if(index != -1){
             objectTmp = typeviewL.get(index);
           } else {
             objectTmp = new myObject();
             typeviewL.add(objectTmp);
           }
-          objectTmp.setId(objectXmlFileName + "/" + attributes.getValue("id"));
+          objectTmp.setId(objectXmlFileName + ":" + attributes.getValue("id"));
         }
         if (elementName.equals("replace")){
           if (attributes.getValue("tag").equals("icon")) {

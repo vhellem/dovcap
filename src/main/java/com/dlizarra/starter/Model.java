@@ -10,6 +10,7 @@ public class Model {
     List<myObject> relationshipL;
     List<myObject> relationshipViewL;
     List<myObject> typeviewL;
+    Parser parser;
 
     public Model(){
         objectL = new ArrayList<myObject>();
@@ -37,6 +38,9 @@ public class Model {
     }
     public void settypeviewL(List<myObject> list){
         this.typeviewL=list;
+    }
+    public void setParser(Parser parser) {
+        this.parser = parser;
     }
 
 
@@ -90,6 +94,29 @@ public class Model {
         }
       }}
       this.putNewScalesOnObjects(newScales);
+      
+      // Adds the icon as part of the valueset of each object which
+      // has a metamodel reference that exists in the parsed file list.
+      Iterator<myObject> objectIterator = objectL.iterator();
+      while(objectIterator.hasNext()){
+        myObject currObject = objectIterator.next();
+        if(currObject.attributes.containsKey("xlink:href")) {
+          String reference = currObject.attributes.get("xlink:href");
+          reference = parser.lookupFileName(reference);
+          reference = reference + ":oid2";
+          int referenceIndex = -1;
+          for (int ii = 0; ii < typeviewL.size(); ii++){
+            if (typeviewL.get(ii).getId().equals(reference)) {
+              referenceIndex = ii;
+            }
+          }
+          if (referenceIndex != -1) {
+            String icon;
+            icon = typeviewL.get(referenceIndex).valueset.get("icon");
+            currObject.addValueset("icon", icon);
+          }
+        }
+      }
     }
 
 
@@ -98,6 +125,5 @@ public class Model {
         List<Double> newAttr = scales.get(obj.id);
         obj.updateAttributesWithScales(newAttr);
       }
-
     }
 }

@@ -46,6 +46,9 @@ public class myObject {
             this.id = id;
         }
     }
+    public String getId(){
+      return this.id;
+    }
 
     public void setType(String type){
         if (this.type == null){
