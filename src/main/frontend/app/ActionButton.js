@@ -20,7 +20,7 @@ class ActionButton extends React.Component {
   }
   componentWillReceiveProps(nextProps) {
     var containerJson = nextProps.container;
-    console.log(containerJson);
+
     this.setState({
       width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
       height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
