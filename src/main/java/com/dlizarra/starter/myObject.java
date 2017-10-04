@@ -47,6 +47,10 @@ public class myObject {
             this.id = id;
         }
     }
+    public String getId(){
+      return this.id;
+    }
+
     public void addObject(myObject obj){
       this.objectReference = obj;
     }
@@ -71,5 +75,4 @@ public class myObject {
       this.attributes.put("scaleWidth", String.valueOf(scales.get(3)));
 
     }
-
 }
