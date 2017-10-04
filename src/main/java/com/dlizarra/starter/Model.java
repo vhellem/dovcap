@@ -9,6 +9,7 @@ public class Model {
     List<myObject> modelViewL;
     List<myObject> relationshipL;
     List<myObject> relationshipViewL;
+    List<myObject> typeviewL;
 
     public Model(){
         objectL = new ArrayList<myObject>();
@@ -16,6 +17,7 @@ public class Model {
         modelViewL = new ArrayList<myObject>();
         relationshipL = new ArrayList<myObject>();
         relationshipViewL = new ArrayList<myObject>();
+        typeviewL = new ArrayList<myObject>();
     }
 
     public void setObjectL(List<myObject> list){
@@ -32,6 +34,9 @@ public class Model {
     }
     public void setRelationshipViewL(List<myObject> list){
         this.relationshipViewL=list;
+    }
+    public void settypeviewL(List<myObject> list){
+        this.typeviewL=list;
     }
 
 

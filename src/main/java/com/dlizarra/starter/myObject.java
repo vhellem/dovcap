@@ -67,5 +67,4 @@ public class myObject {
       this.attributes.put("scaleWidth", String.valueOf(scales.get(3)));
 
     }
-
 }
