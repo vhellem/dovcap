@@ -9,6 +9,8 @@ public class Model {
     List<myObject> modelViewL;
     List<myObject> relationshipL;
     List<myObject> relationshipViewL;
+    List<myObject> typeviewL;
+    Parser parser;
 
     public Model(){
         objectL = new ArrayList<myObject>();
@@ -16,6 +18,7 @@ public class Model {
         modelViewL = new ArrayList<myObject>();
         relationshipL = new ArrayList<myObject>();
         relationshipViewL = new ArrayList<myObject>();
+        typeviewL = new ArrayList<myObject>();
     }
 
     public void setObjectL(List<myObject> list){
@@ -32,6 +35,12 @@ public class Model {
     }
     public void setRelationshipViewL(List<myObject> list){
         this.relationshipViewL=list;
+    }
+    public void settypeviewL(List<myObject> list){
+        this.typeviewL=list;
+    }
+    public void setParser(Parser parser) {
+        this.parser = parser;
     }
 
 
@@ -87,9 +96,34 @@ public class Model {
                 }
             }
           }
-        }}
-        this.putNewScalesOnObjects(newScales);
-    }}
+
+        }
+      }}
+      this.putNewScalesOnObjects(newScales);
+
+      // Adds the icon as part of the valueset of each object which
+      // has a metamodel reference that exists in the parsed file list.
+      Iterator<myObject> objectIterator = objectL.iterator();
+      while(objectIterator.hasNext()){
+        myObject currObject = objectIterator.next();
+        if(currObject.attributes.containsKey("xlink:href")) {
+          String reference = currObject.attributes.get("xlink:href");
+          reference = parser.lookupFileName(reference);
+          int referenceIndex = -1;
+          for (int ii = 0; ii < typeviewL.size(); ii++){
+            if (typeviewL.get(ii).getId().contains(reference)) {
+              referenceIndex = ii;
+            }
+          }
+          if (referenceIndex != -1) {
+            String icon;
+            icon = typeviewL.get(referenceIndex).valueset.get("icon");
+            currObject.addValueset("icon", icon);
+          }
+        }
+      }
+    }
+
 
     //Inserts information about the object to the viewModel
     public void findObjectReference(myObject view){
@@ -104,6 +138,5 @@ public class Model {
         List<Double> newAttr = scales.get(obj.id);
         obj.updateAttributesWithScales(newAttr);
       }
-
     }
 }
