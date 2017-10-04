@@ -96,9 +96,26 @@ public class Parser extends DefaultHandler {
         }
     }
 
+    private class MyExclusionStrategy implements ExclusionStrategy {
+      private final Class<?> typeToSkip;
+
+      private MyExclusionStrategy(Class<?> typeToSkip) {
+        this.typeToSkip = typeToSkip;
+      }
+
+      public boolean shouldSkipClass(Class<?> clazz) {
+        return (clazz == typeToSkip);
+      }
+
+      public boolean shouldSkipField(FieldAttributes f) {
+        return f.getAnnotation(gsonSkip.class) != null;
+      }
+    }
+
     public String getJson(){
         Gson gson = new GsonBuilder()
             .setPrettyPrinting()
+            .setExclusionStrategies(new MyExclusionStrategy(Parser.class))
             .serializeNulls()
             .create();
         Model model = new Model();
