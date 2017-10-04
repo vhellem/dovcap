@@ -13,6 +13,7 @@ public class myObject {
     Map<String, String> valueset;
     Map<String, String> attributes;
     ArrayList<myObject> children;
+    myObject objectReference;
 
     public myObject(){
         valueset = new HashMap<String, String>();
@@ -45,6 +46,9 @@ public class myObject {
         if (this.id == null) {
             this.id = id;
         }
+    }
+    public void addObject(myObject obj){
+      this.objectReference = obj;
     }
 
     public void setType(String type){

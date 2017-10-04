@@ -6,8 +6,8 @@ Maven and Webpack as build tools, hot reloading on both sides and without xml co
 ## Quickstart
 To run the app you just need to:
 
-    git clone https://github.com/dlizarra/spring-boot-react-webpack-starter.git ./starter
-    cd starter
+    git clone https://github.com/vhellem/dovcap.git
+    cd dovcap
     mvn spring-boot:run
 
 To check everything is running you can:
