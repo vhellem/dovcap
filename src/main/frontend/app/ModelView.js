@@ -31,7 +31,6 @@ class ModelView extends React.Component {
     this.setState({ width: window.innerWidth * 0.9, height: window.innerHeight * 0.9 });
   }
   render() {
-    console.log('lol: ', this.props);
     return (
       <Stage width={this.state.width} height={this.state.height}>
         <Layer>

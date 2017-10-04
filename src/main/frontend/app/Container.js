@@ -9,7 +9,6 @@ class Container extends React.Component {
     super(props);
 
     var containerJson = props.container;
-    console.log(containerJson);
 
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
