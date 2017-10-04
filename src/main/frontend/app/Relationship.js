@@ -2,23 +2,47 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './Container.js';
 import { Layer, Arrow, Stage, Group } from 'react-konva';
+import ObjectEmitter from './ObjectEmitter';
 
 class Relationship extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: '',
       name: '',
       children: null,
-      fromPos: { left: 0, top: 0, width: 100, height: 100 },
+      fromPos: { left: 30, top: 30, width: 100, height: 100 },
       toPos: { left: 200, top: 200, width: 100, height: 100 },
       minFrom: [0, 0],
-      minTo: [0, 0]
+      minTo: [0, 0],
+      data: props.data,
+      fromId: props.data['valueset']['origin_href'].substring(1),
+      toId: props.data['valueset']['target_href'].substring(1)
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   componentDidMount() {
+    console.log('hdlfalskjdfklsdf');
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+
+    var emitter = ObjectEmitter;
+    console.log('lolol fromId: ', this.state.fromId);
+    console.log('lolol toId:', this.state.toId);
+
+    emitter.addListener(this.state.fromId, (x, y, width, height) => {
+      console.log('theeee position of from: ', x, y, width, height);
+      this.setState({
+        fromPos: { left: x, top: y, width: width, height }
+      });
+    });
+
+    emitter.addListener(this.state.toId, (x, y, width, height) => {
+      console.log('theeee position of to: ', x, y, width, height);
+      this.setState({
+        toPos: { left: x, top: y, width: width, height }
+      });
+    });
   }
 
   componentWillUnmount() {
@@ -91,17 +115,13 @@ class Relationship extends React.Component {
       }
     }
 
-    //console.log('fromNodes: ', fromNodes);
-    //console.log('toNodes: ', toNodes);
-    //console.log('this.state.minFrom: ', this.state.minFrom);
-    //console.log('this.state.minTo: ', this.state.minTo);
     return (
       <Arrow
         x={this.state.minFrom[0]}
         y={this.state.minFrom[1]}
         points={[
-          this.state.minFrom[0],
-          this.state.minFrom[1],
+          0,
+          0,
           this.state.minTo[0] - this.state.minFrom[0],
           this.state.minTo[1] - this.state.minFrom[1]
         ]}

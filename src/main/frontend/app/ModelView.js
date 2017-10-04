@@ -32,19 +32,23 @@ class ModelView extends React.Component {
   }
   render() {
     console.log('lol: ', this.props);
+    console.log('wtf: ', this.state.relationships);
     return (
-      <Stage width={this.state.width} height={this.state.height}>
-        <Layer>
-          <Container
-            container={this.state.children[0]}
-            parentWidth={this.state.width * 0.99} //Some space in between stage and top-container is needed
-            parentHeight={this.state.height * 0.99}
-            parentX={this.state.x}
-            parentY={this.state.y}
-          />
-          <Relationship data={this.state.relationships} />
-        </Layer>
-      </Stage>
+      <div>
+        {this.state.relationships.map(a => <h1>{a['id']}</h1>)}
+        <Stage width={this.state.width} height={this.state.height}>
+          <Layer>
+            <Container
+              container={this.state.children[0]}
+              parentWidth={this.state.width * 0.99} //Some space in between stage and top-container is needed
+              parentHeight={this.state.height * 0.99}
+              parentX={this.state.x}
+              parentY={this.state.y}
+            />
+            {this.state.relationships.map(a => <Relationship data={a} />)}
+          </Layer>
+        </Stage>
+      </div>
     );
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text } from 'react-konva';
+import ObjectEmitter from './ObjectEmitter';
 
 class ContainerObject extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class ContainerObject extends React.Component {
       x: props.parentX + containerJson.attributes.scaleX * props.parentWidth,
       y: props.parentY + containerJson.attributes.scaleY * props.parentHeight,
       name: containerJson.name,
-      type: containerJson.type
+      type: containerJson.type,
+      id: containerJson.objectReference.id
     };
   }
   componentWillReceiveProps(nextProps) {
@@ -29,6 +31,10 @@ class ContainerObject extends React.Component {
   }
 
   render() {
+    var emitter = ObjectEmitter;
+    console.log('yoyoyo: ', this.state.x);
+    console.log('tilsvarende ting: ', this.state.id, this.state.name);
+    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
     return (
       <Group>
         <Rect
