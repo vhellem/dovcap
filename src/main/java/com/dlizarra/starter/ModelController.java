@@ -5,13 +5,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ModelController {
+   @CrossOrigin(origins = "http://localhost:9090")
+   @RequestMapping(value = "/api/getModel", method = RequestMethod.GET)
+   public String getModels(){
+      Parser parser = new Parser("models/simple.kmv");
 
-        @CrossOrigin(origins = "http://localhost:9090")
-        @RequestMapping(value = "/api/getModel", method = RequestMethod.GET)
-        public String getModels() {
-            Parser parser = new Parser("models/simple.kmv");
-
-            return parser.getJson();
-        }
-
-    }
+      return parser.getJson();
+   }
+}
