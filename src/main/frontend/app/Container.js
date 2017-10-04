@@ -8,13 +8,14 @@ class Container extends React.Component {
     super(props);
 
     var containerJson = props.container;
+    console.log(containerJson);
 
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
       height: containerJson.attributes.scaleHeight * props.parentHeight,
       x: props.parentX + containerJson.attributes.scaleX * props.parentWidth,
       y: props.parentY + containerJson.attributes.scaleY * props.parentHeight,
-      name: containerJson.name,
+      name: containerJson.name
     };
   }
   componentWillReceiveProps(nextProps) {
@@ -23,23 +24,18 @@ class Container extends React.Component {
     this.setState({
       width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
       height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
-      x:
-        nextProps.parentX +
-        containerJson.attributes.scaleX * nextProps.parentWidth,
-      y:
-        nextProps.parentY +
-        containerJson.attributes.scaleY * nextProps.parentHeight,
+      x: nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth,
+      y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
     });
   }
 
   render() {
-    console.log(this.state, 'container');
-
+    //console.log(this.state, 'container');
     var children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
             if (child.type === 'Container') {
-            return (
+              return (
                 <Container
                   container={child}
                   parentWidth={this.state.width}
@@ -49,7 +45,7 @@ class Container extends React.Component {
                   key={child.id}
                 />
               );
-          } else if (child.type !== 'Action Button') {
+            } else if (child.type !== 'Action Button') {
               return (
                 <ContainerObject
                   container={child}
