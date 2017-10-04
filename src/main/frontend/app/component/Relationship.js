@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from './Container.js';
+import Container from '../Container.js';
 import { Layer, Arrow, Stage, Group } from 'react-konva';
 
 class Relationship extends React.Component {

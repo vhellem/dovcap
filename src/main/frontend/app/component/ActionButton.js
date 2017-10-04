@@ -32,9 +32,8 @@ class ActionButton extends React.Component {
 
   handleClick = () => {
     var x = String(this.state.action).trim();
-
-    console.log(x);
-
+    console.log("Click: " + x);
+debugger;
     eval(x);
   };
 
@@ -49,6 +48,7 @@ class ActionButton extends React.Component {
           stroke={1}
           cornerRadius={0}
           onClick={this.handleClick}
+          fill="green"
         />
         <Text
           width={this.state.width}
@@ -59,6 +59,7 @@ class ActionButton extends React.Component {
           text={this.state.name}
           fontSize={8}
           fontFamily="Arial"
+          onClick={this.handleClick}
         />
       </Group>
     );

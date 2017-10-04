@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text } from 'react-konva';
-import ContainerObject from './ContainerObject.js';
-import ActionButton from './ActionButton.js';
+import ContainerObject from './component/ContainerObject.js';
+import ActionButton from './component/ActionButton.js';
 
 class Container extends React.Component {
   constructor(props) {
