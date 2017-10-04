@@ -1,8 +1,8 @@
 import React from 'react';
 import { getModelsFromBackend } from './utlities.js';
 import ModelView from './ModelView.js';
-import Tabs from 'antd/lib/Tabs'; // for js
-import 'antd/lib/Tabs/style/css';
+import Tabs from 'antd/lib/tabs'; // for js
+import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
 
 class App extends React.Component {
