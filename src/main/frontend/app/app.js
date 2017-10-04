@@ -1,7 +1,8 @@
 import React from 'react';
 import { getModelsFromBackend } from './utlities.js';
 import ModelView from './ModelView.js';
-
+import person from './image/networkdevice.svg';
+import test from './image/organization.png';
 class App extends React.Component {
   constructor() {
     super();
@@ -25,7 +26,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('rofl: ', this.state);
     if (this.state.selectedModel === 0) {
       return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -37,7 +37,7 @@ class App extends React.Component {
       );
       11;
     }
-    return <h1>loading</h1>;
+    return <img src={person} />;
   }
 }
 export default App;

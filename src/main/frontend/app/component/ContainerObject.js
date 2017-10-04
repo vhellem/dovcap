@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
-
+import org from '../image/networkdevice.svg';
 class ContainerObject extends React.Component {
   constructor(props) {
     super(props);
@@ -19,11 +19,11 @@ class ContainerObject extends React.Component {
 
     //TODO: import better
     const image = new window.Image();
-    image.src = "https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg";
+    image.src = org;
     image.onload = () => {
       this.setState({
         image: image
-      })
+      });
       this.drawImage();
     };
   }
@@ -61,6 +61,7 @@ class ContainerObject extends React.Component {
   }
 
   render() {
+    console.log(org);
     return (
       <Group>
         <Rect
@@ -80,10 +81,10 @@ class ContainerObject extends React.Component {
           image={this.state.image}
         />
         <Text
-          width={this.state.width * (2/3)}
+          width={this.state.width * (2 / 3)}
           height={this.state.height}
           align="center"
-          x={this.state.x + this.state.width * (1/3)}
+          x={this.state.x + this.state.width * (1 / 3)}
           y={this.state.y + this.state.height / 2 - 7}
           text={this.state.name}
           witdth={14}
