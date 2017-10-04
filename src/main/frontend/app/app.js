@@ -7,7 +7,8 @@ class App extends React.Component {
     super();
     this.state = {
       selectedModel: false,
-      modelViews: null
+      modelViews: null,
+      relationships: null
     };
   }
   componentWillMount() {
@@ -17,19 +18,24 @@ class App extends React.Component {
       console.log(json);
       this.setState({
         selectedModel: 0,
-        modelViews: json.modelViewL
+        modelViews: json.modelViewL,
+        relationships: json.relationshipL
       });
     });
   }
 
   render() {
-    console.log(this.state);
+    console.log('rofl: ', this.state);
     if (this.state.selectedModel === 0) {
       return (
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <ModelView modelView={this.state.modelViews[this.state.selectedModel]} />
+          <ModelView
+            modelView={this.state.modelViews[this.state.selectedModel]}
+            relationships={this.state.relationships}
+          />
         </div>
       );
+      11;
     }
     return <h1>loading</h1>;
   }

@@ -1,7 +1,7 @@
-var request = require('superagent');
+const request = require('superagent');
 
 export function getModelsFromBackend() {
-  const res = request.get('http://localhost:8080/api/getModel');
+  const res = request.get('/api/getModel');
   return res;
 }
 
