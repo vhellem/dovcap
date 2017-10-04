@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_TRM:Person_UUID" name="person" title="Person" desc="A Person is an individual human being." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="gender" xlink:role="integer-type" xlink:title="Gender" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_gender_UUID" label="Gender" desc="The gender of the person, if needed." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_gender_UUID&#34;;"/>
+  <property name="initials" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Initials" desc="The initials of the person." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_initials_UUID&#34;;"/>
+  <property name="dateOfBirth" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#date" label="Date of Birth" desc="The date when the person was born." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_dateOfBirth_UUID&#34;;"/>
+  <property name="addressStreet" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Address 1 (Street)" desc="The street address." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_addressStreet_UUID&#34;;"/>
+  <property name="addressPOBox" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#string" label="Address 2 (P.O. Box)" desc="The Post Office Box address." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_addressPOBox_UUID&#34;;"/>
+  <property name="city" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="City" desc="City, town, or equivalent." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_city_UUID&#34;;"/>
+  <property name="stateregion" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="State/Region" desc="State, region, province, or equivalent." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_stateregion_UUID&#34;;"/>
+  <property name="postalCodeZip" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Postal Code (Zip)" desc="Zip code or equivalent postal code." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_postalCodeZip_UUID&#34;;"/>
+  <property name="country" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#string" label="Country" desc="Country, nation or equivalent." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_country_UUID&#34;;"/>
+  <property name="officePhoneNumber" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Office Phone Number" desc="The person&#39;s office phone number." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_officePhoneNumber_UUID&#34;;"/>
+  <property name="homePhoneNumber" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Home Phone Number" desc="The person&#39;s private phone number." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_homePhoneNumber_UUID&#34;;"/>
+  <property name="mobilePhoneNumber" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Mobile Phone Number" desc="The person&#39;s cellphone number." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_mobilePhoneNumber_UUID&#34;;"/>
+  <property name="faxNumber" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Fax Number" desc="Fax number where the person can be reached." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_faxNumber_UUID&#34;;"/>
+  <property name="emailAddress" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Email Address" desc="The person&#39;s email address." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_emailAddress_UUID&#34;;"/>
+  <property name="userName" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="User Name" desc="Name used for logon." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_GenInfo_Username_UUID&#34;;isRequired=1;"/>
+  <property name="webAddress" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Web Address" desc="Homepage URL." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_webAddress_UUID&#34;;"/>
+  <property name="recurringCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Recurring Cost" desc="Total cost per hour, day, year etc. Set interval separately." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_GenInfo_EstAnnualizedAnnCompensation_UUID&#34;;"/>
+  <property name="startDate" xlink:role="date-type" xlink:title="date" xlink:href="metis:std#date" label="Start Date" desc="The date this person started working for the company." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_GenInfo_StartDate_UUID&#34;;"/>
+  <property name="employment" xlink:role="integer-type" xlink:title="Employment" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_employment_UUID" label="Employment" desc="The person&#39;s current employment status." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_GenInfo_Status_UUID&#34;;"/>
+  <property name="businessTitle" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#string" label="Business Title" desc="The person&#39;s business title." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_GenInfo_Title_UUID&#34;;"/>
+  <property name="recurringCostInterval" xlink:role="integer-type" xlink:title="integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_recurring_cost_interval_UUID" label="Recurring Cost Interval" desc="The unit for measuring the cost, per duration or interval." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_recurringCostInterval_UUID&#34;;"/>
+  <property name="monetaryUnit" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#string" label="Monetary Unit" desc="The unit in which costs, prices and other monetary values are expressed. Examples are USD, GBP, EURO, NOK, etc." mer-property-metadata="uuid=&#34;PropDef_TRM:Person_monetaryUnit_UUID&#34;;"/>
+  <property name="allocation" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Allocation (%)" desc="Total allocation to projects and tasks. A value computed by adding allocation properties on allocation relationships between the person and projects and tasks. May exceed 100%" method-flag="true" default-visible="top"/>
+  <named-method-link name="MetisTrouxClient_--Get Project----QueryProjectOverproject_allocates_is_allocated_to_percentage_person" xlink:role="cpp-method" xlink:title="is allocated to Project" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryProjectOverproject_allocates_is_allocated_to_percentage_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Task----QueryGenericTaskOvertask_allocates_is_allocated_to_percentage_person" xlink:role="cpp-method" xlink:title="is allocated to Task" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryGenericTaskOvertask_allocates_is_allocated_to_percentage_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Skill----QueryCompetenceOverperson_holds_is_held_by_skill" xlink:role="cpp-method" xlink:title="holds Skill" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryCompetenceOverperson_holds_is_held_by_skill"/>
+  <named-method-link name="MetisTrouxClient_--Get Skill_Profile----QueryCompetenceprofileOverperson_holds_is_held_by_skill_profile" xlink:role="cpp-method" xlink:title="holds Skill Profile" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryCompetenceprofileOverperson_holds_is_held_by_skill_profile"/>
+  <named-method-link name="MetisTrouxClient_--Get Change_Component----QueryInitiative_DomainOverchange_component_has_manager_is_manager_of_person" xlink:role="cpp-method" xlink:title="is manager of Change Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInitiative_DomainOverchange_component_has_manager_is_manager_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Manpower----QueryManpowerOverperson_provides_is_provided_by_manpower" xlink:role="cpp-method" xlink:title="provides Manpower" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryManpowerOverperson_provides_is_provided_by_manpower"/>
+  <named-method-link name="MetisTrouxClient_--Get Location----QueryLocationOverperson_is_located_in_is_location_of_location" xlink:role="cpp-method" xlink:title="is located in Location" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryLocationOverperson_is_located_in_is_location_of_location"/>
+  <named-method-link name="MetisTrouxClient_--Get Role----QueryRoleOverperson_fills_is_filled_by_role" xlink:role="cpp-method" xlink:title="fills Role" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryRoleOverperson_fills_is_filled_by_role"/>
+  <named-method-link name="MetisTrouxClient_--Get Position----QueryPositionOverperson_fills_is_filled_by_position" xlink:role="cpp-method" xlink:title="fills Position" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryPositionOverperson_fills_is_filled_by_position"/>
+  <named-method-link name="MetisTrouxClient_--Get Document----QueryDocumentOverdocument_has_author_is_author_of_person" xlink:role="cpp-method" xlink:title="is author of Document" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryDocumentOverdocument_has_author_is_author_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Organization----QueryOrganizationOverorganization_has_employee_is_employee_in_person" xlink:role="cpp-method" xlink:title="is employee in Organization" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryOrganizationOverorganization_has_employee_is_employee_in_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Organization----QueryOrganizationOverorganization_consists_of_is_part_of_person" xlink:role="cpp-method" xlink:title="is part of Organization" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryOrganizationOverorganization_consists_of_is_part_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Organization----QueryOrganizationOverorganization_has_responsible_is_responsible_for_person" xlink:role="cpp-method" xlink:title="is responsible for Organization" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryOrganizationOverorganization_has_responsible_is_responsible_for_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Organization----QueryOrganizationOverorganization_has_manager_is_manager_of_person" xlink:role="cpp-method" xlink:title="is manager of Organization" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryOrganizationOverorganization_has_manager_is_manager_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Plan----QueryTransitionPlanItemOverplan_has_author_is_author_of_person" xlink:role="cpp-method" xlink:title="is author of Plan" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryTransitionPlanItemOverplan_has_author_is_author_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Disaster_Recovery_Plan----QueryDR_PlanOverdisaster_recovery_plan_has_manager_is_manager_of_person" xlink:role="cpp-method" xlink:title="is manager of Disaster Recovery Plan" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryDR_PlanOverdisaster_recovery_plan_has_manager_is_manager_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Disaster_Recovery_Plan----QueryDR_PlanOverdisaster_recovery_plan_has_stakeholder_is_stakeholder_of_person" xlink:role="cpp-method" xlink:title="is stakeholder of Disaster Recovery Plan" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryDR_PlanOverdisaster_recovery_plan_has_stakeholder_is_stakeholder_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Organization----QueryOrganizationOverorganization_has_representative_is_representative_for_person" xlink:role="cpp-method" xlink:title="is representative for Organization" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryOrganizationOverorganization_has_representative_is_representative_for_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Application_Component----QueryApplication_DomainOverapplication_component_has_business_owner_is_business_owner_of_person" xlink:role="cpp-method" xlink:title="is business owner of Application Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryApplication_DomainOverapplication_component_has_business_owner_is_business_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Infrastructure_Component----QueryInfrastructure_DomainOverinfrastructure_component_has_business_owner_is_business_owner_of_person" xlink:role="cpp-method" xlink:title="is business owner of Infrastructure Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInfrastructure_DomainOverinfrastructure_component_has_business_owner_is_business_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Component----QueryProcess_DomainOverprocess_component_has_business_owner_is_business_owner_of_person" xlink:role="cpp-method" xlink:title="is business owner of Process Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryProcess_DomainOverprocess_component_has_business_owner_is_business_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Change_Component----QueryInitiative_DomainOverchange_component_has_business_owner_is_business_owner_of_person" xlink:role="cpp-method" xlink:title="is business owner of Change Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInitiative_DomainOverchange_component_has_business_owner_is_business_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Deliverable----QueryDeliverableOverdeliverable_has_business_owner_is_business_owner_of_person" xlink:role="cpp-method" xlink:title="is business owner of Deliverable" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryDeliverableOverdeliverable_has_business_owner_is_business_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Application_Component----QueryApplication_DomainOverapplication_component_has_it_owner_is_it_owner_of_person" xlink:role="cpp-method" xlink:title="is IT owner of Application Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryApplication_DomainOverapplication_component_has_it_owner_is_it_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Infrastructure_Component----QueryInfrastructure_DomainOverinfrastructure_component_has_it_owner_is_it_owner_of_person" xlink:role="cpp-method" xlink:title="is IT owner of Infrastructure Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInfrastructure_DomainOverinfrastructure_component_has_it_owner_is_it_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Component----QueryProcess_DomainOverprocess_component_has_it_owner_is_it_owner_of_person" xlink:role="cpp-method" xlink:title="is IT owner of Process Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryProcess_DomainOverprocess_component_has_it_owner_is_it_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Change_Component----QueryInitiative_DomainOverchange_component_has_it_owner_is_it_owner_of_person" xlink:role="cpp-method" xlink:title="is IT owner of Change Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInitiative_DomainOverchange_component_has_it_owner_is_it_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Deliverable----QueryDeliverableOverdeliverable_has_it_owner_is_it_owner_of_person" xlink:role="cpp-method" xlink:title="is IT owner of Deliverable" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryDeliverableOverdeliverable_has_it_owner_is_it_owner_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Enterprise_Policy----QueryITPrinciplesOverenterprise_policy_has_manager_is_manager_of_person" xlink:role="cpp-method" xlink:title="is manager of Enterprise Policy" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryITPrinciplesOverenterprise_policy_has_manager_is_manager_of_person"/>
+  <named-method-link name="allocation" xlink:role="cpp-method" xlink:title="Allocation" xlink:href="../methods/person_methods.kmd#oid1"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Person" xlink:href="#CompType_TRM:Person_UUID">
+   <string name="troux_color">#FFEEAA</string>
+   <string name="troux_iconAlias">e58a5f2d-3c82-3800-bfa8-3126646cbbf0</string>
+   <string name="troux_shape">Rectangle</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Person" xlink:href="#CompType_TRM:Person_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="internalexternal"/>
+   <propertyview name="businessTitle"/>
+   <propertyview name="initials"/>
+   <propertyview name="gender"/>
+   <propertyview name="dateOfBirth"/>
+   <propertyview name="addressStreet"/>
+   <propertyview name="addressPOBox"/>
+   <propertyview name="city"/>
+   <propertyview name="stateregion"/>
+   <propertyview name="postalCodeZip"/>
+   <propertyview name="country"/>
+   <propertyview name="officePhoneNumber"/>
+   <propertyview name="homePhoneNumber"/>
+   <propertyview name="mobilePhoneNumber"/>
+   <propertyview name="faxNumber"/>
+   <propertyview name="emailAddress"/>
+   <propertyview name="webAddress"/>
+   <propertyview name="userName"/>
+   <propertyview name="employment"/>
+   <propertyview name="startDate"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="allocation"/> 
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F0E7C2&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/person.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F0E7C2&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/person.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/person.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Person" xlink:href="#CompType_TRM:Person_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="internalexternal"/>
+   <propertyview name="businessTitle"/>
+   <propertyview name="initials"/>
+   <propertyview name="gender"/>
+   <propertyview name="dateOfBirth"/>
+   <propertyview name="addressStreet"/>
+   <propertyview name="addressPOBox"/>
+   <propertyview name="city"/>
+   <propertyview name="stateregion"/>
+   <propertyview name="postalCodeZip"/>
+   <propertyview name="country"/>
+   <propertyview name="officePhoneNumber"/>
+   <propertyview name="homePhoneNumber"/>
+   <propertyview name="mobilePhoneNumber"/>
+   <propertyview name="faxNumber"/>
+   <propertyview name="emailAddress"/>
+   <propertyview name="webAddress"/>
+   <propertyview name="userName"/>
+   <propertyview name="employment"/>
+   <propertyview name="startDate"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="allocation"/> 
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F0E7C2&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F0E7C2&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/person.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F0E7C2&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F0E7C2&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/person.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/person.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

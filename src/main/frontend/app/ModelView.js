@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './Container.js';
-import Relationship from './Relationship.js';
+import Relationship from './component/Relationship.js';
 import { Layer, Rect, Stage, Group } from 'react-konva';
 
 class ModelView extends React.Component {
