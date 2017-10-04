@@ -104,10 +104,9 @@ public class Model {
         if(currObject.attributes.containsKey("xlink:href")) {
           String reference = currObject.attributes.get("xlink:href");
           reference = parser.lookupFileName(reference);
-          reference = reference + ":oid2";
           int referenceIndex = -1;
           for (int ii = 0; ii < typeviewL.size(); ii++){
-            if (typeviewL.get(ii).getId().equals(reference)) {
+            if (typeviewL.get(ii).getId().contains(reference)) {
               referenceIndex = ii;
             }
           }
