@@ -6,7 +6,7 @@ class ActionButton extends React.Component {
   constructor(props) {
     super(props);
 
-    var containerJson = props.container;
+    const containerJson = props.container;
 
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
@@ -19,7 +19,7 @@ class ActionButton extends React.Component {
     };
   }
   componentWillReceiveProps(nextProps) {
-    var containerJson = nextProps.container;
+    const containerJson = nextProps.container;
     console.log(containerJson);
     this.setState({
       width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
@@ -31,7 +31,7 @@ class ActionButton extends React.Component {
   }
 
   handleClick = () => {
-    var x = String(this.state.action).trim();
+    const x = String(this.state.action).trim();
     console.log('Click: ' + x);
     debugger;
     eval(x);
