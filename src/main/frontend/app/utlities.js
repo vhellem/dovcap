@@ -13,3 +13,15 @@ export function findModelByReference(reference, list) {
   }
   return false;
 }
+
+export function getModelNamesFromBackend() {
+  let files = [];
+  fetch('http://localhost:8080/api/getModelNames')
+    .then(response => response.json())
+    .then(data => {
+      console.log('Data:', data);
+      files = data;
+    }).catch(err => console.error(err.toString()));
+  console.log('Files', files);
+  return files;
+}

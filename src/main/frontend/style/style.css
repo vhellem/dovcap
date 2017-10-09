@@ -1,3 +1,17 @@
 .testblue {
      color: blue;
  }
+.upload-container {
+ max-width: 1080px;
+ margin: 0 auto;
+}
+.upload-container h3 {
+ margin: 1rem 0;
+ border-bottom: 1px solid rgb(182, 182, 182);
+}
+.model-table {
+   min-width: 50%;
+}
+.theader {
+   border-bottom: 1px solid rgb(42, 123, 242);
+}
