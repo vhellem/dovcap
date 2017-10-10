@@ -303,12 +303,14 @@ public class Parser extends DefaultHandler {
         }
 
         if (readingValueset) {
+          if (tmpName != null) {
             if (tmpName.equals("name")){
                 objectTmp.setName(tmpValue);
             }
             else{
                 objectTmp.addValueset(tmpName, tmpValue);
             }
+          }
         }
 
         if (element.equals("object")) {
