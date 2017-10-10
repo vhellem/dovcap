@@ -8,23 +8,57 @@ class Uploader extends Component {
     this.state = {
       fileNames: [],
     };
+    this.updateModelList = this.updateModelList.bind(this);
   }
   componentWillMount() {
     fetch('http://localhost:8080/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
-        //  console.log('Data:', data);
         this.setState({ fileNames });
       }).catch(err => console.error(err.toString()));
   }
-  dropHandler(file) {
-    const modelFile = file[0];
-    const modelFileRequest = new FormData();
-    modelFileRequest.append('file', modelFile);
-    modelFileRequest.append('name', modelFile.name);
-    console.log('Post:', modelFile.name, modelFile);
-    request.post('/api/uploadFile')
-      .send(modelFileRequest)
+  getFileNameRows() {
+    const fileNames = this.state.fileNames.map((file) =>
+      <tr key={file}>
+        <td>{file}</td>
+        <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
+      </tr>);
+    return fileNames;
+  }
+  updateModelList() {
+    fetch('http://localhost:8080/api/getModelNames')
+      .then(response => response.json())
+      .then(fileNames => {
+        this.setState({ fileNames });
+      }).catch(err => console.error(err.toString()));
+  }
+  dropHandler(files) {
+    const file = files[0];
+    const name = file.name;
+    const allowedFileExt = ['kmv', 'kmd'];
+    const valid = (allowedFileExt.indexOf(name.split('.')[1]) > -1);
+    if (valid) {
+      const fileRequest = new FormData();
+      fileRequest.append('file', file);
+      fileRequest.append('name', file.name);
+      request.post('/api/uploadModel')
+        .send(fileRequest)
+        .end((err, res) => {
+          if (err) {
+            console.log(err);
+          }
+          return res;
+        }
+      );
+    } else {
+      console.log('File type illegal!');
+    }
+  }
+  handleDelete(fileName) {
+    const req = new FormData();
+    req.append('name', fileName.toString());
+    request.post('/api/deleteModel')
+      .send(req)
       .end((err, res) => {
         if (err) {
           console.log(err);
@@ -33,22 +67,7 @@ class Uploader extends Component {
       }
     );
   }
-  updateModelList() {
-    fetch('http://localhost:8080/api/getModelNames')
-      .then(response => response.json())
-      .then(fileNames => {
-        //  console.log('Data:', data);
-        this.setState({ fileNames });
-      }).catch(err => console.error(err.toString()));
-  }
-
   render() {
-    const fileNames = this.state.fileNames.map((file) =>
-      <tr key={file}>
-        <td>{file}</td>
-        <td><button>Delete</button></td>
-      </tr>);
-
     return (
       <div className="upload-container">
         <h1>Model Upload</h1>
@@ -61,7 +80,7 @@ class Uploader extends Component {
             </tr>
           </thead>
           <tbody>
-            {fileNames}
+            {this.getFileNameRows()}
           </tbody>
         </table>
         <h3>Select model to be uploaded: </h3>

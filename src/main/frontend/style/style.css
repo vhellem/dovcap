@@ -16,3 +16,10 @@
 .theader {
    border-bottom: 1px solid rgb(42, 123, 242);
 }
+.dropzone-container {
+  background-color: rgb(233, 233, 233);
+  border: 1px dashed rgb(22, 68, 163);
+  display: block;
+  padding: 1rem;
+  max-width: 15rem;
+}

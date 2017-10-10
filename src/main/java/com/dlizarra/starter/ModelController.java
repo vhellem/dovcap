@@ -43,7 +43,7 @@ public class ModelController {
         }
 
         @CrossOrigin(origins="http://localhost:9090")
-        @RequestMapping(value="/api/uploadFile", method=RequestMethod.POST)
+        @RequestMapping(value="/api/uploadModel", method=RequestMethod.POST)
         public @ResponseBody ResponseEntity<String> handleModelUpload(
           @RequestParam("name") String name, @RequestParam("file") MultipartFile file) throws Exception {
           if (!file.isEmpty()) {
@@ -61,5 +61,20 @@ public class ModelController {
             return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("You failed to upload " + name + " because the file was empty.");
           }
         }
+        @CrossOrigin(origins="http://localhost:9090")
+        @RequestMapping(value="/api/deleteModel", method=RequestMethod.POST)
+        public @ResponseBody ResponseEntity<String> handleModelDelete(@RequestParam("name") String fileName) throws Exception {
+          File folder = new File("models");
+          for (File file : folder.listFiles()) {
+            if (file.getName().equals(fileName)) {
+              file.delete();
+              return ResponseEntity.ok("File " + fileName + " deleted!");
+            }
+          }
+          return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Couldn't find " + fileName + " in model folders!");
+        }
 
+        private String getFileXentension(File file) {
+          String 
+        }
     }
