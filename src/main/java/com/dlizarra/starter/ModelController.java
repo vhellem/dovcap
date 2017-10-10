@@ -73,8 +73,4 @@ public class ModelController {
           }
           return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Couldn't find " + fileName + " in model folders!");
         }
-
-        private String getFileXentension(File file) {
-          String 
-        }
     }

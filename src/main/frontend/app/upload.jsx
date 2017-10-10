@@ -8,7 +8,6 @@ class Uploader extends Component {
     this.state = {
       fileNames: [],
     };
-    this.updateModelList = this.updateModelList.bind(this);
   }
   componentWillMount() {
     fetch('http://localhost:8080/api/getModelNames')
@@ -25,7 +24,8 @@ class Uploader extends Component {
       </tr>);
     return fileNames;
   }
-  updateModelList() {
+  updateModels() {
+    console.log('Update models');
     fetch('http://localhost:8080/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
@@ -66,6 +66,7 @@ class Uploader extends Component {
         return res;
       }
     );
+    //  this.updateModels();
   }
   render() {
     return (

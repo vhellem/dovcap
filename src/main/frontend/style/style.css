@@ -23,3 +23,6 @@
   padding: 1rem;
   max-width: 15rem;
 }
+.dropzone-container:hover {
+  background-color: rgb(240, 240, 240);
+}
