@@ -10,12 +10,12 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      selectedTab: '0',
+      selectedTab: '1',
     };
   }
   onChange = activeKey => {
     this.setState({
-      selectedTab: activeKey
+      selectedTab: activeKey,
     });
   };
 

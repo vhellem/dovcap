@@ -1,41 +1,49 @@
 import React, { Component } from 'react';
-import { getModelNamesFromBackend } from './utlities';
+const Dropzone = require('react-dropzone');
+const request = require('superagent');
 
 class Uploader extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+      fileNames: [],
     };
   }
   componentWillMount() {
     fetch('http://localhost:8080/api/getModelNames')
       .then(response => response.json())
-      .then(data => {
-        console.log('Data:', data);
-        this.setState({ data });
+      .then(fileNames => {
+        //  console.log('Data:', data);
+        this.setState({ fileNames });
       }).catch(err => console.error(err.toString()));
   }
-  sendFile() {
-    const data = new FormData();
-    const fileData = document.querySelector('input[type="file"]').files[0];
-    data.append(fileData);
-    fetch('http://localhost:8080/api/uploadModel', {
-      method: 'POST',
-      body: data,
-    }).then(res => {
-      if (res.ok) {
-        console.log('Upload: Perfect!');
-      } else if (res.status === 401) {
-        console.log('Upload: OOPS!');
+  dropHandler(file) {
+    const modelFile = file[0];
+    const modelFileRequest = new FormData();
+    modelFileRequest.append('file', modelFile);
+    modelFileRequest.append('name', modelFile.name);
+    console.log('Post:', modelFile.name, modelFile);
+    request.post('/api/uploadFile')
+      .send(modelFileRequest)
+      .end((err, res) => {
+        if (err) {
+          console.log(err);
+        }
+        return res;
       }
-    }, err => {
-      console.log('Error submitting form!', err);
-    });
+    );
+  }
+  updateModelList() {
+    fetch('http://localhost:8080/api/getModelNames')
+      .then(response => response.json())
+      .then(fileNames => {
+        //  console.log('Data:', data);
+        this.setState({ fileNames });
+      }).catch(err => console.error(err.toString()));
   }
 
   render() {
-    const fileNames = this.state.data.map((file) =>
+    const fileNames = this.state.fileNames.map((file) =>
       <tr key={file}>
         <td>{file}</td>
         <td><button>Delete</button></td>
@@ -57,10 +65,13 @@ class Uploader extends Component {
           </tbody>
         </table>
         <h3>Select model to be uploaded: </h3>
-        <form encType="multipart/form-data" action="">
-          <input type="file" name="filename" defaultValue="fileName" />
-          <input type="button" value="upload" />
-        </form>
+        <Dropzone
+          className="dropzone-container"
+          multiple={false}
+          onDrop={this.dropHandler}
+        >
+          <div>Drop a file, or click to add!</div>
+        </Dropzone>
       </div>
     );
   }

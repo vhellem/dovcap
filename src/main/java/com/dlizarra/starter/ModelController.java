@@ -2,9 +2,15 @@ package com.dlizarra.starter;
 
 
 import com.google.gson.Gson;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.xml.ws.Response;
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -25,7 +31,7 @@ public class ModelController {
         public String getModelNames() {
           File folder = new File("models");
           File[] files = folder.listFiles();
-          ArrayList fileNames = new ArrayList();
+          ArrayList<String> fileNames = new ArrayList<>();
 
           for(File file : files) {
             if (file.isFile()) {
@@ -34,6 +40,26 @@ public class ModelController {
           }
           String json = new Gson().toJson(fileNames);
           return json;
+        }
+
+        @CrossOrigin(origins="http://localhost:9090")
+        @RequestMapping(value="/api/uploadFile", method=RequestMethod.POST)
+        public @ResponseBody ResponseEntity<String> handleModelUpload(
+          @RequestParam("name") String name, @RequestParam("file") MultipartFile file) throws Exception {
+          if (!file.isEmpty()) {
+            try {
+              byte[] bytes = file.getBytes();
+              BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File("models/" + name)));
+              stream.write(bytes);
+              stream.close();
+              System.out.println("POST OK!");
+              return ResponseEntity.ok("File " + name + " uploaded.");
+            } catch (Exception e) {
+              return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(e.getMessage());
+            }
+          } else {
+            return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("You failed to upload " + name + " because the file was empty.");
+          }
         }
 
     }
