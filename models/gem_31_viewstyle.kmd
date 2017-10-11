@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ nextoid="2">
+
+ <viewstyle id="oid1" name="oldgemviewstyle" title="GEM 3.1 View Style">
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/application.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/business_process.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/goal.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/location.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/organization.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/person.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/productitem.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/requirement.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1030" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1031" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1032" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1034" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1035" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1036" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

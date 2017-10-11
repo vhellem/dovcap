@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="2"
+ nextoid="1">
+
+ <template id="oid1" name="MEAFBlank" title="Troux Semantics Blank" desc="Blank template for Troux Semantics">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Semantics" xlink:href="../metamodels/meaf_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="TrouxSource Queries" xlink:href="../metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  <model-link xlink:role="model" xlink:href="blank.kmd#oid1" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:href="blank.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="meafrefguide.chm" xlink:role="chm" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+
+ <template id="oid2" name="MEAFMERConnection" title="Troux Semantics Blank with TrouxSource Repository Connection" desc="Template for Troux Semantics with TrouxSource repository connection">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Semantics" xlink:href="../metamodels/meaf_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="TrouxSource Queries" xlink:href="../metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  <model-link xlink:role="model" xlink:href="marshalling.kmd#oid1" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:href="marshalling.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="meafrefguide.chm" xlink:role="Role" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+
+
+</metis>

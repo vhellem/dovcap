@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002as6a00vp3u6b0olit" name="ME_Repository_Queries" title="ME Repository Queries">
+  <method-links size="5">
+   <method-link xlink:role="cpp-method" xlink:title="Get All Tasks" xlink:href="../methods/me_queries.kmd#QueryTasks"/>
+   <method-link xlink:role="cpp-method" xlink:title="Get All Related Tasks" xlink:href="../methods/me_queries.kmd#QueryRelatedTasks"/>
+   <method-link xlink:role="cpp-method" xlink:title="Get All Neighbors" xlink:href="http://metadata.troux.info/meaf/methods/repository_queries.kmd#QueryNeighbors"/>
+   <method-link xlink:role="cpp-method" xlink:title="Get All Parts" xlink:href="http://metadata.troux.info/meaf/methods/repository_queries.kmd#QueryParts"/>
+   <method-link xlink:role="cpp-method" xlink:title="Get All of this type" xlink:href="http://metadata.troux.info/meaf/methods/repository_queries.kmd#QueryTypeOf"/>
+  </method-links>
+ </metamodel>
+</metis>

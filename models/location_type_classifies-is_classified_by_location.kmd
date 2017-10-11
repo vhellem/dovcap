@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_Location:Location_Type_classifies-is_classified_by_Location_UUID" name="Location_Type_classifies_is_classified_by_Location" title="Location Type classifies-is classified by Location" desc="Allows you to classify Locations by Location Types." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Mer Relationship" xlink:href="metis:mer#MerOriginTargetRelship"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/location_type_classifies-is_classified_by_location.kmd#UUID4_53F7F258-3E0F-4924-BB8D-DDA65BAC4212"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Location Type" xlink:href="../object_types/location_type.kmd#CompType_Semantics_Location:Location_Type_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Location" xlink:href="../../meaf/objecttypes/location.kmd#CompType_TRM:Location_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Location Type classifies-is classified by Location" xlink:href="#RelType_Semantics_Location:Location_Type_classifies-is_classified_by_Location_UUID" xlink:actuate="user">
+   <string name="from">classifies</string>
+   <string name="to">is classified by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Location Type classifies-is classified by Location" xlink:href="#RelType_Semantics_Location:Location_Type_classifies-is_classified_by_Location_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

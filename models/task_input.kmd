@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002as5m00vp3rovn2ee1" xlink:role="type" xlink:title="Task Input" xlink:href="../objecttypes/task_input.kmd#AKM_Task_Input" tree-size="0.5" nested-size="0.125" behavior="tree" position="left" placement="external">
+  <layout-link xlink:role="object" xlink:title="Metis Type Attribute Compact Layout" xlink:href="http://xml.computas.com/xml/interfaces/common/layouts/attribute.kmd#oid4"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Input closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process_input1.svg#oid20" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;grey80&#34;)"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;grey60&#34;)"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;2&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Input closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process_input1.svg#oid20" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;grey80&#34;)"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;grey60&#34;)"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;2&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/bpm/input.png"/>
+ </typeview>
+
+
+</metis>

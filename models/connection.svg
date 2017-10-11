@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: connection.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Open connection object</desc>
+   <title>Open</title>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <rect x="224" y="252" width="64" height="8"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:connection_area"></rect>
+    <polyline points="192 256 320 256"
+     style="stroke:none;"></polyline>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <image x="0" y="0" width="512" height="512" xlink:role="symbol" xlink:title="Alive" xlink:href="#oid3"     class="TAG:icon"></image>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>Closed</title>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <image x="0" y="0" width="512" height="512" xlink:role="symbol" xlink:title="Alive" xlink:href="#oid3"     class="TAG:icon"></image>
+  </symbol>
+  <symbol id="oid3" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>Alive</title>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <polyline points="256 0 256 512"
+     style=" stroke:#000000; stroke-width:1; stroke-dasharray: 2 2;"     class="TAG:alive"></polyline>
+  </symbol>
+  <symbol id="oid4" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>Dead</title>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+  </symbol>
+  <symbol id="oid5" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>Active</title>
+    <rect x="192" y="252" width="128" height="8"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:connection_area"></rect>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <rect x="224" y="0" width="64" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:100%"     class="TAG:active"></rect>
+    <polyline points="288 0 288 512 288 488"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:active_frame"></polyline>
+    <polyline points="224 0 224 512 224 472"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:active_frame"></polyline>
+  </symbol>
+  <symbol id="oid6" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>ActiveFirst</title>
+    <rect x="192" y="252" width="128" height="8"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:connection_area"></rect>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <rect x="224" y="128" width="64" height="384"
+     style="stroke:none; fill:#ffffff; fill-opacity:100%"     class="TAG:active"></rect>
+    <polyline points="224 488 224 512 224 128 
+     288 128 288 512 288 488"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:active_frame"></polyline>
+    <polyline points="256 128 256 0"
+     style=" stroke:#000000; stroke-width:1; stroke-dasharray: 2 2;"     class="TAG:alive"></polyline>
+  </symbol>
+  <symbol id="oid7" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>ActiveLast</title>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <rect x="224" y="0" width="64" height="384"
+     style="stroke:none; fill:#ffffff; fill-opacity:100%"     class="TAG:active"></rect>
+    <polyline points="224 0 224 384 288 384 
+     288 0"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:active_frame"></polyline>
+    <polyline points="256 512 256 384"
+     style=" stroke:#000000; stroke-width:1; stroke-dasharray: 2 2;"     class="TAG:alive"></polyline>
+    <rect x="192" y="252" width="128" height="8"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:connection_area"></rect>
+  </symbol>
+  <symbol id="oid8" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>ActiveSingle</title>
+    <rect x="0" y="0" width="512" height="512"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <polyline points="256 0 256 512"
+     style=" stroke:#000000; stroke-width:1; stroke-dasharray: 2 2;"     class="TAG:alive"></polyline>
+    <rect x="224" y="128" width="64" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:active"></rect>
+    <polyline points="224 128 288 128 288 384 
+     224 384 224 128"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:active_frame"></polyline>
+  </symbol>
+  <symbol id="oid9" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Closed connection object</desc>
+   <title>Stop</title>
+    <rect x="0" y="0" width="128" height="128"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <polyline points="64 0 64 62"
+     style=" stroke:#000000; stroke-width:1; stroke-dasharray: 2 2;"     class="TAG:alive"></polyline>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="31"
+       style=" stroke:#000000; stroke-width:1; stroke-dasharray: 2 2; font-family:sans-serif; font-size:32; text-align:center vertical-align:middle;"
+       class="TAG:stop">X</text>
+      <rect x="0" y="0" width="128" height="128"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

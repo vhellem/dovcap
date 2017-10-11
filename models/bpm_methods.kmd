@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="7"
+ nextoid="8">
+
+ <cpp-method id="oid1" name="Pick_BPM_Process_Model_Change_Closed_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Closed_Colormap" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid2"/>
+   <string name="Property">BPM_ProcessModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="Pick_BPM_Process_Model_Change_Open_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Open_Colormap" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid3"/>
+   <string name="Property">BPM_ProcessModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="Pick_BPM_Object_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Object_Colormap" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid4"/>
+   <string name="Property">BPM_ProcessModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid4" name="Pick_BPM_Flow_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Flow_Colormap" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid5"/>
+   <string name="Property">BPM_ProcessModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" name="Pick_BPM_Process_Model_Change_FillPattern" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Patternmap" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid6"/>
+   <string name="Property">BPM_ProcessModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid6" name="BPM_Get_Stereotype_Name" title="BPM_Get_Stereotype_Name" desc="The name of  the stereotype process of a particular process, found by following the has-stereotype relationship," language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 2" xlink:href="metis:stdmethods#oid542"/>
+  <arg-list size="12">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="BPM_Find_Process_Stereotype" xlink:href="../criterias/bpm_find_process_stereotype.kmd#oid1"/>
+   <string name="Macro1">(expand &#34;&#60;br&#62;&#38;lt;&#38;lt;&#34;(property name)&#34;&#38;gt;&#38;gt;&#60;/br&#62;&#34;)</string>
+   <string name="Macro2"></string>
+   <string name="Macro3"></string>
+   <string name="Macro4"></string>
+   <string name="Macro5"></string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="BPM_Get_Stereotype_Description" title="BPM_Get_Stereotype_Description" desc="The description to use for a particular process on process symbols. Defaults to the description of the stereotype process (if any), otherwise the process&#39; own description" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 2" xlink:href="metis:stdmethods#oid542"/>
+  <arg-list size="8">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="BPM_Find_Process_Stereotype" xlink:href="../criterias/bpm_find_process_stereotype.kmd#oid1"/>
+   <string name="Macro1">(expand (property description))</string>
+   <string name="Macro2">(expand (property description))</string>
+   <string name="Macro3"></string>
+   <string name="Macro4"></string>
+   <string name="Macro5"></string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_AKM:ActionTypes_UUID" name="Action_Types_AKM_" title="Action Types (AKM)" desc="Action types supported when invoking an action." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="InvokeTask" min="0" max="0"/>
+  <range name="InvokeService" min="1" max="1"/>
+  <range name="InvokeMethod" min="2" max="2"/>
+  <range name="ExecuteScript" min="3" max="3"/>
+  <range name="ExecuteCommand" min="4" max="4"/>
+ </integer-type>
+
+</metis>

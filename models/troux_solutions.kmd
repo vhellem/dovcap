@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="7"
+ nextoid="1">
+
+ <metamodel id="UUID4_016369F5-F1C7-469F-ACC0-8D74F8E6FB80" name="Standards_Relationships" title="Standards Relationships" desc="This sub-metamodel contains the relationships used with in the Standards solution.">
+  <complex-type-links size="39">
+   <complex-type-link xlink:role="type" xlink:title="Application consists of Software Module" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#RelType_AppConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component has category Standards Category" xlink:href="../../meaf/relationshiptypes/has_category-is_category_for.kmd#RelType_ITG:Basic_Component_has_category_Standards_Category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="External Organization provides Industry Standard" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by.kmd#RelType_ITG:External_Organization_provides_Industry_Standard_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="HW Product Model replaces HW Product Model" xlink:href="../../meaf/relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:HW_Product_Version_replaces_HW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware Product Model uses Industry Std Version" xlink:href="../../meaf/relationshiptypes/uses-is_used_by.kmd#RelType_ITG:Hardware_Product_Version_uses_Industry_Standard_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard Version needs Skill" xlink:href="../../meaf/relationshiptypes/needs-is_needed_by.kmd#RelType_ITG:Industry_Standard_Version_needs_Skill_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Std Version replaces Industry Std Version" xlink:href="../../meaf/relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:Industry_Standard_Version_replaces_Industry_Standard_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard has version Industry Standard Version" xlink:href="../../meaf/relationshiptypes/has_version-is_version_of.kmd#RelType_ITG:Industry_Standard_has_Industry_Standard_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard has owner Person" xlink:href="../../meaf/relationshiptypes/has_owner-is_owner_of.kmd#RelType_ITG:Industry_Standard_has_owner_Person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization installs HW Product Model" xlink:href="../../meaf/relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:Internal_Organization_installs_HW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization installs SW Product Version" xlink:href="../../meaf/relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:Internal_Organization_installs_SW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization services HW Product Model" xlink:href="../../meaf/relationshiptypes/services-is_serviced_by.kmd#RelType_ITG:Internal_Organization_services_HW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization services Industry Std Version" xlink:href="../../meaf/relationshiptypes/services-is_serviced_by.kmd#RelType_ITG:Internal_Organization_services_Industry_Standard_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization services SW Product Version" xlink:href="../../meaf/relationshiptypes/services-is_serviced_by.kmd#RelType_ITG:Internal_Organization_services_SW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component sells HW Product Model" xlink:href="../../meaf/relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:Organization_Component_sells_HW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component sells SW Product Version" xlink:href="../../meaf/relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:Organization_Component_sells_SW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Person reviews Standard Candidate" xlink:href="../../meaf/relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:Person_reviews_Standard_Candidate_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="SW Product Version replaces SW Product Version" xlink:href="../../meaf/relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:SW_Product_Version_replaces_SW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Product Version uses Industry Std Version" xlink:href="../../meaf/relationshiptypes/uses-is_used_by.kmd#RelType_ITG:Software_Product_Version_uses_Industry_Standard_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Standards Category has owner Person" xlink:href="../../meaf/relationshiptypes/has_owner-is_owner_of.kmd#RelType_ITG:Standards_Category_has_owner_Person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../../meaf/relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software deploys Software Product Version" xlink:href="../../meaf/relationshiptypes/deploys-is_deployed_in.kmd#RelType_InstantiateSoftware_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module consists of Software Module" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#RelType_ModuleConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Product has owner Organization Component" xlink:href="../../meaf/relationshiptypes/has_owner-is_owner_of.kmd#RelType_OwnsSoftwareProduct_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component develops Deliverable" xlink:href="../../meaf/relationshiptypes/develops-is_developed_by.kmd#RelType_ProducesHardwareProduct_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component affects Application Component" xlink:href="../../meaf/relationshiptypes/affects-is_affected_by.kmd#RelType_ProjectAffectsApp_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Exception applies to-has applicable Application Component" xlink:href="../../semantics/relationship_types/policy_exception_applies_to-has_applicable_application_component.kmd#RelType_Semantics:Policy_Exception_applies_to-has_applicable_Application_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Exception applies to-has applicable IT Product Version" xlink:href="../../semantics/relationship_types/policy_exception_applies_to-has_applicable_it_product_version.kmd#RelType_Semantics:Policy_Exception_applies_to-has_applicable_IT_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component services Deliverable" xlink:href="../../meaf/relationshiptypes/services-is_serviced_by.kmd#RelType_SoftwareProductSupportedBy_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Product has version Software Product Version" xlink:href="../../meaf/relationshiptypes/has_version-is_version_of.kmd#RelType_SoftwareVersion_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component delivers Deliverable" xlink:href="../../meaf/relationshiptypes/delivers-is_delivered_by.kmd#Reltype_change_component_delivers_is_delivered_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has manager Person" xlink:href="../../meaf/relationshiptypes/has_manager-is_manager_of.kmd#Reltype_change_component_has_manager_is_manager_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable needs Skill" xlink:href="../../meaf/relationshiptypes/needs-is_needed_by_resources.kmd#Reltype_deliverable_needs_is_needed_by_resources_skill_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable provides Function" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by_criticality.kmd#Reltype_deliverable_provides_is_provided_by_criticality_function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component has document Document" xlink:href="../../meaf/relationshiptypes/has_document-is_document_for.kmd#Reltype_generic_component_has_document_is_document_for_document_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware deploys Hardware Product Model" xlink:href="../../meaf/relationshiptypes/deploys-is_deployed_in.kmd#Reltype_hardware_deploys_is_deployed_in_hardware_product_version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware Product has version Hardware Product Version" xlink:href="../../meaf/relationshiptypes/has_version-is_version_of.kmd#Reltype_hardware_product_has_version_is_version_of_hardware_product_version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Component governs Deliverable" xlink:href="../../meaf/relationshiptypes/governs-is_governed_by.kmd#Reltype_policy_component_governs_is_governed_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Component governs IT Architecture Component" xlink:href="../../meaf/relationshiptypes/governs-is_governed_by.kmd#Reltype_policy_component_governs_is_governed_by_it_architecture_component_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="UUID4_19DF33AC-2EC1-4707-9EF8-F5FF5F297D02" name="Optimization_Relationships" title="Optimization Relationships" desc="This sub-metamodel contains the relationships used with in the Optimazation solution.">
+  <complex-type-links size="35">
+   <complex-type-link xlink:role="type" xlink:title="Application consists of Software Module" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#RelType_AppConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component needs Skill" xlink:href="../../meaf/relationshiptypes/needs-is_needed_by_resources.kmd#RelType_AppDomainRequiresSkill_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application provides Function" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by_criticality.kmd#RelType_EnablesAction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Component is located in Location" xlink:href="../../meaf/relationshiptypes/is_located_in-is_location_of.kmd#RelType_HardwareLocation_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application sends data to Application" xlink:href="../../meaf/relationshiptypes/sends_data_to-receives_data_from.kmd#RelType_ITG:Application_sends_data_to_Application_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application supports Organization" xlink:href="../../meaf/relationshiptypes/supports-is_supported_by.kmd#RelType_ITG:Application_supports_Organization_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component sells HW Product Model" xlink:href="../../meaf/relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:Organization_Component_sells_HW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component sells SW Product Version" xlink:href="../../meaf/relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:Organization_Component_sells_SW_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software deploys Software Product Version" xlink:href="../../meaf/relationshiptypes/deploys-is_deployed_in.kmd#RelType_InstantiateSoftware_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module consists of Software Module" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#RelType_ModuleConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Component deploys Deployed Software" xlink:href="../../meaf/relationshiptypes/deploys-is_deployed_in.kmd#RelType_ModuleRunsOnComputer_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component has owner Organization Component" xlink:href="../../meaf/relationshiptypes/has_owner-is_owner_of.kmd#RelType_OwnsApplication_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process uses Function" xlink:href="../../meaf/relationshiptypes/uses-is_used_by_criticality.kmd#RelType_PerformsAction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component affects Application Component" xlink:href="../../meaf/relationshiptypes/affects-is_affected_by.kmd#RelType_ProjectAffectsApp_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software provides-is provided by Interface" xlink:href="../../semantics/relationship_types/deployed_software_provides-is_provided_by_interface.kmd#RelType_Semantics_System:Deployed_Software_provides-is_provided_by_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software requires-is required by Interface" xlink:href="../../semantics/relationship_types/deployed_software_requires-is_required_by_interface.kmd#RelType_Semantics_System:Deployed_Software_requires-is_required_by_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Interface supports-is supported by IT Service" xlink:href="../../semantics/relationship_types/interface_supports-is_supported_by_it_service.kmd#RelType_Semantics_System:Interface_supports-is_supported_by_IT_Service_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Interface supports-is supported by Message" xlink:href="../../semantics/relationship_types/interface_supports-is_supported_by_message.kmd#RelType_Semantics_System:Interface_supports-is_supported_by_Message_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Product has version Software Product Version" xlink:href="../../meaf/relationshiptypes/has_version-is_version_of.kmd#RelType_SoftwareVersion_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component has business owner Person" xlink:href="../../meaf/relationshiptypes/has_business_owner-is_business_owner_of.kmd#Reltype_application_component_has_business_owner_is_business_owner_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component has IT owner Person" xlink:href="../../meaf/relationshiptypes/has_it_owner-is_it_owner_of.kmd#Reltype_application_component_has_it_owner_is_it_owner_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application consists of Application" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#Reltype_application_consists_of_is_part_of_application_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component addresses Requirement" xlink:href="../../meaf/relationshiptypes/addresses-is_addressed_by.kmd#Reltype_change_component_addresses_is_addressed_by_requirement_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component affects Process Component" xlink:href="../../meaf/relationshiptypes/affects-is_affected_by.kmd#Reltype_change_component_affects_is_affected_by_process_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software is located in Location" xlink:href="../../meaf/relationshiptypes/is_located_in-is_location_of.kmd#Reltype_deployed_software_is_located_in_is_location_of_location_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Disaster Recovery Plan applies to Application Component" xlink:href="../../meaf/relationshiptypes/applies_to-has.kmd#Reltype_disaster_recovery_plan_applies_to_has_application_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Function provides Capability" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by.kmd#Reltype_function_provides_is_provided_by_capability_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component has category Category" xlink:href="../../meaf/relationshiptypes/has_category-is_category_for.kmd#Reltype_generic_component_has_category_is_category_for_category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware deploys Hardware Product Model" xlink:href="../../meaf/relationshiptypes/deploys-is_deployed_in.kmd#Reltype_hardware_deploys_is_deployed_in_hardware_product_version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware Product has version Hardware Product Version" xlink:href="../../meaf/relationshiptypes/has_version-is_version_of.kmd#Reltype_hardware_product_has_version_is_version_of_hardware_product_version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Measure measures Goal" xlink:href="../../meaf/relationshiptypes/measures-is_measured_by.kmd#Reltype_measure_measures_is_measured_by_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Message carries Information Component" xlink:href="../../meaf/relationshiptypes/carries-is_carried_by.kmd#Reltype_message_carries_is_carried_by_information_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component generates Requirement" xlink:href="../../meaf/relationshiptypes/generates-is_generated_by.kmd#Reltype_organization_component_generates_is_generated_by_requirement_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component signs Contract" xlink:href="../../meaf/relationshiptypes/signs-is_signed_by.kmd#Reltype_organization_component_signs_is_signed_by_contract_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy achieves Goal" xlink:href="../../meaf/relationshiptypes/achieves-is_achieved_by_weight.kmd#Reltype_strategy_achieves_is_achieved_by_weight_goal_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="UUID4_44252042-B23A-41EC-A10D-20B7D3738CE4" name="Troux_Optimization" title="Troux Optimization" desc="thsi submodel contains the objects and relationships used in the Troux Optimization solution.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Optimization Relationships" xlink:href="#UUID4_19DF33AC-2EC1-4707-9EF8-F5FF5F297D02"/>
+  </metamodel-links>
+  <complex-type-links size="55">
+   <complex-type-link xlink:role="type" xlink:title="APO Category" xlink:href="../../meaf/objecttypes/apo_category.kmd#CompType_ITG:APO_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="External Organization" xlink:href="../../meaf/objecttypes/external_organization.kmd#CompType_ITG:External_Organization_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization" xlink:href="../../meaf/objecttypes/internal_organization.kmd#CompType_ITG:Internal_Organization_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Function" xlink:href="../../meaf/objecttypes/application_function.kmd#CompType_MEAF:ApplicationFunction_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Capability" xlink:href="../../meaf/objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Contract" xlink:href="../../meaf/objecttypes/contract.kmd#CompType_MEAF:Contract_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware Product Model" xlink:href="../../meaf/objecttypes/hardware_product_version.kmd#CompType_MEAF:HardwareProductVersion_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Information Attribute" xlink:href="../../meaf/objecttypes/information_attribute.kmd#CompType_MEAF:InformationAttribute_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Information Group" xlink:href="../../meaf/objecttypes/information_group.kmd#CompType_MEAF:InformationGroup_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Information Object" xlink:href="../../meaf/objecttypes/information_object.kmd#CompType_MEAF:InformationObject_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="../../meaf/objecttypes/key_performance_indicator.kmd#CompType_MEAF:KeyPerformanceIndicator_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Message" xlink:href="../../meaf/objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Requirement" xlink:href="../../meaf/objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../../meaf/objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Operating System" xlink:href="../../semantics/object_types/operating_system.kmd#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Interface" xlink:href="../../semantics/object_types/interface.kmd#CompType_Semantics_System:Interface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Server" xlink:href="../../meaf/objecttypes/application_server.kmd#CompType_TRM:ApplicationServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application" xlink:href="../../meaf/objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Backup Device" xlink:href="../../meaf/objecttypes/backup_device.kmd#CompType_TRM:BackupDevice_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Cabinet" xlink:href="../../meaf/objecttypes/cabinet.kmd#CompType_TRM:Cabinet_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Computer" xlink:href="../../meaf/objecttypes/computer.kmd#CompType_TRM:Computer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Disaster Recovery Plan" xlink:href="../../meaf/objecttypes/disaster_recovery_plan.kmd#CompType_TRM:DRPlan_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Database Server" xlink:href="../../meaf/objecttypes/database_server.kmd#CompType_TRM:DatabaseServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Desktop" xlink:href="../../meaf/objecttypes/desktop.kmd#CompType_TRM:Desktop_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Disk Array" xlink:href="../../meaf/objecttypes/disk_array.kmd#CompType_TRM:DiskArray_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="File Server" xlink:href="../../meaf/objecttypes/file_server.kmd#CompType_TRM:FileServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Firewall" xlink:href="../../meaf/objecttypes/firewall.kmd#CompType_TRM:Firewall_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Function" xlink:href="../../meaf/objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../../meaf/objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware Product" xlink:href="../../meaf/objecttypes/hardware_product.kmd#CompType_TRM:HardwareProduct_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Laptop" xlink:href="../../meaf/objecttypes/laptop.kmd#CompType_TRM:Laptop_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Load Balancer" xlink:href="../../meaf/objecttypes/load_balancer.kmd#CompType_TRM:LoadBalancer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Location" xlink:href="../../meaf/objecttypes/location.kmd#CompType_TRM:Location_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Mainframe" xlink:href="../../meaf/objecttypes/mainframe.kmd#CompType_TRM:Mainframe_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module" xlink:href="../../meaf/objecttypes/software_module.kmd#CompType_TRM:Module_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Network Device" xlink:href="../../meaf/objecttypes/network_device.kmd#CompType_TRM:NetworkDevice_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Network Interface" xlink:href="../../meaf/objecttypes/network_interface.kmd#CompType_TRM:NetworkInterface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Network" xlink:href="../../meaf/objecttypes/network.kmd#CompType_TRM:Network_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization" xlink:href="../../meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Person" xlink:href="../../meaf/objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process" xlink:href="../../meaf/objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Project" xlink:href="../../meaf/objecttypes/project.kmd#CompType_TRM:Project_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Router" xlink:href="../../meaf/objecttypes/router.kmd#CompType_TRM:Router_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Storage Area Network Switch" xlink:href="../../meaf/objecttypes/storage_area_network_switch.kmd#CompType_TRM:SANSwitch_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Storage Area Network" xlink:href="../../meaf/objecttypes/storage_area_network.kmd#CompType_TRM:SAN_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Server" xlink:href="../../meaf/objecttypes/server.kmd#CompType_TRM:Server_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Service Catalog" xlink:href="../../meaf/objecttypes/it_service_catalog.kmd#CompType_TRM:ServiceCatalog_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Service" xlink:href="../../meaf/objecttypes/it_service.kmd#CompType_TRM:ServiceOffering_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Skill" xlink:href="../../meaf/objecttypes/skill.kmd#CompType_TRM:Skill_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Product Version" xlink:href="../../meaf/objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Product" xlink:href="../../meaf/objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Storage Device" xlink:href="../../meaf/objecttypes/storage_device.kmd#CompType_TRM:StorageDevice_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Switch" xlink:href="../../meaf/objecttypes/switch.kmd#CompType_TRM:Switch_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Tape Backup" xlink:href="../../meaf/objecttypes/tape_backup.kmd#CompType_TRM:TapeBackup_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Web Server" xlink:href="../../meaf/objecttypes/web_server.kmd#CompType_TRM:WebServer_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="UUID4_759BF6C3-EC0B-4B79-BFDF-5739DA626A7B" name="Troux_Alignment" title="Troux Alignment" desc="this sub metamodel contains the objects nad relationships used in the Troux Alignment solution.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Alignment Relationships" xlink:href="#UUID4_9AF749BC-DDCD-43EC-BA7B-ABBDD284039E"/>
+  </metamodel-links>
+  <complex-type-links size="30">
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization" xlink:href="../../meaf/objecttypes/internal_organization.kmd#CompType_ITG:Internal_Organization_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Product Version" xlink:href="../../meaf/objecttypes/business_product_version.kmd#CompType_MEAF:BusinessProductVersion_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Product" xlink:href="../../meaf/objecttypes/business_product.kmd#CompType_MEAF:BusinessProduct_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Service" xlink:href="../../meaf/objecttypes/business_service.kmd#CompType_MEAF:BusinessService_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Capability" xlink:href="../../meaf/objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Initiative" xlink:href="../../meaf/objecttypes/initiative.kmd#CompType_MEAF:Initiative_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="../../meaf/objecttypes/key_performance_indicator.kmd#CompType_MEAF:KeyPerformanceIndicator_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Milestone" xlink:href="../../meaf/objecttypes/milestone.kmd#CompType_MEAF:Milestone_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Online Document" xlink:href="../../meaf/objecttypes/online_document.kmd#CompType_MEAF:OnlineDocument_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Plan" xlink:href="../../meaf/objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Program" xlink:href="../../meaf/objecttypes/program.kmd#CompType_MEAF:Program_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../../meaf/objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Success Factor" xlink:href="../../meaf/objecttypes/success_factor.kmd#CompType_MEAF:SuccessFactor_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Vision" xlink:href="../../meaf/objecttypes/vision.kmd#CompType_MEAF:Vision_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Operating System" xlink:href="../../semantics/object_types/operating_system.kmd#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Server" xlink:href="../../meaf/objecttypes/application_server.kmd#CompType_TRM:ApplicationServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application" xlink:href="../../meaf/objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Disaster Recovery Plan" xlink:href="../../meaf/objecttypes/disaster_recovery_plan.kmd#CompType_TRM:DRPlan_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Database Server" xlink:href="../../meaf/objecttypes/database_server.kmd#CompType_TRM:DatabaseServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Event" xlink:href="../../meaf/objecttypes/event.kmd#CompType_TRM:Event_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="File Server" xlink:href="../../meaf/objecttypes/file_server.kmd#CompType_TRM:FileServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Function" xlink:href="../../meaf/objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../../meaf/objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Location" xlink:href="../../meaf/objecttypes/location.kmd#CompType_TRM:Location_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module" xlink:href="../../meaf/objecttypes/software_module.kmd#CompType_TRM:Module_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Person" xlink:href="../../meaf/objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process" xlink:href="../../meaf/objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Project" xlink:href="../../meaf/objecttypes/project.kmd#CompType_TRM:Project_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Role" xlink:href="../../meaf/objecttypes/role.kmd#CompType_TRM:Role_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Web Server" xlink:href="../../meaf/objecttypes/web_server.kmd#CompType_TRM:WebServer_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="UUID4_9AF749BC-DDCD-43EC-BA7B-ABBDD284039E" name="Alignment_Relationships" title="Alignment Relationships" desc="This sub-metamodel contains the relationships used with in the Alignment solution.">
+  <complex-type-links size="33">
+   <complex-type-link xlink:role="type" xlink:title="Application consists of Software Module" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#RelType_AppConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application provides Function" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by_criticality.kmd#RelType_EnablesAction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module consists of Software Module" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#RelType_ModuleConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component has owner Organization Component" xlink:href="../../meaf/relationshiptypes/has_owner-is_owner_of.kmd#RelType_OwnsApplication_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process uses Function" xlink:href="../../meaf/relationshiptypes/uses-is_used_by_criticality.kmd#RelType_PerformsAction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component affects Application Component" xlink:href="../../meaf/relationshiptypes/affects-is_affected_by.kmd#RelType_ProjectAffectsApp_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy needs-is needed by Business Function" xlink:href="../../semantics/relationship_types/strategy_needs-is_needed_by_business_function.kmd#RelType_Semantics:Strategy_needs-is_needed_by_Business_Function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application consists of Application" xlink:href="../../meaf/relationshiptypes/consists_of-is_part_of.kmd#Reltype_application_consists_of_is_part_of_application_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process provides Function" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by_criticality.kmd#Reltype_business_process_provides_is_provided_by_criticality_function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process uses Application" xlink:href="../../meaf/relationshiptypes/uses-is_used_by_weight-criticality.kmd#Reltype_business_process_uses_is_used_by_weight_criticality_application_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component affects Process Component" xlink:href="../../meaf/relationshiptypes/affects-is_affected_by.kmd#Reltype_change_component_affects_is_affected_by_process_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component delivers Deliverable" xlink:href="../../meaf/relationshiptypes/delivers-is_delivered_by.kmd#Reltype_change_component_delivers_is_delivered_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has manager Person" xlink:href="../../meaf/relationshiptypes/has_manager-is_manager_of.kmd#Reltype_change_component_has_manager_is_manager_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has responsible Organization Component" xlink:href="../../meaf/relationshiptypes/has_responsible-is_responsible_for.kmd#Reltype_change_component_has_responsible_is_responsible_for_organization_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component implements Plan" xlink:href="../../meaf/relationshiptypes/implements-is_implemented_by.kmd#Reltype_change_component_implements_is_implemented_by_plan_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Function provides Capability" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by.kmd#Reltype_function_provides_is_provided_by_capability_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component has document Document" xlink:href="../../meaf/relationshiptypes/has_document-is_document_for.kmd#Reltype_generic_component_has_document_is_document_for_document_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal leads to Goal" xlink:href="../../meaf/relationshiptypes/leads_to-follows_from.kmd#Reltype_goal_leads_to_follows_from_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Measure measures Goal" xlink:href="../../meaf/relationshiptypes/measures-is_measured_by.kmd#Reltype_measure_measures_is_measured_by_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Component supervises Organization Component" xlink:href="../../meaf/relationshiptypes/supervises-is_supervised_by.kmd#Reltype_organization_component_supervises_is_supervised_by_organization_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization has manager Person" xlink:href="../../meaf/relationshiptypes/has_manager-is_manager_of.kmd#Reltype_organization_has_manager_is_manager_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Person fills Role" xlink:href="../../meaf/relationshiptypes/fills-is_filled_by.kmd#Reltype_person_fills_is_filled_by_role_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Component is located in Location" xlink:href="../../meaf/relationshiptypes/is_located_in-is_location_of.kmd#Reltype_process_component_is_located_in_is_location_of_location_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Product has version Product Version" xlink:href="../../meaf/relationshiptypes/has_version-is_version_of.kmd#Reltype_product_has_version_is_version_of_product_version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Program governs Initiative" xlink:href="../../meaf/relationshiptypes/governs-is_governed_by.kmd#Reltype_program_governs_is_governed_by_initiative_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Program governs Project" xlink:href="../../meaf/relationshiptypes/governs-is_governed_by.kmd#Reltype_program_governs_is_governed_by_project_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Project supports Initiative" xlink:href="../../meaf/relationshiptypes/supports-is_supported_by.kmd#Reltype_project_supports_is_supported_by_initiative_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy achieves Goal" xlink:href="../../meaf/relationshiptypes/achieves-is_achieved_by_weight.kmd#Reltype_strategy_achieves_is_achieved_by_weight_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy affects Deliverable" xlink:href="../../meaf/relationshiptypes/affects-is_affected_by.kmd#Reltype_strategy_affects_is_affected_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy applies to Plan" xlink:href="../../meaf/relationshiptypes/applies_to-has.kmd#Reltype_strategy_applies_to_has_plan_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy Component has responsible Organization Component" xlink:href="../../meaf/relationshiptypes/has_responsible-is_responsible_for.kmd#Reltype_strategy_component_has_responsible_is_responsible_for_organization_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy depends on Success Factor" xlink:href="../../meaf/relationshiptypes/depends_on-is_critical_to_weight.kmd#Reltype_strategy_depends_on_is_critical_to_weight_success_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Vision leads to Goal" xlink:href="../../meaf/relationshiptypes/leads_to-follows_from.kmd#Reltype_vision_leads_to_follows_from_goal_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="UUID4_D697C110-21FF-4721-A6B1-B8822FFD073D" name="Troux_Standards" title="Troux Standards" desc="This metamodel contains the objects and relationships used by the Troux Standards solution.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Standards Relationships" xlink:href="#UUID4_016369F5-F1C7-469F-ACC0-8D74F8E6FB80"/>
+  </metamodel-links>
+  <complex-type-links size="33">
+   <complex-type-link xlink:role="type" xlink:title="External Organization" xlink:href="../../meaf/objecttypes/external_organization.kmd#CompType_ITG:External_Organization_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard" xlink:href="../../meaf/objecttypes/industry_standard.kmd#CompType_ITG:IndustryStandard_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../../meaf/objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Internal Organization" xlink:href="../../meaf/objecttypes/internal_organization.kmd#CompType_ITG:Internal_Organization_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Standard Candidate" xlink:href="../../meaf/objecttypes/standard_candidate.kmd#CompType_ITG:Standard_Candidate_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Standards Category" xlink:href="../../meaf/objecttypes/standards_category.kmd#CompType_ITG:Standards_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware Product Model" xlink:href="../../meaf/objecttypes/hardware_product_version.kmd#CompType_MEAF:HardwareProductVersion_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Online Document" xlink:href="../../meaf/objecttypes/online_document.kmd#CompType_MEAF:OnlineDocument_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Operating System" xlink:href="../../semantics/object_types/operating_system.kmd#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Exception" xlink:href="../../semantics/object_types/policy_exception.kmd#CompType_Sematics_Policy:Policy_Exception_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Server" xlink:href="../../meaf/objecttypes/application_server.kmd#CompType_TRM:ApplicationServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application" xlink:href="../../meaf/objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Cabinet" xlink:href="../../meaf/objecttypes/cabinet.kmd#CompType_TRM:Cabinet_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Database Server" xlink:href="../../meaf/objecttypes/database_server.kmd#CompType_TRM:DatabaseServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Desktop" xlink:href="../../meaf/objecttypes/desktop.kmd#CompType_TRM:Desktop_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="File Server" xlink:href="../../meaf/objecttypes/file_server.kmd#CompType_TRM:FileServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Firewall" xlink:href="../../meaf/objecttypes/firewall.kmd#CompType_TRM:Firewall_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Function" xlink:href="../../meaf/objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware Product" xlink:href="../../meaf/objecttypes/hardware_product.kmd#CompType_TRM:HardwareProduct_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Laptop" xlink:href="../../meaf/objecttypes/laptop.kmd#CompType_TRM:Laptop_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Load Balancer" xlink:href="../../meaf/objecttypes/load_balancer.kmd#CompType_TRM:LoadBalancer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Mainframe" xlink:href="../../meaf/objecttypes/mainframe.kmd#CompType_TRM:Mainframe_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module" xlink:href="../../meaf/objecttypes/software_module.kmd#CompType_TRM:Module_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Person" xlink:href="../../meaf/objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Project" xlink:href="../../meaf/objecttypes/project.kmd#CompType_TRM:Project_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Router" xlink:href="../../meaf/objecttypes/router.kmd#CompType_TRM:Router_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Server" xlink:href="../../meaf/objecttypes/server.kmd#CompType_TRM:Server_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Skill" xlink:href="../../meaf/objecttypes/skill.kmd#CompType_TRM:Skill_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Product Version" xlink:href="../../meaf/objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Product" xlink:href="../../meaf/objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Storage Device" xlink:href="../../meaf/objecttypes/storage_device.kmd#CompType_TRM:StorageDevice_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Switch" xlink:href="../../meaf/objecttypes/switch.kmd#CompType_TRM:Switch_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Web Server" xlink:href="../../meaf/objecttypes/web_server.kmd#CompType_TRM:WebServer_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="UUID4_F0EEFBE6-F9D3-436F-B93B-D8B63075C7E8" name="Troux_Solutions" title="Troux Solutions" desc="This metamodel contaions the objects and relationships used in the Troux Solutions">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Optimization" xlink:href="#UUID4_44252042-B23A-41EC-A10D-20B7D3738CE4"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Standards" xlink:href="#UUID4_D697C110-21FF-4721-A6B1-B8822FFD073D"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Alignment" xlink:href="#UUID4_759BF6C3-EC0B-4B79-BFDF-5739DA626A7B"/>
+  </metamodel-links>
+ </metamodel>
+
+
+</metis>

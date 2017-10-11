@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="1">
+
+ <type id="RelType_CVW:consistsOfNode_UUID" name="consistsOfNode" title="Consists of node" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="genericRel" xlink:href="cvw_relships.kmd#RelType_CVW:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Button (CVW)" xlink:href="../../eka/languages/eka_task.kmd#ekaTask" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Consists of node" xlink:href="#RelType_CVW:consistsOfNode_UUID" xlink:actuate="user">
+   <string name="from">consists of</string>
+   <string name="to">is part of node</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Consists of node" xlink:href="#RelType_CVW:consistsOfNode_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasArgument_UUID" name="hasArgument" title="Has argument" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="genericRel" xlink:href="cvw_relships.kmd#RelType_CVW:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Button (CVW)" xlink:href="../../eka/languages/eka_task.kmd#ekaTask" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Action argument (CVW)" xlink:href="action_objects.kmd#ObjType_CVW:ActionArgument_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has argument" xlink:href="#RelType_CVW:hasArgument_UUID" xlink:actuate="user">
+   <string name="from">has argument</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has argument" xlink:href="#RelType_CVW:hasArgument_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasProperty_UUID" name="hasProperty" title="Has property" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="genericRel" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ViewSpecification" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has property" xlink:href="#RelType_CVW:hasProperty_UUID" xlink:actuate="user">
+   <string name="from">has property</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has property" xlink:href="#RelType_CVW:hasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasViewContext_UUID" name="hasViewContext" title="hasViewContext" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="genericRel" xlink:href="cvw_relships.kmd#RelType_CVW:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Button (CVW)" xlink:href="../../eka/languages/eka_task.kmd#ekaTask" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="View context (CVW)" xlink:href="action_objects.kmd#ObjType_CVW:ViewContext_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has view context" xlink:href="#RelType_CVW:hasViewContext_UUID" xlink:actuate="user">
+   <string name="from">has view context</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has view context" xlink:href="#RelType_CVW:hasViewContext_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:usesCode_UUID" name="usesCode" title="usesCode" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="genericRel" xlink:href="cvw_relships.kmd#RelType_CVW:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="VBscript" xlink:href="script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="VBscriptCode" xlink:href="script_types.kmd#ObjType_AKM:VBScriptCode_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Uses script" xlink:href="#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="from">uses code</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="usesScript" xlink:href="#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:usesScript_UUID" name="usesScript" title="usesScript" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="genericRel" xlink:href="cvw_relships.kmd#RelType_CVW:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Button (CVW)" xlink:href="action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="VBscript" xlink:href="script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Uses script" xlink:href="#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="from">uses script</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="usesScript" xlink:href="#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

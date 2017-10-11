@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: logical_app.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Logical Application</title>
+    <g>
+      <polygon points="0 0 0 304 16 320 
+       880 320 880 16 864 0 0 0 
+       0 0 0 0 0 0 0 0 
+       0 0 0 0 "
+       style=" stroke:#000000; stroke-width:1; fill:#9b9b9b; fill-opacity:100%"       class="TAG:shadow"></polygon>
+      <rect x="0" y="0" width="864" height="243.2"
+       style=" stroke:#000000; stroke-width:1; fill:#6eff6e; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="16" y="15"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	 class="TAG:text">text</text>
+	<rect x="16" y="0" width="848" height="243.2"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+      <rect x="0" y="243.2" width="864" height="60.8"
+       style=" stroke:#000000; stroke-width:1; fill:#b9b9b9; fill-opacity:100%"></rect>
+      <polyline points="880 320 864 304"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+    </g>
+  </symbol>
+ </defs>
+</svg>

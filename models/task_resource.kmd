@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002ascs00pisliuaf00c" xlink:role="type" xlink:title="Task Resource" xlink:href="../objecttypes/task_resource.kmd#AKM_Task_resource" tree-size="0.5" nested-size="0.1" behavior="nested" position="bottom" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Mech closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process_mechanism1.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;(&#34; (property Responsible) &#34;)&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;grey80&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Mech closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process_mechanism1.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;(&#34; (property Responsible) &#34;)&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;grey80&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/bpm/mechanism.png"/>
+ </typeview>
+
+
+</metis>

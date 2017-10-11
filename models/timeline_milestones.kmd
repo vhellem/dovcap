@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_MEAF:TimelineMilestones_UUID" name="TimelineMilestones" title="Timeline Milestones" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="metis:mer#MerModelingObject"/>
+  <property name="systemdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Worst Deviance Date" desc="The date from connected objects that differs MOST compared to current date." method-flag="true" default-visible="top"/>
+  <property name="textdate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted date" desc="The current date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <named-method-link name="systemdate" xlink:role="cpp-method" xlink:title="getWorstConnectedDate" xlink:href="../methods/timeline_methods.kmd#oid1005"/>
+  <named-method-link name="textdate" xlink:role="cpp-method" xlink:title="getDateAsText" xlink:href="../methods/timeline_methods.kmd#oid1010"/>
+ </type>
+
+</metis>

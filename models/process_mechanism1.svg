@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: process_mechanism1.svg</title>
+ <defs>
+  <symbol id="oid6" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mech open</title>
+    <g     class="TAG:connection_points:NorthSouth">
+    </g>
+    <polygon points="0 312.889 472.615 312.889 472.615 85.3333 
+     280.615 85.3333 280.615 42.6667 324.923 42.6667 236.308 0 
+     147.692 42.6667 192 42.6667 192 85.3333 0 85.3333 
+     0 312.889"
+     style=" stroke:#000000; stroke-width:1; fill:#ffff6e; fill-opacity:100%"     class="TAG:canvas"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="7.89236" y="100.333"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text">text</text>
+      <rect x="7.89236" y="85.3327" width="464.672" height="113.771"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="7.89236" y="214.241"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:value"></text>
+      <rect x="7.89236" y="199.241" width="464.671" height="113.771"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid10" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mech closed</title>
+    <g     class="TAG:connection_points:NorthSouth">
+    </g>
+    <polygon points="0 312.889 472.615 312.889 472.615 85.3333 
+     280.615 85.3333 280.615 42.6667 324.923 42.6667 236.308 0 
+     147.692 42.6667 192 42.6667 192 85.3333 0 85.3333 
+     0 312.889"
+     style=" stroke:#000000; stroke-width:1; fill:#ffff6e; fill-opacity:100%"     class="TAG:canvas"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="108.552"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:24;"
+       class="TAG:text">text</text>
+      <rect x="8" y="85.5522" width="464.525" height="228.37"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid11" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mech open (IDEF0)</title>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="29"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:22; text-align:right"
+       class="TAG:text" transform="rotate(90);"></text>
+      <rect x="0" y="8" width="128" height="312"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <polyline points="128 0 128 320"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="128" y="29"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:22; text-align:right"
+       class="TAG:value" transform="rotate(90);"></text>
+      <rect x="128" y="8" width="128" height="312"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid12" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mech closed (IDEF0)</title>
+    <rect x="191.71" y="0" width="256" height="320"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <rect x="191.71" y="0" width="256" height="320"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <rect x="191.71" y="0" width="256" height="320"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:center"
+       class="TAG:text"></text>
+      <rect x="0" y="0" width="639.855" height="320"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <polyline points="319.71 0 319.71 320"
+     style=" stroke:#000000; stroke-width:1;"></polyline>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid6"/>
+</svg>

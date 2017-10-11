@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ nextoid="3">
+
+<viewstyle id="oid1" name="ITMPlatform" title="ITM View Style">
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid1012"/>
+  <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid1013"/>
+</viewstyle>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:href="http://xml.metis.no/xml/symbols/cont_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="http://xml.metis.no/xml/symbols/container_closed_1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<!--
+Type hierarchy
+===============================
+metis:stdtypes#ModelingObject
+|-DiagramPropertyBase
+| |-Metis_Diagram
+| | |-State_Diagram (1)
+
+metis:stdtypes#ModelingObject
+|-State_Vertex (2) (abstract)
+| |-Terminal_State (5) (abstract)
+| | |-Initial_State (101)
+| | |-Final_State (102)
+| |-Nonterminal_State (6) (abstract)
+| | |-Pseudo_State (3) (abstract) 
+| | | |-Fork_State (104)
+| | | |-Join_State (105)
+| | |-State (4) (abstract)
+| | | |-Simple_State (103)
+| | | |-Composite_State (106)
+| | | | |-Concurrent_State (107)
+
+-->
+
+
+
+ <type id="oid1" name="State_Diagram" title="State Diagram" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="diagram.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1001"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="Concurrent State" xlink:href="#oid107"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Initial State" xlink:href="#oid101"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Final State" xlink:href="#oid102"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Nonterminal State" xlink:href="#oid6"/>
+  <named-criteria-link name="FindTransitions" xlink:role="criteria" xlink:title="Find Transitions" xlink:href="#oid2003"/>
+ </type>
+
+ <type id="oid2" name="State_Vertex" title="State Vertex" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="State Property Base" xlink:href="../user/statepropertybase.kmd#oid1"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="constraintParts" xlink:href="#oid2002"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="constraintParts" xlink:href="#oid2002"/>
+  <named-criteria-link name="FindTransitions" xlink:role="criteria" xlink:title="Find Transitions" xlink:href="#oid2003"/>
+ </type>
+
+ <type id="oid5" name="Terminal_State" title="Terminal State" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="State Vertex" xlink:href="#oid2"/>
+ </type>
+
+ <type id="oid6" name="Nonterminal_State" title="Nonterminal State" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="State Vertex" xlink:href="#oid2"/>
+ </type>
+
+ <type id="oid3" name="Pseudo_State" title="Pseudo State" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Nonterminal State" xlink:href="#oid6"/>
+ </type>
+
+ <type id="oid4" name="State" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Nonterminal State" xlink:href="#oid6"/>
+  <named-method-link name="View.layoutTag" xlink:role="cpp-method" xlink:title="layoutTag" xlink:href="#oid2001"/>
+ </type>
+
+ <type id="oid101" name="Initial_State" title="Initial State" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Terminal State" xlink:href="#oid5"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1101"/>
+ </type>
+
+ <type id="oid102" name="Final_State" title="Final State" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Terminal State" xlink:href="#oid5"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1102"/>
+ </type>
+
+ <type id="oid103" name="Simple_State" title="Simple State" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="State" xlink:href="#oid4"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1103"/>
+ </type>
+
+ <type id="oid104" name="Fork_State" title="Fork State" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Pseudo State" xlink:href="#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1104"/>
+ </type>
+
+ <type id="oid105" name="Join_State" title="Join State" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Pseudo State" xlink:href="#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1105"/>
+ </type>
+
+ <type id="oid106" name="Composite_State" title="Composite State" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="State" xlink:href="#oid4"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1106"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Initial State" xlink:href="#oid101"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Final State" xlink:href="#oid102"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Nonterminal State" xlink:href="#oid6"/>
+ </type>
+
+ <type id="oid107" name="Concurrent_State" title="Concurrent State" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Composite State" xlink:href="#oid106"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1107"/>
+ </type>
+
+
+
+ <typeview id="oid1001" xlink:role="type" xlink:title="State Diagram" xlink:href="#oid1" 
+	   tree-size="0.5" nested-size="0.125" behavior="nested"
+	   layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="Standard" xlink:href="../layout_strategies/state_diagram_layout.kmd#oid2"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Opened Diagram" xlink:href="../symbols/diagram.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;State Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid3&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ClosedDiagram" xlink:href="../symbols/diagram.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;State Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid3&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/state_diagram.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1101" xlink:role="type" xlink:title="Initial State" xlink:href="#oid101" tree-size="0.5" nested-size="0.03125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="InitialState" xlink:href="../symbols/state.svg#oid9" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="InitialState" xlink:href="../symbols/state.svg#oid9" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/initial_state.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1102" xlink:role="type" xlink:title="Final State" xlink:href="#oid102" tree-size="0.5" nested-size="0.046875" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="FinalState" xlink:href="../symbols/state.svg#oid10" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="FinalState" xlink:href="../symbols/state.svg#oid10" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/final_state.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1103" xlink:role="type" xlink:title="Simple State" xlink:href="#oid103" tree-size="0.5" nested-size="0.125" behavior="tree" 
+ >
+  <symbol-override state="open" xlink:role="symbol" xlink:title="SimpleState" xlink:href="../symbols/state.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="SimpleState" xlink:href="../symbols/state.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/simple_state.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1104" xlink:role="type" xlink:title="Fork State" xlink:href="#oid104" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="JoinState" xlink:href="../symbols/state.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="JoinState" xlink:href="../symbols/state.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/fork_state.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1105" xlink:role="type" xlink:title="Join State" xlink:href="#oid105" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="JoinState" xlink:href="../symbols/state.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="JoinState" xlink:href="../symbols/state.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/join_state.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1106" xlink:role="type" xlink:title="Composite State" xlink:href="#oid106" tree-size="0.5" nested-size="0.5" behavior="nested" 
+ layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="Concurrent state collection" xlink:href="../layout_strategies/state_diagram_layout.kmd#oid3"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="ComplexState_Open" xlink:href="../symbols/state.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ComplexState_Closed" xlink:href="../symbols/state.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/composite_state.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1107" xlink:role="type" xlink:title="Concurrent State" xlink:href="#oid107" tree-size="0.5" nested-size="0.5" behavior="nested" 
+ layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="Concurrent state collection" xlink:href="../layout_strategies/state_diagram_layout.kmd#oid3"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="ComplexState_Open" xlink:href="../symbols/state.svg#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ComplexState_Closed" xlink:href="../symbols/state.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/concurrent_state.png" xlink:actuate="auto"/>
+ </typeview>
+
+
+ <cpp-method id="oid2001" name="layoutTag" language="c++" bind="NO.METIS.GEM.LAYOUT.layoutTag" required-dll="gem_layout">
+  <arg-list size="3">
+   <string name="Kind">PartOfType</string>
+   <string name="LayoutTag">Concurrent</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Concurrent state" xlink:href="#oid107" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2002" name="constraintParts" language="c++" bind="NO.METIS.GEM.DIAGRAM.constraintParts" required-dll="gem_diagram">
+   <arg-list size="4">
+    <pointer name="Type1" xlink:role="type" xlink:title="State Vertex" xlink:href="#oid2" xlink:actuate="user"/>
+    <pointer name="Type2" xlink:role="type" xlink:title="Concurrent state" xlink:href="#oid107" xlink:actuate="user"/>
+    <integer name="Options">15</integer>
+    <integer name="LayoutAdopt">1</integer>
+   </arg-list>
+ </cpp-method>
+
+ <criteria id="oid2003" name="FindTransitions" title="Find Transitions" desc="Applied to a state diagram this criteira will find all transitions in the diagram.&#10;&#60;br&#62;&#10;Applied to states it will find all transitions starting or ending  in the state or one of its substates.&#10;If applied to a selection of diagrams or states all relationships related to the selection will be found." model-flag="true" object-flag="true" nested-flag="true" tree-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part"/>
+    </c-op>
+    <c-op kind="endof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Transition" xlink:href="../relationship_types/transition.kmd#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

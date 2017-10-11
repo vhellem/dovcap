@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="UUID4_8411470F-14F8-4F90-8742-B0C2559BCA56" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Scorecard is derived from Assessment" xlink:href="../relationship_types/scorecard_is_derived_from_assessment.kmd#RelType_Semantics:Scorecard_is_derived_from_Assessment_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Assessment has category Assessment Category" xlink:href="../relationship_types/assessment_has_category_assessment_category.kmd#RelType_Semantics:Assessment_has_category_Assessment_Category_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="UUID4_8AD4434A-10BF-450B-85E4-64458673A487" name="Assessment_Domain" title="Assessment Domain" desc="A group of types used to perform assessments of enterprise assets such as capabilities. ">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#UUID4_8411470F-14F8-4F90-8742-B0C2559BCA56"/>
+  </metamodel-links>
+  <complex-type-links size="3">
+   <complex-type-link xlink:role="type" xlink:title="Assessment Category" xlink:href="../object_types/assessment_category.kmd#CompType_Semantics:Assessment_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Assessment" xlink:href="../object_types/assessment.kmd#CompType_Semantics:Assessment_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Scorecard" xlink:href="../object_types/scorecard.kmd#CompType_Semantics:Scorecard_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

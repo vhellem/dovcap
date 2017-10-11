@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CC_specification" name="CC_specification" title="CC specification" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/cppd/languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID"/>
+  <named-method-link name="View.DClickAction" xlink:role="cpp-method" xlink:title="openClose" xlink:href="http://xml.activeknowledgemodeling.com/cvw/operations/view_methods.kmd#Method_CVW:openClose_UUID"/>
+<!--
+  <named-method-link name="View.onClose" xlink:role="cpp-method" xlink:title="openClose" xlink:href="http://xml.activeknowledgemodeling.com/cvw/operations/view_methods.kmd#Method_CVW:openClose_UUID"/>
+-->
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="CC specification" xlink:href="#CC_specification" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+
+</metis>

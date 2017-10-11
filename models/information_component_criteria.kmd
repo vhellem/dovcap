@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="3"
+ nextoid="1">
+
+ <criteria id="oid1" name="findInformationFlowInProcessViaInputsOutputs" title="Find Information Flow In Process via inputs/outputs" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="targetof">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="consists of" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_consists_of-is_part_of_UUID"/>
+      </c-op>
+     </c-op>
+     <c-op kind="origin">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has input" xlink:href="../relationshiptypes/has_input-is_input_for.kmd#Reltype_has_input-is_input_for_UUID"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has output" xlink:href="../relationshiptypes/has_output-is_output_for.kmd#Reltype_has_output-is_output_for_UUID"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="../relationshiptypes/uses-is_used_by_crud.kmd#Reltype_uses-is_used_by_crud_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="origin"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="findInformationFlowInProcessWithoutInputsOutputs" title="Find Information Flow In Process Without inputs/outputs" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="targetof">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="consists of" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_consists_of-is_part_of_UUID"/>
+      </c-op>
+     </c-op>
+     <c-op kind="origin">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="../relationshiptypes/uses-is_used_by_crud.kmd#Reltype_uses-is_used_by_crud_UUID"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has input" xlink:href="../relationshiptypes/has_input-is_input_for.kmd#Reltype_has_input-is_input_for_UUID"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has output" xlink:href="../relationshiptypes/has_output-is_output_for.kmd#Reltype_has_output-is_output_for_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Process Component" xlink:href="../abstracttypes/process_component.kmd#CompType_TRM:ProcessDomain_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3" name="findInformationFlowInProcess" title="Find Information Flow In Process" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="or">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="Find Information Flow In Process Without inputs/outputs" xlink:href="#oid2"/>
+    </c-op>
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="Find Information Flow In Process via inputs/outputs" xlink:href="#oid1"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

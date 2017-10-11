@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics_AppDomain:Virtual_Machine_Image_UUID" name="Virtual_Machine_Image" title="Virtual Machine Image" desc="Used to represent a virtual machine that executes a running instance of an operating system contained within a process managed by a Virtual Host." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Application Component" xlink:href="../../meaf/abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/virtual_machine_image.kmd#UUID4_0B30B1BE-242F-4D71-9C3E-3670F0B85156"/>
+  <property name="memoryRamAmount" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Memory (RAM) Amount" desc="The amount of memory in this component." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_GenInfo_RAM_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="memoryRamUnit" xlink:role="integer-type" xlink:title="Memory (RAM) Unit" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_memory_ram_unit_UUID" label="Memory (RAM) Unit" desc="The unit in which the memory (RAM) is expressed." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:ComputingHardware_memoryRamUnit_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="processorCpuCount" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Processor (CPU) Count" desc="The number of CPUs in this component." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_GenInfo_CPUCount_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="processorCpuClockSpeed" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Processor (CPU) Clock Speed" desc="The clock speed of the CPUs" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_GenInfo_CPUClockSpeed_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="processorCpuClockSpeedUnit" xlink:role="integer-type" xlink:title="Processor (CPU) Clock Speed Unit" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_processor_cpu_clock_speed_unit_UUID" label="Processor (CPU) Clock Speed Unit" desc="The unit that clock speed is listed in." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_GenInfo_CPUClockSpeedUnit_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCount" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Disk Count" desc="The number of internal disks in this component." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_GenInfo_DiskCount_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacity" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Disk Capacity" desc="The total capacity of all internal disk drives in this component (metric)." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_GenInfo_DiskCapacity_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacityUnit" xlink:role="integer-type" xlink:title="Disk Capacity Free Unit" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_disk_capacity_free_unit_UUID" label="Disk Capacity Unit" desc="The units that disk capacity is stated in." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_GenInfo_DiskCapacityUnits_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="processorPercentageUsedTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#oid35" label="Processor Percentage Used Timestamp" desc="The last date and time this metric was gathered." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_PerfMetrics_CPUPct_Timestamp_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="processorPercentageUsed" xlink:role="integer-type" xlink:title="Percentage" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_percentage0_UUID" label="Processor Percentage Used" desc="The latest value of this metric (%)." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:Computer_PerfMetrics_CPUPct_Value_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacityFreeTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#oid35" label="Disk Capacity Free Timestamp" desc="The date and time this metric was last gathered." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskCapFreeUnit_Timestamp_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacityFree" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Disk Capacity Free" desc="The latest value of this metric." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskCapFreeUnit_Value_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacityFreeUnit" xlink:role="integer-type" xlink:title="Disk Capacity Free Unit" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_disk_capacity_free_unit_UUID" label="Disk Capacity Free Unit" desc="The units this metric is measured in." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskCapFreeUnit_Units_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacityUsedTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#oid35" label="Disk Capacity Used Timestamp" desc="The last date and time this metric was gathered." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskCapUseUnit_Timestamp_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacityUsed" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Disk Capacity Used" desc="The latest value of the metric." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskCapUseUnit_Value_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskCapacityUsedUnit" xlink:role="integer-type" xlink:title="Disk Capacity Free Unit" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_disk_capacity_free_unit_UUID" label="Disk Capacity Used Unit" desc="The units the metric is measured in." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskCapUseUnit_Units_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskPercentageUsedTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#oid35" label="Disk Percentage Used Timestamp" desc="The last date and time this metric was gathered." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskUsePct_Timestamp_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="diskPercentageUsed" xlink:role="integer-type" xlink:title="Percentage" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_percentage0_UUID" label="Disk Percentage Used" desc="The latest value of this metric." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_AppDomain:DiskArray_PerfMetrics_DiskUsePct_Value_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Virtual Machine Image" xlink:href="#CompType_Semantics_AppDomain:Virtual_Machine_Image_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#CCBBDD</string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="36" xlink:role="type" xlink:title="Virtual Machine Image" xlink:href="#CompType_Semantics_AppDomain:Virtual_Machine_Image_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile"></string>
+   <decimal name="memoryRamAmount">0</decimal>
+   <integer name="memoryRamUnit">-1</integer>
+   <integer name="processorCpuCount">0</integer>
+   <decimal name="processorCpuClockSpeed">0</decimal>
+   <integer name="processorCpuClockSpeedUnit">-1</integer>
+   <integer name="diskCount">0</integer>
+   <decimal name="diskCapacity">0</decimal>
+   <integer name="diskCapacityUnit">-1</integer>
+   <date-time name="processorPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="processorPercentageUsed">0</integer>
+   <date-time name="diskCapacityFreeTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityFree">0</decimal>
+   <integer name="diskCapacityFreeUnit">-1</integer>
+   <date-time name="diskCapacityUsedTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityUsed">0</decimal>
+   <integer name="diskCapacityUsedUnit">-1</integer>
+   <date-time name="diskPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="diskPercentageUsed">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

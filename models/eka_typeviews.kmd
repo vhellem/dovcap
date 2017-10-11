@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="3"
+ nextoid="1">
+
+ <typeview id="Typeview_EKA:OnlineDocument" xlink:role="type" xlink:title="Online Document" xlink:href="http://metadata.troux.info/meaf/objecttypes/online_document.kmd#CompType_MEAF:OnlineDocument_UUID" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="application"/> 
+   <propertyview name="filename"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.activeknowledgemodeling.com/EKA/views/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#D6D0E1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/EKA/views/icons/onlinedocument.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://xml.activeknowledgemodeling.com/EKA/views/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#D6D0E1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/EKA/views/onlinedocument.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.activeknowledgemodeling.com/EKA/views/icons/onlinedocument.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+
+ <type id="CompType_MEAF:TimelineEnd_UUID" name="TimelineEnd" title="Timeline End" desc="The end point for the Timeline" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="Timeline Milestones" xlink:href="../abstracttypes/timeline_milestones.kmd#CompType_MEAF:TimelineMilestones_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="date" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="End Date" desc="The End Date from Timeline." method-flag="true" default-visible="top"/>
+  <named-method-link name="date" xlink:role="cpp-method" xlink:title="getEndDate" xlink:href="../methods/timeline_methods.kmd#oid1008"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Timeline End" xlink:href="#CompType_MEAF:TimelineEnd_UUID">
+   <string name="troux_iconAlias">Icon_CompType_MEAF:TimelineEnd_UUID</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Timeline End" xlink:href="#CompType_MEAF:TimelineEnd_UUID" tree-size="0.5" nested-size="1" behavior="tree" position="right" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="MilestoneEnd" xlink:href="../symbols/diagrams/timeline_end.svg#oid2" xlink:actuate="auto">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;b&#62;&#34; (label) &#34;&#60;/b&#62;&#60;br&#62;&#34; (property textdate))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="MilestoneEndText" xlink:href="../symbols/diagrams/timeline_end.svg#oid9" xlink:actuate="auto">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;b&#62;&#34; (label) &#34;&#60;/b&#62;&#60;br&#62;&#34; (property textdate))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/general_object.png"/>
+ </typeview>
+
+</metis>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="metisreport_xml_format" title="XML Formatted" desc="Standard preformatted XML report shown in MS Word" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="MetisReportFormatType" xlink:href="format_type.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="useRangePairName" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Use Range/Pair Name" desc="Check to report the Range/Pair names rather than the Range/Pair values."/>
+  <property name="fileName" xlink:role="url-type" xlink:href="metis:stdprimtypes#oid9" label="Output File Name" desc="The filename and folder location for the output. If the filename is not specified, the output will be to the program associated with the XML file extension. The fallback is Notepad."/>
+  <valueset vset="default" size="20" xlink:role="type" xlink:title="XML Formatted" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">6</integer>
+   <string name="reference">http://xml.computas.com/xml/reporting_object/methods/reporting_methods.kmd#oid1</string>
+   <string name="metisReportType">XML</string>
+   <string name="metisReportSource">Criteria</string>
+   <string name="selection.criteriaURI">All Modeling Objects: metis:stdcriteria#oid3006</string>
+   <string name="selection.customCriteriaURI"></string>
+   <integer name="includeRelationships">0</integer>
+   <integer name="sortByStructure">0</integer>
+   <integer name="omitProperties">0</integer>
+   <integer name="invisibleProperties">0</integer>
+   <integer name="omitBlankProperties">0</integer>
+   <integer name="useRangePairName">0</integer>
+   <integer name="omitTypeDescription">0</integer>
+   <integer name="omitInstanceDescription">0</integer>
+   <integer name="interactive">0</integer>
+   <integer name="iAmAReportingObject">1</integer>
+   <url name="fileName"></url>
+   <string name="generateVia">Format</string>
+   <string name="formatpropertygroup.formatName">BASE</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="XML Formatted" xlink:href="#oid1" typelabel="XXML Formatted" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="mode" visible-flag="false"/>
+   <propertyview name="reference" visible-flag="false"/>
+   <propertyview name="execute_on_parent" visible-flag="false"/>
+   <propertyview name="metisReportType" visible-flag="false"/>
+   <propertyview name="metisReportSource" visible-flag="false"/>
+   <propertyview name="selection.criteriaURI" visible-flag="true"/>
+   <propertyview name="selection.customCriteriaURI" visible-flag="true"/>
+   <propertyview name="includeRelationships" visible-flag="false"/>
+   <propertyview name="sortByStructure" visible-flag="false"/>
+   <propertyview name="omitTypeDescription" visible-flag="false"/>
+   <propertyview name="omitInstanceDescription" visible-flag="false"/>
+   <propertyview name="omitProperties" visible-flag="false"/>
+   <propertyview name="omitBlankProperties" visible-flag="true"/>
+   <propertyview name="invisibleProperties" visible-flag="false"/>
+   <propertyview name="useRangePairName" visible-flag="true"/>
+   <propertyview name="interactive" visible-flag="true"/>
+   <propertyview name="iAmAReportingObject" visible-flag="false"/>
+   <propertyview name="fileName" visible-flag="true"/>
+   <propertyview name="generateVia" visible-flag="false"/>
+   <propertyview name="formatpropertygroup.formatName" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.xCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" protected-flag="true" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="../symbols/reportxml.svg#oid1" xlink:actuate="user">
+   <replace tag="ReportName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="../symbols/reportxml.svg#oid1" xlink:actuate="user">
+   <replace tag="ReportName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/xml.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

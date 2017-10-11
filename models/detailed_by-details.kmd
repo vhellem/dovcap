@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="detailedby_details" title="detailed by/details" usage="relationship" desc="The detailed by/details relationship ties the conceptual data constructs, Information Group and Information Object, to the more detailed definitions contained within the Independent and Dependent Entities.">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Group" xlink:href="../object_types/informationgroup.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Independant Entity" xlink:href="../types/idef1xclass.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Group" xlink:href="../object_types/informationgroup.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Dependant Entity" xlink:href="../types/idef1xclass.kmd#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Object" xlink:href="../object_types/information_object.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Independant Entity" xlink:href="../types/idef1xclass.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Object" xlink:href="../object_types/information_object.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Dependant Entity" xlink:href="../types/idef1xclass.kmd#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="detailed by/details" xlink:href="#oid1">
+   <string name="from">detailed by</string>
+   <string name="to">details</string>
+  </valueset>
+ </type>
+
+
+</metis>

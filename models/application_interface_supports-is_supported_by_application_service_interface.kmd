@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Application_Interface_supports-is_supported_by_Application_Service_Interface_UUID" name="Application_Interface_supports_is_supported_by_Application_Service_Interface" title="Application Interface supports-is supported by Application Service Interface" desc="Used to associate an Application Interface with the Application Service Interface it implements." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/application_interface_supports-is_supported_by_application_service_interface.kmd#UUID4_04DCB6E5-B715-42F4-B09E-EB9281EA4B2B"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Interface" xlink:href="../object_types/application_interface.kmd#CompType_Semantics:Application_Interface_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Service Interface" xlink:href="../object_types/application_service_interface.kmd#CompType_Semantics:Application_Service_Interface_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Interface supports-is supported by Application Service Interface" xlink:href="#RelType_Semantics:Application_Interface_supports-is_supported_by_Application_Service_Interface_UUID" xlink:actuate="user">
+   <string name="from">supports</string>
+   <string name="to">is supported by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Interface supports-is supported by Application Service Interface" xlink:href="#RelType_Semantics:Application_Interface_supports-is_supported_by_Application_Service_Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="Archetype_UUID" name="Archetype" desc="Archetypes define patterns, common configurations, or frequently modeled collections of objects and relationships. For example, an archetype can define an organization&#39;s approved configuration for a LAMP stack. &#10;&#10;The Archetype Component is the container in which an archetype is defined. To create an archetype, add the Archetype Component to a model and then add the appropriate instances to the Archetype Component.&#10;&#10;Note: When you create an archetype, only one Archetype Component can be added to a model file. The model file must be top-level model with no submodels, and it must be a single-file (not a dual-file) model. " usage="object" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Mer Object" xlink:href="metis:mer#MerObjectProp"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/archetype.kmd#oid1"/>
+  <property name="baseXML" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="baseXML" desc="The XML statements that define the archetype. These XML statements define the instances within the archetype, the associated property values, the instance views, and the layout. The XML definition is stored in the TrouxSource repository after the archetype is committed. When a user adds the archetype to a model, the XML is used to create the associated instances." default-visible="top" mer-property-metadata="uuid=&#34;Archetype:BaseXML&#34;;category=&#34;&#34;;isRequired=1;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="baseViewUUID" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="View UUID" desc="The unique ID that identifies the archetype view. This ID is used internally and should not be changed." default-visible="top" mer-property-metadata="uuid=&#34;Archetype:baseViewUUID&#34;;category=&#34;&#34;;isRequired=1;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="ownerUUID" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="ownerUUID" desc="The unique ID that identifies the model file in which the archetype was created. This ID is used internally and should not be changed." default-visible="top" mer-property-metadata="uuid=&#34;Archetype:ownerUUID&#34;;category=&#34;&#34;;isRequired=1;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Shortcut" xlink:href="metis:stdshortcut#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Print Settings Button" xlink:href="metis:stdtypes#oid128"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Relationship Matrix Button" xlink:href="metis:stdtypes#oid124"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="Label 2" xlink:href="metis:stdtypes#oid28"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Annotation Object" xlink:href="metis:stdtypes#oid26"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="Label 1" xlink:href="metis:stdtypes#oid25"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="Role" xlink:href="metis:stdtypes#oid24"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Comment" xlink:href="metis:stdtypes#oid22"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Pushpin" xlink:href="metis:stdtypes#oid21"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Modeling Object with name and description properties" xlink:href="metis:stdtypes#oid19"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Flow Object" xlink:href="metis:stdtypes#oid11"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Relationship Hub" xlink:href="metis:stdtypes#oid10"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="InterfaceObject" xlink:href="metis:stdtypes#oid8"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="metis:stdtypes#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <member-rule min="0" max="1" xlink:role="type" xlink:title="Marshalling External" xlink:href="metis:stdtypes#MarshallingExternal"/>
+  <named-method-link name="Archetype" xlink:role="cpp-method" xlink:title="Archetype_Create" xlink:href="../methods/archetype_methods.kmd#oid1"/>
+  <named-method-link name="onAfterCommitRefresh" xlink:role="cpp-method" xlink:title="Archetype_onAfterCommitRefresh" xlink:href="../methods/archetype_methods.kmd#oid3"/>
+  <named-method-link name="onAfterRefresh" xlink:role="cpp-method" xlink:title="Archetype_onAfterRefresh" xlink:href="../methods/archetype_methods.kmd#oid4"/>
+  <named-method-link name="onBeforeCommit" xlink:role="cpp-method" xlink:title="Archetype_onBeforeCommit" xlink:href="../methods/archetype_methods.kmd#oid2"/>
+  <named-method-link name="onBeforeSave" xlink:role="cpp-method" xlink:title="Archetype_onBeforeSave" xlink:href="../methods/archetype_methods.kmd#oid6"/>
+  <named-method-link name="onObjectPasted" xlink:role="cpp-method" xlink:title="Archetype_onObjectPasted" xlink:href="../methods/archetype_methods.kmd#oid7"/>
+  <named-method-link name="onTypeDrop" xlink:role="cpp-method" xlink:title="Archetype_onTypeDrop" xlink:href="../methods/archetype_methods.kmd#oid5"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Archetype" xlink:href="#Archetype_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Archetype" xlink:href="#Archetype_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="baseXML"></string>
+   <string name="baseViewUUID"></string>
+   <string name="ownerUUID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

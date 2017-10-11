@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_1546F8C0-69DB-4414-8F26-A9EF14987A35" name="Troux_Semantics_Extension_Pack_1" title="Troux Semantics Extension Pack 1" desc="Provides a set of types that can be used to extend the Troux Semantics metamodel version that was based on the content of the prior MEAF metamodel.">
+  <metamodel-links size="5">
+   <metamodel-link xlink:role="metamodel" xlink:title="Policy Domain" xlink:href="policy_domain.kmd#UUID4_25662418-3D16-469F-B139-2F3F00519AA6"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Systems Domain" xlink:href="systems_domain.kmd#UUID4_97186C95-B808-4E78-9A2B-80D34FA3042F"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Process Domain" xlink:href="process_domain.kmd#UUID4_403D06EA-F76C-4203-9C0D-31E1CC1E2AD7"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Strategy Domain" xlink:href="strategy_domain.kmd#UUID4_151BF96A-F584-4A76-8456-521A44354EC5"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Application and Software Domain" xlink:href="application_and_software_domain.kmd#UUID4_8861F936-793A-4255-8E9E-BCB5B4196FA8"/>
+  </metamodel-links>
+ </metamodel>
+
+
+</metis>

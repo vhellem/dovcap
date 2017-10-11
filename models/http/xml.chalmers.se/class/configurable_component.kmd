@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="configurable_component" name="configurable_component" title="Configurable_component" desc="A configurable component is an element that has been defined in order to allow for definition of different variants of the configuration of a system." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="status" xlink:role="string-type" xlink:title="integer" xlink:href="primitive_types.kmd#CC_status" label="Status" desc="" default-visible="top"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="" method-flag="true" default-visible="top"/>
+  <property name="isSubcomponent" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Is subcomponent" default-visible="top"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="CC_object" xlink:href="cc_object.kmd#CC_object"/>
+  <named-method-link name="configurable_component" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#initGlobals"/>
+  <named-method-link name="editProperties_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/virtual_methods.kmd#editCCproperties"/>
+  <named-method-link name="editDSproperties_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#editDSproperties"/>
+  <named-method-link name="exportParameters_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#exportVariantParameters"/>
+  <named-method-link name="clearValues_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#clearAllValues"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#calculateCCstatusColor"/>
+<!--  <named-method-link name="transformRules_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/rule_methods.kmd#transformRules"/> -->
+  <named-method-link name="configureCC_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/rule_methods.kmd#configureCC"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Configurable_component" xlink:href="#configurable_component" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isSubcomponent">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Configurable_component" xlink:href="#configurable_component" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="symbol" property="value" macro="(expand (method getSymbol))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Configurable_component" xlink:href="#configurable_component" tree-size="0.5" nested-size="0.125" behavior="tree" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../layout/hierarchy_layout.kmd#_002asgf00sj14lu510jk"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/object_tree_open.svg#_002ash401d1mk84cm13r" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CC: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CC: &#34; (property name))"/>
+   <replace tag="symbol" property="value" macro="(expand (method getSymbol))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Configurable_component" xlink:href="#configurable_component" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#Layout_CVW:ContainerLayout"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CC: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="http://xml.chalmers.se/symbols/nested_objects.svg#_002aspt00qftqdt2fiu0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CC: &#34; (property name))"/>
+   <replace tag="symbol" property="value" macro="(expand (method getSymbol))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Configurable_component" xlink:href="#configurable_component" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CC: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CC: &#34; (property name))"/>
+   <replace tag="symbol" property="value" macro="(expand (method getSymbol))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

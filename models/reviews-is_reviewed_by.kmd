@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ nextoid="1">
+
+ <type id="RelType_ITG:reviews-is_reviewed_by_UUID" name="reviews" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="reviews" xlink:href="#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user">
+   <string name="from">reviews</string>
+   <string name="to">is reviewed by</string>
+   <string name="troux_color">#000000</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Person_reviews_Standard_Candidate_UUID" name="Person_reviews_Standard_Candidate" title="Person reviews Standard Candidate" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="#RelType_ITG:reviews-is_reviewed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Standard Candidate" xlink:href="../objecttypes/standard_candidate.kmd#CompType_ITG:Standard_Candidate_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Person reviews Standard Candidate" xlink:href="#RelType_ITG:Person_reviews_Standard_Candidate_UUID" xlink:actuate="user">
+   <string name="troux_color">#4682B4</string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+
+</metis>

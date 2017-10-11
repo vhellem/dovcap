@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ viewstyles="1"
+ nextoid="4">
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Rectangle" xlink:href="../symbols/library/container/open/rectangle.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Business Closed" xlink:href="../symbols/business_container.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="text1" property="value" macro="(expand (property description))"/>
+  </symbol-override>
+ </typeview>
+
+ <viewstyle id="oid1" name="BusinessModelingPlatform" title="ABM View Style">
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/organization.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

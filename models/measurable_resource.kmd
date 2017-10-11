@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_ITG:MeasurableResource_UUID" name="measurable_resource" title="Measurable Resource" desc="Measurable Resources are the supertype for objects that contain attributes that can be measured and constrained by an SLO." usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Service Component" xlink:href="../abstracttypes/service_component.kmd#CompType_ITG:ServiceComponent_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="cost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Cost" desc="The cost of providing this resource's capacity." mer-property-metadata="uuid=&#34;PropDef_ITG:MeasurableResource_Cost_UUID&#34;;"/>
+  <property name="capacityUnits" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Capacity Units" desc="The units of this resource's capacity that cost applies to, such as 'job' or 'gigabyte'." mer-property-metadata="uuid=&#34;PropDef_ITG:MeasurableResource_CapacityUnits_UUID&#34;;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Measurable Resource" xlink:href="#CompType_ITG:MeasurableResource_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#BCCD4D</string>
+   <string name="troux_iconAlias">DEFAULT_COMPONENT_ICON</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Measurable Resource" xlink:href="#CompType_ITG:MeasurableResource_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="capacityUnits" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="workspaceID" visible-flag="false"/>
+   <propertyview name="correspondingLiveID" visible-flag="false"/>
+   <propertyview name="lockingWorkspaceID" visible-flag="false"/>
+   <propertyview name="markedForDeletion" visible-flag="false"/>
+  </propertyviews>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Measurable Resource" xlink:href="CompType_ITG:MeasurableResource_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="capacityUnits" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="workspaceID" visible-flag="false"/>
+   <propertyview name="correspondingLiveID" visible-flag="false"/>
+   <propertyview name="lockingWorkspaceID" visible-flag="false"/>
+   <propertyview name="markedForDeletion" visible-flag="false"/>
+  </propertyviews>
+ </typeview>
+
+
+</metis>

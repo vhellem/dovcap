@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="3.2.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="6">
+
+ <type id="oid1" name="PhysicalDatastore" title="Datastore" desc="A set of stored data, perceived as a unit, stored electronically and accessed by applications or basic software. A special case of a datastore is a database." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="IT Entity" xlink:href="it_entity.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="id" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Identification" desc="An Id. number of a storage as used in e.g. data modeling." visible-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="#oid1"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Datastore" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="Status">1</integer>
+   <integer name="TotalCostPerYear">0</integer>
+   <string name="CostUnit"></string>
+   <date name="StartDate">00000000</date>
+   <date name="StopDate">00000000</date>
+   <string name="id"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Datastore" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Database" xlink:href="../symbols/database.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Database" xlink:href="../symbols/database.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/physical_database.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002asb201j1kc5e0rva2" name="Objects">
+  <complex-type-links size="3">
+   <complex-type-link xlink:role="type" xlink:title="Utilities - Visual Get Instances Query" xlink:href="../objecttypes/visual_tql_action_buttons.kmd#Visual_TQL_Get_Instances_Query" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Utilities - Visual Structured Query" xlink:href="../objecttypes/visual_tql_action_buttons.kmd#Visual_TQL_Structured_Query" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Utilities - Visual Dynamic Starting Container Support" xlink:href="../objecttypes/visual_tql_action_buttons.kmd#Visual_TQL_Structured_Query_With_Dynamic_Container_Support" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

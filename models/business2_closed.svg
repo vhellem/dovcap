@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="3.0.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: business2_closed.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Cont closed</title>
+    <rect x="0" y="0" width="480" height="336"
+     style=" stroke:#000000; stroke-width:3; fill:#007af4; fill-opacity:100%"></rect>
+    <rect x="5.8825" y="7.5" width="468.118" height="321.5"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"></rect>
+    <image x="304" y="32" width="144" height="112" id="oid2" xlink:role="owned" xlink:href="business_closed_2.png"></image>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="30" y="49.8"
+       style=" stroke:#000000; stroke-width:2; font-family:serif;  font-weight:bold; font-size:22;"
+       class="TAG:text">text</text>
+      <rect x="30" y="28" width="259.118" height="164"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32" y="207.8"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text2">text2</text>
+      <rect x="32" y="192" width="423.118" height="130"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Project_has_architect-is_architect_for_Person_UUID" name="Project_has_architect_is_architect_for_Person" title="Project has architect-is architect for Person" desc="Used to associate the Person performing the architect role on a project to that Project." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/project_has_architect-is_architect_for_person.kmd#UUID4_4D3BC54A-FB16-4168-869D-13EC22FDF71C"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Project" xlink:href="../../meaf/objecttypes/project.kmd#CompType_TRM:Project_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../../meaf/objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Project has architect-is architect for Person" xlink:href="#RelType_Semantics:Project_has_architect-is_architect_for_Person_UUID" xlink:actuate="user">
+   <string name="from">has architect</string>
+   <string name="to">is architect for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Project has architect-is architect for Person" xlink:href="#RelType_Semantics:Project_has_architect-is_architect_for_Person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

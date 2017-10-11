@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ nextoid="4">
+
+ <integer-type id="Primtype_priority_colormap_UUID" name="priority_colormap" title="Priority Color Mapping" default="-1">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined -->
+  <range name="green" min="0" max="0"/> <!-- Low -->
+  <range name="yellow" min="1" max="1"/> <!-- Medium -->
+  <range name="red" min="2" max="2"/> <!-- High -->
+ </integer-type>
+
+ <integer-type id="Primtype_phase_colormap_UUID" name="phase_colormap" title="Phase Color Mapping" default="0">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined --> 
+  <range name="skyblue" min="0" max="0"/> <!-- Vision -->
+  <range name="blue" min="1" max="1"/> <!-- Planning -->
+  <range name="#007F7F" min="2" max="2"/> <!-- Developing -->
+  <range name="#007F7F" min="3" max="3"/> <!-- Testing -->
+  <range name="#007F7F" min="4" max="4"/> <!-- Stabilizing -->
+  <range name="green" min="5" max="5"/> <!-- Deploying -->
+  <range name="yellow" min="6" max="6"/> <!-- Supporting -->
+  <range name="red" min="7" max="7"/> <!-- Retiring -->
+ </integer-type>
+
+ <integer-type id="Primtype_project_phase_colormap_UUID" name="project_phase_colormap" title="Project Phase Color Mapping" default="-1">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined -->
+  <range name="lightblue" min="0" max="0"/> <!-- Planning --> 
+  <range name="lightblue" min="1" max="1"/> <!-- Requirements Gathering and Analysis -->
+  <range name="blue" min="2" max="2"/> <!-- Construction Phase -->
+  <range name="darkblue" min="3" max="3"/> <!-- Transition Phase -->
+  <range name="darkblue" min="4" max="4"/> <!-- Deployment Phase  -->
+ </integer-type>
+
+ <integer-type id="Primtype_status_colormap1_UUID" name="status_colormap1" title="Status Color Mapping 1" default="-1">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined -->
+  <range name="lightblue" min="0" max="0"/> <!-- Pending -->
+  <range name="blue" min="1" max="1"/> <!-- Started -->
+  <range name="green" min="2" max="2"/> <!-- Completed -->
+ </integer-type>
+
+ <integer-type id="Primtype_status_colormap2_UUID" name="status_colormap2" title="Status Color Mapping 2" default="-1">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined -->
+  <range name="blue" min="0" max="0"/> <!-- Planned -->
+  <range name="green" min="1" max="1"/> <!-- Existing -->
+ </integer-type>
+
+ <integer-type id="Primtype_status_colormap3_UUID" name="status_colormap3" title="Status Color Mapping 3" default="-1">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined -->
+  <range name="lightblue" min="0" max="0"/> <!-- Proposed -->
+  <range name="lightblue" min="1" max="1"/> <!-- Pending Approval -->
+  <range name="blue" min="2" max="2"/> <!-- In Progress -->
+  <range name="yellow" min="3" max="3"/> <!-- On Hold -->
+  <range name="green" min="4" max="4"/> <!-- Complete -->
+ </integer-type>
+
+ <integer-type id="Primtype_status_colormap4_UUID" name="status_colormap4" title="Status Color Mapping 4" default="-1">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined -->
+  <range name="lightblue" min="0" max="0"/> <!-- Writing -->
+  <range name="lightblue" min="1" max="1"/> <!-- Awaiting approval-->
+  <range name="blue" min="2" max="2"/> <!-- Tested -->
+  <range name="#007F7F" min="3" max="3"/> <!-- Active -->
+  <range name="green" min="4" max="4"/> <!-- Complete -->
+ </integer-type>
+
+ <integer-type id="Primtype_status_colormap5_UUID" name="status_colormap5" title="Status Color Mapping 5" default="-1">
+  <range name="#878787" min="-1" max="-1"/> <!-- Undefined -->
+  <range name="blue" min="0" max="0"/> <!-- Assigned -->
+  <range name="green" min="1" max="1"/> <!-- Approved-->
+ </integer-type>
+
+ <integer-type id="Primtype_weight_colormap_UUID" name="weight_colormap" title="Weight Color Mapping" default="0">
+  <range name="gray" min="0" max="0"/> 
+  <range name="khaki" min="1" max="1"/> 
+  <range name="yellow" min="2" max="2"/> 
+  <range name="#ffc400" min="3" max="3"/> 
+  <range name="darkorange" min="4" max="4"/> 
+  <range name="orangered" min="5" max="5"/> 
+  <range name="red2" min="6" max="6"/> 
+  <range name="red3" min="7" max="7"/> 
+ </integer-type>
+
+</metis>

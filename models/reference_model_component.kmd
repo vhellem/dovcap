@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?metis version="7.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_FEA_RM:reference_model_component_UUID" name="reference_model_component" title="Reference Model Component" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <property name="version" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Version" desc="The identifier (e.g., fiscal year) of the version when the item was added.&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_version_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="source" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Source" desc="The reference, agency or approval board used for this item.&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_source_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="originType" xlink:role="integer-type" xlink:title="origin type" xlink:href="../primitive_types/origin_type.kmd#PrimType_FEA_RM:origin_type_UUID" label="Origin Type" desc="The origin type of the source (i.e., Internal or External) in reference to the organization.&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_originType_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="dateSubmitted" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date Submitted" desc="The date the item was submitted.&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_dateSubmitted_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="submittedBy" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Submitted By" desc="The name of the agency, group or individual who submitted the item.&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_submittedBy_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="dateApproved" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date Approved" desc="If applicable, the date the item was approved.&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_dateApproved_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="approvedBy" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Approved By" desc="The name of the agency, group or individual that approved the item.&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_approvedBy_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="dateRetired" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date Retired" desc="If applicable, the date the item was retired (e.g., the item is no longer to be used, because it had been replaced in a new release of the authoritative reference model).&#10;" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_FEA_RM:referenceModelComponent_dateRetired_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Reference Model Component" xlink:href="#CompType_FEA_RM:reference_model_component_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="16" xlink:role="type" xlink:title="Reference Model Component" xlink:href="#CompType_FEA_RM:reference_model_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="version"></string>
+   <string name="source"></string>
+   <integer name="originType">1</integer>
+   <date name="dateSubmitted">00000000</date>
+   <string name="submittedBy"></string>
+   <date name="dateApproved">00000000</date>
+   <string name="approvedBy"></string>
+   <date name="dateRetired">00000000</date>
+  </valueset>
+ </type>
+
+
+</metis>

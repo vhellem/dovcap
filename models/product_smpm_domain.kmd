@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="2"
+ nextoid="4">
+
+ <domain id="oid1" name="SMPMProductDomain" title="Product Domain" desc="The product that the business is offering to the market.">
+  <domain-link xlink:role="domain" xlink:href="#oid3"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/strategy.kmd#oid7" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/product_properties.kmd#oid1" xlink:actuate="user"/> 
+  <complex-type-link xlink:role="type" xlink:href="../object_types/productitem.kmd#oid7" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/product_method.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/machine.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/tool.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/requirement.kmd#oid8" xlink:actuate="user"/> 
+  <complex-type-link xlink:role="type" xlink:href="../object_types/productitem.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/productfunction.kmd#oid1" xlink:actuate="user"/>
+ </domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/leads_to-derived_from.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/implemented_by-implements.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/needs-needed_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/consists_of-part_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_property_of-has_property.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/function_of-has_function.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_held_by-has.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/requirement_to-has_requirement.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/affects-affected_by2.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/satisfied_by-satisfies2.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/sets_requirement-is_requirement_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/translates_to-translated_from.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+</metis>
+
+
+
+

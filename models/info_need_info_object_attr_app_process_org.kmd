@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?metis version="3.2.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="4">
+
+ <criteria id="oid1" name="InformationNeedInfoObjectAttributeApplicationProcessOrganization" title="Information Need-&#62;Info Object-&#62;Attribute,Application,Process-&#62;Organization" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="satisfied by/satisfies" xlink:href="../relationship_types/satisfied_by-satisfies.kmd#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Information Object" xlink:href="../object_types/information_object.kmd#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="used by/uses  w/CRUD" xlink:href="../relationship_types/used_by-uses-crud.kmd#oid1"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="implemented by/implements w/CRUD" xlink:href="../relationship_types/implemented_by-implements-crud.kmd#oid1"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="described by/describes" xlink:href="../relationship_types/described_by-describes.kmd#oid1"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="or">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Attribute" xlink:href="../object_types/attribute.kmd#oid1"/>
+      </c-op>
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Application, Physical" xlink:href="../object_types/application.kmd#oid1"/>
+      </c-op>
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Generic Process" xlink:href="../object_types/process.kmd#oid1"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="endof">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has responsible/responsible for" xlink:href="../relationship_types/has_responsible-responsible_for.kmd#oid1"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="execute/executed by" xlink:href="../relationship_types/execute-executed_by.kmd#oid1"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="end">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Organization" xlink:href="../object_types/organization.kmd#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

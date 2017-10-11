@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="2"
+ nextoid="3">
+
+ <criteria id="oid1" name="findTaskOrProjectWithUniqueID" title="findTaskOrProjectWithUniqueID" container-flag="true">
+  <arg-list size="1">
+   <string name="Unique ID">*</string>
+  </arg-list>
+  <c-op kind="and">
+   <c-op kind="property-values">
+    <c-id>uniqueID</c-id>
+    <c-macro name="Unique ID"/>
+   </c-op>
+   <c-op kind="or">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Project ITM" xlink:href="../object_types/project_itm.kmd#oid1"/>
+    </c-op>
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Task ITM" xlink:href="../object_types/task_itm.kmd#oid1"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="findAllTasksInProject" title="findAllTasksInProject" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="repeat" use-on-flag="true">
+     <c-number>1</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

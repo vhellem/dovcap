@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="3"
+ nextoid="1">
+
+ <object id="_002as0b01f853fuoui7g">
+  <valueset size="2" xlink:role="type" xlink:title="Comment" xlink:href="metis:stdtypes#oid22" xlink:actuate="user">
+   <string name="name">&#60;h2&#62;Marshalling Object&#60;/h2&#62;</string>
+   <string name="description">The Marshalling object stores information required to connect to the TrouxSource repository, such as the name and location of the server. The Marshalling object is also used to keep track of the queries run against the TrouxSource repository. Queries are stored here for future refresh operations.&#60;p&#62; 
+The Marshalling object displays the name of the TrouxSource repository server and the state to which you are connected. The News objects at the bottom display the number of instances from the TrouxSource repository that were added or updated during query or refresh operations. A separate News object is created each day.
+&#60;br/&#62;
+&#60;h4&#62;To configure the Marshalling object:&#60;/h4&#62;
+&#60;ol&#62;
+&#60;li&#62;Right-click the object and click &#60;b&#62;Properties&#60;/b&#62;.&#60;/li&#62;
+&#60;li&#62;On the &#60;b&#62;Instance&#60;/b&#62; tab,  enter the location of the TrouxSource repository in the &#60;b&#62;Server Name&#60;/b&#62; field.&#60;/li&#62;
+&#60;li&#62;If the server is running in secure mode (SSL), select the &#60;b&#62;Use Secure HTTP Connection&#60;/b&#62; option.&#60;/li&#62;
+&#60;/ol&#62;
+&#60;br/&#62;
+Tip: See the Troux Architect online help for more information about configuring the Marshalling object, querying the TrouxSource repository, and connecting to a different state. 
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002as0h01f8ibvh7kt5k">
+  <valueset size="19" xlink:role="type" xlink:title="ME Marshalling" xlink:href="metis:troux#TrouxMarshalling" xlink:actuate="user">
+   <string name="name">TrouxSource Repository</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <string name="serverName">servername</string>
+   <integer name="secureHTTP">0</integer>
+   <string name="repositoryPath">bpserver/do</string>
+   <string name="uploadJobName">MCT</string>
+   <integer name="views-customize.createViews">1</integer>
+   <integer name="news-customize.numberOfNews">4</integer>
+   <integer name="news-customize.newsClear">0</integer>
+   <string name="tuxJobId"></string>
+   <string name="tuxDebugOutputFilename"></string>
+   <string name="bluePrintID">1</string>
+   <string name="bluePrintName">Troux Blueprint</string>
+   <string name="bluePrintChange">0</string>
+   <string name="trouxUUID4Update">0</string>
+   <integer name="trouxCollaborationEnabled">0</integer>
+   <string name="tipPath">tip</string>
+   <string name="seQueryElement">ACE81293-3D6B-3AC8-B35D-F67C9EC1992F</string>
+  </valueset>
+ </object>
+
+ <model id="oid1" name="MEAF model" title="Semantics model" desc="Blank MEAF model with Repository Connection" standalone-flag="true">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Semantics" xlink:href="../metamodels/meaf_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="TrouxSource Queries" xlink:href="../metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="servername" xlink:href="#_002as0h01f8ibvh7kt5k"/>
+  <part-link xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853fuoui7g"/>
+  <member-link xlink:role="object" xlink:title="servername" xlink:href="#_002as0h01f8ibvh7kt5k"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Semantics model" xlink:href="#oid1" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Semantics model" xlink:href="#oid1" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+
+</metis>

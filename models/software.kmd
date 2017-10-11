@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_MEAF:Software_UUID" name="software" title="Software" desc="The Software object type is a general software type.&#60;p&#62;Used when your model does not need to or wish to distinguish between the different software types. It is the base type for all Software and Application elements." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Software" xlink:href="#CompType_MEAF:Software_UUID">
+   <string name="troux_iconAlias">Icon_CompType_MEAF:Software_UUID</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Software" xlink:href="#CompType_MEAF:Software_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/software.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/software.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/software.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Software" xlink:href="#CompType_MEAF:Software_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/software.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/software.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/software.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

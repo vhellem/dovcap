@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="3"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="getApplication" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getApplication" xlink:href="../criteria/online_document_criteria.kmd#oid1"/>
+   <string name="Default"></string>
+   <string name="Property">application</string>
+   <string name="RemoveDuplicates">false</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="executeDoc" title="Open Document" language="c++" bind="NO.METIS.GEM.executeDoc" required-dll="gem_dochandling">
+ </cpp-method>
+
+ <cpp-method id="oid3" name="onlineDocument_CommandEnabler" title="Enable Online Document Commands" language="c++" bind="NO.METIS.GEM.DIAGRAM.enableGenericTypeCommands" required-dll="gem_diagram">
+  <arg-list size="2">
+   <url name="CommandObjectUrl" xlink:href="../commands/online_document_commands.kmd" xlink:role="url" xlink:title="Command Object Url" xlink:actuate="auto"/>
+   <pointer name="OnlineDocumentType" xlink:role="type" xlink:title="Online Document" xlink:href="../objecttypes/online_document.kmd#CompType_MEAF:OnlineDocument_UUID"/>
+<string name="Command1">meaf-current-onlinedoc</string>
+   </arg-list>
+ </cpp-method>
+</metis>

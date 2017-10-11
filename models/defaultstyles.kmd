@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ viewstyles="1"
+ nextoid="2">
+
+ <viewstyle id="oid1" name="default">
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/action.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/catalogpart.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/cause.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/communication.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/competence.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/competenceprofile.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/competitor.mml#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/concept.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/condition.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/event.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/formalcompetence.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/goal.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/informationelement.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/informationgroup.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/informationtype.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/info_flow.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/location.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/machine.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/message.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/opportunity.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/organization.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/organization_network.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/partnership.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/person.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/physical_flow.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/position.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/problem.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/process_role.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/productfunction.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/productitem.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/productmodule.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/requirement.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/resource.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/responsible_position.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/solution.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/standard.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/storage.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/substance.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/substanceclass.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/system.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/tool.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/trainingprogram.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/workflow_process.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../object_types/work_unit.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1030"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1031"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1032"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1033"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1034"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1035"/>
+ </viewstyle>
+
+
+</metis>

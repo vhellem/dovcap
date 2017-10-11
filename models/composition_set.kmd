@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="composition_set" name="composition_set" title="Composition set" desc="The composition set carries the definitions of how this component utilize other components in order to archieve its purposes." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Composition_element" xlink:href="composition_element.kmd#composition_element"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Composition_set" xlink:href="#composition_set" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Composition_set" xlink:href="#composition_set" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/akm/views/container_symbols.svg#_002ash00212jsqbum131" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Composition_set" xlink:href="#composition_set" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/object_tree_open.svg#_002ash401d1mk84cm13r" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Composition_set" xlink:href="#composition_set" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Composition_set" xlink:href="#composition_set" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;CS: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

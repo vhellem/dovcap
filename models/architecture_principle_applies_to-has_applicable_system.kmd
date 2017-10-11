@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="7.1.2008.0401"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_System_UUID" name="Architecture_Principle_applies_to_has_applicable_System" title="Architecture Principle applies to-has applicable System" desc="Used to establish the applicability of an Architecture Principle to a System." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/architecture_principle_applies_to-has_applicable_system.kmd#UUID4_0B9BD686-4AA3-4C66-B6A1-832E4EECE064"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Architecture Principle" xlink:href="../object_types/architecture_principle.kmd#CompType_Semantics_IT Architecture:Architecture_Principle_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="System" xlink:href="../object_types/system.kmd#CompType_Semantics_System:System_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable System" xlink:href="#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_System_UUID" xlink:actuate="user">
+   <string name="from">applies to</string>
+   <string name="to">has applicable</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable System" xlink:href="#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_System_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

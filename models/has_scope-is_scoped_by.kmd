@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ nextoid="1">
+
+ <type id="RelType_ITG:Standard_Candidate_has_scope_Internal_Organization_UUID" name="Standard_Candidate_has_scope_Internal_Organization" title="Standard Candidate has scope Internal Organization" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Standard Candidate" xlink:href="../objecttypes/standard_candidate.kmd#CompType_ITG:Standard_Candidate_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Organization" xlink:href="../objecttypes/internal_organization.kmd#CompType_ITG:Internal_Organization_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Standard Candidate has scope Internal Organization" xlink:href="#RelType_ITG:Standard_Candidate_has_scope_Internal_Organization_UUID" xlink:actuate="user">
+   <string name="from">has scope</string>
+   <string name="to">is scoped by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:has_scope-is_scoped_by_UUID" name="has_scope" title="has scope" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="has scope" xlink:href="#RelType_ITG:has_scope-is_scoped_by_UUID" xlink:actuate="user">
+   <string name="from">has scope</string>
+   <string name="to">is scoped by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+ </type>
+
+
+</metis>

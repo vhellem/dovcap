@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="SalesItemRequirement" title="Sales Item Requirement" usage="object" desc="A Sales Item Requirement is a special type of Requirement related directly to a Sales Item. &#10;This is something demanded or imposed as an obligation for a specific sales item">
+  <complex-type-link xlink:role="type" xlink:title="GeneralRequirement" xlink:href="general_requirement.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid1"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="priority">0</integer>
+   <string name="Color" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/smpm_sales_item_requirement.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property Color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/smpm_sales_item_requirement.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property Color))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/requirement.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>
+

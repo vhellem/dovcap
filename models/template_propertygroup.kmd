@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="templatepropertygroup" title="Template PropertyGroup" usage="abstract">
+  <!--
+  <complex-type-link xlink:role="type" xlink:title="object" xlink:href="metis:std#oid21"/>
+  -->
+  <property name="templateType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Template Type" desc="Template Type"/>
+  <property name="templateStyle" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Template Style"/>
+  <property name="templateName" xlink:role="url-type" xlink:href="metis:stdprimtypes#oid9" label="Template File Name" desc="The filename and folder location identifying the template"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Template PropertyGroup" xlink:href="#oid1">
+   <string name="templateType"></string>
+   <string name="templateStyle">Base</string>
+   <url name="templateName"></url>
+  </valueset>
+ </type>
+
+</metis>

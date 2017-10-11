@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="3.0.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ symbolpalettes="1"
+ nextoid="2">
+
+ <symbol-palette id="oid1" name="EEML Symbols" title="EEML Symbols">
+  <symbol-link xlink:role="symbol" xlink:href="informationobject.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="informationobjectrole.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="manualtool.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="manualtoolrole.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="materialobject.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="object.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="objectrole.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="organisation.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="orgunitrole.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="person.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="softwaretool.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="tool.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="toolrole.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="softwaretoolrole.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="materialobjectrole.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="personrole.svg#oid1" xlink:actuate="user"/>
+ </symbol-palette>
+
+
+</metis>

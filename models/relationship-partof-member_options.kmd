@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <integer-type id="oid1" name="Relationship_PartOf_Member_Options" title="Relationship-PartOf-Member Options" desc="Enumerates the three ways objects may be related:&#10;0: Relationship - I.e. that there is a Metis Relationship Instance connecting the two objects.&#10;1: Decomposition (Part/PartOf) - I.e. that this is an ownership structure where one owner can contain several parts, but where a part can have only one owner.&#10;2: Membership - Like decomposition, but there the part can be a member of several parents.">
+  <range name="Relationship mapping" min="0" max="0"/>
+  <range name="Decomposition mapping" min="1" max="1"/>
+ </integer-type>
+
+
+</metis>

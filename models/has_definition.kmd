@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="15"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="has_definition" name="has_definition" title="has_definition" desc="has_definition" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="CC_object" xlink:href="cc_object.kmd#CC_object" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="has_definition" xlink:href="#has_definition" xlink:actuate="user">
+   <string name="from">has definition</string>
+   <string name="to">definition of</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="has_definition" xlink:href="#has_definition" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+</metis>

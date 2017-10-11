@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002aspo013gt3ftsdirn" xlink:role="type" xlink:title="Definer" xlink:href="../languages/definer.kmd#IRTV:Definer" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Midpoint text black line" xlink:href="http://xml.metis.no/xml/symbols/relship_midpoint_text_black.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+   <replace tag="line" property="linewidth" macro="(expand &#34;3&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34; &#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.metis.no/xml/symbols/uniconnector_icon_1.png"/>
+ </typeview>
+
+
+</metis>

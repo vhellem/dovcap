@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="3">
+
+ <metamodel id="oid1" name="Parameters_Actions_And_Conditions" title="Parameters, Actions And Conditions">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="7">
+   <complex-type-link xlink:role="type" xlink:title="Post Action" xlink:href="../object_types/action.kmd#oid3" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pre Action" xlink:href="../object_types/action.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pre Condition" xlink:href="../object_types/condition.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Parameter" xlink:href="../object_types/parameter.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pre Processing Interface" xlink:href="../object_types/action_and_condition_holder.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Post Processing Interface" xlink:href="../object_types/action_and_condition_holder.kmd#oid3" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Per Object Pre Processing Interface" xlink:href="../object_types/action_and_condition_holder.kmd#oid6" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="1">
+   <complex-type-link xlink:role="type" xlink:title="precedes/follows" xlink:href="../relationship_types/precedes-follows.kmd#oid1"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

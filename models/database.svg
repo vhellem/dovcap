@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<svg
+ width="200" height="200">
+ <title>Symbol library: database.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Database</title>
+    <polygon points="844.91 0.00102916 844.91 280.136 110.919 280.136 
+     114.871 0 844.91 0.00102916 "
+     style=" stroke:#6e6eff; stroke-width:1; fill:#e1fcff; fill-opacity:100%"></polygon>
+    <rect x="185.822" y="42.0211" width="659.088" height="196.094"
+     style=" stroke:#4b4bff; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="236.385" y="61.0812"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text">text</text>
+      <rect x="236.385" y="46.0812" width="603.668" height="86.5275"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="241.199" y="135.63"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:8;"
+       class="TAG:query_string">query_string</text>
+      <rect x="241.199" y="128.63" width="600.942" height="101.185"
+       style=" stroke:#000000; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"></rect>
+    </g>
+    <g>
+      <polygon points="0 34.2399 0 246.277 1.83123 252.36 
+       9.15615 259.023 19.6203 264.815 37.4094 270.608 58.861 275.243 
+       84.7598 278.43 110.92 279.589 128.448 279.299 149.638 277.852 
+       166.904 276.402 190.971 270.608 207.714 265.395 221.84 257.862 
+       227.334 251.492 228.904 245.698 228.904 33.9502 0 34.2399 
+       0 34.2399 0 34.2399 0 34.2399 0 34.2399 
+       0 34.2399 0 34.2399 0 34.2399 0 34.2399 
+       0 34.2399 0 34.2399 0 34.2399 0 34.2399 "
+       style=" stroke:#000000; stroke-width:1; fill:#00a500; fill-opacity:100%"       class="TAG:DBBody"></polygon>
+      <ellipse  cx="114.452" cy="33.9887" rx="114.393" ry="33.9877"
+       style=" stroke:#000000; stroke-width:1; fill:#4bff4b; fill-opacity:100%"       class="TAG:DBLid"></ellipse>
+    </g>
+  </symbol>
+ </defs>
+</svg>

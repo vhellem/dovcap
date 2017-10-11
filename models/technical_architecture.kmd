@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:Technical_Architecture_UUID" name="Technical_Architecture" title="Technical Architecture" desc="An architectural perspective based on the representation of the technical elements comprising the architecture. Technical elements include hardware and software entities." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/technical_architecture.kmd#UUID4_68378299-4D4F-40E8-A51A-7A3053A8C0A4"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Technical Architecture" xlink:href="#CompType_Semantics:Technical_Architecture_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Technical Architecture" xlink:href="#CompType_Semantics:Technical_Architecture_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+
+</metis>

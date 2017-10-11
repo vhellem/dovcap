@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="IT_Service_Domain" title="IT Service Domain" desc="Use the IT Service domain to model IT Service products, either offered by your own organization or purchased by subcontractors or service vendors. IT services can be structured and categorized in Service Catalogs.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="8">
+   <complex-type-link xlink:role="type" xlink:title="IT Business Service Catalog" xlink:href="../../semantics/object_types/it_business_service_catalog.kmd#CompType_ITSM:IT_Business_Service_Catalog_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Business Service Offering" xlink:href="../../semantics/object_types/it_business_service_offering.kmd#CompType_ITSM:IT_Business_Service_Offering_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure as a Service" xlink:href="../../semantics/object_types/infrastructure_as_a_service.kmd#CompType_Semantics:Infrastructure_as_a_Service_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Platform as a Service" xlink:href="../../semantics/object_types/platform_as_a_service.kmd#CompType_Semantics:Platform_as_a_Service_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software as a Service" xlink:href="../../semantics/object_types/software_as_a_service.kmd#CompType_Semantics:Software_as_a_Service_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Service Catalog" xlink:href="../objecttypes/it_service_catalog.kmd#CompType_TRM:ServiceCatalog_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Service" xlink:href="../objecttypes/it_service.kmd#CompType_TRM:ServiceOffering_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Technology Service" xlink:href="../../semantics/object_types/technology_service.kmd#CompType_ITSM:Technology_Service_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="16">
+   <complex-type-link xlink:role="type" xlink:title="Deliverable consists of Deliverable" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_ConsistsOfHardwareProduct_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Business Service Offering consists of Technology Service" xlink:href="../../semantics/relationship_types/it_business_service_offering_consists_of_technology_service.kmd#RelType_ITBM:IT_Business_Service_Offering_consists_of_Technology_Service_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Catalog consists of Deliverable" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_catalog_consists_of_is_part_of_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable affects Deliverable" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_deliverable_affects_is_affected_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable corresponds to Deliverable" xlink:href="../relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_deliverable_corresponds_to_corresponds_to_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable implements Deliverable" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_deliverable_implements_is_implemented_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable needs Deliverable" xlink:href="../relationshiptypes/needs-is_needed_by.kmd#Reltype_deliverable_needs_is_needed_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

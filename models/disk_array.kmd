@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_TRM:DiskArray_UUID" name="disk_array" title="Disk Array" desc="A disk array is a disk storage system which contains multiple disk drives. It is differentiated from a disk enclosure, in that an array has cache memory and advanced functionality, like RAID, LUNS and virtualization." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Storage Device" xlink:href="storage_device.kmd#CompType_TRM:StorageDevice_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Disk Array" xlink:href="#CompType_TRM:DiskArray_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#CCCCCC</string>
+   <string name="troux_iconAlias">ca9c0665-2c90-398e-900c-8f75260556bd</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="49" xlink:role="type" xlink:title="Disk Array" xlink:href="#CompType_TRM:DiskArray_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <string name="productName"></string>
+   <string name="productVersion"></string>
+   <string name="productSerialNumber"></string>
+   <string name="vendorName"></string>
+   <string name="vendorSalesPhone"></string>
+   <string name="vendorSalesEmail"></string>
+   <string name="vendorSupportPhone"></string>
+   <string name="vendorSupportEmail"></string>
+   <date name="purchaseDate">00000000</date>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="color" class="volatile"></string>
+   <decimal name="memoryRamAmount">0</decimal>
+   <integer name="processorCpuCount">0</integer>
+   <decimal name="processorCpuClockSpeed">0</decimal>
+   <integer name="processorCpuClockSpeedUnit">-1</integer>
+   <integer name="diskCount">0</integer>
+   <decimal name="diskCapacity">0</decimal>
+   <integer name="diskCapacityUnit">-1</integer>
+   <date-time name="processorPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="processorPercentageUsed">0</integer>
+   <date-time name="diskCapacityFreeTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityFree">0</decimal>
+   <integer name="diskCapacityFreeUnit">-1</integer>
+   <date-time name="diskCapacityUsedTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityUsed">0</decimal>
+   <integer name="diskCapacityUsedUnit">-1</integer>
+   <date-time name="diskPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="diskPercentageUsed">0</integer>
+   <integer name="memoryRamUnit">-1</integer>
+   <string name="gridLocation"></string>
+   <decimal name="throughputMbsec">0</decimal>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Disk Array" xlink:href="#CompType_TRM:DiskArray_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="purchaseDate" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="recurringCost" visible-flag="true"/>
+   <propertyview name="recurringCostInterval" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="openIncidentCount" visible-flag="true"/>
+   <propertyview name="serviceManHours" visible-flag="true"/>
+   <propertyview name="productName" visible-flag="true"/>
+   <propertyview name="productVersion" visible-flag="true"/>
+   <propertyview name="productSerialNumber" visible-flag="true"/>
+   <propertyview name="vendorName" visible-flag="true"/>
+   <propertyview name="vendorSalesPhone" visible-flag="true"/>
+   <propertyview name="vendorSalesEmail" visible-flag="true"/>
+   <propertyview name="vendorSupportPhone" visible-flag="true"/>
+   <propertyview name="vendorSupportEmail" visible-flag="true"/>
+   <propertyview name="diskCount" visible-flag="true"/>
+   <propertyview name="diskCapacity" visible-flag="true"/>
+   <propertyview name="diskCapacityUnit" visible-flag="true"/>
+   <propertyview name="diskCapacityFreeTimestamp" visible-flag="true"/>
+   <propertyview name="diskCapacityFree" visible-flag="true"/>
+   <propertyview name="diskCapacityFreeUnit" visible-flag="true"/>
+   <propertyview name="diskCapacityUsedTimestamp" visible-flag="true"/>
+   <propertyview name="diskCapacityUsed" visible-flag="true"/>
+   <propertyview name="diskCapacityUsedUnit" visible-flag="true"/>
+   <propertyview name="diskPercentageUsedTimestamp" visible-flag="true"/>
+   <propertyview name="diskPercentageUsed" visible-flag="true"/>
+   <propertyview name="processorCpuCount" visible-flag="true"/>
+   <propertyview name="processorCpuClockSpeed" visible-flag="true"/>
+   <propertyview name="processorCpuClockSpeedUnit" visible-flag="true"/>
+   <propertyview name="processorPercentageUsedTimestamp" visible-flag="true"/>
+   <propertyview name="processorPercentageUsed" visible-flag="true"/>
+   <propertyview name="memoryRamAmount" visible-flag="true"/>
+   <propertyview name="memoryRamUnit" visible-flag="true"/>
+   <propertyview name="gridLocation" visible-flag="true"/>
+   <propertyview name="throughputMbsec" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/diskarray.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/diskarray.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/diskarray.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Disk Array" xlink:href="#CompType_TRM:DiskArray_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="purchaseDate" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="recurringCost" visible-flag="true"/>
+   <propertyview name="recurringCostInterval" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="openIncidentCount" visible-flag="true"/>
+   <propertyview name="serviceManHours" visible-flag="true"/>
+   <propertyview name="productName" visible-flag="true"/>
+   <propertyview name="productVersion" visible-flag="true"/>
+   <propertyview name="productSerialNumber" visible-flag="true"/>
+   <propertyview name="vendorName" visible-flag="true"/>
+   <propertyview name="vendorSalesPhone" visible-flag="true"/>
+   <propertyview name="vendorSalesEmail" visible-flag="true"/>
+   <propertyview name="vendorSupportPhone" visible-flag="true"/>
+   <propertyview name="vendorSupportEmail" visible-flag="true"/>
+   <propertyview name="diskCount" visible-flag="true"/>
+   <propertyview name="diskCapacity" visible-flag="true"/>
+   <propertyview name="diskCapacityUnit" visible-flag="true"/>
+   <propertyview name="diskCapacityFreeTimestamp" visible-flag="true"/>
+   <propertyview name="diskCapacityFree" visible-flag="true"/>
+   <propertyview name="diskCapacityFreeUnit" visible-flag="true"/>
+   <propertyview name="diskCapacityUsedTimestamp" visible-flag="true"/>
+   <propertyview name="diskCapacityUsed" visible-flag="true"/>
+   <propertyview name="diskCapacityUsedUnit" visible-flag="true"/>
+   <propertyview name="diskPercentageUsedTimestamp" visible-flag="true"/>
+   <propertyview name="diskPercentageUsed" visible-flag="true"/>
+   <propertyview name="processorCpuCount" visible-flag="true"/>
+   <propertyview name="processorCpuClockSpeed" visible-flag="true"/>
+   <propertyview name="processorCpuClockSpeedUnit" visible-flag="true"/>
+   <propertyview name="processorPercentageUsedTimestamp" visible-flag="true"/>
+   <propertyview name="processorPercentageUsed" visible-flag="true"/>
+   <propertyview name="memoryRamAmount" visible-flag="true"/>
+   <propertyview name="memoryRamUnit" visible-flag="true"/>
+   <propertyview name="gridLocation" visible-flag="true"/>
+   <propertyview name="throughputMbsec" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/diskarray.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/diskarray.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/diskarray.png"/>
+ </typeview>
+
+
+</metis>

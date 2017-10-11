@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_ERM:Risk_Status_UUID" name="Risk_Status" title="Risk Status">
+  <range name="Undefined" min="0" max="0"/>
+  <range name="Open" min="1" max="1"/>
+  <range name="Closed" min="2" max="2"/>
+ </integer-type>
+
+
+</metis>

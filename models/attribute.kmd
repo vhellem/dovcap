@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="7"
+ nextoid="9">
+
+ <object id="oid2">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Source Attribute Layout - Sort By Sequence Number</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">5</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">250</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" xlink:role="type" xlink:title="Database Field" xlink:href="../../dbif/object_types/database_field.kmd#oid1" xlink:actuate="user"/>
+   <string name="SortPropertyName">sequenceNumber</string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">2</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">0</integer>
+   <string name="StackedLevels">0,1,2,3,4,5,6,7,8,9,</string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">0</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">100</integer>
+  </valueset>
+ </object>
+
+ <object id="oid3">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Metis Type Attribute Layout - Sort By Sequence Number</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">5</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">250</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" xlink:role="type" xlink:title="Atomic Property" xlink:href="../object_types/object_property.kmd#oid1" xlink:actuate="user"/>
+   <string name="SortPropertyName">sequenceNumber</string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="HorizontalJustification">2</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">2</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">0</integer>
+   <string name="StackedLevels">0,1,2,3,4,5,6,</string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">0</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">100</integer>
+  </valueset>
+ </object>
+
+ <object id="oid4">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Metis Type Attribute Compact Layout</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">0</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">5</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">50</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" xlink:role="type" xlink:title="Atomic Property" xlink:href="../object_types/object_property.kmd#oid1" xlink:actuate="user"/>
+   <string name="SortPropertyName">sequenceNumber</string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">1</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">1</integer>
+   <string name="StackedLevels">2,</string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">1</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">100</integer>
+  </valueset>
+ </object>
+
+ <object id="oid5">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Source Attribute Compact Layout</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">0</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">5</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">50</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" xlink:role="type" xlink:title="Database Field" xlink:href="../../dbif/object_types/database_field.kmd#oid1" xlink:actuate="user"/>
+   <string name="SortPropertyName">sequenceNumber</string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">0</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">1</integer>
+   <string name="StackedLevels">2,</string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">1</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">0</integer>
+  </valueset>
+ </object>
+
+ <object id="oid6">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">XML Structure Layout - Sort By Name</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">5</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">250</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" xlink:role="type" xlink:title="Database Field" xlink:href="../../dbif/object_types/database_field.kmd#oid1" xlink:actuate="user"/>
+   <string name="SortPropertyName">name</string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">2</integer>
+   <integer name="DrawingDirection">2</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">0</integer>
+   <string name="StackedLevels">0,1,2,3,4,5,6,7,8,9,</string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">0</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">10</integer>
+  </valueset>
+ </object>
+
+ <object id="oid7">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Source Attribute Layout - Sort By Name</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">5</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">250</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" xlink:role="type" xlink:title="Database Field" xlink:href="../../dbif/object_types/database_field.kmd#oid1" xlink:actuate="user"/>
+   <string name="SortPropertyName">name</string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">2</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">0</integer>
+   <string name="StackedLevels">0,1,2,3,4,5,6,7,8,9,</string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">0</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">100</integer>
+  </valueset>
+ </object>
+
+ <object id="oid8">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Metis Type Attribute Layout - Sort By Property Name</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">5</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">250</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" xlink:role="type" xlink:title="Atomic Property" xlink:href="../object_types/object_property.kmd#oid1" xlink:actuate="user"/>
+   <string name="SortPropertyName">propertyName</string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="HorizontalJustification">2</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">2</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">0</integer>
+   <string name="StackedLevels">0,1,2,3,4,5,6,</string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">0</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">100</integer>
+  </valueset>
+ </object>
+
+
+</metis>

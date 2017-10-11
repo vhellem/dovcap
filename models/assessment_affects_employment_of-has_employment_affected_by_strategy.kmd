@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Assessment_affects_employment_of-has_employment_affected_by_Strategy_UUID" name="Assessment_affects_employment_of_has_employment_affected_by_Strategy" title="Assessment affects employment of-has employment affected by Strategy" desc="When used to associate an Assessment to a Strategy, indicates that the Assessment identifies a factor that will influence the use of the Strategy." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/assessment_affects_employment_of-has_employment_affected_by_strategy.kmd#UUID4_D94B9ACA-5433-4062-BE79-748E5947A31B"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Assessment" xlink:href="../object_types/assessment.kmd#CompType_Semantics:Assessment_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../../meaf/objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Assessment affects employment of-has employment affected by Strategy" xlink:href="#RelType_Semantics:Assessment_affects_employment_of-has_employment_affected_by_Strategy_UUID" xlink:actuate="user">
+   <string name="from">affects employment of</string>
+   <string name="to">has employment affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Assessment affects employment of-has employment affected by Strategy" xlink:href="#RelType_Semantics:Assessment_affects_employment_of-has_employment_affected_by_Strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

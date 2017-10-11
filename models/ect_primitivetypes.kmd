@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="30"
+ nextoid="31">
+
+ <integer-type id="oid1" name="state" title="State" desc="Meant to set the processing state of a task." default="16777215">
+  <range name="Planned" min="16777215" max="16777215"/>
+  <range name="Waiting" min="13421772" max="13421772"/>
+  <range name="Ready" min="16777062" max="16777062"/>
+  <range name="Ongoing" min="3394611" max="3394611"/>
+  <range name="Suspended" min="16711935" max="16711935"/>
+  <range name="Finished" min="10066329" max="10066329"/>
+  <range name="Terminated" min="13395507" max="13395507"/>
+ </integer-type>
+
+ <integer-type id="oid2" name="priority" title="Priority" desc="The priority with values from 1 - 9 is used by the VitÃ© system as an attribute to their Activity (our Task)." default="3">
+  <range name="1" min="1" max="1"/>
+  <range name="2" min="2" max="2"/>
+  <range name="3" min="3" max="3"/>
+  <range name="4" min="4" max="4"/>
+  <range name="5" min="5" max="5"/>
+  <range name="6" min="6" max="6"/>
+  <range name="7" min="7" max="7"/>
+  <range name="8" min="8" max="8"/>
+  <range name="9" min="9" max="9"/>
+ </integer-type>
+
+ <string-type id="oid3" name="logicalrelation" title="Logical Relation" desc="Determines the logical relation between multiple input or output flows." default=" ">
+  <string class="shared"> </string>
+  <string class="shared">and</string>
+  <string class="shared">xor</string>
+ </string-type>
+
+ <integer-type id="oid4" name="priority2" title="Priority" desc="The priority with values from 1 - 9 is used by the VitÃ© system as an attribute to their Activity (our Task)." default="3">
+  <range name="1" min="1" max="1"/>
+  <range name="2" min="2" max="2"/>
+  <range name="3" min="3" max="3"/>
+  <range name="4" min="4" max="4"/>
+  <range name="5" min="5" max="5"/>
+  <range name="6" min="6" max="6"/>
+  <range name="7" min="7" max="7"/>
+  <range name="8" min="8" max="8"/>
+  <range name="9" min="9" max="9"/>
+  <range name="10" min="10" max="10"/>
+ </integer-type>
+
+ <string-type id="oid5" name="infostatus" title="Information Status" default="Draft">
+  <string class="shared">Draft</string>
+  <string class="shared">Completed</string>
+  <string class="shared">Approved</string>
+ </string-type>
+
+ <integer-type id="oid6" name="strength" title="Strength" default="1">
+  <range name="values" min="1" max="..."/>
+ </integer-type>
+
+ <type id="oid7" name="simvision_task_properties" title="SimVision Task Properties" desc="SimVision Task and properties." usage="abstract">
+  <property name="effort" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Effort"/>
+  <property name="effort-unit" xlink:role="string-type" xlink:title="Time Units" xlink:href="#oid11" label="Effort Unit"/>
+  <property name="effort-type" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Effort Type"/>
+  <property name="priority" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Priority"/>
+  <property name="fixed-cost" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Fixed Cost"/>
+  <property name="requirement-complexity" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Requirement Complexity"/>
+  <property name="solution-complexity" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Solution Complexity"/>
+  <property name="uncertainty" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Uncertainty"/>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="SimVision Task Properties" xlink:href="#oid7">
+   <float name="effort">0</float>
+   <string name="effort-unit">Days</string>
+   <string name="effort-type"></string>
+   <string name="priority">medium</string>
+   <float name="fixed-cost">0</float>
+   <string name="requirement-complexity">medium</string>
+   <string name="solution-complexity">medium</string>
+   <string name="uncertainty">medium</string>
+  </valueset>
+ </type>
+
+ <type id="oid8" name="simvision_meeting_properties" title="SimVision Meeting Properties" desc="SimVision Meeting properties." usage="abstract">
+  <property name="priority" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Priority"/>
+  <property name="calendar-start-lag" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Calendar Start Lag"/>
+  <property name="calendar-start-lag-unit" xlink:role="string-type" xlink:title="Time Units" xlink:href="#oid11" label="Calendar Start Lag Unit"/>
+  <property name="calendar-end-lag" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Calendar End Lag"/>
+  <property name="calendar-end-lag-unit" xlink:role="string-type" xlink:title="Time Units" xlink:href="#oid11" label="Calendar End Lag Unit"/>
+  <property name="first-lag" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="First Lag"/>
+  <property name="first-lag-unit" xlink:role="string-type" xlink:title="Time Units" xlink:href="#oid11" label="First Lag Unit"/>
+  <property name="last-lag" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Last Lag"/>
+  <property name="last-lag-unit" xlink:role="string-type" xlink:title="Time Units" xlink:href="#oid11" label="Last Lag Unit"/>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="SimVision Meeting Properties" xlink:href="#oid8">
+   <string name="priority">medium</string>
+   <float name="calendar-start-lag">0</float>
+   <string name="calendar-start-lag-unit">Days</string>
+   <float name="calendar-end-lag">0</float>
+   <string name="calendar-end-lag-unit">Days</string>
+   <float name="first-lag">0</float>
+   <string name="first-lag-unit">Days</string>
+   <float name="last-lag">0</float>
+   <string name="last-lag-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid9" name="simvision_personrole_properties" title="SimVision Personrole Properties" desc="SimVision personrole properties." usage="abstract">
+  <property name="role" xlink:role="string-type" xlink:title="Simvision Role" xlink:href="#oid20" label="Role"/>
+  <property name="app-experience" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Application Experience"/>
+  <property name="fte" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="FTE"/>
+  <property name="salary" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Salary"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="SimVision Personrole Properties" xlink:href="#oid9">
+   <string name="role">ST</string>
+   <string name="app-experience">medium</string>
+   <float name="fte">0</float>
+   <float name="salary">0</float>
+  </valueset>
+ </type>
+
+ <string-type id="oid10" name="hml" title="H, M or L" default="medium">
+  <string class="shared">high</string>
+  <string class="shared">medium</string>
+  <string class="shared">low</string>
+ </string-type>
+
+ <string-type id="oid11" name="timeunits" title="Time Units" default="Days">
+  <string class="shared">Months</string>
+  <string class="shared">Weeks</string>
+  <string class="shared">Days</string>
+  <string class="shared">Hours</string>
+  <string class="shared">Minutes</string>
+ </string-type>
+
+ <string-type id="oid12" name="roletype" title="Role Type" default="Participant">
+  <string class="shared">Responsible</string>
+  <string class="shared">Participant</string>
+  <string class="shared">Customer</string>
+ </string-type>
+
+ <type id="oid13" name="simvision_organization_properties" title="SimVision Organization Properties" desc="SimVision organization properties." usage="abstract">
+  <property name="team-experience" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Team Experience"/>
+  <property name="centralization" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Centralization"/>
+  <property name="formalization" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Formalization"/>
+  <property name="matrix-strength" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Matrix Strength"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="SimVision Organization Properties" xlink:href="#oid13">
+   <string name="team-experience">medium</string>
+   <string name="centralization">medium</string>
+   <string name="formalization">medium</string>
+   <string name="matrix-strength">medium</string>
+  </valueset>
+ </type>
+
+ <type id="oid14" name="simvision_milestone_properties" title="SimVision Milestone Properties" desc="SimVision milestone properties." usage="abstract">
+  <property name="target-lag" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Target Lag"/>
+  <property name="target-lag-unit" xlink:role="string-type" xlink:title="Time Units" xlink:href="#oid11" label="Target Lag Unit"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="SimVision Milestone Properties" xlink:href="#oid14">
+   <float name="target-lag">0</float>
+   <string name="target-lag-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid15" name="simvision_hasskillrating_properties" title="SimVision HasSkillRating Properties" desc="SimVision HasSkillRating properties." usage="abstract">
+  <property name="rating" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Rating"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="SimVision HasSkillRating Properties" xlink:href="#oid15">
+   <string name="rating">medium</string>
+  </valueset>
+ </type>
+
+ <type id="oid16" name="simvision_rework_properties" title="SimVision Rework Properties" desc="SimVision Rework properties." usage="abstract">
+  <property name="strength" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Strength"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="SimVision Rework Properties" xlink:href="#oid16">
+   <float name="strength">0</float>
+  </valueset>
+ </type>
+
+ <type id="oid17" name="simvision_meetingassignment_properties" title="SimVision MeetingAssignment Properties" desc="SimVision MeetingAssignment properties." usage="abstract">
+  <property name="allocation" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Allocation"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="SimVision MeetingAssignment Properties" xlink:href="#oid17">
+   <float name="allocation">0</float>
+  </valueset>
+ </type>
+
+ <type id="oid18" name="simvision_flow_properties" title="SimVision Flow Properties" desc="SimVision Flow properties." usage="abstract">
+  <property name="precedence" xlink:role="string-type" xlink:title="string" xlink:href="#oid29" label="Precedence"/>
+  <property name="time-lag" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Lag"/>
+  <property name="time-lag-unit" xlink:role="string-type" xlink:title="Time Units" xlink:href="#oid11" label="Lag Unit"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="SimVision Flow Properties" xlink:href="#oid18">
+   <string name="precedence">finish-start</string>
+   <float name="time-lag">0</float>
+   <string name="time-lag-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid19" name="simvision_isfilledby_properties" title="SimVision IsFilledBy Properties" desc="SimVision IsFilledBy properties." usage="abstract">
+  <property name="allocation" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Allocation"/>
+  <property name="allocation-unit" xlink:role="string-type" xlink:title="Allocation Units" xlink:href="#oid28" label="Allocation Unit"/>
+  <property name="team-lead" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Team Lead"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="SimVision IsFilledBy Properties" xlink:href="#oid19">
+   <float name="allocation">0</float>
+   <string name="allocation-unit">percent</string>
+   <integer name="team-lead">0</integer>
+  </valueset>
+ </type>
+
+ <string-type id="oid20" name="simvision_person_role" title="Simvision Person Role" default="ST">
+  <string class="shared">SL</string>
+  <string class="shared">ST</string>
+  <string class="shared">PM</string>
+ </string-type>
+
+ <string-type id="oid21" name="simvision_role" title="Simvision Role" default="dh">
+  <string class="shared">dm</string>
+  <string class="shared">dh</string>
+ </string-type>
+
+ <type id="oid22" name="simvision_person_properties" title="SimVision Person Properties" desc="SimVision person properties." usage="abstract">
+  <property name="role" xlink:role="string-type" xlink:title="Simvision Person Role" xlink:href="#oid21" label="Role"/>
+  <property name="app-experience" xlink:role="string-type" xlink:title="H, M or L" xlink:href="#oid10" label="Application Experience"/>
+  <property name="fte" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="FTE"/>
+  <property name="salary" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Salary"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="SimVision Person Properties" xlink:href="#oid22">
+   <string name="role">dh</string>
+   <string name="app-experience">medium</string>
+   <float name="fte">0</float>
+   <float name="salary">0</float>
+  </valueset>
+ </type>
+
+ <float-type id="oid23" name="probability" title="Probability">
+  <range name="values"  min="0" max="1"/>
+ </float-type>
+
+ <float-type id="oid24" name="positive number" title="Positive number">
+  <range name="values"  min="0" max="..."/>
+ </float-type>
+
+ <integer-type id="oid25" name="modality" title="Modality" default="0">
+  <range name=" " min="0" max="0"/>
+  <range name="Necessitate" min="1" max="1"/>
+  <range name="Obligate" min="2" max="2"/>
+  <range name="Recommend" min="3" max="3"/>
+  <range name="Permit" min="4" max="4"/>
+  <range name="Discourage" min="5" max="5"/>
+  <range name="Forbid" min="6" max="6"/>
+  <range name="Contradict" min="7" max="7"/>
+ </integer-type>
+
+ <string-type id="oid26" name="milestone_type" default="Milestone">
+  <string class="shared">Start</string>
+  <string class="shared">Finish</string>
+  <string class="shared">Milestone</string>
+ </string-type>
+
+ <string-type id="oid27" name="access_level" default="full">
+  <string class="shared">none</string>
+  <string class="shared">read</string>
+  <string class="shared">write</string>
+  <string class="shared">readandwrite</string>
+  <string class="shared">full</string>
+ </string-type>
+
+ <string-type id="oid28" name="allocationunits" title="Allocation Units" default="percent">
+  <string class="shared">percent</string>
+  <string class="shared">FTEs</string>
+ </string-type>
+
+ <string-type id="oid29" name="precedencevalues" title="Precedence Values" default="finish-start">
+  <string class="shared">finish-start</string>
+  <string class="shared">start-start</string>
+ </string-type>
+
+ <string-type id="oid30" name="lagtype" title="Lag Type" default="start">
+  <string class="shared">start</string>
+  <string class="shared">finish</string>
+ </string-type>
+
+ <type id="oid31" name="simvision_targetlagreference_properties" title="SimVision Target Lag Reference Properties" usage="abstract">
+  <property name="lag-type" xlink:role="string-type" xlink:title="access_level" xlink:href="#oid30" label="Lag Type"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="SimVision MeetingAssignment Properties" xlink:href="#oid31">
+   <string name="lag-type">start</string>
+  </valueset>
+ </type>
+
+
+</metis>

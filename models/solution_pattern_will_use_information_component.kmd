@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Solution_Pattern_will_use_Information_Component_UUID" name="Solution_Pattern_will_use_Information_Component" title="Solution Pattern will use Information Component" desc="Indicates that a Solution Pattern will use or affect an object in an information model after the Solution Pattern is deployed. Properties of the relationship allow you to specify whether the information will be created (C), read (R), updated (U), or deleted (D), the CRUD property." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="../../meaf/relationshiptypes/uses-is_used_by_crud.kmd#Reltype_uses-is_used_by_crud_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Solution Pattern" xlink:href="../object_types/solution_pattern.kmd#CompType_Semantics:Solution_Pattern_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Component" xlink:href="../../meaf/abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Solution Pattern will use Information Component" xlink:href="#RelType_Semantics:Solution_Pattern_will_use_Information_Component_UUID" xlink:actuate="user">
+   <string name="from">will use</string>
+   <string name="to">will be used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Solution Pattern will use Information Component" xlink:href="#RelType_Semantics:Solution_Pattern_will_use_Information_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="creates">0</integer>
+   <integer name="reads">0</integer>
+   <integer name="updates">0</integer>
+   <integer name="deletes">0</integer>
+   <string name="crud" class="volatile"></string>
+  </valueset>
+ </type>
+
+
+</metis>

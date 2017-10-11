@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="3"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="allocationColor" title="Allocation Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="Allocation Color Mapping" xlink:href="../primitivetypes/allocation_color_mapping_primitive_types.kmd#Primtype_allocation_color_mapping_UUID"/>
+   <string name="Property">percentage</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="allocationToText" title="Allocation To Text" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property to) &#34; &#34; (property percentage) &#34;%&#34;)</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="allocationFromText" title="Allocation From Text" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property from) &#34; &#34; (property percentage) &#34;%&#34; )</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="4">
+
+ <type id="oid1" name="has_stereotype_is_stereotype_for" title="has stereotype/is stereotype for" desc="Allows you to specify that an IT Entity or Business/Logical Process has a stereotype.&#10;A stereotype is a typical instance which is used as a starting point for other instances.&#10;&#10;For example:&#10;&#10;1. A standardized PC configuration can be defined for many actual PC installations . This relationship can then connect a &#34;stereotype&#34; PC instance to the multiple other PC instances using that configuration.&#10;&#10;2. A general Business Process may be used with slightly different variations in many other Business Processes, e.g. a standard process for handling approvals. This relationship can then connect the &#34;stereotype&#34; approval Business Process to the multiple slightly different approval Business Processes across the organization.&#10;&#10;This relationship can only connect two objects of the exact same type, and an object cannot have more than one stereotype." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule exactly="true">
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Generic Process" xlink:href="../object_types/process.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Process" xlink:href="../object_types/process.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule exactly="true">
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="IT Entity" xlink:href="../object_types/it_entity.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Entity" xlink:href="../object_types/it_entity.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="has stereotype/is stereotype for" xlink:href="#oid1">
+   <string name="from">has stereotype</string>
+   <string name="to">is stereotype for</string>
+  </valueset>
+ </type>
+
+
+</metis>

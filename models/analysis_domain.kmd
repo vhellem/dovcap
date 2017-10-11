@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Analysis_Domain" title="Analysis Domain" desc="Use the Analysis domain to analyse environmental factors and trends, different business issues and factors, and their causes, risks and implications. The analysis method used will lead to Findings, Recommendations or Actions.&#10;This domain can be used for general problem solving as an independent domain, but is normally connected to strategy and change planning; and initiative and project execution.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="12">
+   <complex-type-link xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Analysis" xlink:href="../objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Cause" xlink:href="../objecttypes/cause.kmd#CompType_MEAF:Cause_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Finding" xlink:href="../objecttypes/finding.kmd#CompType_MEAF:Finding_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint" xlink:href="../objecttypes/constraint.kmd#CompType_MEAF:Constraint_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="External Factor" xlink:href="../objecttypes/external_factor.kmd#CompType_MEAF:ExternalFactor_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Issue" xlink:href="../objecttypes/issue.kmd#CompType_TRM:Issue_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Implication" xlink:href="../objecttypes/implication.kmd#CompType_MEAF:Implication_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Risk" xlink:href="../objecttypes/risk.kmd#CompType_MEAF:Risk_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Recommendation" xlink:href="../objecttypes/recommendation.kmd#CompType_MEAF:Recommendation_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Trend" xlink:href="../objecttypes/trend.kmd#CompType_MEAF:Trend_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="26">
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Action leads to Constraint" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_action_leads_to_follows_from_constraint_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Action leads to Factor" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_action_leads_to_follows_from_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Action mitigates Factor" xlink:href="../relationshiptypes/mitigates-is_mitigated_by.kmd#Reltype_action_mitigates_is_mitigated_by_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Action needs Action" xlink:href="../relationshiptypes/needs-is_needed_by.kmd#Reltype_action_needs_is_needed_by_action_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Analysis analyzes Factor" xlink:href="../relationshiptypes/analyzes-is_analyzed_by.kmd#Reltype_analysis_analyzes_is_analyzed_by_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Analysis leads to Action" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_analysis_leads_to_follows_from_action_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Analysis leads to Finding" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_analysis_leads_to_follows_from_finding_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Cause applies to Risk" xlink:href="../relationshiptypes/applies_to-has.kmd#Reltype_cause_applies_to_has_risk_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint constrains Constraint" xlink:href="../relationshiptypes/constrains-is_constrained_by.kmd#Reltype_constraint_constrains_is_constrained_by_constraint_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint constrains Factor" xlink:href="../relationshiptypes/constrains-is_constrained_by.kmd#Reltype_constraint_constrains_is_constrained_by_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Factor affects Factor" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_factor_affects_is_affected_by_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Factor applies to Factor" xlink:href="../relationshiptypes/applies_to-has.kmd#Reltype_factor_applies_to_has_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Factor leads to Factor" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_factor_leads_to_follows_from_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Finding leads to Finding" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_finding_leads_to_follows_from_finding_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Recommendation affects Analysis" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_recommendation_affects_is_affected_by_analysis_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Risk affects Action" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_risk_affects_is_affected_by_action_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Trend leads to Factor" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_trend_leads_to_follows_from_factor_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

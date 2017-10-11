@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ symbolpalettes="1"
+ nextoid="1">
+
+ <symbol-palette id="oid0" name="GEM" title="GEM Symbols">
+  <symbol-link xlink:role="symbol" xlink:href="gem_action.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_catalog_part.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_cause.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_communication.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_competence.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_competence_profile.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_competitor.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_concept.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_condition.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_directory.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_document.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_document_class.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_doc_off_line.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_doc_on_line.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_female.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_figure.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_formal_competence.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_function.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_goal.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_hats.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_info_elem.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_info_group.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_info_type.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_location.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_machine.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_male.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_message.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_module.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_network.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_opportunity.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_org_unit.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_paragraph.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_partner.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_problem.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_product_item.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_property.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_requirement.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_report_gen.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_solution.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_standard.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_storage.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_substance.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_substance_class.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_supplier.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_system.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_tool.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_tophat.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_training_prog.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_ipm_process_closed.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_ipm_process_open.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_logical_process.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_logical_process.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_input.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_control.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_output.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_mechanism.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_internal_flow.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_ipm_input.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_ipm_ctrl_mech.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_ipm_output.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_portal.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_label.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_alternative.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_process.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_process.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_info_flow.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_physical_flow.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_event.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_process_role.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_activity.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gem_role.svg#oid0" xlink:actuate="user"/>
+ </symbol-palette>
+
+</metis>

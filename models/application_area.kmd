@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="4">
+
+ <type id="oid1" name="ApplicationArea" title="Application Area" desc="An Application Area represents a classfication of a number of Logical Applications." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="name" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:title="description" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="ApplicationArea" xlink:href="#oid1"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="ApplicationArea" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="ApplicationArea" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/appl_area.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/appl_area.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/application_area.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>
+

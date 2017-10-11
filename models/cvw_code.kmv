@@ -1,0 +1,1453 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="27"
+ instanceviews="51"
+ nextoid="1">
+
+ <model id="_002asqr01cpfib7fsd3o" name="CVW_Code" title="CVW_Code" submodel-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="9" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">CVW_Code</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070925 033730167</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="DoLoadMenuNode" xlink:href="#_002asr001bmf77c1in2k"/>
+  <part-link xlink:role="object" xlink:title="DoLoadMenuTree" xlink:href="#_002asr001bo4ttopa5t9"/>
+  <part-link xlink:role="object" xlink:title="DoMenuAction" xlink:href="#_002asr001bo51v7oumgo"/>
+  <part-link xlink:role="object" xlink:title="DoShowRelationshipView" xlink:href="#_002asr001bo55nd4eh5f"/>
+  <part-link xlink:role="object" xlink:title="DoLoadDuplicateWin" xlink:href="#_002asr001bo58rc5lpkj"/>
+  <part-link xlink:role="object" xlink:title="DoCloseWin" xlink:href="#_002asr001bo5bvackurh"/>
+  <part-link xlink:role="object" xlink:title="DoMaximizeWin" xlink:href="#_002asr001bo5f36p92i7"/>
+  <part-link xlink:role="object" xlink:title="DoLoadWindow" xlink:href="#_002asr001bo5i8psajst"/>
+  <part-link xlink:role="object" xlink:title="DoCleanWindow" xlink:href="#_002asr001bo5l2m62tj9"/>
+  <part-link xlink:role="object" xlink:title="setVerticalLayout" xlink:href="#_002asr001bo5o6ektv9l"/>
+  <part-link xlink:role="object" xlink:title="setHorizontalLayout" xlink:href="#_002asr001bo5ra4u5k9o"/>
+  <part-link xlink:role="object" xlink:title="setMatrixLayout" xlink:href="#_002asr001bo62g073ds8"/>
+  <part-link xlink:role="object" xlink:title="DoZoomWin" xlink:href="#_002asr001bo67h2cr74e"/>
+  <part-link xlink:role="object" xlink:title="DoSearch" xlink:href="#_002asr001bo6bjhkvp31"/>
+  <part-link xlink:role="object" xlink:title="ShowProperties" xlink:href="#_002asr001bo6fba9fqll"/>
+  <part-link xlink:role="object" xlink:title="Clear Workspace" xlink:href="#_002asr001bo6jdtu05ru"/>
+  <part-link xlink:role="object" xlink:title="Toggle Configuration flag" xlink:href="#_002asr001bo6nfs4olbr"/>
+  <part-link xlink:role="object" xlink:title="ConfigureWorkspaceContent" xlink:href="#_002asr001bo6s5ilaoi3"/>
+  <part-link xlink:role="object" xlink:title="To be implemented" xlink:href="#_002asr001bo70sjfoqs9"/>
+  <part-link xlink:role="object" xlink:title="Execute service" xlink:href="#_002asr001bo76gi1pitg"/>
+  <part-link xlink:role="object" xlink:title="New instance" xlink:href="#_002asr001bo7as1t41vg"/>
+  <part-link xlink:role="object" xlink:title="SearchCCinstances" xlink:href="#_002asr001bo7fi58314h"/>
+  <part-link xlink:role="object" xlink:title="ConfigureVariant" xlink:href="#_002asr001bo7k9rs5i05"/>
+  <part-link xlink:role="object" xlink:title="OpenConfiguredStructure" xlink:href="#_002asr001bo7ovnuuavk"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfib7fsd3o" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfib7fsd3o" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="_002asqr01cpfojf2c1or">
+  <valueset size="9" xlink:role="type" xlink:title="Connector" xlink:href="metis:stdtypes#oid125" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name" class="volatile">CVW_Code</string>
+   <string name="description" class="volatile"></string>
+   <pointer name="model" xlink:role="model" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfib7fsd3o" xlink:actuate="user"/>
+   <collection name="metamodels" structure="list" size="3" xlink:role="pointer-type" xlink:title="Metamodel Pointer" xlink:href="metis:std#oid55" xlink:actuate="user">
+    <pointer xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+   </collection>
+   <integer name="viewState">0</integer>
+   <pointer name="type" class="volatile" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <integer name="lazyLoad">1</integer>
+   <integer name="bundleWeight">0</integer>
+  </valueset>
+  <part-link xlink:role="model" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfib7fsd3o" xlink:actuate="user"/>
+ </object>
+
+ <model id="_002asqr01cpfojmvvu5a" title="CVW_Code" submodel-ok="false" standalone-flag="true" reusable-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfojf2c1or"/>
+ </model>
+
+ <object id="_002asr001bmf77c1in2k">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoLoadMenuNode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071113 092854915</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+dim cvwMenu
+
+set cvwMenu = new CVW_MenuTree
+&#39;stop
+call cvwMenu.build(&#34;MenuNode&#34;, 0.04, 1.3)
+
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo4ttopa5t9">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoLoadMenuTree</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071113 092725196</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+dim model, modelView, objView
+dim cvwMenu, cvwStatusBar 
+
+set model = metis.currentModel
+set modelView = model.currentModelView
+set objView = modelView.currentInstanceView
+&#39;stop
+set cvwMenu = new CVW_MenuTree
+call cvwMenu.build(&#34;MenuTree&#34;, 1.3, 1.0)
+
+set cvwStatusBar = new CVW_StatusBar
+cvwStatusBar.topMenuStatus(objView)
+cvwStatusBar.populateStatusBars(objView)
+
+
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo51v7oumgo">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoMenuAction</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124440483</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+dim cvwAction, cvwWorkspace
+dim ekaInst
+dim workspaceWindow
+dim layoutStrategy
+dim inst, value
+dim model
+dim applyFilter
+
+&#39;stop
+
+set model = metis.currentModel
+set ekaInst = new EKA_Instance
+set inst = ekaInst.findObject(model, &#34;WorkspaceContext&#34;)
+
+applyFilter = false
+if isEnabled(inst) then
+    value = ekaInst.getPropertyValue(inst, &#34;ApplyConfiguration&#34;)
+    if value = &#34;1&#34; then
+        applyFilter = true
+    end if
+end if
+&#39;stop
+set cvwAction = new CVW_MenuAction
+call cvwAction.build
+cvwAction.applyFilter = applyFilter
+set cvwWorkspace = cvwAction.execute
+
+set ekaInst = Nothing
+set cvwAction = Nothing</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo55nd4eh5f">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoShowRelationshipView</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124440583</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">set model = metis.currentModel
+set modelView = model.currentModelView
+set inst = model.currentInstance
+set instView = modelView.currentInstanceView
+
+if inst.name = &#34;Show Relationships&#34; then
+    set cvwWorkspace = new CVW_Workspace
+    mode = &#34;ShowInter&#34;
+    call cvwWorkspace.showRelationships(mode)
+    inst.name = &#34;Hide Relationships&#34;
+    instView.close
+else
+    set cvwWorkspace = new CVW_Workspace
+    mode = &#34;HideInter&#34;
+    call cvwWorkspace.showRelationships(mode)
+    inst.name = &#34;Show Relationships&#34;
+    instView.open
+end if
+set cvwWorkspace  = Nothing
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo58rc5lpkj">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoLoadDuplicateWin</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124440683</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">&#39;option explicit
+&#39;[0] ----------------------------------------------------------
+dim model, modelView, inst, instView
+dim  instParentView, topNode, cTopNode
+&#39;[1] ----------------------------------------------------------
+set model = metis.currentModel
+set modelView = model.currentModelView
+set instView = modelView.currentInstanceView
+
+&#39;[4] --------- MAIN -------------------------------------------------------------------
+ set instParentView = instView.parent.parent
+ modelView.currentInstanceView = instParentView   
+Call metis.runCommand(&#34;copy&#34;)
+modelView.currentInstanceView = instParentView.parent  
+Call metis.runCommand(&#34;paste-structure&#34;)
+modelView.clearSelection
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo5bvackurh">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoCloseWin</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124440773</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">&#39;option explicit
+&#39;[0] ----------------------------------------------------------
+dim model, modelView, instView
+dim  instParentView
+
+&#39;[1] ----------------------------------------------------------
+set model = metis.currentModel
+set modelView = model.currentModelView
+set instView = modelView.currentInstanceView
+
+&#39;[4] --------- MAIN -------------------------------------------------------------------
+  set instParentView = instView.parent.parent
+  call model.deleteObject(instParentView.instance)
+  &#39;call modelView.deleteObjectView(instParentView) 
+
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo5f36p92i7">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoMaximizeWin</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124440874</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">&#39;option explicit
+&#39;[0] ----------------------------------------------------------
+dim model, modelView, instView
+dim  instParentView
+
+&#39;[1] ----------------------------------------------------------
+set model = metis.currentModel
+set modelView = model.currentModelView
+set instView = modelView.currentInstanceView
+
+&#39;[4] --------- MAIN -------------------------------------------------------------------
+  set instParentView = instView.parent.parent
+   call removeWinList(instParentView)
+
+&#39;----------------------------------------------------------------------------------------------------------------------
+     Sub removeWinList(instWinView) 
+        &#39;[a]-------------------------------
+        Dim  winView
+        &#39;[b]-------------------------------  
+         For each winView in instWinView.parent.children         
+                   if winView.uri &#60;&#62; instWinView.uri THEN
+                      &#39;call modelView.deleteObjectView(winView) 
+                      call model.deleteObject(winView.instance) 
+                   end if
+            next
+    
+      End Sub
+
+
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo5i8psajst">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoLoadWindow</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124440964</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">&#39;option explicit
+&#39;[0] ----------------------------------------------------------
+dim model, modelView, inst, instView
+dim cvwWin, workarea
+dim winType, buttonType 
+
+dim cvwStatusBar
+dim  instParentView, winName
+dim argObj, argVal, InputContainerType, InputContainerName 
+
+dim workSpaceLayout, winLayout, winSymbol, titleBarLayout,titleBarSymbol, workAreaLayout, workAreaSymbol    
+dim workSpaceLayoutStrategyType, winLayoutStrategyType, titleBarLayoutStrategyType, workAreaLayoutStrategyType
+&#39;[1] ----------------------------------------------------------
+set model = metis.currentModel
+set inst = model.currentInstance
+set modelView = model.currentModelView
+set instView = modelView.currentInstanceView
+
+&#39;[2] ------INPUT ARGUMENTS----------------------------------------------------
+
+set argObj          = new CVW_ArgumentValue
+
+&#39; - generic CVWWin  input settings --------------------------------
+
+set argVal       = argObj.findArgument(inst, &#34;WorkspaceLayout&#34;)
+workSpaceLayout      = argVal.getNamedStringValue(&#34;value&#34;)
+
+set argVal       = argObj.findArgument(inst, &#34;WindowLayout&#34;)
+winLayout      = argVal.getNamedStringValue(&#34;value&#34;)
+
+set argVal       = argObj.findArgument(inst, &#34;WindowSymbol&#34;)
+winSymbol      = argVal.getNamedStringValue(&#34;value&#34;)
+
+set argVal            = argObj.findArgument(inst, &#34;TitleBarLayout&#34;)
+titleBarLayout      = argVal.getNamedStringValue(&#34;value&#34;)
+
+set argVal            = argObj.findArgument(inst, &#34;TitleBarSymbol&#34;)
+titleBarSymbol      = argVal.getNamedStringValue(&#34;value&#34;)
+
+set argVal            = argObj.findArgument(inst, &#34;WorkareaLayout&#34;)
+workAreaLayout      = argVal.getNamedStringValue(&#34;value&#34;)
+
+set argVal            = argObj.findArgument(inst, &#34;WorkareaSymbol&#34;)
+workAreaSymbol      = argVal.getNamedStringValue(&#34;value&#34;)
+
+&#39;[3] ----------------------------------------------------------
+set winType      = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/view_objects.kmd#UiType_CVW:Workarea_UUID&#34;)
+set buttonType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID&#34;)
+set cvwWin      = new CVW_Window
+
+&#39;[4] --------- MAIN -------------------------------------------------------------------
+&#39;[4a] ---------  Get Menu View  ------------------------------------------------
+ set instParentView = cvwWin.getInstView(winType ,&#34;name&#34;,&#34;CVW_Workspace&#34;)
+ winName =  inst.title
+
+&#39;[4b] ---------  Remove existing Menu ------------------------------------------------
+  &#39;if cvwWin.find(winName, winType, instParentView ) then
+&#39;stop 
+   &#39;cvwWin.clean
+    &#39;cvwWin.remove
+  &#39;end if
+
+&#39;[4c] ---------  Create and Populate Menu ------------------------------------------------
+  if cvwWin.create(winName, winType, instParentView ) then
+        call cvwWin.addSubWindow(&#34;WinTitleBar&#34;, inst.title, winType)
+        call populateToolbar(cvwWin.objectView.children(1), &#34;CVW_WinToolbar&#34; ,buttonType) 
+        
+       call cvwWin.addSubWindow(&#34;WorkArea&#34;, &#34;WorkArea_[&#34;&#38; inst.title &#38;&#34;]&#34;, winType)
+ 
+       &#39;[4c] --------- Layout ------------------------------------------------
+       set  workSpaceLayoutStrategyType          = metis.findLayoutStrategy(workSpaceLayout)        
+       with  instParentView
+                            .layoutStrategy  =  workSpaceLayoutStrategyType                           
+        end with
+
+        set  winLayoutStrategyType          = metis.findLayoutStrategy(winLayout)
+        with cvwWin.objectView
+                            .layoutStrategy  =  winLayoutStrategyType                            
+                            .openSymbol    = winSymbol 
+                            .closedSymbol  = winSymbol
+                            .absTextScale = 1
+        end with
+
+        set titleBarLayoutStrategyType      = metis.findLayoutStrategy(titleBarLayout)  
+        with cvwWin.objectView.children(1)
+                            .layoutStrategy  =  titleBarLayoutStrategyType                            
+                            .openSymbol    = titleBarSymbol 
+                            .closedSymbol  = titleBarSymbol
+                            .absTextScale = 30
+                            .geometry.height = 100 
+        end with
+         set workAreaLayoutStrategyType  = metis.findLayoutStrategy(workAreaLayout)
+         with cvwWin.objectView.children(2)
+                            .layoutStrategy  =  workAreaLayoutStrategyType                           
+                            .openSymbol    = workAreaSymbol 
+                            .closedSymbol  = workAreaSymbol
+                            .absTextScale = 200
+        end with
+
+
+
+      call cvwWin.doParentLayout 
+  end if
+
+&#39;[4d] ---------  Populate Status Bar------------------------------------------------
+ &#39; set cvwStatusBar = new CVW_StatusBar
+ &#39; cvwStatusBar.topMenuStatus(instView)
+ &#39; cvwStatusBar.populateStatusBars(instView)
+
+&#39;-----------------------------------------------------------------------------------------------------
+
+
+
+&#39;----------------------------------------------------------------------------------------------------------------------
+     Sub populateToolbar(menuNodeView, menuName, menuNodeTargetType)
+    &#39;[a]-------------------------------
+        Dim objectMenu
+        Dim  menuItemView, newMenuItem, newMenuItemView 
+        &#39;[b]-------------------------------  
+        Set objectMenu   = model.findInstances(menuNodeTargetType, &#34;name&#34; ,menuName)    
+        &#39;[c]-------------------------------  
+         For each menuItemView in objectMenu.item(1).neighbourRelationships         
+                      if menuItemView.target.title &#60;&#62; menuNodeView.title THEN
+                       Set newMenuItemView                         = menuNodeView.newObjectView(menuItemView.target)
+                       newMenuItemView.openSymbol    = menuItemView.target.Views(1).openSymbol
+                       newMenuItemView.closedSymbol  = menuItemView.target.Views(1).closedSymbol
+                       newMenuItemView.textScale         = 0.05
+                       newMenuItemView.geometry.width = newMenuItemView.parent.geometry.width * 1.3
+                       newMenuItemView.geometry.height = newMenuItemView.parent.geometry.height * 1.3
+                       newMenuItemView.close
+                       newMenuItemView.parent.open
+                    end if
+            next
+    End Sub
+
+
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo5l2m62tj9">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoCleanWindow</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124441064</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+dim model, modelView, inst, instView
+dim objectView, selected
+dim instParentView, contView
+dim indx
+
+set model = metis.currentModel
+set modelView = model.currentModelView
+set inst = model.currentInstance
+set instView = modelView.currentInstanceView
+
+set selected = metis.selectedObjectViews
+if selected.count = 0 then
+    set contView = instView.parent.parent
+    indx = contView.children.count
+    set instParentView = contView.children(indx)
+    for each objectView in instParentView.children 
+        call modelView.deleteObjectView(objectView)
+   next
+else
+    for each objectView in selected
+        call modelView.deleteObjectView(objectView)
+    next
+end if
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo5o6ektv9l">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">setVerticalLayout</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124441164</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">set cvwWorkspace = new CVW_Workspace
+&#39; CVW Vertical Swimlane
+cvwWorkspace.LayoutStrategy = &#34;http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#_002asku01k7atp7qbn83&#34;
+cvwWorkspace.execute
+set cvwWorkspace  = Nothing
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo5ra4u5k9o">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">setHorizontalLayout</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124441384</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">set cvwWorkspace = new CVW_Workspace
+&#39; CVW Horizontal Swimlane
+cvwWorkspace.LayoutStrategy = &#34;http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#_002asku01k3ugo3o9942&#34;
+cvwWorkspace.execute
+set cvwWorkspace  = Nothing
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo62g073ds8">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">setMatrixLayout</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124441534</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">set cvwWorkspace = new CVW_Workspace
+call cvwWorkspace.build
+&#39; CVW Matrix Swimlane
+noWindows = cvwWorkspace.WorkspaceWindow.children.count
+if noWindows &#60;= 4 then
+    cvwWorkspace.LayoutStrategy = &#34;http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#_002asku01kfln2ekgenp&#34;
+elseif noWindows &#60;= 9 then
+    cvwWorkspace.LayoutStrategy = &#34;http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#_002asmr01a0gisog7tn2&#34;
+else
+    cvwWorkspace.LayoutStrategy = &#34;http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#_002asmr018p5t7j8b6cr&#34;
+end if
+cvwWorkspace.execute
+set cvwWorkspace  = Nothing
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo67h2cr74e">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoZoomWin</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124441675</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">&#39;option explicit
+dim model, modelView, instView
+dim  instParentView
+
+set model = metis.currentModel
+set modelView = model.currentModelView
+set inst = model.currentInstance
+set instView = modelView.currentInstanceView
+
+if inst.name = &#34;Zoom Win&#34; then
+    set instParentView = instView.parent.parent
+    call metis.zoomInstanceView(modelView, instParentView)
+    inst.name = &#34;Zoom All&#34;
+else
+    call metis.zoomAll(modelView)
+    inst.name = &#34;Zoom Win&#34;
+end if
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo6bjhkvp31">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">DoSearch</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124441795</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+dim currentModel, currentModelView, currentInstance, currentInstanceView
+dim objectView, selected
+dim workWindow, wObject
+dim contView
+dim indx
+dim specContainerType, hasSearchSpecificationType
+dim searchCont, searchConts
+dim cvwContentSpec, cvwWorkarea
+dim instances
+
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set specContainerType       = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID&#34;)
+    set hasSearchSpecificationType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasSearchSpecification_UUID&#34;)
+
+    set contView = currentInstanceView.parent.parent
+    indx = contView.children.count
+    set workWindow = contView.children(indx)
+    if isValid(workWindow) then
+        set wObject = workWindow.instance
+
+        &#39; Get search specification
+        set searchConts = wObject.getNeighbourObjects(0, hasSearchSpecificationType, specContainerType)
+        if searchConts.count &#62; 0 then
+            set searchCont = searchConts(1)
+
+            set cvwWorkarea = new CVW_Workarea
+            set cvwWorkarea.WorkWindow = workWindow
+
+            set cvwContentSpec = new CVW_ContentSpecification
+            set cvwContentSpec.currentModel     = currentModel
+            set cvwContentSpec.currentModelView = currentModelView
+            set cvwContentSpec.contentModel     = cvwWorkarea.contentModel
+            cvwContentSpec.SpecificationModel   = searchCont.uri
+            cvwContentSpec.PathMode = &#34;Path&#34;
+            set instances = cvwContentSpec.execute             &#39; Execute methods dependent on configuration
+            if isValid(instances) then
+                cvwWorkarea.ContentSearchModel = cvwContentSpec.SpecificationModel
+                call cvwWorkarea.populate(instances, -1)
+            end if
+
+        end if
+    end if
+    
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo6fba9fqll">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">ShowProperties</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124441915</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">set cvwInstance = new CVW_Instance
+
+call cvwInstance.showProperties</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo6jdtu05ru">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Clear Workspace</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124442035</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">&#39;option explicit
+
+set workspace = new CVW_Workspace
+workspace.ClearMode = &#34;Clear&#34;
+workspace.Viewstyle = &#34;http://xml.chalmers.se/viewstyles/cc_viewstyle.kmd#Nested_Viewstyle&#34;
+call workspace.execute
+set workspace = Nothing</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo6nfs4olbr">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Toggle Configuration flag</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124442185</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">set currentModel = metis.currentModel
+set currentInstance = currentModel.currentInstance
+
+set hasSpecificationType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasSpecification1_UUID&#34;)
+set ekaPropertyType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID&#34;)
+
+set relships = currentInstance.getNeighbourRelationships(0, hasSpecificationType)
+if relships.count &#62; 0 then
+    set specObject = relships(1).target
+
+    set parts = specObject.parts
+    for each part in parts
+        if part.type.inherits(ekaPropertyType) then
+            if part.title = &#34;ApplyConfiguration&#34; then
+                applyFilter = part.getNamedStringValue(&#34;value&#34;)
+                applyFilter = InputBox(&#34;Apply configuration (1 = yes / 0 = no&#34;,, applyFilter)
+                &#39;if applyFilter = 0 then
+                &#39;    applyFilter = 1
+                &#39;else
+                &#39;    applyFilter = 0
+                &#39;end if
+                set val = metis.newValue
+                call val.setInteger(applyFilter)
+                call part.setNamedValue(&#34;value&#34;, val)
+            end if
+        end if
+    next
+end if</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo6s5ilaoi3">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">ConfigureWorkspaceContent</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124442336</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+dim parentView, workWindow
+dim cvwWorkspace, ccRule
+dim workarea, workareas
+dim obj, indx
+dim objectView, objectViews
+dim didSomething
+dim ccType
+dim i
+
+set ccType = metis.findType(&#34;http://xml.chalmers.se/class/configurable_component.kmd#configurable_component&#34;)
+set cvwWorkspace = new CVW_Workspace
+call cvwWorkspace.build
+set ccRule = new CC_Rule
+for i = 1 to 2
+    didSomething = false
+    set parentView = cvwWorkspace.WorkspaceWindow
+    if isValid(parentView) then
+        set workareas = parentView.children
+        for each workarea in workareas
+            indx = workarea.children.count
+            if indx &#62; 0 then
+                set workWindow = workarea.children(indx)
+                if isValid(workWindow) then
+                    set objectViews = workWindow.children
+                    if isValid(objectViews) then
+                        for each objectView in objectViews
+                            if hasInstance(objectView) then
+                                set obj = objectView.instance
+                                if obj.type.uri = ccType.uri then
+                                    call ccRule.configureTopCC(obj)
+                                    didSomething = true
+                                else
+                                    call ccRule.transformRulesToScripts(obj)
+                                    call ccRule.ruleEngine.executeRules(obj)
+                                    didSomething = true
+                                end if
+                            end if
+                        next
+                    end if
+                end if
+            end if
+        next
+    end if
+next
+set ccRule = Nothing
+set cvwWorkspace = Nothing
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo70sjfoqs9">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">To be implemented</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124442506</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">MsgBox &#34;To be implemented!&#34;</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo76gi1pitg">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Execute service</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071105 113636058</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo7as1t41vg">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">New instance</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124442806</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">set cvwInstance = new CVW_Instance
+
+call cvwInstance.showProperties</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo7fi58314h">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">SearchCCinstances</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124442946</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow, wObject
+    dim actionType
+    dim ccType, productType, specificationType
+    dim hasInstanceContext2Type, hasContentModelType, anyObjectType
+    dim ccObject
+    dim compTypeName
+    dim ccInstanceType
+    dim instances
+    dim child, children
+    dim cvwSelectDialog, cvwWorkarea
+
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set ccType              = metis.findType(&#34;http://xml.chalmers.se/class/configurable_component.kmd#configurable_component&#34;)
+    set actionType          = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID&#34;)
+    set anyObjectType       = metis.findType(&#34;metis:stdtypes#oid1&#34;)
+    set productType         = metis.findType(&#34;http://xml.chalmers.se/class/cc_product.kmd#CC_product&#34;)
+    set specificationType   = metis.findType(&#34;http://xml.chalmers.se/class/cc_specification.kmd#CC_specification&#34;)
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+
+&#39;stop
+
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+        set wObject = workWindow.instance
+        if isEnabled(wObject) then
+            &#39; Remove content
+            set children = workWindow.children
+            for each child in children
+                call currentModelView.deleteObjectView(child)
+            next
+            &#39; Find new content
+            compTypeName = getCcParameterValue(ccObject, &#34;Wire type&#34;)
+            set ccInstanceType = new CC_InstanceType
+            set ccInstanceType.productType = productType
+            set ccInstanceType.productInstType = specificationType
+            set instances = ccInstanceType.findInstances(ccObject, compTypeName)
+            if isValid(instances) then
+                if instances.count &#62; 1 then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select instances&#34;
+                    cvwSelectDialog.heading = &#34;Select instances&#34;
+                    set instances = cvwSelectDialog.show(instances)
+                end if
+                &#39; Populate with new content
+                set cvwWorkarea = new CVW_Workarea
+                set cvwWorkarea.WorkWindow = workWindow
+                call cvwWorkarea.populate(instances, -1)
+                set children = workWindow.children
+                for each child in children
+                    child.open
+                next
+            end if
+        end if
+    end if
+    
+&#39; End
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo7k9rs5i05">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">ConfigureVariant</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124443087</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+dim ccGlobals, ccProject, ccConfig
+dim ccObject
+dim projectObject
+dim currentModel, currentModelView
+dim currentInstance, currentInstanceView
+
+&#39;stop
+
+set ccGlobals = new CC_Globals
+set ccGlobals = Nothing
+
+set currentModel = metis.currentModel
+set currentModelView = currentModel.currentModelView
+set currentInstance = currentModel.currentInstance
+set currentInstanceView = currentModelView.currentInstanceView
+
+if isValid(currentInstanceView) then
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        set ccConfig = new CC_Configure
+        call ccConfig.configureVariant(ccObject)
+        set ccConfig = Nothing
+        MsgBox &#34;Done!&#34;
+    end if
+end if
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asr001bo7ovnuuavk">
+  <valueset size="10" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">OpenConfiguredStructure</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070924 124443257</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+dim ccProject
+dim cvwAction, cvwWorkspace
+dim projectObject
+dim applyFilter
+
+&#39;stop
+
+if isEnabled(GLOBAL_CC_CurrentProject) then
+    set projectObject = GLOBAL_CC_CurrentProject
+else
+    set ccProject = new CC_Project
+    set projectObject = ccProject.selectProject
+    set GLOBAL_CC_CurrentProject = projectObject
+end if
+if isEnabled(projectObject) then
+    applyFilter = false
+    &#39;stop
+    set cvwAction = new CVW_MenuAction
+    call cvwAction.build
+    cvwAction.applyFilter = applyFilter
+    set cvwAction.contextModel = projectObject.ownerModel
+    set cvwWorkspace = cvwAction.execute
+    set cvwAction = Nothing
+end if 
+</string>
+  </valueset>
+ </object>
+
+ <objectview id="_002asqr01cpfibdgcgel" xlink:role="object" xlink:title="DoLoadMenuTree" xlink:href="#_002asr001bo4ttopa5t9" state="open" behavior="nested" text-scale="0.21129" decomp-scale="0.125" left="233.968" top="2800.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <objectview id="_002asqr01cpfibhq4cvc" xlink:role="object" xlink:title="DoLoadMenuNode" xlink:href="#_002asr001bmf77c1in2k" state="open" behavior="nested" text-scale="0.21129" decomp-scale="0.125" left="233.968" top="3056.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <objectview id="_002asqr01cpfibj4ea75" xlink:role="object" xlink:title="DoLoadWindow" xlink:href="#_002asr001bo5i8psajst" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="233.968" top="1776.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <modelview id="_002asqr01cpfibj6093p" name="CVW_Code" submodel-flag="true" zoom-level="1" x="0" y="0" xlink:role="model" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfib7fsd3o" state="closed" behavior="nested" text-scale="0.317314" decomp-scale="1" left="22.0311" top="15.1257" width="4073.96" height="3376.88" visible-in="browser">
+  <layout-link xlink:role="object" xlink:title="CVW Horizontal Swimlane" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#_002asku01k3ugo3o9942"/>
+  <child-link xlink:role="objectview" xlink:title="DoLoadMenuNode" xlink:href="#_002asqr01cpfibhq4cvc"/>
+  <child-link xlink:role="objectview" xlink:title="DoLoadMenuTree" xlink:href="#_002asqr01cpfibdgcgel"/>
+  <child-link xlink:role="objectview" xlink:title="DoMenuAction" xlink:href="#_002asqr01cpfibq5gkrb"/>
+  <child-link xlink:role="objectview" xlink:title="DoShowRelationshipView" xlink:href="#_002asqr01cpfibus6ttu"/>
+  <child-link xlink:role="objectview" xlink:title="DoLoadDuplicateWin" xlink:href="#_002asqr01cpfibn98dt7"/>
+  <child-link xlink:role="objectview" xlink:title="DoCloseWin" xlink:href="#_002asqr01cpfibv973gu"/>
+  <child-link xlink:role="objectview" xlink:title="DoMaximizeWin" xlink:href="#_002asqr01cpfiblc1t3g"/>
+  <child-link xlink:role="objectview" xlink:title="DoLoadWindow" xlink:href="#_002asqr01cpfibj4ea75"/>
+  <child-link xlink:role="objectview" xlink:title="DoCleanWindow" xlink:href="#_002asqr01cpfil6rriun"/>
+  <child-link xlink:role="objectview" xlink:title="setVerticalLayout" xlink:href="#_002asqr01cpfil1cn3ie"/>
+  <child-link xlink:role="objectview" xlink:title="setHorizontalLayout" xlink:href="#_002asqr01cpfiljnkhkj"/>
+  <child-link xlink:role="objectview" xlink:title="setMatrixLayout" xlink:href="#_002asqr01cpfil59f8j3"/>
+  <child-link xlink:role="objectview" xlink:title="DoZoomWin" xlink:href="#_002asqr01cpfil0qsat3"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnb87gtea"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfn1gvus3l"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnbd8lmk7"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnbr49ruq"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfn12p0llp"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfn16b9eaf"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnb67c1sp"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfn1i3nf4l"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfn1k5b5mu"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnl0evmn4"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnbk9j9gl"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnbsn81rm"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnl03ael5"/>
+  <child-link xlink:role="objectview" xlink:title="DoSearch" xlink:href="#_002asqr01cpfiloj7eu3"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnlkjau0b"/>
+  <child-link xlink:role="objectview" xlink:title="ShowProperties" xlink:href="#_002asqr01cpfilkb96pl"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnlpltbql"/>
+  <child-link xlink:role="objectview" xlink:title="Clear Workspace" xlink:href="#_002asqr01cpfil3e7dd3"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnlf9lase"/>
+  <child-link xlink:role="objectview" xlink:title="Toggle Configuration flag" xlink:href="#_002asqr01cpfilc8ck67"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnlqu3juo"/>
+  <child-link xlink:role="objectview" xlink:title="ConfigureWorkspaceContent" xlink:href="#_002asqr01cpfilen4ooj"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnv8hfaao"/>
+  <child-link xlink:role="objectview" xlink:title="To be implemented" xlink:href="#_002asqr01cpfilbt3k4c"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cpfnvqs1psc"/>
+  <child-link xlink:role="objectview" xlink:title="Execute service" xlink:href="#_002asqr01crkb08s35om"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01crkb0einqol"/>
+  <child-link xlink:role="objectview" xlink:title="New instance" xlink:href="#_002asqr01d5730kf1ssf"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01d57309kku26"/>
+  <child-link xlink:role="objectview" xlink:title="SearchCCinstances" xlink:href="#_002asqr01d7rrb2ebac3"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01d7rrlt8080b"/>
+  <child-link xlink:role="objectview" xlink:title="ConfigureVariant" xlink:href="#_002asr0015bn4388oovf"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asr0015bn43cebtrv"/>
+  <child-link xlink:role="objectview" xlink:title="OpenConfiguredStructure" xlink:href="#_002asr0015i5901bi8o7"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asr0015i5906pdr7p"/>
+  <viewstyle-links size="1">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="CVW specification" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_viewstyle.kmd#Viewstyle_CVW:Specification"/>
+  </viewstyle-links>
+ </modelview>
+
+ <objectview id="_002asqr01cpfiblc1t3g" xlink:role="object" xlink:title="DoMaximizeWin" xlink:href="#_002asr001bo5f36p92i7" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="233.968" top="752.874" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfibn98dt7" xlink:role="object" xlink:title="DoLoadDuplicateWin" xlink:href="#_002asr001bo58rc5lpkj" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="233.968" top="1264.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfibq5gkrb" xlink:role="object" xlink:title="DoMenuAction" xlink:href="#_002asr001bo51v7oumgo" state="open" behavior="nested" text-scale="0.21129" decomp-scale="0.088389" left="233.968" top="2544.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <objectview id="_002asqr01cpfibus6ttu" xlink:role="object" xlink:title="DoShowRelationshipView" xlink:href="#_002asr001bo55nd4eh5f" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="233.968" top="1520.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfibv973gu" xlink:role="object" xlink:title="DoCloseWin" xlink:href="#_002asr001bo5bvackurh" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="233.968" top="1008.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfil0qsat3" xlink:role="object" xlink:title="DoZoomWin" xlink:href="#_002asr001bo67h2cr74e" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="233.968" top="496.874" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfil1cn3ie" xlink:role="object" xlink:title="setVerticalLayout" xlink:href="#_002asr001bo5o6ektv9l" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="1513.97" top="2032.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfil3e7dd3" xlink:role="object" xlink:title="Clear Workspace" xlink:href="#_002asr001bo6jdtu05ru" state="open" behavior="nested" text-scale="0.21129" decomp-scale="0.088389" left="233.968" top="2288.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <objectview id="_002asqr01cpfil59f8j3" xlink:role="object" xlink:title="setMatrixLayout" xlink:href="#_002asr001bo62g073ds8" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="1513.97" top="1520.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfil6rriun" xlink:role="object" xlink:title="DoCleanWindow" xlink:href="#_002asr001bo5l2m62tj9" state="open" behavior="nested" text-scale="0.21129" decomp-scale="0.088389" left="233.968" top="2032.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <objectview id="_002asqr01cpfilbt3k4c" xlink:role="object" xlink:title="To be implemented" xlink:href="#_002asr001bo70sjfoqs9" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="2793.97" top="2032.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfilc8ck67" xlink:role="object" xlink:title="Toggle Configuration flag" xlink:href="#_002asr001bo6nfs4olbr" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="1513.97" top="496.874" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfilen4ooj" xlink:role="object" xlink:title="ConfigureWorkspaceContent" xlink:href="#_002asr001bo6s5ilaoi3" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="1513.97" top="752.874" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfiljnkhkj" xlink:role="object" xlink:title="setHorizontalLayout" xlink:href="#_002asr001bo5ra4u5k9o" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="1513.97" top="1776.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfilkb96pl" xlink:role="object" xlink:title="ShowProperties" xlink:href="#_002asr001bo6fba9fqll" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="1513.97" top="1008.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01cpfiloj7eu3" xlink:role="object" xlink:title="DoSearch" xlink:href="#_002asr001bo6bjhkvp31" state="closed" behavior="nested" text-scale="0.23242" decomp-scale="0.125" left="1513.97" top="1264.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <relationshipview id="_002asqr01cpfn12p0llp" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadWindow" xlink:href="#_002asqr01cpfibj4ea75"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfn16b9eaf" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoShowRelationshipView" xlink:href="#_002asqr01cpfibus6ttu"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfn1gvus3l" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadMenuNode" xlink:href="#_002asqr01cpfibhq4cvc"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfn1i3nf4l" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoMenuAction" xlink:href="#_002asqr01cpfibq5gkrb"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfn1k5b5mu" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoCleanWindow" xlink:href="#_002asqr01cpfil6rriun"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnb67c1sp" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadDuplicateWin" xlink:href="#_002asqr01cpfibn98dt7"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnb87gtea" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoMaximizeWin" xlink:href="#_002asqr01cpfiblc1t3g"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnbd8lmk7" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadMenuTree" xlink:href="#_002asqr01cpfibdgcgel"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnbk9j9gl" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="setHorizontalLayout" xlink:href="#_002asqr01cpfiljnkhkj"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnbr49ruq" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoCloseWin" xlink:href="#_002asqr01cpfibv973gu"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnbsn81rm" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="setMatrixLayout" xlink:href="#_002asqr01cpfil59f8j3"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnl03ael5" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoZoomWin" xlink:href="#_002asqr01cpfil0qsat3"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnl0evmn4" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="setVerticalLayout" xlink:href="#_002asqr01cpfil1cn3ie"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnlf9lase" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="Clear Workspace" xlink:href="#_002asqr01cpfil3e7dd3"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnlkjau0b" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="DoSearch" xlink:href="#_002asqr01cpfiloj7eu3"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnlpltbql" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="ShowProperties" xlink:href="#_002asqr01cpfilkb96pl"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnlqu3juo" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="Toggle Configuration flag" xlink:href="#_002asqr01cpfilc8ck67"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnv8hfaao" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="ConfigureWorkspaceContent" xlink:href="#_002asqr01cpfilen4ooj"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cpfnvqs1psc" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="To be implemented" xlink:href="#_002asqr01cpfilbt3k4c"/>
+ </relationshipview>
+
+ <modelview id="_002asqr01cpfoje5434s" title="CVW_Code" primary-flag="true" standalone-flag="true" reusable-flag="true" zoom-level="1" x="0" y="0" seq="0" xlink:role="model" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfojmvvu5a" behavior="nested" text-scale="1" decomp-scale="1" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfojetefrm"/>
+ </modelview>
+
+ <objectview id="_002asqr01cpfojetefrm" xlink:role="object" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfojf2c1or" state="open" behavior="connector" text-scale="0.317314" decomp-scale="1" left="0" top="0" width="3038.22" height="3604.08">
+  <child-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+ </objectview>
+
+ <objectview id="_002asqr01crkb08s35om" xlink:role="object" xlink:title="Execute service" xlink:href="#_002asr001bo76gi1pitg" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="2793.97" top="1008.87" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asqr01crkb0einqol" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="#_002asqr01crkb08s35om"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01d57309kku26" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="New instance" xlink:href="#_002asqr01d5730kf1ssf"/>
+ </relationshipview>
+
+ <objectview id="_002asqr01d5730kf1ssf" xlink:role="object" xlink:title="New instance" xlink:href="#_002asr001bo7as1t41vg" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="2793.97" top="496.874" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01d7rrb2ebac3" xlink:role="object" xlink:title="SearchCCinstances" xlink:href="#_002asr001bo7fi58314h" state="open" behavior="nested" text-scale="0.255662" decomp-scale="0.088389" left="2793.97" top="752.874" width="1086.13" height="181.021">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asqr01d7rrlt8080b" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="SearchCCinstances" xlink:href="#_002asqr01d7rrb2ebac3"/>
+ </relationshipview>
+
+ <objectview id="_002asr0015bn4388oovf" xlink:role="object" xlink:title="ConfigureVariant" xlink:href="#_002asr001bo7k9rs5i05" state="open" behavior="nested" text-scale="0.21129" decomp-scale="0.088389" left="2793.97" top="1264.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <relationshipview id="_002asr0015bn43cebtrv" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="ConfigureVariant" xlink:href="#_002asr0015bn4388oovf"/>
+ </relationshipview>
+
+ <objectview id="_002asr0015i5901bi8o7" xlink:role="object" xlink:title="OpenConfiguredStructure" xlink:href="#_002asr001bo7ovnuuavk" state="open" behavior="nested" text-scale="0.21129" decomp-scale="0.088389" left="2793.97" top="1520.87" width="1086.13" height="181.021">
+ </objectview>
+
+ <relationshipview id="_002asr0015i5906pdr7p" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="CVW_Code" xlink:href="#_002asqr01cpfibj6093p"/>
+  <target-link xlink:role="objectview" xlink:title="OpenConfiguredStructure" xlink:href="#_002asr0015i5901bi8o7"/>
+ </relationshipview>
+
+
+</metis>

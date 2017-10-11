@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="functional_requirement" name="functional_requirement" title="Functional requirement" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="primary" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="primary" default-visible="top"/>
+  <property name="top" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="top" default-visible="top"/>
+  <named-method-link name="editProperties_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/virtual_methods.kmd#editFRproperties"/>
+  <named-method-link name="evaluateRule_" xlink:role="cpp-method" xlink:title="evaluateRule" xlink:href="../methods/rule_methods.kmd#evaluateRule2"/>
+<!--  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="FunctionalRequirementPropertyDialog" xlink:href="#oid110"/> -->
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Functional_requirement" xlink:href="#functional_requirement" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="primary">0</integer>
+   <integer name="top">0</integer>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid110" name="FunctionalRequirementPropertyDialog" language="c++" bind="NO.METIS.TOOLS.setupPropertyDialogTabs" required-dll="metis_ui">
+    <arg-list size="10">
+      <string name="TabName1">MetisModelTab</string>
+      <string name="Visibility1">Hide</string>
+      <string name="TabName2">MetisDataTab</string>
+      <pointer name="Widget2" xlink:role="method" xlink:title="FunctionalRequirementDataTab" xlink:href="#oid120" xlink:actuate="auto"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid120" name="FunctionalRequirementDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+  <arg-list size="6">
+   <string name="Row1">name</string>
+   <string name="Row2">primary</string>
+   <string name="Row3">top</string>
+   <string name="Row4">description,</string>
+   <string name="Row5">comments,</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Functional_requirement" xlink:href="#functional_requirement" tree-size="1" nested-size="0.0625" behavior="tree" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../layout/hierarchy_layout.kmd#_002asgf00sj14lu510jk"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="box1" xlink:href="../symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="box1" xlink:href="../symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Functional_requirement" xlink:href="#functional_requirement" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/object_tree_open.svg#_002ash401d1mk84cm13r" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Functional_requirement" xlink:href="#functional_requirement" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#Layout_CVW:ContainerLayout"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Functional_requirement" xlink:href="#functional_requirement" tree-size="1" nested-size="0.0625" behavior="tree" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../layout/hierarchy_layout.kmd#_002asgf00sj14lu510jk"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="box1" xlink:href="../symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="box1" xlink:href="../symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;FR: &#34; (property name))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;red&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

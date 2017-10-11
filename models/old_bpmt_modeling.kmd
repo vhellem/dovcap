@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_538578CF-E15B-48CA-80DF-F43CA8ECF5AC" name="DeveloperEd.ModelEd.UriToolBar.BPMT_Modeling" title="BPM Modeling">
+  <metamodel-links size="9">
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="http://metadata.troux.info/meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="TrouxSource Queries" xlink:href="http://metadata.troux.info/meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="BPMN Domain" xlink:href="bpmt_bpmn_domain.kmd#UUID4_A27C2C93-84D6-490C-B90F-E6D10C99F7BA"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="BPMT BPMN Relationship Types" xlink:href="bpmt_bpmn_relationship_types.kmd#UUID4_41D955B8-4F86-4EB1-875F-546A23CD3E7C"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="IDEF0 Domain" xlink:href="bpmt_idef0_domain.kmd#UUID4_575D7C4D-49A8-42E6-89E8-A9E4871B6551"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="BPMT IDEF0 Relationship Types" xlink:href="bpmt_idef0_relationship_types.kmd#UUID4_1C2AA227-7BB1-4432-9578-D0A8922E4575"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="ProcEnv" xlink:href="../metamodels/bpmt_env_domain.kmd#UUID4_9EDE4374-57D2-48F0-A979-CA962831AADC" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="BPMT Scripts" xlink:href="../methods/bpmt_scripts.kmd#UUID4_DF778072-C249-4623-B09E-6EA50914BCAA" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+ </metamodel>
+
+</metis>

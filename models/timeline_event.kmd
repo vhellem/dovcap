@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+
+ <type id="CompType_MEAF:TimelineEvent_UUID" name="TimelineEvent" title="Timeline Event" desc="A planning occurence modeled as part of timeline modeling in order to relate the occurence with specific dates as identified with Timeline Milestone. " usage="object">
+  <complex-type-link xlink:role="type" xlink:href="metis:mer#MerModelingObject"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="localdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date" desc="Specific event date - overriding any interfaced dates wrt the timeline, but will trigger deviation-feedback on the event itself. " default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:TimelineEvent_localdate_UUID&#34;;"/>
+  <property name="date" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Current Date" desc="Date to use for calculations, either locally entered, or inherited from connected milestone if no local date." method-flag="true" default-visible="top"/>
+  <property name="systemdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Worst Deviance Date" desc="The date from connected objects that differs MOST compared to current date." method-flag="true" default-visible="top"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status color" desc="Color of the status" method-flag="true" visible-flag="false"/>
+  <property name="style" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status style" desc="Style of the status" method-flag="true" visible-flag="false"/>
+  <property name="textdate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted date" desc="The current date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="getEventColor" xlink:href="../methods/timeline_methods.kmd#oid1014"/>
+  <named-method-link name="date" xlink:role="cpp-method" xlink:title="getEventDate" xlink:href="../methods/timeline_methods.kmd#oid1009"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="../methods/timeline_methods.kmd#oid1024"/>
+  <named-method-link name="style" xlink:role="cpp-method" xlink:title="getEventPattern" xlink:href="../methods/timeline_methods.kmd#oid1015"/>
+  <named-method-link name="systemdate" xlink:role="cpp-method" xlink:title="getWorstConnectedDate" xlink:href="../methods/timeline_methods.kmd#oid1005"/>
+  <named-method-link name="textdate" xlink:role="cpp-method" xlink:title="getDateAsText" xlink:href="../methods/timeline_methods.kmd#oid1010"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Timeline Event" xlink:href="#CompType_MEAF:TimelineEvent_UUID">
+   <string name="troux_iconAlias">Icon_CompType_MEAF:TimelineEvent_UUID</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Timeline Event" xlink:href="#CompType_MEAF:TimelineEvent_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Event" xlink:href="../symbols/diagrams/timeline_event.svg#oid6" xlink:actuate="auto">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="status_text" property="value" macro="(expand (property textdate))"/>
+   <replace tag="status" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="status" property="fillpattern" macro="(expand (property style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/diagrams/timeline_event.png"/>
+ </typeview>
+
+</metis>

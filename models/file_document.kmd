@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="4">
+
+ <type id="oid1" name="Filedocument" title="File Document" desc="A document accessible from the model and stored as a disk file.&#10;&#60;p&#62;This could be a Microsoft Word document, a Microsoft Excel spreadsheet, a Microsoft PowerPoint presentation, or an HTML File available on the World-Wide Web.&#60;/p&#62;&#60;p&#62;With an File Document you can associate an application and a filename, and open the document using the right mouse button menu &#39;Execute Method - Open Document&#39; on the object.&#60;/p&#62;&#60;p&#62;Directory separators must be entered using forward slashes &#39;/&#39;.&#60;/p&#62;&#60;p&#62;The directory name can also be represented by dropping the File Document on a Folder, or associating it with a Directory object.&#60;/p&#62;&#60;p&#62;Microsoft Windows applications should not be started with the application property defined. If possible, only the document path and filename should be defined, and the application decided by the filename extension. If the application is defined (e.g. Microsoft Word), you must look in the definition of the *.doc filename extension for necessary options needed by the application. This information is found from Windows Explorer, the View - Options menu.&#60;/p&#62;&#60;p&#62;If the application is defined for filename extensions not having any defined filetype, then all necessary options must be defined in the Filename property. For example, starting of emacs as a server, requires the application to be &#39;gnuclientw.exe&#39; and the filename must be &#39;-F filename.txt&#39;. The option &#39;-F&#39; has nothing to do with the filename, but is an option for &#39;gnuclientw.exe&#39; to work properly.&#60;/p&#62;" usage="object" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Document" xlink:href="metis:stdtypes#oid31"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="application" xlink:role="string-type" xlink:title="FileRef" xlink:href="metis:stdprimtypes#oid2" label="Application" desc="The name of the application used to open this file defined in the File Reference property. This value is transferred from the Application property of a Document Class object through the &#39;belongs to Document Class&#39; relationship. If this property is blank, the application will be decided by the filename extension." method-flag="true"/>
+  <property name="dirname" xlink:role="string-type" xlink:title="FileRef" xlink:href="metis:stdprimtypes#oid2" label="Directory Name" desc="If the object has a &#39;stored in&#39; relationship to a Directory object (found within the Storage Domain), the Full Path property is transferred to this property." method-flag="true"/>
+  <property name="filename" xlink:role="string-type" xlink:title="FileRef" xlink:href="metis:stdprimtypes#oid2" label="Filename" desc="The filename identifying the File Document. If you need to specify a path to the filename, and don&#39;t want to use the &#39;stored in&#39; relationship to a Directory, include the path in the Filename. Use a forward slash &#39;/&#39; to separate directories."/>
+  <property name="document" xlink:role="string-type" xlink:title="FileRef" xlink:href="metis:stdprimtypes#oid2" label="File Reference" desc="This is the concatinated value of Directory Name and Filename." method-flag="true"/>
+  <named-method-link name="Open_Doc" xlink:role="cpp-method" xlink:title="executeDocument" xlink:href="metis:stdmethods#oid7"/>
+  <named-method-link name="application" xlink:role="cpp-method" xlink:title="application" xlink:href="metis:stdmethods#oid18"/>
+  <named-method-link name="dirname" xlink:role="cpp-method" xlink:title="dirname" xlink:href="metis:stdmethods#oid16"/>
+  <named-method-link name="document" xlink:role="cpp-method" xlink:title="document" xlink:href="metis:stdmethods#oid17"/>
+  <named-method-link name="executeDoc_" xlink:role="cpp-method" xlink:title="executeDocument" xlink:href="metis:stdmethods#oid7"/>
+  <named-method-link name="executeDocument_" xlink:role="cpp-method" xlink:title="executeDocument" xlink:href="metis:stdmethods#oid7"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Filedocument" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="application" class="volatile"></string>
+   <string name="dirname" class="volatile"></string>
+   <string name="filename"></string>
+   <string name="document" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Filedocument" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="metis:stdsyms#oid80" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property document))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="metis:stdsyms#oid80" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property document))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="metis:icon_directory_document" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Filedocument" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/file_document.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property document))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/file_document.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property document))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="metis:icon_directory_document" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>
+

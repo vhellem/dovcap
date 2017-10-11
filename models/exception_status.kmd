@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_Semantics:Exception_Status_UUID" name="Exception_Status" title="Exception Status" desc="Describes the states that are defined for an Exception." default="1">
+  <range name="Created" min="1" max="1"/>
+  <range name="Submitted" min="2" max="2"/>
+  <range name="Under Review" min="3" max="3"/>
+  <range name="Withdrawn" min="4" max="4"/>
+  <range name="Approved" min="5" max="5"/>
+  <range name="Denied" min="6" max="6"/>
+ </integer-type>
+
+
+</metis>

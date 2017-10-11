@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="3"
+ nextoid="1">
+
+ <criteria id="oid1" name="getFollowsFrom" title="getFollowsFrom" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="type">
+      <complex-type-link xlink:role="type" xlink:title="leads to/follows from (Weight)" xlink:href="../relationshiptypes/leads_to-follows_from_weight.kmd#Reltype_leads_to-follows_from_weight_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="InformationNeedOrganization" title="InformationNeed-&#62;Organization" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="satisfies" xlink:href="../relationshiptypes/satisfies-is_satisfied_by.kmd#Reltype_satisfies-is_satisfied_by_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="originof">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="consists of" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_consists_of-is_part_of_UUID"/>
+      </c-op>
+     </c-op>
+     <c-op kind="target">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="../relationshiptypes/uses-is_used_by_crud.kmd#Reltype_uses-is_used_by_crud_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="or">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Process Component" xlink:href="../abstracttypes/process_component.kmd#CompType_TRM:ProcessDomain_UUID"/>
+      </c-op>
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="../relationshiptypes/has_owner-is_owner_of.kmd#Reltype_has_owner-is_owner_of_UUID"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has content owner" xlink:href="../relationshiptypes/has_content_owner-is_content_owner_of.kmd#Reltype_has_content_owner-is_content_owner_of_UUID"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="has responsible" xlink:href="../relationshiptypes/has_responsible-is_responsible_for.kmd#Reltype_has_responsible-is_responsible_for_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3" name="findStrategicValueChainInformationNeed" title="Find Strategic Value Chain" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Strategy leads to Information Need" xlink:href="../relationshiptypes/leads_to-follows_from_weight.kmd#Reltype_strategy_leads_to_follows_from_weight_information_need_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Strategy achieves Goal" xlink:href="../relationshiptypes/achieves-is_achieved_by_weight.kmd#Reltype_strategy_achieves_is_achieved_by_weight_goal_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

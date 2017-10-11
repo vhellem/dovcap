@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="MetaModel_CPPD:ProductDefinition_UUID" name="DeveloperEd.ModelEd.UriToolBar.ProductDefinition" title="Product Definition" desc="Metamodel for doing product definitions.">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Aspect of" xlink:href="../languages/productelement.kmd#CPPD_Aspect_of"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Principle" xlink:href="../languages/productelement.kmd#CPPD_Design_Principle" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Assembly" xlink:href="../languages/productelement.kmd#CPPD_ProductAssembly" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Family" xlink:href="../languages/productelement.kmd#CPPD_ProductFamily" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Item" xlink:href="../languages/productelement.kmd#CPPD_ProductItem" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product System" xlink:href="../languages/productelement.kmd#CPPD_ProductSystem" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Module" xlink:href="../languages/productelement.kmd#CPPD_ProductModule" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Element" xlink:href="../languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Interacts with" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:InteractsWith_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Is an implementation of" xlink:href="../languages/is_an_implementation_of.kmd#RelType_CPPD:IsAnImplementationOf_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Part" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Part_UUID"/>
+  </complex-type-links>
+  <typeview-links size="1">
+   <typeview-link xlink:role="typeview" xlink:href="../languages/productelement.kmd#_002asji0138ok5kq2ie6"/>
+  </typeview-links>
+ </metamodel>
+
+ <metamodel id="MetaModel_CPPD:ProductProperty_UUID" name="DeveloperEd.ModelEd.UriToolBar.ProductProperty" title="Product Property" desc="Metamodel for defining product properties.">
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="../languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Has allowed value" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasAllowedValue_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="MetaModel_CPPD:ProductRequirement_UUID" name="DeveloperEd.ModelEd.UriToolBar.ProductRequirement" title="Product Requirement" desc="Metamodel for defining product requirements.">
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="../languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Requirement (EKA)" xlink:href="../languages/fm_objects.kmd#ObjType_CPPD:Requirement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has requirement" xlink:href="../languages/has_requirement.kmd#RelType_CPPD:HasRequirement_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Is constrained by" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:IsConstrainedBy_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Is solved by" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:IsSolvedBy_UUID" xlink:actuate="auto"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

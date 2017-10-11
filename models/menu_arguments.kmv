@@ -1,0 +1,501 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="16"
+ instanceviews="29"
+ nextoid="1">
+
+ <object id="_002asqr01cnbobat5g2r">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">MenuSymbol</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 103302566</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value">http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ash6026qsg6um7j7o</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">MenuSymbol</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01cnbobd5825m">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Menu Arguments</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070625 200617539</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Menu Arguments</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01cnbobddm6cn">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">toolBarSymbol</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 103302566</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value">http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ash600ginsu5hcr63</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">toolBarSymbol</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <model id="_002asqr01cnbobe6s7g1" name="Menu arguments" title="Menu arguments" submodel-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="9" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Menu arguments</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071113 091732433</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="toolBarSymbol" xlink:href="#_002asqr01cnbobddm6cn"/>
+  <part-link xlink:role="object" xlink:title="MenuSymbol" xlink:href="#_002asqr01cnbobat5g2r"/>
+  <part-link xlink:role="object" xlink:title="MenuLayout" xlink:href="#_002asqr01cnboblebfhl"/>
+  <part-link xlink:role="object" xlink:title="toolBarLayout" xlink:href="#_002asqr01cnbobo3o9gm"/>
+  <part-link xlink:role="object" xlink:title="LeftPaneSymbol" xlink:href="#_002asqr01cnbobkpn22l"/>
+  <part-link xlink:role="object" xlink:title="LeftPaneTreeLayout" xlink:href="#_002asqr01cnbobk1cb82"/>
+  <part-link xlink:role="object" xlink:title="LeftPaneLayout" xlink:href="#_002asqr01cnbobusv6ep"/>
+  <part-link xlink:role="object" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobd5825m"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobe6s7g1" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobe6s7g1" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+  <bundle>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01cnbrfhrf445"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01cnbrf7vkg04"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01cnbrf2bccir"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01cnbrfoi5oun"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01cnbrfdn4kr4"/>
+  </bundle>
+ </model>
+
+ <object id="_002asqr01cnbobk1cb82">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">LeftPaneTreeLayout</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 103302566</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value">http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#Layout_CVW:WorkareaVertical</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">LeftPaneTreeLayout</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01cnbobkpn22l">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">LeftPaneSymbol</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 103302566</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value">http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ash6026qsg6um7j7o</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">LeftPaneSymbol</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01cnboblebfhl">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">MenuLayout</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 103302566</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value">http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#Layout_CVW:MenuLayoutVertical</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">MenuLayout</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01cnbobo3o9gm">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">toolBarLayout</string>
+   <string name="description">metis:layout#oid52
+
+http://xml.computas.com/xml/diagrams/layout_strategies/swimlane_layout.kmd#oid2</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 103302566</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value">http://xml.computas.com/xml/diagrams/layout_strategies/swimlane_layout.kmd#oid2</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">toolBarLayout</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01cnbobusv6ep">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">LeftPaneLayout</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 103302566</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">1</integer>
+   <string name="value">http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#Layout_CVW:ContainerMatrixVertical</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">LeftPaneLayout</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asqr01cnbrf2bccir">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 130143151</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobd5825m"/>
+  <target seq="0" xlink:role="object" xlink:title="LeftPaneSymbol" xlink:href="#_002asqr01cnbobkpn22l"/>
+ </relationship>
+
+ <relationship id="_002asqr01cnbrf7vkg04">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 130143151</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobd5825m"/>
+  <target seq="0" xlink:role="object" xlink:title="MenuLayout" xlink:href="#_002asqr01cnboblebfhl"/>
+ </relationship>
+
+ <relationship id="_002asqr01cnbrfdn4kr4">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 130143151</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobd5825m"/>
+  <target seq="0" xlink:role="object" xlink:title="LeftPaneLayout" xlink:href="#_002asqr01cnbobusv6ep"/>
+ </relationship>
+
+ <relationship id="_002asqr01cnbrfhrf445">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 130143151</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobd5825m"/>
+  <target seq="0" xlink:role="object" xlink:title="MenuSymbol" xlink:href="#_002asqr01cnbobat5g2r"/>
+ </relationship>
+
+ <relationship id="_002asqr01cnbrfoi5oun">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 130143151</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobd5825m"/>
+  <target seq="0" xlink:role="object" xlink:title="LeftPaneTreeLayout" xlink:href="#_002asqr01cnbobk1cb82"/>
+ </relationship>
+
+ <model id="_002asqr01cnbsn6mci2l" title="Menu arguments" submodel-ok="false" standalone-flag="true" reusable-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Menu arguments</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbsnv9mlp2"/>
+ </model>
+
+ <object id="_002asqr01cnbsnv9mlp2">
+  <valueset size="9" xlink:role="type" xlink:title="Connector" xlink:href="metis:stdtypes#oid125" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name" class="volatile">Menu arguments</string>
+   <string name="description" class="volatile"></string>
+   <pointer name="model" xlink:role="model" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobe6s7g1" xlink:actuate="user"/>
+   <collection name="metamodels" structure="list" size="3" xlink:role="pointer-type" xlink:title="Metamodel Pointer" xlink:href="metis:std#oid55" xlink:actuate="user">
+    <pointer xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+   </collection>
+   <integer name="viewState">0</integer>
+   <pointer name="type" class="volatile" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <integer name="lazyLoad">1</integer>
+   <integer name="bundleWeight">0</integer>
+  </valueset>
+  <part-link xlink:role="model" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobe6s7g1" xlink:actuate="user"/>
+ </object>
+
+ <objectview id="_002asqr01cnbob2rd4ir" xlink:role="object" xlink:title="MenuLayout" xlink:href="#_002asqr01cnboblebfhl" state="open" behavior="tree" text-scale="2.07652" decomp-scale="0.044197" left="127.996" top="895.971" width="543.094" height="181.031">
+ </objectview>
+
+ <objectview id="_002asqr01cnbob81n7rc" xlink:role="object" xlink:title="toolBarLayout" xlink:href="#_002asqr01cnbobo3o9gm" state="closed" behavior="tree" text-scale="2.07652" decomp-scale="0.044197" left="127.996" top="703.977" width="543.094" height="181.031">
+ </objectview>
+
+ <objectview id="_002asqr01cnboba3clkk" xlink:role="object" xlink:title="LeftPaneSymbol" xlink:href="#_002asqr01cnbobkpn22l" state="open" behavior="tree" text-scale="2.07652" decomp-scale="0.044197" left="1535.95" top="1087.97" width="543.094" height="181.031">
+ </objectview>
+
+ <objectview id="_002asqr01cnbobfc08nt" xlink:role="object" xlink:title="LeftPaneTreeLayout" xlink:href="#_002asqr01cnbobk1cb82" state="closed" behavior="tree" text-scale="2.07652" decomp-scale="0.088395" left="127.996" top="1279.96" width="543.094" height="181.031">
+ </objectview>
+
+ <objectview id="_002asqr01cnbobirlpld" xlink:role="object" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobd5825m" state="open" behavior="tree" text-scale="2.07652" decomp-scale="0.062505" left="754.344" top="266.122" width="768.059" height="256.02">
+ </objectview>
+
+ <modelview id="_002asqr01cnbobk2dmln" submodel-flag="true" zoom-level="1" x="0" y="0" xlink:role="model" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobe6s7g1" state="open" behavior="nested" text-scale="6.43157" decomp-scale="0.08839" left="16" top="16" width="197.988" height="147.077" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="LeftPaneLayout" xlink:href="#_002asqr01cnbobkkrdbn"/>
+  <child-link xlink:role="objectview" xlink:title="LeftPaneTreeLayout" xlink:href="#_002asqr01cnbobfc08nt"/>
+  <child-link xlink:role="objectview" xlink:title="MenuLayout" xlink:href="#_002asqr01cnbob2rd4ir"/>
+  <child-link xlink:role="objectview" xlink:title="MenuSymbol" xlink:href="#_002asqr01cnbobn06hgi"/>
+  <child-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <child-link xlink:role="objectview" xlink:title="toolBarSymbol" xlink:href="#_002asqr01cnbobs8dopu"/>
+  <child-link xlink:role="objectview" xlink:title="LeftPaneSymbol" xlink:href="#_002asqr01cnboba3clkk"/>
+  <child-link xlink:role="objectview" xlink:title="toolBarLayout" xlink:href="#_002asqr01cnbob81n7rc"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrpra489e"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrp0cr654"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrp9gpee8"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrpb8ej1g"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrpgu5mus"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrp3g62r0"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrp0is2nu"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbrpn812q4"/>
+  <viewbundle>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs3nmq1oq"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs372lpl0"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs33ftm4q"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs3v2itbf"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs3k3ukkd"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs37qumf1"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs3ed4lf7"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbs3kh67q1"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbsd4stvvk"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01cnbsd2asge8"/>
+  </viewbundle>
+  <viewstyle-links size="1">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="CVW specification" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_viewstyle.kmd#Viewstyle_CVW:Specification"/>
+  </viewstyle-links>
+ </modelview>
+
+ <objectview id="_002asqr01cnbobkkrdbn" xlink:role="object" xlink:title="LeftPaneLayout" xlink:href="#_002asqr01cnbobusv6ep" state="closed" behavior="tree" text-scale="2.07652" decomp-scale="0.044197" left="127.996" top="1087.97" width="543.094" height="181.031">
+ </objectview>
+
+ <objectview id="_002asqr01cnbobn06hgi" xlink:role="object" xlink:title="MenuSymbol" xlink:href="#_002asqr01cnbobat5g2r" state="closed" behavior="tree" text-scale="2.07652" decomp-scale="0.044197" left="1535.95" top="895.971" width="543.094" height="181.031">
+ </objectview>
+
+ <objectview id="_002asqr01cnbobs8dopu" xlink:role="object" xlink:title="toolBarSymbol" xlink:href="#_002asqr01cnbobddm6cn" state="closed" behavior="tree" text-scale="2.07652" decomp-scale="0.044197" left="1535.95" top="703.977" width="543.094" height="181.031">
+ </objectview>
+
+ <relationshipview id="_002asqr01cnbrp0cr654" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneSymbol" xlink:href="#_002asqr01cnboba3clkk"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbrp0is2nu" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="MenuSymbol" xlink:href="#_002asqr01cnbobn06hgi"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbrp3g62r0" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbrp9gpee8" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneTreeLayout" xlink:href="#_002asqr01cnbobfc08nt"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbrpb8ej1g" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="MenuLayout" xlink:href="#_002asqr01cnbob2rd4ir"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbrpgu5mus" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="toolBarLayout" xlink:href="#_002asqr01cnbob81n7rc"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbrpn812q4" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="toolBarSymbol" xlink:href="#_002asqr01cnbobs8dopu"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbrpra489e" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneLayout" xlink:href="#_002asqr01cnbobkkrdbn"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs33ftm4q" xlink:role="relationship" xlink:href="#_002asqr01cnbrfoi5oun">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneTreeLayout" xlink:href="#_002asqr01cnbobfc08nt"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs372lpl0" xlink:role="relationship" xlink:href="#_002asqr01cnbrfdn4kr4">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneLayout" xlink:href="#_002asqr01cnbobkkrdbn"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs37qumf1" xlink:role="relationship" xlink:href="#_002asqr01cnbrf7vkg04">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="MenuLayout" xlink:href="#_002asqr01cnbob2rd4ir"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs3ed4lf7" xlink:role="relationship" xlink:href="#_002asqr01cnbrfhrf445">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="MenuSymbol" xlink:href="#_002asqr01cnbobn06hgi"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs3k3ukkd" xlink:role="relationship" xlink:href="#_002asqr01cnbrf7vkg04">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="MenuLayout" xlink:href="#_002asqr01cnbob2rd4ir"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs3kh67q1" xlink:role="relationship" xlink:href="#_002asqr01cnbrfhrf445">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="MenuSymbol" xlink:href="#_002asqr01cnbobn06hgi"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs3nmq1oq" xlink:role="relationship" xlink:href="#_002asqr01cnbrfdn4kr4">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneLayout" xlink:href="#_002asqr01cnbobkkrdbn"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbs3v2itbf" xlink:role="relationship" xlink:href="#_002asqr01cnbrfoi5oun">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneTreeLayout" xlink:href="#_002asqr01cnbobfc08nt"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbsd2asge8" xlink:role="relationship" xlink:href="#_002asqr01cnbrf2bccir">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneSymbol" xlink:href="#_002asqr01cnboba3clkk"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="left"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01cnbsd4stvvk" xlink:role="relationship" xlink:href="#_002asqr01cnbrf2bccir">
+  <origin-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="#_002asqr01cnbobirlpld"/>
+  <target-link xlink:role="objectview" xlink:title="LeftPaneSymbol" xlink:href="#_002asqr01cnboba3clkk"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="left"/>
+  </path>
+ </relationshipview>
+
+ <objectview id="_002asqr01cnbsnae7i18" xlink:role="object" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbsnv9mlp2" state="open" behavior="connector" text-scale="1.41419" decomp-scale="1" left="0" top="0" width="229.988" height="179.077">
+  <child-link xlink:role="modelview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbobk2dmln"/>
+ </objectview>
+
+ <modelview id="_002asqr01cnbsndtaj0v" primary-flag="true" standalone-flag="true" reusable-flag="true" zoom-level="1" x="0" y="0" seq="0" xlink:role="model" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbsn6mci2l" behavior="nested" text-scale="1" decomp-scale="1" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Menu arguments" xlink:href="#_002asqr01cnbsnae7i18"/>
+ </modelview>
+
+
+</metis>

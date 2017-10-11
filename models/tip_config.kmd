@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Tip_Configurator" title="Tip Configurator" desc="This metamodel enables users to create custom widget layouts for use in Troux Navigate. See the Troux Architect online help for information about creating widget layouts. ">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Tip Configurator Action Button" xlink:href="../objecttypes/tip_configurator_action_button.kmd#Tip_Configurator_Action_Button" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Variable" xlink:href="../abstracttypes/variable.kmd#oid1" xlink:actuate="user"/>
+  </complex-type-links>
+  <primitive-type-links size="2">
+   <primitive-type-link xlink:role="collection-type" xlink:title="Variable Collection" xlink:href="../primitivetypes/variable_collection.kmd#oid1"/>
+   <primitive-type-link xlink:role="valueset-type" xlink:title="Variable Pointer" xlink:href="../primitivetypes/variable_pointer.kmd#oid1"/>
+  </primitive-type-links>
+
+ </metamodel>
+
+
+</metis>

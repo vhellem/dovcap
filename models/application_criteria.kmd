@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="4"
+ nextoid="1">
+
+ <criteria id="oid1" name="getIsUsedBy" title="getIsUsedBy" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="type">
+      <complex-type-link xlink:role="type" xlink:title="uses/is used by (Weight/Criticality)" xlink:href="../relationshiptypes/uses-is_used_by_weight-criticality.kmd#Reltype_uses-is_used_by_weight-criticality_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="ApplicationBusinessProcess" title="Application-&#62;BusinessProcess" desc="This criterium is only valid if the types referred to in its name are used in the model.&#10;Drag this onto an Application instance, and the following types will be traversed." object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="has mechanism" xlink:href="../relationshiptypes/has_mechanism-is_mechanism_for.kmd#Reltype_has_mechanism-is_mechanism_for_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3" name="ApplicationInitiative" title="Application-&#62;Initiative" desc="This criterium is only valid if the types referred to in its name are used in the model.&#10;Drag this onto an Application instance, and the following types will be traversed." object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Change Component affects Application Component" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_change_component_affects_is_affected_by_application_component_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Initiative" xlink:href="../objecttypes/initiative.kmd#CompType_MEAF:Initiative_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid4" name="findStrategicValueChainApplication" title="Find Strategic Value Chain" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Business Process uses Application" xlink:href="../relationshiptypes/uses-is_used_by_weight-criticality.kmd#Reltype_business_process_uses_is_used_by_weight_criticality_application_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Business Process implements Strategy" xlink:href="../relationshiptypes/implements-is_implemented_by_weight.kmd#Reltype_business_process_implements_is_implemented_by_weight_strategy_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Strategy achieves Goal" xlink:href="../relationshiptypes/achieves-is_achieved_by_weight.kmd#Reltype_strategy_achieves_is_achieved_by_weight_goal_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

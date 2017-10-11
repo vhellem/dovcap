@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="2"
+ nextoid="1">
+
+ <typeview id="oid1" xlink:role="type" xlink:title="VBScript Code (CVW)" xlink:href="../languages/script_types.kmd#ObjType_AKM:VBScriptCode_UUID" typelabel="VB Script code" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="http://metadata.troux.info/meaf/layoutstrategies/container.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="script" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="ToolButton_gray_blu" xlink:href="akm.svg#_002asht025gbhac8tf7s" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ToolButton_gray_blu" xlink:href="akm.svg#_002asht025gbhac8tf7s" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/softwaremodule.png"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="VB Script (CVW)" xlink:href="../languages/script_types.kmd#ObjType_AKM:VBScript_UUID" typelabel="VB Script" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="CVW Container Matrix Vertical " xlink:href="cvw_layout_strategies.kmd#Layout_CVW:ContainerMatrixVertical"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="script" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_out" xlink:href="akm.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Header_out" xlink:href="akm.svg#_002ashu00c8jgff5le7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/softwaremodule.png"/>
+ </typeview>
+
+
+</metis>

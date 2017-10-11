@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ methods="1" 
+ nextoid="2">
+
+ <cpp-method id="oid1" name="Pick_Priority_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="priority_colormap" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_priority_colormap_UUID"/>
+   <string name="Property">priority</string>
+  </arg-list>
+ </cpp-method>
+
+
+ <cpp-method id="oid2" name="Pick_Phase_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="phase_colormap" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_phase_colormap_UUID"/>
+   <string name="Property">phase</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="Pick_Project_Phase_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="project_phase_colormap" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_project_phase_colormap_UUID"/>
+   <string name="Property">phase</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid4" name="Pick_Status_Color1" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="status_colormap1" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_status_colormap1_UUID"/>
+   <string name="Property">status</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" name="Pick_Status_Color2" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="status_colormap2" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_status_colormap2_UUID"/>
+   <string name="Property">status</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid6" name="Pick_Status_Color3" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="status_colormap3" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_status_colormap3_UUID"/>
+   <string name="Property">status</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="Pick_Status_Color4" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="status_colormap4" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_status_colormap4_UUID"/>
+   <string name="Property">status</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid8" name="Pick_Status_Color5" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="status_colormap5" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_status_colormap5_UUID"/>
+   <string name="Property">status</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid9" name="Pick_Weight_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="priority_colormap" xlink:href="../primitivetypes/colormapping_primitive_types.kmd#Primtype_weight_colormap_UUID"/>
+   <string name="Property">weight</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

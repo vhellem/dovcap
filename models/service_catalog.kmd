@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="4">
+
+ <type id="CompType_ITG:ServiceCatalog_UUID" name="service_catalog" title="Service Catalog" desc="A Catalog contains Service Offerings that are available for consumption." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Service Component" xlink:href="../abstracttypes/service_component.kmd#CompType_ITG:ServiceComponent_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="approvalNotes" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Approval Notes" desc="Any approval notes that were added by the approver." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_ApprovalNotes_UUID&#34;;"/>
+  <property name="approvalStatus" xlink:role="integer-type" xlink:title="Workflow Approval Status" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:ApprovalStatus_UUID" label="Approval Status" desc="Specifies the approval status of this catalog (editing, pending, approved)." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_ApprovalStatus_UUID&#34;;"/>
+  <property name="authorUsername" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Author Username" desc="The name of the user who created this service catalog." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_AuthorUsername_UUID&#34;;"/>
+  <property name="totalBudgetedCost" xlink:role="decimal-type" xlink:title="Total Budgeted Cost" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:TotalBudgetedCost_UUID" label="Total Budgeted Cost" desc="Total cost of service catalog for budget year specified." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_TotalBudgetedCost_UUID&#34;;isRequired=1;"/>
+  <property name="budgetedCostSummaryXML" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Budgeted Cost Summary XML" desc="Breakdown of budget cost in XML format." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_BudgetedCostSummaryXML_UUID&#34;;"/>
+  <property name="marketAnalysis" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Market Analysis" desc="Current Market Size and Projected Growth." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_MarketAnalysis_UUID&#34;;"/>
+  <property name="valueAddedServices" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Value Added Services" desc="List of services that are included with all associated Service Offerings, at no additional cost." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_ValueAddedServices_UUID&#34;;"/>
+  <property name="serviceAvailability" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Service Availability" desc="Instructions on who to contact to order these services or receive support." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_ServiceAvailability_UUID&#34;;"/>
+  <property name="keyGoals" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Key Goals" desc="List of internal goals / ROI assertions for this service." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_KeyGoals_UUID&#34;;"/>
+  <property name="workflowApprovalXML" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Workflow Approval XML" desc="The XML structure that lists the approvers with workflow process." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_WorkflowApprovalXML_UUID&#34;;"/>
+  <property name="complianceRollupXML" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Compliance Rollup XML" desc="The compliance rollup rules stored as an XML string." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceCatalog_ComplianceRollupXML_UUID&#34;;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service Catalog" xlink:href="#CompType_ITG:ServiceCatalog_UUID" xlink:actuate="user">
+   <string name="troux_shape">Ellipse</string>
+   <string name="troux_color">#BCCD4D</string>
+   <string name="troux_iconAlias">Icon_CompType_ITG:ServiceCatalog_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Service Catalog" xlink:href="#CompType_ITG:ServiceCatalog_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="approvalNotes" visible-flag="true"/>
+   <propertyview name="approvalStatus" visible-flag="true"/>
+   <propertyview name="authorUsername" visible-flag="true"/>
+   <propertyview name="totalBudgetedCost" visible-flag="true"/>
+   <propertyview name="budgetedCostSummaryXML" visible-flag="true"/>
+   <propertyview name="marketAnalysis" visible-flag="true"/>
+   <propertyview name="valueAddedServices" visible-flag="true"/>
+   <propertyview name="serviceAvailability" visible-flag="true"/>
+   <propertyview name="keyGoals" visible-flag="true"/>
+   <propertyview name="workflowApprovalXML" visible-flag="true"/>
+   <propertyview name="complianceRollupXML" visible-flag="true"/>
+   <propertyview name="workspaceID" visible-flag="false"/>
+   <propertyview name="correspondingLiveID" visible-flag="false"/>
+   <propertyview name="lockingWorkspaceID" visible-flag="false"/>
+   <propertyview name="markedForDeletion" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicecatalog.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicecatalog.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/servicecatalog.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Service Catalog" xlink:href="#CompType_ITG:ServiceCatalog_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="approvalNotes" visible-flag="true"/>
+   <propertyview name="approvalStatus" visible-flag="true"/>
+   <propertyview name="authorUsername" visible-flag="true"/>
+   <propertyview name="totalBudgetedCost" visible-flag="true"/>
+   <propertyview name="budgetedCostSummaryXML" visible-flag="true"/>
+   <propertyview name="marketAnalysis" visible-flag="true"/>
+   <propertyview name="valueAddedServices" visible-flag="true"/>
+   <propertyview name="serviceAvailability" visible-flag="true"/>
+   <propertyview name="keyGoals" visible-flag="true"/>
+   <propertyview name="workflowApprovalXML" visible-flag="true"/>
+   <propertyview name="complianceRollupXML" visible-flag="true"/>
+   <propertyview name="workspaceID" visible-flag="false"/>
+   <propertyview name="correspondingLiveID" visible-flag="false"/>
+   <propertyview name="lockingWorkspaceID" visible-flag="false"/>
+   <propertyview name="markedForDeletion" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicecatalog.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicecatalog.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/servicecatalog.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

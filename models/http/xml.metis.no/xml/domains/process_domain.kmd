@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="4"
+ nextoid="6">
+
+ <domain id="oid1" name="ProcessDomain" title="Process Domain" desc="Contains Process, Flow, Input, Control, Output, Mechanism, Portals, Alternative and Label.&#10;The Process Domain is capable of modeling logical processes under the influence of input, control, output and mechanisms (ICOMs).&#10;With the IPM additions, you can also model start- and end portals, alternative flow, and you can attach labels to ICOMs to display text.&#10;You can change the visualization of all processes in a model view by dropping the &#39;Set Viewstyle&#39; method onto the modeling background, or a container. Currently, the &#39;Flow Logic&#39; and the &#39;IPM&#39; visualizations are available.">
+  <domain-link xlink:role="domain" xlink:href="#oid3" xlink:actuate="user"/>
+  <domain-link xlink:role="domain" xlink:href="#oid5" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid3" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid4" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid6" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid21" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid22" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid23" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid24" xlink:actuate="user"/>
+ </domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid11" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid12" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid13" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid14" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/crud_to-crud_from.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/equals-equals.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_role-role_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/placed_in-storage_for.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/needs-needed_competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/uses-used_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/represented_as-represents.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/applies_to-has_goal.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/affects-has_problem.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/represents-has_representation.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid31" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid32" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid33" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid34" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/flowlogic.kmd#oid35" xlink:actuate="auto"/>
+ </domain>
+
+ <domain id="oid5" name="Methods" title="Common methods" desc="Contains the common methods for this domain">
+  <method-link xlink:role="cpp-method" xlink:href="../object_types/flowlogic.kmd#oid1201" xlink:actuate="user"/>
+ </domain>
+
+
+</metis>

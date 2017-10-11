@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Troux_Archetype" title="Troux Archetype" desc="Use the Troux Archetype domain to define patterns, common configurations, or frequently modeled collections of objects and relationships. For example, an archetype can define an organization&#39;s approved configuration for a LAMP stack. After an archetype has been defined, modelers can use the archetype to quickly create the instances defined within the archetype.">
+  <complex-type-links size="1">
+   <complex-type-link xlink:role="type" xlink:title="Archetype" xlink:href="../objecttypes/archetype.kmd#Archetype_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+  </metamodel>
+
+
+</metis>

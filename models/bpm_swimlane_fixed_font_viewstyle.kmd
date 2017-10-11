@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="17"
+ viewstyles="1"
+ nextoid="21">
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" typelabel="Logical Process" typedesc="In the Process BPM template, the &#34;traditional&#34; Logical Process in Metis is also used for BPMN-style modeling. A logical process here corresponds to a BPMN activity; which may be both a sub-process (i.e. an activity that has a decomposition as a process) and a task (i.e. a leaf-node activity). In BPMN terminology, a process corresponds to a particular assembly of process elements in a graph; i.e. a set of activities, gateways and events connected with flows.&#10;&#10;Original description of logical process: A series of operations that transforms Input into Output by use of certain Mechanisms under the Control of some external system or higher-level Logical Processes. A Logical Process takes up a certain interval in the information space, defined by a start action and close action. Actions are events or subprocesses. A Logical Process may be regarded as a &#39;black box&#39;. The internals of a Logical Process may be broken down in sub-processes in a recursive manner. A Logical Process is named by a verb or verb phrase and the default symbol is a rectangle." tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="prefix" visible-flag="true"/>
+   <propertyview name="punctuationMark" visible-flag="true"/>
+   <propertyview name="sequenceNumber" visible-flag="true"/>
+   <propertyview name="identification" visible-flag="true"/>
+   <propertyview name="BPM_ProcessModelChange" visible-flag="true"/>
+   <propertyview name="BPM_ClosedColor" visible-flag="false"/>
+   <propertyview name="BPM_OpenColor" visible-flag="false"/>
+   <propertyview name="BPM_FillPattern" visible-flag="false"/>
+   <propertyview name="BPM_Name" desc="The name to use on symbols of a logical process. If the process has a stereotype process, the stereotype name is used. Otherwise, the original name is used. A stereotype process is found by  following the has-stereotype relationship," visible-flag="false"/>
+   <propertyview name="BPM_Description" desc="The description to use on symbols of a logical process. If the process has a stereotype process, the stereotype description is used. Otherwise, the original description is used. A stereotype process is found by  following the has-stereotype relationship," visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="../symbols/bpm_process_idef0.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9.0pt&#62;&#60;qt&#62;&#34; (property identification) &#34; &#60;b&#62; &#34; (property name) (property BPM_Name) &#34;&#60;/b&#62;&#60;/span&#62;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_OpenColor))"/>
+   <replace tag="pmchange" property="value" macro="(expand (property BPM_ProcessModelChange))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Closed" xlink:href="../symbols/bpm_process_idef0.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9.0pt&#62;&#60;qt&#62;&#34; (property identification) &#34; &#60;b&#62; &#34; (property name) &#34;&#60;/b&#62;&#34; (property BPM_Name) &#34;&#60;I&#62; &#34; (property description) &#34;&#60;/I&#62;&#60;/span&#62;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_ClosedColor))"/>
+   <replace tag="pmchange" property="value" macro="(expand (property BPM_ProcessModelChange))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_logical_process.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Process Condition" xlink:href="../object_types/process_condition.kmd#oid1" typelabel="Process Condition" tree-size="1" nested-size="0.25" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Condition" xlink:href="../symbols/bpm_process_idef0.svg#oid24" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:7.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="condition" property="value" macro="(expand (property condition))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Condition" xlink:href="../symbols/bpm_process_idef0.svg#oid24" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:7.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="condition" property="value" macro="(expand (property condition))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/process_condition.png"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="followed by/follows" xlink:href="../relationship_types/followed_by-follows.kmd#oid1" typelabel="followed by/follows" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoOutputRelationship" xlink:href="../symbols/gem/gem_rel_output.svg#oid0" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" typelabel="InternalFlow" tree-size="1" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Intflow open" xlink:href="../symbols/bpm_process_idef0.svg#oid12" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="value" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property value) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Intflow closed" xlink:href="../symbols/bpm_process_idef0.svg#oid11" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_internal_flow.png"/>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:title="Input" xlink:href="../object_types/flowlogic.kmd#oid3" typelabel="Input" tree-size="1" nested-size="0.25" behavior="tree" position="left" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Input open" xlink:href="../symbols/bpm_process_idef0.svg#oid26" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="value" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property value) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Input closed" xlink:href="../symbols/bpm_process_idef0.svg#oid20" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_input.png"/>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" typelabel="Container" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="container open" xlink:href="../symbols/cont_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:10.0pt&#62;&#60;b&#62;&#34; (label) &#34;&#60;/b&#62;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Cont_closed_w_descr" xlink:href="../symbols/container_closed_1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:10.0pt&#62;&#60;b&#62;&#34; (label) &#34;&#60;/b&#62;&#60;/span&#62;&#34;)"/>
+   <replace tag="description" property="value" macro="(expand &#34;&#60;span style=font-size:8.0pt&#62;&#34; (description) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/container.png"/>
+ </typeview>
+
+ <typeview id="oid8" xlink:role="type" xlink:title="Control" xlink:href="../object_types/flowlogic.kmd#oid4" typelabel="Control" typedesc="IDEF0 Viewstyle fixed font" tree-size="0.9" nested-size="0.3" behavior="tree" position="top" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Control open" xlink:href="../symbols/bpm_process_idef0.svg#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="text1" property="value" macro="(expand (property value))"/>
+   <replace tag="value" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property value) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Control closed" xlink:href="../symbols/bpm_process_idef0.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="text1" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_control.png"/>
+ </typeview>
+
+ <typeview id="oid9" xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" typelabel="Output" tree-size="1" nested-size="0.25" behavior="tree" position="right" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Output open" xlink:href="../symbols/bpm_process_idef0.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="value" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property value) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Output closed" xlink:href="../symbols/bpm_process_idef0.svg#oid9" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_output.png"/>
+ </typeview>
+
+ <typeview id="oid10" xlink:role="type" xlink:title="Mechanism" xlink:href="../object_types/flowlogic.kmd#oid6" typelabel="Mechanism" tree-size="0.9" nested-size="0.3" behavior="tree" position="bottom" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Mech open" xlink:href="../symbols/bpm_process_idef0.svg#oid6" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="text1" property="value" macro="(expand (property value))"/>
+   <replace tag="value" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:5.0pt&#62;&#34; (property value) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Mech closed" xlink:href="../symbols/bpm_process_idef0.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property name) &#34;&#60;/p&#62;&#34;)"/>
+   <replace tag="text1" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_mechanism.png"/>
+ </typeview>
+
+ <typeview id="oid11" xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid12" typelabel="Hor Swimlane" tree-size="0.5" nested-size="0.5" behavior="nested" layout-flags="fixedlayoutset fixedlayoutnext ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid1" xlink:actuate="user">
+   <replace tag="border" property="linestyle" macro="(expand &#34;dash&#34;)"/>
+   <replace tag="border" property="linecolor" macro="(expand &#34;gray&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.computas.com/xml/diagrams/small_icons/horizontal_swimlane.png"/>
+ </typeview>
+
+ <typeview id="oid12" xlink:role="type" xlink:title="Vertical Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid13" typelabel="Ver Swimlane" tree-size="0.5" nested-size="0.5" behavior="nested" layout-flags="fixedlayoutset fixedlayoutnext ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Vertical Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid8" xlink:actuate="user">
+   <replace tag="border" property="linestyle" macro="(expand &#34;dash&#34;)"/>
+   <replace tag="border" property="linecolor" macro="(expand &#34;gray&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Vertical Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.computas.com/xml/diagrams/small_icons/vertical_swimlane.png"/>
+ </typeview>
+
+ <typeview id="oid14" xlink:role="type" xlink:title="Title Left" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid22" tree-size="1" nested-size="1" behavior="nested" position="left" placement="internal" layout-flags="fixedlayoutset fixedlayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleLeft" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid15" xlink:role="type" xlink:title="Title Right" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid23" tree-size="1" nested-size="1" behavior="nested" position="right" placement="internal" layout-flags="fixedlayoutset fixedlayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleRight" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid17" xlink:role="type" xlink:title="Alternative" xlink:href="../object_types/flowlogic.kmd#oid23" typelabel="Alernative" tree-size="1" nested-size="0.3" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Alternative" xlink:href="../symbols/process.svg#oid23" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:7.0pt&#62;&#34; (label) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Alternative" xlink:href="../symbols/process.svg#oid23" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:7.0pt&#62;&#34; (label) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_alternative.png"/>
+ </typeview>
+
+ <typeview id="oid18" xlink:role="type" xlink:title="Title Top" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid24" tree-size="1" nested-size="1" behavior="nested" position="top" placement="internal" layout-flags="fixedlayoutset fixedlayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleTop" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid19" xlink:role="type" xlink:title="Title Bottom" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid25" tree-size="1" nested-size="1" behavior="nested" position="bottom" placement="internal" layout-flags="fixedlayoutset fixedlayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleBottom" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid20" xlink:role="type" xlink:title="Swimlane Diagram" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme fixedlayoutset fixedlayoutlocked ">
+  <layout-link xlink:role="object" xlink:title="Swimlane layout collection" xlink:href="http://xml.computas.com/xml/diagrams/layout_strategies/swimlane_layout.kmd#oid3"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Diagram" xlink:href="http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:10pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Swimlane Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid6&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Diagram" xlink:href="http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:10pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Swimlane Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid6&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.computas.com/xml/diagrams/small_icons/swimlane_diagram.png"/>
+ </typeview>
+
+ <viewstyle id="oid1" name="BPM_Viewstyle_w_Fixed_Font_Print" title="BPM 5 Viewstyle: Line ICOM, Autoline, Fixed Font" desc="BPM 5 Viewstyle: Line ICOM, Autoline, Fixed Font (Increased size of ICOMS for better readability in Swimlanes; Closed Process has description on symbol) ">
+  <typeview-link xlink:role="typeview" xlink:href="#oid20" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="bpm_swimlane_viewstyle.kmd#oid24" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../relationship_types/bpm_rels.kmd#oid1011" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="bpm_swimlane_viewstyle.kmd#oid23" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../relationship_types/bpm_rels.kmd#oid1012" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="bpm_swimlane_viewstyle.kmd#oid20" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid7" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="bpm_swimlane_viewstyle.kmd#oid22" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid8" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/bpm.kmd#oid1006" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid9" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid10" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid11" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid12" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid14" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid15" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid18" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid19" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../relationship_types/bpm_rels.kmd#oid1019" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

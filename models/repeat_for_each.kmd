@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Repeat_for_each" name="Repeat_for_each" title="Repeat for each" desc="Links an object to a task, implying that the task should be repeated (as multiple concrete tasks) for each object of the type that fullfills the crtiteria given in the &#34;applies to&#34; property of this relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Task content" xlink:href="task_content.kmd#AKM_Task_Content"/>
+  <property name="Applies_to" xlink:role="integer-type" xlink:title="Standard queries" xlink:href="../../system/primitivetypes/standard_queries.kmd#AKM_Standard_queries" label="Applies to" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Repeat_for_each_Query_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top" mid-point-text-flag="true"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task (AKM)" xlink:href="../objecttypes/task.kmd#AKM_Task" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Repeat for each" xlink:href="#AKM_Repeat_for_each" xlink:actuate="user">
+   <string name="from">Repeat for each</string>
+   <string name="to">Repeated task</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Repeat for each" xlink:href="#AKM_Repeat_for_each" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="Applies_to">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

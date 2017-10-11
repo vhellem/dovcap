@@ -1,0 +1,1464 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ instances="5"
+ instanceviews="9"
+ nextoid="1">
+
+ <model id="_002aslb01sme0q6niekc" name="Standard Blank" title="Standard Blank" desc="Blank Metis Modeling model" standalone-flag="true">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Classes and Utilities" xlink:href="#_002aslb01so0qj8pu96q"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Standard Blank" xlink:href="#_002aslb01sme0q6niekc" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Standard Blank" xlink:href="#_002aslb01sme0q6niekc" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="_002aslb01so0qj8pu96q">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Classes and Utilities</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Class CC_Rule" xlink:href="#_002aslb01spoqh67dmsg"/>
+  <part-link xlink:role="object" xlink:title="Function getParameterTitle" xlink:href="#_002asls00rc18ond6ves"/>
+  <part-link xlink:role="object" xlink:title="Class CC_RuleEngine" xlink:href="#_002asmt01e9ug3vdtq5q"/>
+ </object>
+
+ <object id="_002aslb01spoqh67dmsg">
+  <valueset size="10" xlink:role="type" xlink:title="VBScript Code (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScriptCode_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Class CC_Rule</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070530 071906167</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+
+&#39;-----------------------------------------------------------
+&#39;-----------------------------------------------------------
+Class CC_Rule
+
+
+    &#39; Variant parameters
+    Public Title                        &#39; String
+
+    &#39; Context variables (public)
+    Public currentModel
+    Public currentModelView
+    Public currentInstance
+    Public currentInstanceView
+    Public ObjectAspectRatio   
+
+    &#39; Debug
+    Public debug
+
+    &#39; Types
+    Private buttonType
+    Private hasContextType
+    Private specContainerType
+    Private hasInstanceContextType
+
+    Private actionType
+    Private ccType
+    Private conditionType
+    Private ruleType
+    Private cpValueType
+    Private dpValueType
+    Private fpValueType
+    Private ppValueType
+    Private vpValueType
+    Private hasActionType
+    Private hasConditionType
+    Private hasRuleType
+    Private ifThenType
+    Private inputToType
+    Private inputTo2Type
+    Private isSubjectOfType
+    Private outputToType
+    Private anyObjectType
+    Private hasCStype
+    Private hasCEtype
+    Private hasCRtype
+    Private usesCCtype
+
+    &#39; Methods
+    Private ruleMethod
+
+    &#39; Arguments
+    Private currentWindow
+    Private configModel
+    Private ccRuleEngine
+
+&#39;-----------------------------------------------------------
+    Public Property Get ruleEngine
+        set ruleEngine = ccRuleEngine
+    End Property
+
+&#39;-----------------------------------------------------------
+    Public Sub execute(mode)
+        dim ruleObject
+        dim cvwTask
+
+        if mode = &#34;Edit&#34; then
+            set ruleObject = findRule()
+            if not isEnabled(ruleObject) then
+                &#39;MsgBox &#34;There is no rule connected!&#34;
+                exit sub
+            end if
+        end if
+        if isEnabled(ruleObject) then
+            title = ruleObject.title
+            if title = &#34;New rule&#34; then
+                set ruleObject = buildRule(ruleObject)
+            end if
+        end if
+        if isEnabled(ruleObject) then
+            call openRuleWindow(ruleObject)
+        end if
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Function getRules(inst)
+        dim rules, noRules
+
+        set rules = Nothing
+        if inst.type.uri = ruleType.uri then
+            set rules = metis.newInstanceList
+            call rules.addLast(inst)
+        elseif inst.isRelationship then
+            set rules = metis.newInstanceList
+            noRules = getRelationshipRules(inst, rules)
+        elseif inst.isObject then
+            set rules = inst.getNeighbourObjects(0, isSubjectOfType, ruleType)
+        end if
+        set getRules = rules
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Function getRelationshipRules(relship, rules)
+        dim ruleIds, ruleUri, ruleObject
+        dim idArray
+        dim i
+
+        getRelationshipRules = 0
+        if isEnabled(relship) then
+            on error resume next
+            ruleIds = relship.getNamedStringValue(&#34;ruleIds&#34;)
+            if Len(ruleIds) &#62; 0 then
+	            idArray = Split(ruleIds, &#34;;&#34;, -1, 1)
+                i = 0
+                ruleUri = &#34;&#34;
+                do
+                    on error resume next
+                    ruleUri = idArray(i)
+                    if Len(ruleUri) &#62; 0 then
+                        if Left(ruleUri, 1) = &#34;#&#34; then
+                            ruleUri = relship.url &#38; ruleUri
+                        end if
+                        set ruleObject = metis.findInstance(ruleUri)
+                        if isEnabled(ruleObject) then
+                            if not isValid(rules) then
+                                set rules = metis.newInstanceList
+                            end if
+                            call rules.addLast(ruleObject)
+                        end if
+                    else
+                        exit do
+                    end if
+                    i = i + 1
+                    ruleUri = &#34;&#34;
+                loop
+            end if
+        end if
+        if isValid(rules) then
+            getRelationshipRules = rules.count
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Function findRule()
+        dim rule, rules
+        dim ruleObject
+        dim model, modelObject
+        dim cvwSelectDialog
+
+        set findRule = Nothing
+        if currentInstance.type.uri = ruleType.uri then
+            set findRule = currentInstance
+            exit function
+        end if
+        set rules = getRules(currentInstance)
+        if isValid(rules) then
+            &#39; Get model object
+            set model = contentModel()
+            if isEnabled(model) then
+                set modelObject = metis.findInstance(model.uri)
+                &#39; Create the rule object
+                set ruleObject = modelObject.newPart(ruleType)
+                if isEnabled(ruleObject) then
+                    ruleObject.title = &#34;New rule&#34;
+                    set findRule = ruleObject
+                end if
+            end if
+            if rules.count = 0 then
+                exit function
+            else
+                rules.addFirst ruleObject
+                set cvwSelectDialog = new CVW_SelectDialog
+                cvwSelectDialog.singleSelect = true
+                cvwSelectDialog.title = &#34;Select dialog&#34;
+                cvwSelectDialog.heading = &#34;Select rule&#34;
+                set rules = cvwSelectDialog.show(rules)
+                if isValid(rules) then
+                    if rules.count = 1 then
+                        set findRule = rules(1)
+                    end if
+                end if
+                if findRule.uri &#60;&#62; ruleObject.uri or rules.count = 0 then
+                    model.deleteObject(ruleObject)
+                end if
+            end if
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Function buildRule(ruleObject)
+        dim model, modelObject
+        dim actionObject, conditionObject
+        dim ruleName
+        dim hasRuleRel, subjectOfRel, partOfRel, ifThenRel
+        dim ccObject, ccObjects
+        dim ruleIds
+        dim idArray
+        dim hasSubject
+
+        set buildRule = Nothing
+        if not isEnabled(ruleObject) then
+            exit function
+        else
+            &#39; Create rule object
+            &#39; Get model object
+            set model = contentModel()
+            if isEnabled(model) then
+                set modelObject = metis.findInstance(model.uri)
+                set ccObjects = model.findInstances(ccType, &#34;&#34;, &#34;&#34;)
+                if isValid(ccObjects) then
+                    if ccObjects.count &#62; 0 then
+                        set ccObject = ccObjects(1)
+                    end if
+                end if
+                title = ruleObject.title
+                if title = &#34;New rule&#34; then
+                    ruleName = &#34;Rule[&#34; &#38; currentInstance.title &#38; &#34;]&#34;
+                    ruleName = InputBox(&#34;Enter rule name&#34;, &#34;Input dialog&#34;, ruleName)
+                    if Len(ruleName) &#62; 0 then
+                        ruleObject.title = ruleName
+                    else
+                        exit function
+                    end if
+                    &#39; Connect the relationships
+                    if isEnabled(ccObject) then
+                        set hasRuleRel = model.newRelationship(hasRuleType, ccObject, ruleObject)
+                    end if
+                    hasSubject = false
+                    if currentInstance.isRelationship then
+                        ruleIds = currentInstance.getNamedStringValue(&#34;ruleIds&#34;)
+                        if currentInstance.url = ruleObject.url then
+	                        idArray = Split(ruleObject.uri, &#34;#&#34;, -1, 1)
+	                        if Len(ruleIds) &#62; 0 then
+                                ruleIds = ruleIds &#38; &#34;;&#34;
+                            end if
+                            ruleIds = ruleIds &#38; Chr(35) &#38; idArray(1)
+                        else
+                            ruleIds = ruleObject.uri
+                        end if
+                        call currentInstance.setNamedStringValue(&#34;ruleIds&#34;, ruleIds)
+                        hasSubject = true
+                    else
+                        set subjectOfRel = model.newRelationship(isSubjectOfType, currentInstance, ruleObject)
+                        if isEnabled(subjectOfRel) then hasSubject = true
+                    end if
+                    if hasSubject then
+                        &#39; Create condition and action objects
+                        set conditionObject = modelObject.newPart(conditionType)
+                        set actionObject = modelObject.newPart(actionType)
+                        if isEnabled(conditionObject) and isEnabled(actionObject) then
+                            &#39; Create relationships
+                            set partOfRel = model.newRelationship(hasConditionType, ruleObject, conditionObject)
+                            set partOfRel = model.newRelationship(hasActionType, ruleObject, actionObject)
+                            set ifThenRel = model.newRelationship(ifThenType, conditionObject, actionObject)
+                        end if
+                    end if
+                end if
+            end if
+            if isEnabled(ruleObject) then
+                set buildRule = ruleObject
+            end if
+        end if
+   End Function
+
+&#39;-----------------------------------------------------------
+    Public Function getSubjectOf(rule)
+        dim model
+        dim rel, relships
+        dim r, rules, noRules
+        
+        set getSubjectOf = Nothing
+
+        set relships = rule.getNeighbourRelationships(1, isSubjectOfType)
+        if relships.count &#62; 0 then
+            set getSubjectOf = relships(1).origin
+        else
+            set model = contentModel
+            set relships = model.relationships
+            for each rel in relships
+                if isEnabled(rel) then
+                    set rules = Nothing
+                    noRules = getRelationshipRules(rel, rules)
+                    if noRules &#62; 0 then
+                        for each r in rules
+                            if r.uri = rule.uri then
+                                set getSubjectOf = rel
+                                exit function
+                            end if
+                        next
+                    end if
+                end if
+            next
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Sub openRuleWindow(ruleObject)
+        dim cvwModel, cvwAction, cvwWorkarea
+        dim actionName, actionObject, actionObjects
+        dim workarea, workWindow, wObject
+        dim rel, rels
+        dim ruleView
+        dim child, children
+        dim textscale
+
+        set cvwModel = getCVWmodel
+        actionName = &#34;_Rules_&#34;
+        set actionObjects = cvwModel.findInstances(buttonType, &#34;name&#34;, actionName)
+        if isValid (actionObjects) then
+            if actionObjects.count &#62; 0 then
+                set actionObject = actionObjects(1)
+                set cvwAction = new CVW_MenuAction
+                set cvwAction.configObject = actionObject
+                &#39;set cvwAction.contextInstance = ruleObject
+                call cvwAction.build
+                call cvwAction.execute
+                set workarea = cvwAction.workarea
+                if isValid(workarea) and isEnabled(ruleObject) then
+                    set workWindow = workarea.WorkWindow
+                    &#39; Get CVW_Workarea
+                    set cvwWorkarea = new CVW_Workarea
+                    set cvwWorkarea.WorkWindow = workWindow
+                    &#39; Set context instance
+                    set wObject = workWindow.instance
+                    set rels = wObject.getNeighbourRelationships(0, hasInstanceContextType)
+                    if rels.count &#62; 0 then
+                        set rel = rels(1)
+                        set rel.target = ruleObject
+                    end if
+                    set cvwWorkarea = Nothing
+                    call populateRule(workWindow, ruleObject, false)
+                end if
+                set cvwAction = Nothing
+            end if
+        end if
+
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Function populateRule(workWindow, ruleObject, fromOpen)
+        dim ruleView
+        dim child, children
+        dim action, actions, actionView
+        dim condition, conditions, conditionView
+        dim fromObj, fromObjView
+        dim parameterValue, parameterValueView
+        dim rel, rels, relView, view, views
+        dim textscale
+        dim objGeo, size
+        dim objHeight
+
+        set populateRule = Nothing
+        if not fromOpen then
+            if isValid(workWindow) then
+                set children = workWindow.children
+                for each child in children
+                    call currentModelView.deleteObjectView(child)
+                next
+            end if
+        end if
+        if isValid(workWindow) and isEnabled(ruleObject) then
+            &#39;set ruleView = workWindow
+            set ruleView = viewExists(ruleObject, workWindow)
+            if isValid(ruleView) then
+                if fromOpen then
+                    textscale = ruleView.textscale
+                    textscale = textscale / 1
+                    ruleView.textScale = textScale
+                end if
+            else
+                set ruleView = workWindow.newObjectView(ruleObject)
+                textscale = ruleView.textscale
+                textscale = textscale / 5
+                ruleView.textScale = textScale
+            end if
+            if isValid(ruleView) then
+                if hasInstance(ruleView) then
+                    &#39; Find actions
+                    set actions = ruleObject.getNeighbourObjects(0, hasActionType, actionType)
+                    for each action in actions
+                        set actionView = viewExists(action, ruleView)
+                        if not isValid(actionView) then
+                            set actionView = ruleView.newObjectView(action)
+                            set objGeo = actionView.absScaleGeometry
+                            set size = objGeo.size
+                            if size.height / size.width &#62; ObjectAspectRatio then
+                                size.height = size.width * 0.2 &#39;ObjectAspectRatio
+                                size.width  = 2 * size.height
+                                set objGeo.size = size
+                                set actionView.absScaleGeometry = objGeo
+                                if actionView.isNested then
+                                    textScale = ruleView.textScale
+                                    textScale = textscale * 3
+                                    actionView.close
+                                else
+                                    textscale = 0.5
+                                end if
+                                actionView.textscale = textscale
+                            end if
+                        end if
+                    next
+                    &#39; Find conditions
+                    set conditions = ruleObject.getNeighbourObjects(0, hasConditionType, conditionType)
+                    for each condition in conditions
+                        set conditionView = viewExists(condition, ruleView)
+                        if not isValid(conditionView) then
+                            set conditionView = ruleView.newObjectView(condition)
+                            set objGeo = conditionView.absScaleGeometry
+                            set size = objGeo.size
+                            if size.height / size.width &#62; ObjectAspectRatio then
+                                size.height = size.width * 0.2 &#39;ObjectAspectRatio
+                                size.width = size.height
+                                set objGeo.size = size
+                                set conditionView.absScaleGeometry = objGeo
+                                if conditionView.isNested then
+                                    textScale = ruleView.textScale
+                                    textScale = textscale * 3
+                                    conditionView.close
+                                else
+                                    textscale = 0.5
+                                end if
+                                conditionView.textscale = textscale
+                            end if
+                        end if
+                    next
+                    &#39; Find ifThenRels
+                    for each action in actions
+                        set actionView = action.views(1)
+                        if isValid(actionView) then
+                            set rels = action.getNeighbourRelationships(1, ifThenType)
+                            for each rel in rels
+                                set condition = rel.origin
+                                set conditionView = condition.views(1)
+                                if isInView(conditionView, ruleView) then
+                                    set relView = relViewExists(rel, conditionView, actionView)
+                                    if not isValid(relView) then
+                                        set relView = currentModelView.newRelationshipView(rel, conditionView, actionView)
+                                    end if
+                                end if
+                            next
+                        end if
+                    next
+                    &#39; Find inputToRels to conditions
+                    for each condition in conditions
+                        set conditionView = condition.views(1)
+                        if isValid(conditionView) then
+                            set rels = condition.getNeighbourRelationships(1, inputTo2Type)
+                            if rels.count = 0 then
+                                set rels = condition.getNeighbourRelationships(1, inputToType)
+                            end if
+                            for each rel in rels
+                                set fromObj = rel.origin
+                                if fromObj.type.uri = conditionType.uri then
+                                    set fromObjView = fromObj.views(1)
+                                    if isInView(fromObjView, ruleView) then
+                                        set relView = relViewExists(rel, fromObjView, conditionView)
+                                        if not isValid(relView) then
+                                            set relView = currentModelView.newRelationshipView(rel, fromObjView, conditionView)
+                                        end if
+                                    end if
+                                elseif fromObj.type.uri = vpValueType.uri then
+                                end if
+                            next
+                        end if
+                    next
+                    &#39; Find inputToRels to parameter values
+                    for each condition in conditions
+                        set conditionView = condition.views(1)
+                        if isValid(conditionView) then
+                            set rels = condition.getNeighbourRelationships(1, inputToType)
+                            for each rel in rels
+                                set parameterValue = rel.origin
+                                if isParameterValueType(parameterValue) then
+                                    set parameterValueView = Nothing
+                                    set views = parameterValue.views
+                                    if isValid(views) then
+                                        for each view in views
+                                            if isInView(view, ruleView) then
+                                                set parameterValueView = view
+                                                exit for
+                                            end if
+                                        next
+                                    end if
+                                    if not isValid(parameterValueView) then
+                                        &#39; Create view of parameterValue
+                                        set parameterValueView = ruleView.newObjectView(parameterValue)
+                                        set objGeo = parameterValueView.absScaleGeometry
+                                        set size = objGeo.size
+                                        if size.height / size.width &#62; ObjectAspectRatio then
+                                            size.height = ObjectAspectRatio * size.width
+                                            set objGeo.size = size
+                                            set parameterValueView.absScaleGeometry = objGeo
+                                        end if
+                                        if parameterValueView.isNested then
+                                            textScale = ruleView.textScale
+                                            textScale = textscale * 2.25
+                                            parameterValueView.close
+                                        else
+                                            textscale = 0.5
+                                        end if
+                                        parameterValueView.textscale = textscale
+                                    end if
+                                    if isValid(parameterValueView) then
+                                        set relView = relViewExists(rel, parameterValueView, conditionView)
+                                        if not isValid(relView) then
+                                            set relView = currentModelView.newRelationshipView(rel, parameterValueView, conditionView)
+                                        end if
+                                    end if
+                                end if
+                            next
+                        end if
+                    next
+                    &#39; Find outputToRels to parameter values
+                        if isValid(actionView) then
+                            set action = actionView.instance
+                            set rels = action.getNeighbourRelationships(0, outputToType)
+                            for each rel in rels
+                                set parameterValue = rel.target
+                                if isParameterValueType(parameterValue) then
+                                    set parameterValueView = Nothing
+                                    set views = parameterValue.views
+                                    if isValid(views) then
+                                        for each view in views
+                                            if isInView(view, ruleView) then
+                                                set parameterValueView = view
+                                                exit for
+                                            end if
+                                        next
+                                    end if
+                                    if not isValid(parameterValueView) then
+                                        &#39; Create view of parameterValue
+                                        set parameterValueView = ruleView.newObjectView(parameterValue)
+                                        if parameterValueView.isNested then
+                                            textScale = ruleView.textScale
+                                            textScale = textscale * 1.75
+                                            parameterValueView.close
+                                        else
+                                            textscale = 0.5
+                                        end if
+                                        parameterValueView.textscale = textscale
+                                    end if
+                                    if isValid(parameterValueView) then
+                                        set relView = relViewExists(rel, actionView, parameterValueView)
+                                        if not isValid(relView) then
+                                            set relView = currentModelView.newRelationshipView(rel, actionView, parameterValueView)
+                                            set objGeo = parameterValueView.absScaleGeometry
+                                            set size = objGeo.size
+                                            if size.height / size.width &#62; ObjectAspectRatio then
+                                                size.height = ObjectAspectRatio * size.width
+                                                set objGeo.size = size
+                                                set parameterValueView.absScaleGeometry = objGeo
+                                            end if
+                                        end if
+                                    end if
+                                end if
+                            next
+                        end if
+                end if
+            end if
+        end if
+        set populateRule = ruleView
+
+    End Function
+
+&#39;-----------------------------------------------------------
+    Public Sub configureTopCC(obj)
+        dim rel, rels
+
+        call transformRulesToScripts(obj)
+        call ccRuleEngine.executeRules(obj)
+        set rels = obj.getNeighbourRelationships(0, hasCStype)
+        for each rel in rels
+            call configureCS(rel)
+        next
+    End Sub
+
+    Private Sub configureCS(relship)
+        dim obj
+        dim rel, rels
+
+        call transformRulesToScripts(relship)
+        call ccRuleEngine.executeRules(relship)
+        set obj = relship.target
+        call transformRulesToScripts(obj)
+        call ccRuleEngine.executeRules(obj)
+        set rels = obj.getNeighbourRelationships(0, hasCEtype)
+        for each rel in rels
+            call configureCE(rel)
+        next
+    End Sub
+
+    Private Sub configureCE(relship)
+        dim obj
+        dim rel, rels
+
+        call transformRulesToScripts(relship)
+        call ccRuleEngine.executeRules(relship)
+        set obj = relship.target
+        call transformRulesToScripts(obj)
+        call ccRuleEngine.executeRules(obj)
+        set rels = obj.getNeighbourRelationships(0, hasCRtype)
+        for each rel in rels
+            call configureCR(rel)
+        next
+    End Sub
+
+    Private Sub configureCR(relship)
+        dim obj
+        dim rel, rels
+
+        call transformRulesToScripts(relship)
+        call ccRuleEngine.executeRules(relship)
+        set obj = relship.target
+        call transformRulesToScripts(obj)
+        call ccRuleEngine.executeRules(obj)
+        set rels = obj.getNeighbourRelationships(0, usesCCtype)
+        for each rel in rels
+            call configureCC(rel)
+        next
+    End Sub
+
+    Private Sub configureCC(relship)
+        dim obj
+
+        call transformRulesToScripts(relship)
+        call ccRuleEngine.executeRules(relship)
+        set obj = relship.target
+        call transformRulesToScripts(obj)
+        call ccRuleEngine.executeRules(obj)
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Sub transformRulesToScripts(parentInst)
+        dim rule, rules
+
+        set rules = getRules(parentInst)
+        for each rule in rules
+            if isEnabled(rule) then
+                call transformToScript(rule)
+            end if
+        next
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Sub transformToScript(ruleObject)
+        dim lineNo
+        dim action, actions, outputs, ifThens
+        dim operator, operation
+        dim condition
+        dim paramType, paramObj, valueObj
+        dim script(), text
+        dim i
+
+        lineNo = 0
+        &#39; Find the action
+        set actions = ruleObject.getNeighbourObjects(0, hasActionType, actionType)
+        if actions.count &#62; 0 then
+            set action = actions(1)
+            operation = action.getNamedStringValue(&#34;operation&#34;)
+            if Len(operation) &#62; 0 then
+                ReDim Preserve script(lineNo + 5)
+                lineNo = lineNo + 1
+                script(lineNo) = &#34;end if&#34;
+                lineNo = lineNo + 1
+                if debug then
+                    script(lineNo) = &#34;    call &#34; &#38; operation
+                else
+                    script(lineNo) = &#34;    call ccRuleEngine.&#34; &#38; operation
+                end if
+                set outputs = action.getNeighbourObjects(0, outputToType, anyObjectType)
+                if outputs.count &#62; 0 then
+                    set valueObj = outputs(1)
+                    set paramObj = getCcParameterObj(valueObj)
+                    if debug then
+                        paramType = getCcParameterType(valueObj)
+                        script(lineNo) = script(lineNo) &#38; &#34;(&#34; &#38; Chr(34) &#38; paramType &#38; &#34;, &#34; &#38; Chr(34) &#38; paramObj.title &#38; Chr(34) &#38; &#34;, &#34; &#38; Chr(34) &#38; valueObj.title &#38; Chr(34) &#38; &#34;) &#34;
+                    else
+                        script(lineNo) = script(lineNo) &#38; &#34;(&#34; &#38; Chr(34) &#38; paramObj.uri &#38; Chr(34) &#38; &#34;, &#34; &#38; Chr(34) &#38; valueObj.uri &#38; Chr(34) &#38; &#34;) &#34;
+                    end if
+                end if
+
+                lineNo = lineNo + 1
+                script(lineNo) = &#34;if condition then&#34;
+                &#39; Find the conditions
+                set ifThens = action.getNeighbourObjects(1, ifThenType, conditionType)
+                if ifThens.count &#60;&#62; 0 then
+                    set condition = ifThens(1)
+                    text = &#34;&#34;
+                    text = getCondition(ruleObject, condition, text, debug)
+                    if Len(text) = 0 then exit sub
+                end if
+                if Len(text) &#62; 0 then
+                    lineNo = lineNo + 1
+                    script(lineNo) = &#34;condition = &#34; &#38; text &#38; vbCrLf
+                end if
+                text = &#34;set ccRuleEngine = new CC_RuleEngine&#34; &#38; vbCrLf
+                for i = lineNo to 1 step -1
+                    text = text &#38; script(i) &#38; vbCrLf
+                next
+                text = text &#38; &#34;set ccRuleEngine = Nothing&#34; &#38; vbCrLf
+                if Len(text) &#62; 0 then
+                    if debug then
+                        MsgBox text
+                    else
+                        call ruleObject.setNamedStringValue(&#34;ruleCode&#34;, text)
+                    end if
+                end if
+            end if
+        end if
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Private Function getCondition(ruleObject, condition, text, debug)
+        dim inputRel, inputRels
+        dim valueObj, paramObj
+        dim paramType, operator
+        dim conditionType, inputToType, inputTo2Type
+        dim conditionObj
+        dim i
+
+        set conditionType    = metis.findType(&#34;http://xml.chalmers.se/class/rule_condition.kmd#condition&#34;)
+        set inputToType      = metis.findType(&#34;http://xml.chalmers.se/class/rule_condition.kmd#input_to&#34;)
+        set inputTo2Type      = metis.findType(&#34;http://xml.chalmers.se/class/rule_condition.kmd#input_to_2&#34;)
+
+        set inputRels = condition.getNeighbourRelationships(1, inputToType)
+        operator = condition.getNamedStringValue(&#34;operator&#34;)
+        if inputRels.count = 0 then
+            if not (operator = &#34;TRUE&#34; or operator = &#34;FALSE&#34;) then
+                MsgBox &#34;Syntax error: &#34; &#38; vbCrLf &#38; &#34;Illegal condition in rule: &#34; &#38; Chr(34) &#38; ruleObject.title &#38; Chr(34), vbExclamation
+                getCondition = &#34;&#34;
+            else
+                getCondition = operator
+            end if
+        else
+            i = 0
+            for each inputRel in inputRels
+                i = i + 1
+                set valueObj = inputRel.origin
+                set paramObj = getCcParameterObj(valueObj)
+                if debug then
+                    paramType = getCcParameterType(valueObj)
+                    text = text &#38; &#34;(getParameterValue(&#34; &#38; Chr(34) &#38; paramType &#38; Chr(34) &#38; &#34;, &#34; &#38; Chr(34) &#38; paramObj.title &#38; Chr(34) &#38; &#34;) = &#34; &#38; Chr(34) &#38; valueObj.title &#38;  Chr(34) &#38; &#34;)&#34;
+                else
+                    text = text &#38; &#34;(ccRuleEngine.getParameterValue(&#34; &#38; Chr(34) &#38; paramObj.uri &#38; Chr(34) &#38; &#34;) = ccRuleEngine.getValueOf(&#34; &#38; Chr(34) &#38; valueObj.uri &#38;  Chr(34) &#38; &#34;))&#34;
+                end if
+                if i &#60; inputRels.count then
+                    text = text &#38; &#34; &#34; &#38; operator &#38; &#34; &#34;
+                end if
+            next
+
+            set inputRels = condition.getNeighbourRelationships(1, inputTo2Type)
+            for each inputRel in inputRels
+                set conditionObj = inputRel.origin
+                text = text &#38; &#34; &#34; &#38; operator &#38; &#34; (&#34;
+                text = getCondition(ruleObject, conditionObj, text, debug)
+                text = text &#38; &#34;)&#34;
+            next
+            getCondition = text
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Function getCcParameterObj(valueObj)
+        dim paramType
+        dim hasValueType
+        dim hasVPVtype, hasCPVtype, hasFPVtype, hasDPVtype, hasPPVtype
+        dim paramObj, paramRels
+
+        set getCcParameterObj = Nothing
+
+        set hasVPVtype = metis.findType(&#34;http://xml.chalmers.se/class/has_variant_parameter_value.kmd#has_variant_parameter_value&#34;)
+        set hasCPVtype = metis.findType(&#34;http://xml.chalmers.se/class/has_constraint_parameter_value.kmd#has_constraint_parameter_value&#34;)
+        set hasFPVtype = metis.findType(&#34;http://xml.chalmers.se/class/has_functional_requirement_parameter_value.kmd#has_functional_requirement_parameter_value&#34;)
+        set hasDPVtype = metis.findType(&#34;http://xml.chalmers.se/class/has_design_parameter_value.kmd#has_design_parameter_value&#34;)
+        set hasPPVtype = metis.findType(&#34;http://xml.chalmers.se/class/has_performance_parameter_value.kmd#has_performance_parameter_value&#34;)
+
+        paramType = getCcParameterType(valueObj)
+        select case paramType
+        case &#34;VP&#34;   set hasValueType = hasVPVtype
+        case &#34;CP&#34;   set hasValueType = hasCPVtype
+        case &#34;FP&#34;   set hasValueType = hasFPVtype
+        case &#34;DP&#34;   set hasValueType = hasDPVtype
+        case &#34;PP&#34;   set hasValueType = hasPPVtype
+        end select
+        if isValid(hasValueType) then
+            set paramRels = valueObj.getNeighbourRelationships(1, hasValueType)
+            if paramRels.count &#62; 0 then
+                set paramObj = paramRels(1).origin
+                if isEnabled(paramObj) then
+                    set getCcParameterObj = paramObj
+                end if
+            end if
+        end if
+
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Function getCcParameterType(valueObj)
+        dim vType
+        dim vpvType, cpvType, fpvType, dpvType, ppvType
+
+        getCcParameterType = &#34;&#34;
+
+        set cpvType      = metis.findType(&#34;http://xml.chalmers.se/class/constraint_parameter_value.kmd#constraint_parameter_value&#34;)
+        set dpvType      = metis.findType(&#34;http://xml.chalmers.se/class/design_parameter_value.kmd#design_parameter_value&#34;)
+        set fpvType      = metis.findType(&#34;http://xml.chalmers.se/class/functional_requirement_parameter_value.kmd#functional_requirement_parameter_value&#34;)
+        set ppvType      = metis.findType(&#34;http://xml.chalmers.se/class/performance_parameter_value.kmd#performance_parameter_value&#34;)
+        set vpvType      = metis.findType(&#34;http://xml.chalmers.se/class/variant_parameter_value.kmd#variant_parameter_value&#34;)
+
+        set vType = valueObj.type
+        if vType.inherits(vpvType) then
+            getCcParameterType = &#34;VP&#34;
+        elseif vType.inherits(cpvType) then
+            getCcParameterType = &#34;CP&#34;
+        elseif vType.inherits(fpvType) then
+            getCcParameterType = &#34;FP&#34;
+        elseif vType.inherits(dpvType) then
+            getCcParameterType = &#34;DP&#34;
+        elseif vType.inherits(ppvType) then
+            getCcParameterType = &#34;PP&#34;
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Function isParameterValueType(inst)
+        dim instType
+
+        isParameterValueType = false
+        set instType = inst.type
+        if instType.uri = vpValueType.uri then
+            isParameterValueType = true
+        elseif instType.uri = dpValueType.uri then
+            isParameterValueType = true
+        elseif instType.uri = cpValueType.uri then
+            isParameterValueType = true
+        elseif instType.uri = fpValueType.uri then
+            isParameterValueType = true
+        elseif instType.uri = ppValueType.uri then
+            isParameterValueType = true
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Function contentModel           &#39;IMetisObject
+        dim context
+
+        &#39; Find ContentModel
+        if isValid(currentWindow) then
+            set contentModel = currentModel
+            set context = new EKA_Context
+            set context.currentModel        = currentModel
+            set context.currentModelView    = currentModelView
+            set context.currentInstance     = currentWindow.instance
+            set context.currentInstanceView = currentWindow
+            if isValid(context) then
+                if isEnabled(context.contentModel) then
+                    set contentModel = context.contentModel
+                end if
+            end if
+            set context = Nothing
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Sub Class_Initialize()
+        &#39;dim inst
+
+        set currentModel        = metis.currentModel
+        set currentModelView    = currentModel.currentModelView
+        set currentInstance     = currentModel.currentInstance
+        set currentInstanceView = currentModelView.currentInstanceView
+        set currentWindow       = findWorkWindowView(currentInstanceView)
+
+        &#39; Types
+        set buttonType       = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID&#34;)
+        set hasContextType   = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+        set hasInstanceContextType     = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+        set actionType       = metis.findType(&#34;http://xml.chalmers.se/class/rule_action.kmd#action&#34;)
+        set ccType           = metis.findType(&#34;http://xml.chalmers.se/class/configurable_component.kmd#configurable_component&#34;)
+        set conditionType    = metis.findType(&#34;http://xml.chalmers.se/class/rule_condition.kmd#condition&#34;)
+        set ruleType         = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#rule&#34;)
+        set cpValueType      = metis.findType(&#34;http://xml.chalmers.se/class/constraint_parameter_value.kmd#constraint_parameter_value&#34;)
+        set dpValueType      = metis.findType(&#34;http://xml.chalmers.se/class/design_parameter_value.kmd#design_parameter_value&#34;)
+        set fpValueType      = metis.findType(&#34;http://xml.chalmers.se/class/functional_requirement_parameter_value.kmd#functional_requirement_parameter_value&#34;)
+        set ppValueType      = metis.findType(&#34;http://xml.chalmers.se/class/performance_parameter_value.kmd#performance_parameter_value&#34;)
+        set vpValueType      = metis.findType(&#34;http://xml.chalmers.se/class/variant_parameter_value.kmd#variant_parameter_value&#34;)
+        set inputToType      = metis.findType(&#34;http://xml.chalmers.se/class/rule_condition.kmd#input_to&#34;)
+        set inputTo2Type     = metis.findType(&#34;http://xml.chalmers.se/class/rule_condition.kmd#input_to_2&#34;)
+        set outputToType     = metis.findType(&#34;http://xml.chalmers.se/class/rule_action.kmd#has_output&#34;)
+        set hasConditionType = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#has_condition&#34;)
+        set hasActionType    = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#has_action&#34;)
+        set hasRuleType      = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#has_rule&#34;)
+        set ifThenType       = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#if_then&#34;)
+        set isSubjectOfType  = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#subject_of_rule&#34;)
+        set anyObjectType    = metis.findType(&#34;metis:stdtypes#oid1&#34;)
+        set hasCStype  = metis.findType(&#34;http://xml.chalmers.se/class/is_composed_using.kmd#is_composed_using&#34;)
+        set hasCEtype  = metis.findType(&#34;http://xml.chalmers.se/class/has_composition_element.kmd#has_composition_element&#34;)
+        set hasCRtype  = metis.findType(&#34;http://xml.chalmers.se/class/has_composition_request.kmd#has_composition_request&#34;)
+        set usesCCtype = metis.findType(&#34;http://xml.chalmers.se/class/uses_configurable_component.kmd#uses_configurable_component&#34;)
+
+
+        &#39; Methods
+        set ruleMethod  = metis.findMethod(&#34;http://xml.chalmers.se/methods/rule_methods.kmd#evaluateRule&#34;)
+
+        &#39; Model
+        &#39;set inst = metis.findInstance(&#34;http://xml.chalmers.se/metamodels/cvw_cc_actions_1.kmv#_002ask601qg2tl2ra0ce&#34;)
+        set configModel  = currentInstance.ownerModel
+
+        &#39; Variables
+        set ccRuleEngine = new CC_RuleEngine
+
+        ObjectAspectRatio = 1.0
+        debug = false
+
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Sub Class_Terminate()
+        set ccRuleEngine = Nothing
+    End Sub
+
+End Class
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asls00rc18ond6ves">
+  <valueset size="10" xlink:role="type" xlink:title="VBScript Code (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScriptCode_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Function getParameterTitle</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070417 214400342</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">function getParameterTitle
+    dim currentModel
+    dim currentInstance
+    dim parameterType
+    dim rel, relships
+
+    &#39; Initialization
+    getParameterTitle = &#34;&#34;
+    set currentModel        = metis.currentModel
+    set currentInstance     = currentModel.currentInstance
+    set parameterType = metis.findType(&#34;http://xml.chalmers.se/class/cc_parameter.kmd#CC_parameter&#34;)
+
+    &#39; Main code
+    if isEnabled(currentInstance) then
+        set relships = currentInstance.neighbourRelationships
+        if isValid(relships) then
+            for each rel in relships
+                if rel.target.uri = currentInstance.uri then
+                    if rel.origin.type.inherits(parameterType) then
+                        getParameterTitle = rel.origin.title
+                    end if
+                end if
+            next
+        end if
+    end if
+end function
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asmt01e9ug3vdtq5q">
+  <valueset size="10" xlink:role="type" xlink:title="VBScript Code (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/script_types.kmd#ObjType_AKM:VBScriptCode_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Class CC_RuleEngine</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070530 142044835</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="script">option explicit
+
+&#39;-----------------------------------------------------------
+&#39;-----------------------------------------------------------
+Class CC_RuleEngine
+
+    &#39; Variant parameters
+    Public Title                        &#39; String
+
+    &#39; Context variables (public)
+    Public currentModel
+    Public currentModelView
+    Public currentInstance
+    Public currentInstanceView
+
+    &#39; Types
+    Private ruleType
+    Private anyObjectType
+    Private ccType
+    Private isSubjectOfType
+    Private useCCtype
+    Private cpType
+    Private dpType
+    Private fpType
+    Private ppType
+    Private vpType
+    Private cpValueType
+    Private dpValueType
+    Private fpValueType
+    Private ppValueType
+    Private vpValueType
+    Private hasCpType
+    Private hasDpType
+    Private hasFpType
+    Private hasPpType
+    Private hasVpType
+    Private hasCpValueType
+    Private hasDpValueType
+    Private hasFpValueType
+    Private hasPpValueType
+    Private hasVpValueType
+    Private definitionType
+    Private valueType
+    Private hasDefinitionType
+    Private hasValueType
+
+    Private ruleMethod
+    Private RuleEngineProperty
+    Private RuleCodeProperty
+    Private RuleEvaluatedToProperty
+    Private CcValueProperty
+    Private EkaValueProperty
+
+
+&#39;-----------------------------------------------------------
+    Public Sub includeInConfiguration
+        dim myModel, inst
+        dim intVal
+
+        set myModel = metis.currentModel
+        set inst = myModel.currentInstance
+
+        &#39;MsgBox &#34;includeInConfiguration =&#62; &#34; &#38; inst.title
+        set intVal = metis.newValue
+        call intVal.setInteger(1)
+        call inst.setNamedValue(RuleEvaluatedToProperty, intVal)
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Sub excludeFromConfiguration
+        dim myModel, inst
+        dim intVal
+
+        set myModel = metis.currentModel
+        set inst = myModel.currentInstance
+
+        &#39;MsgBox &#34;excludeFromConfiguration =&#62; &#34; &#38; inst.title
+        set intVal = metis.newValue
+        call intVal.setInteger(0)
+        call inst.setNamedValue(RuleEvaluatedToProperty, intVal)
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Function getValueOf(instUri)
+        dim inst
+
+        getValueOf = &#34;&#34;
+        if Len(instUri) &#62; 0 then
+            set inst = metis.findInstance(instUri)
+            if isEnabled(inst) then
+                on error resume next
+                getValueOf = inst.getNamedStringValue(CcValueProperty)
+            end if
+        end if
+
+    End Function
+
+&#39;-----------------------------------------------------------
+    Public Function getParameterValue(paramUri)
+        dim myModel
+        dim inst
+        dim ccObj, paramObj
+        dim value, values
+        dim definition, definitions
+
+        &#39; Initialization
+        getParameterValue = &#34;&#34;
+        set myModel     = metis.currentModel
+        set inst        = myModel.currentInstance
+        set paramObj    = metis.findInstance(paramUri)
+        
+        &#39;MsgBox &#34;getParameterValue  =&#62; &#34; &#38; inst.title
+        &#39; Main code
+        set ccObj = getCCobject(paramObj)
+        if isEnabled(ccObj) then
+            set values = ccObj.getNeighbourObjects(0, hasValueType, valueType)
+            for each value in values
+                set definitions = value.getNeighbourObjects(0, hasDefinitionType, anyObjectType)
+                for each definition in definitions
+                    if definition.uri = paramObj.uri then
+                        getParameterValue = value.getNamedStringValue(EkaValueProperty)
+                    end if
+                next
+            next
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Public Sub setParameterValue(paramUri, valueUri)
+        dim myModel, model
+        dim inst
+        dim ccObj, paramObj, valueObj
+        dim value, values
+        dim definition, definitions
+        dim paramValue, newValue
+        dim rel
+        dim done
+
+        &#39; Initialization
+        set myModel     = metis.currentModel
+        set inst        = myModel.currentInstance
+        set paramObj    = metis.findInstance(paramUri)
+        set valueObj    = metis.findInstance(valueUri)
+        newValue        = valueObj.getNamedStringValue(CcValueProperty)
+
+        &#39; Main code
+        set ccObj = getCCobject(paramObj)
+        if isEnabled(ccObj) then
+            &#39; MsgBox &#34;setParameterValue  =&#62; &#34; &#38; inst.title  &#38; vbCrLf &#38; &#34;ccObj = &#34; &#38; ccObj.title
+            done = false
+            set values = ccObj.getNeighbourObjects(0, hasValueType, valueType)
+            for each value in values
+                set definitions = value.getNeighbourObjects(0, hasDefinitionType, anyObjectType)
+                for each definition in definitions
+                    if definition.uri = paramObj.uri then
+                        &#39; Existing value
+                        paramValue = value.getNamedStringValue(EkaValueProperty)
+                        if paramValue = newValue then
+                            done = true
+                            exit for
+                        else
+                            call value.setNamedStringValue(EkaValueProperty, newValue)
+                            done = true
+                            exit for
+                        end if
+                    end if
+                next
+                if done then exit for
+            next
+            if not done then
+                set value = ccObj.newPart(valueType)
+                if isEnabled(value) then
+                    call value.setNamedStringValue(EkaValueProperty, newValue)
+                    set model = ccObj.ownerModel
+                    set rel = model.newRelationship(hasValueType, ccObj, value)
+                    set rel = model.newRelationship(hasDefinitionType, value, paramObj)
+                end if
+            end if
+        end if
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Private Function getCCobject(inst)
+        dim model
+        dim part, parts
+        dim typeUri
+        dim hasValueType, hasParamType
+        dim rel, rels, paramRels
+        dim ccRule1
+
+        set getCCobject = Nothing
+        if inst.isRelationship then
+            set inst = inst.origin
+        end if
+        if inst.type.uri = ccType.uri then
+            set getCCobject = inst
+        elseif inst.type.uri = ruleType.uri then
+            set rels = inst.getNeighbourRelationships(1, isSubjectOfType)
+            if rels.count &#62; 0 then
+                set getCCobject = rels(1).origin
+            else
+                &#39; Find the relship that is the subject of the rule
+                set ccRule1 = new CC_Rule
+                set rel = ccRule.getSubjectOf(inst)
+                set ccRule1 = Nothing
+                if isEnabled(rel) then
+                    set getCCobject = rel.origin
+                end if
+            end if
+        else
+            typeUri = inst.type.uri
+            if typeUri = vpType.uri or typeUri = vpValueType.uri then
+                set hasValueType = hasVpValueType
+                set hasParamType = hasVpType
+            elseif typeUri = fpType.uri or typeUri = fpValueType.uri then
+                set hasValueType = hasFpValueType
+                set hasParamType = hasFpType
+            elseif typeUri = dpType.uri or typeUri = dpValueType.uri then
+                set hasValueType = hasDpValueType
+                set hasParamType = hasDpType
+            elseif typeUri = cpType.uri or typeUri = cpValueType.uri then
+                set hasValueType = hasCpValueType
+                set hasParamType = hasCpType
+            elseif typeUri = ppType.uri or typeUri = ppValueType.uri then
+                set hasValueType = hasPpValueType
+                set hasParamType = hasPpType
+            end if
+            if isValid(hasValueType) then
+                set paramRels = inst.getNeighbourRelationships(1, hasValueType)
+                if paramRels.count &#62; 0 then
+                    set paramObj = paramRels(1).origin
+                    set rels = paramObj.getNeighbourRelationships(1, hasParamType)
+                    if rels.count &#62; 0 then
+                        set getCCobject = rels(1).origin
+                    end if
+                else
+                    set rels = inst.getNeighbourRelationships(1, hasParamType)
+                    if rels.count &#62; 0 then
+                        set getCCobject = rels(1).origin
+                    end if
+                end if
+            end if
+            &#39;set model = inst.ownerModel
+            &#39;set parts = model.parts
+            &#39;for each part in parts
+            &#39;    if part.type.uri = ccType.uri then
+            &#39;        set getCCobject = part
+            &#39;        exit for
+            &#39;    end if
+            &#39;next
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Public Sub executeRules(inst)
+        dim ccRule1
+        dim rule, rules
+        dim includeInConfig
+        dim included
+        dim test
+
+        &#39; Initialize
+        included = true
+        test = 1
+        &#39; Execute rules
+        set includeInConfig = metis.newValue
+        set ccRule1 = new CC_Rule
+        set rules = ccRule1.getRules(inst)
+        if rules.count &#62; 0 then
+            call includeInConfig.setInteger(0)
+        end if
+        for each rule in rules
+            test = executeRule(rule)
+            if test = 0 then
+                included = false
+            end if
+        next
+        if included then
+            call includeInConfig.setInteger(1)
+        end if
+        call inst.setNamedValue(RuleEvaluatedToProperty, includeInConfig)
+        set ccRule1 = Nothing
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Function executeRule(ruleObject)
+        on error resume next
+
+        dim model
+        dim intVal
+        dim prop
+        dim rule, ruleEngine
+        dim includeInConfig
+        dim evaluatedTo
+
+        &#39; Initialization
+        executeRule = true
+        set model = ruleObject.ownerModel
+        &#39; Rule execution
+        set prop = ruleObject.type.getProperty(RuleEngineProperty)
+        if isEnabled(prop) then
+            ruleEngine = ruleObject.getNamedValue(RuleEngineProperty).getInteger
+            select case ruleEngine
+            case 0
+                exit function
+            case 1
+                rule = ruleObject.getNamedValue(RuleCodeProperty).getString
+                set includeInConfig = metis.newValue
+                if Len(rule) &#62; 0 then
+                    call includeInConfig.setInteger(0)
+                    call ruleObject.setNamedValue(RuleEvaluatedToProperty, includeInConfig)
+                    call model.runMethodOnInst(ruleMethod, ruleObject)
+                    executeRule = ruleObject.getNamedValue(RuleEvaluatedToProperty).getInteger
+                else
+                    call includeInConfig.setInteger(1)
+                    call ruleObject.setNamedValue(RuleEvaluatedToProperty, includeInConfig)
+                end if
+            end select
+        end if
+    End Function
+
+&#39;-----------------------------------------------------------
+    Private Sub Class_Initialize()
+
+        set currentModel        = metis.currentModel
+        set currentModelView    = currentModel.currentModelView
+        set currentInstance     = currentModel.currentInstance
+        set currentInstanceView = currentModelView.currentInstanceView
+
+        &#39; Types
+        set ccType            = metis.findType(&#34;http://xml.chalmers.se/class/configurable_component.kmd#configurable_component&#34;)
+        set ruleType          = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#rule&#34;)
+        set useCCtype         = metis.findType(&#34;http://xml.chalmers.se/class/uses_configurable_component.kmd#uses_configurable_component&#34;)
+        set isSubjectOfType   = metis.findType(&#34;http://xml.chalmers.se/class/rule.kmd#subject_of_rule&#34;)
+        set cpType            = metis.findType(&#34;http://xml.chalmers.se/class/constraint_parameter.kmd#constraint_parameter&#34;)
+        set dpType            = metis.findType(&#34;http://xml.chalmers.se/class/design_parameter.kmd#design_parameter&#34;)
+        set fpType            = metis.findType(&#34;http://xml.chalmers.se/class/functional_requirement_parameter.kmd#functional_requirement_parameter&#34;)
+        set ppType            = metis.findType(&#34;http://xml.chalmers.se/class/performance_parameter.kmd#performance_parameter&#34;)
+        set vpType            = metis.findType(&#34;http://xml.chalmers.se/class/variant_parameter.kmd#variant_parameter&#34;)
+        set cpValueType       = metis.findType(&#34;http://xml.chalmers.se/class/constraint_parameter_value.kmd#constraint_parameter_value&#34;)
+        set dpValueType       = metis.findType(&#34;http://xml.chalmers.se/class/design_parameter_value.kmd#design_parameter_value&#34;)
+        set fpValueType       = metis.findType(&#34;http://xml.chalmers.se/class/functional_requirement_parameter_value.kmd#functional_requirement_parameter_value&#34;)
+        set ppValueType       = metis.findType(&#34;http://xml.chalmers.se/class/performance_parameter_value.kmd#performance_parameter_value&#34;)
+        set vpValueType       = metis.findType(&#34;http://xml.chalmers.se/class/variant_parameter_value.kmd#variant_parameter_value&#34;)
+        set hasCpType         = metis.findType(&#34;http://xml.chalmers.se/class/has_constraint_parameter.kmd#has_constraint_parameter&#34;)
+        set hasDpType         = metis.findType(&#34;http://xml.chalmers.se/class/has_design_parameter.kmd#has_design_parameter&#34;)
+        set hasFpType         = metis.findType(&#34;http://xml.chalmers.se/class/has_functional_requirement_parameter.kmd#has_functional_requirement_parameter&#34;)
+        set hasPpType         = metis.findType(&#34;http://xml.chalmers.se/class/has_performance_parameter.kmd#has_performance_parameter&#34;)
+        set hasVpType         = metis.findType(&#34;http://xml.chalmers.se/class/has_variant_parameter.kmd#has_variant_parameter&#34;)
+        set hasCpValueType    = metis.findType(&#34;http://xml.chalmers.se/class/has_constraint_parameter_value.kmd#has_constraint_parameter_value&#34;)
+        set hasDpValueType    = metis.findType(&#34;http://xml.chalmers.se/class/has_design_parameter_value.kmd#has_design_parameter_value&#34;)
+        set hasFpValueType    = metis.findType(&#34;http://xml.chalmers.se/class/has_functional_requirement_parameter_value.kmd#has_functional_requirement_parameter_value&#34;)
+        set hasPpValueType    = metis.findType(&#34;http://xml.chalmers.se/class/has_performance_parameter_value.kmd#has_performance_parameter_value&#34;)
+        set hasVpValueType    = metis.findType(&#34;http://xml.chalmers.se/class/has_variant_parameter_value.kmd#has_variant_parameter_value&#34;)
+        set definitionType    = metis.findType(&#34;http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasDefinition_UUID&#34;)
+        set valueType         = metis.findType(&#34;http://xml.activeknowledgemodeling.com/eka/languages/eka_value.kmd#ObjType_EKA:StringValue_UUID&#34;)
+        set hasDefinitionType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasDefinition_UUID&#34;)
+        set hasValueType      = metis.findType(&#34;http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasValue_UUID&#34;)
+        set anyObjectType     = metis.findType(&#34;metis:stdtypes#oid1&#34;)
+
+        &#39; Methods
+        set ruleMethod   = metis.findMethod(&#34;http://xml.chalmers.se/methods/rule_methods.kmd#evaluateRule&#34;)
+
+        &#39; Model
+
+        &#39; Variables
+        RuleEngineProperty      = &#34;ruleEngine&#34;
+        RuleCodeProperty        = &#34;ruleCode&#34;
+        RuleEvaluatedToProperty = &#34;ruleEvaluatedTo&#34;
+        CcValueProperty         = &#34;name&#34;
+        EkaValueProperty        = &#34;value&#34;
+    End Sub
+
+&#39;-----------------------------------------------------------
+    Public Sub Class_Terminate()
+    End Sub
+
+End Class
+</string>
+  </valueset>
+ </object>
+
+ <objectview id="_002aslb01so0qjtit8k4" xlink:role="object" xlink:title="Classes and Utilities" xlink:href="#_002aslb01so0qj8pu96q" state="open" behavior="nested" text-scale="1.68713" decomp-scale="0.125" left="-473.636" top="-349.215" width="715.767" height="512">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Nested Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Nested Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+  </symbol-override>
+  <child-link xlink:role="objectview" xlink:title="Class CC_Rule" xlink:href="#_002aslb01spoqhquikls"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002aslb01spoqhditp0k"/>
+  <child-link xlink:role="objectview" xlink:title="Function getParameterTitle" xlink:href="#_002asls00rc18opoa824"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asls00rc18ontqgso"/>
+  <child-link xlink:role="objectview" xlink:title="Class CC_RuleEngine" xlink:href="#_002asmt01e9ug3mi2qr2"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asmt01e9ug3jqdh2t"/>
+ </objectview>
+
+ <relationshipview id="_002aslb01so0rr47dbi6" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+  <target-link xlink:role="objectview" xlink:title="Classes and Utilities" xlink:href="#_002aslb01so0qjtit8k4"/>
+ </relationshipview>
+
+ <relationshipview id="_002aslb01spoqhditp0k" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Classes and Utilities" xlink:href="#_002aslb01so0qjtit8k4"/>
+  <target-link xlink:role="objectview" xlink:title="Class CC_Rule" xlink:href="#_002aslb01spoqhquikls"/>
+ </relationshipview>
+
+ <objectview id="_002aslb01spoqhquikls" xlink:role="object" xlink:title="Class CC_Rule" xlink:href="#_002aslb01spoqh67dmsg" state="open" behavior="nested" text-scale="0.234795" decomp-scale="0.125" left="2253.09" top="1769.72" width="1280" height="384">
+ </objectview>
+
+ <relationshipview id="_002asls00rc18ontqgso" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Classes and Utilities" xlink:href="#_002aslb01so0qjtit8k4"/>
+  <target-link xlink:role="objectview" xlink:title="Function getParameterTitle" xlink:href="#_002asls00rc18opoa824"/>
+ </relationshipview>
+
+ <objectview id="_002asls00rc18opoa824" xlink:role="object" xlink:title="Function getParameterTitle" xlink:href="#_002asls00rc18ond6ves" state="open" behavior="nested" text-scale="0.234795" decomp-scale="0.125" left="2253.09" top="2793.72" width="1280" height="384">
+ </objectview>
+
+ <relationshipview id="_002asmt01e9ug3jqdh2t" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Classes and Utilities" xlink:href="#_002aslb01so0qjtit8k4"/>
+  <target-link xlink:role="objectview" xlink:title="Class CC_RuleEngine" xlink:href="#_002asmt01e9ug3mi2qr2"/>
+ </relationshipview>
+
+ <objectview id="_002asmt01e9ug3mi2qr2" xlink:role="object" xlink:title="Class CC_RuleEngine" xlink:href="#_002asmt01e9ug3vdtq5q" state="open" behavior="nested" text-scale="0.234795" decomp-scale="0.125" left="2253.09" top="2281.72" width="1280" height="384">
+ </objectview>
+
+ <modelview id="oid1" name="Main" title="Main" primary-flag="true" standalone-flag="true" zoom-level="1.68713" x="-130.673" y="-91.8722" seq="1" xlink:role="model" xlink:title="Standard Blank" xlink:href="#_002aslb01sme0q6niekc" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Classes and Utilities" xlink:href="#_002aslb01so0qjtit8k4"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002aslb01so0rr47dbi6"/>
+ </modelview>
+
+
+</metis>

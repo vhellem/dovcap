@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="3"
+ nextoid="5">
+
+ <domain id="oid1" name="ProjectDomain" title="Project Domain" desc="">
+  <domain-link xlink:role="domain" xlink:href="#oid3"/> 
+  <domain-link xlink:role="domain" xlink:href="#oid4"/> 
+  <complex-type-link xlink:role="type" xlink:href="../object_types/acceptance_criteria.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/sow.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/contract.kmd#oid2" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/risk.kmd#oid3" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/deliverable.kmd#oid3" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/requirement.kmd#oid9" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/benefit.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/action.kmd#oid5" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/change.kmd#oid2" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/budget.kmd#oid2" xlink:actuate="user"/>
+</domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/responsibility_of-responsible_for.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/impacts-impacted_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/incurred-costs_for.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-budget_for.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_addressed_by-fulfills.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/applies_to-has.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_mit_strategy-mitigation_strategy_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/of-has_associated.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-schedule_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/contains-part_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/defines-defined_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/fulfills-fulfilled_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/provides-provides.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/supports-supported_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/initiates-initiated_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/output-output_from.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-delivered_by.kmd#oid1" xlink:actuate="auto"/>
+</domain>
+
+<domain id="oid4" name="Criteria" title="Criteria" desc="Contains the criteria for this domain">
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/acceptance_criteria.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/sow.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/contract.kmd#oid5" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/risk.kmd#oid11" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/deliverable.kmd#oid8" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/requirement.kmd#oid17" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/benefit.kmd#oid5" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/action.kmd#oid9" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/change.kmd#oid5" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/budget.kmd#oid5" xlink:actuate="user"/>
+
+
+ </domain>
+
+</metis>
+
+

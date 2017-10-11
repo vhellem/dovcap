@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ nextoid="1">
+
+ <type id="Reltype_deployed_software_uses_is_used_by_crud_database_object_UUID" name="deployed_software_uses_is_used_by_crud_database_object" title="Deployed Software uses Database Object" desc="Use this relationship to connect database objects to the applications and software modules that use or affect the database objects. Properties of the relationship allow you to specify whether the information is created (C), read (R), updated (U), or deleted (D), the CRUD property." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="#Reltype_uses-is_used_by_crud_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Database Object" xlink:href="../abstracttypes/database_object.kmd#CompType_TRM:DataObject_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software uses Database Object" xlink:href="#Reltype_deployed_software_uses_is_used_by_crud_database_object_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Deployed Software uses Database Object" xlink:href="#Reltype_deployed_software_uses_is_used_by_crud_database_object_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="creates">0</integer>
+   <integer name="reads">0</integer>
+   <integer name="updates">0</integer>
+   <integer name="deletes">0</integer>
+   <string name="crud" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deployed_software_uses_is_used_by_crud_information_component_UUID" name="deployed_software_uses_is_used_by_crud_information_component" title="Deployed Software uses Information Component" desc="Use this relationship to connect objects of your information model to the applications, processes and  functions that use or affect information in the model. Properties of the relationship allow you to specify whether the information is created (C), read (R), updated (U), or deleted (D), the CRUD property." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="#Reltype_uses-is_used_by_crud_UUID"/>
+  <property name="integrityImpact" xlink:role="integer-type" xlink:title="Information Impact" xlink:href="../../semantics/primitive_types/information_impact.kmd#PrimType_Semantics_Troux Information:Information_Impact_UUID" label="Integrity Impact" desc="Specifies how severely the application would be impacted if the integrity of the information were compromised. Integrity is compromised when an unauthorized source modifies or destroys the information. A High rating indicates that the application requires data integrity, and unauthorized modifications to the data could have severe impacts." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:DeployedSoftwareUsesInformationObject_IntegrityImpact_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="AvailabilityImpact" xlink:role="integer-type" xlink:title="Information Impact" xlink:href="../../semantics/primitive_types/information_impact.kmd#PrimType_Semantics_Troux Information:Information_Impact_UUID" label="Availability Impact" desc="Specifies how severely the application would be impacted if the information were not available. A loss of availability occurs when access to or use of information or an information system is disrupted. A High rating indicates that the application would be severely impacted (for example, it would no longer function) if the information were not available." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:DeployedSoftwareUsesInformationObject_AvailabilityImpact_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software uses Information Component" xlink:href="#Reltype_deployed_software_uses_is_used_by_crud_information_component_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="13" xlink:role="type" xlink:title="Deployed Software uses Information Component" xlink:href="#Reltype_deployed_software_uses_is_used_by_crud_information_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="creates">0</integer>
+   <integer name="reads">0</integer>
+   <integer name="updates">0</integer>
+   <integer name="deletes">0</integer>
+   <string name="crud" class="volatile"></string>
+   <integer name="integrityImpact">0</integer>
+   <integer name="AvailabilityImpact">0</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_process_component_uses_is_used_by_crud_information_component_UUID" name="process_component_uses_is_used_by_crud_information_component" title="Process Component uses Information Component" desc="Use this relationship to connect objects of your information model to the applications, processes and  functions that use or affect information in the model. Properties of the relationship allow you to specify whether the information is created (C), read (R), updated (U), or deleted (D), the CRUD property." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="#Reltype_uses-is_used_by_crud_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Process Component" xlink:href="../abstracttypes/process_component.kmd#CompType_TRM:ProcessDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Process Component uses Information Component" xlink:href="#Reltype_process_component_uses_is_used_by_crud_information_component_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Process Component uses Information Component" xlink:href="#Reltype_process_component_uses_is_used_by_crud_information_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="creates">0</integer>
+   <integer name="reads">0</integer>
+   <integer name="updates">0</integer>
+   <integer name="deletes">0</integer>
+   <string name="crud" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_uses-is_used_by_crud_UUID" name="uses-is_used_by_crud" title="uses/is used by (CRUD)" desc="Allows you to connect objects of your information model to the Applications and Application Functions that use or affect information in the model. Properties of the relationship allow you to specify whether the information is created (C), read (R), updated (U), or deleted (D)." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/uses-is_used_by_crud.kmd#oid1"/>
+  <property name="creates" xlink:role="integer-type" xlink:title="Creates" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_creates_UUID" label="Creates" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_uses-is_used_by_crud_creates_UUID&#34;;"/>
+  <property name="reads" xlink:role="integer-type" xlink:title="Reads" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_reads_UUID" label="Reads" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_uses-is_used_by_crud_reads_UUID&#34;;"/>
+  <property name="updates" xlink:role="integer-type" xlink:title="Updates" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_updates_UUID" label="Updates" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_uses-is_used_by_crud_updates_UUID&#34;;"/>
+  <property name="deletes" xlink:role="integer-type" xlink:title="Deletes" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_deletes_UUID" label="Deletes" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_uses-is_used_by_crud_deletes_UUID&#34;;"/>
+  <property name="crud" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="CRUD" desc="Collection of CRUD-attributes into one string." method-flag="true" visible-flag="false"/>
+  <named-method-link name="crud" xlink:role="cpp-method" xlink:title="getGRID" xlink:href="../methods/uses-is_used_by_crud_methods.kmd#oid1"/>
+  <named-criteria-link name="FindAlluses-is_used_by_crud" xlink:role="criteria" xlink:title="Find all Uses/is used by (CRUD) relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_uses-is_used_by_crud_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="#Reltype_uses-is_used_by_crud_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="uses/is used by (CRUD)" xlink:href="#Reltype_uses-is_used_by_crud_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="creates">0</integer>
+   <integer name="reads">0</integer>
+   <integer name="updates">0</integer>
+   <integer name="deletes">0</integer>
+   <string name="crud" class="volatile"></string>
+  </valueset>
+ </type>
+
+
+</metis>

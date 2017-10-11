@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="2"
+ nextoid="5">
+
+ <domain id="oid1" name="ITMCOrganizationDomain" title="Organization Domain" desc="Internal and external organisations with personnel resources organised into organisation units and with skills needed connected to persons.">
+  <domain-link xlink:role="domain" xlink:href="#oid3"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization.kmd#oid5" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/person.kmd#oid5" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/cs_elements.kmd#oid3" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+
+</domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/located_in-location_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_member-member_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_responsible-responsible_for.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/needs-needed_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/owns-owned_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-holds.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/uses-used_by.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_role_of-has_role.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/expresses-expressed_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/supports-supported_by.kmd#oid1" xlink:actuate="auto"/>
+</domain>
+
+</metis>
+
+
+
+

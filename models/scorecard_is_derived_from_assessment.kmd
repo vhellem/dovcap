@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Scorecard_is_derived_from_Assessment_UUID" name="Scorecard_is_derived_from_Assessment" title="Scorecard is derived from Assessment" desc="Associates a scorecard with the assessments that are used to derive the value of the scorecard." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <property name="weight" xlink:role="integer-type" xlink:title="Percentage" xlink:href="http://xml.metis.no/xml/primitive_types/primitive_types.kmd#oid105" label="Weight" desc="A number from 1 to 100 that indicates the relative importance of this assessment to the scorecard." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:ScorecardIsDerivedFromAssessment_Weight_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Scorecard" xlink:href="../object_types/scorecard.kmd#CompType_Semantics:Scorecard_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Assessment" xlink:href="../object_types/assessment.kmd#CompType_Semantics:Assessment_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Scorecard is derived from Assessment" xlink:href="#RelType_Semantics:Scorecard_is_derived_from_Assessment_UUID" xlink:actuate="user">
+   <string name="from">is derived from</string>
+   <string name="to">is used to derive</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Scorecard is derived from Assessment" xlink:href="#RelType_Semantics:Scorecard_is_derived_from_Assessment_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="weight">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

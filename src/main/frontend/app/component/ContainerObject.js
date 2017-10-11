@@ -15,7 +15,9 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context('../image/', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(
+  require.context('../image/', false, /\.(png|jpe?g|svg)$/),
+);
 
 import org from '../image/networkdevice.svg';
 
@@ -32,12 +34,13 @@ class ContainerObject extends React.Component {
       y: props.parentY + containerJson.attributes.scaleY * props.parentHeight,
       name: containerJson.name,
       type: containerJson.type,
-      id: containerJson.objectReference.id
+      imageWidth: 1,
+      imageHeight: 1,
+      id: containerJson.objectReference.id,
     };
     if (containerJson.objectReference.valueset.iconProp) {
       var img = containerJson.objectReference.valueset.iconProp;
       img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
-      console.log(img);
       // TODO: Has to set a generic icon value
     }
     if (containerJson.objectReference.valueset.icon) {
@@ -46,50 +49,55 @@ class ContainerObject extends React.Component {
       image.src = images[containerJson.objectReference.valueset.icon];
       image.onload = () => {
         this.setState({
-          image
+          image,
         });
         this.drawImage();
       };
     }
+
+    this.drawImage = this.drawImage.bind(this);
   }
 
-  handleDragMove = (e) => {
-  this.state.x = e.target.position()["x"]
-  this.state.y = e.target.position()["y"]
+  handleDragMove = e => {
+    this.state.x = e.target.position()['x'];
+    this.state.y = e.target.position()['y'];
 
-  var emitter = ObjectEmitter;
-  emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
-}
+    var emitter = ObjectEmitter;
+    emitter.emit(
+      this.state.id,
+      this.state.x,
+      this.state.y,
+      this.state.width,
+      this.state.height,
+    );
+  };
 
   drawImage() {
-    var ratio = this.state.width / this.state.image.naturalWidth / 3;
-    var width = this.state.image.naturalWidth * ratio;
-    var height = this.state.image.naturalHeight * ratio;
-    if (height > this.state.height) height = this.state.height;
     var x = this.state.x;
     var y = this.state.y;
-    y = y + (this.state.height - height) / 2;
 
     this.setState({
-      imageWidth: width,
-      imageHeight: height,
-      imageX: x,
-      imageY: y
+      imageWidth: this.state.image.naturalHeight,
+      imageHeight: this.state.image.naturalWidth,
     });
   }
 
   componentWillReceiveProps(nextProps) {
     var containerJson = nextProps.container;
-    var width = containerJson.attributes.scaleWidth * nextProps.parentWidth
-    var height = containerJson.attributes.scaleHeight * nextProps.parentHeight
-    var x = nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth
-    var y = nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
+    var width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
+    var height = containerJson.attributes.scaleHeight * nextProps.parentHeight;
+    var x =
+      nextProps.parentX +
+      containerJson.attributes.scaleX * nextProps.parentWidth;
+    var y =
+      nextProps.parentY +
+      containerJson.attributes.scaleY * nextProps.parentHeight;
 
     this.setState({
-      width: width,
-      height: height,
-      x: x,
-      y: y
+      width,
+      height,
+      x,
+      y,
     });
     // fix undefined
 
@@ -106,7 +114,7 @@ class ContainerObject extends React.Component {
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
             if (child.type !== 'Action Button') {
-              return (
+            return (
                 <Container
                   container={child}
                   parentWidth={this.state.width}
@@ -116,7 +124,7 @@ class ContainerObject extends React.Component {
                   key={child.id}
                 />
               );
-            } else if (child.type !== 'Action Button') {
+        } else if (child.type !== 'Action Button') {
               return (
                 <ContainerObject
                   container={child}
@@ -127,8 +135,8 @@ class ContainerObject extends React.Component {
                   key={child.id}
                 />
               );
-            } else {
-              return (
+              } else {
+                  return (
                 <ActionButton
                   container={child}
                   parentWidth={this.state.width}
@@ -138,7 +146,7 @@ class ContainerObject extends React.Component {
                   key={child.id}
                 />
               );
-            }
+              }
           })
         : null;
     return (
@@ -151,14 +159,16 @@ class ContainerObject extends React.Component {
           stroke={1}
           dash={[10, 10]}
           cornerRadius={0}
-          draggable={true}
+          draggable
           onDragMove={this.handleDragMove}
         />
         <Image
-          x={this.state.imageX}
-          y={this.state.imageY}
-          width={this.state.imageWidth}
-          height={this.state.imageHeight}
+          x={this.state.x}
+          y={this.state.y}
+          height={this.state.height}
+          width={
+            this.state.imageHeight / this.state.imageWidth * this.state.height
+          }
           image={this.state.image}
         />
         <Text

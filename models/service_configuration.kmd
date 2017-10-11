@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002as5e00vl9dje8fc42" xlink:role="type" xlink:title="Service Configuration" xlink:href="../objecttypes/service_configuration.kmd#AKM_Service_Configuration" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Container Open" xlink:href="http://metadata.troux.info/meaf/symbols/container_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="http://metadata.troux.info/meaf/symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/databaseschema.png"/>
+ </typeview>
+
+
+</metis>

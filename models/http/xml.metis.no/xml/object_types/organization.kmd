@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="10"
+ typeviews="4"
+ nextoid="47">
+
+ <type id="oid1" name="Organization" title="Organization" desc="An Organization is a stable, organized unit of people and other resources united and constructed for a particular purpose.&#10;An organization can be decomposed into other Organizations and Positions. An Organization can be associated with other Organizations via the has member relationships. &#10;&#10;In ITM, an Organization can be associated with other Organizations in a number of additional  different ways. They are: Has Function, Participate In, Is Business Area Of, Is Customer Of, Is Competitor Of, Is Partner Of, Is Supplier Of and Is Part Of." usage="object" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" desc="Enter a short name for the object" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" desc="Enter a description of the object" description-flag="true"/>
+  <property name="phoneNr" xlink:role="string-type" xlink:title="PhoneNr" xlink:href="metis:stdprimtypes#oid5" label="Phone no." desc="Telephone number used to contact the organization"/>
+  <property name="faxNr" xlink:role="string-type" xlink:title="PhoneNr" xlink:href="metis:stdprimtypes#oid5" label="Fax no." desc="Fax number"/>
+  <property name="country" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Country"/>
+  <property name="x400" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="X-400"/>
+  <property name="email" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="E-mail" desc="E-mail address of the organization"/>
+  <property name="city" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="City"/>
+  <property name="address2" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Address 2 (Po. Box)"/>
+  <property name="url" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="URL"/>
+  <property name="manager" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Manager" desc="The name of the person responsible for the organization. This property will automatically be filled in if  you connect a Person object with the Is Manager For relationship." method-flag="true"/>
+  <property name="zip" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="ZIP" desc="Zip code part of the address"/>
+  <property name="address1" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Address 1" desc="Part of the organization's address identifying the street number or equivalent"/>
+  <property name="homepage" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Homepage" desc="Homepage URL"/>
+  <property name="type" xlink:role="string-type" xlink:title="Int Ext Classification" xlink:href="../primitive_types/primitive_types.kmd#oid50" label="Int/Ext Classification" desc="Internal/External classification. Typical external organizations are vendors and customers"/>
+  <property name="image" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Image"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Organization" xlink:href="#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Position" xlink:href="position.kmd#oid1"/>
+  <named-method-link name="manager" xlink:role="cpp-method" xlink:href="organization_methods.kmd#oid1"/>
+  <valueset vset="default" size="16" xlink:role="type" xlink:title="Organization" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="phoneNr"></string>
+   <string name="faxNr"></string>
+   <string name="country"></string>
+   <string name="x400"></string>
+   <string name="email"></string>
+   <string name="city"></string>
+   <string name="address2"></string>
+   <string name="url"></string>
+   <string name="manager" class="volatile"></string>
+   <string name="zip"></string>
+   <string name="address1"></string>
+   <string name="homepage"></string>
+   <string name="type">I</string>
+   <string name="image"></string>
+  </valueset>
+ </type>
+
+ <forward-reference id="oid5" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid6" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid7" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid8" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid9" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid10" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid11" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid12" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid40" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Organization" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Organization" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/gem/gem_org_unit.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/gem/gem_org_unit.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="grid" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_org_unit.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Organization" xlink:href="#oid1" typedesc="An Organization is a stable, organized unit of people and other resources united and constructed for a particular goal." tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" desc="Enter a short name for the object" visible-flag="true"/>
+   <propertyview name="description" label="Description" desc="Enter a description of the object" visible-flag="true"/>
+   <propertyview name="phoneNr" label="Phone no." desc="Telephone number used to contact the organization" visible-flag="true"/>
+   <propertyview name="faxNr" label="Fax no." desc="Fax number" visible-flag="true"/>
+   <propertyview name="country" label="Country" visible-flag="false"/>
+   <propertyview name="x400" label="X-400" visible-flag="false"/>
+   <propertyview name="email" label="E-mail" visible-flag="true"/>
+   <propertyview name="city" label="City" visible-flag="false"/>
+   <propertyview name="address2" label="Address 2 (Po. Box)" visible-flag="false"/>
+   <propertyview name="url" label="URL" visible-flag="true"/>
+   <propertyview name="manager" label="Manager" desc="The name of the person responsible for the organization. This property will automatically be filled in if  you connect a Person object with the Is Manager For relationships." visible-flag="false"/>
+   <propertyview name="zip" label="ZIP" desc="Zip code part of the address" visible-flag="true"/>
+   <propertyview name="address1" label="Address 1" visible-flag="true"/>
+   <propertyview name="homepage" label="Homepage" desc="Homepage URL" visible-flag="true"/>
+   <propertyview name="image" label="Image" visible-flag="false"/>
+   <propertyview name="type" label="Int/Ext Classification" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Organization" xlink:href="../symbols/organization1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="text1" property="value" macro="(expand (description))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Organization" xlink:href="../symbols/organization1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="text1" property="value" macro="(expand (description))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/organization.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Organization" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/org_unit_1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/org_unit_2.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="text1" property="value" macro="(expand (property manager))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/organization2.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid13" xlink:role="type" xlink:title="Organization" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="phoneNr" label="Phone no." visible-flag="true"/>
+   <propertyview name="faxNr" label="Fax no." visible-flag="true"/>
+   <propertyview name="country" label="Country" visible-flag="false"/>
+   <propertyview name="x400" label="X-400" visible-flag="false"/>
+   <propertyview name="email" label="E-mail" visible-flag="false"/>
+   <propertyview name="city" label="City" visible-flag="false"/>
+   <propertyview name="address2" label="Address 2 (Po. Box)" visible-flag="false"/>
+   <propertyview name="url" label="URL" visible-flag="false"/>
+   <propertyview name="manager" label="Manager" visible-flag="false"/>
+   <propertyview name="zip" label="ZIP" visible-flag="false"/>
+   <propertyview name="address1" label="Address 1" visible-flag="false"/>
+   <propertyview name="homepage" label="Homepage" visible-flag="false"/>
+   <propertyview name="image" label="Image" visible-flag="false"/>
+   <propertyview name="type" label="Int/Ext Classification" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Organization" xlink:href="../symbols/organization1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Organization" xlink:href="../symbols/organization1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/organization.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CC_document" name="CC_document" title="CC document" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Online document" xlink:href="metis:stdtypes#oid32"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="" xlink:href="http://xml.activeknowledgemodeling.com/eka/operations/eka_methods.kmd#Method_EKA:relocateToModel3_UUID"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="" xlink:href="http://xml.activeknowledgemodeling.com/eka/operations/eka_methods.kmd#Method_EKA:relocateToModel3_UUID"/>
+  <named-method-link name="EkaDelete_" xlink:role="cpp-method" xlink:title="Delete" xlink:href="http://xml.activeknowledgemodeling.com/eka/operations/eka_methods.kmd#Method_EKA:delete_UUID"/>
+  <named-method-link name="addViewNeighbours_" xlink:role="cpp-method" xlink:title="addViewNeighbours" xlink:href="../methods/cc_methods.kmd#addViewNeighboursFromDoc"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="CC document" xlink:href="#CC_document" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+
+ <typeview id="oid3" xlink:role="type" xlink:title="CC_document" xlink:href="#CC_document" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DOC: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DOC: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

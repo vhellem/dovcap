@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Data_Source" title="Data Source" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - IF Configuration" xlink:href="objectprop.kmd#oid1"/>
+  <property name="providerType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Provider Type" desc="Type of Provider. This is defined by the type definition for this provider and cannot be changed. The two basic provider types are MSXML for XML and OLEDB for database import." default-visible="top"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Data Source" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="providerType"></string>
+  </valueset>
+ </type>
+
+
+</metis>

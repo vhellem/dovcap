@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ nextoid="3">
+
+ <cpp-method id="oid2" name="getLibraryDescription" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getLibrary" xlink:href="../criteria/it_architecture_element_criteria.kmd#oid1"/>
+   <string name="Default"></string>
+   <string name="Property">description</string>
+   <string name="RemoveDuplicates">true</string>
+   <string name="Separator"> -- </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1" name="getLibraryName" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getLibrary" xlink:href="../criteria/it_architecture_element_criteria.kmd#oid1"/>
+   <string name="Default"></string>
+   <string name="Property">name</string>
+   <string name="RemoveDuplicates">true</string>
+   <string name="Separator"> -- </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="getValueForSymbolLabel" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 2" xlink:href="metis:stdmethods#oid542"/>
+  <arg-list size="12">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="Find Name And LibraryName" xlink:href="../criteria/it_architecture_element_criteria.kmd#oid5"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="Find Name and No LibraryName" xlink:href="../criteria/it_architecture_element_criteria.kmd#oid2"/>
+   <pointer name="Criteria3" xlink:role="criteria" xlink:title="Find LibraryName And No Name" xlink:href="../criteria/it_architecture_element_criteria.kmd#oid6"/>
+   <string name="Macro1">(expand (property name) (nl) (property libraryName) )</string>
+   <string name="Macro2">(expand (property name))</string>
+   <string name="Macro3">(expand (property libraryName))</string>
+   <string name="Macro4"></string>
+   <string name="Macro5"></string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+</metis>

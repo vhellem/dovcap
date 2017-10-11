@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="5"
+ nextoid="1">
+
+ <type id="RelType_ITG:External_Organization_develops_Hardware_Product_UUID" name="External_Organization_develops_Hardware_Product" title="External Organization develops Hardware Product" desc="Specifies that an external organization manufactures a hardware product." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="develops" xlink:href="#Reltype_develops-is_developed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="External Organization" xlink:href="../objecttypes/external_organization.kmd#CompType_ITG:External_Organization_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Hardware Product" xlink:href="../objecttypes/hardware_product.kmd#CompType_TRM:HardwareProduct_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="External Organization develops Hardware Product" xlink:href="#RelType_ITG:External_Organization_develops_Hardware_Product_UUID" xlink:actuate="user">
+   <string name="from">develops</string>
+   <string name="to">is developed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="External Organization develops Hardware Product" xlink:href="#RelType_ITG:External_Organization_develops_Hardware_Product_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:External_Organization_develops_Software_Product_UUID" name="External_Organization_develops_Software_Product" title="External Organization develops Software Product" desc="Specifies that an external organization manufactures a software product." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="develops" xlink:href="#Reltype_develops-is_developed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="External Organization" xlink:href="../objecttypes/external_organization.kmd#CompType_ITG:External_Organization_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Software Product" xlink:href="../objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="External Organization develops Software Product" xlink:href="#RelType_ITG:External_Organization_develops_Software_Product_UUID" xlink:actuate="user">
+   <string name="from">develops</string>
+   <string name="to">is developed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="External Organization develops Software Product" xlink:href="#RelType_ITG:External_Organization_develops_Software_Product_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ProducesHardwareProduct_UUID" name="organization_component_develops_is_developed_by_deliverable" title="Organization Component develops Deliverable" desc="Use this relationship to connect an organization to the products or services (catalog products) it develops." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="develops" xlink:href="#Reltype_develops-is_developed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Organization Component develops Deliverable" xlink:href="#RelType_ProducesHardwareProduct_UUID" xlink:actuate="user">
+   <string name="from">develops</string>
+   <string name="to">is developed by</string>
+   <string name="troux_color">#CD853F</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Organization Component develops Deliverable" xlink:href="#RelType_ProducesHardwareProduct_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_develops_is_developed_by_deliverable_UUID" name="change_component_develops_is_developed_by_deliverable" title="Change Component develops Deliverable" desc="Use this relationship to specify that a project or program is developing a product or service." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="develops" xlink:href="#Reltype_develops-is_developed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component develops Deliverable" xlink:href="#Reltype_change_component_develops_is_developed_by_deliverable_UUID" xlink:actuate="user">
+   <string name="from">develops</string>
+   <string name="to">is developed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component develops Deliverable" xlink:href="#Reltype_change_component_develops_is_developed_by_deliverable_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_develops-is_developed_by_UUID" name="develops-is_developed_by" title="develops" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAlldevelops-is_developed_by" xlink:role="criteria" xlink:title="Find all Develops relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_develops-is_developed_by_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="develops" xlink:href="#Reltype_develops-is_developed_by_UUID" xlink:actuate="user">
+   <string name="from">develops</string>
+   <string name="to">is developed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="develops" xlink:href="#Reltype_develops-is_developed_by_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

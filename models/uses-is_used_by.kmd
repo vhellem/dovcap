@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="20"
+ nextoid="1">
+
+ <type id="RelType_ITG:Hardware_Product_Version_uses_Industry_Standard_Version_UUID" name="Hardware_Product_Model_uses_Industry_Std_Version" title="Hardware Product Model uses Industry Std Version" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="IT Product Version uses Industry Standard Version" xlink:href="#RelType_ITG:IT_Product_Version_uses_Industry_Standard_Version_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Hardware Product Model" xlink:href="../objecttypes/hardware_product_version.kmd#CompType_MEAF:HardwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Hardware Product Model uses Industry Std Version" xlink:href="#RelType_ITG:Hardware_Product_Version_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color">#000000</string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Hardware Product Model uses Industry Std Version" xlink:href="#RelType_ITG:Hardware_Product_Version_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Hardware_Product_uses_Industry_Standard_Version_UUID" name="Hardware_Product_uses_Industry_Standard_Version" title="Hardware Product uses Industry Standard Version" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Hardware Product" xlink:href="../objecttypes/hardware_product.kmd#CompType_TRM:HardwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Hardware Product uses Industry Standard Version" xlink:href="#RelType_ITG:Hardware_Product_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color">#000000</string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Hardware Product uses Industry Standard Version" xlink:href="#RelType_ITG:Hardware_Product_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:IT_Product_Version_uses_Industry_Standard_Version_UUID" name="IT_Product_Version_uses_Industry_Std_Version" title="IT Product Version uses Industry Standard Version" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="IT Product Version" xlink:href="../objecttypes/it_product_version.kmd#CompType_MEAF:ITProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="IT Product Version uses Industry Standard Version" xlink:href="#RelType_ITG:IT_Product_Version_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color">#000000</string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="IT Product Version uses Industry Standard Version" xlink:href="#RelType_ITG:IT_Product_Version_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Software_Product_Version_uses_Industry_Standard_Version_UUID" name="Software_Product_Version_uses_Industry_Std_Version" title="Software Product Version uses Industry Std Version" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="IT Product Version uses Industry Standard Version" xlink:href="#RelType_ITG:IT_Product_Version_uses_Industry_Standard_Version_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product Version" xlink:href="../objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product Version uses Industry Std Version" xlink:href="#RelType_ITG:Software_Product_Version_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color">#000000</string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Software Product Version uses Industry Std Version" xlink:href="#RelType_ITG:Software_Product_Version_uses_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ModuleUsesDatastore_UUID" name="application_component_uses_is_used_by_datastore" title="Application Component uses Datastore" desc="Use this relationship to specify that a database (or physical datastore) is used by an application." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component uses Datastore" xlink:href="#RelType_ModuleUsesDatastore_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color">#33CCCC</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component uses Datastore" xlink:href="#RelType_ModuleUsesDatastore_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_application_component_uses_is_used_by_standard_UUID" name="application_component_uses_is_used_by_standard" title="Application Component uses Standard" desc="Use this relationship to specify that an infrastructure component (with subtypes) uses one or more standards." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Standard" xlink:href="../objecttypes/standard.kmd#CompType_MEAF:Standard_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component uses Standard" xlink:href="#Reltype_application_component_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component uses Standard" xlink:href="#Reltype_application_component_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_application_component_uses_is_used_by_technology_UUID" name="application_component_uses_is_used_by_technology" title="Application Component uses Technology" desc="Use this relationship to connect an enabling (IT) technology to the application elements where it is used." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component uses Technology" xlink:href="#Reltype_application_component_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component uses Technology" xlink:href="#Reltype_application_component_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_application_uses_is_used_by_logical_technology_item_UUID" name="application_uses_is_used_by_logical_technology_item" title="Application uses Logical Technology Item" desc="Use this relationship to connect logical technology items to the applications used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Technology Item" xlink:href="../objecttypes/logical_technology_item.kmd#CompType_MEAF:LogicalTechnologyItem_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application uses Logical Technology Item" xlink:href="#Reltype_application_uses_is_used_by_logical_technology_item_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application uses Logical Technology Item" xlink:href="#Reltype_application_uses_is_used_by_logical_technology_item_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_business_process_uses_is_used_by_datastore_UUID" name="business_process_uses_is_used_by_datastore" title="Business Process uses Datastore" desc="Use this relationship to specify that a process uses a database (or physical datastore)." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Process uses Datastore" xlink:href="#Reltype_business_process_uses_is_used_by_datastore_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Business Process uses Datastore" xlink:href="#Reltype_business_process_uses_is_used_by_datastore_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_business_process_uses_is_used_by_it_architecture_UUID" name="business_process_uses_is_used_by_it_architecture" title="Business Process uses IT Architecture" desc="Use this relationship to connect IT architectures to the (business) processes used by them." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture" xlink:href="../objecttypes/it_architecture.kmd#CompType_MEAF:ITArchitecture_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Process uses IT Architecture" xlink:href="#Reltype_business_process_uses_is_used_by_it_architecture_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Business Process uses IT Architecture" xlink:href="#Reltype_business_process_uses_is_used_by_it_architecture_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_uses_is_used_by_deliverable_UUID" name="change_component_uses_is_used_by_deliverable" title="Change Component uses Deliverable" desc="Use this relationship to specify that an initiative or project uses a given product or service (e.g. an IT product)." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component uses Deliverable" xlink:href="#Reltype_change_component_uses_is_used_by_deliverable_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component uses Deliverable" xlink:href="#Reltype_change_component_uses_is_used_by_deliverable_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_uses_is_used_by_standard_UUID" name="deliverable_uses_is_used_by_standard" title="Deliverable uses Standard" desc="Use this relationship to specify that a deliverable, e.g. a catalog product or IT product (with subtypes) use one or more standards." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Standard" xlink:href="../objecttypes/standard.kmd#CompType_MEAF:Standard_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable uses Standard" xlink:href="#Reltype_deliverable_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable uses Standard" xlink:href="#Reltype_deliverable_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_uses_is_used_by_technology_UUID" name="deliverable_uses_is_used_by_technology" title="Deliverable uses Technology" desc="Use this relationship to connect a technology element (e.g. an enabling IT technology) to the product or service (e.g. an IT Product) where it is used." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable uses Technology" xlink:href="#Reltype_deliverable_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable uses Technology" xlink:href="#Reltype_deliverable_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_uses_is_used_by_standard_UUID" name="infrastructure_component_uses_is_used_by_standard" title="Infrastructure Component uses Standard" desc="Use this relationship to specify that an application component (with subtypes), use one or more standards." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Standard" xlink:href="../objecttypes/standard.kmd#CompType_MEAF:Standard_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component uses Standard" xlink:href="#Reltype_infrastructure_component_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Infrastructure Component uses Standard" xlink:href="#Reltype_infrastructure_component_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_uses_is_used_by_technology_UUID" name="infrastructure_component_uses_is_used_by_technology" title="Infrastructure Component uses Technology" desc="Use this relationship to connect an enabling (IT) technology to the infrastructure elements where it is used." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component uses Technology" xlink:href="#Reltype_infrastructure_component_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Infrastructure Component uses Technology" xlink:href="#Reltype_infrastructure_component_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_message_uses_is_used_by_standard_UUID" name="message_uses_is_used_by_standard" title="Message uses Standard" desc="Use this relationship to specify that a message uses one or more standards." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Standard" xlink:href="../objecttypes/standard.kmd#CompType_MEAF:Standard_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Message uses Standard" xlink:href="#Reltype_message_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Message uses Standard" xlink:href="#Reltype_message_uses_is_used_by_standard_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_message_uses_is_used_by_technology_UUID" name="message_uses_is_used_by_technology" title="Message uses Technology" desc="Use this relationship to specify that a message uses one or more technologies." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Message uses Technology" xlink:href="#Reltype_message_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Message uses Technology" xlink:href="#Reltype_message_uses_is_used_by_technology_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_software_product_uses_is_used_by_datastore_UUID" name="software_product_uses_is_used_by_datastore" title="Software Product uses Datastore" desc="Use this relationship to specify that a software product uses a database (or physical datastore)." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product" xlink:href="../objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product uses Datastore" xlink:href="#Reltype_software_product_uses_is_used_by_datastore_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Software Product uses Datastore" xlink:href="#Reltype_software_product_uses_is_used_by_datastore_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_uses-is_used_by_UUID" name="uses-is_used_by" title="uses" desc="Allows you to specify that an Initiative or Project relies on a given IT Product." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAlluses-is_used_by" xlink:role="criteria" xlink:title="Find all Uses relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_uses-is_used_by_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID" xlink:actuate="user">
+   <string name="from">uses</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="uses" xlink:href="#Reltype_uses-is_used_by_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>
