@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002as5500s93e6qv30lt" name="Web_Services" title="Web Services" desc="Types needed for representing web services, with all the information needed for invoking the services. Most models will be imported from WSDL.">
+  <complex-type-links size="13">
+   <complex-type-link xlink:role="type" xlink:title="Default Namespace" xlink:href="../relationshiptypes/default_namespace.kmd#AKM_Default_namespace_for_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Namespace" xlink:href="../relationshiptypes/namespace.kmd#AKM_Namespace_Parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Namespace (XML)" xlink:href="../objecttypes/namespace_xml.kmd#AKM_Namespace_XML" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Parameter" xlink:href="../objecttypes/parameter.kmd#AKM_Parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Task Input" xlink:href="../../task/objecttypes/task_input.kmd#AKM_Task_Input" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Task Output" xlink:href="../../task/objecttypes/task_output.kmd#AKM_Task_Output" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Web Service" xlink:href="../objecttypes/web_service.kmd#AKM_Web_Service" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Web Service Operation" xlink:href="../objecttypes/web_service_operation.kmd#AKM_Web_Service_Operation" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Web Service Port" xlink:href="../objecttypes/web_service_port.kmd#AKM_Web_Service_Port" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Value for parameter" xlink:href="../relationshiptypes/value_for_parameter.kmd#AKM_Parameter_Value"/>
+   <complex-type-link xlink:role="type" xlink:title="Part" xlink:href="../relationshiptypes/part.kmd#AKM_ParameterPart"/>
+   <complex-type-link xlink:role="type" xlink:title="Create for each" xlink:href="../relationshiptypes/create_for_each.kmd#AKM_Create_for_each"/>
+   <complex-type-link xlink:role="type" xlink:title="For each" xlink:href="../relationshiptypes/for_each.kmd#AKM_Parameter_For_each"/>
+  </complex-type-links>
+  <method-links size="1">
+   <method-link xlink:role="cpp-method" xlink:title="Import WSDL" xlink:href="../methods/import_wsdl.kmd#_002as8g01ikv7gbr75sa"/>
+  </method-links>
+ </metamodel>
+
+
+</metis>

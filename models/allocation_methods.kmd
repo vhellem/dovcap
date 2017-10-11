@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ methods="6"
+ criteria="3"
+ nextoid="11">
+
+ <integer-type id="oid7" name="allocationColorMapping" title="Allocation Color Mapping" default="100">
+  <range name="grey80" min="1" max="19"/>
+  <range name="grey65" min="20" max="39"/>
+  <range name="grey50" min="40" max="59"/>
+  <range name="grey35" min="60" max="79"/>
+  <range name="grey20" min="80" max="99"/>
+  <range name="black" min="100" max="..."/>
+ </integer-type>
+
+ <cpp-method id="oid1" name="allocation" title="Allocation" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Get Allocation" xlink:href="#oid2"/>
+   <string name="Expression">add (property allocation)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="allocationDirect" title="Allocation, direct" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Get Allocation, direct" xlink:href="#oid4"/>
+   <string name="Expression">divide (property allocation) 100</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" name="allocationTotal" title="Allocation, total" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Get Allocation, total" xlink:href="#oid6"/>
+   <string name="Expression">add (property allocationDirect)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid8" name="allocationColor" title="Allocation Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="Allocation Color Mapping" xlink:href="#oid7"/>
+   <string name="Property">allocation</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid9" name="allocationFromText" title="Allocation From Text" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property from) &#34; &#34; (property allocation) &#34;%&#34;)</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid10" name="allocationToText" title="Allocation To Text" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property to) &#34; &#34; (property allocation) &#34;%&#34;)</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid2" name="getAllocation" title="Get Allocation" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="originof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:title="allocated to/has allocation" xlink:href="../relationship_types/allocated_to-has_allocation.kmd#oid1"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid4" name="getAllocationDirect" title="Get Allocation, direct" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:title="allocated to/has allocation" xlink:href="../relationship_types/allocated_to-has_allocation.kmd#oid1"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid6" name="getAllocationTotal" title="Get Allocation, total" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="repeat">
+    <c-number>0</c-number>
+    <c-number>...</c-number>
+    <c-op kind="part"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

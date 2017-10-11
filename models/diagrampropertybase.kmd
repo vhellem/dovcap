@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <type id="oid1" 
+       name="DiagramPropertyBase" 
+       title="Diagram Property Base"
+       desc="Placeholder to add user properties"
+       usage="abstract">
+  <complex-type-link xlink:title="Container" xlink:role="type" 
+		     xlink:href="metis:std#oid20"/>
+  <property name="externalID" xlink:role="string-type" 
+            xlink:title="string" xlink:href="metis:std#oid3" 
+            label="externalID" visible-flag="false"/>
+
+ </type>
+
+</metis>

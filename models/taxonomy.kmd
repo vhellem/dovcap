@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_FEA_DRM:Taxonomy_UUID" name="Taxonomy" title="DRM: Taxonomy" desc="A collection of controlled vocabulary terms organized into a hierarchical structure. Taxonomies provide a means for categorizing or classifying information within a reasonably well-defined associative structure, in which each term in a Taxonomy is in one or more parent/child (broader/narrower) relationships to other terms in the Taxonomy." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Data Reference Model Component" xlink:href="../abstract_types/data_reference_model_component.kmd#CompType_FEA_DRM:dataReferenceModelComponent_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="identifier" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Identifier" desc="A unique string associated with a Taxonomy for identification purposes.&#10;&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_FEA_DRM:taxonomy_identifier_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="DRM: Topic" xlink:href="topic.kmd#CompType_FEA_DRM:Topic_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="DRM: Taxonomy" xlink:href="#CompType_FEA_DRM:Taxonomy_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="18" xlink:role="type" xlink:title="DRM: Taxonomy" xlink:href="#CompType_FEA_DRM:Taxonomy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="version"></string>
+   <string name="source"></string>
+   <integer name="originType">1</integer>
+   <date name="dateSubmitted">00000000</date>
+   <string name="submittedBy"></string>
+   <date name="dateApproved">00000000</date>
+   <string name="approvedBy"></string>
+   <date name="dateRetired">00000000</date>
+   <string name="identifier"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="DRM: Taxonomy" xlink:href="#CompType_FEA_DRM:Taxonomy_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../../meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/eagov/symbols/taxonomy.svg#UUID4_207E1D96-082B-45F0-B35C-FD0C87806D87&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;ID: &#34; (property identifier))"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#d2efe3&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../../meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/eagov/symbols/taxonomy.svg#UUID4_207E1D96-082B-45F0-B35C-FD0C87806D87&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;ID: &#34; (property identifier))"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#d2efe3&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/taxonomy.png"/>
+ </typeview>
+
+
+</metis>

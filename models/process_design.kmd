@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002aso9010g1hui6579v" name="Process_Design" title="Process Design" desc="Used for defining the architecture of the processing chain from raw material to exported product.">
+  <complex-type-links size="18">
+   <complex-type-link xlink:role="type" xlink:title="Coalescer" xlink:href="../languages/coalescer.kmd#OilProcessCoalescer" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Compressor" xlink:href="../languages/compressor.kmd#OilProcessCompressor" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Connector" xlink:href="../languages/connector.kmd#OilProcessConnector" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Cooler" xlink:href="../languages/cooler.kmd#OilProcessCooler" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Heater" xlink:href="../languages/heater.kmd#OilProcessHeater" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pump" xlink:href="../languages/pump.kmd#OilProcessPump" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Scrubber" xlink:href="../languages/scrubber.kmd#OilProcessScrubber" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Separator" xlink:href="../languages/separator.kmd#OilProcessSeparator" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Flow" xlink:href="../languages/flow.kmd#OilProcessFlow"/>
+   <complex-type-link xlink:role="type" xlink:title="Gas Flow" xlink:href="../languages/gas_flow.kmd#Flow_Oil_process_Gas"/>
+   <complex-type-link xlink:role="type" xlink:title="Oil Flow" xlink:href="../languages/oil_flow.kmd#Flow_Oil_process_Oil"/>
+   <complex-type-link xlink:role="type" xlink:title="Water Flow" xlink:href="../languages/water_flow.kmd#Flow_Oil_process_Water"/>
+   <complex-type-link xlink:role="type" xlink:title="Liquid Flow" xlink:href="../languages/liquid_flow.kmd#Flow_Oil_process_liquid"/>
+   <complex-type-link xlink:role="type" xlink:title="Process component" xlink:href="../languages/process_component.kmd#OilProcess_component" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Has value" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasValue_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Namespace_XML" name="Namespace_XML" title="Namespace (XML)" desc="A namespace represents an XML namespace with a unique url. XML parameters may be related to namespaces, and each web service will have a default namespace." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Information Group" xlink:href="http://metadata.troux.info/meaf/objecttypes/information_group.kmd#CompType_MEAF:InformationGroup_UUID"/>
+  <property name="URL" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" label="URL" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:namespace_url_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Namespace (XML)" xlink:href="#AKM_Namespace_XML" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias">Icon_CompType_MEAF:InformationGroup_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Namespace (XML)" xlink:href="#AKM_Namespace_XML" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <url name="URL"/>
+  </valueset>
+ </type>
+
+
+</metis>

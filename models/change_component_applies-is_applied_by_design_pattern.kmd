@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semanics_Patterns:Change_Component_applies-is_applied_by_Design_Pattern_UUID" name="Change_Component_applies_is_applied_by_Design_Pattern" title="Change Component applies-is applied by Design Pattern" desc="Indicates that a Project, Program, Initiative, or Task applies a Design Pattern." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/change_component_applies-is_applied_by_design_pattern.kmd#UUID4_6B74AF73-A75A-4BDB-95F4-8E4E70A12992"/>
+  <property name="numberOfInstances" xlink:role="integer-type" xlink:title="Natural Number" xlink:href="../primitive_types/natural_number.kmd#PrimType_Semantics:Natural_Number_UUID" label="Number of Instances" default-visible="top" mer-property-metadata="uuid=&#34;Semanics_Patterns:Change_Component_applies-is_applied_by_Design_Pattern_numberOfInstances_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../../meaf/abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Design Pattern" xlink:href="../object_types/design_pattern.kmd#CompType_Semantics_Patterns:Design_Pattern_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component applies-is applied by Design Pattern" xlink:href="#RelType_Semanics_Patterns:Change_Component_applies-is_applied_by_Design_Pattern_UUID" xlink:actuate="user">
+   <string name="from">applies</string>
+   <string name="to">is applied by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Change Component applies-is applied by Design Pattern" xlink:href="#RelType_Semanics_Patterns:Change_Component_applies-is_applied_by_Design_Pattern_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="numberOfInstances">1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

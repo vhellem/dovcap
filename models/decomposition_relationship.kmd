@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+ <typeview id="oid1" xlink:role="type" xlink:href="metis:std#oid44" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:href="../symbols/decomposition_relationship.svg#oid1" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="metis:std#oid44" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:href="metis:stdsyms#oid5" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

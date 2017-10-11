@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002as5p00qnicmub3dog" name="Import">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="MS Project Import Button" xlink:href="../objecttypes/action_buttons.kmd#oid3" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="MS Excel RM Import Button" xlink:href="../objecttypes/action_buttons.kmd#oid5" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

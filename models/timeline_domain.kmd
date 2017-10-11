@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="4">
+
+ <metamodel id="oid1" title="Timeline Domain" name="Timeline_Domain" desc="Timeline Diagram Domain is a set of object and relationship types that can be used to give a one-page summary of a number of events that mark progress from some known state (e.g., &#34;as is&#34;) to a specified future state (e.g., &#34;to be&#34;).&#10;Typically, major programs,  projects and other change acitvities are broken down into a set of discrete steps, indicated by milestones, that is,  points of progress towards the end state of the change activity.  Each of the milestones is &#34;achieved&#34; by the accomplishment of one or more &#34;events&#34; that contribute to the achievement of the milestone.  The Timeline Diagram provides a compact way to show (initially) the plan and then track &#34;progress&#34; as time marches on with the change activity.&#10;The Timeline Diagram consists of a Timeline that is used to visualize the time period during which the change activity takes place. Timeline Milestone objects are used to define the milestones on the timeline. These milestones are automatically placed correctly on the timeline according to the date specified for each milestone.&#10;Timeline Event objects are used to model the change activity events. These events are normally related to Timeline Milestones using a special relationship whose color and pattern provide indication of when things begin to get &#34;off target&#34;.&#10;Templates, like the ITM template support connections to these Timeline Events and directly to Timeline Milestones, so that the timeline can, e. g., be used to illustrate project tasks that fail to live up to the planned dates for completion.">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Timeline Modeling Domain" xlink:href="#oid2"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Timeline Library Types" xlink:href="#oid3"/>
+  </metamodel-links>
+ </metamodel>
+
+<!-- HSO removed from toolbar 
+<metamodel id="oid2" name="DeveloperEd.ModelEd.UriToolBar.Timeline_Modeling" title="Timeline Modeling Domain" desc="The main object and relationship types used for making a Timeline Diagram.">
+-->
+<!-- HSO Added start --> 
+<metamodel id="oid2" name="Timeline_Modeling" title="Timeline Modeling Domain" desc="The main object and relationship types used for making a Timeline Diagram.">
+<!-- HSO Added stop --> 
+ 
+ <complex-type-links size="5">
+   <complex-type-link xlink:role="type" xlink:href="../objecttypes/timeline_diagram.kmd#CompType_MEAF:TimelineDiagram_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:href="../objecttypes/timeline.kmd#CompType_MEAF:Timeline_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:href="../objecttypes/timeline_milestone.kmd#CompType_MEAF:TimelineMilestone_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:href="../objecttypes/timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:href="../relationshiptypes/timeline_event_milestone.kmd#Reltype_timeline_event_milestone_UUID" xlink:actuate="auto"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid3" name="TimelineLibraryTypes" title="Timeline Library Types" desc="&#60;qt&#62;Contains referred types that need to be loaded by Metis. The types actually needed by modelers are found in the Timeline Modeling Domain.">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:href="../objecttypes/timeline_start.kmd#CompType_MEAF:TimelineStart_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:href="../objecttypes/timeline_end.kmd#CompType_MEAF:TimelineEnd_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+</metis>
+

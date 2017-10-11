@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="AKM_Web_Service_Port" name="Web_Service_Port" title="Web Service Port" desc="A Web service port (WSDL:portType) defines the protocol to be used (SOAP, GET, or POST as part of its name) for invoking a web service. If the web service contains no port definition, SOAP is used by default. There  should only be one web service operation for each port, even though WSDL files typically contain one for each porttype." usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="Process Mechanism" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#_002as5m0139hlacp6pfg"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Web Service Port" xlink:href="#AKM_Web_Service_Port" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias">Icon_CompType_MEAF:ProcessMechanism_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="Web Service Port" xlink:href="#AKM_Web_Service_Port" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="processModelChange">0</integer>
+   <string name="value" class="volatile"></string>
+   <string name="symbolLabel" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="_002as5m0139hlacp6pfg" xlink:role="type" xlink:title="Web Service Port" xlink:href="#AKM_Web_Service_Port" tree-size="0.5" nested-size="0.125" behavior="tree" position="bottom" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Mech closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process2.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;grey80&#34;)"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;grey60&#34;)"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;2&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Mech closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process2.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;grey80&#34;)"/>
+   <replace tag="canvas" property="linecolor" macro="(expand &#34;grey60&#34;)"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;2&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/bpm/mechanism.png"/>
+ </typeview>
+
+
+</metis>

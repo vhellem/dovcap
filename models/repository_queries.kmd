@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?metis version="3.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="7"
+ nextoid="1">
+
+ <cpp-method id="QueryApplications" name="QueryApplications" title="Get All Applications" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    background-flag="true"
+    container-flag="true"
+    selection-flag="true"
+    model-flag="true"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true"
+    relationship-fl="true">
+  <arg-list size="1">
+   <string name="Query0">Component.type = "Application"</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="QueryOrgs" name="QueryOrgs" title="Get All Organizations" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    background-flag="true"
+    container-flag="true"
+    selection-flag="true"
+    model-flag="true"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true"
+    relationship-fl="true">
+  <arg-list size="1">
+   <string name="Query0">Component.type = "Organization"</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="QueryTypeOf" name="QueryTypeOf" title="Get All of this type" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate"
+  required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true" >
+  <arg-list size="2">
+   <string name="Query0">Component.type = "%DESTINATION_TYPELABEL%" and component.uuid != "%DESTINATION_ID%"</string>
+   <integer name="UseDestinationAggregate">1</integer> 
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="QueryParts" name="QueryParts" title="Get All Parts" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="1">
+   <string name="Query0">component.hasParent(component.uuid="%DESTINATION_ID%") and component.uuid != "%DESTINATION_ID%"</string>
+  </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="QueryNeighbors" name="QueryNeighbors"
+    title="Get All Neighbors" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="3">
+   <integer name="Metis_State_AllowModifyOnly">1</integer>
+   <string name="Query0">component.relatedTo(component.uuid="%DESTINATION_ID%" ) and component.uuid != "%DESTINATION_ID%"</string>
+   <integer name="ComponentFlag1">0</integer>
+   <string name="Query1">relationship.hasComponent( component.uuid="%DESTINATION_ID%" )</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="QueryObjectUseDescription" 
+      name="QueryObjectUseDescription" title="Get Objects using query in Description" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    container-flag="true"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="1">
+   <string name="QueryProperty0">description</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="QueryRelsUseDescription" 
+      name="QueryRelsUseDescription" title="Get Relships using query in Description" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    container-flag="true"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="2">
+   <string name="QueryProperty0">description</string>
+   <integer name="ComponentFlag0">0</integer>
+  </arg-list>
+ </cpp-method>
+
+</metis>

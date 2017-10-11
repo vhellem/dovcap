@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="2"
+ nextoid="3">
+
+ <template id="oid1" name="GEMBlank" title="GEM Blank" desc="Blank Generic Enterprise Modeling template">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Generic Enterprise Modeling" xlink:href="../../metamodels/gem_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+  </metamodel-links>
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  <model-link xlink:role="model" xlink:href="blank.kmd#oid1" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:href="blank.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="../../metamodels/gemrefguide.chm" xlink:role="chm" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+
+ <template id="oid2" name="GEMTraining" title="GEM Training" desc="Generic Enterprise Modeling Training template with Organization, Personnel, Products and Requirements containers">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Generic Enterprise Modeling" xlink:href="../../metamodels/gem_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+  </metamodel-links>
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  <model-link xlink:role="model" xlink:href="training.kmd#oid86" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:href="training.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="../../metamodels/gemrefguide.chm" xlink:role="chm" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+
+
+</metis>

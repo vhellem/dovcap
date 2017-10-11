@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="has_constraint_parameter" name="has_constraint_parameter" title="has_constraint_parameter" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_hasProperty" xlink:href="cc_hasProperty.kmd#CC_hasProperty"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Constraint" xlink:href="constraint.kmd#constraint" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Constraint_parameter" xlink:href="constraint_parameter.kmd#constraint_parameter" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="has_constraint_parameter" xlink:href="#has_constraint_parameter" xlink:actuate="user">
+   <string name="from">has parameter</string>
+   <string name="to">parameter of</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="has_constraint_parameter" xlink:href="#has_constraint_parameter" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="has_constraint_parameter_range" name="has_constraint_parameter_range" title="has_constraint_parameter_range" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_hasProperty" xlink:href="cc_hasProperty.kmd#CC_hasProperty"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Constraint" xlink:href="constraint.kmd#constraint" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Constraint_parameter_range" xlink:href="constraint_parameter.kmd#constraint_parameter_range" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="has_constraint_parameter_range" xlink:href="#has_constraint_parameter_range" xlink:actuate="user">
+   <string name="from">has parameter</string>
+   <string name="to">parameter of</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="has_constraint_parameter_range" xlink:href="#has_constraint_parameter_range" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

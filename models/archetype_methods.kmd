@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="7"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="Archetype_Create" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Execute Methods 1" xlink:href="metis:stdmethods#oid511"/>
+  <arg-list size="4">
+   <string name="ClearSelection">false</string>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Troux_Archetype_Construct" xlink:href="metis:troux#troux_Archetype_Construct"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="TouchProperty"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="Archetype_onBeforeCommit" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Execute Methods 1" xlink:href="metis:stdmethods#oid511"/>
+  <arg-list size="4">
+   <string name="ClearSelection">false</string>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Troux_Archetype_onBeforeCommit" xlink:href="metis:troux#troux_Archetype_onBeforeCommit"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="TouchProperty"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="Archetype_onAfterCommitRefresh" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Execute Methods 1" xlink:href="metis:stdmethods#oid511"/>
+  <arg-list size="4">
+   <string name="ClearSelection">false</string>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Troux_Archetype_onAfterCommitRefresh" xlink:href="metis:troux#troux_Archetype_onAfterCommitRefresh"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="TouchProperty"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid4" name="Archetype_onAfterRefresh" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Execute Methods 1" xlink:href="metis:stdmethods#oid511"/>
+  <arg-list size="4">
+   <string name="ClearSelection">false</string>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Troux_Archetype_onAfterRefresh" xlink:href="metis:troux#troux_Archetype_onAfterRefresh"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="TouchProperty"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" name="Archetype_onTypeDrop" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Execute Methods 1" xlink:href="metis:stdmethods#oid511"/>
+  <arg-list size="4">
+   <string name="ClearSelection">false</string>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Troux_Archetype_onTypeDrop" xlink:href="metis:troux#troux_Archetype_onTypeDrop"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="TouchProperty"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid6" name="Archetype_onBeforeSave" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Execute Methods 1" xlink:href="metis:stdmethods#oid511"/>
+  <arg-list size="4">
+   <string name="ClearSelection">false</string>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Troux_Archetype_onAfterCommitRefresh" xlink:href="metis:troux#troux_Archetype_onAfterCommitRefresh"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="TouchProperty"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="Archetype_onObjectPasted" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Execute Methods 1" xlink:href="metis:stdmethods#oid511"/>
+  <arg-list size="4">
+   <string name="ClearSelection">false</string>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Troux_Archetype_onTypeDrop" xlink:href="metis:troux#troux_Archetype_onTypeDrop"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="TouchProperty"></string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

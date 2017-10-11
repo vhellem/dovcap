@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ typeviews="2"
+ nextoid="6">
+
+ <type id="oid1" name="Instance_Mapping" title="Instance Mapping" usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - IF Configuration" xlink:href="objectprop.kmd#oid1"/>
+  <property name="uniquenessPolicy" xlink:role="integer-type" xlink:title="Uniqueness/Key Policies" xlink:href="../primitive_types/uniqueness-key_policies.kmd#oid1" label="Uniqueness Policy" default-visible="top"/>
+  <property name="uniquenessScope" xlink:role="integer-type" xlink:title="Uniqueness Scope" xlink:href="../primitive_types/uniqueness_scope.kmd#oid1" label="Uniqueness Scope" desc="The scope in which to check the uniqueness of the instance. If universe is selected, all models currently loaded by Metis is used. If parent is selected, only the objects on the parent is checked." default-visible="top"/>
+  <property name="duplicateInRecordSetAction" xlink:role="integer-type" xlink:title="Duplicate In Data Source Actions" xlink:href="../primitive_types/duplicate_in_recordset_actions.kmd#oid1" label="On Duplicate In Source:" default-visible="top"/>
+  <property name="duplicateInExistingAction" xlink:role="integer-type" xlink:title="Duplicate In Existing Instances Actions" xlink:href="../primitive_types/duplicate_in_existing_object_actions.kmd#oid1" label="On Duplicate In Existing Instances" default-visible="top"/>
+  <property name="ignoreBlankIDInstances" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Ignore Existing Instances With Blank ID" desc="If there are existing instances without any value for the ID field, these are left alone during the import. If this is turned off, the import engine will abort and give an error message if an instance of the type with a blank ID is found in the model." visible-flag="false"/>
+  <property name="typeReferenceType" xlink:role="integer-type" xlink:title="Type Reference Options" xlink:href="../primitive_types/type_reference_options.kmd#oid1" label="Update Option Reference" default-visible="top"/>
+  <property name="typeReference" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Type Reference" desc="The type URI of the object to be mapped. This field is usually only necessary when you wish to determine the type run-time. For a fixed type assignment, the preferred method is to connect to a sample object or relationship object view using the &#34;is mapping for&#34; relationship." default-visible="top"/>
+  <property name="evaluateTypeReference" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Evaluate Type Reference" default-visible="top"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Recordset Pre Processing" xlink:href="action_and_condition_holder.kmd#oid6"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="General Metis Property" xlink:href="general_metis_property.kmd#oid1"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Pre Processing" xlink:href="action_and_condition_holder.kmd#oid2"/>
+  <named-method-link name="Generate All Properties_" xlink:role="cpp-method" xlink:title="Generate All Properties" xlink:href="../methods/generate_properties.kmd#oid1"/>
+  <named-method-link name="Generate Basic Properties_" xlink:role="cpp-method" xlink:title="Generate Basic Properties" xlink:href="../methods/generate_properties.kmd#oid2"/>
+  <named-method-link name="Reset_Field_Presence_Status_" xlink:role="cpp-method" xlink:title="Reset Field Presence Status" xlink:href="../methods/reset_field_presence_status.kmd#oid1"/>
+  <named-method-link name="remove_" xlink:role="cpp-method" xlink:title="Remove Deleted Fields" xlink:href="../methods/remove_deleted_fields.kmd#oid1"/>
+  <named-criteria-link name="FindElementsMarkedAsDeleted" xlink:role="criteria" xlink:title="Find Elements Marked As Deleted" xlink:href="../criteria/interface_configuration_criteria.kmd#oid2"/>
+  <named-criteria-link name="FindElementsMarkedAsManual" xlink:role="criteria" xlink:title="Find Elements Marked As Manual" xlink:href="../criteria/interface_configuration_criteria.kmd#oid3"/>
+  <named-criteria-link name="FindElementsMarkedAsNew" xlink:role="criteria" xlink:title="Find Elements Marked As New" xlink:href="../criteria/interface_configuration_criteria.kmd#oid1"/>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Instance Mapping" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="uniquenessPolicy">1</integer>
+   <integer name="uniquenessScope">4</integer>
+   <integer name="duplicateInRecordSetAction">1</integer>
+   <integer name="duplicateInExistingAction">1</integer>
+   <integer name="ignoreBlankIDInstances">0</integer>
+   <integer name="typeReferenceType">1</integer>
+   <string name="typeReference"></string>
+   <integer name="evaluateTypeReference">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="Object_Mapping" title="Object Mapping" desc="The &#60;EM&#62;Object Mapping&#60;/EM&#62; is what you use to map an object type.&#10;&#60;P&#62;&#10;You can specify the object type to map by using the &#60;EM&#62;is mapping for/is mapped by&#60;/EM&#62; relationship to an instantiated object of the right type. Or you can use the &#60;EM&#62;Type Reference&#60;/EM&#62; field to give the URI. If you turn on &#60;EM&#62;Treat Type Reference as an expression&#60;/EM&#62;, you can write an &#60;EM&#62;Object Expression&#60;/EM&#62; that is computed at runtime to dynamically determine the type of object. You can also specify the name of an &#60;EM&#62;Object Type Update Option&#60;/EM&#62; in the Type Reference field or use a relationship to an Object Type Update Options object. Select the correct reference option from the &#60;EM&#62;Update Option Reference&#60;/EM&#62; dropdown property. &#60;BR&#62;&#10;Specifying the name of an Object Type Update Options object is particularly useful if you have a set of Update Option objects and wish to determine which one to use at runtime. To do this, write an expression that evaluates to one of the names.&#10;&#60;P&#62;&#10;Connect the Object Mapping to a &#60;EM&#62;Query&#60;/EM&#62; with the &#60;EM&#62;is query for/uses query&#60;/EM&#62; to specify where to get data from.&#10;&#60;P&#62;&#10;" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Instance Mapping" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Object View Mapping" xlink:href="object_view_mapping.kmd#oid1"/>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Object Mapping" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="uniquenessPolicy">1</integer>
+   <integer name="uniquenessScope">4</integer>
+   <integer name="duplicateInRecordSetAction">1</integer>
+   <integer name="duplicateInExistingAction">1</integer>
+   <integer name="ignoreBlankIDInstances">0</integer>
+   <integer name="typeReferenceType">1</integer>
+   <string name="typeReference"></string>
+   <integer name="evaluateTypeReference">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="Relationship_Mapping" title="Relationship Mapping" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Instance Mapping" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <property name="relationshipClass" xlink:role="integer-type" xlink:title="Relationship-PartOf-Member Options" xlink:href="../primitive_types/relationship-partof-member_options.kmd#oid1" label="Relationship Mapping Type" desc="Select one of the three Metis variants for connecting objects. Select an option that is valid for the types that ar being mapped. I.e. if the start object cannot decompose into the end object, then decomposition is not allowed.&#10;0: Relationship - I.e. that there is a Metis Relationship Instance connecting the two objects.&#10;1: Decomposition (Part/PartOf) - I.e. that this is an ownership structure where one owner can contain several parts, but where a part can have only one owner.&#10;2: Membership - Like decomposition, but there the part can be a member of several parents." default-visible="top"/>
+  <property name="relationshipTypeSymbol" xlink:role="integer-type" xlink:title="Relationship-PartOf-Member Option Symbols" xlink:href="../primitive_types/relationship_mapping_type.kmd#oid2" label="Relationship Type Symbol URI" desc="Specifies which relationship type symbol to display. This is computed from the &#60;em&#62;Relationship Mapping Type&#60;/em&#62; property." method-flag="true" visible-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Relationship View Mapping" xlink:href="relationship_view_mapping.kmd#oid1"/>
+  <named-method-link name="relationshipTypeSymbol" xlink:role="cpp-method" xlink:title="Relationship-PartOf-Member Option Symbol" xlink:href="../methods/relationship-partof-member_option_symbol.kmd#oid1"/>
+  <valueset vset="default" size="13" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="#oid4" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="uniquenessPolicy">1</integer>
+   <integer name="uniquenessScope">4</integer>
+   <integer name="duplicateInRecordSetAction">1</integer>
+   <integer name="duplicateInExistingAction">1</integer>
+   <integer name="ignoreBlankIDInstances">0</integer>
+   <integer name="typeReferenceType">1</integer>
+   <string name="typeReference"></string>
+   <integer name="evaluateTypeReference">0</integer>
+   <integer name="relationshipClass">0</integer>
+   <integer name="relationshipTypeSymbol" class="volatile">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Object Mapping" xlink:href="#oid2" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Metis Type Attribute Layout - Sort By Sequence Number" xlink:href="../layouts/attribute.kmd#oid3"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="duplicateInRecordSetAction" visible-flag="true"/>
+   <propertyview name="typeReferenceType" visible-flag="true"/>
+   <propertyview name="typeReference" visible-flag="true"/>
+   <propertyview name="evaluateTypeReference" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="uniquenessPolicy" visible-flag="false"/>
+   <propertyview name="uniquenessScope" visible-flag="false"/>
+   <propertyview name="duplicateInExistingAction" visible-flag="false"/>
+   <propertyview name="ignoreBlankIDInstances" visible-flag="false"/>
+   <propertyview name="externalID" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Mapping" xlink:href="../symbols/object_type_mapping.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand &#34;&#60;em&#62;Type&#60;/em&#62;: &#34; (property typeURI) &#34;&#60;BR&#62;&#34; &#34;&#60;em&#62;On duplicate in source&#60;/em&#62;: &#34; (property duplicateInRecordSetAction))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Mapping" xlink:href="../symbols/object_type_mapping.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="objectBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="objectBackground" property="fillcolor" macro="(expand &#34;darkgray&#34;)"/>
+   <replace tag="description" property="value" macro="(expand &#34;&#60;em&#62;Type&#60;/em&#62;: &#34; (property typeURI) &#34;&#60;BR&#62;&#34; &#34;&#60;em&#62;On duplicate in source&#60;/em&#62;: &#34; (property duplicateInRecordSetAction))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/metis_type_mapping.png"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="#oid4" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Metis Type Attribute Layout - Sort By Sequence Number" xlink:href="../layouts/attribute.kmd#oid3"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="relationshipClass" visible-flag="true"/>
+   <propertyview name="duplicateInRecordSetAction" visible-flag="true"/>
+   <propertyview name="typeReferenceType" visible-flag="true"/>
+   <propertyview name="typeReference" visible-flag="true"/>
+   <propertyview name="evaluateTypeReference" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="ignoreBlankIDInstances" visible-flag="false"/>
+   <propertyview name="uniquenessScope" visible-flag="false"/>
+   <propertyview name="duplicateInExistingAction" visible-flag="false"/>
+   <propertyview name="uniquenessPolicy" visible-flag="false"/>
+   <propertyview name="targetIsKey" visible-flag="false"/>
+   <propertyview name="originIsKey" visible-flag="false"/>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="relationshipTypeSymbol" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Relationship Mapping" xlink:href="../symbols/object_type_mapping.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand &#34;&#60;em&#62;Type&#60;/em&#62;: &#34; (property typeURI) &#34;&#60;BR&#62;&#34; &#34;&#60;em&#62;On duplicate in source&#60;/em&#62;: &#34; (property duplicateInRecordSetAction))"/>
+   <replace tag="RelationshipTypeSymbol" property="value" macro="(expand (property relationshipTypeSymbol))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Relationship Mapping" xlink:href="../symbols/object_type_mapping.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="objectBackground" property="fillcolor" macro="(expand &#34;darkgray&#34;)"/>
+   <replace tag="objectBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="description" property="value" macro="(expand &#34;&#60;em&#62;Type&#60;/em&#62;: &#34; (property typeURI) &#34;&#60;BR&#62;&#34; &#34;&#60;em&#62;On duplicate in source&#60;/em&#62;: &#34; (property duplicateInRecordSetAction))"/>
+   <replace tag="RelationshipTypeSymbol" property="value" macro="(expand (property relationshipTypeSymbol))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/metis_relationship_type_mapping.png"/>
+ </typeview>
+
+
+</metis>

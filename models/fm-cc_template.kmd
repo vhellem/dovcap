@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="3"
+ nextoid="1">
+
+ <template id="_002asge0126agjqq9mdf" name="Configurable_Component" title="Configurable Component">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Untitled" xlink:href="fm-cc_startmodel.kmv#_002asge01g7sso6dnurr" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Configurable Component" xlink:href="fm-cc_startmodel.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+
+
+</metis>

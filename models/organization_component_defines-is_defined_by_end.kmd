@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Organization_Component_defines-is_defined_by_End_UUID" name="Organization_Component_defines_is_defined_by_End" title="Organization Component defines-is defined by End" desc="Used to associate Organization Component subtype instances with the End-derived subtypes they define. Organization Component subtypes include Organization, Person, Position, and Role. End-derived subtypes include Strategic Goal and Strategic Objective, which are derived from Desired Result, a sub type of End." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="#UUID4_35C22CE1-AB9D-4D66-BA2A-804F9B8B4024"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../../meaf/abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End" xlink:href="../abstract_types/end.kmd#CompType_Semantics_Abstract:End_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Organization Component defines-is defined by End" xlink:href="#RelType_Semantics:Organization_Component_defines-is_defined_by_End_UUID" xlink:actuate="user">
+   <string name="from">defines</string>
+   <string name="to">is defined by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Organization Component defines-is defined by End" xlink:href="#RelType_Semantics:Organization_Component_defines-is_defined_by_End_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_35C22CE1-AB9D-4D66-BA2A-804F9B8B4024" xlink:role="type" xlink:title="Organization Component defines-is defined by End" xlink:href="#RelType_Semantics:Organization_Component_defines-is_defined_by_End_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="eaGov Relationship" xlink:href="../symbols/relationship_with_from-to_text.svg#UUID4_66101DCC-6AF1-4B88-8B91-F5A2B9F9F2BD" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/relationship.png"/>
+ </typeview>
+
+
+</metis>

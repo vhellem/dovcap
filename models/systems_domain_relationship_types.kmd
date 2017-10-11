@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_F7DD877A-C6FE-41D8-B07A-7BAFF4E2FD8F" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="8">
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software provides-is provided by Interface" xlink:href="../relationship_types/deployed_software_provides-is_provided_by_interface.kmd#RelType_Semantics_System:Deployed_Software_provides-is_provided_by_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software requires-is required by Interface" xlink:href="../relationship_types/deployed_software_requires-is_required_by_interface.kmd#RelType_Semantics_System:Deployed_Software_requires-is_required_by_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Interface supports-is supported by IT Service" xlink:href="../relationship_types/interface_supports-is_supported_by_it_service.kmd#RelType_Semantics_System:Interface_supports-is_supported_by_IT_Service_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Interface supports-is supported by Message" xlink:href="../relationship_types/interface_supports-is_supported_by_message.kmd#RelType_Semantics_System:Interface_supports-is_supported_by_Message_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="System incorporates-is incorporated by Infrastructure Component" xlink:href="../relationship_types/system_incorporates-is_incorporated_by_infrastructure_component.kmd#RelType_Semantics_System:System_incorporates-is_incorporated_by_Infrastructure_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="System incorporates-is incorporated into Application Component" xlink:href="../relationship_types/system_incorporates-is_incorporated_into_application_component.kmd#RelType_Semantics_System:System_incorporates-is_incorporated_into_Application_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="System provides-is provided by Interface" xlink:href="../relationship_types/system_provides-is_provided_by_interface.kmd#RelType_Semantics_System:System_provides-is_provided_by_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="System requires-is required by Interface" xlink:href="../relationship_types/system_requires-is_required_by_interface.kmd#RelType_Semantics_System:System_requires-is_required_by_Interface_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

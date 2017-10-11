@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.athena-ip.org/MPCE/Repository/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www.athena-ip.org/MPCE/Repository/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.athena-ip.org/MPCE/Repository/">
+      <s:element name="CheckOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckOutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Put">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Create">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Copy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TargetPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TargetName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CopyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CopyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Move">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TargetPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateChangeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateChangeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateChangeListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChangeLists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Owner" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Start" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="End" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChangeListsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetChangeListsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitChangeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitChangeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitChangeListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RevertChangeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RevertChangeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RevertChangeListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteChangeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteChangeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteChangeListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RevertChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RevertChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RevertChangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveChangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveObjectToChangeList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SessionKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectURI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeListId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveObjectToChangeListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveObjectToChangeListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckOutSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckOut" />
+  </wsdl:message>
+  <wsdl:message name="CheckOutSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="PutSoapIn">
+    <wsdl:part name="parameters" element="tns:Put" />
+  </wsdl:message>
+  <wsdl:message name="PutSoapOut">
+    <wsdl:part name="parameters" element="tns:PutResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSoapIn">
+    <wsdl:part name="parameters" element="tns:Create" />
+  </wsdl:message>
+  <wsdl:message name="CreateSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CopySoapIn">
+    <wsdl:part name="parameters" element="tns:Copy" />
+  </wsdl:message>
+  <wsdl:message name="CopySoapOut">
+    <wsdl:part name="parameters" element="tns:CopyResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveSoapIn">
+    <wsdl:part name="parameters" element="tns:Move" />
+  </wsdl:message>
+  <wsdl:message name="MoveSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateChangeListSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateChangeList" />
+  </wsdl:message>
+  <wsdl:message name="CreateChangeListSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateChangeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChangeListsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChangeLists" />
+  </wsdl:message>
+  <wsdl:message name="GetChangeListsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChangeListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitChangeListSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitChangeList" />
+  </wsdl:message>
+  <wsdl:message name="SubmitChangeListSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitChangeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RevertChangeListSoapIn">
+    <wsdl:part name="parameters" element="tns:RevertChangeList" />
+  </wsdl:message>
+  <wsdl:message name="RevertChangeListSoapOut">
+    <wsdl:part name="parameters" element="tns:RevertChangeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteChangeListSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteChangeList" />
+  </wsdl:message>
+  <wsdl:message name="DeleteChangeListSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteChangeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RevertChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:RevertChange" />
+  </wsdl:message>
+  <wsdl:message name="RevertChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:RevertChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveChange" />
+  </wsdl:message>
+  <wsdl:message name="MoveChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveObjectToChangeListSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveObjectToChangeList" />
+  </wsdl:message>
+  <wsdl:message name="MoveObjectToChangeListSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveObjectToChangeListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DependencyControlSoap">
+    <wsdl:operation name="CheckOut">
+      <wsdl:input message="tns:CheckOutSoapIn" />
+      <wsdl:output message="tns:CheckOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Put">
+      <wsdl:input message="tns:PutSoapIn" />
+      <wsdl:output message="tns:PutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <wsdl:input message="tns:CreateSoapIn" />
+      <wsdl:output message="tns:CreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Copy">
+      <wsdl:input message="tns:CopySoapIn" />
+      <wsdl:output message="tns:CopySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Move">
+      <wsdl:input message="tns:MoveSoapIn" />
+      <wsdl:output message="tns:MoveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input message="tns:DeleteSoapIn" />
+      <wsdl:output message="tns:DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateChangeList">
+      <wsdl:input message="tns:CreateChangeListSoapIn" />
+      <wsdl:output message="tns:CreateChangeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChangeLists">
+      <wsdl:input message="tns:GetChangeListsSoapIn" />
+      <wsdl:output message="tns:GetChangeListsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChangeList">
+      <wsdl:input message="tns:SubmitChangeListSoapIn" />
+      <wsdl:output message="tns:SubmitChangeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RevertChangeList">
+      <wsdl:input message="tns:RevertChangeListSoapIn" />
+      <wsdl:output message="tns:RevertChangeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChangeList">
+      <wsdl:input message="tns:DeleteChangeListSoapIn" />
+      <wsdl:output message="tns:DeleteChangeListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RevertChange">
+      <wsdl:input message="tns:RevertChangeSoapIn" />
+      <wsdl:output message="tns:RevertChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveChange">
+      <wsdl:input message="tns:MoveChangeSoapIn" />
+      <wsdl:output message="tns:MoveChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveObjectToChangeList">
+      <wsdl:input message="tns:MoveObjectToChangeListSoapIn" />
+      <wsdl:output message="tns:MoveObjectToChangeListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DependencyControlSoap" type="tns:DependencyControlSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="CheckOut">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/CheckOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Put">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/Put" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/Create" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Copy">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/Copy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Move">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/Move" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateChangeList">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/CreateChangeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChangeLists">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/GetChangeLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitChangeList">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/SubmitChangeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevertChangeList">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/RevertChangeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteChangeList">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/DeleteChangeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevertChange">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/RevertChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveChange">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/MoveChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveObjectToChangeList">
+      <soap:operation soapAction="http://www.athena-ip.org/MPCE/Repository/MoveObjectToChangeList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DependencyControl">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="DependencyControlSoap" binding="tns:DependencyControlSoap">
+      <soap:address location="http://localhost/mpce/DependencyControl.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

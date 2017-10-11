@@ -1,0 +1,1261 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="49"
+ nextoid="1">
+
+ <type id="RelType_IncidentAffectsInfra_UUID" name="incident_affects_is_affected_by_infrastructure_component" title="Incident affects Infrastructure Component" desc="Use this relationship for when an incident is logged on the infrastructure." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Incident" xlink:href="../objecttypes/incident.kmd#CompType_TRM:Incident_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Incident affects Infrastructure Component" xlink:href="#RelType_IncidentAffectsInfra_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color">#8B0000</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Incident affects Infrastructure Component" xlink:href="#RelType_IncidentAffectsInfra_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ProjectAffectsApp_UUID" name="change_component_affects_is_affected_by_application_component" title="Change Component affects Application Component" desc="Use this relationship to specify that a change affects an application or a software component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <property name="effectOnApplication" xlink:role="integer-type" xlink:title="Effect Type" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_effect_type_UUID" label="Effect on Application" desc="Specify the Effect on  Application. " default-visible="top" mer-property-metadata="uuid=&#34;RelType_MEAF:change_component_affects_is_affected_by_application_component_effectOnApplication_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Application Component" xlink:href="#RelType_ProjectAffectsApp_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color">#8B0000</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Change Component affects Application Component" xlink:href="#RelType_ProjectAffectsApp_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="effectOnApplication">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ProjectAffectsCapability_UUID" name="change_component_affects_is_affected_by_capability" title="Change Component affects Capability" desc="Use this relationship to specify that a change affects a capability." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <property name="effectOnApplication" xlink:role="integer-type" xlink:title="Effect Type" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_effect_type_UUID" label="Effect on Capability" desc="Specify the Effect on Capability." default-visible="top" mer-property-metadata="uuid=&#34;RelType_MEAF:change_component_affects_is_affected_by_capability_effectOnApplication_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Capability" xlink:href="#RelType_ProjectAffectsCapability_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Change Component affects Capability" xlink:href="#RelType_ProjectAffectsCapability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="effectOnApplication">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_affects-is_affected_by_UUID" name="affects-is_affected_by" title="affects" desc="Allows you to specify that an object affects another object." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllaffects-is_affected_by" xlink:role="criteria" xlink:title="Find all Affects relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_affects-is_affected_by_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_component_affects_is_affected_by_application_component_UUID" name="analysis_component_affects_is_affected_by_application_component" title="Analysis Component affects Application Component" desc="Use this relationship to specify that an analysis item affects an application or a software component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component affects Application Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_application_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component affects Application Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_application_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_component_affects_is_affected_by_change_component_UUID" name="analysis_component_affects_is_affected_by_change_component" title="Analysis Component affects Change Component" desc="Use this relationship to specify that an analysis item affects a Change Component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component affects Change Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_change_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component affects Change Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_change_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_component_affects_is_affected_by_goal_UUID" name="analysis_component_affects_is_affected_by_goal" title="Analysis Component affects Goal" desc="Use this relationship to specify that an analysis item affects a goal." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component affects Goal" xlink:href="#Reltype_analysis_component_affects_is_affected_by_goal_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component affects Goal" xlink:href="#Reltype_analysis_component_affects_is_affected_by_goal_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_component_affects_is_affected_by_infrastructure_component_UUID" name="analysis_component_affects_is_affected_by_infrastructure_component" title="Analysis Component affects Infrastructure Component" desc="Use this relationship to specify that an analysis item affects an infrastructure component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component affects Infrastructure Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_infrastructure_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component affects Infrastructure Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_infrastructure_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_component_affects_is_affected_by_message_UUID" name="analysis_component_affects_is_affected_by_message" title="Analysis Component affects Message" desc="Use this relationship to specify that an analysis item affects a message." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component affects Message" xlink:href="#Reltype_analysis_component_affects_is_affected_by_message_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component affects Message" xlink:href="#Reltype_analysis_component_affects_is_affected_by_message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_component_affects_is_affected_by_organization_component_UUID" name="analysis_component_affects_is_affected_by_organization_component" title="Analysis Component affects Organization Component" desc="Use this relationship to specify that an analysis item affects an organization." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component affects Organization Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_organization_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component affects Organization Component" xlink:href="#Reltype_analysis_component_affects_is_affected_by_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_datastore_UUID" name="change_component_affects_is_affected_by_datastore" title="Change Component affects Datastore" desc="Use this relationship to specify that a change affects a datastore." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Datastore" xlink:href="#Reltype_change_component_affects_is_affected_by_datastore_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects Datastore" xlink:href="#Reltype_change_component_affects_is_affected_by_datastore_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_infrastructure_component_UUID" name="change_component_affects_is_affected_by_infrastructure_component" title="Change Component affects Infrastructure Component" desc="Use this relationship to specify that a change affects an infrastructure component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Infrastructure Component" xlink:href="#Reltype_change_component_affects_is_affected_by_infrastructure_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects Infrastructure Component" xlink:href="#Reltype_change_component_affects_is_affected_by_infrastructure_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_it_architecture_component_UUID" name="change_component_affects_is_affected_by_it_architecture_component" title="Change Component affects IT Architecture Component" desc="Use this relationship to specify that a change affects an IT architecture component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Component" xlink:href="../abstracttypes/it_architecture_component.kmd#CompType_MEAF:ITArchitectureComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects IT Architecture Component" xlink:href="#Reltype_change_component_affects_is_affected_by_it_architecture_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects IT Architecture Component" xlink:href="#Reltype_change_component_affects_is_affected_by_it_architecture_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_location_UUID" name="change_component_affects_is_affected_by_location" title="Change Component affects Location" desc="Use this relationship to specify that a change component affects a location." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Location" xlink:href="../objecttypes/location.kmd#CompType_TRM:Location_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Location" xlink:href="#Reltype_change_component_affects_is_affected_by_location_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects Location" xlink:href="#Reltype_change_component_affects_is_affected_by_location_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_logical_location_UUID" name="change_component_affects_is_affected_by_logical_location" title="Change Component affects Logical Location" desc="Use this relationship to specify that a change affects a logical location." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Location" xlink:href="../objecttypes/logical_location.kmd#CompType_MEAF:LogicalLocation_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Logical Location" xlink:href="#Reltype_change_component_affects_is_affected_by_logical_location_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects Logical Location" xlink:href="#Reltype_change_component_affects_is_affected_by_logical_location_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_message_UUID" name="change_component_affects_is_affected_by_message" title="Change Component affects Message" desc="Use this relationship to specify that a change item affects a message" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Message" xlink:href="#Reltype_change_component_affects_is_affected_by_message_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects Message" xlink:href="#Reltype_change_component_affects_is_affected_by_message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_organization_component_UUID" name="change_component_affects_is_affected_by_organization_component" title="Change Component affects Organization Component" desc="Use this relationship to specify that a change affects an organization, a person, or a role." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Organization Component" xlink:href="#Reltype_change_component_affects_is_affected_by_organization_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects Organization Component" xlink:href="#Reltype_change_component_affects_is_affected_by_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_affects_is_affected_by_process_component_UUID" name="change_component_affects_is_affected_by_process_component" title="Change Component affects Process Component" desc="Use this relationship to specify that a change affects a process." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Component" xlink:href="../abstracttypes/process_component.kmd#CompType_TRM:ProcessDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component affects Process Component" xlink:href="#Reltype_change_component_affects_is_affected_by_process_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component affects Process Component" xlink:href="#Reltype_change_component_affects_is_affected_by_process_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_affects_is_affected_by_deliverable_UUID" name="deliverable_affects_is_affected_by_deliverable" title="Deliverable affects Deliverable" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable affects Deliverable" xlink:href="#Reltype_deliverable_affects_is_affected_by_deliverable_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable affects Deliverable" xlink:href="#Reltype_deliverable_affects_is_affected_by_deliverable_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_factor_affects_is_affected_by_factor_UUID" name="factor_affects_is_affected_by_factor" title="Factor affects Factor" desc="Use this relationship to specify that a factor like external factor, issue, cause and implication affects another factor" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Factor affects Factor" xlink:href="#Reltype_factor_affects_is_affected_by_factor_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Factor affects Factor" xlink:href="#Reltype_factor_affects_is_affected_by_factor_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_goal_affects_is_affected_by_capability_UUID" name="goal_affects_is_affected_by_capability" title="Goal affects Capability" desc="Use this relationship to specify goals and objectives affecting capabilities" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Goal affects Capability" xlink:href="#Reltype_goal_affects_is_affected_by_capability_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Goal affects Capability" xlink:href="#Reltype_goal_affects_is_affected_by_capability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_goal_affects_is_affected_by_policy_component_UUID" name="goal_affects_is_affected_by_policy_component" title="Goal affects Policy Component" desc="Use this relationship to specify goals and objectives affecting policies" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Goal affects Policy Component" xlink:href="#Reltype_goal_affects_is_affected_by_policy_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Goal affects Policy Component" xlink:href="#Reltype_goal_affects_is_affected_by_policy_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_issue_affects_is_affected_by_target_customer_UUID" name="issue_affects_is_affected_by_target_customer" title="Issue affects Target Customer" desc="Use this relationship to specify that an analysis item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Issue" xlink:href="../objecttypes/issue.kmd#CompType_TRM:Issue_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Target Customer" xlink:href="../objecttypes/target_customer.kmd#CompType_MEAF:TargetCustomer_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Issue affects Target Customer" xlink:href="#Reltype_issue_affects_is_affected_by_target_customer_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Issue affects Target Customer" xlink:href="#Reltype_issue_affects_is_affected_by_target_customer_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_issue_affects_is_affected_by_target_user_UUID" name="issue_affects_is_affected_by_target_user" title="Issue affects Target User" desc="Use this relationship to specify that an analysis item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Issue" xlink:href="../objecttypes/issue.kmd#CompType_TRM:Issue_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Target User" xlink:href="../objecttypes/target_user.kmd#CompType_MEAF:TargetUser_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Issue affects Target User" xlink:href="#Reltype_issue_affects_is_affected_by_target_user_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Issue affects Target User" xlink:href="#Reltype_issue_affects_is_affected_by_target_user_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_application_component_UUID" name="plan_affects_is_affected_by_application_component" title="Plan affects Application Component" desc="Use this relationship to specify that a plan item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Application Component" xlink:href="#Reltype_plan_affects_is_affected_by_application_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Application Component" xlink:href="#Reltype_plan_affects_is_affected_by_application_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_infrastructure_component_UUID" name="plan_affects_is_affected_by_infrastructure_component" title="Plan affects Infrastructure Component" desc="Use this relationship to specify that a plan item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Infrastructure Component" xlink:href="#Reltype_plan_affects_is_affected_by_infrastructure_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Infrastructure Component" xlink:href="#Reltype_plan_affects_is_affected_by_infrastructure_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_it_architecture_component_UUID" name="plan_affects_is_affected_by_it_architecture_component" title="Plan affects IT Architecture Component" desc="Use this relationship to specify that a plan item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Component" xlink:href="../abstracttypes/it_architecture_component.kmd#CompType_MEAF:ITArchitectureComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects IT Architecture Component" xlink:href="#Reltype_plan_affects_is_affected_by_it_architecture_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects IT Architecture Component" xlink:href="#Reltype_plan_affects_is_affected_by_it_architecture_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_knowledge_component_UUID" name="plan_affects_is_affected_by_knowledge_component" title="Plan affects Knowledge Component" desc="Use this relationship to specify that a plan item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Knowledge Component" xlink:href="../abstracttypes/knowledge_component.kmd#CompType_MEAF:KnowledgeComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Knowledge Component" xlink:href="#Reltype_plan_affects_is_affected_by_knowledge_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Knowledge Component" xlink:href="#Reltype_plan_affects_is_affected_by_knowledge_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_location_UUID" name="plan_affects_is_affected_by_location" title="Plan affects Location" desc="Use this relationship to specify that a plan item affects a location." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Location" xlink:href="../objecttypes/location.kmd#CompType_TRM:Location_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Location" xlink:href="#Reltype_plan_affects_is_affected_by_location_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Location" xlink:href="#Reltype_plan_affects_is_affected_by_location_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_logical_location_UUID" name="plan_affects_is_affected_by_logical_location" title="Plan affects Logical Location" desc="Use this relationship to specify that a plan item affects a location." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Location" xlink:href="../objecttypes/logical_location.kmd#CompType_MEAF:LogicalLocation_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Logical Location" xlink:href="#Reltype_plan_affects_is_affected_by_logical_location_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Logical Location" xlink:href="#Reltype_plan_affects_is_affected_by_logical_location_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_message_UUID" name="plan_affects_is_affected_by_message" title="Plan affects Message" desc="Use this relationship to specify that a plan affects a message" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Message" xlink:href="#Reltype_plan_affects_is_affected_by_message_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Message" xlink:href="#Reltype_plan_affects_is_affected_by_message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_organization_component_UUID" name="plan_affects_is_affected_by_organization_component" title="Plan affects Organization Component" desc="Use this relationship to specify that a plan item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Organization Component" xlink:href="#Reltype_plan_affects_is_affected_by_organization_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Organization Component" xlink:href="#Reltype_plan_affects_is_affected_by_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_affects_is_affected_by_resource_UUID" name="plan_affects_is_affected_by_resource" title="Plan affects Resource" desc="Use this relationship to specify that a plan item affects another object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Resource" xlink:href="../objecttypes/resource.kmd#CompType_MEAF:Resource_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Resource" xlink:href="#Reltype_plan_affects_is_affected_by_resource_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan affects Resource" xlink:href="#Reltype_plan_affects_is_affected_by_resource_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_policy_component_affects_is_affected_by_application_component_UUID" name="policy_component_affects_is_affected_by_application_component" title="Policy Component affects Application Component" desc="Use this relationship to specify that a policy affects an IT or business function." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Policy Component affects Application Component" xlink:href="#Reltype_policy_component_affects_is_affected_by_application_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Policy Component affects Application Component" xlink:href="#Reltype_policy_component_affects_is_affected_by_application_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_policy_component_affects_is_affected_by_function_UUID" name="policy_component_affects_is_affected_by_function" title="Policy Component affects Function" desc="Use this relationship to specify that a policy affects a business or IT function." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Policy Component affects Function" xlink:href="#Reltype_policy_component_affects_is_affected_by_function_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Policy Component affects Function" xlink:href="#Reltype_policy_component_affects_is_affected_by_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_recommendation_affects_is_affected_by_analysis_UUID" name="recommendation_affects_is_affected_by_analysis" title="Recommendation affects Analysis" desc="Use this relationship to show that a recommendation is one of the issues affecting an analysis." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Recommendation" xlink:href="../objecttypes/recommendation.kmd#CompType_MEAF:Recommendation_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Analysis" xlink:href="../objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Recommendation affects Analysis" xlink:href="#Reltype_recommendation_affects_is_affected_by_analysis_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Recommendation affects Analysis" xlink:href="#Reltype_recommendation_affects_is_affected_by_analysis_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_requirement_affects_is_affected_by_change_component_UUID" name="requirement_affects_is_affected_by_change_component" title="Requirement affects Change Component" desc="Use this relationship to specify that a requirement affects a change item." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requirement affects Change Component" xlink:href="#Reltype_requirement_affects_is_affected_by_change_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Requirement affects Change Component" xlink:href="#Reltype_requirement_affects_is_affected_by_change_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_risk_affects_is_affected_by_action_UUID" name="risk_affects_is_affected_by_action" title="Risk affects Action" desc="Use this relationship to connect risks to an action." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Risk" xlink:href="../objecttypes/risk.kmd#CompType_MEAF:Risk_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Risk affects Action" xlink:href="#Reltype_risk_affects_is_affected_by_action_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Risk affects Action" xlink:href="#Reltype_risk_affects_is_affected_by_action_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_scenario_affects_is_affected_by_process_component_UUID" name="scenario_affects_is_affected_by_process_component" title="Scenario affects Process Component" desc="Use this relationship to specify that a scenario affects a business process." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Scenario" xlink:href="../objecttypes/scenario.kmd#CompType_MEAF:Scenario_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Component" xlink:href="../abstracttypes/process_component.kmd#CompType_TRM:ProcessDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Scenario affects Process Component" xlink:href="#Reltype_scenario_affects_is_affected_by_process_component_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Scenario affects Process Component" xlink:href="#Reltype_scenario_affects_is_affected_by_process_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_affects_is_affected_by_deliverable_UUID" name="strategy_affects_is_affected_by_deliverable" title="Strategy affects Deliverable" desc="Use this relationship to connect strategies to objects affected by them." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy affects Deliverable" xlink:href="#Reltype_strategy_affects_is_affected_by_deliverable_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy affects Deliverable" xlink:href="#Reltype_strategy_affects_is_affected_by_deliverable_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_affects_is_affected_by_requirement_UUID" name="strategy_affects_is_affected_by_requirement" title="Strategy affects Requirement" desc="Use this relationship to connect strategies to objects affected by them." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy affects Requirement" xlink:href="#Reltype_strategy_affects_is_affected_by_requirement_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy affects Requirement" xlink:href="#Reltype_strategy_affects_is_affected_by_requirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_affects_is_affected_by_scenario_UUID" name="strategy_affects_is_affected_by_scenario" title="Strategy affects Scenario" desc="Use this relationship to connect strategies to objects affected by them." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Scenario" xlink:href="../objecttypes/scenario.kmd#CompType_MEAF:Scenario_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy affects Scenario" xlink:href="#Reltype_strategy_affects_is_affected_by_scenario_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy affects Scenario" xlink:href="#Reltype_strategy_affects_is_affected_by_scenario_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_affects_is_affected_by_success_factor_UUID" name="strategy_affects_is_affected_by_success_factor" title="Strategy affects Success Factor" desc="Use this relationship to connect strategies to objects affected by them." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Success Factor" xlink:href="../objecttypes/success_factor.kmd#CompType_MEAF:SuccessFactor_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy affects Success Factor" xlink:href="#Reltype_strategy_affects_is_affected_by_success_factor_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy affects Success Factor" xlink:href="#Reltype_strategy_affects_is_affected_by_success_factor_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_affects_is_affected_by_target_customer_UUID" name="strategy_affects_is_affected_by_target_customer" title="Strategy affects Target Customer" desc="Use this relationship to connect target customers to market strategies." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Target Customer" xlink:href="../objecttypes/target_customer.kmd#CompType_MEAF:TargetCustomer_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy affects Target Customer" xlink:href="#Reltype_strategy_affects_is_affected_by_target_customer_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy affects Target Customer" xlink:href="#Reltype_strategy_affects_is_affected_by_target_customer_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_affects_is_affected_by_target_user_UUID" name="strategy_affects_is_affected_by_target_user" title="Strategy affects Target User" desc="Use this relationship to connect target users to market strategies." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Target User" xlink:href="../objecttypes/target_user.kmd#CompType_MEAF:TargetUser_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy affects Target User" xlink:href="#Reltype_strategy_affects_is_affected_by_target_user_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy affects Target User" xlink:href="#Reltype_strategy_affects_is_affected_by_target_user_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_component_affects_is_affected_by_function_UUID" name="strategy_component_affects_is_affected_by_function" title="Strategy Component affects Function" desc="Use this relationship to specify that a strategy affects a business or IT function." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy Component" xlink:href="../abstracttypes/strategy_component.kmd#CompType_MEAF:StrategyComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy Component affects Function" xlink:href="#Reltype_strategy_component_affects_is_affected_by_function_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy Component affects Function" xlink:href="#Reltype_strategy_component_affects_is_affected_by_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_trend_affects_is_affected_by_scenario_UUID" name="trend_affects_is_affected_by_scenario" title="Trend affects Scenario" desc="Use this relationship to specify that a market or technology trend affects a scenario or a target customer." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Trend" xlink:href="../objecttypes/trend.kmd#CompType_MEAF:Trend_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Scenario" xlink:href="../objecttypes/scenario.kmd#CompType_MEAF:Scenario_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Trend affects Scenario" xlink:href="#Reltype_trend_affects_is_affected_by_scenario_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Trend affects Scenario" xlink:href="#Reltype_trend_affects_is_affected_by_scenario_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_trend_affects_is_affected_by_target_customer_UUID" name="trend_affects_is_affected_by_target_customer" title="Trend affects Target Customer" desc="Use this relationship to specify that a market or technology trend affects a scenario or a target customer." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="#Reltype_affects-is_affected_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Trend" xlink:href="../objecttypes/trend.kmd#CompType_MEAF:Trend_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Target Customer" xlink:href="../objecttypes/target_customer.kmd#CompType_MEAF:TargetCustomer_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Trend affects Target Customer" xlink:href="#Reltype_trend_affects_is_affected_by_target_customer_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Trend affects Target Customer" xlink:href="#Reltype_trend_affects_is_affected_by_target_customer_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

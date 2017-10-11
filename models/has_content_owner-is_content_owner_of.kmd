@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ nextoid="1">
+
+ <type id="Reltype_application_component_has_content_owner_is_content_owner_of_organization_component_UUID" name="application_component_has_content_owner_is_content_owner_of_organization_component" title="Application Component has content owner Organization Component" desc="Use this relationship to specify that a Person or an Organization owns the content of an Application or IT Product." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has content owner" xlink:href="#Reltype_has_content_owner-is_content_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component has content owner Organization Component" xlink:href="#Reltype_application_component_has_content_owner_is_content_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="from">has content owner</string>
+   <string name="to">is content owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component has content owner Organization Component" xlink:href="#Reltype_application_component_has_content_owner_is_content_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_data_component_has_content_owner_is_content_owner_of_organization_component_UUID" name="data_component_has_content_owner_is_content_owner_of_organization_component" title="Data Component has content owner Organization Component" desc="Use this relationship to specify that an organization, person or position can own the content of a datastore or database." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has content owner" xlink:href="#Reltype_has_content_owner-is_content_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Data Component" xlink:href="../abstracttypes/data_component.kmd#CompType_TRM:DataDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Data Component has content owner Organization Component" xlink:href="#Reltype_data_component_has_content_owner_is_content_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="from">has content owner</string>
+   <string name="to">is content owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Data Component has content owner Organization Component" xlink:href="#Reltype_data_component_has_content_owner_is_content_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_has_content_owner-is_content_owner_of_UUID" name="has_content_owner-is_content_owner_of" title="has content owner" desc="Allows you to specify a Person, a Role or  an Organization as content owner of an Application. This ownership is in many organizations different from the financial ownership." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllhas_content_owner-is_content_owner_of" xlink:role="criteria" xlink:title="Find all Has content owner relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_has_content_owner-is_content_owner_of_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="has content owner" xlink:href="#Reltype_has_content_owner-is_content_owner_of_UUID" xlink:actuate="user">
+   <string name="from">has content owner</string>
+   <string name="to">is content owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="has content owner" xlink:href="#Reltype_has_content_owner-is_content_owner_of_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

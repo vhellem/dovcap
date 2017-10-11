@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="metisreporttemplatetype" title="MetisReportTemplateType" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="MetisReportingBaseActionObject" xlink:href="base.kmd#oid1"/>
+  <property name="generateVia" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Generation via:" visible-flag="false"/>
+  <property name="templatepropertyset" xlink:role="type" xlink:title="TemplatePropertyGroup" xlink:href="../abstract_types/template_propertygroup.kmd#oid1" label="Template Information"/>
+ </type>
+
+</metis>

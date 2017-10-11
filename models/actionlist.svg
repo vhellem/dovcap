@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="3.1.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: actionlist.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>OpenActionList</title>
+    <g>
+      <polygon points="0 320 512 320 512 0 
+       0 0 0 320 0 320 0 320 0 320 "
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"       class="TAG:polygon"></polygon>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="0" y="31.5"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:32; text-align:center vertical-align:middle;"
+	 class="TAG:text">text</text>
+	<rect x="0" y="0" width="512" height="64"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>ClosedActionList</title>
+    <polygon points="0 320 512 320 512 0 
+     0 0 0 320 0 320 0 320 0 320 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:polygon"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="48" y="79.8"
+       style=" stroke:#000000; stroke-width:1; font-family:serif;  font-weight:bold; font-size:64; text-align:center vertical-align:middle;"
+       class="TAG:text">text</text>
+      <rect x="48" y="16" width="416" height="286.749"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

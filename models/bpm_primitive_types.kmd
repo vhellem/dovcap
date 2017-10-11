@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="7">
+
+ <integer-type id="oid1" name="BPM_Process_Model_Change_Value" desc="Value of attribute for processmodel change (baseline, added, removed, changed)">
+  <range name="Baseline" min="0" max="0"/>
+  <range name="Added" min="1" max="1"/>
+  <range name="Removed" min="2" max="2"/>
+  <range name="Updated" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid2" name="BPM_Process_Model_Change_Closed_Colormap" desc="Colormap for object symbols in closed state according to the Process Model Change attribute">
+  <range name="#FFFFCC" min="0" max="0"/>
+  <range name="#B3FFB3" min="1" max="1"/>
+  <range name="#FF9595" min="2" max="2"/>
+  <range name="#96BFFF" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid3" name="BPM_Process_Model_Change_Open_Colormap" default="2">
+  <range name="#FFFFEB" min="0" max="0"/>
+  <range name="#D5FFD5" min="1" max="1"/>
+  <range name="#FFC5C5" min="2" max="2"/>
+  <range name="#C5DBFF" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid4" name="BPM_Object_Colormap" desc="Color map for BPM objects (Start Events, Intermediate Events, End Events)">
+  <range name="white" min="0" max="0"/>
+  <range name="#B3FFB3" min="1" max="1"/>
+  <range name="#FF9595" min="2" max="2"/>
+  <range name="#96BFFF" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid5" name="BPM_Flow_Colormap">
+  <range name="black" min="0" max="0"/>
+  <range name="#339900" min="1" max="1"/>
+  <range name="red" min="2" max="2"/>
+  <range name="blue" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid6" name="BPM_Process_Model_Change_Patternmap">
+  <range name="solid" min="0" max="0"/>
+  <range name="dense1" min="1" max="1"/>
+  <range name="bdiag" min="2" max="2"/>
+  <range name="dense3" min="3" max="3"/>
+ </integer-type>
+
+
+</metis>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<?metis version="3.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ nextoid="1">
+ <cpp-method id="Metaverse.QueryNeighbors" name="QueryNeighbors"
+    title="Get Neighbors"
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="2">
+   <string name="ComponentQuery">component.relatedTo(component.uuid="%DESTINATION_ID%" ) and component.uuid != "%DESTINATION_ID%"</string>
+   <string name="RelationshipQuery">relationship.hasComponent(component.relatedTo(component.uuid="%DESTINATION_ID%")) and relationship.hasComponent( component.uuid="%DESTINATION_ID%" )</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Metaverse.QueryTypeOf" name="QueryTypeOf" title="Get All of this type"
+    language="c++" bind="NO.METIS.TrouxClient.Populate"
+  required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true" >
+  <arg-list size="1">
+   <string name="ComponentQuery">Component.type = "%DESTINATION_TYPELABEL%" and component.uuid != "%DESTINATION_ID%"</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Metaverse.QueryParts" name="QueryParts" title="Get All Parts"
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="1">
+   <string name="ComponentQuery">component.hasParent(component.uuid="%DESTINATION_ID%") and component.uuid != "%DESTINATION_ID%"</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Metaverse.QueryConnections" name="QueryConnections"
+    title="Get Connections"
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="2">
+   <string name="ComponentQuery">(component.relatedTo(component.uuid="%DESTINATION_ID%" ) or component.hasParent(component.uuid="%DESTINATION_ID%")) and component.uuid != "%DESTINATION_ID%"</string>
+   <string name="RelationshipQuery">relationship.hasComponent( component.uuid="%DESTINATION_ID%" )</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Metaverse.QueryAncestors" name="QueryAncestors" title="Get All Ancestors"
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="1">
+   <string name="ComponentQuery">component.hasDescendant(component.uuid="%DESTINATION_ID%") and component.uuid != "%DESTINATION_ID%"</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

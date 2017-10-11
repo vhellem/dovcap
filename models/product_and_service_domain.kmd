@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Product_and_Service_Domain" title="Product and Service Domain" desc="Use the Product and Service domain to capture information about the product(s) that the business is offering to the market. You can define the deliverables of your business, how they are packaged and what user benefits they offer.&#10;There is a well proven methodology for Demand and Offer analysis behind this domain. It is closely linked to the Market domain, which describes the market and the target customers that form the basis for your offerings. Together they make available a structured and powerful approach for strategic business analysis and planning.&#10;If the product of the business is a service, use the Business Service object instead of the Business Product object.&#10;With this domain it is possible to create different product structures (i.e. using product decomposition, relationships, or using the Product Module type), like Product Breakdown structures, Functional, Geometrical and Technical dependency structures, implementation structures, etc.&#10;The Product Property objects are used to define the product features and functionalities.&#10;The Service Level Agreement type is found under this domain. It will link to the IT Service object found under the IT Service domain.&#10;The Catalog type could be used for any type of product and service, linking the objects up to relevant catalogs and price lists.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="12">
+   <complex-type-link xlink:role="type" xlink:title="Business Product" xlink:href="../objecttypes/business_product.kmd#CompType_MEAF:BusinessProduct_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Module" xlink:href="../objecttypes/product_module.kmd#CompType_MEAF:ProductModule_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Method" xlink:href="../objecttypes/product_method.kmd#CompType_MEAF:ProductMethod_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Property" xlink:href="../objecttypes/product_property.kmd#CompType_MEAF:ProductProperty_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Service" xlink:href="../objecttypes/business_service.kmd#CompType_MEAF:BusinessService_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Service Level Agreement" xlink:href="../objecttypes/service_level_agreement.kmd#CompType_TRM:ServiceLevelAgreement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Catalog" xlink:href="../objecttypes/catalog.kmd#CompType_MEAF:Catalog_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Service" xlink:href="../objecttypes/service.kmd#CompType_MEAF:Service_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product" xlink:href="../objecttypes/product.kmd#CompType_MEAF:Product_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Product Version" xlink:href="../objecttypes/product_version.kmd#CompType_MEAF:ProductVersion_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Product Version" xlink:href="../objecttypes/business_product_version.kmd#CompType_MEAF:BusinessProductVersion_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="24">
+   <complex-type-link xlink:role="type" xlink:title="Deliverable affects Deliverable" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_deliverable_affects_is_affected_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Product connects functionally to Product" xlink:href="../relationshiptypes/connects_functionally_to-connects_functionally_from.kmd#Reltype_product_connects_functionally_to_connects_functionally_from_product_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Product connects geometrically to Business Product" xlink:href="../relationshiptypes/connects_geometrically_to-connects_geometrically_from.kmd#Reltype_business_product_connects_geometrically_to_connects_geometrically_from_business_product_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Product connects technically to Product" xlink:href="../relationshiptypes/connects_technically_to-connects_technically_from.kmd#Reltype_product_connects_technically_to_connects_technically_from_product_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable consists of Deliverable" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_ConsistsOfHardwareProduct_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Product consists of Product Module" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_product_consists_of_is_part_of_product_module_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Product consists of Product Property" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_product_consists_of_is_part_of_product_property_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Product consists of Product Method" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_product_consists_of_is_part_of_product_method_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Catalog consists of Deliverable" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_catalog_consists_of_is_part_of_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable corresponds to Deliverable" xlink:href="../relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_deliverable_corresponds_to_corresponds_to_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Contract governs Deliverable" xlink:href="../relationshiptypes/governs-is_governed_by.kmd#Reltype_contract_governs_is_governed_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Product has version Product Version" xlink:href="../relationshiptypes/has_version-is_version_of.kmd#Reltype_product_has_version_is_version_of_product_version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Product has version Business Product Version" xlink:href="../relationshiptypes/has_version-is_version_of.kmd#Reltype_business_product_has_version_is_version_of_business_product_version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable implements Deliverable" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_deliverable_implements_is_implemented_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Deliverable needs Deliverable" xlink:href="../relationshiptypes/needs-is_needed_by.kmd#Reltype_deliverable_needs_is_needed_by_deliverable_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instanceviews="1"
+ nextoid="2">
+
+ <modelview id="oid1" name="Main" title="Main" primary-flag="true" standalone-flag="true" zoom-level="1" x="-28.4953" y="-22.9738" seq="1" xlink:role="model" xlink:title="Interface Configuration (DIF, GEM) Blank" xlink:href="interface_configuration_dif_gem_blank.kmd#oid1" behavior="nested" text-scale="1" decomp-scale="0">
+  <viewstyle-links size="1">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="GEM View Style" xlink:href="http://xml.metis.no/xml/viewstyles/gem_viewstyle.kmd#oid1"/>
+  </viewstyle-links>
+ </modelview>
+
+
+</metis>

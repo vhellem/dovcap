@@ -26,7 +26,6 @@ class App extends React.Component {
   selectModel = (model) => {
     this.setState({ model });
   }
-
   render() {
     return (
       <Tabs activeKey={this.state.selectedTab} onChange={this.onChange} type="card">

@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+ <cpp-method id="oid1" title="getStrategicValue1" name="getStrategicValue1" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="6">
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid2" xlink:actuate="user"/>
+   <string name="Expression1">multiply (property weight) (property objectWeight)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid10" xlink:actuate="user"/>
+   <string name="Expression2">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid2" name="getAchievedBy1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/achieved_by-achieves.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid3" title="getStrategicValue2" name="getStrategicValue2" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid4" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid4" name="getAchievedBy2" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/achieved_by_implementing-fulfills.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid5" title="getStrategicValue3" name="getStrategicValue3" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid6" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid6" name="getDependentOn1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/dependent_on-critical_to.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid7" title="getStrategicValue4" name="getStrategicValue4" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid8" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid8" name="getSupportedBy1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/supported_by-supports5.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid9" title="getStrategicValue5" name="getStrategicValue5" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid10" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid10" name="getSupportedBy3" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/supported_by-supports3.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid11" title="getStrategicValue6" name="getStrategicValue6" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid12" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid12" name="getSupportedBy4" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_supported_by-is_critical_to.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid13" title="getStrategicValue7" name="getStrategicValue7" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="6">
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid14" xlink:actuate="user"/>
+   <string name="Expression1">multiply (property weight) (property objectWeight)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid29" xlink:actuate="user"/>
+   <string name="Expression2">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid14" name="getMeasuredBy1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/measured_by-measures.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid15" title="getStrategicValue8" name="getStrategicValue8" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="6">
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid16" xlink:actuate="user"/>
+   <string name="Expression1">multiply (property weight) (property objectWeight)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid28" xlink:actuate="user"/>
+   <string name="Expression2">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid16" name="getGenerates1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/generates-generated_by2.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid28" name="getGenerates2" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/generates-generated_by3.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid17" title="getStrategicValue9" name="getStrategicValue9" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid18" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid18" name="getAffects1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/affects-affected_by3.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid19" title="getStrategicValue10" name="getStrategicValue10" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid20" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid20" name="getFulfilledBy1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/fulfilled_by-fulfills.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid21" title="getStrategicValue11" name="getStrategicValue11" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid23" xlink:actuate="user"/>
+   <string name="Expression">multiply (property CurrentSupportWeight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid22" title="getStrategicValue12" name="getStrategicValue12" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid23" xlink:actuate="user"/>
+   <string name="Expression">multiply (property FutureSupportWeight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+
+ <criteria id="oid23" name="getImpacts1" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/impacts-impacted_by2.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+ <cpp-method id="oid24" title="getStrategicValue13" name="getStrategicValue13" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="6">
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid12" xlink:actuate="user"/>
+   <string name="Expression1">multiply (property weight) (property objectWeight)</string>
+   <string name="Function1">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid25" xlink:actuate="user"/>
+   <string name="Expression2">multiply (property weight) (property objectWeight)</string>
+   <string name="Function2">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid25" name="getSupportedBy6" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/supported_by-supports6.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+ <cpp-method id="oid26" title="getStrategicValue14" name="getStrategicValue14" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid27" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid27" name="getSupportedBy7" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/supported_by-supports18.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid29" name="getMeasuredBy2" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/measured_by-measures2.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid30" title="getStrategicValue15" name="getStrategicValue15" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid31" xlink:actuate="user"/>
+   <string name="Expression">multiply (property weight) (property objectWeight)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid31" name="getLeadsTo" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/leads_to-derived_from4.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid32" title="getStrategicValue16" name = "getStrategicValue16" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="6">
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid33" xlink:actuate="user"/>
+   <string name="Expression1">multiply (property weight) (property objectWeight)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid31" xlink:actuate="user"/>
+   <string name="Expression2">multiply (property weight) (property objectWeight)</string>
+   <string name="Function3">sum</string>
+   <pointer name="Criteria3" xlink:role="criteria" xlink:href="#oid20" xlink:actuate="user"/>
+   <string name="Expression3">multiply (property weight) (property objectWeight)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid33" name="getImplementedBy" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/implemented_by-implements2.kmd#oid1" xlink:actuate="user"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid101" title="getStrategicValueCount1" name="getStrategicValueCount1" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="6">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid2" xlink:actuate="user"/>
+   <string name="Expression1">add 1 (property svCount)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid10" xlink:actuate="user"/>
+   <string name="Expression2">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid102" title="getStrategicValueCount2" name="getStrategicValueCount2" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid6" xlink:actuate="user"/>
+   <string name="Expression">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid103" title="getStrategicValueCount3" name="getStrategicValueCount3" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid12" xlink:actuate="user"/>
+   <string name="Expression1">add 1 (property svCount)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid25" xlink:actuate="user"/>
+   <string name="Expression2">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid104" title="getStrategicValueCount4" name="getStrategicValueCount4" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid27" xlink:actuate="user"/>
+   <string name="Expression">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid105" title="getStrategicValueCount5" name="getStrategicValueCount5" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="6">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid16" xlink:actuate="user"/>
+   <string name="Expression1">add 1 (property svCount)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid28" xlink:actuate="user"/>
+   <string name="Expression2">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid106" title="getStrategicValueCount6" name="getStrategicValueCount6" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid14" xlink:actuate="user"/>
+   <string name="Expression1">add 1 (property svCount)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid29" xlink:actuate="user"/>
+   <string name="Expression2">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid107" title="getStrategicValueCount7" name="getStrategicValueCount7" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid31" xlink:actuate="user"/>
+   <string name="Expression">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid108" title="getStrategicValueCount8" name="getStrategicValueCount8" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function1">sum</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:href="#oid33" xlink:actuate="user"/>
+   <string name="Expression1">add 1 (property svCount)</string>
+   <string name="Function2">sum</string>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:href="#oid31" xlink:actuate="user"/>
+   <string name="Expression2">add 1 (property svCount)</string>
+   <string name="Function3">sum</string>
+   <pointer name="Criteria3" xlink:role="criteria" xlink:href="#oid20" xlink:actuate="user"/>
+   <string name="Expression3">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid109" title="getStrategicValueCount9" name="getStrategicValueCount9" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid18" xlink:actuate="user"/>
+   <string name="Expression">add 1 (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

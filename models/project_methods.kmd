@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="7"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="allocationDirect" title="Allocation, direct" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Get Allocation, direct" xlink:href="../criteria/project_criteria.kmd#oid1"/>
+   <string name="Expression">divide (property percentage) 100</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="allocationTotal" title="Allocation, total" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Get Allocation, total" xlink:href="../criteria/project_criteria.kmd#oid2"/>
+   <string name="Expression">add (property allocationDirect)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" name="CalculateRolledUpBaselineCost" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findOnlyAggregated" xlink:href="../criteria/project_criteria.kmd#oid3"/>
+   <string name="Expression">add (property baselineCost) (property rolledUpBaselineCost)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid6" name="CalculateRolledUpPlannedCost" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findOnlyAggregated" xlink:href="../criteria/project_criteria.kmd#oid3"/>
+   <string name="Expression">add (property plannedCost) (property rolledUpPlannedCost)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="CalculateRolledUpActualCost" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findOnlyAggregated" xlink:href="../criteria/project_criteria.kmd#oid3"/>
+   <string name="Expression">add (property actualCost) (property rolledUpActualCost)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

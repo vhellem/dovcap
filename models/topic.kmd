@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_FEA_DRM:Topic_UUID" name="Topic" title="DRM: Topic" desc="A category within a Taxonomy. A Topic is the central concept for applying context to data. For example, an agency may have a Taxonomy that represents their organizational structure. In such a Taxonomy, each role in the organizational structure (e.g. CIO) represents a Topic. Topic is often synonymous with &#34;node&#34;." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Data Reference Model Component" xlink:href="../abstract_types/data_reference_model_component.kmd#CompType_FEA_DRM:dataReferenceModelComponent_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="DRM: Topic" xlink:href="#CompType_FEA_DRM:Topic_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="DRM: Topic" xlink:href="#CompType_FEA_DRM:Topic_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="17" xlink:role="type" xlink:title="DRM: Topic" xlink:href="#CompType_FEA_DRM:Topic_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="version"></string>
+   <string name="source"></string>
+   <integer name="originType">1</integer>
+   <date name="dateSubmitted">00000000</date>
+   <string name="submittedBy"></string>
+   <date name="dateApproved">00000000</date>
+   <string name="approvedBy"></string>
+   <date name="dateRetired">00000000</date>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="DRM: Topic" xlink:href="#CompType_FEA_DRM:Topic_UUID" tree-size="0.75" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../../meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/eagov/symbols/topic.svg#UUID4_FD1A7763-CA4D-4007-AEA3-51902845B4AD&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#d2efe3&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../../meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/eagov/symbols/topic.svg#UUID4_FD1A7763-CA4D-4007-AEA3-51902845B4AD&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#d2efe3&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/topic.png"/>
+ </typeview>
+
+
+</metis>

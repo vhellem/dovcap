@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_APM:Plan_affects_Capability_Operations_UUID" name="Plan_affects_Capability_Operations" title="Plan affects Capability Operations" desc="Indicates that a plan affects an operationalized capability." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="affects" xlink:href="../../meaf/relationshiptypes/affects-is_affected_by.kmd#Reltype_affects-is_affected_by_UUID"/>
+  <property name="weight" xlink:role="integer-type" xlink:title="Weight" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_weight_UUID" label="Weight" desc="A number from 1 through 7 that indicates how much the plan impacts the operationalized capability. Higher numbers indicate a greater impact. " default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:PlanAffectsCapOperations_Weight_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../../meaf/objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability Operations" xlink:href="../object_types/capability_operations.kmd#CompType_Semantics_APM:Capability_Operations_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan affects Capability Operations" xlink:href="#RelType_Semantics_APM:Plan_affects_Capability_Operations_UUID" xlink:actuate="user">
+   <string name="from">affects</string>
+   <string name="to">is affected by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Plan affects Capability Operations" xlink:href="#RelType_Semantics_APM:Plan_affects_Capability_Operations_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="weight">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

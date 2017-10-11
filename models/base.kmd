@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="metisreportingbaseactionobject" title="MetisReportingBaseActionObject" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23"/>
+  <property name="metisReportType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Report Type" desc="Report Type" default-visible="top"/>
+  <property name="metisReportSource" xlink:role="string-type" xlink:title="ReportSource" xlink:href="../primitive_types/primitive_types.kmd#oid1" label="Report Source" desc="Metis Report Source" default-visible="top"/>
+  <property name="selection" xlink:role="type" xlink:title="Criteria PropertyGroup" xlink:href="../abstract_types/criteria_propertygroup.kmd#oid1" label="Select instances to report based on criteria" default-visible="top"/>
+  <property name="includeRelationships" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Include relationships" desc="Check to enable inclusion of relationships"/>
+  <property name="sortByStructure" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Sort instances by structure" desc="Check to sort the instances in the report by structure rather than by type"/>
+  <property name="omitProperties" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Do not report any instance properties" desc="Do not report any instance properties. If not checked, properties are reported according to the options below. If checked, no instance properties are reported."/>
+  <property name="invisibleProperties" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Report invisible instance properties" desc="Check to report invisible instance properties"/>
+  <property name="omitBlankProperties" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Do not report instance properties with no data" desc="Check to not report instance properties that have no data. If not checked, both properties with data and without data are reported."/>
+  <property name="omitTypeDescription" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Do not report type description" desc="Check to not report the description on types. If not checked, the description will be listed in the report."/>
+  <property name="omitInstanceDescription" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Do not report instance description" desc="Check to not report the description on instances. If not checked, the description will be listed in the report."/>
+  <property name="interactive" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Interactive" desc="Check to enable interactive mode"/>
+  <property name="iAmAReportingObject" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="I am a reporting object" desc="This property is present to be able to test on an instance and find out if the instance is of a Reporting Object type, or a subtype"/>
+  <named-method-link name="View.onOpen" xlink:role="cpp-method" xlink:title="View.onOpen" xlink:href="../methods/reporting_methods.kmd#oid2"/>
+ </type>
+
+</metis>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="3"
+ nextoid="4">
+
+ <metamodel id="oid1" name="Interface_Configuration_Toolbars" title="Interface Configuration Toolbars">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Parameter, Conditions and Actions Toolbar" xlink:href="#oid3"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="XML Configuration Toolbar" xlink:href="../../xmlif/domains/xml_configuration_toolbars.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Database Configuration Toolbar" xlink:href="../../dbif/domains/database_configuration_toolbars.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Interface Configuration Toolbar" xlink:href="#oid2"/>
+  </metamodel-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="DeveloperEd.ModelEd.UriToolBar.Interface_Configuration_Toolbar" title="Interface Configuration Toolbar">
+  <complex-type-links size="6">
+   <complex-type-link xlink:role="type" xlink:title="Interface Configuration" xlink:href="../../common/object_types/interface_mapping.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Object Mapping" xlink:href="../../common/object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../../common/object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../../common/object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="../../common/object_types/update_options.kmd#oid3" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Waste Basket" xlink:href="../../common/object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid3" name="DeveloperEd.ModelEd.UriToolBar.Parameter_Conditions_and_Actions_Toolbar" title="Parameter, Conditions and Actions Toolbar">
+  <complex-type-links size="7">
+   <complex-type-link xlink:role="type" xlink:title="Parameter" xlink:href="../../common/object_types/parameter.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Recordset Pre Processing" xlink:href="../../common/object_types/action_and_condition_holder.kmd#oid6" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pre Processing" xlink:href="../../common/object_types/action_and_condition_holder.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pre Condition" xlink:href="../../common/object_types/condition.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pre Action" xlink:href="../../common/object_types/action.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Post Processing" xlink:href="../../common/object_types/action_and_condition_holder.kmd#oid3" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Post Action" xlink:href="../../common/object_types/action.kmd#oid3" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002as5m00u9m7cjrcrqp" xlink:role="type" xlink:title="Task (AKM)" xlink:href="../objecttypes/task.kmd#AKM_Task" tree-size="0.25" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Standard Matrix Layout, No Relationships" xlink:href="metis:layout#oid67"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="taskId" visible-flag="true"/>
+   <propertyview name="status" visible-flag="false"/>
+   <propertyview name="milestone" visible-flag="true"/>
+   <propertyview name="baselineStartDate" visible-flag="true"/>
+   <propertyview name="plannedStartDate" visible-flag="true"/>
+   <propertyview name="actualStartDate" visible-flag="true"/>
+   <propertyview name="baselineFinishDate" visible-flag="true"/>
+   <propertyview name="plannedFinishDate" visible-flag="true"/>
+   <propertyview name="actualFinishDate" visible-flag="true"/>
+   <propertyview name="baselineCost" visible-flag="false"/>
+   <propertyview name="plannedCost" visible-flag="false"/>
+   <propertyview name="actualCost" visible-flag="false"/>
+   <propertyview name="rolledUpBaselineCost" visible-flag="false"/>
+   <propertyview name="rolledUpPlannedCost" visible-flag="false"/>
+   <propertyview name="rolledUpActualCost" visible-flag="false"/>
+   <propertyview name="monetaryUnit" visible-flag="false"/>
+   <propertyview name="completionPercentage" visible-flag="false"/>
+   <propertyview name="strategicValue" visible-flag="false"/>
+   <propertyview name="baselineResources" visible-flag="false"/>
+   <propertyview name="plannedResources" visible-flag="false"/>
+   <propertyview name="actualResources" visible-flag="false"/>
+   <propertyview name="resourceUnit" visible-flag="false"/>
+   <propertyview name="allocationDirect" visible-flag="false"/>
+   <propertyview name="allocationTotal" visible-flag="false"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="false"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="false"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="false"/>
+   <propertyview name="troux_color" visible-flag="false"/>
+   <propertyview name="troux_iconAlias" visible-flag="false"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="false"/>
+   <propertyview name="troux_toplevel" visible-flag="false"/>
+   <propertyview name="color" protected-flag="true" visible-flag="true"/>
+   <propertyview name="color_Status" protected-flag="true" visible-flag="true"/>
+   <propertyview name="status_AKM" visible-flag="true"/>
+   <propertyview name="icon_Status" protected-flag="true" visible-flag="true"/>
+   <propertyview name="delayed" visible-flag="true"/>
+   <propertyview name="delayed_Color" protected-flag="true" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process2.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process2.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/bpm/process.png"/>
+ </typeview>
+
+
+</metis>

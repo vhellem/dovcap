@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_TRM:PolicyRule_UUID" name="policy_rule" title="Policy Rule" desc="A Policy Rule defines a single assessment to be run against the object of the type specified." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="policyRuleType" xlink:role="integer-type" xlink:title="Policy Rule Type" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_policy_rule_type_UUID" label="Policy Rule Type" desc="Defines the type of policy rule, property, relationship, or missing relationship." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_Object_UUID&#34;;position=0;"/>
+  <property name="policyRuleObjectName" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#string" label="Policy Rule Object Name" desc="The name of the policy rule object." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_ObjectName_UUID&#34;;position=1;"/>
+  <property name="relationshipCardinality" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Relationship Cardinality" desc="The optional relationship cardinality condition for a Rule configured to examine relationships." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_RelCard_UUID&#34;;position=2;"/>
+  <property name="operator" xlink:role="integer-type" xlink:title="Operator" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_operator_UUID" label="Operator" desc="Defines the comparison operator." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_Comparison_UUID&#34;;position=3;"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#string" label="Value" desc="The value to be applied if a comparison operator is used." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_Value_UUID&#34;;position=4;"/>
+  <property name="startRange" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#string" label="Start Range" desc="The start range if a range operator is used." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_StartRange_UUID&#34;;position=5;"/>
+  <property name="endRange" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#string" label="End Range" desc="The end range if a range operator is used." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_EndRange_UUID&#34;;position=6;"/>
+  <property name="active" xlink:role="integer-type" xlink:title="Milestone?" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_yesno_UUID" label="Active?" desc="Denote whether Policy Rule is active or not." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_ActiveGovernance_UUID&#34;;position=7;"/>
+  <property name="violationMeansNoncompliance" xlink:role="integer-type" xlink:title="Milestone?" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_yesno_UUID" label="Violation Means Non-Compliance?" desc="Indicates whether violation of the rule means the component is not in compliance." mer-property-metadata="uuid=&#34;PropDef_TRM:PolicyRule_Prop_InCompliance_UUID&#34;;position=8;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Policy Rule" xlink:href="#CompType_TRM:PolicyRule_UUID">
+   <string name="troux_color">#DDCC99</string>
+   <string name="troux_iconAlias">924e17c1-99a0-3b31-8de1-d21ead6d250d</string>
+   <string name="troux_shape">Rectangle</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Policy Rule" xlink:href="#CompType_TRM:PolicyRule_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+       
+   <propertyview name="policyRuleType"/>
+   <propertyview name="policyRuleObjectName"/>
+   <propertyview name="relationshipCardinality"/>
+   <propertyview name="operator"/>
+   <propertyview name="value"/>
+   <propertyview name="startRange"/>
+   <propertyview name="endRange"/>
+   <propertyview name="active"/>
+   <propertyview name="violationMeansNoncompliance"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/policyrule.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/policyrule.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/policyrule.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Policy Rule" xlink:href="#CompType_TRM:PolicyRule_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="policyRuleType"/>
+   <propertyview name="policyRuleObjectName"/>
+   <propertyview name="relationshipCardinality"/>
+   <propertyview name="operator"/>
+   <propertyview name="value"/>
+   <propertyview name="startRange"/>
+   <propertyview name="endRange"/>
+   <propertyview name="active"/>
+   <propertyview name="violationMeansNoncompliance"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/policyrule.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/policyrule.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/policyrule.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

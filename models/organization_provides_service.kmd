@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_ITSM:Organization_provides_Service_UUID" name="Organization_provides_Service" title="Organization provides Service" desc="Identifies services that are offered and delivered by an Organization." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by.kmd#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization" xlink:href="../../meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Service" xlink:href="../../meaf/objecttypes/service.kmd#CompType_MEAF:Service_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Organization provides Service" xlink:href="#RelType_ITSM:Organization_provides_Service_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Organization provides Service" xlink:href="#RelType_ITSM:Organization_provides_Service_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

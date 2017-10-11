@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="AKM_Standard_queries" name="Standard_queries" title="Standard queries" desc="Lists the standard queries for finding related objects that may be used for  the &#34;applies to&#34; property of the &#34;repeat for each&#34; relationship. The repetitioon will be triggered by the task engine at runtime, when the task becomes &#34;ready to start&#34;.">
+  <range name="All objects related to the task" min="0" max="0"/>
+  <range name="All parts of the task" min="1" max="1"/>
+  <range name="All ancestors of the task" min="2" max="2"/>
+  <range name="All objects related to the parent of the task" min="3" max="3"/>
+  <range name="All objects related to ancestors of the task" min="4" max="4"/>
+  <range name="All objects related to parts of the task" min="5" max="5"/>
+  <range name="All objects related to the object" min="6" max="6"/>
+  <range name="All parts of the object" min="7" max="7"/>
+  <range name="All ancestors of the object" min="8" max="8"/>
+  <range name="All objects related to the parent of the object" min="9" max="9"/>
+  <range name="All objects related to ancestors of the object" min="10" max="10"/>
+  <range name="All objects related to parts of the object" min="11" max="11"/>
+ </integer-type>
+
+
+</metis>

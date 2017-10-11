@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="3.4.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ nextoid="2">
+
+ <viewstyle id="oid1" name="BPM_Viewstyle_w_Variable_Font" title="BPM Viewstyle w/Variable Font" desc="BPM Viewstyle with variable font (scaling up/down with the scale of the object).">
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid7" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid8" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid9" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid10" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid11" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid12" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid13" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid14" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid16" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid15" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid18" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="main_swimlane_logical_process.kmd#oid19" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../relationship_types/bpm_rels.kmd#oid1001" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../relationship_types/bpm_rels.kmd#oid1002" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

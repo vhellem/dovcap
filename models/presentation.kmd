@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="presentation" name="Presentation" desc="types for configuring presentation features such as symbols, layouts etc.">
+  <complex-type-links size="9">
+   <complex-type-link xlink:role="type" xlink:title="Has view parameter" xlink:href="../languages/has_view_parameter.kmd#has_ViewParameter"/>
+  </complex-type-links>
+ </metamodel>
+
+</metis>

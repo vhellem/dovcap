@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="4">
+
+ <type id="oid1" name="ImplementedBy4" title="implemented by/implements" desc="Allows you to connect Logical Architecture elements to the physical elements used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts - User" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <property name="weight" xlink:role="integer-type" xlink:title="Weight" xlink:href="../primitive_types/primitive_types.kmd#oid8" label="Weight" desc="A weight indicating how well the target object implements the origin object. Used to calculate the value of the target object." visible-flag="false"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Architecture Element" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Product" xlink:href="../object_types/it_product.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Architecture Element" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../object_types/physical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Architecture Element" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Technology Item" xlink:href="../object_types/physical_it_technology_item.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Architecture Element" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Architecture Element" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Building Block" xlink:href="../object_types/application_building_block.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="implemented by/implements" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from">implemented by</string>
+   <string name="to">implements</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="implemented by/implements" xlink:href="#oid1" xlink:actuate="user">
+   <integer name="weight">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

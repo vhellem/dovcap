@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2005 Troux Technologies, Inc. All rights reserved.
+--><metis xmlns="http://www.metis.no/metis" xmlns:xlink="http://www.w3.org/1999/xlink" types="1" nextoid="2">
+
+ <integer-type id="PrimType_FEA_RM:origin_type_UUID" name="origin_type" title="origin type" default="1">
+  <range name="External" min="1" max="1"/>
+  <range name="Internal" min="2" max="2"/>
+ </integer-type>
+
+
+</metis>

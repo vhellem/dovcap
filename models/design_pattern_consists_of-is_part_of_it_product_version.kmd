@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_Patterns:Design_Pattern_consists_of-is_part_of_IT_Product_Version_UUID" name="Design_Pattern_consists_of_is_part_of_IT_Product_Version" title="Design Pattern consists of-is part of IT Product Version" desc="Specifies that a Software Product Version or Hardware Product Model is used within a Design Pattern." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/design_pattern_consists_of-is_part_of_it_product_version.kmd#UUID4_2CA98BF1-0C8B-4D44-9AFB-505F40656BE4"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Design Pattern" xlink:href="../object_types/design_pattern.kmd#CompType_Semantics_Patterns:Design_Pattern_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Product Version" xlink:href="../../meaf/objecttypes/it_product_version.kmd#CompType_MEAF:ITProductVersion_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Design Pattern consists of-is part of IT Product Version" xlink:href="#RelType_Semantics_Patterns:Design_Pattern_consists_of-is_part_of_IT_Product_Version_UUID" xlink:actuate="user">
+   <string name="from">consists of</string>
+   <string name="to">is part of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Design Pattern consists of-is part of IT Product Version" xlink:href="#RelType_Semantics_Patterns:Design_Pattern_consists_of-is_part_of_IT_Product_Version_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

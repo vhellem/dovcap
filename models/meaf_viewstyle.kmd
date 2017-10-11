@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ viewstyles="1"
+ nextoid="1">
+
+ <viewstyle id="oid1" name="meaf" title="Default Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid7" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid8" xlink:actuate="user"/>
+<!--
+  <typeview-link xlink:role="typeview" xlink:href="#oid9" xlink:actuate="user"/>
+-->
+  <typeview-link xlink:role="typeview" xlink:href="#oid10" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/decomposition_relationship.kmd#oid1" xlink:actuate="user"/>
+ </viewstyle>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/container.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Container Open" xlink:href="../symbols/container_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="../symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:href="metis:stdtypes#PushPin" tree-size="0.5" nested-size="0.0625" behavior="tree" layout-flags="fixedlayoutset fixedlayoutme " >
+  <symbol-override state="open" xlink:href="../symbols/icons/pushpin.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/icons/pushpin.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="grid" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/pushpin.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:href="metis:stdtypes#Comment" tree-size="2" nested-size="0.25" layout-flags="fixedlayoutset fixedlayoutme ">
+  <symbol-override state="open" xlink:href="../symbols/icons/comment.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;\n&#34; (description))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/icons/comment.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;\n&#34; (description))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/comment.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:href="metis:stdtypes#ActionButton" tree-size="0.5" nested-size="0.25" layout-flags="fixedlayoutset fixedlayoutme ">
+  <propertyviews>
+     <propertyview name="name" visible-flag="true"/>
+     <propertyview name="description" visible-flag="true"/>
+     <propertyview name="mode" visible-flag="true"/>
+     <propertyview name="reference" visible-flag="true"/>
+     <propertyview name="execute_on_parent" visible-flag="true"/>
+     <propertyview name="viewArea.mdlView" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.topleft.xCoord" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.topleft.yCoord" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.bottomright.xCoord" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.bottomright.yCoord" protected-flag="true" visible-flag="false"/>
+  </propertyviews>  
+  <symbol-override state="open" xlink:href="../symbols/icons/actionbutton.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/icons/actionbutton.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/actionbutton.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:href="metis:stdtypes#RelationshipMatrixButton" tree-size="0.5" nested-size="0.25" layout-flags="fixedlayoutset fixedlayoutme ">
+   <propertyviews>
+      <propertyview name="mode" visible-flag="false"/>
+      <propertyview name="reference" visible-flag="false"/>
+      <propertyview name="execute_on_parent" visible-flag="false"/>
+      <propertyview name="vertical.asSpecified" visible-flag="false"/>
+      <propertyview name="vertical.objects" visible-flag="false"/>
+      <propertyview name="horizontal.asSpecified" visible-flag="false"/>
+      <propertyview name="horizontal.objects" visible-flag="false"/>
+      <propertyview name="relFilterList" visible-flag="false"/>
+      <propertyview name="name" visible-flag="true"/>
+      <propertyview name="flattenedMode" visible-flag="true"/>
+      <propertyview name="interfacesHidden" visible-flag="true"/>
+      <propertyview name="relsVisibleOnHidden" visible-flag="true"/>
+      <propertyview name="showRelsOnAxesMode" visible-flag="true"/>
+      <propertyview name="selectMode" visible-flag="true"/>
+      <propertyview name="highlightMode" visible-flag="true"/>
+      <propertyview name="zoomMode" visible-flag="true"/>
+      <propertyview name="activePropertyName" visible-flag="true"/>
+      <propertyview name="propertyNameList" visible-flag="true"/>
+      <propertyview name="description" visible-flag="true"/>
+   </propertyviews> 
+  <symbol-override state="open" xlink:href="../symbols/icons/relationshipmatrixbutton.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/icons/relationshipmatrixbutton.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/relationshipmatrixbutton.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:href="metis:stdtypes#PrintSettingsButton" tree-size="0.5" nested-size="0.25" layout-flags="fixedlayoutset fixedlayoutme ">
+  <propertyviews>
+      <propertyview name="mode" visible-flag="false"/>
+      <propertyview name="reference" visible-flag="false"/>
+      <propertyview name="execute_on_parent" visible-flag="false"/>
+      <propertyview name="name" visible-flag="true"/>
+      <propertyview name="description" visible-flag="true"/>
+      <propertyview name="printDlg" visible-flag="true"/>
+      <propertyview name="hPages" visible-flag="true"/>
+      <propertyview name="vPages" visible-flag="true"/>
+      <propertyview name="includeGrid" visible-flag="true"/>
+      <propertyview name="landscapeOrientation" visible-flag="true"/>
+      <propertyview name="viewArea.topleft.xCoord" visible-flag="true"/>
+      <propertyview name="viewArea.topleft.yCoord" visible-flag="true"/>
+      <propertyview name="viewArea.bottomright.xCoord" visible-flag="true"/>
+      <propertyview name="viewArea.bottomright.yCoord" visible-flag="true"/>
+      <propertyview name="viewArea.mdlView" visible-flag="false"/>
+   </propertyviews> 
+  <symbol-override state="open" xlink:href="../symbols/icons/printsettingsbutton.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/icons/printsettingsbutton.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/printsettings.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid8" xlink:role="type" xlink:href="metis:stdtypes#Picture" 
+	   tree-size="0.5" nested-size="0.125" 
+	   gui-behavior="guirmbm guidropsymbol guiincludeincopy">
+  <symbol-override state="open" xlink:href="../symbols/icons/picture.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/icons/picture.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/picture.png" xlink:actuate="user"/>
+ </typeview> 
+
+ <typeview id="oid9" xlink:role="type" xlink:href="metis:stdtypes#Image" 
+	   tree-size="0.5" nested-size="0.125" 
+	   gui-behavior="guirmbm guidropsymbol guiincludeincopy">
+  <propertyviews>
+   <propertyview name="name" label="Header" visible-flag="false"/>
+   <propertyview name="description" label="Body" visible-flag="false"/>
+   <propertyview name="filename" label="Filename" visible-flag="true"/>
+   <propertyview name="alignment" label="Alignment" visible-flag="true"/>
+   <propertyview name="border.color" label="Color" visible-flag="true"/>
+   <propertyview name="border.width" label="Width" visible-flag="true"/>
+   <propertyview name="border.style" label="Style" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:href="../symbols/icons/image.svg#oid1" xlink:actuate="user">
+   <replace tag="image-url" property="value" macro="(expand (property filename))"/>
+   <replace tag="image-url" property="alignment" macro="(expand (property alignment))"/>
+   <replace tag="image-url" property="flags" macro="(expand &#34; ignore-error&#34;)"/>
+   <replace tag="border" property="linecolor" macro="(expand (property border.color))"/>
+   <replace tag="border" property="linewidth" macro="(expand (property border.width))"/>
+   <replace tag="border" property="linestyle" macro="(expand (property border.style))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/icons/image.svg#oid1" xlink:actuate="user">
+   <replace tag="image-url" property="value" macro="(expand (property filename))"/>
+   <replace tag="image-url" property="alignment" macro="(expand (property alignment))"/>
+   <replace tag="border" property="linecolor" macro="(expand (property border.color))"/>
+   <replace tag="border" property="linewidth" macro="(expand (property border.width))"/>
+   <replace tag="border" property="linestyle" macro="(expand (property border.style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/image.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid10" xlink:role="type" xlink:title="Shortcut" xlink:href="metis:stdshortcut#Shortcut" typelabel="Shortcut" tree-size="0.5" nested-size="0.25" layout-flags="fixedlayoutset fixedlayoutme ">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="url" visible-flag="true"/>
+   <propertyview name="zoomobjectview" visible-flag="true"/>
+   <propertyview name="initialoperation" visible-flag="true"/>
+   <propertyview name="runmode" visible-flag="true"/>
+   <propertyview name="fullurl" visible-flag="false"/>
+   <propertyview name="contexturl" visible-flag="false"/>
+   <propertyview name="downloadurl" visible-flag="false"/>
+   <propertyview name="policy" visible-flag="true"/>
+   <propertyview name="overridepolicy" visible-flag="false"/>
+   <propertyview name="metisuserhomepath" visible-flag="false"/>
+   <propertyview name="metishomepath" visible-flag="false"/>
+   <propertyview name="metismetapath" visible-flag="false"/>
+   <propertyview name="metisstartuppath" visible-flag="false"/>
+   <propertyview name="metislicensepath" visible-flag="false"/>
+   <propertyview name="metishelppath" visible-flag="false"/>
+   <propertyview name="metismodelpath" visible-flag="false"/>
+   <propertyview name="version" visible-flag="false"/>
+   <propertyview name="menubar" visible-flag="true"/>
+   <propertyview name="leftpane" visible-flag="true"/>
+   <propertyview name="scrollbars" visible-flag="true"/>
+   <propertyview name="statusbar" visible-flag="true"/>
+   <propertyview name="defaultfont" visible-flag="true"/>
+   <propertyview name="textoverflowindicator" visible-flag="true"/>
+   <propertyview name="visibleonparent" visible-flag="true"/>
+   <propertyview name="visibleendonparent" visible-flag="true"/>
+   <propertyview name="visiblesymbolonparent" visible-flag="true"/>
+   <propertyview name="actionselect" visible-flag="true"/>
+   <propertyview name="actionselectappend" visible-flag="true"/>
+   <propertyview name="actioncreatemodelview" visible-flag="true"/>
+   <propertyview name="actioncreatemodelviewall" visible-flag="true"/>
+   <propertyview name="actionhighlight" visible-flag="true"/>
+   <propertyview name="actionhighlightcontext" visible-flag="true"/>
+   <propertyview name="actionhighlightappend" visible-flag="true"/>
+   <propertyview name="actionpropertiesobjects" visible-flag="true"/>
+   <propertyview name="actionpropertiesrelationships" visible-flag="true"/>
+   <propertyview name="actionexportcsv" visible-flag="true"/>
+   <propertyview name="toolbars" visible-flag="false"/>
+   <propertyview name="loadstate" visible-flag="false"/>
+  </propertyviews>  
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/icons/shortcut.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/icons/shortcut.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/shortcut.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

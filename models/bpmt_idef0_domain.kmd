@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_575D7C4D-49A8-42E6-89E8-A9E4871B6551" name="DeveloperEd.ModelEd.UriToolBar.BPMT_IDEF0_Domain" title="IDEF0 Domain" desc="IDEF0 Modelling Domain">
+  <complex-type-links size="8">
+   <complex-type-link xlink:role="type" xlink:title="Process Control" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Input" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Mechanism" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Output" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process" xlink:href="http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has stereotype-is stereotype for" xlink:href="../relationshiptypes/has_stereotype-is_stereotype_for.kmd#has_stereotype-is_stereotype_for"/>
+   <complex-type-link xlink:role="type" xlink:title="represents is represented by" xlink:href="../relationshiptypes/represents_is_represented_by.kmd#represents_is_represented_by"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

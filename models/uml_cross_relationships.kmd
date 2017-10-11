@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <type id="oid1" name="ResidesIn" usage="relationship" title="Resides in" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ITM Logical Datastore" xlink:href="../object_types/logical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ITM Database" xlink:href="../object_types/database.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="ResidesIn" xlink:href="#oid1">
+   <string name="from">resides in</string>
+   <string name="to">residence of</string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="DetailedBy" usage="relationship" title="Detailed by" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Group" xlink:href="../object_types/informationgroup.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Information Group" xlink:href="../object_types/informationgroup.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Package" xlink:href="http://xml.computas.com/xml/uml/types/packages.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Information Object" xlink:href="../object_types/information_object.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Information Object" xlink:href="../object_types/information_object.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Package" xlink:href="http://xml.computas.com/xml/uml/types/packages.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="DetailedBy" xlink:href="#oid2">
+   <string name="from">detailed by</string>
+   <string name="to">details</string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="ContainedIn" usage="relationship" title="Contained in" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ITM Interface" xlink:href="../object_types/interface.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="ContainedIn" xlink:href="#oid3">
+   <string name="from">contained in</string>
+   <string name="to">contains</string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="RealizedBy" usage="relationship" title="Realized by" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Interface" xlink:href="../object_types/interface.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Interface" xlink:href="http://xml.computas.com/xml/uml/types/interfaces.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Application" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Package" xlink:href="http://xml.computas.com/xml/uml/types/packages.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Application" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="RealizedBy" xlink:href="#oid4">
+   <string name="from">realized by</string>
+   <string name="to">realizes</string>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="Uses" usage="relationship" title="Uses" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Business Process" xlink:href="../object_types/business_process.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Uses" xlink:href="#oid5">
+   <string name="from">uses</string>
+   <string name="to">used by</string>
+  </valueset>
+ </type>
+
+ <type id="oid6" name="RepresentedBy" usage="relationship" title="Represented by" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Business Process" xlink:href="../object_types/business_process.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Activity" xlink:href="http://xml.computas.com/xml/uml/types/activities.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Activity" xlink:href="http://xml.computas.com/xml/uml/types/activities.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Business Process" xlink:href="../object_types/business_process.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Use-Case" xlink:href="http://xml.computas.com/xml/uml/types/usecases.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Use-Case" xlink:href="http://xml.computas.com/xml/uml/types/usecases.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Business Process" xlink:href="../object_types/business_process.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Diagram" xlink:href="http://xml.computas.com/xml/uml/types/diagrams.kmd#oid0" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Diagram" xlink:href="http://xml.computas.com/xml/uml/types/diagrams.kmd#oid0" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Business Process" xlink:href="../object_types/business_process.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Sequence Diagram" xlink:href="http://xml.computas.com/xml/uml/types/sequencediagrams.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Sequence Diagram" xlink:href="http://xml.computas.com/xml/uml/types/sequencediagrams.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="ContainedIn" xlink:href="#oid6">
+   <string name="from">represented by</string>
+   <string name="to">represents</string>
+  </valueset>
+ </type>
+
+ <type id="oid7" name="Performs" usage="relationship" title="Performs" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Activity" xlink:href="http://xml.computas.com/xml/uml/types/activities.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Activity Diagram" xlink:href="http://xml.computas.com/xml/uml/types/diagrams.kmd#oid5" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Activity" xlink:href="http://xml.computas.com/xml/uml/types/activities.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Activity Diagram" xlink:href="http://xml.computas.com/xml/uml/types/diagrams.kmd#oid5" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="ContainedIn" xlink:href="#oid7">
+   <string name="from">performs</string>
+   <string name="to">performed by</string>
+  </valueset>
+ </type>
+
+ <type id="oid8" name="Represents" usage="relationship" title="Contained in" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Swimlane" xlink:href="http://xml.computas.com/xml/uml/types/swimlane_diagram.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Swimlane" xlink:href="http://xml.computas.com/xml/uml/types/swimlane_diagram.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Actor" xlink:href="http://xml.computas.com/xml/uml/types/usecases.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Actor" xlink:href="http://xml.computas.com/xml/uml/types/usecases.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Sequence Node" xlink:href="http://xml.computas.com/xml/uml/types/sequencediagrams.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Sequence Node" xlink:href="http://xml.computas.com/xml/uml/types/sequencediagrams.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Represents" xlink:href="#oid8">
+   <string name="from">represents</string>
+   <string name="to">represented by</string>
+  </valueset>
+ </type>
+
+ <type id="oid9" name="ResponsibleFor" usage="relationship" title="Responsible for" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ITM Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="UML Package" xlink:href="http://xml.computas.com/xml/uml/types/packages.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="ResponsibleFor" xlink:href="#oid9">
+   <string name="from">responsible for</string>
+   <string name="to">has responsible</string>
+  </valueset>
+ </type>
+
+ <type id="oid10" name="HasConcept" usage="relationship" title="Has concept" desc="">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="UML Class" xlink:href="http://xml.computas.com/xml/uml/types/classes.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ITM Concept" xlink:href="../object_types/concept.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="UML Package" xlink:href="http://xml.computas.com/xml/uml/types/packages.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ITM Concept" xlink:href="../object_types/concept.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="HasConcept" xlink:href="#oid10">
+   <string name="from">has concept</string>
+   <string name="to">concept of</string>
+  </valueset>
+ </type>
+
+</metis>

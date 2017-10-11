@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ criteria="1"
+ nextoid="1">
+
+ <cpp-method id="Method_AKM:setGlobalValues_UUID" name="setGlobalValues" title="setGlobalValues" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/akm/operations/globalValues.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="_002asi201t6mo4vk3jso" name="getScript" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getScriptObject" xlink:href="#_002asi201tb2uiiafldp"/>
+   <string name="Default"></string>
+   <string name="Property">script</string>
+   <string name="RemoveDuplicates">false</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="_002asi201tb2uiiafldp" name="getScriptObject" title="getScriptObject" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="usesScript" xlink:href="../languages/view_relships.kmd#UiReltype_AKM:usesScript_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="VB Script (AKM)" xlink:href="../languages/script_types.kmd#ObjType_AKM:VBScript_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

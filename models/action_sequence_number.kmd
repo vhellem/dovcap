@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="2">
+
+ <cpp-method id="oid1" name="Action_Sequence_Number" title="Action Sequence Number" language="c++" bind="NO.METIS.GEM.UTIL.countContext" required-dll="gem_util">
+  <complex-type-link xlink:role="type" xlink:title="Get Number of Found by Query" xlink:href="metis:stdmethods#oid623"/>
+  <arg-list size="3">
+   <integer name="Boolean">0</integer>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Find This And All Previous Actions" xlink:href="../criteria/interface_configuration_criteria_for_methods.kmd#oid2"/>
+   <string name="Kind">Criteria</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

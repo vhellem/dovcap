@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="4">
+
+ <type id="oid1" name="administrates_administrated_by" title="administrates/administrated by" usage="relationship" desc="Allows you to specify the Organization, Position, Role or Person that administrates a Contract.">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization" xlink:href="http://xml.metis.no/xml/object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Contract" xlink:href="http://xml.metis.no/xml/object_types/contract.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="http://xml.metis.no/xml/object_types/person.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Contract" xlink:href="http://xml.metis.no/xml/object_types/contract.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Position" xlink:href="http://xml.metis.no/xml/object_types/position.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Contract" xlink:href="http://xml.metis.no/xml/object_types/contract.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Role" xlink:href="http://xml.metis.no/xml/object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Contract" xlink:href="http://xml.metis.no/xml/object_types/contract.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="administrates/administrated by" xlink:href="#oid1">
+   <string name="from">administrates</string>
+   <string name="to">administrated by</string>
+  </valueset>
+ </type>
+
+
+</metis>

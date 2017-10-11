@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ symbolpalettes="1"
+ nextoid="2">
+
+ <symbol-palette id="oid1" name="Database_Interface_Symbols" title="Database Interface Symbols">
+  <symbol-link xlink:role="symbol" xlink:title="Database Drum" xlink:href="../symbols/database_symbol_components.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Database Query" xlink:href="../symbols/database_query.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Database Data Source" xlink:href="../symbols/database_data_source.svg#oid1" xlink:actuate="user"/>
+ </symbol-palette>
+
+
+</metis>

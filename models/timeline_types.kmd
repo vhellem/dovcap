@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="125"
+ nextoid="126">
+
+ <string-type id="Primtype_timeunit_UUID" name="TimeUnit" default="Weeks">
+  <string class="shared">Days</string>
+  <string class="shared">Weeks</string>
+  <string class="shared">Months</string>
+  <string class="shared">Quarters</string>
+  <string class="shared">Years</string>
+ </string-type>
+
+</metis>

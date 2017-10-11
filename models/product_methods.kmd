@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <!--  Methods to set partial metamodels  -->
+ <cpp-method id="Method_CPPD:setCPPDDomain_UUID" title="Set CPPD domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel" xlink:role="metamodel" xlink:title="CPPD Metamodel" xlink:href="http://xml.activeknowledgemodeling.com/cppd/templates/product_metamodel.kmd#MetaModel_CPPD:CPPDMetamodel_UUID"/>
+   <string name="Toolbar">UriToolBar.CPPD </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CPPD:setProductDefinitionDomain_UUID" title="Set Product Definition domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel1" xlink:role="metamodel" xlink:title="Product Property" xlink:href="http://xml.activeknowledgemodeling.com/cppd/templates/product_definition.kmd#MetaModel_CPPD:ProductDefinition_UUID"/>
+   <pointer name="Metamodel2" xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/akm/templates/workplace_definition.kmd#MetaModel_AKM:Workplace_UUID"/>
+   <string name="Toolbar">UriToolBar.ProductDefinition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CPPD:setProductPropertyDomain_UUID" title="Set Product Property domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel1" xlink:role="metamodel" xlink:title="Product Property" xlink:href="http://xml.activeknowledgemodeling.com/cppd/templates/product_definition.kmd#MetaModel_CPPD:ProductProperty_UUID"/>
+   <pointer name="Metamodel2" xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/akm/templates/workplace_definition.kmd#MetaModel_AKM:Workplace_UUID"/>
+   <string name="Toolbar">UriToolBar.ProductDefinition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CPPD:setFunctionMeansDomain_UUID" title="Set Function-Means domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel1" xlink:role="metamodel" xlink:title="Function-Means" xlink:href="http://xml.activeknowledgemodeling.com/cppd/templates/function_means.kmd#MetaModel_CPPD:FunctionMeans_UUID"/>
+   <pointer name="Metamodel2" xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/akm/templates/workplace_definition.kmd#MetaModel_AKM:Workplace_UUID"/>
+   <string name="Toolbar">UriToolBar.ProductDefinition</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ nextoid="5">
+
+ <type id="oid1" name="represents_Revised_Finish_Date_of_Revised_Finish_Date_represented_by" title="represents Planned Finish Date of/Planned Finish Date represented by" desc="Connects Projects and Tasks to Timeline Event objects. The Planned Finish Date of the Project/Task object is transferred to the Timeline Event object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="ToSystem Basetype" xlink:href="http://xml.computas.com/xml/diagrams/relationship_types/date_feedback.kmd#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Event" xlink:href="http://xml.computas.com/xml/diagrams/object_types/timeline_diagram.kmd#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Project" xlink:href="../object_types/project.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="represents Planned Finish Date of/Planned Finish Date represented by" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from">represents Planned Finish Date of</string>
+   <string name="to">Planned Finish Date represented by</string>
+   <string name="ExternalDateProperty">ProjectedCompletionDate</string>
+  </valueset>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="represents Planned Finish Date of/Planned Finish Date represented by" xlink:href="#oid1" xlink:actuate="user">
+   <string name="color" class="volatile"></string>
+   <string name="style" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="represents_Revised_Finish_Date_of_Revised_Finish_Date_represented_by_2" title="represents Planned Finish Date of/Planned Finish Date represented by" desc="Connects Projects and Tasks to Timeline Event objects. The Planned Finish Date of the Project/Task object is transferred to the Timeline Event object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="ToSystem Basetype" xlink:href="http://xml.computas.com/xml/diagrams/relationship_types/date_feedback.kmd#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Event" xlink:href="http://xml.computas.com/xml/diagrams/object_types/timeline_diagram.kmd#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="../object_types/task.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="represents Planned Finish Date of/Planned Finish Date represented by" xlink:href="#oid2" xlink:actuate="user">
+   <string name="from">represents Planned Finish Date of</string>
+   <string name="to">Planned Finish Date represented by</string>
+   <string name="ExternalDateProperty">finish</string>
+  </valueset>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="represents Revised Finish Date of/Revised Finish Date represented by" xlink:href="#oid2" xlink:actuate="user">
+   <string name="color" class="volatile"></string>
+   <string name="style" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="represents_Revised_Finish_Date_of_Revised_Finish_Date_represented_by_3" title="Planned Finish Date on Milestone/Milestone of Planned Finish Date" desc="Connects Projects and Tasks to Timeline Milestone objects. The Planned Finish Date of the Project/Task object is compared to the date of the Timeline Milestone object and the relationship changes color and linestyle depending on this comparison. If the planned date is later than the Milestone date, the line color is red and if the planned date is earlier than the Milestone date, the color is blue. A black line indicates an exact match of the two dates." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="ToSystem Basetype" xlink:href="http://xml.computas.com/xml/diagrams/relationship_types/date_feedback.kmd#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Milestone" xlink:href="http://xml.computas.com/xml/diagrams/object_types/timeline_diagram.kmd#oid32" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="../object_types/task.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Planned Finish Date on Milestone/Milestone of Planned Finish Date" xlink:href="#oid3" xlink:actuate="user">
+   <string name="from">Planned Finish Date on Milestone</string>
+   <string name="to">Milestone of Planned Finish Date</string>
+   <string name="ExternalDateProperty">finish</string>
+  </valueset>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Planned Finish Date on Milestone/Milestone of Planned Finish Date" xlink:href="#oid3" xlink:actuate="user">
+   <string name="color" class="volatile"></string>
+   <string name="style" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="represents_Revised_Finish_Date_of_Revised_Finish_Date_represented_by_4" title="Planned Finish Date on Milestone/Milestone of Planned Finish Date" desc="Connects Projects and Tasks to Timeline Milestone objects. The Planned Finish Date of the Project/Task object is compared to the date of the Timeline Milestone object and the relationship changes color and linestyle depending on this comparison. If the planned date is later than the Milestone date, the line color is red and if the planned date is earlier than the Milestone date, the color is blue. A black line indicates an exact match of the two dates." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="ToSystem Basetype" xlink:href="http://xml.computas.com/xml/diagrams/relationship_types/date_feedback.kmd#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Milestone" xlink:href="http://xml.computas.com/xml/diagrams/object_types/timeline_diagram.kmd#oid32" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Project" xlink:href="../object_types/project.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Planned Finish Date on Milestone/Milestone of Planned Finish Date" xlink:href="#oid4" xlink:actuate="user">
+   <string name="from">Planned Finish Date on Milestone</string>
+   <string name="to">Milestone of Planned Finish Date</string>
+   <string name="ExternalDateProperty">ProjectedCompletionDate</string>
+  </valueset>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Planned Finish Date on Milestone/Milestone of Planned Finish Date" xlink:href="#oid4" xlink:actuate="user">
+   <string name="color" class="volatile"></string>
+   <string name="style" class="volatile"></string>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_Patterns:Design_Pattern_prescribes_use_of-has_use_prescribed_by_Archetype_UUID" name="Design_Pattern_prescribes_use_of_has_use_prescribed_by_Archetype" title="Design Pattern prescribes use of-has use prescribed by Archetype" desc="Specifies that a Design Pattern uses an Archetype to define a prescribed combination of objects and relationships." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/design_pattern_prescribes_use_of-has_use_prescribed_by_archetype.kmd#UUID4_DFD9B62C-AD30-4538-BF99-36D3B2508423"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Design Pattern" xlink:href="../object_types/design_pattern.kmd#CompType_Semantics_Patterns:Design_Pattern_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Archetype" xlink:href="../../ti/archetype/objecttypes/archetype.kmd#Archetype_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Design Pattern prescribes use of-has use prescribed by Archetype" xlink:href="#RelType_Semantics_Patterns:Design_Pattern_prescribes_use_of-has_use_prescribed_by_Archetype_UUID" xlink:actuate="user">
+   <string name="from">prescribes use of</string>
+   <string name="to">has use prescribed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Design Pattern prescribes use of-has use prescribed by Archetype" xlink:href="#RelType_Semantics_Patterns:Design_Pattern_prescribes_use_of-has_use_prescribed_by_Archetype_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

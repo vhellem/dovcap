@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_Troux_Information:DRM_Data_Asset_stores_Information_Object_UUID" name="DRM_Data_Asset_stores_Information_Object" title="DRM Data Asset stores Information Object" desc="Identifies a collection of Information Objects that are conceptually stored together within a DRM: Data Asset." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="stores" xlink:href="../../meaf/relationshiptypes/stores-is_stored_in.kmd#Reltype_stores-is_stored_in_UUID"/>
+  <property name="sourceOfRecord" xlink:role="integer-type" xlink:title="Source of Record" xlink:href="../primitive_types/source_of_record.kmd#PrimType_Semantics_Troux Information:Source_of_Record_UUID" label="Source of Record" default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics_Troux_Information:DRM_Data_Asset_stores_Information_Object_Source_of_Record_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="DRM: Data Asset" xlink:href="../../eagov/object_types/data_asset.kmd#CompType_FEA_DRM:data_asset_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Object" xlink:href="../../meaf/objecttypes/information_object.kmd#CompType_MEAF:InformationObject_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="DRM Data Asset stores Information Object" xlink:href="#RelType_Semantics_Troux_Information:DRM_Data_Asset_stores_Information_Object_UUID" xlink:actuate="user">
+   <string name="from">stores</string>
+   <string name="to">is stored in</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="DRM Data Asset stores Information Object" xlink:href="#RelType_Semantics_Troux_Information:DRM_Data_Asset_stores_Information_Object_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="sourceOfRecord">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

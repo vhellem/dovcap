@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid12" typelabel="Hor Swimlane" tree-size="0.5" nested-size="0.5" behavior="nested" layout-flags="fixedlayoutset fixedlayoutnext ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid1" xlink:actuate="user">
+   <replace tag="border" property="linestyle" macro="(expand &#34;dash&#34;)"/>
+   <replace tag="border" property="linecolor" macro="(expand &#34;gray&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.computas.com/xml/diagrams/small_icons/horizontal_swimlane.png"/>
+ </typeview>
+
+ <typeview id="oid101" xlink:role="type" xlink:title="Title Left" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid22" tree-size="1" nested-size="1" behavior="nested" position="left" placement="internal" layout-flags="fixedlayoutset fixedlayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleLeft" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid102" xlink:role="type" xlink:title="Title Right" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid23" tree-size="1" nested-size="1" behavior="nested" position="right" placement="internal" layout-flags="fixedlayoutset fixedlayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleRight" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="http://xml.computas.com/xml/diagrams/symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+</metis>

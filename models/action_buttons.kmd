@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="oid3" name="MSProject_Import_Button" title="MS Project Import Button" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <property name="mppFile" xlink:role="url-type" xlink:title="FileUrl" xlink:href="metis:stdprimtypes#oid9" label="MS Project File (.mpp)" default-visible="top"/>
+  <property name="rootContainer" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Container Instance URI" default-visible="top"/>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="MS Project Import Button" xlink:href="#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">11</integer>
+   <string name="reference">http://metadata.troux.info/AKM/methods/ms_project_import.vbs</string>
+   <integer name="execute_on_parent">0</integer>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+   <url name="mppFile"/>
+   <string name="rootContainer"></string>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="MS_Excel_RM_Import_Button" title="MS Excel RM Import Button" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6"/>
+  <property name="xlsFile" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" label="Excel File" desc="Browse to the .XLS file." default-visible="top"/>
+  <property name="xlsWorksheet" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Worksheet" desc="Enter the name of the worksheet as shown on the worksheet tab." default-visible="top"/>
+  <property name="columns" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Matrix size, Columns" desc="Including the object column." default-visible="top"/>
+  <property name="rows" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Matrix size, Rows" desc="Including the object row." default-visible="top"/>
+  <property name="startColumn" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Matrix position, Column" desc="Including the object column." default-visible="top"/>
+  <property name="startRow" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Matrix position, Row" desc="Including the object row." default-visible="top"/>
+  <property name="horizontalType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Object type on the horizontal axis" desc="Enter the URI." default-visible="top"/>
+  <property name="horizontalTypeProperty" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Object type property on the horizontal axis" desc="Enter the name of the property identifying the horizontal objects." default-visible="top"/>
+  <property name="verticalType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Object type on the vertical axis" desc="Enter the URI." default-visible="top"/>
+  <property name="verticalTypeProperty" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Object type property on the vertical axis" desc="Enter the name of the property identifying the horizontal objects." default-visible="top"/>
+  <property name="relationshipType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Relationship type for the cells" desc="Enter the URI." default-visible="top"/>
+  <property name="relationshipTypeProperty" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Relationship type property for the cells" desc="Enter the name of the property identifying the cells. " default-visible="top"/>
+  <property name="horizontalObjectContainer" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Horizontal Objects Container URI" desc="Enter the URI, eg. #oid1234." default-visible="top"/>
+  <property name="verticalObjectContainer" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Vertical Objects Container URI" desc="Enter the URI, eg. #oid2345. May be the same as the Horizontal Objects Container." default-visible="top"/>
+  <property name="direction" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Relationship direction" default-visible="top"/>
+  <valueset vset="default" size="25" xlink:role="type" xlink:title="MS Excel RM Import Button" xlink:href="#oid5" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">11</integer>
+   <string name="reference">http://metadata.troux.info/AKM/methods/ms_excel_rm_import.vbs</string>
+   <integer name="execute_on_parent">0</integer>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+   <url name="xlsFile"/>
+   <string name="xlsWorksheet"></string>
+   <integer name="columns">0</integer>
+   <integer name="rows">0</integer>
+   <integer name="startColumn">0</integer>
+   <integer name="startRow">0</integer>
+   <string name="horizontalType"></string>
+   <string name="horizontalTypeProperty"></string>
+   <string name="verticalType"></string>
+   <string name="verticalTypeProperty"></string>
+   <string name="relationshipType"></string>
+   <string name="relationshipTypeProperty"></string>
+   <string name="horizontalObjectContainer"></string>
+   <string name="verticalObjectContainer"></string>
+   <integer name="direction">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="MS Project Import Button" xlink:href="#oid3" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="mppFile" visible-flag="true"/>
+   <propertyview name="rootContainer" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="mode" visible-flag="true"/>
+   <propertyview name="reference" visible-flag="true"/>
+   <propertyview name="viewArea.topleft.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" visible-flag="false"/>
+   <propertyview name="execute_on_parent" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="MSProject Import" xlink:href="../symbols/eaplanning.svg#_002as5p00q9hqtnut8pg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="MSProject Import" xlink:href="../symbols/eaplanning.svg#_002as5p00q9hqtnut8pg" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.metis.no/xml/smallicons/project.png"/>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:title="MS Excel RM Import Button" xlink:href="#oid5" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="xlsFile" visible-flag="true"/>
+   <propertyview name="xlsWorksheet" visible-flag="true"/>
+   <propertyview name="columns" visible-flag="true"/>
+   <propertyview name="rows" visible-flag="true"/>
+   <propertyview name="startColumn" visible-flag="true"/>
+   <propertyview name="startRow" visible-flag="true"/>
+   <propertyview name="horizontalType" visible-flag="true"/>
+   <propertyview name="horizontalTypeProperty" visible-flag="true"/>
+   <propertyview name="verticalType" visible-flag="true"/>
+   <propertyview name="verticalTypeProperty" visible-flag="true"/>
+   <propertyview name="relationshipType" visible-flag="true"/>
+   <propertyview name="relationshipTypeProperty" visible-flag="true"/>
+   <propertyview name="horizontalObjectContainer" visible-flag="true"/>
+   <propertyview name="verticalObjectContainer" visible-flag="true"/>
+   <propertyview name="direction" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="mode" desc="The mode of the zoom. Choose one of the following modes :&#10;&#60;p&#62;&#60;b&#62;ZoomInstanceView&#60;/b&#62; : Zoom to the instance view. Equivalent to the RMBM command &#39;Zoom To&#39;. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomContext&#60;/b&#62; : Zoom to the context. Equivalent to the View - Zoom Selection or Ctrl+E command. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomTextSize&#60;/b&#62; : Zoom to the text size. Equivalent to the RMBM command &#39;Zoom To Text Size&#39; or Ctrl+T. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomParent&#60;/b&#62; : Zoom to the parent in a part-of structure. Equivalent to the RMBM command &#39;Zoom To&#39; on the parent. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomAll&#60;/b&#62; : Zoom to all. Equivalent to the View - Zoom All or Ctrl+L command. The &#39;Reference&#39; property will not be used and can be blank.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomModelView&#60;/b&#62; : Zoom to the model view using the current viewing position. The &#39;Reference&#39; property must contain the URI of the model view which is found by activating the Properties... dialog on the Right Mouse Button menu of the model view tab.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ExecuteCriteria&#60;/b&#62; : Executes the criteria defined as a URI in the &#39;Reference&#39; property.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ExecuteMethod&#60;/b&#62; : Executes the method defined as a URI in the &#39;Reference&#39; property.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ExecuteCommand&#60;/b&#62; : Executes the command defined as a name in the &#39;Reference&#39; property. The command name is found in the Customize... dialog on the menu bar. In the Options tab, check the &#39;Show Commands with Command Name&#39; button. In the Commands tab, the command name for each command is then displayed. Please note that you could not use commands requiring a selection to work since the selection will be lost once you double-click the Action Button.&#60;/p&#62;&#60;p&#62;&#60;b&#62;OpenDocument&#60;/b&#62; : Opens the file referenced from the Online Document defined as a URI in the &#39;Reference&#39; property.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomToArea&#60;/b&#62; : Zoom to a specified area in a specified model view.&#60;/p&#62;" visible-flag="true"/>
+   <propertyview name="reference" visible-flag="true"/>
+   <propertyview name="viewArea.topleft.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" visible-flag="false"/>
+   <propertyview name="execute_on_parent" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.computas.com/xml/reporting_object/symbols/reportexcel.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.computas.com/xml/reporting_object/symbols/reportexcel.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.computas.com/xml/reporting_object/small_icons/excel.png"/>
+ </typeview>
+
+
+</metis>

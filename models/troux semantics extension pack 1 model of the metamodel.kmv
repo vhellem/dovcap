@@ -1,0 +1,2426 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="100"
+ instanceviews="160"
+ nextoid="1">
+
+ <relationship id="UUID4_031BC317-C85D-4B1C-983C-B3AACB949E76">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Change Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_change_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Change_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Task" xlink:href="#UUID4_0C481407-6DE4-4055-9E58-6495422F61E9"/>
+ </relationship>
+
+ <object id="UUID4_03D1DC8A-BA4F-4709-A605-CF37EF3A9774">
+  <valueset size="20" xlink:role="type" xlink:title="Message" xlink:href="../../meaf/objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Message</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="frequency">-1</integer>
+   <integer name="periods">0</integer>
+   <integer name="periodUnit">-1</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_0508FEC0-6548-45F4-AE72-E104E4929F64">
+  <valueset size="9" xlink:role="type" xlink:title="Prerequisite" xlink:href="../../meaf/objecttypes/prerequisite.kmd#CompType_MEAF:Prerequisite_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Prerequisite</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_0748D698-D36F-49E1-8824-FA75023690D9">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Troux Semantics Extension Pack 1 Model of the Metamodel</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_AF88A585-AAB8-4F96-9ECA-776EDBF0E43B"/>
+  <part-link xlink:role="object" xlink:title="Troux Semantics" xlink:href="#UUID4_24CF6172-7468-45C6-BC1D-104C0BF046CB"/>
+ </object>
+
+ <object id="UUID4_0898D1EA-9380-4EA0-957F-155377DCBE3E">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Systems Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="System" xlink:href="#UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E"/>
+  <part-link xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0"/>
+ </object>
+
+ <relationship id="UUID4_0969C081-4F76-4036-9007-6F9572D5256B">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Target Customer" xlink:href="#UUID4_EA15E20A-C9CF-43D9-AEE9-92986079D46A"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <object id="UUID4_0C481407-6DE4-4055-9E58-6495422F61E9">
+  <valueset size="34" xlink:role="type" xlink:title="Task" xlink:href="../../meaf/objecttypes/task.kmd#CompType_TRM:Task_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Task</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="monetaryUnit"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <string name="taskId"></string>
+   <date name="baselineStartDate">00000000</date>
+   <date name="plannedStartDate">00000000</date>
+   <date name="actualStartDate">00000000</date>
+   <date name="baselineFinishDate">00000000</date>
+   <date name="plannedFinishDate">00000000</date>
+   <date name="actualFinishDate">00000000</date>
+   <decimal name="baselineCost">0</decimal>
+   <decimal name="plannedCost">0</decimal>
+   <decimal name="actualCost">0</decimal>
+   <integer name="milestone">-1</integer>
+   <integer name="completionPercentage">0</integer>
+   <integer name="status">-1</integer>
+   <decimal name="baselineResources">0</decimal>
+   <decimal name="plannedResources">0</decimal>
+   <decimal name="actualResources">0</decimal>
+   <string name="resourceUnit"></string>
+   <float name="rolledUpBaselineCost" class="volatile">0</float>
+   <float name="rolledUpPlannedCost" class="volatile">0</float>
+   <float name="rolledUpActualCost" class="volatile">0</float>
+   <float name="allocationDirect" class="volatile">0</float>
+   <float name="allocationTotal" class="volatile">0</float>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_0D6DDB07-58B7-42C1-B9F8-5F98E7F0F108">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Benefit" xlink:href="#UUID4_DAE666F5-A824-453B-A8D9-20CD9797BA3C"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <object id="UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41">
+  <valueset size="17" xlink:role="type" xlink:title="ME Marshalling" xlink:href="metis:troux#TrouxMarshalling" xlink:actuate="user">
+   <string name="name">Troux Metaverse</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <string name="serverName">servername</string>
+   <integer name="secureHTTP">0</integer>
+   <string name="repositoryPath">bpserver/do</string>
+   <string name="uploadJobName">MCT</string>
+   <integer name="views-customize.createViews">1</integer>
+   <integer name="news-customize.numberOfNews">4</integer>
+   <integer name="news-customize.newsClear">0</integer>
+   <string name="tuxJobId"></string>
+   <string name="tuxDebugOutputFilename"></string>
+   <string name="bluePrintID">1</string>
+   <string name="bluePrintName">Troux Blueprint</string>
+   <string name="bluePrintChange">0</string>
+   <string name="trouxUUID4Update">0</string>
+   <integer name="trouxCollaborationEnabled">0</integer>
+  </valueset>
+  <part-link xlink:role="object" xlink:href="#UUID4_3DF83B8C-2C7C-42DF-AEF9-3E690AC8A3FE"/>
+ </object>
+
+ <relationship id="UUID4_1828F43E-D584-44D8-90D0-FAE366F099E6">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Application Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_application_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Application_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B"/>
+ </relationship>
+
+ <object id="UUID4_18E10972-C60A-477E-9834-4F554438F17A">
+  <valueset size="29" xlink:role="type" xlink:title="Hardware" xlink:href="../../meaf/objecttypes/hardware.kmd#CompType_TRM:Hardware_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Hardware</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <string name="productName"></string>
+   <string name="productVersion"></string>
+   <string name="productSerialNumber"></string>
+   <string name="vendorName"></string>
+   <string name="vendorSalesPhone"></string>
+   <string name="vendorSalesEmail"></string>
+   <string name="vendorSupportPhone"></string>
+   <string name="vendorSupportEmail"></string>
+   <date name="purchaseDate">00000000</date>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E">
+  <valueset size="9" xlink:role="type" xlink:title="System" xlink:href="../object_types/system.kmd#CompType_Semantics_System:System_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">System</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_1E72651B-333B-4184-912B-30CC9133B314">
+  <valueset size="6" xlink:role="type" xlink:title="Strategy affects-is affected by Value Chain" xlink:href="../relationship_types/strategy_affects-is_affected_by_value_chain.kmd#RelType_Semantics_EBA:Strategy_affects-is_affected_by_Value_Chain_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Strategy" xlink:href="#UUID4_EF4229F3-5AAE-4398-8638-92C3245C39F8"/>
+  <target seq="0" xlink:role="object" xlink:title="Value Chain" xlink:href="#UUID4_6F65D4B6-5F24-48EE-A860-3F9077E080E2"/>
+ </relationship>
+
+ <relationship id="UUID4_22B08528-8793-4077-8951-03B96CF853B0">
+  <valueset size="6" xlink:role="type" xlink:title="Principle leads to-is derived from Principle" xlink:href="../relationship_types/principle_leads_to-is_derived_from_principle.kmd#RelType_Semantics:Principle_leads_to-is_derived_from_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_5FB4CDBF-4BE8-4F25-9DF8-3332A2419A38"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <relationship id="UUID4_234839AC-9C6E-410C-BB60-64BCD64DDCD1">
+  <valueset size="6" xlink:role="type" xlink:title="Virtual Host manages execution of-has execution managed by Virtual Machine Image" xlink:href="../relationship_types/virtual_host_manages_execution_of-has_execution_managed_by_virtual_machine_image.kmd#RelType_Semantics_AppDomain:Virtual_Host_manages_execution_of-has_execution_managed_by_Virtual_Machine_Image_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Virtual Host" xlink:href="#UUID4_D4E1BD30-472E-49D6-8543-BB40BEF6C898"/>
+  <target seq="0" xlink:role="object" xlink:title="Virtual Machine Image" xlink:href="#UUID4_3264EAA5-7E85-4647-959C-A691CB851E61"/>
+ </relationship>
+
+ <object id="UUID4_23D86DD9-AD17-4E4F-B983-E0264850E1FC">
+  <valueset size="9" xlink:role="type" xlink:title="Market Opportunity" xlink:href="../../meaf/objecttypes/market_opportunity.kmd#CompType_MEAF:MarketOpportunity_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Market Opportunity</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_24CF6172-7468-45C6-BC1D-104C0BF046CB">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Troux Semantics</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Application and Software Domain" xlink:href="#UUID4_A031BBDD-5B61-45E3-A83D-404ECF066950"/>
+  <part-link xlink:role="object" xlink:title="Infrastructure Domain" xlink:href="#UUID4_558D7FBF-0D1C-4F74-8464-7EE8D8E21F5D"/>
+  <part-link xlink:role="object" xlink:title="Process Domain" xlink:href="#UUID4_35134019-70D9-4548-B76F-DE53E4ADA39A"/>
+  <part-link xlink:role="object" xlink:title="IT Product Domain" xlink:href="#UUID4_A936EFC6-08F3-4E8E-B624-6A94E670418B"/>
+  <part-link xlink:role="object" xlink:title="Strategy Domain" xlink:href="#UUID4_4C83CA27-D9C6-4EEA-B226-4F94228718F1"/>
+  <part-link xlink:role="object" xlink:title="Resource Domain" xlink:href="#UUID4_569305A9-DE02-4832-84EC-FC4F34D1E947"/>
+  <part-link xlink:role="object" xlink:title="IT Architecture Domain" xlink:href="#UUID4_D78ADC23-BA2D-433D-A779-738F76163CF1"/>
+  <part-link xlink:role="object" xlink:title="Transition Domain" xlink:href="#UUID4_279D9B66-2BDB-4E1C-B1D0-DB0929D43C32"/>
+  <part-link xlink:role="object" xlink:title="Analysis Domain" xlink:href="#UUID4_A658FFE8-C0FB-444E-AC6D-A1EA72C1C5E5"/>
+  <part-link xlink:role="object" xlink:title="Data Domain" xlink:href="#UUID4_DE58C02D-B11D-4FD6-8C0D-CD46D595FC13"/>
+  <part-link xlink:role="object" xlink:title="IT Service Domain" xlink:href="#UUID4_64E8F2FD-A5EF-4772-A175-DC28AEFBDC00"/>
+  <part-link xlink:role="object" xlink:title="Market Domain" xlink:href="#UUID4_DFDEE71B-73E6-4110-80E2-D9AFC70A9BE3"/>
+ </object>
+
+ <object id="UUID4_279D9B66-2BDB-4E1C-B1D0-DB0929D43C32">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Transition Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Initiative" xlink:href="#UUID4_814A72C1-BF8F-4702-AA7A-2A2C0E90FE56"/>
+  <part-link xlink:role="object" xlink:title="Program" xlink:href="#UUID4_B8D8E2D9-7B26-4BB6-9474-A9564D6B5353"/>
+  <part-link xlink:role="object" xlink:title="Task" xlink:href="#UUID4_0C481407-6DE4-4055-9E58-6495422F61E9"/>
+  <part-link xlink:role="object" xlink:title="Project" xlink:href="#UUID4_95DC1113-E02E-46C1-92F1-D35D2F222DAE"/>
+ </object>
+
+ <relationship id="UUID4_285C1582-DE22-4237-B53D-7D073D9E4745">
+  <valueset size="6" xlink:role="type" xlink:title="Interface supports-is supported by IT Service" xlink:href="../relationship_types/interface_supports-is_supported_by_it_service.kmd#RelType_Semantics_System:Interface_supports-is_supported_by_IT_Service_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0"/>
+  <target seq="0" xlink:role="object" xlink:title="IT Service" xlink:href="#UUID4_FE18A042-AE9E-415B-BA86-8DD2E47664D5"/>
+ </relationship>
+
+ <relationship id="UUID4_28857F4A-88F1-4C46-BF93-CF8D6F4A1E1B">
+  <valueset size="6" xlink:role="type" xlink:title="System incorporates-is incorporated into Application Component" xlink:href="../relationship_types/system_incorporates-is_incorporated_into_application_component.kmd#RelType_Semantics_System:System_incorporates-is_incorporated_into_Application_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="System" xlink:href="#UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E"/>
+  <target seq="0" xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B"/>
+ </relationship>
+
+ <object id="UUID4_2C83EB3B-7E9F-4064-878B-A4F7F801CFAF">
+  <valueset size="2" xlink:role="type" xlink:title="Comment" xlink:href="metis:stdtypes#oid22" xlink:actuate="user">
+   <string name="name">&#60;b&#62;Business Process supports-is supported by Business Function&#60;/b&#62;&#60;br&#62;</string>
+   <string name="description">This relationship is actually part of the Troux Semantics Extension Pack 1.</string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_2DAC51D4-28DF-42B4-9A66-FF72A5152AB1">
+  <valueset size="6" xlink:role="type" xlink:title="Value Chain supports-is supported by Goal" xlink:href="../relationship_types/value_chain_supports-is_supported_by_goal.kmd#RelType_Semantics_EBA:Value_Chain_supports-is_supported_by_Goal_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Value Chain" xlink:href="#UUID4_6F65D4B6-5F24-48EE-A860-3F9077E080E2"/>
+  <target seq="0" xlink:role="object" xlink:title="Goal" xlink:href="#UUID4_4B797DF9-B0EA-4622-AEEF-B8B633093C85"/>
+ </relationship>
+
+ <object id="UUID4_30F54E4E-1837-4061-8971-6AD27DFCC780">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Policy Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_5FB4CDBF-4BE8-4F25-9DF8-3332A2419A38"/>
+  <part-link xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </object>
+
+ <relationship id="UUID4_31B75502-1457-4546-902A-9FABE8D22C02">
+  <valueset size="6" xlink:role="type" xlink:title="Interface supports-is supported by Message" xlink:href="../relationship_types/interface_supports-is_supported_by_message.kmd#RelType_Semantics_System:Interface_supports-is_supported_by_Message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0"/>
+  <target seq="0" xlink:role="object" xlink:title="Message" xlink:href="#UUID4_03D1DC8A-BA4F-4709-A605-CF37EF3A9774"/>
+ </relationship>
+
+ <object id="UUID4_3264EAA5-7E85-4647-959C-A691CB851E61">
+  <valueset size="36" xlink:role="type" xlink:title="Virtual Machine Image" xlink:href="../object_types/virtual_machine_image.kmd#CompType_Semantics_AppDomain:Virtual_Machine_Image_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Virtual Machine Image</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+   <decimal name="memoryRamAmount">0</decimal>
+   <integer name="memoryRamUnit">-1</integer>
+   <integer name="processorCpuCount">0</integer>
+   <decimal name="processorCpuClockSpeed">0</decimal>
+   <integer name="processorCpuClockSpeedUnit">-1</integer>
+   <integer name="diskCount">0</integer>
+   <decimal name="diskCapacity">0</decimal>
+   <integer name="diskCapacityUnit">-1</integer>
+   <date-time name="processorPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="processorPercentageUsed">0</integer>
+   <date-time name="diskCapacityFreeTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityFree">0</decimal>
+   <integer name="diskCapacityFreeUnit">-1</integer>
+   <date-time name="diskCapacityUsedTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityUsed">0</decimal>
+   <integer name="diskCapacityUsedUnit">-1</integer>
+   <date-time name="diskPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="diskPercentageUsed">0</integer>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_342D35DA-97E9-48A5-AE89-C29F57D7BF35">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Infrastructure Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_infrastructure_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Infrastructure_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Hardware" xlink:href="#UUID4_18E10972-C60A-477E-9834-4F554438F17A"/>
+ </relationship>
+
+ <object id="UUID4_35134019-70D9-4548-B76F-DE53E4ADA39A">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Process Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Business Process" xlink:href="#UUID4_F56B13D0-BC20-4630-97E1-310868124438"/>
+  <part-link xlink:role="object" xlink:title="Business Function" xlink:href="#UUID4_C62B8DD4-2F75-4F32-9908-638F9E8C7AFD"/>
+  <part-link xlink:role="object" xlink:title="&#60;b&#62;Business Process supports-is supported by Business Function&#60;/b&#62;&#60;br&#62;" xlink:href="#UUID4_2C83EB3B-7E9F-4064-878B-A4F7F801CFAF"/>
+ </object>
+
+ <object id="UUID4_3AD9053C-333C-40B5-AE49-90A25035DFD1">
+  <valueset size="11" xlink:role="type" xlink:title="Requirement" xlink:href="../../meaf/objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Requirement</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="priority">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_3D92BFA5-DE56-4113-93F8-54FE0E260D62">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Scenario" xlink:href="#UUID4_B4379460-F53F-44BA-9DBD-EF86C6667DBF"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <object id="UUID4_3DF83B8C-2C7C-42DF-AEF9-3E690AC8A3FE">
+  <valueset size="1" xlink:role="type" xlink:title="Pushpin" xlink:href="metis:stdtypes#oid21" xlink:actuate="user">
+   <string name="name"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#UUID4_DB9575C5-1F57-4411-B049-F30A47F68AF6"/>
+ </object>
+
+ <object id="UUID4_3F00CE8C-86BB-4B75-B14A-002BFECC7FBE">
+  <valueset size="9" xlink:role="type" xlink:title="Target User" xlink:href="../../meaf/objecttypes/target_user.kmd#CompType_MEAF:TargetUser_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Target User</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_43A00A5C-83C4-4B4D-AEB6-90C4CF527120">
+  <valueset size="23" xlink:role="type" xlink:title="Datastore" xlink:href="../../meaf/objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Datastore</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <date name="creationDate">00000000</date>
+   <date name="modificationDate">00000000</date>
+   <date name="backupDate">00000000</date>
+   <string name="datastoreId"></string>
+   <decimal name="storageCapacity">0</decimal>
+   <decimal name="storageCapacityUsed">0</decimal>
+   <decimal name="storageCapacityFree">0</decimal>
+   <integer name="storagePercentageUsed">0</integer>
+   <integer name="storageCapacityUnit">-1</integer>
+   <integer name="storageCapacityFreeUnit">-1</integer>
+   <integer name="storageCapacityUsedUnit">-1</integer>
+   <time name="storageCapacityUsedTimestamp">000000000</time>
+   <time name="storageCapacityFreeTimestamp">000000000</time>
+   <time name="storagePercentageUsedTimestamp">000000000</time>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_44ADEBE0-6757-435C-B2FF-B31497764016">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Change Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_change_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Change_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Initiative" xlink:href="#UUID4_814A72C1-BF8F-4702-AA7A-2A2C0E90FE56"/>
+ </relationship>
+
+ <relationship id="UUID4_47757765-4102-477C-BB1D-0A5790A220C6">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Change Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_change_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Change_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Program" xlink:href="#UUID4_B8D8E2D9-7B26-4BB6-9474-A9564D6B5353"/>
+ </relationship>
+
+ <relationship id="UUID4_4A3908B1-3A9E-41BE-9D48-1F8E02DA0A71">
+  <valueset size="5" xlink:role="type" xlink:title="System provides-is provided by Interface" xlink:href="../relationship_types/system_provides-is_provided_by_interface.kmd#RelType_Semantics_System:System_provides-is_provided_by_Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="System" xlink:href="#UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E"/>
+  <target seq="0" xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0"/>
+ </relationship>
+
+ <object id="UUID4_4B797DF9-B0EA-4622-AEEF-B8B633093C85">
+  <valueset size="11" xlink:role="type" xlink:title="Goal" xlink:href="../../meaf/objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Goal</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="weight">0</integer>
+   <date name="targetCompletionDate">00000000</date>
+  </valueset>
+ </object>
+
+ <object id="UUID4_4C83CA27-D9C6-4EEA-B226-4F94228718F1">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Strategy Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Goal" xlink:href="#UUID4_4B797DF9-B0EA-4622-AEEF-B8B633093C85"/>
+  <part-link xlink:role="object" xlink:title="Strategy" xlink:href="#UUID4_EF4229F3-5AAE-4398-8638-92C3245C39F8"/>
+ </object>
+
+ <object id="UUID4_558D7FBF-0D1C-4F74-8464-7EE8D8E21F5D">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Infrastructure Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Hardware" xlink:href="#UUID4_18E10972-C60A-477E-9834-4F554438F17A"/>
+  <part-link xlink:role="object" xlink:title="Computing Hardware" xlink:href="#UUID4_789D5D1C-26DF-4740-AC67-AB8FB516107C"/>
+ </object>
+
+ <object id="UUID4_569305A9-DE02-4832-84EC-FC4F34D1E947">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Resource Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Resource" xlink:href="#UUID4_A77F0260-AA3B-4439-BAFB-F176232172FB"/>
+ </object>
+
+ <relationship id="UUID4_5F74C3DA-315D-40EB-8459-3820A65AE770">
+  <valueset size="6" xlink:role="type" xlink:title="Business Process contributes to-has contributing Value Chain" xlink:href="../relationship_types/business_process_contributes_to-has_contributing_value_chain.kmd#RelType_Semantics_EBA:Business_Process_contributes_to-has_contributing_Value_Chain_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Business Process" xlink:href="#UUID4_F56B13D0-BC20-4630-97E1-310868124438"/>
+  <target seq="0" xlink:role="object" xlink:title="Value Chain" xlink:href="#UUID4_6F65D4B6-5F24-48EE-A860-3F9077E080E2"/>
+ </relationship>
+
+ <object id="UUID4_5FB4CDBF-4BE8-4F25-9DF8-3332A2419A38">
+  <valueset size="11" xlink:role="type" xlink:title="Architecture Principle" xlink:href="../object_types/architecture_principle.kmd#CompType_Semantics_IT Architecture:Architecture_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Architecture Principle</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="principleImplications"></string>
+   <string name="principleRationale"></string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_6143B81A-9C7E-47E7-AC1F-AD26A5ACE486">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Prerequisite" xlink:href="#UUID4_0508FEC0-6548-45F4-AE72-E104E4929F64"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <relationship id="UUID4_64D4512F-E0A9-4634-9830-5E8FE876A2B7">
+  <valueset size="6" xlink:role="type" xlink:title="Deployed Software provides-is provided by Interface" xlink:href="../relationship_types/deployed_software_provides-is_provided_by_interface.kmd#RelType_Semantics_System:Deployed_Software_provides-is_provided_by_Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B"/>
+  <target seq="0" xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0"/>
+ </relationship>
+
+ <object id="UUID4_64E8F2FD-A5EF-4772-A175-DC28AEFBDC00">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">IT Service Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="IT Service" xlink:href="#UUID4_FE18A042-AE9E-415B-BA86-8DD2E47664D5"/>
+ </object>
+
+ <object id="UUID4_672BB7DF-0549-4F9F-B2BC-1EE197877C0A">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Strategy Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Value Chain" xlink:href="#UUID4_6F65D4B6-5F24-48EE-A860-3F9077E080E2"/>
+  <part-link xlink:role="object" xlink:title="Mission" xlink:href="#UUID4_ECC79EEA-B2B4-463E-83A7-917EA6D1810A"/>
+ </object>
+
+ <relationship id="UUID4_697A2AC8-4B34-40A1-895B-D0ED9B7E7D4A">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Requirement" xlink:href="#UUID4_3AD9053C-333C-40B5-AE49-90A25035DFD1"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <object id="UUID4_6F65D4B6-5F24-48EE-A860-3F9077E080E2">
+  <valueset size="9" xlink:role="type" xlink:title="Value Chain" xlink:href="../object_types/value_chain.kmd#CompType_Semantics_EBA:Value_Chain_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Value Chain</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0">
+  <valueset size="9" xlink:role="type" xlink:title="Interface" xlink:href="../object_types/interface.kmd#CompType_Semantics_System:Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Interface</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B">
+  <valueset size="22" xlink:role="type" xlink:title="Deployed Software" xlink:href="../../meaf/objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Deployed Software</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="developmentPlatform">-1</integer>
+   <integer name="customizationDegree">-1</integer>
+  </valueset>
+ </object>
+
+ <object id="UUID4_7431B69A-DC71-42C4-8018-6B83A95ECE09">
+  <valueset size="9" xlink:role="type" xlink:title="Need" xlink:href="../../meaf/objecttypes/need.kmd#CompType_MEAF:Need_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Need</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_77646E18-5A48-4E89-9F39-FD1E19DDD11E">
+  <valueset size="8" xlink:role="type" xlink:title="Business Process supports-is supported by Business Function" xlink:href="../relationship_types/business_process_supports-is_supported_by_business_function.kmd#ReType_Semantics_Process:Business_Process_supports-is_supported_by_Business_Function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Business Process" xlink:href="#UUID4_F56B13D0-BC20-4630-97E1-310868124438"/>
+  <target seq="0" xlink:role="object" xlink:title="Business Function" xlink:href="#UUID4_C62B8DD4-2F75-4F32-9908-638F9E8C7AFD"/>
+ </relationship>
+
+ <object id="UUID4_789D5D1C-26DF-4740-AC67-AB8FB516107C">
+  <valueset size="47" xlink:role="type" xlink:title="Computing Hardware" xlink:href="../../meaf/objecttypes/computing_hardware.kmd#CompType_TRM:ComputingHardware_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Computing Hardware</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <string name="productName"></string>
+   <string name="productVersion"></string>
+   <string name="productSerialNumber"></string>
+   <string name="vendorName"></string>
+   <string name="vendorSalesPhone"></string>
+   <string name="vendorSalesEmail"></string>
+   <string name="vendorSupportPhone"></string>
+   <string name="vendorSupportEmail"></string>
+   <date name="purchaseDate">00000000</date>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="color" class="volatile">#878787</string>
+   <decimal name="memoryRamAmount">0</decimal>
+   <integer name="processorCpuCount">0</integer>
+   <decimal name="processorCpuClockSpeed">0</decimal>
+   <integer name="processorCpuClockSpeedUnit">-1</integer>
+   <integer name="diskCount">0</integer>
+   <decimal name="diskCapacity">0</decimal>
+   <integer name="diskCapacityUnit">-1</integer>
+   <date-time name="processorPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="processorPercentageUsed">0</integer>
+   <date-time name="diskCapacityFreeTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityFree">0</decimal>
+   <integer name="diskCapacityFreeUnit">-1</integer>
+   <date-time name="diskCapacityUsedTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityUsed">0</decimal>
+   <integer name="diskCapacityUsedUnit">-1</integer>
+   <date-time name="diskPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="diskPercentageUsed">0</integer>
+   <integer name="memoryRamUnit">-1</integer>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_80A598A4-7FD9-4783-A3A4-F00C59595CD3">
+  <valueset size="6" xlink:role="type" xlink:title="Strategy Component influences-is influenced by Principle" xlink:href="../relationship_types/strategy_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Strategy_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Strategy" xlink:href="#UUID4_EF4229F3-5AAE-4398-8638-92C3245C39F8"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <relationship id="UUID4_80C4D549-CED4-40D5-947A-C4218BED8AFE">
+  <valueset size="6" xlink:role="type" xlink:title="Analysis Component influences-is influenced by Principle" xlink:href="../relationship_types/analysis_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Analysis_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Analysis" xlink:href="#UUID4_B447BA32-CD2A-4B12-B4A3-B8EBD03E63E4"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <object id="UUID4_814A72C1-BF8F-4702-AA7A-2A2C0E90FE56">
+  <valueset size="17" xlink:role="type" xlink:title="Initiative" xlink:href="../../meaf/objecttypes/initiative.kmd#CompType_MEAF:Initiative_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Initiative</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="monetaryUnit"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <decimal name="benefit">0</decimal>
+   <integer name="complexity">-1</integer>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <decimal name="cost">0</decimal>
+   <decimal name="budget">0</decimal>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_8DE6B121-9D89-434B-9E20-2F9C9D81F432">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable IT Architecture Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_it_architecture_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_IT_Architecture_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="IT Architecture" xlink:href="#UUID4_D28384F3-5FCA-41B4-BD81-262171D13B2E"/>
+ </relationship>
+
+ <object id="UUID4_8E751926-AE1C-47FE-BACB-23A9D0323011">
+  <valueset size="13" xlink:role="type" xlink:title="Market Segment" xlink:href="../../meaf/objecttypes/market_segment.kmd#CompType_MEAF:MarketSegment_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Market Segment</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="marketSharePercentage">0</integer>
+   <string name="marketPotential"></string>
+   <decimal name="budget">0</decimal>
+   <string name="monetaryUnit"></string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_92886EE7-B375-464A-B68F-4417708165FA">
+  <valueset size="6" xlink:role="type" xlink:title="Goal supports-is supported by Mission" xlink:href="../relationship_types/goal_supports-is_supported_by_mission.kmd#RelType_Semantics_Strategy:Goal_supports-is_supported_by_Mission_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Goal" xlink:href="#UUID4_4B797DF9-B0EA-4622-AEEF-B8B633093C85"/>
+  <target seq="0" xlink:role="object" xlink:title="Mission" xlink:href="#UUID4_ECC79EEA-B2B4-463E-83A7-917EA6D1810A"/>
+ </relationship>
+
+ <relationship id="UUID4_946966A8-35B3-4ED7-AAF0-2EC23F251D65">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Market Segment" xlink:href="#UUID4_8E751926-AE1C-47FE-BACB-23A9D0323011"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <relationship id="UUID4_95B2733A-9D0D-45AC-9CB0-725876B94C30">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Change Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_change_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Change_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Project" xlink:href="#UUID4_95DC1113-E02E-46C1-92F1-D35D2F222DAE"/>
+ </relationship>
+
+ <object id="UUID4_95DC1113-E02E-46C1-92F1-D35D2F222DAE">
+  <valueset size="33" xlink:role="type" xlink:title="Project" xlink:href="../../meaf/objecttypes/project.kmd#CompType_TRM:Project_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Project</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="monetaryUnit"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <string name="projectId"></string>
+   <date name="baselineStartDate">00000000</date>
+   <date name="plannedStartDate">00000000</date>
+   <date name="actualStartDate">00000000</date>
+   <date name="baselineFinishDate">00000000</date>
+   <date name="plannedFinishDate">00000000</date>
+   <date name="actualFinishDate">00000000</date>
+   <decimal name="baselineCost">0</decimal>
+   <decimal name="plannedCost">0</decimal>
+   <decimal name="actualCost">0</decimal>
+   <decimal name="plannedResources">0</decimal>
+   <decimal name="actualResources">0</decimal>
+   <integer name="completionPercentage">0</integer>
+   <integer name="phase">-1</integer>
+   <decimal name="baselineResources">0</decimal>
+   <string name="resourceUnit"></string>
+   <float name="rolledUpBaselineCost" class="volatile">0</float>
+   <float name="rolledUpPlannedCost" class="volatile">0</float>
+   <float name="rolledUpActualCost" class="volatile">0</float>
+   <float name="allocationDirect" class="volatile">0</float>
+   <float name="allocationTotal" class="volatile">0</float>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <model id="UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" name="Troux Semantics Extension Pack 1 Model of the Metamodel" title="Troux Semantics Extension Pack 1 Model of the Metamodel" desc="Troux Semantics Extension Pack 1 Model of the Metamodel" standalone-flag="true">
+  <metamodel-links size="5">
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Semantics" xlink:href="../../meaf/metamodels/meaf_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../../meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Metaverse Queries" xlink:href="../../meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Semantics Extension Pack 1" xlink:href="../metamodels/troux_semantics_extension_pack_1.kmd#UUID4_1546F8C0-69DB-4414-8F26-A9EF14987A35" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Troux Semantics Extension Pack 1 Model of the Metamodel</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="servername" xlink:href="#UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41"/>
+  <part-link xlink:role="object" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_0748D698-D36F-49E1-8824-FA75023690D9"/>
+  <member-link xlink:role="object" xlink:title="servername" xlink:href="#UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+  <bundle>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_92886EE7-B375-464A-B68F-4417708165FA"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_234839AC-9C6E-410C-BB60-64BCD64DDCD1"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_E0304C3B-A9E4-4588-9148-80103C175C7D"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_2DAC51D4-28DF-42B4-9A66-FF72A5152AB1"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_1828F43E-D584-44D8-90D0-FAE366F099E6"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_80A598A4-7FD9-4783-A3A4-F00C59595CD3"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_4A3908B1-3A9E-41BE-9D48-1F8E02DA0A71"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_DE21E0C4-E7B9-4EDF-9AEB-1B80E73909B3"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_31B75502-1457-4546-902A-9FABE8D22C02"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_28857F4A-88F1-4C46-BF93-CF8D6F4A1E1B"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_9D0F6C6A-B6B8-4018-B904-FFF83AC90490"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_1E72651B-333B-4184-912B-30CC9133B314"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_22B08528-8793-4077-8951-03B96CF853B0"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_64D4512F-E0A9-4634-9830-5E8FE876A2B7"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_B3A65582-BE94-4E2A-B087-BEA212DB2255"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_A7842A25-4005-4A81-A5CD-219D37629464"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_77646E18-5A48-4E89-9F39-FD1E19DDD11E"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_5F74C3DA-315D-40EB-8459-3820A65AE770"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_AC743A37-F68B-46AC-8AE5-41EAC0437DCD"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_BD08E013-3AFC-4706-A705-439DDCFA669E"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_BF5CFFB8-61BA-40A4-80AC-0DCBED67FC68"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_8DE6B121-9D89-434B-9E20-2F9C9D81F432"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_342D35DA-97E9-48A5-AE89-C29F57D7BF35"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_80C4D549-CED4-40D5-947A-C4218BED8AFE"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_FA6326F6-5BB8-4B0A-96C2-ED22AB283895"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_47757765-4102-477C-BB1D-0A5790A220C6"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_031BC317-C85D-4B1C-983C-B3AACB949E76"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_44ADEBE0-6757-435C-B2FF-B31497764016"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_95B2733A-9D0D-45AC-9CB0-725876B94C30"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_C8CE9DD8-19B2-49A0-83E3-CD1688E429B1"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_285C1582-DE22-4237-B53D-7D073D9E4745"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_0D6DDB07-58B7-42C1-B9F8-5F98E7F0F108"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_BC3331CC-9EED-4AD6-B980-0041D79B74EF"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_3D92BFA5-DE56-4113-93F8-54FE0E260D62"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_0969C081-4F76-4036-9007-6F9572D5256B"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_6143B81A-9C7E-47E7-AC1F-AD26A5ACE486"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_F3D7CED3-18E0-4A75-9355-ABFFA3F12A5E"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_946966A8-35B3-4ED7-AAF0-2EC23F251D65"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_697A2AC8-4B34-40A1-895B-D0ED9B7E7D4A"/>
+   <relationship-link xlink:role="relationship" xlink:href="#UUID4_EE491961-4C05-4781-922F-6C882C1C12FA"/>
+  </bundle>
+ </model>
+
+ <relationship id="UUID4_9D0F6C6A-B6B8-4018-B904-FFF83AC90490">
+  <valueset size="6" xlink:role="type" xlink:title="System incorporates-is incorporated by Infrastructure Component" xlink:href="../relationship_types/system_incorporates-is_incorporated_by_infrastructure_component.kmd#RelType_Semantics_System:System_incorporates-is_incorporated_by_Infrastructure_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="System" xlink:href="#UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E"/>
+  <target seq="0" xlink:role="object" xlink:title="Hardware" xlink:href="#UUID4_18E10972-C60A-477E-9834-4F554438F17A"/>
+ </relationship>
+
+ <object id="UUID4_A031BBDD-5B61-45E3-A83D-404ECF066950">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Application and Software Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B"/>
+  <part-link xlink:role="object" xlink:title="Message" xlink:href="#UUID4_03D1DC8A-BA4F-4709-A605-CF37EF3A9774"/>
+ </object>
+
+ <object id="UUID4_A658FFE8-C0FB-444E-AC6D-A1EA72C1C5E5">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Analysis Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Analysis" xlink:href="#UUID4_B447BA32-CD2A-4B12-B4A3-B8EBD03E63E4"/>
+ </object>
+
+ <object id="UUID4_A77F0260-AA3B-4439-BAFB-F176232172FB">
+  <valueset size="9" xlink:role="type" xlink:title="Resource" xlink:href="../../meaf/objecttypes/resource.kmd#CompType_MEAF:Resource_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Resource</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_A7842A25-4005-4A81-A5CD-219D37629464">
+  <valueset size="6" xlink:role="type" xlink:title="Computing Hardware hosts-is hosted by Virtual Host" xlink:href="../relationship_types/computing_hardware_hosts-is_hosted_by_virtual_host.kmd#RelType_Semantics_AppDomain:Computing_Hardware_hosts-is_hosted_by_Virtual_Host_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Computing Hardware" xlink:href="#UUID4_789D5D1C-26DF-4740-AC67-AB8FB516107C"/>
+  <target seq="0" xlink:role="object" xlink:title="Virtual Host" xlink:href="#UUID4_D4E1BD30-472E-49D6-8543-BB40BEF6C898"/>
+ </relationship>
+
+ <object id="UUID4_A936EFC6-08F3-4E8E-B624-6A94E670418B">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">IT Product Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="IT Product" xlink:href="#UUID4_AE81DDB3-DA26-4EFC-A782-C8D7BB75099C"/>
+ </object>
+
+ <relationship id="UUID4_AC743A37-F68B-46AC-8AE5-41EAC0437DCD">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable System" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_system.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_System_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="System" xlink:href="#UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E"/>
+ </relationship>
+
+ <object id="UUID4_AE81DDB3-DA26-4EFC-A782-C8D7BB75099C">
+  <valueset size="24" xlink:role="type" xlink:title="IT Product" xlink:href="../../meaf/objecttypes/it_product.kmd#CompType_MEAF:ITProduct_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">IT Product</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="shortName"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <decimal name="price">0</decimal>
+   <string name="pricedUnit"></string>
+   <decimal name="recurringCost">0</decimal>
+   <decimal name="recurringPrice">0</decimal>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="recurringPriceInterval">-1</integer>
+   <string name="monetaryUnit"></string>
+   <string name="productId"></string>
+   <integer name="commercialProduct">-1</integer>
+   <collection name="relatedArtifacts" structure="list" size="0" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" xlink:actuate="user">
+   </collection>
+   <integer name="supportAndMaintenanceContract">-1</integer>
+   <string name="serviceLevelAgreement"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_AF88A585-AAB8-4F96-9ECA-776EDBF0E43B">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Troux Semantics Extension Pack 1</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Application and Software Domain" xlink:href="#UUID4_B6F61436-94E2-4E20-8FF4-BA3D8804EA22"/>
+  <part-link xlink:role="object" xlink:title="Systems Domain" xlink:href="#UUID4_0898D1EA-9380-4EA0-957F-155377DCBE3E"/>
+  <part-link xlink:role="object" xlink:title="Policy Domain" xlink:href="#UUID4_30F54E4E-1837-4061-8971-6AD27DFCC780"/>
+  <part-link xlink:role="object" xlink:title="Strategy Domain" xlink:href="#UUID4_672BB7DF-0549-4F9F-B2BC-1EE197877C0A"/>
+ </object>
+
+ <relationship id="UUID4_B3A65582-BE94-4E2A-B087-BEA212DB2255">
+  <valueset size="6" xlink:role="type" xlink:title="Deployed Software requires-is required by Interface" xlink:href="../relationship_types/deployed_software_requires-is_required_by_interface.kmd#RelType_Semantics_System:Deployed_Software_requires-is_required_by_Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B"/>
+  <target seq="0" xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0"/>
+ </relationship>
+
+ <object id="UUID4_B4379460-F53F-44BA-9DBD-EF86C6667DBF">
+  <valueset size="11" xlink:role="type" xlink:title="Scenario" xlink:href="../../meaf/objecttypes/scenario.kmd#CompType_MEAF:Scenario_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Scenario</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="priority">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_B447BA32-CD2A-4B12-B4A3-B8EBD03E63E4">
+  <valueset size="11" xlink:role="type" xlink:title="Analysis" xlink:href="../../meaf/objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Analysis</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="status">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_B6F61436-94E2-4E20-8FF4-BA3D8804EA22">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Application and Software Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Virtual Machine Image" xlink:href="#UUID4_3264EAA5-7E85-4647-959C-A691CB851E61"/>
+  <part-link xlink:role="object" xlink:title="Virtual Host" xlink:href="#UUID4_D4E1BD30-472E-49D6-8543-BB40BEF6C898"/>
+  <part-link xlink:role="object" xlink:title="Operating System" xlink:href="#UUID4_E090BAD3-1FEA-437C-A091-5F4DECB68C04"/>
+ </object>
+
+ <object id="UUID4_B8D8E2D9-7B26-4BB6-9474-A9564D6B5353">
+  <valueset size="11" xlink:role="type" xlink:title="Program" xlink:href="../../meaf/objecttypes/program.kmd#CompType_MEAF:Program_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Program</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="monetaryUnit"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_BC3331CC-9EED-4AD6-B980-0041D79B74EF">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Need" xlink:href="#UUID4_7431B69A-DC71-42C4-8018-6B83A95ECE09"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <relationship id="UUID4_BD08E013-3AFC-4706-A705-439DDCFA669E">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Resource Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_resource_component.kmd#elType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Resource_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Resource" xlink:href="#UUID4_A77F0260-AA3B-4439-BAFB-F176232172FB"/>
+ </relationship>
+
+ <relationship id="UUID4_BF5CFFB8-61BA-40A4-80AC-0DCBED67FC68">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable IT Product" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_it_product.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_IT_Product_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="IT Product" xlink:href="#UUID4_AE81DDB3-DA26-4EFC-A782-C8D7BB75099C"/>
+ </relationship>
+
+ <object id="UUID4_C62B8DD4-2F75-4F32-9908-638F9E8C7AFD">
+  <valueset size="10" xlink:role="type" xlink:title="Business Function" xlink:href="../../meaf/objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Business Function</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_C8CE9DD8-19B2-49A0-83E3-CD1688E429B1">
+  <valueset size="6" xlink:role="type" xlink:title="Operating System hosts-is hosted by Deployed Software" xlink:href="../relationship_types/operating_system_hosts-is_hosted_by_deployed_software.kmd#RelType_Semantics_AppDomain:Operating_System_hosts-is_hosted_by_Deployed_Software_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Operating System" xlink:href="#UUID4_E090BAD3-1FEA-437C-A091-5F4DECB68C04"/>
+  <target seq="0" xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B"/>
+ </relationship>
+
+ <object id="UUID4_D28384F3-5FCA-41B4-BD81-262171D13B2E">
+  <valueset size="10" xlink:role="type" xlink:title="IT Architecture" xlink:href="../../meaf/objecttypes/it_architecture.kmd#CompType_MEAF:ITArchitecture_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">IT Architecture</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="shortName">IT Architecture</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_D4E1BD30-472E-49D6-8543-BB40BEF6C898">
+  <valueset size="18" xlink:role="type" xlink:title="Virtual Host" xlink:href="../object_types/virtual_host.kmd#CompType_Semantics_AppDomain:Virtual_Host_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Virtual Host</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_D78ADC23-BA2D-433D-A779-738F76163CF1">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">IT Architecture Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="IT Architecture" xlink:href="#UUID4_D28384F3-5FCA-41B4-BD81-262171D13B2E"/>
+ </object>
+
+ <object id="UUID4_DAE666F5-A824-453B-A8D9-20CD9797BA3C">
+  <valueset size="11" xlink:role="type" xlink:title="Benefit" xlink:href="../../meaf/objecttypes/benefit.kmd#CompType_MEAF:Benefit_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Benefit</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="value">0</decimal>
+   <string name="monetaryUnit"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_DB9575C5-1F57-4411-B049-F30A47F68AF6">
+  <valueset size="2" xlink:role="type" xlink:title="Comment" xlink:href="metis:stdtypes#oid22" xlink:actuate="user">
+   <string name="name">&#60;h2&#62;Marshalling Object&#60;/h2&#62;</string>
+   <string name="description">The Marshalling object stores information required to connect to the Metaverse, such as the name and location of the server. The Marshalling object is also used to keep track of the queries run against the Metaverse. Queries are stored here for future refresh operations.&#60;p&#62; 
+The Marshalling object displays the name of the Metaverse and the state to which you are connected. The News objects at the bottom display the number of instances from the Metaverse that were added or updated during query or refresh operations. A separate News object is created each day.
+&#60;br/&#62;
+&#60;h4&#62;To configure the Marshalling object:&#60;/h4&#62;
+&#60;ol&#62;
+&#60;li&#62;Right-click the object and click &#60;b&#62;Properties&#60;/b&#62;.&#60;/li&#62;
+&#60;li&#62;On the &#60;b&#62;Instance&#60;/b&#62; tab,  enter the location of the Metaverse in the &#60;b&#62;Server Name&#60;/b&#62; field.&#60;/li&#62;
+&#60;li&#62;If the server is running in secure mode (SSL), select the &#60;b&#62;Use Secure HTTP Connection&#60;/b&#62; option.&#60;/li&#62;
+&#60;/ol&#62;
+&#60;br/&#62;
+Tip: See the Troux Architect online help for more information about configuring the Marshalling object, querying the Metaverse, and connecting to a different state. 
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_DE21E0C4-E7B9-4EDF-9AEB-1B80E73909B3">
+  <valueset size="5" xlink:role="type" xlink:title="System requires-is required by Interface" xlink:href="../relationship_types/system_requires-is_required_by_interface.kmd#RelType_Semantics_System:System_requires-is_required_by_Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="System" xlink:href="#UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E"/>
+  <target seq="0" xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0"/>
+ </relationship>
+
+ <object id="UUID4_DE58C02D-B11D-4FD6-8C0D-CD46D595FC13">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Data Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Datastore" xlink:href="#UUID4_43A00A5C-83C4-4B4D-AEB6-90C4CF527120"/>
+ </object>
+
+ <object id="UUID4_DFDEE71B-73E6-4110-80E2-D9AFC70A9BE3">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Market Domain</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Benefit" xlink:href="#UUID4_DAE666F5-A824-453B-A8D9-20CD9797BA3C"/>
+  <part-link xlink:role="object" xlink:title="Market Opportunity" xlink:href="#UUID4_23D86DD9-AD17-4E4F-B983-E0264850E1FC"/>
+  <part-link xlink:role="object" xlink:title="Market Segment" xlink:href="#UUID4_8E751926-AE1C-47FE-BACB-23A9D0323011"/>
+  <part-link xlink:role="object" xlink:title="Need" xlink:href="#UUID4_7431B69A-DC71-42C4-8018-6B83A95ECE09"/>
+  <part-link xlink:role="object" xlink:title="Prerequisite" xlink:href="#UUID4_0508FEC0-6548-45F4-AE72-E104E4929F64"/>
+  <part-link xlink:role="object" xlink:title="Requirement" xlink:href="#UUID4_3AD9053C-333C-40B5-AE49-90A25035DFD1"/>
+  <part-link xlink:role="object" xlink:title="Scenario" xlink:href="#UUID4_B4379460-F53F-44BA-9DBD-EF86C6667DBF"/>
+  <part-link xlink:role="object" xlink:title="Target Customer" xlink:href="#UUID4_EA15E20A-C9CF-43D9-AEE9-92986079D46A"/>
+  <part-link xlink:role="object" xlink:title="Target User" xlink:href="#UUID4_3F00CE8C-86BB-4B75-B14A-002BFECC7FBE"/>
+ </object>
+
+ <relationship id="UUID4_E0304C3B-A9E4-4588-9148-80103C175C7D">
+  <valueset size="6" xlink:role="type" xlink:title="Virtual Machine Image incorporates-is incorporated in Deployed Software" xlink:href="../relationship_types/virtual_machine_image_incorporates-is_incorporated_in_deployed_software.kmd#RelType_Semantics_AppDomain:Virtual_Machine_Image_incorporates-is_incorporated_in_Deployed_Software_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Virtual Machine Image" xlink:href="#UUID4_3264EAA5-7E85-4647-959C-A691CB851E61"/>
+  <target seq="0" xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B"/>
+ </relationship>
+
+ <object id="UUID4_E090BAD3-1FEA-437C-A091-5F4DECB68C04">
+  <valueset size="33" xlink:role="type" xlink:title="Operating System" xlink:href="../object_types/operating_system.kmd#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Operating System</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile">#878787</string>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="developmentPlatform">-1</integer>
+   <integer name="customizationDegree">-1</integer>
+   <string name="productName"></string>
+   <string name="productVersion"></string>
+   <string name="productPatchLevel"></string>
+   <string name="productSerialNumber"></string>
+   <string name="vendorName"></string>
+   <string name="vendorSalesPhone"></string>
+   <string name="vendorSalesEmail"></string>
+   <string name="vendorSupportPhone"></string>
+   <string name="vendorSupportEmail"></string>
+   <date name="purchaseDate">00000000</date>
+   <string name="licenseID"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D">
+  <valueset size="11" xlink:role="type" xlink:title="Architecture Principle" xlink:href="../object_types/architecture_principle.kmd#CompType_Semantics_IT Architecture:Architecture_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Architecture Principle</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="principleImplications"></string>
+   <string name="principleRationale"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_EA15E20A-C9CF-43D9-AEE9-92986079D46A">
+  <valueset size="13" xlink:role="type" xlink:title="Target Customer" xlink:href="../../meaf/objecttypes/target_customer.kmd#CompType_MEAF:TargetCustomer_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Target Customer</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="typicalAccountSize">0</integer>
+   <integer name="potentialAccounts">0</integer>
+   <decimal name="potentialValuePerAccount">0</decimal>
+   <string name="monetaryUnit"></string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_ECC79EEA-B2B4-463E-83A7-917EA6D1810A">
+  <valueset size="9" xlink:role="type" xlink:title="Mission" xlink:href="../object_types/mission.kmd#CompType_eaGov_SP:Mission_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Mission</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_EE491961-4C05-4781-922F-6C882C1C12FA">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Target User" xlink:href="#UUID4_3F00CE8C-86BB-4B75-B14A-002BFECC7FBE"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <object id="UUID4_EF4229F3-5AAE-4398-8638-92C3245C39F8">
+  <valueset size="10" xlink:role="type" xlink:title="Strategy" xlink:href="../../meaf/objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Strategy</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_F3D7CED3-18E0-4A75-9355-ABFFA3F12A5E">
+  <valueset size="6" xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Market Opportunity" xlink:href="#UUID4_23D86DD9-AD17-4E4F-B983-E0264850E1FC"/>
+  <target seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+ </relationship>
+
+ <object id="UUID4_F56B13D0-BC20-4630-97E1-310868124438">
+  <valueset size="17" xlink:role="type" xlink:title="Business Process" xlink:href="../../meaf/objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Business Process</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <integer name="itEffectivenessPercentage">0</integer>
+   <string name="versionId"></string>
+   <decimal name="businessCriticalityScore">0</decimal>
+   <decimal name="duration">0</decimal>
+   <integer name="durationUnit">-1</integer>
+   <integer name="automation">-1</integer>
+  </valueset>
+ </object>
+
+ <relationship id="UUID4_FA6326F6-5BB8-4B0A-96C2-ED22AB283895">
+  <valueset size="6" xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Data Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_data_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Data_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D"/>
+  <target seq="0" xlink:role="object" xlink:title="Datastore" xlink:href="#UUID4_43A00A5C-83C4-4B4D-AEB6-90C4CF527120"/>
+ </relationship>
+
+ <object id="UUID4_FE18A042-AE9E-415B-BA86-8DD2E47664D5">
+  <valueset size="19" xlink:role="type" xlink:title="IT Service" xlink:href="../../meaf/objecttypes/it_service.kmd#CompType_TRM:ServiceOffering_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">IT Service</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="shortName"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <decimal name="price">0</decimal>
+   <string name="pricedUnit"></string>
+   <decimal name="recurringCost">0</decimal>
+   <decimal name="recurringPrice">0</decimal>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="recurringPriceInterval">-1</integer>
+   <string name="monetaryUnit"></string>
+  </valueset>
+ </object>
+
+ <relationshipview id="UUID4_007B5F82-E78B-4865-9C66-BFAB21EBC5C9" xlink:role="relationship" xlink:href="#UUID4_1E72651B-333B-4184-912B-30CC9133B314">
+  <origin-link xlink:role="objectview" xlink:title="Strategy" xlink:href="#UUID4_0D2E6C18-8C2F-4C2A-AA92-083435CCAA47"/>
+  <target-link xlink:role="objectview" xlink:title="Value Chain" xlink:href="#UUID4_329B6A4B-F29B-4115-B3A8-EB205D2CEF58"/>
+ </relationshipview>
+
+ <objectview id="UUID4_0117E25D-757F-4B7F-AACD-48E8CC89412E" xlink:role="object" xlink:title="Computing Hardware" xlink:href="#UUID4_789D5D1C-26DF-4740-AC67-AB8FB516107C" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="2961.12" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_01B75BCB-B467-4914-A602-0B948B084A66" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Process Domain" xlink:href="#UUID4_B7D8D74B-305B-49F6-8892-4A33BEB10F6A"/>
+  <target-link xlink:role="objectview" xlink:title="Business Function" xlink:href="#UUID4_094DB9CC-C0E7-4D15-B575-FE49F5CAE29E"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_02B5051B-BA2D-4720-BF3E-04B0C4772C9A" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Data" xlink:href="#_002as0b01f99768ufljt"/>
+  <target-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_A95B97B9-DDB2-4E83-AEEC-53DDCD13FC1F"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_0482F5F4-EAF5-4598-9B0E-C185B32243DD" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Prerequisite" xlink:href="#UUID4_0C79FBE9-311B-4DA0-9E06-F78B9A40B7F0"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_059EE108-7A21-41C7-A327-35661937BB97" xlink:role="relationship" xlink:href="#UUID4_DE21E0C4-E7B9-4EDF-9AEB-1B80E73909B3" origin-text-x="1906.6" origin-text-y="3736.04" target-text-x="-3063.6" target-text-y="4399.83">
+  <origin-link xlink:role="objectview" xlink:title="System" xlink:href="#UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071"/>
+  <target-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+  <path>
+   <origin-point type="floating"/>
+   <path-point x="4577.12" y="9154.24"/>
+   <target-point type="bottom"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="UUID4_05ADC0B4-866A-48D5-AEB9-683A99920E17" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Transition Domain" xlink:href="#UUID4_281D7398-4C35-442B-AA88-635B28BF4CAB"/>
+  <target-link xlink:role="objectview" xlink:title="Program" xlink:href="#UUID4_D851BAE8-909F-449A-8933-ED7A95B2C061"/>
+ </relationshipview>
+
+ <objectview id="UUID4_094DB9CC-C0E7-4D15-B575-FE49F5CAE29E" xlink:role="object" xlink:title="Business Function" xlink:href="#UUID4_C62B8DD4-2F75-4F32-9908-638F9E8C7AFD" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1271.92" width="1152" height="384">
+ </objectview>
+
+ <objectview id="UUID4_0A95A8AF-AA13-4992-8ECD-2B30754EF7D8" xlink:role="object" xlink:title="Target User" xlink:href="#UUID4_3F00CE8C-86BB-4B75-B14A-002BFECC7FBE" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="11798.6" top="8096.1" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_0B179416-3113-48EC-A0A5-ED8730AB55E9" xlink:role="relationship" xlink:href="#UUID4_31B75502-1457-4546-902A-9FABE8D22C02" origin-text-x="-7.64455" origin-text-y="34.597">
+  <origin-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+  <target-link xlink:role="objectview" xlink:title="Message" xlink:href="#UUID4_B6BCAC9C-A5C9-4BF2-8491-3A9AD216E364"/>
+ </relationshipview>
+
+ <objectview id="UUID4_0C79FBE9-311B-4DA0-9E06-F78B9A40B7F0" xlink:role="object" xlink:title="Prerequisite" xlink:href="#UUID4_0508FEC0-6548-45F4-AE72-E104E4929F64" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="6096.75" top="6195.49" width="3665.46" height="1221.82">
+ </objectview>
+
+ <objectview id="UUID4_0D2E6C18-8C2F-4C2A-AA92-083435CCAA47" xlink:role="object" xlink:title="Strategy" xlink:href="#UUID4_EF4229F3-5AAE-4398-8638-92C3245C39F8" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="3189.95" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_0FD83C49-6F80-4D8C-A64A-9467D4F5A175" xlink:role="relationship" xlink:href="#UUID4_47757765-4102-477C-BB1D-0A5790A220C6">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Program" xlink:href="#UUID4_D851BAE8-909F-449A-8933-ED7A95B2C061"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_10A57CAF-E6BD-48FE-8FBC-EEA00673796F" xlink:role="relationship" xlink:href="#UUID4_C8CE9DD8-19B2-49A0-83E3-CD1688E429B1">
+  <origin-link xlink:role="objectview" xlink:title="Operating System" xlink:href="#UUID4_93DD3A53-A348-48A6-9D85-C9F71E0CAA37"/>
+  <target-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_11F9C9F5-9D9D-457C-9AAB-03B68F4D22C2" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Infrastructure Domain" xlink:href="#UUID4_6BF5B9FE-00C9-4D02-B0DA-2EF02D6B60CD"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_133EDB58-77B0-4F34-A643-2B48A4D6C635" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_8B93F030-CE18-4443-8544-F44002E061A7"/>
+  <target-link xlink:role="objectview" xlink:title="Value Chain" xlink:href="#UUID4_329B6A4B-F29B-4115-B3A8-EB205D2CEF58"/>
+ </relationshipview>
+
+ <objectview id="UUID4_15A6E3F8-3B78-4027-8E72-1723E865C658" xlink:role="object" xlink:title="Market Opportunity" xlink:href="#UUID4_23D86DD9-AD17-4E4F-B983-E0264850E1FC" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="6096.75" top="4294.89" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_15E7203F-B658-43F0-A92E-6E3FE7900010" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="IT Architecture Domain" xlink:href="#UUID4_35BD29C3-27DC-47C4-BC87-7EAA3262A265"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_15E80562-07B8-437A-9D0E-2271D11AD850" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Target Customer" xlink:href="#UUID4_4D87BC77-5F2F-4455-91AF-93C9E793415A"/>
+ </relationshipview>
+
+ <objectview id="UUID4_1BAA2C42-2C4E-4F16-95E6-0B03DC3EB8DA" xlink:role="object" xlink:title="Virtual Machine Image" xlink:href="#UUID4_3264EAA5-7E85-4647-959C-A691CB851E61" state="open" behavior="tree" text-scale="0.024694" decomp-scale="2.53099" left="3970.79" top="9758.72" width="10366.9" height="3455.65">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/virtual_machine_image.svg#UUID4_5E4A7801-4AB1-4449-A4DF-98C7CC87D0B5&#34;)"/>
+   <replace tag="textbackground" property="value" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="UUID4_1D074754-8844-43C3-B272-95092CC6637F" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_FBE611DE-304D-4107-919F-BB56DB9D9FF5"/>
+  <target-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_4052B1AB-AF1E-4931-8F72-FBEB3CDA59B2"/>
+ </relationshipview>
+
+ <objectview id="UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071" xlink:role="object" xlink:title="System" xlink:href="#UUID4_1B05DE60-BACA-4ECE-B95F-ADFDB048B01E" state="open" behavior="tree" text-scale="0.024694" decomp-scale="5.06198" left="3505.03" top="11233.9" width="10366.9" height="3455.65">
+ </objectview>
+
+ <relationshipview id="UUID4_1ED3781D-4DA2-45D0-9772-F7CCB70BF623" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Need" xlink:href="#UUID4_AEB1ACA4-BB37-4FFA-A662-E6E533611E4F"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_1F578535-2303-4090-A368-A11F0B643956" xlink:role="relationship" xlink:href="#UUID4_6143B81A-9C7E-47E7-AC1F-AD26A5ACE486">
+  <origin-link xlink:role="objectview" xlink:title="Prerequisite" xlink:href="#UUID4_0C79FBE9-311B-4DA0-9E06-F78B9A40B7F0"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_20DA8570-8D5E-4F7B-B2EC-186449E636F7" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_8B93F030-CE18-4443-8544-F44002E061A7"/>
+  <target-link xlink:role="objectview" xlink:title="Mission" xlink:href="#UUID4_CB7113E9-26BB-4F7B-989E-AB458F690CB5"/>
+ </relationshipview>
+
+ <objectview id="UUID4_2201391F-EFFC-431C-A9B7-51BADDE2C337" xlink:role="object" xlink:title="Task" xlink:href="#UUID4_0C481407-6DE4-4055-9E58-6495422F61E9" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.795453" left="2852.84" top="2259.39" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_22D4E325-8E11-4990-BC51-9F67EEB47B63" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="IT Architecture Domain" xlink:href="#UUID4_35BD29C3-27DC-47C4-BC87-7EAA3262A265"/>
+  <target-link xlink:role="objectview" xlink:title="IT Architecture" xlink:href="#UUID4_7CAAD7CC-BF9B-4153-8F40-BCCA0F093F39"/>
+ </relationshipview>
+
+ <objectview id="UUID4_281D7398-4C35-442B-AA88-635B28BF4CAB" xlink:role="object" xlink:title="Transition Domain" xlink:href="#UUID4_279D9B66-2BDB-4E1C-B1D0-DB0929D43C32" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="3708.13" top="5743.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Initiative" xlink:href="#UUID4_BED889C2-B10A-44B0-A550-63B8ECB1445C"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_3E7CF8F2-7E23-404E-B58E-2882DEA9A843"/>
+  <child-link xlink:role="objectview" xlink:title="Program" xlink:href="#UUID4_D851BAE8-909F-449A-8933-ED7A95B2C061"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_05ADC0B4-866A-48D5-AEB9-683A99920E17"/>
+  <child-link xlink:role="objectview" xlink:title="Task" xlink:href="#UUID4_2201391F-EFFC-431C-A9B7-51BADDE2C337"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_ABB84E8B-196B-4D54-8AA1-D638028978DE"/>
+  <child-link xlink:role="objectview" xlink:title="Project" xlink:href="#UUID4_3964F496-FE37-4D30-8FCB-36D6B5548195"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_DF17A725-8E76-44B7-BE36-2B213641730C"/>
+ </objectview>
+
+ <relationshipview id="UUID4_2B4DD632-A871-468B-B096-DAFB8BB930BE" xlink:role="relationship" xlink:href="#UUID4_FA6326F6-5BB8-4B0A-96C2-ED22AB283895">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Datastore" xlink:href="#UUID4_50B16062-71A4-4C08-A3C8-3E03F8357351"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_2BEBF948-9CC4-4D39-85ED-3D17CBF415A0" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_FBE611DE-304D-4107-919F-BB56DB9D9FF5"/>
+  <target-link xlink:role="objectview" xlink:title="Policy Domain" xlink:href="#UUID4_89967693-DEFB-4FB4-84B1-F77E0479AB68"/>
+ </relationshipview>
+
+ <objectview id="UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA" xlink:role="object" xlink:title="Troux Semantics" xlink:href="#UUID4_24CF6172-7468-45C6-BC1D-104C0BF046CB" state="open" behavior="nested" text-scale="0.279365" decomp-scale="0.447443" left="164.848" top="418.794" width="2443.64" height="3584">
+  <child-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_6DDCEA6F-0CD7-44F2-8F9B-1A0FAEE5534D"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_79B4E944-72FB-4682-9085-42F0ECEAD313"/>
+  <child-link xlink:role="objectview" xlink:title="Infrastructure Domain" xlink:href="#UUID4_6BF5B9FE-00C9-4D02-B0DA-2EF02D6B60CD"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_11F9C9F5-9D9D-457C-9AAB-03B68F4D22C2"/>
+  <child-link xlink:role="objectview" xlink:title="Process Domain" xlink:href="#UUID4_B7D8D74B-305B-49F6-8892-4A33BEB10F6A"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_C8AD8385-4B14-4654-877B-B6BA440B4155"/>
+  <child-link xlink:role="objectview" xlink:title="IT Product Domain" xlink:href="#UUID4_947DA929-6D14-4161-B4E9-C37BDA47A2E8"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_92B55E08-3431-4CA3-83BD-70C2F482B7E3"/>
+  <child-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_C9DFE624-AADB-4D98-B299-02EF2D0853BE"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_E903ED14-A3CC-4F2C-A334-5F976943C9FF"/>
+  <child-link xlink:role="objectview" xlink:title="Resource Domain" xlink:href="#UUID4_DF4B55AF-2F26-4EF4-9300-8C41D12C1DF2"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_7586A3C3-E1F6-4FA4-AC3E-914A74C8597E"/>
+  <child-link xlink:role="objectview" xlink:title="IT Architecture Domain" xlink:href="#UUID4_35BD29C3-27DC-47C4-BC87-7EAA3262A265"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_15E7203F-B658-43F0-A92E-6E3FE7900010"/>
+  <child-link xlink:role="objectview" xlink:title="Transition Domain" xlink:href="#UUID4_281D7398-4C35-442B-AA88-635B28BF4CAB"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_DC6F1EC6-A58C-4F90-BB72-166E9BB4F760"/>
+  <child-link xlink:role="objectview" xlink:title="Analysis Domain" xlink:href="#UUID4_D4B6CA7B-C0DF-4DA6-814C-53F3E5F6D13B"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_7946AFFF-0BEB-41C3-98D3-7B7478D898EF"/>
+  <child-link xlink:role="objectview" xlink:title="Data Domain" xlink:href="#UUID4_76E7AE47-FB16-4B2D-A3E4-BBD5527ADED3"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_A092053E-CEF6-4C7C-A954-4BEF92A09C78"/>
+  <child-link xlink:role="objectview" xlink:title="IT Service Domain" xlink:href="#UUID4_4D90D87E-8E75-4256-9D02-7DF008528510"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_849855A5-552B-46CC-BD94-626274A67019"/>
+  <child-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_E630D1C0-CF71-4A27-8D94-EE244731E955"/>
+ </objectview>
+
+ <relationshipview id="UUID4_2C934786-89A8-4A36-B062-464805619DA5" xlink:role="relationship" xlink:href="#UUID4_3D92BFA5-DE56-4113-93F8-54FE0E260D62">
+  <origin-link xlink:role="objectview" xlink:title="Scenario" xlink:href="#UUID4_AB09D8FD-CCCC-477D-8873-F203CAC78564"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_2DDAA0B3-67DD-47DC-B0E4-5ECEE23DB5BA" xlink:role="relationship" xlink:href="#UUID4_9D0F6C6A-B6B8-4018-B904-FFF83AC90490">
+  <origin-link xlink:role="objectview" xlink:title="System" xlink:href="#UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071"/>
+  <target-link xlink:role="objectview" xlink:title="Hardware" xlink:href="#UUID4_35203D89-61A0-4962-9F71-7EAD3C089946"/>
+ </relationshipview>
+
+ <objectview id="UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32" xlink:role="object" xlink:title="Deployed Software" xlink:href="#UUID4_742FB9E3-46A8-494E-A359-90AEC300A92B" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1372.27" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_320CB4BF-5D68-41B4-A1DB-68ECBEFE26E4" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_FBE611DE-304D-4107-919F-BB56DB9D9FF5"/>
+  <target-link xlink:role="objectview" xlink:title="Systems Domain" xlink:href="#UUID4_F871D26C-8F09-4B30-8906-28E21A793360"/>
+ </relationshipview>
+
+ <objectview id="UUID4_329B6A4B-F29B-4115-B3A8-EB205D2CEF58" xlink:role="object" xlink:title="Value Chain" xlink:href="#UUID4_6F65D4B6-5F24-48EE-A860-3F9077E080E2" state="open" behavior="tree" text-scale="0.024694" decomp-scale="5.06198" left="3505.03" top="8711.51" width="10366.9" height="3455.65">
+ </objectview>
+
+ <relationshipview id="UUID4_32BDC369-526D-415E-8DA1-2EBEC8912376" xlink:role="relationship" xlink:href="#UUID4_0D6DDB07-58B7-42C1-B9F8-5F98E7F0F108">
+  <origin-link xlink:role="objectview" xlink:title="Benefit" xlink:href="#UUID4_ECE723C5-3666-461F-BAC6-790ACB1C46CF"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_3352C53B-54F5-4E54-B4BB-B6D35061133C" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_6DDCEA6F-0CD7-44F2-8F9B-1A0FAEE5534D"/>
+  <target-link xlink:role="objectview" xlink:title="Message" xlink:href="#UUID4_B6BCAC9C-A5C9-4BF2-8491-3A9AD216E364"/>
+ </relationshipview>
+
+ <objectview id="UUID4_35203D89-61A0-4962-9F71-7EAD3C089946" xlink:role="object" xlink:title="Hardware" xlink:href="#UUID4_18E10972-C60A-477E-9834-4F554438F17A" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1996.22" width="1152" height="384">
+ </objectview>
+
+ <objectview id="UUID4_35BD29C3-27DC-47C4-BC87-7EAA3262A265" xlink:role="object" xlink:title="IT Architecture Domain" xlink:href="#UUID4_D78ADC23-BA2D-433D-A779-738F76163CF1" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="1916.12" top="3055.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="IT Architecture" xlink:href="#UUID4_7CAAD7CC-BF9B-4153-8F40-BCCA0F093F39"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_22D4E325-8E11-4990-BC51-9F67EEB47B63"/>
+ </objectview>
+
+ <relationshipview id="UUID4_37DB4C3C-9D46-4F1A-8642-CDBDBBEB7E3E" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_4052B1AB-AF1E-4931-8F72-FBEB3CDA59B2"/>
+  <target-link xlink:role="objectview" xlink:title="Virtual Machine Image" xlink:href="#UUID4_1BAA2C42-2C4E-4F16-95E6-0B03DC3EB8DA"/>
+ </relationshipview>
+
+ <objectview id="UUID4_37E2847F-86E9-4AEE-BC73-71079B5ECB04" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_5FB4CDBF-4BE8-4F25-9DF8-3332A2419A38" state="open" behavior="tree" text-scale="0.024694" decomp-scale="2.53099" left="3505.03" top="8614.44" width="10366.9" height="3455.65">
+ </objectview>
+
+ <objectview id="UUID4_3964F496-FE37-4D30-8FCB-36D6B5548195" xlink:role="object" xlink:title="Project" xlink:href="#UUID4_95DC1113-E02E-46C1-92F1-D35D2F222DAE" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.795453" left="164.848" top="2259.39" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_3DEB4AC9-7A49-4C25-8FB6-EBD3C89E74A3" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="IT Product Domain" xlink:href="#UUID4_947DA929-6D14-4161-B4E9-C37BDA47A2E8"/>
+  <target-link xlink:role="objectview" xlink:title="IT Product" xlink:href="#UUID4_8CCC1113-6EF4-4D6D-AA6D-B571FE53CE0C"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_3E7CF8F2-7E23-404E-B58E-2882DEA9A843" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Transition Domain" xlink:href="#UUID4_281D7398-4C35-442B-AA88-635B28BF4CAB"/>
+  <target-link xlink:role="objectview" xlink:title="Initiative" xlink:href="#UUID4_BED889C2-B10A-44B0-A550-63B8ECB1445C"/>
+ </relationshipview>
+
+ <objectview id="UUID4_4052B1AB-AF1E-4931-8F72-FBEB3CDA59B2" xlink:role="object" xlink:title="Application and Software Domain" xlink:href="#UUID4_B6F61436-94E2-4E20-8FF4-BA3D8804EA22" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.09375" left="1872.46" top="858.212" width="1716.42" height="2002.49">
+  <child-link xlink:role="objectview" xlink:title="Virtual Machine Image" xlink:href="#UUID4_1BAA2C42-2C4E-4F16-95E6-0B03DC3EB8DA"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_37DB4C3C-9D46-4F1A-8642-CDBDBBEB7E3E"/>
+  <child-link xlink:role="objectview" xlink:title="Virtual Host" xlink:href="#UUID4_C20D9C7F-E07C-404C-B66D-4C98541A4B16"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_AD5782C4-BA3B-4528-AD93-A35834C06F6F"/>
+  <child-link xlink:role="objectview" xlink:title="Operating System" xlink:href="#UUID4_93DD3A53-A348-48A6-9D85-C9F71E0CAA37"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_F4B2C739-767B-4EBF-A61F-85FA220FEAF0"/>
+ </objectview>
+
+ <relationshipview id="UUID4_4A89A8C0-3796-4E9A-89CE-D75D9FA2F912" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Target User" xlink:href="#UUID4_0A95A8AF-AA13-4992-8ECD-2B30754EF7D8"/>
+ </relationshipview>
+
+ <objectview id="UUID4_4D87BC77-5F2F-4455-91AF-93C9E793415A" xlink:role="object" xlink:title="Target Customer" xlink:href="#UUID4_EA15E20A-C9CF-43D9-AEE9-92986079D46A" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="6096.75" top="8096.1" width="3665.46" height="1221.82">
+ </objectview>
+
+ <objectview id="UUID4_4D90D87E-8E75-4256-9D02-7DF008528510" xlink:role="object" xlink:title="IT Service Domain" xlink:href="#UUID4_64E8F2FD-A5EF-4772-A175-DC28AEFBDC00" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.09375" left="124.121" top="4399.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="IT Service" xlink:href="#UUID4_C780403B-4A0F-4FF2-A41E-36B43C111EDF"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_D120BF37-7721-479E-B3A2-5DF8DA1908B0"/>
+ </objectview>
+
+ <relationshipview id="UUID4_4FEB7791-A17C-4087-9281-9FA4939A8A8B" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_C9DFE624-AADB-4D98-B299-02EF2D0853BE"/>
+  <target-link xlink:role="objectview" xlink:title="Goal" xlink:href="#UUID4_8558AF6E-4503-49DE-91CB-50F22D3BFBE2"/>
+ </relationshipview>
+
+ <objectview id="UUID4_50B16062-71A4-4C08-A3C8-3E03F8357351" xlink:role="object" xlink:title="Datastore" xlink:href="#UUID4_43A00A5C-83C4-4B4D-AEB6-90C4CF527120" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1856" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_50B8CEC7-B91F-4A68-AB75-08E6A369817D" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Requirement" xlink:href="#UUID4_7F31E9AA-58A9-47AD-9D70-1916CA57E60C"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_51330524-1D96-44C1-BBA9-D6BB641CECEE" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_6DDCEA6F-0CD7-44F2-8F9B-1A0FAEE5534D"/>
+  <target-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_519C17AE-3D7A-48F3-8594-A36BCC4722A2" xlink:role="relationship" xlink:href="#UUID4_5F74C3DA-315D-40EB-8459-3820A65AE770">
+  <origin-link xlink:role="objectview" xlink:title="Business Process" xlink:href="#UUID4_EA6D9DF2-A351-4767-986A-FC0BE219CA44"/>
+  <target-link xlink:role="objectview" xlink:title="Value Chain" xlink:href="#UUID4_329B6A4B-F29B-4115-B3A8-EB205D2CEF58"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_5327161F-A561-4FFF-9F65-93FFAD21D522" xlink:role="relationship" xlink:href="#UUID4_342D35DA-97E9-48A5-AE89-C29F57D7BF35">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Hardware" xlink:href="#UUID4_35203D89-61A0-4962-9F71-7EAD3C089946"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_56DA171C-D8C5-4B68-A362-A29CA7860543" xlink:role="relationship" xlink:href="#UUID4_80A598A4-7FD9-4783-A3A4-F00C59595CD3">
+  <origin-link xlink:role="objectview" xlink:title="Strategy" xlink:href="#UUID4_0D2E6C18-8C2F-4C2A-AA92-083435CCAA47"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_580E1E93-5CAB-4965-BB16-71F6A7810B61" xlink:role="relationship" xlink:href="#UUID4_64D4512F-E0A9-4634-9830-5E8FE876A2B7">
+  <origin-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+  <target-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_582EBF6C-3224-4DAD-AE0A-87F12E1ABA37" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Infrastructure Domain" xlink:href="#UUID4_6BF5B9FE-00C9-4D02-B0DA-2EF02D6B60CD"/>
+  <target-link xlink:role="objectview" xlink:title="Computing Hardware" xlink:href="#UUID4_0117E25D-757F-4B7F-AACD-48E8CC89412E"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_5BB4EDBB-39A8-4058-8924-1C13A80FA792" xlink:role="relationship" xlink:href="#UUID4_697A2AC8-4B34-40A1-895B-D0ED9B7E7D4A">
+  <origin-link xlink:role="objectview" xlink:title="Requirement" xlink:href="#UUID4_7F31E9AA-58A9-47AD-9D70-1916CA57E60C"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_63141FA4-D434-432B-909B-39C93715EDA2" xlink:role="relationship" xlink:href="#UUID4_946966A8-35B3-4ED7-AAF0-2EC23F251D65">
+  <origin-link xlink:role="objectview" xlink:title="Market Segment" xlink:href="#UUID4_8F958C08-B075-48BF-B7BD-0303265CC37A"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_6B4E23A9-F3E0-4B75-A603-9B7C9EC2562E" xlink:role="relationship" xlink:href="#UUID4_BF5CFFB8-61BA-40A4-80AC-0DCBED67FC68">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="IT Product" xlink:href="#UUID4_8CCC1113-6EF4-4D6D-AA6D-B571FE53CE0C"/>
+ </relationshipview>
+
+ <objectview id="UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851" xlink:role="object" xlink:title="Architecture Principle" xlink:href="#UUID4_E134E424-A10E-4A46-83E3-39AA27F0BE0D" state="open" behavior="tree" text-scale="0.024694" decomp-scale="2.53099" left="3505.03" top="2912.63" width="10366.9" height="3455.65">
+ </objectview>
+
+ <objectview id="UUID4_6BF5B9FE-00C9-4D02-B0DA-2EF02D6B60CD" xlink:role="object" xlink:title="Infrastructure Domain" xlink:href="#UUID4_558D7FBF-0D1C-4F74-8464-7EE8D8E21F5D" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="124.121" top="3055.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Hardware" xlink:href="#UUID4_35203D89-61A0-4962-9F71-7EAD3C089946"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_B6A91ECF-D769-45CF-9747-1BDC412FF601"/>
+  <child-link xlink:role="objectview" xlink:title="Computing Hardware" xlink:href="#UUID4_0117E25D-757F-4B7F-AACD-48E8CC89412E"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_582EBF6C-3224-4DAD-AE0A-87F12E1ABA37"/>
+ </objectview>
+
+ <relationshipview id="UUID4_6DA030F2-6ABE-40A5-9411-90893B30D918" xlink:role="relationship" xlink:href="#UUID4_EE491961-4C05-4781-922F-6C882C1C12FA">
+  <origin-link xlink:role="objectview" xlink:title="Target User" xlink:href="#UUID4_0A95A8AF-AA13-4992-8ECD-2B30754EF7D8"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <objectview id="UUID4_6DDCEA6F-0CD7-44F2-8F9B-1A0FAEE5534D" xlink:role="object" xlink:title="Application and Software Domain" xlink:href="#UUID4_A031BBDD-5B61-45E3-A83D-404ECF066950" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="1916.12" top="1711.81" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_51330524-1D96-44C1-BBA9-D6BB641CECEE"/>
+  <child-link xlink:role="objectview" xlink:title="Message" xlink:href="#UUID4_B6BCAC9C-A5C9-4BF2-8491-3A9AD216E364"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_3352C53B-54F5-4E54-B4BB-B6D35061133C"/>
+ </objectview>
+
+ <relationshipview id="UUID4_71A149C2-6273-4D0E-87A6-0190803BFA74" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_A95B97B9-DDB2-4E83-AEEC-53DDCD13FC1F"/>
+  <target-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_74302DE0-1B7D-4B13-B2D4-F811CD66FE96" xlink:role="relationship" xlink:href="#UUID4_8DE6B121-9D89-434B-9E20-2F9C9D81F432">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="IT Architecture" xlink:href="#UUID4_7CAAD7CC-BF9B-4153-8F40-BCCA0F093F39"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_7586A3C3-E1F6-4FA4-AC3E-914A74C8597E" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Resource Domain" xlink:href="#UUID4_DF4B55AF-2F26-4EF4-9300-8C41D12C1DF2"/>
+ </relationshipview>
+
+ <objectview id="UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4" xlink:role="object" xlink:title="Market Domain" xlink:href="#UUID4_DFDEE71B-73E6-4110-80E2-D9AFC70A9BE3" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.09375" left="1916.12" top="4399.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Benefit" xlink:href="#UUID4_ECE723C5-3666-461F-BAC6-790ACB1C46CF"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_D65525BD-3E39-4C2F-BCC8-AFF635414FC3"/>
+  <child-link xlink:role="objectview" xlink:title="Market Opportunity" xlink:href="#UUID4_15A6E3F8-3B78-4027-8E72-1723E865C658"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_7F1F4569-24C6-4F5B-8DF6-9E68190CD7B9"/>
+  <child-link xlink:role="objectview" xlink:title="Market Segment" xlink:href="#UUID4_8F958C08-B075-48BF-B7BD-0303265CC37A"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_BD773321-5303-4356-83D9-45AE9973CA7E"/>
+  <child-link xlink:role="objectview" xlink:title="Need" xlink:href="#UUID4_AEB1ACA4-BB37-4FFA-A662-E6E533611E4F"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_1ED3781D-4DA2-45D0-9772-F7CCB70BF623"/>
+  <child-link xlink:role="objectview" xlink:title="Prerequisite" xlink:href="#UUID4_0C79FBE9-311B-4DA0-9E06-F78B9A40B7F0"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_0482F5F4-EAF5-4598-9B0E-C185B32243DD"/>
+  <child-link xlink:role="objectview" xlink:title="Requirement" xlink:href="#UUID4_7F31E9AA-58A9-47AD-9D70-1916CA57E60C"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_50B8CEC7-B91F-4A68-AB75-08E6A369817D"/>
+  <child-link xlink:role="objectview" xlink:title="Scenario" xlink:href="#UUID4_AB09D8FD-CCCC-477D-8873-F203CAC78564"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_BDF7EDA7-9B27-4330-B549-C2DB0D1C7A61"/>
+  <child-link xlink:role="objectview" xlink:title="Target Customer" xlink:href="#UUID4_4D87BC77-5F2F-4455-91AF-93C9E793415A"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_15E80562-07B8-437A-9D0E-2271D11AD850"/>
+  <child-link xlink:role="objectview" xlink:title="Target User" xlink:href="#UUID4_0A95A8AF-AA13-4992-8ECD-2B30754EF7D8"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_4A89A8C0-3796-4E9A-89CE-D75D9FA2F912"/>
+ </objectview>
+
+ <objectview id="UUID4_76E7AE47-FB16-4B2D-A3E4-BBD5527ADED3" xlink:role="object" xlink:title="Data Domain" xlink:href="#UUID4_DE58C02D-B11D-4FD6-8C0D-CD46D595FC13" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="3708.13" top="1711.81" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Datastore" xlink:href="#UUID4_50B16062-71A4-4C08-A3C8-3E03F8357351"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_83158DD3-019B-4F12-81F6-993A7889D199"/>
+ </objectview>
+
+ <relationshipview id="UUID4_7946AFFF-0BEB-41C3-98D3-7B7478D898EF" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Analysis Domain" xlink:href="#UUID4_D4B6CA7B-C0DF-4DA6-814C-53F3E5F6D13B"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_79B4E944-72FB-4682-9085-42F0ECEAD313" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_6DDCEA6F-0CD7-44F2-8F9B-1A0FAEE5534D"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_7B1C510D-F8D0-4249-A707-00F341F8F74F" xlink:role="relationship" xlink:href="#UUID4_F3D7CED3-18E0-4A75-9355-ABFFA3F12A5E">
+  <origin-link xlink:role="objectview" xlink:title="Market Opportunity" xlink:href="#UUID4_15A6E3F8-3B78-4027-8E72-1723E865C658"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_7CA412F4-BC4C-4E74-BB78-58F1396281B5" xlink:role="relationship" xlink:href="#UUID4_28857F4A-88F1-4C46-BF93-CF8D6F4A1E1B">
+  <origin-link xlink:role="objectview" xlink:title="System" xlink:href="#UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071"/>
+  <target-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+ </relationshipview>
+
+ <objectview id="UUID4_7CAAD7CC-BF9B-4153-8F40-BCCA0F093F39" xlink:role="object" xlink:title="IT Architecture" xlink:href="#UUID4_D28384F3-5FCA-41B4-BD81-262171D13B2E" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1856" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_7EC5E527-F34C-4F4F-BF49-7604D40A9872" xlink:role="relationship" xlink:href="#UUID4_4A3908B1-3A9E-41BE-9D48-1F8E02DA0A71" origin-text-x="-623.67" origin-text-y="885.811" target-text-x="333.177" target-text-y="707.178">
+  <origin-link xlink:role="objectview" xlink:title="System" xlink:href="#UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071"/>
+  <target-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+  <path>
+   <origin-point type="floating"/>
+   <path-point x="12205.7" y="9154.24"/>
+   <target-point type="floating"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="UUID4_7F1F4569-24C6-4F5B-8DF6-9E68190CD7B9" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Market Opportunity" xlink:href="#UUID4_15A6E3F8-3B78-4027-8E72-1723E865C658"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_7F22FD3A-F455-4E69-BFA8-E345E53CF63E" xlink:role="relationship" xlink:href="#UUID4_234839AC-9C6E-410C-BB60-64BCD64DDCD1">
+  <origin-link xlink:role="objectview" xlink:title="Virtual Host" xlink:href="#UUID4_C20D9C7F-E07C-404C-B66D-4C98541A4B16"/>
+  <target-link xlink:role="objectview" xlink:title="Virtual Machine Image" xlink:href="#UUID4_1BAA2C42-2C4E-4F16-95E6-0B03DC3EB8DA"/>
+ </relationshipview>
+
+ <objectview id="UUID4_7F31E9AA-58A9-47AD-9D70-1916CA57E60C" xlink:role="object" xlink:title="Requirement" xlink:href="#UUID4_3AD9053C-333C-40B5-AE49-90A25035DFD1" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="11798.6" top="6195.49" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_83158DD3-019B-4F12-81F6-993A7889D199" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Data Domain" xlink:href="#UUID4_76E7AE47-FB16-4B2D-A3E4-BBD5527ADED3"/>
+  <target-link xlink:role="objectview" xlink:title="Datastore" xlink:href="#UUID4_50B16062-71A4-4C08-A3C8-3E03F8357351"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_849855A5-552B-46CC-BD94-626274A67019" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="IT Service Domain" xlink:href="#UUID4_4D90D87E-8E75-4256-9D02-7DF008528510"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_851F43EC-A724-4869-AD6F-2414DA5E09F3" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_A95B97B9-DDB2-4E83-AEEC-53DDCD13FC1F"/>
+  <target-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_FBE611DE-304D-4107-919F-BB56DB9D9FF5"/>
+ </relationshipview>
+
+ <objectview id="UUID4_8558AF6E-4503-49DE-91CB-50F22D3BFBE2" xlink:role="object" xlink:title="Goal" xlink:href="#UUID4_4B797DF9-B0EA-4622-AEEF-B8B633093C85" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1271.92" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_869C70FC-1477-4AB9-8DB5-F32201842E9F" xlink:role="relationship" xlink:href="#UUID4_22B08528-8793-4077-8951-03B96CF853B0">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_37E2847F-86E9-4AEE-BC73-71079B5ECB04"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_869EDD12-E997-4823-B797-1D41FD79B8AE" xlink:role="relationship" xlink:href="#UUID4_285C1582-DE22-4237-B53D-7D073D9E4745">
+  <origin-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+  <target-link xlink:role="objectview" xlink:title="IT Service" xlink:href="#UUID4_C780403B-4A0F-4FF2-A41E-36B43C111EDF"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_877BE267-7DFF-48C3-A003-D34A467DA3FA" xlink:role="relationship" xlink:href="#UUID4_0969C081-4F76-4036-9007-6F9572D5256B">
+  <origin-link xlink:role="objectview" xlink:title="Target Customer" xlink:href="#UUID4_4D87BC77-5F2F-4455-91AF-93C9E793415A"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <objectview id="UUID4_89967693-DEFB-4FB4-84B1-F77E0479AB68" xlink:role="object" xlink:title="Policy Domain" xlink:href="#UUID4_30F54E4E-1837-4061-8971-6AD27DFCC780" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.09375" left="1916.13" top="4863.19" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_37E2847F-86E9-4AEE-BC73-71079B5ECB04"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_B31F022A-5BDD-4BB5-8CDB-78C39F349695"/>
+  <child-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_8D0F916F-EC0B-49D7-A7AC-0D46A7E7EF80"/>
+ </objectview>
+
+ <relationshipview id="UUID4_89B903B0-9F68-490D-861C-AB60981FDC49" xlink:role="relationship" xlink:href="#UUID4_BC3331CC-9EED-4AD6-B980-0041D79B74EF">
+  <origin-link xlink:role="objectview" xlink:title="Need" xlink:href="#UUID4_AEB1ACA4-BB37-4FFA-A662-E6E533611E4F"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <objectview id="UUID4_8B93F030-CE18-4443-8544-F44002E061A7" xlink:role="object" xlink:title="Strategy Domain" xlink:href="#UUID4_672BB7DF-0549-4F9F-B2BC-1EE197877C0A" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.09375" left="1916.13" top="6293.54" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Value Chain" xlink:href="#UUID4_329B6A4B-F29B-4115-B3A8-EB205D2CEF58"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_133EDB58-77B0-4F34-A643-2B48A4D6C635"/>
+  <child-link xlink:role="objectview" xlink:title="Mission" xlink:href="#UUID4_CB7113E9-26BB-4F7B-989E-AB458F690CB5"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_20DA8570-8D5E-4F7B-B2EC-186449E636F7"/>
+ </objectview>
+
+ <objectview id="UUID4_8CCC1113-6EF4-4D6D-AA6D-B571FE53CE0C" xlink:role="object" xlink:title="IT Product" xlink:href="#UUID4_AE81DDB3-DA26-4EFC-A782-C8D7BB75099C" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1856" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_8D0F916F-EC0B-49D7-A7AC-0D46A7E7EF80" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Policy Domain" xlink:href="#UUID4_89967693-DEFB-4FB4-84B1-F77E0479AB68"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <objectview id="UUID4_8F958C08-B075-48BF-B7BD-0303265CC37A" xlink:role="object" xlink:title="Market Segment" xlink:href="#UUID4_8E751926-AE1C-47FE-BACB-23A9D0323011" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="11798.6" top="4294.89" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_92B55E08-3431-4CA3-83BD-70C2F482B7E3" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="IT Product Domain" xlink:href="#UUID4_947DA929-6D14-4161-B4E9-C37BDA47A2E8"/>
+ </relationshipview>
+
+ <objectview id="UUID4_93DD3A53-A348-48A6-9D85-C9F71E0CAA37" xlink:role="object" xlink:title="Operating System" xlink:href="#UUID4_E090BAD3-1FEA-437C-A091-5F4DECB68C04" state="open" behavior="tree" text-scale="0.024694" decomp-scale="0.375" left="3970.79" top="15257.1" width="10366.9" height="3455.65">
+ </objectview>
+
+ <objectview id="UUID4_947DA929-6D14-4161-B4E9-C37BDA47A2E8" xlink:role="object" xlink:title="IT Product Domain" xlink:href="#UUID4_A936EFC6-08F3-4E8E-B624-6A94E670418B" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="3708.13" top="3055.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="IT Product" xlink:href="#UUID4_8CCC1113-6EF4-4D6D-AA6D-B571FE53CE0C"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_3DEB4AC9-7A49-4C25-8FB6-EBD3C89E74A3"/>
+ </objectview>
+
+ <relationshipview id="UUID4_9659D07B-8E4F-4A63-A426-F44DC06A58D5" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Analysis Domain" xlink:href="#UUID4_D4B6CA7B-C0DF-4DA6-814C-53F3E5F6D13B"/>
+  <target-link xlink:role="objectview" xlink:title="Analysis" xlink:href="#UUID4_E4AE03CB-D738-4EB6-9D97-2A804FE0688B"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_A092053E-CEF6-4C7C-A954-4BEF92A09C78" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Data Domain" xlink:href="#UUID4_76E7AE47-FB16-4B2D-A3E4-BBD5527ADED3"/>
+ </relationshipview>
+
+ <objectview id="UUID4_A95B97B9-DDB2-4E83-AEEC-53DDCD13FC1F" xlink:role="object" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_0748D698-D36F-49E1-8824-FA75023690D9" state="open" behavior="nested" text-scale="0.134452" decomp-scale="2" left="-5539.61" top="-4165.59" width="10922.7" height="8192">
+  <child-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_FBE611DE-304D-4107-919F-BB56DB9D9FF5"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_851F43EC-A724-4869-AD6F-2414DA5E09F3"/>
+  <child-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_71A149C2-6273-4D0E-87A6-0190803BFA74"/>
+ </objectview>
+
+ <objectview id="UUID4_AB09D8FD-CCCC-477D-8873-F203CAC78564" xlink:role="object" xlink:title="Scenario" xlink:href="#UUID4_B4379460-F53F-44BA-9DBD-EF86C6667DBF" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="394.931" top="8096.1" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_ABB84E8B-196B-4D54-8AA1-D638028978DE" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Transition Domain" xlink:href="#UUID4_281D7398-4C35-442B-AA88-635B28BF4CAB"/>
+  <target-link xlink:role="objectview" xlink:title="Task" xlink:href="#UUID4_2201391F-EFFC-431C-A9B7-51BADDE2C337"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_AD5782C4-BA3B-4528-AD93-A35834C06F6F" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_4052B1AB-AF1E-4931-8F72-FBEB3CDA59B2"/>
+  <target-link xlink:role="objectview" xlink:title="Virtual Host" xlink:href="#UUID4_C20D9C7F-E07C-404C-B66D-4C98541A4B16"/>
+ </relationshipview>
+
+ <objectview id="UUID4_AEB1ACA4-BB37-4FFA-A662-E6E533611E4F" xlink:role="object" xlink:title="Need" xlink:href="#UUID4_7431B69A-DC71-42C4-8018-6B83A95ECE09" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="394.931" top="6195.49" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_B31F022A-5BDD-4BB5-8CDB-78C39F349695" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Policy Domain" xlink:href="#UUID4_89967693-DEFB-4FB4-84B1-F77E0479AB68"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_37E2847F-86E9-4AEE-BC73-71079B5ECB04"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_B6A91ECF-D769-45CF-9747-1BDC412FF601" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Infrastructure Domain" xlink:href="#UUID4_6BF5B9FE-00C9-4D02-B0DA-2EF02D6B60CD"/>
+  <target-link xlink:role="objectview" xlink:title="Hardware" xlink:href="#UUID4_35203D89-61A0-4962-9F71-7EAD3C089946"/>
+ </relationshipview>
+
+ <objectview id="UUID4_B6BCAC9C-A5C9-4BF2-8491-3A9AD216E364" xlink:role="object" xlink:title="Message" xlink:href="#UUID4_03D1DC8A-BA4F-4709-A605-CF37EF3A9774" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="2650.96" width="1152" height="384">
+ </objectview>
+
+ <objectview id="UUID4_B7D8D74B-305B-49F6-8892-4A33BEB10F6A" xlink:role="object" xlink:title="Process Domain" xlink:href="#UUID4_35134019-70D9-4548-B76F-DE53E4ADA39A" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="3708.13" top="4399.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Business Process" xlink:href="#UUID4_EA6D9DF2-A351-4767-986A-FC0BE219CA44"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_ED673427-FD28-41B4-A62C-E9A6690EBCAC"/>
+  <child-link xlink:role="objectview" xlink:title="Business Function" xlink:href="#UUID4_094DB9CC-C0E7-4D15-B575-FE49F5CAE29E"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_01B75BCB-B467-4914-A602-0B948B084A66"/>
+  <child-link xlink:role="objectview" xlink:title="&#60;b&#62;Business Process supports-is supported by Business Function&#60;/b&#62;&#60;br&#62;" xlink:href="#UUID4_C2C5382E-3890-458E-BA3F-55FD60DE5D5F"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_BC14D055-AA2A-4C42-B68C-4161092A56F2"/>
+ </objectview>
+
+ <relationshipview id="UUID4_B9063DA2-A15F-4BB8-B4C7-3B713CA47A1F" xlink:role="relationship" xlink:href="#UUID4_95B2733A-9D0D-45AC-9CB0-725876B94C30">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Project" xlink:href="#UUID4_3964F496-FE37-4D30-8FCB-36D6B5548195"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BBC9D8C9-1C64-48DE-A359-E45942BCB147" xlink:role="relationship" xlink:href="#UUID4_BD08E013-3AFC-4706-A705-439DDCFA669E">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Resource" xlink:href="#UUID4_E2759532-3E64-453B-AE38-8651D58D70D6"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BC14D055-AA2A-4C42-B68C-4161092A56F2" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Process Domain" xlink:href="#UUID4_B7D8D74B-305B-49F6-8892-4A33BEB10F6A"/>
+  <target-link xlink:role="objectview" xlink:title="&#60;b&#62;Business Process supports-is supported by Business Function&#60;/b&#62;&#60;br&#62;" xlink:href="#UUID4_C2C5382E-3890-458E-BA3F-55FD60DE5D5F"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BCCF61DB-29DF-4224-B82D-33F532620011" xlink:role="relationship" xlink:href="#UUID4_92886EE7-B375-464A-B68F-4417708165FA">
+  <origin-link xlink:role="objectview" xlink:title="Goal" xlink:href="#UUID4_8558AF6E-4503-49DE-91CB-50F22D3BFBE2"/>
+  <target-link xlink:role="objectview" xlink:title="Mission" xlink:href="#UUID4_CB7113E9-26BB-4F7B-989E-AB458F690CB5"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BCF90A47-A4A0-4C6C-98ED-737A7B3B07EE" xlink:role="relationship" xlink:href="#UUID4_80C4D549-CED4-40D5-947A-C4218BED8AFE">
+  <origin-link xlink:role="objectview" xlink:title="Analysis" xlink:href="#UUID4_E4AE03CB-D738-4EB6-9D97-2A804FE0688B"/>
+  <target-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BD1E2943-F539-48FA-BAB6-C229A3EF155A" xlink:role="relationship" xlink:href="#UUID4_77646E18-5A48-4E89-9F39-FD1E19DDD11E">
+  <origin-link xlink:role="objectview" xlink:title="Business Process" xlink:href="#UUID4_EA6D9DF2-A351-4767-986A-FC0BE219CA44"/>
+  <target-link xlink:role="objectview" xlink:title="Business Function" xlink:href="#UUID4_094DB9CC-C0E7-4D15-B575-FE49F5CAE29E"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BD773321-5303-4356-83D9-45AE9973CA7E" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Market Segment" xlink:href="#UUID4_8F958C08-B075-48BF-B7BD-0303265CC37A"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BDF7EDA7-9B27-4330-B549-C2DB0D1C7A61" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Scenario" xlink:href="#UUID4_AB09D8FD-CCCC-477D-8873-F203CAC78564"/>
+ </relationshipview>
+
+ <objectview id="UUID4_BED889C2-B10A-44B0-A550-63B8ECB1445C" xlink:role="object" xlink:title="Initiative" xlink:href="#UUID4_814A72C1-BF8F-4702-AA7A-2A2C0E90FE56" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.795453" left="164.848" top="1363.4" width="1152" height="384">
+ </objectview>
+
+ <objectview id="UUID4_C20D9C7F-E07C-404C-B66D-4C98541A4B16" xlink:role="object" xlink:title="Virtual Host" xlink:href="#UUID4_D4E1BD30-472E-49D6-8543-BB40BEF6C898" state="open" behavior="tree" text-scale="0.024694" decomp-scale="2.53099" left="3970.79" top="4056.91" width="10366.9" height="3455.65">
+ </objectview>
+
+ <objectview id="UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F" xlink:role="object" xlink:title="Interface" xlink:href="#UUID4_7283AE4C-897D-4C20-AB8D-822D19304FE0" state="open" behavior="tree" text-scale="0.024694" decomp-scale="5.06198" left="3505.03" top="2567.07" width="10366.9" height="3455.65">
+ </objectview>
+
+ <objectview id="UUID4_C2C5382E-3890-458E-BA3F-55FD60DE5D5F" xlink:role="object" xlink:title="&#60;b&#62;Business Process supports-is supported by Business Function&#60;/b&#62;&#60;br&#62;" xlink:href="#UUID4_2C83EB3B-7E9F-4064-878B-A4F7F801CFAF" state="open" behavior="tree" text-scale="0.134209" decomp-scale="1.5" left="639.991" top="1793.15" width="2037.9" height="599.384">
+ </objectview>
+
+ <relationshipview id="UUID4_C4C526D6-8010-44BD-9937-C4C664923696" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_C9DFE624-AADB-4D98-B299-02EF2D0853BE"/>
+  <target-link xlink:role="objectview" xlink:title="Strategy" xlink:href="#UUID4_0D2E6C18-8C2F-4C2A-AA92-083435CCAA47"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_C70E7834-5CC6-462D-9260-D7566B484030" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Resource Domain" xlink:href="#UUID4_DF4B55AF-2F26-4EF4-9300-8C41D12C1DF2"/>
+  <target-link xlink:role="objectview" xlink:title="Resource" xlink:href="#UUID4_E2759532-3E64-453B-AE38-8651D58D70D6"/>
+ </relationshipview>
+
+ <objectview id="UUID4_C780403B-4A0F-4FF2-A41E-36B43C111EDF" xlink:role="object" xlink:title="IT Service" xlink:href="#UUID4_FE18A042-AE9E-415B-BA86-8DD2E47664D5" state="open" behavior="tree" text-scale="0.104762" decomp-scale="0.375" left="6855.75" top="5905.46" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_C8AD8385-4B14-4654-877B-B6BA440B4155" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Process Domain" xlink:href="#UUID4_B7D8D74B-305B-49F6-8892-4A33BEB10F6A"/>
+ </relationshipview>
+
+ <objectview id="UUID4_C9DFE624-AADB-4D98-B299-02EF2D0853BE" xlink:role="object" xlink:title="Strategy Domain" xlink:href="#UUID4_4C83CA27-D9C6-4EEA-B226-4F94228718F1" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="1916.12" top="5743.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Goal" xlink:href="#UUID4_8558AF6E-4503-49DE-91CB-50F22D3BFBE2"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_4FEB7791-A17C-4087-9281-9FA4939A8A8B"/>
+  <child-link xlink:role="objectview" xlink:title="Strategy" xlink:href="#UUID4_0D2E6C18-8C2F-4C2A-AA92-083435CCAA47"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_C4C526D6-8010-44BD-9937-C4C664923696"/>
+ </objectview>
+
+ <relationshipview id="UUID4_CAA22BA5-15DA-47ED-A174-7DBE2DE6FC1E" xlink:role="relationship" xlink:href="#UUID4_2DAC51D4-28DF-42B4-9A66-FF72A5152AB1">
+  <origin-link xlink:role="objectview" xlink:title="Value Chain" xlink:href="#UUID4_329B6A4B-F29B-4115-B3A8-EB205D2CEF58"/>
+  <target-link xlink:role="objectview" xlink:title="Goal" xlink:href="#UUID4_8558AF6E-4503-49DE-91CB-50F22D3BFBE2"/>
+ </relationshipview>
+
+ <objectview id="UUID4_CB7113E9-26BB-4F7B-989E-AB458F690CB5" xlink:role="object" xlink:title="Mission" xlink:href="#UUID4_ECC79EEA-B2B4-463E-83A7-917EA6D1810A" state="open" behavior="tree" text-scale="0.024694" decomp-scale="5.06198" left="3505.03" top="2567.07" width="10366.9" height="3455.65">
+ </objectview>
+
+ <relationshipview id="UUID4_CBB832EB-5C95-452D-9B69-2586E0509225" xlink:role="relationship" xlink:href="#UUID4_031BC317-C85D-4B1C-983C-B3AACB949E76">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Task" xlink:href="#UUID4_2201391F-EFFC-431C-A9B7-51BADDE2C337"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_D120BF37-7721-479E-B3A2-5DF8DA1908B0" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="IT Service Domain" xlink:href="#UUID4_4D90D87E-8E75-4256-9D02-7DF008528510"/>
+  <target-link xlink:role="objectview" xlink:title="IT Service" xlink:href="#UUID4_C780403B-4A0F-4FF2-A41E-36B43C111EDF"/>
+ </relationshipview>
+
+ <objectview id="UUID4_D4B6CA7B-C0DF-4DA6-814C-53F3E5F6D13B" xlink:role="object" xlink:title="Analysis Domain" xlink:href="#UUID4_A658FFE8-C0FB-444E-AC6D-A1EA72C1C5E5" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="124.121" top="1711.81" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Analysis" xlink:href="#UUID4_E4AE03CB-D738-4EB6-9D97-2A804FE0688B"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_9659D07B-8E4F-4A63-A426-F44DC06A58D5"/>
+ </objectview>
+
+ <relationshipview id="UUID4_D65525BD-3E39-4C2F-BCC8-AFF635414FC3" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+  <target-link xlink:role="objectview" xlink:title="Benefit" xlink:href="#UUID4_ECE723C5-3666-461F-BAC6-790ACB1C46CF"/>
+ </relationshipview>
+
+ <objectview id="UUID4_D851BAE8-909F-449A-8933-ED7A95B2C061" xlink:role="object" xlink:title="Program" xlink:href="#UUID4_B8D8E2D9-7B26-4BB6-9474-A9564D6B5353" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.795453" left="2852.84" top="1363.4" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_D9E97D48-9FE0-468A-A454-2B042904B207" xlink:role="relationship" xlink:href="#UUID4_1828F43E-D584-44D8-90D0-FAE366F099E6">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_DC6F1EC6-A58C-4F90-BB72-166E9BB4F760" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Transition Domain" xlink:href="#UUID4_281D7398-4C35-442B-AA88-635B28BF4CAB"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_DF17A725-8E76-44B7-BE36-2B213641730C" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Transition Domain" xlink:href="#UUID4_281D7398-4C35-442B-AA88-635B28BF4CAB"/>
+  <target-link xlink:role="objectview" xlink:title="Project" xlink:href="#UUID4_3964F496-FE37-4D30-8FCB-36D6B5548195"/>
+ </relationshipview>
+
+ <objectview id="UUID4_DF4B55AF-2F26-4EF4-9300-8C41D12C1DF2" xlink:role="object" xlink:title="Resource Domain" xlink:href="#UUID4_569305A9-DE02-4832-84EC-FC4F34D1E947" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.298296" left="124.121" top="5743.82" width="1629.09" height="1221.82">
+  <child-link xlink:role="objectview" xlink:title="Resource" xlink:href="#UUID4_E2759532-3E64-453B-AE38-8651D58D70D6"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_C70E7834-5CC6-462D-9260-D7566B484030"/>
+ </objectview>
+
+ <relationshipview id="UUID4_E009BB98-CC95-4259-8EEB-52DCAAC0051D" xlink:role="relationship" xlink:href="#UUID4_A7842A25-4005-4A81-A5CD-219D37629464">
+  <origin-link xlink:role="objectview" xlink:title="Computing Hardware" xlink:href="#UUID4_0117E25D-757F-4B7F-AACD-48E8CC89412E"/>
+  <target-link xlink:role="objectview" xlink:title="Virtual Host" xlink:href="#UUID4_C20D9C7F-E07C-404C-B66D-4C98541A4B16"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_E0AAB759-7D0A-40E0-8A9B-83C5FA5CB26B" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_FBE611DE-304D-4107-919F-BB56DB9D9FF5"/>
+  <target-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_8B93F030-CE18-4443-8544-F44002E061A7"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_E23C29D9-9DE3-408D-BF67-9D8469B1025A" xlink:role="relationship" xlink:href="#UUID4_44ADEBE0-6757-435C-B2FF-B31497764016">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="Initiative" xlink:href="#UUID4_BED889C2-B10A-44B0-A550-63B8ECB1445C"/>
+ </relationshipview>
+
+ <objectview id="UUID4_E2759532-3E64-453B-AE38-8651D58D70D6" xlink:role="object" xlink:title="Resource" xlink:href="#UUID4_A77F0260-AA3B-4439-BAFB-F176232172FB" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1856" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_E3A2B55D-2D13-46E1-91C5-3518E4B03B09" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Systems Domain" xlink:href="#UUID4_F871D26C-8F09-4B30-8906-28E21A793360"/>
+  <target-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+ </relationshipview>
+
+ <objectview id="UUID4_E4AE03CB-D738-4EB6-9D97-2A804FE0688B" xlink:role="object" xlink:title="Analysis" xlink:href="#UUID4_B447BA32-CD2A-4B12-B4A3-B8EBD03E63E4" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="1856" width="1152" height="384">
+ </objectview>
+
+ <relationshipview id="UUID4_E630D1C0-CF71-4A27-8D94-EE244731E955" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Market Domain" xlink:href="#UUID4_76E373B9-AA13-42CC-8ED2-6EB8796AA1B4"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_E903ED14-A3CC-4F2C-A334-5F976943C9FF" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Troux Semantics" xlink:href="#UUID4_2C6521D2-EB94-4D4A-9EB8-FC25E5D2E3EA"/>
+  <target-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_C9DFE624-AADB-4D98-B299-02EF2D0853BE"/>
+ </relationshipview>
+
+ <objectview id="UUID4_EA6D9DF2-A351-4767-986A-FC0BE219CA44" xlink:role="object" xlink:title="Business Process" xlink:href="#UUID4_F56B13D0-BC20-4630-97E1-310868124438" state="open" behavior="tree" text-scale="0.333333" decomp-scale="0.375" left="2154.66" top="2550.61" width="1152" height="384">
+ </objectview>
+
+ <objectview id="UUID4_ECE723C5-3666-461F-BAC6-790ACB1C46CF" xlink:role="object" xlink:title="Benefit" xlink:href="#UUID4_DAE666F5-A824-453B-A8D9-20CD9797BA3C" state="open" behavior="tree" text-scale="0.104762" decomp-scale="1.68733" left="394.931" top="4294.89" width="3665.46" height="1221.82">
+ </objectview>
+
+ <relationshipview id="UUID4_ED0FD0B4-4319-42C2-A80E-9F30F9173618" xlink:role="relationship" xlink:href="#UUID4_E0304C3B-A9E4-4588-9148-80103C175C7D">
+  <origin-link xlink:role="objectview" xlink:title="Virtual Machine Image" xlink:href="#UUID4_1BAA2C42-2C4E-4F16-95E6-0B03DC3EB8DA"/>
+  <target-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+  <path>
+   <origin-point type="floating"/>
+   <path-point x="2705.8" y="1378.8"/>
+   <target-point type="floating"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="UUID4_ED673427-FD28-41B4-A62C-E9A6690EBCAC" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Process Domain" xlink:href="#UUID4_B7D8D74B-305B-49F6-8892-4A33BEB10F6A"/>
+  <target-link xlink:role="objectview" xlink:title="Business Process" xlink:href="#UUID4_EA6D9DF2-A351-4767-986A-FC0BE219CA44"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_F4B2C739-767B-4EBF-A61F-85FA220FEAF0" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_4052B1AB-AF1E-4931-8F72-FBEB3CDA59B2"/>
+  <target-link xlink:role="objectview" xlink:title="Operating System" xlink:href="#UUID4_93DD3A53-A348-48A6-9D85-C9F71E0CAA37"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_F7978DA4-3108-4634-92E0-64AD24591310" xlink:role="relationship" xlink:href="#UUID4_B3A65582-BE94-4E2A-B087-BEA212DB2255" target-text-x="-64.4667" target-text-y="66.9383">
+  <origin-link xlink:role="objectview" xlink:title="Deployed Software" xlink:href="#UUID4_3008FF00-7BF6-466C-96F8-854DF4FC8B32"/>
+  <target-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+ </relationshipview>
+
+ <objectview id="UUID4_F871D26C-8F09-4B30-8906-28E21A793360" xlink:role="object" xlink:title="Systems Domain" xlink:href="#UUID4_0898D1EA-9380-4EA0-957F-155377DCBE3E" state="open" behavior="nested" text-scale="0.419046" decomp-scale="0.09375" left="1916.13" top="3003.74" width="1629.09" height="1573.38">
+  <child-link xlink:role="objectview" xlink:title="System" xlink:href="#UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_FF56755C-D7E0-4BD3-BFA1-EEEC606E4304"/>
+  <child-link xlink:role="objectview" xlink:title="Interface" xlink:href="#UUID4_C252FCBB-3CA0-4CDD-BB77-C63440FBD37F"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_E3A2B55D-2D13-46E1-91C5-3518E4B03B09"/>
+ </objectview>
+
+ <objectview id="UUID4_FBE611DE-304D-4107-919F-BB56DB9D9FF5" xlink:role="object" xlink:title="Troux Semantics Extension Pack 1" xlink:href="#UUID4_AF88A585-AAB8-4F96-9ECA-776EDBF0E43B" state="open" behavior="nested" text-scale="0.279365" decomp-scale="0.447443" left="2852.85" top="418.794" width="2443.64" height="3584">
+  <child-link xlink:role="objectview" xlink:title="Strategy Domain" xlink:href="#UUID4_8B93F030-CE18-4443-8544-F44002E061A7"/>
+  <child-link xlink:role="objectview" xlink:title="Application and Software Domain" xlink:href="#UUID4_4052B1AB-AF1E-4931-8F72-FBEB3CDA59B2"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_1D074754-8844-43C3-B272-95092CC6637F"/>
+  <child-link xlink:role="objectview" xlink:title="Systems Domain" xlink:href="#UUID4_F871D26C-8F09-4B30-8906-28E21A793360"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_320CB4BF-5D68-41B4-A1DB-68ECBEFE26E4"/>
+  <child-link xlink:role="objectview" xlink:title="Policy Domain" xlink:href="#UUID4_89967693-DEFB-4FB4-84B1-F77E0479AB68"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_2BEBF948-9CC4-4D39-85ED-3D17CBF415A0"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_E0AAB759-7D0A-40E0-8A9B-83C5FA5CB26B"/>
+ </objectview>
+
+ <relationshipview id="UUID4_FF3C8BAB-1004-4FA3-8E90-3E7145B6AF94" xlink:role="relationship" xlink:href="#UUID4_AC743A37-F68B-46AC-8AE5-41EAC0437DCD">
+  <origin-link xlink:role="objectview" xlink:title="Architecture Principle" xlink:href="#UUID4_6BA9EA60-CFBD-4C03-8EB4-8EDB6F90E851"/>
+  <target-link xlink:role="objectview" xlink:title="System" xlink:href="#UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_FF56755C-D7E0-4BD3-BFA1-EEEC606E4304" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Systems Domain" xlink:href="#UUID4_F871D26C-8F09-4B30-8906-28E21A793360"/>
+  <target-link xlink:role="objectview" xlink:title="System" xlink:href="#UUID4_1DF28A6C-24E2-4405-BAE1-9D17D86CF071"/>
+ </relationshipview>
+
+ <relationshipview id="_002as0b01f853paqpehv" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:href="#_002as0b01f853ps5nnfd"/>
+  <target-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+ </relationshipview>
+
+ <relationshipview id="_002as0b01f853pjd3n0g" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <target-link xlink:role="objectview" xlink:href="#_002as0b01f853ps5nnfd"/>
+ </relationshipview>
+
+ <objectview id="_002as0b01f853po9srvf" xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#UUID4_DB9575C5-1F57-4411-B049-F30A47F68AF6" state="open" behavior="tree" text-scale="0.041639" decomp-scale="2" left="1072.19" top="-2031.34" width="7564.53" height="9448.76">
+ </objectview>
+
+ <objectview id="_002as0b01f853ps5nnfd" xlink:role="object" xlink:href="#UUID4_3DF83B8C-2C7C-42DF-AEF9-3E690AC8A3FE" state="open" behavior="tree" text-scale="0.25" decomp-scale="0.5" left="2743.74" top="617.995" width="144" height="256">
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0b01f853paqpehv"/>
+  <child-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+ </objectview>
+
+ <modelview id="_002as0b01f99768ufljt" name="Data" title="Data" primary-flag="true" standalone-flag="true" zoom-level="0.0968424" x="-78.26" y="-69.59" seq="1" xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_A95B97B9-DDB2-4E83-AEEC-53DDCD13FC1F"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_02B5051B-BA2D-4720-BF3E-04B0C4772C9A"/>
+  <viewbundle>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_BCCF61DB-29DF-4224-B82D-33F532620011"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_7F22FD3A-F455-4E69-BFA8-E345E53CF63E"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_ED0FD0B4-4319-42C2-A80E-9F30F9173618"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_CAA22BA5-15DA-47ED-A174-7DBE2DE6FC1E"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_D9E97D48-9FE0-468A-A454-2B042904B207"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_56DA171C-D8C5-4B68-A362-A29CA7860543"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_7EC5E527-F34C-4F4F-BF49-7604D40A9872"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_059EE108-7A21-41C7-A327-35661937BB97"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_0B179416-3113-48EC-A0A5-ED8730AB55E9"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_7CA412F4-BC4C-4E74-BB78-58F1396281B5"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_2DDAA0B3-67DD-47DC-B0E4-5ECEE23DB5BA"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_007B5F82-E78B-4865-9C66-BFAB21EBC5C9"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_869C70FC-1477-4AB9-8DB5-F32201842E9F"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_580E1E93-5CAB-4965-BB16-71F6A7810B61"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_F7978DA4-3108-4634-92E0-64AD24591310"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_E009BB98-CC95-4259-8EEB-52DCAAC0051D"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_BD1E2943-F539-48FA-BAB6-C229A3EF155A"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_519C17AE-3D7A-48F3-8594-A36BCC4722A2"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_FF3C8BAB-1004-4FA3-8E90-3E7145B6AF94"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_BBC9D8C9-1C64-48DE-A359-E45942BCB147"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_6B4E23A9-F3E0-4B75-A603-9B7C9EC2562E"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_74302DE0-1B7D-4B13-B2D4-F811CD66FE96"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_5327161F-A561-4FFF-9F65-93FFAD21D522"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_BCF90A47-A4A0-4C6C-98ED-737A7B3B07EE"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_2B4DD632-A871-468B-B096-DAFB8BB930BE"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_0FD83C49-6F80-4D8C-A64A-9467D4F5A175"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_CBB832EB-5C95-452D-9B69-2586E0509225"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_E23C29D9-9DE3-408D-BF67-9D8469B1025A"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_B9063DA2-A15F-4BB8-B4C7-3B713CA47A1F"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_10A57CAF-E6BD-48FE-8FBC-EEA00673796F"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_869EDD12-E997-4823-B797-1D41FD79B8AE"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_32BDC369-526D-415E-8DA1-2EBEC8912376"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_89B903B0-9F68-490D-861C-AB60981FDC49"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_2C934786-89A8-4A36-B062-464805619DA5"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_877BE267-7DFF-48C3-A003-D34A467DA3FA"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_1F578535-2303-4090-A368-A11F0B643956"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_7B1C510D-F8D0-4249-A707-00F341F8F74F"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_63141FA4-D434-432B-909B-39C93715EDA2"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_5BB4EDBB-39A8-4058-8924-1C13A80FA792"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#UUID4_6DA030F2-6ABE-40A5-9411-90893B30D918"/>
+  </viewbundle>
+  <viewstyle-links size="2">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Default Viewstyle" xlink:href="../../meaf/viewstyles/meaf_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="../../meaf/viewstyles/bpm_viewstyle.kmd#oid1000"/>
+  </viewstyle-links>
+ </modelview>
+
+ <relationshipview id="_002as0h01f8ibv4sh1dg" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <target-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+ </relationshipview>
+
+ <objectview id="_002as0h01f8ibvgmutui" xlink:role="object" xlink:title="servername" xlink:href="#UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41" state="open" behavior="nested" text-scale="1" decomp-scale="0.125" left="-260.131" top="-387.571" width="391.529" height="512">
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0h01f8ibv4sh1dg"/>
+  <child-link xlink:role="objectview" xlink:href="#_002as0b01f853ps5nnfd"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0b01f853pjd3n0g"/>
+ </objectview>
+
+ <modelview id="oid1" name="Main" title="Troux Metaverse" standalone-flag="true" zoom-level="0.822095" x="166.187" y="-131.743" seq="2" xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Model of the Metamodel" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+ </modelview>
+
+
+</metis>

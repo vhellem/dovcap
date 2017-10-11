@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="4">
+
+ <type id="oid1" name="realizedby_realizes" title="realized by/realizes" usage="relationship" desc="Allows you to connect Capabilities to Product Items and Services by which they can be realized.">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../object_types/capability.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="General Product" xlink:href="../object_types/general_product.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="realized by/realizes" xlink:href="#oid1">
+   <string name="from">realized by</string>
+   <string name="to">realizes</string>
+  </valueset>
+ </type>
+
+
+</metis>

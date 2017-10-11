@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ viewstyles="1"
+ nextoid="1">
+
+ <viewstyle id="oid1" name="meaf" title="MEAF Container View Style">
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/container.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Container Open" xlink:href="../symbols/container_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="../symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

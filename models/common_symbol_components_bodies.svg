@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<svg
+ width="200" height="200">
+ <title>Symbol library: common_symbol_components_bodies.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Data Source / Query - DB</title>
+    <g>
+      <polygon points="733.991 0 733.991 280.135 0 280.135 
+       92.0742 0.0625 733.991 0"
+       style=" stroke:#6e6eff; stroke-width:1; fill:#e1fcff; fill-opacity:100%"></polygon>
+      <rect x="6.331" y="84.041" width="727.66" height="196.094"
+       style=" stroke:#4b4bff; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="116.624" y="18.439"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	 class="TAG:text">text</text>
+	<rect x="116.624" y="3.43904" width="611.877" height="75.3103"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="130.949" y="99.3002"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:8;"
+	 class="TAG:description">description</text>
+	<rect x="130.949" y="92.3002" width="600.619" height="184.2"
+	 style=" stroke:#000000; stroke-width:1; fill:#c8c8ff; fill-opacity:0%"></rect>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Data Source / Query - XML</title>
+    <g>
+      <polygon points="904.584 0 904.584 175.548 0 175.548 
+       114.105 0 904.584 0"
+       style=" stroke:#6e6eff; stroke-width:1; fill:#e1fcff; fill-opacity:100%"></polygon>
+      <rect x="73.6416" y="80.2444" width="830.942" height="95.3038"
+       style=" stroke:#6e6eff; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="138.396" y="16.2"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	 class="TAG:text">text</text>
+	<rect x="138.396" y="1.20003" width="763.851" height="76.5934"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="140.295" y="95.7379"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:10;"
+	 class="TAG:description">description</text>
+	<rect x="140.295" y="86.7379" width="762.313" height="85.4592"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="oid3" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Atomic Property Body</title>
+    <g>
+      <rect x="128" y="26.7562" width="804.789" height="122.488"
+       style=" stroke:#a500a5; stroke-width:1; fill:#ffdcff; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <rect x="0" y="0" width="112" height="176"
+       style=" stroke:#696969; stroke-width:1; fill:#ffffff; fill-opacity:100%"       class="TAG:IDBox"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid6" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Complex Property Body</title>
+    <g>
+      <g>
+	<rect x="0" y="0" width="117.698" height="61.0581"
+	 style=" stroke:#878787; stroke-width:1; fill:#ffffff; fill-opacity:100%"	 class="TAG:IDBox"></rect>
+	<rect x="41.4309" y="66.1631" width="80.5691" height="52.3118"
+	 style=" stroke:#878787; stroke-width:1; fill:#ffffff; fill-opacity:100%"	 class="TAG:IDBox"></rect>
+	<rect x="41.4309" y="123.699" width="80.5691" height="52.3118"
+	 style=" stroke:#878787; stroke-width:1; fill:#ffffff; fill-opacity:100%"	 class="TAG:IDBox"></rect>
+	<polyline points="16.7634 61.0791 16.7634 92.3097 41.4269 92.3097"
+	 style=" stroke:#878787; stroke-width:1;"></polyline>
+	<polyline points="16.7634 61.0791 16.7634 149.822 41.4269 149.822"
+	 style=" stroke:#878787; stroke-width:1;"></polyline>
+      </g>
+      <rect x="127.16" y="26.7667" width="804.789" height="122.488"
+       style=" stroke:#a500a5; stroke-width:1; fill:#ffdcff; fill-opacity:100%"       class="TAG:canvas"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid4" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Origin Attribute Body</title>
+    <g>
+      <rect x="0" y="0" width="112" height="176"
+       style=" stroke:#878787; stroke-width:1; fill:#ffffff; fill-opacity:100%"       class="TAG:IDBox"></rect>
+      <rect x="128" y="26.7562" width="804.789" height="122.488"
+       style=" stroke:#a5a500; stroke-width:1; fill:#ffffa5; fill-opacity:100%"       class="TAG:canvas"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid5" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Parameter Body</title>
+    <g>
+      <rect x="128" y="26.7562" width="804.789" height="122.488"
+       style=" stroke:#4b4bff; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <rect x="0" y="0" width="112" height="176"
+       style=" stroke:#878787; stroke-width:1; fill:#ffffff; fill-opacity:100%"       class="TAG:IDBox"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid8" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Type Mapping Body</title>
+    <g>
+      <polygon points="89.657 1.20458e-005 744.326 0 744.319 281.376 
+       10.328 281.376 0 32.7477 89.657 1.20458e-005"
+       style=" stroke:#a5ffa5; stroke-width:1; fill:#f0ffe9; fill-opacity:100%"></polygon>
+      <rect x="83.644" y="42.2065" width="660.675" height="239.17"
+       style=" stroke:#00dc00; stroke-width:1; fill:#aaff7f; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <g>
+	<g>
+	  <desc>METIS_TEXT_GROUP</desc>
+	  <text  x="150.111" y="59.6304"
+	   style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	   class="TAG:text">text</text>
+	  <rect x="150.111" y="44.6304" width="591.367" height="118.558"
+	   style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+	</g>
+	<g>
+	  <desc>METIS_TEXT_GROUP</desc>
+	  <text  x="150.111" y="146.858"
+	   style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:8; vertical-align:bottom;"
+	   class="TAG:description">description</text>
+	  <rect x="150.111" y="139.858" width="591.367" height="133.792"
+	   style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+	</g>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="oid9" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Update Options Body</title>
+    <g>
+      <rect x="0" y="0" width="475.765" height="239.17"
+       style=" stroke:#ce6700; stroke-width:1; fill:#ffcf9f; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="53.5717" y="17.6853"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	 class="TAG:text">text</text>
+	<rect x="53.5717" y="2.68527" width="418.805" height="61.9494"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="53.6977" y="78.3083"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:8;"
+	 class="TAG:description">description</text>
+	<rect x="53.6977" y="71.3083" width="418.679" height="166.317"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="oid10" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mapping Background</title>
+    <rect x="0" y="0" width="204.007" height="210.876" rx="10" ry="10"
+     style=" stroke:#696969; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:objectBackground"></rect>
+  </symbol>
+  <symbol id="oid11" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mapping Body</title>
+    <g>
+      <polygon points="64.748 1.4e-005 733.991 0 733.991 280.135 
+       0 280.135 64.748 1.4e-005"
+       style=" stroke:#dc0000; stroke-width:1; fill:#ffdcdc; fill-opacity:100%"></polygon>
+      <polygon points="74.903 42.0201 733.991 42.0201 733.991 238.114 
+       74.903 238.114 51.266 174.532 51.266 100.355 74.903 42.0201"
+       style=" stroke:#dc0000; stroke-width:1; fill:#ffb4b4; fill-opacity:100%"       class="TAG:canvas"></polygon>
+    </g>
+  </symbol>
+  <symbol id="oid12" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Comment Body</title>
+    <g>
+      <polygon points="0 0 623.891 0.029 638.064 13.8157 
+       638.064 262.5 0 262.5 0 0"
+       style=" stroke:#a5a500; stroke-width:1; fill:#ffffdc; fill-opacity:100%"       class="TAG:canvas"></polygon>
+      <polyline points="623.829 0.0163 623.829 13.8321 638.046 13.8321"
+       style=" stroke:#a5a500; stroke-width:1;"       class="TAG:edge"></polyline>
+    </g>
+  </symbol>
+ </defs>
+</svg>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="4"
+ nextoid="6">
+
+ <criteria id="oid5" name="ProjectOrganization" title="Project-&#62;Organization" desc="This criterium is only valid if the types referred to in its name are used in the model.&#10;Drag this onto an Project instance, and the following types will be traversed.&#10;- &#34;has responsible/responsible for&#34; &#10;- Organization" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="has responsible" xlink:href="../relationshiptypes/has_responsible-is_responsible_for.kmd#Reltype_has_responsible-is_responsible_for_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Organization" xlink:href="../objecttypes/organization.kmd#CompType_TRM:Organization_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid1" name="getAllocationDirect" title="Get Allocation, direct" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="type">
+      <complex-type-link xlink:role="type" xlink:title="allocates" xlink:href="../relationshiptypes/allocates-is_allocated_to_percentage.kmd#Reltype_allocates-is_allocated_to_percentage_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="getAllocationTotal" title="Get Allocation, total" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3" name="findOnlyAggregated" title="findOnlyAggregated" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+</metis>

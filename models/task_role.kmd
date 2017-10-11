@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Task_role" name="Task_role" title="Task role" desc="This link from a task to a person or organization unit implies that the person has a role oin the task. A particular relationship called Task responsible is used for denoting the one person (or group) primary responsible for the execution of the task." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Task allocates Person" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/allocates-is_allocated_to_percentage.kmd#Reltype_task_allocates_is_allocated_to_percentage_person_UUID"/>
+  <property name="roleName" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Role Name" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:TaskRole_roleName_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" label-flag="true" default-visible="top" mid-point-text-flag="true"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Task (AKM)" xlink:href="http://metadata.troux.info/akm/objecttypes/task.kmd#AKM_Task" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Task role" xlink:href="#AKM_Task_role" xlink:actuate="user">
+   <string name="from">allocates</string>
+   <string name="to">is allocated to</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Task role" xlink:href="#AKM_Task_role" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="percentage">0</integer>
+   <string name="fromtext" class="volatile"></string>
+   <string name="totext" class="volatile"></string>
+   <string name="color" class="volatile"></string>
+   <string name="roleName"></string>
+  </valueset>
+ </type>
+
+
+</metis>

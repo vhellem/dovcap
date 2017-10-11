@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="6"
+ nextoid="1">
+
+ <criteria id="oid1" name="getLibrary" title="getLibrary" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="endof" use-off-flag="true">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_implements-is_implemented_by_UUID"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="IT Architecture Element allows Datastore" xlink:href="../relationshiptypes/allows-is_allowed_as.kmd#Reltype_it_architecture_element_allows_is_allowed_as_datastore_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="end"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="findNameAndNoValue" title="Find Name and No Value" object-flag="true">
+  <arg-list size="2">
+   <string name="STRING_ATTRIBUTE">name</string>
+   <string name="VOLATILE_ATTRIBUTE">libraryName</string>
+  </arg-list>
+  <c-op kind="and">
+   <c-op kind="collection"/>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="Has No Value For Volatile Attribute" xlink:href="#oid4"/>
+   </c-op>
+   <c-op kind="not">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="Has  No Value For String Attribute" xlink:href="#oid3"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3" name="hasNoValueForStringAttribute" title="Has  No Value For String Attribute" desc=" " object-flag="true">
+  <arg-list size="1">
+   <string name="NAME"></string>
+  </arg-list>
+  <c-op kind="and">
+   <c-op kind="property-pattern" wildcard-flag="true" caseinsensitive-flag="true">
+    <c-macro name="STRING_ATTRIBUTE"/>
+    <c-string></c-string>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid4" name="hasNoValueForVolatileAttribute" title="Has No Value For Volatile Attribute" background-flag="true">
+  <c-op kind="and">
+   <c-op kind="property-pattern" wildcard-flag="true" caseinsensitive-flag="true">
+    <c-macro name="VOLATILE_ATTRIBUTE"/>
+    <c-string> </c-string>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid5" name="findNameAndValue" title="Find Name And Value" object-flag="true">
+  <arg-list size="2">
+   <string name="STRING_ATTRIBUTE">name</string>
+   <string name="VOLATILE_ATTRIBUTE">libraryName</string>
+  </arg-list>
+  <c-op kind="and">
+   <c-op kind="collection"/>
+   <c-op kind="not">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="Has  No Value For String Attribute" xlink:href="#oid3"/>
+    </c-op>
+   </c-op>
+   <c-op kind="not">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="Has No Value For Volatile Attribute" xlink:href="#oid4"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid6" name="findValueAndNoName" title="Find Value And No Name" object-flag="true">
+  <arg-list size="2">
+   <string name="STRING_ATTRIBUTE">name</string>
+   <string name="VOLATILE_ATTRIBUTE">libraryName</string>
+  </arg-list>
+  <c-op kind="and">
+   <c-op kind="collection"/>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="Has  No Value For String Attribute" xlink:href="#oid3"/>
+   </c-op>
+   <c-op kind="not">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="Has No Value For Volatile Attribute" xlink:href="#oid4"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

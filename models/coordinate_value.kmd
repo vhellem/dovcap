@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="7"
+ typeviews="4"
+ nextoid="12">
+
+ <type id="oid1" name="Coordinate_Value" title="Coordinate Value" usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Target Attribute" xlink:href="attribute.kmd#oid3"/>
+  <property name="value" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Value" default-visible="top"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="General Action" xlink:href="action.kmd#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="General Condition" xlink:href="condition.kmd#oid1"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Coordinate Value" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isKey">0</integer>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <float name="value">0</float>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="X_Coordinate_Value" title="X Coordinate Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Point Coordinate Value" xlink:href="#oid10"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid8"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="X Coordinate Value" xlink:href="#oid2" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isKey">0</integer>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <float name="value">0</float>
+   <integer name="coordinatePosition">1</integer>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Y_Coordinate_Value" title="Y Coordinate Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Point Coordinate Value" xlink:href="#oid10"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid9"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Y Coordinate Value" xlink:href="#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isKey">0</integer>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <float name="value">0</float>
+   <integer name="coordinatePosition">1</integer>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="Height_Coordinate_Value" title="Height Coordinate Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Span Coordinate Value" xlink:href="#oid11"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Height Coordinate Value" xlink:href="#oid4" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isKey">0</integer>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <float name="value">0</float>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="Width_Coordinate_Value" title="Width Coordinate Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Span Coordinate Value" xlink:href="#oid11"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid7"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Width Coordinate Value" xlink:href="#oid5" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isKey">0</integer>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <float name="value">0</float>
+  </valueset>
+ </type>
+
+ <type id="oid10" name="Point_Coordinate_Value" title="Point Coordinate Value" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Coordinate Value" xlink:href="#oid1"/>
+  <property name="coordinatePosition" xlink:role="integer-type" xlink:title="Coordinate Position" xlink:href="../primitive_types/coordinate_position.kmd#oid1" label="Coordinate Position" desc="The location of the coordinate point on the view of the instance in the data source. &#10;There are basically two ways to define the dimensions of a drawing; either by specifying two coordinates opposite each other that span out the object, or by specifying one fixed point and a set of dimensions." default-visible="top"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Point Coordinate Value" xlink:href="#oid10" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isKey">0</integer>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <float name="value">0</float>
+   <integer name="coordinatePosition">1</integer>
+  </valueset>
+ </type>
+
+ <type id="oid11" name="Span_Coordinate_Value" title="Span Coordinate Value" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Coordinate Value" xlink:href="#oid1"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Span Coordinate Value" xlink:href="#oid11" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="isKey">0</integer>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <float name="value">0</float>
+  </valueset>
+ </type>
+
+ <typeview id="oid6" xlink:role="type" xlink:title="Height Coordinate Value" xlink:href="#oid4" tree-size="0.75" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Coordinate Height" xlink:href="../symbols/coordinate_value.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Coordinate Height" xlink:href="../symbols/coordinate_value.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/coordinate_value_height.png"/>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:title="Width Coordinate Value" xlink:href="#oid5" tree-size="0.75" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Coordinate Width" xlink:href="../symbols/coordinate_value.svg#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Coordinate Width" xlink:href="../symbols/coordinate_value.svg#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/coordinate_value_width.png"/>
+ </typeview>
+
+ <typeview id="oid8" xlink:role="type" xlink:title="X Coordinate Value" xlink:href="#oid2" tree-size="0.75" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Coordinate Value X" xlink:href="../symbols/coordinate_value.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Coordinate Value X" xlink:href="../symbols/coordinate_value.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/coordinate_value_x.png"/>
+ </typeview>
+
+ <typeview id="oid9" xlink:role="type" xlink:title="Y Coordinate Value" xlink:href="#oid3" tree-size="0.75" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Coordinate Value Y" xlink:href="../symbols/coordinate_value.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Coordinate Value Y" xlink:href="../symbols/coordinate_value.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/coordinate_value_y.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+  <forward-reference id="design_parameter_range" stamp="20070601 103000000"
+    xlink:role="type" xlink:title="parameter_range" xlink:href="parameter_range.kmd#parameter_range"
+    />
+  <forward-reference id="oid1" stamp="20070601 103000000"
+    xlink:role="type" xlink:title="parameter_range" xlink:href="parameter_range.kmd#oid1"
+    />
+
+</metis>

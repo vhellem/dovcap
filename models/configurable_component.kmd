@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="Configurable_Component" name="Configurable_Component" title="Configurable Component" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties" xlink:href="metis:stdtypes#oid19"/>
+  <typeview-link xlink:role="typeview" xlink:href="#_002asd20177ois8n1pqn"/>
+  <named-method-link name="Configure_component_" xlink:role="cpp-method" xlink:title="Configure component" xlink:href="../methods/configure_component.kmd#_002asd2017i1ofakqter"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Configurable Component" xlink:href="#Configurable_Component" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="_002asd20177ois8n1pqn" xlink:role="type" xlink:title="Configurable Component" xlink:href="#Configurable_Component" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Method" xlink:href="metis:stdsyms#oid66" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

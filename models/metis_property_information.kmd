@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Metis_Property_Information" title="Metis Property Information" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - IF Configuration" xlink:href="object.kmd#oid1"/>
+  <property name="propertyName" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Property Name" default-visible="top"/>
+  <property name="evaluatePropertyName" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute Property Name" default-visible="top"/>
+  <property name="propertyLabel" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Property Label" label-flag="true" default-visible="top"/>
+  <property name="propertyType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Property Type (Primitive Type)" default-visible="top"/>
+  <property name="propertyDataType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Property Data Type" default-visible="top"/>
+  <property name="isKey" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Is Key" default-visible="top"/>
+  <property name="isVisible" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Is Visible" default-visible="top"/>
+  <property name="isReadOnly" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Is Read Only (in property view)" default-visible="top"/>
+  <property name="propertyDescription" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Property Description" description-flag="true" default-visible="top"/>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Metis Property Information" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="propertyName"></string>
+   <integer name="evaluatePropertyName">0</integer>
+   <string name="propertyLabel"></string>
+   <string name="propertyType"></string>
+   <string name="propertyDataType"></string>
+   <integer name="isKey">0</integer>
+   <integer name="isVisible">1</integer>
+   <integer name="isReadOnly">0</integer>
+   <string name="propertyDescription"></string>
+  </valueset>
+ </type>
+
+
+</metis>

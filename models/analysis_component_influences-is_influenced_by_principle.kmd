@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="7.1.2008.0401"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Analysis_Component_influences-is_influenced_by_Principle_UUID" name="Analysis_Component_influences_is_influenced_by_Principle" title="Analysis Component influences-is influenced by Principle" desc="Used to establish an association from an influencing Analysis Component instance to the influenced Principle instance." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/analysis_component_influences-is_influenced_by_principle.kmd#UUID4_CB1F990F-4E72-47E7-8D0B-3739FF6E41AE"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../../meaf/abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Principle" xlink:href="../abstract_types/principle.kmd#CompType_Semantics_Abstract:Principle_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component influences-is influenced by Principle" xlink:href="#RelType_Semantics:Analysis_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="from">influences</string>
+   <string name="to">is influenced by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component influences-is influenced by Principle" xlink:href="#RelType_Semantics:Analysis_Component_influences-is_influenced_by_Principle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

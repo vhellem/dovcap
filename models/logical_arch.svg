@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?metis version="3.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: logical_arch.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Logical Architecture</title>
+    <g>
+      <polygon points="0 0 0 304 16 320 
+       880 320 880 16 864 0 0 0 
+       0 0 0 0 0 0 0 0 "
+       style=" stroke:#000000; stroke-width:1; fill:#9b9b9b; fill-opacity:100%"       class="TAG:shadow"></polygon>
+      <rect x="0" y="0" width="240" height="304"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:100%"       class="TAG:PictureBackground"></rect>
+      <rect x="240" y="0" width="624" height="304"
+       style=" stroke:#000000; stroke-width:1; fill:#6eff6e; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="256" y="15.8"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	 class="TAG:text">text</text>
+	<rect x="256" y="0" width="608" height="304"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+      <polyline points="864 304 880 320"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <g>
+	<ellipse  cx="73.7778" cy="42.9091" rx="11.5556" ry="10.9091"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:100%"></ellipse>
+	<ellipse  cx="27.5556" cy="108.364" rx="11.5556" ry="10.9091"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:100%"></ellipse>
+	<ellipse  cx="96.8889" cy="162.909" rx="11.5556" ry="10.9091"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:100%"></ellipse>
+	<ellipse  cx="212.444" cy="108.364" rx="11.5556" ry="10.9091"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:100%"></ellipse>
+	<ellipse  cx="212.444" cy="261.091" rx="11.5556" ry="10.9091"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:100%"></ellipse>
+	<ellipse  cx="27.5556" cy="261.091" rx="11.5556" ry="10.9091"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:100%"></ellipse>
+	<polyline points="73.7778 53.8182 73.7778 108.364"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+	<polyline points="39.1111 108.364 200.889 108.364"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+	<polyline points="96.8889 108.364 96.8889 152"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+	<polyline points="39.1111 261.091 200.889 261.091"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+	<polyline points="177.778 108.364 177.778 261.091"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+      </g>
+    </g>
+  </symbol>
+ </defs>
+</svg>

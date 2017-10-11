@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics_ERM_Business_Continuity_Plan_UUID" name="Business_Continuity_Plan" title="Business Continuity Plan" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Plan" xlink:href="../../meaf/objecttypes/plan.kmd#CompType_MEAF:Plan_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#UUID4_454A09EB-EC30-44BF-AE74-B0FABDA53FCB"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Business Continuity Plan" xlink:href="#CompType_Semantics_ERM_Business_Continuity_Plan_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="26" xlink:role="type" xlink:title="Business Continuity Plan" xlink:href="#CompType_Semantics_ERM_Business_Continuity_Plan_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="benefit">0</decimal>
+   <decimal name="cost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <date name="startDate">00000000</date>
+   <integer name="status">-1</integer>
+   <date name="modificationDate">00000000</date>
+   <date name="creationDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="color" class="volatile"></string>
+   <date name="baselineYear">00000000</date>
+   <decimal name="plannedCostYear0">0</decimal>
+   <decimal name="plannedCostYear1">0</decimal>
+   <decimal name="plannedCostYear2">0</decimal>
+   <decimal name="plannedBenefitYear0">0</decimal>
+   <decimal name="plannedBenefitYear1">0</decimal>
+   <decimal name="plannedBenefitYear2">0</decimal>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_454A09EB-EC30-44BF-AE74-B0FABDA53FCB" xlink:role="type" xlink:title="Business Continuity Plan" xlink:href="#CompType_Semantics_ERM_Business_Continuity_Plan_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#FFFFC2&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/business_continuity_plan.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#FFFFC2&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/business_continuity_plan.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/business_continuity_plan.png"/>
+ </typeview>
+
+
+</metis>

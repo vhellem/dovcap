@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics_AppDomain:Virtual_Host_UUID" name="Virtual_Host" title="Hypervisor" desc="A hypervisor, or virtual machine manager (VMM), allows multiple virtual machines to run concurrently on a single hardware host. The hypervisor allocates resources, such as memory and processing, to each virtual machine as needed. The hypervisor also ensures that the virtual machines do not disrupt each other. &#10;&#60;p&#62;To model a virtual environment, the hypervisor object can be connected to the following objects:&#60;/p&#62;&#10;&#60;ul&#62;&#10;&#60;li&#62;The application used to manage the hypervisor. Hypervisor management software provides a centralized management platform for one or more hypervisor implementations.&#60;/li&#62;&#10;&#60;li&#62;The software product version(s) deployed by the hypervisor.&#60;/li&#62;&#10;&#60;li&#62;The virtual machine(s) that run on the hypervisor. Virtual machines are represented by the same computing hardware types that are used to represent physical machines.&#60;/li&#62;&#10;&#60;li&#62;The physical computing hardware on which the hypervisor executes.&#60;/li&#62;&#10;&#60;li&#62;The person responsible for maintaining or managing the hypervisor.&#60;li&#62;" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Application Component" xlink:href="../../meaf/abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/virtual_host.kmd#UUID4_6074300B-AF24-4DAC-AB85-9FAFA8AA3FFB"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Hypervisor" xlink:href="#CompType_Semantics_AppDomain:Virtual_Host_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#CCBBDD</string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Hypervisor" xlink:href="#CompType_Semantics_AppDomain:Virtual_Host_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="textFitFlag">0</integer>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="3.2.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="6">
+
+ <type id="oid1" name="ApplicationBuildingBlock" title="Application Building Block" desc="An Application Building Block is an architectural element used to build one or more applications. &#10;The element could be a common subroutine to perform an function common for many applications, or it could be an element of an application that is dependent on certain technology or hardware. Do not use this object type for functional decomposition of applications. For that purpose, please use hierarchical decomposition of the application objects, or the Application Function object type." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="IT Entity" xlink:href="it_entity.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="DevelopmentLanguage" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Development Language" desc="The main development language used. Note also the possibility of using application type objects to classify by development language."/>
+  <property name="HardwarePlatform" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Hardware Platform" desc="The main hardware platform. Note also the possibility of using application type objects to classify by hardware platform or to link the Application Building Block to Computer and from there to the Hardware Platform of the Computer."/>
+  <property name="DataAccessMethods" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Data Access Methods" desc="The main data access method used. Note also the possibility of using application type objects to classify by data access method."/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Application Building Block" xlink:href="#oid1"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Building Block" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="DevelopmentLanguage"></string>
+   <string name="HardwarePlatform"></string>
+   <string name="DataAccessMethods"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Application Building Block" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Application Building Block" xlink:href="../symbols/app_build_block.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Application Building Block" xlink:href="../symbols/app_build_block.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/application_building_block.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

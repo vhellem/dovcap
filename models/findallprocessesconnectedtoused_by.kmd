@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="2">
+
+ <criteria id="oid1" name="FindAllProcessesConnectedToUsed_ByRelationships" title="FindAllProcessesConnectedToUsed_ByRelationships" background-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="used by/uses  w/CRUD" xlink:href="http://xml.metis.no/xml/relationship_types/used_by-uses-crud.kmd#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="end">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Logical Process" xlink:href="http://xml.metis.no/xml/object_types/flowlogic.kmd#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+</metis>

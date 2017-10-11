@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?metis version="3.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: analysis.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Analysis</title>
+    <g>
+      <polygon points="0 0 0 304 16 320 
+       880 320 880 16 864 0 0 0 
+       0 0 0 0 0 0 0 0 "
+       style=" stroke:#000000; stroke-width:1; fill:#9b9b9b; fill-opacity:100%"       class="TAG:shadow"></polygon>
+      <rect x="0" y="0" width="240" height="304"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"       class="TAG:PictureBackground"></rect>
+      <rect x="240" y="0" width="624" height="304"
+       style=" stroke:#000000; stroke-width:1; fill:#96a5ff; fill-opacity:100%"       class="TAG:canvas"></rect>
+      <rect x="245.357" y="25.7143" width="569.522" height="231.429"
+       style="stroke:none; fill:#878787; fill-opacity:0%"       class="TAG:grid"></rect>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="256" y="15.8"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	 class="TAG:text">text</text>
+	<rect x="256" y="0" width="608" height="304"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+      <polyline points="864 304 880 320"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <g>
+	<rect x="78.4" y="32" width="41.6" height="43.6362"
+	 style=" stroke:#000000; stroke-width:1; fill:#ff5050; fill-opacity:100%"></rect>
+	<rect x="16" y="119.272" width="41.6" height="43.6362"
+	 style=" stroke:#000000; stroke-width:1; fill:#4bff4b; fill-opacity:100%"></rect>
+	<rect x="140.8" y="119.272" width="41.6" height="43.6362"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffff37; fill-opacity:100%"></rect>
+	<rect x="182.4" y="228.364" width="41.6" height="43.6362"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:100%"></rect>
+	<rect x="57.6" y="228.364" width="41.6" height="43.6362"
+	 style=" stroke:#000000; stroke-width:1; fill:#a5ffa5; fill-opacity:100%"></rect>
+	<polyline points="78.4 75.6362 36.8 119.272"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+	<polyline points="120 75.6362 161.6 119.272"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+	<polyline points="36.8 162.909 78.4 228.364"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+	<polyline points="161.6 162.909 203.2 228.364"
+	 style=" stroke:#000000; stroke-width:1;"></polyline>
+      </g>
+    </g>
+  </symbol>
+ </defs>
+</svg>

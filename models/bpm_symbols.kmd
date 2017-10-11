@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ symbolpalettes="1"
+ nextoid="2">
+
+ <symbol-palette id="oid1" name="BPM_Symbol_Palette" title="BPM Symbol Palette">
+  <symbol-link xlink:role="symbol" xlink:title="Process Open" xlink:href="../symbols/process.svg#oid19" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="message-flow 2" xlink:href="../symbols/bpm_rels.svg#oid8" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="sequence-flow normal" xlink:href="../symbols/bpm_rels.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="sequence-flow conditional" xlink:href="../symbols/bpm_rels.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="sequence-flow default" xlink:href="../symbols/bpm_rels.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="message-flow" xlink:href="../symbols/bpm_rels.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="sequence-flow normal 2" xlink:href="../symbols/bpm_rels.svg#oid5" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="sequence-flow conditional 2" xlink:href="../symbols/bpm_rels.svg#oid6" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="sequence-flow default 2" xlink:href="../symbols/bpm_rels.svg#oid7" xlink:actuate="user"/>
+ </symbol-palette>
+
+
+</metis>

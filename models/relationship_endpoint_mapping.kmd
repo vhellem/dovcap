@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ typeviews="2"
+ nextoid="6">
+
+ <type id="oid1" name="Relationship_Endpoint_Mapping" title="Relationship Endpoint Mapping" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts - IF Configuration" xlink:href="relshipsharedprop.kmd#oid1"/>
+  <property name="keyPropertyField" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Key Property Field" desc="If the query for the relationship uses a different field name for the field containing the key, this property can be used to specify this field name. Note that you can also connect the query field directly to the relationship by using the &#60;em&#62;is key property field&#60;/em&#62; relationship." label-flag="true" default-visible="top"/>
+  <property name="evaluateKeyPropertyField" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute Key Property Field" desc="Specifies that the &#60;em&#62;Key Property Field&#60;/EM&#62; above contains an expression to be evaluated." default-visible="top"/>
+  <property name="fieldValueRole" xlink:role="integer-type" xlink:title="Use Value Options" xlink:href="../primitive_types/use_value_options.kmd#oid1" label="Source Value Specifies" default-visible="top"/>
+  <property name="mapTo" xlink:role="integer-type" xlink:title="Property Mapping Value Target" xlink:href="../primitive_types/property_mapping_value_target.kmd#oid1" label="Range/Pair Mapping" default-visible="top"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Relationship Endpoint Mapping" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from"></string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Relationship Endpoint Mapping" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="keyPropertyField"></string>
+   <integer name="evaluateKeyPropertyField">0</integer>
+   <integer name="fieldValueRole">0</integer>
+   <integer name="mapTo">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="target_is_is_target_of" title="target is/is target of" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship Endpoint Mapping" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Instance Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship View Mapping" xlink:href="../object_types/relationship_view_mapping.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="View Mapping" xlink:href="../object_types/view_mapping.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="target is/is target of" xlink:href="#oid2" xlink:actuate="user">
+   <string name="from">target is</string>
+   <string name="to">is target of</string>
+  </valueset>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="target is/is target of" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="keyPropertyField"></string>
+   <integer name="mapTo">0</integer>
+   <integer name="fieldValueRole">0</integer>
+   <integer name="evaluateKeyPropertyField">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="is_origin_of_origin_is" title="is origin of/origin is" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship Endpoint Mapping" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="View Mapping" xlink:href="../object_types/view_mapping.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Relationship View Mapping" xlink:href="../object_types/relationship_view_mapping.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Instance Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="is origin of/origin is" xlink:href="#oid3" xlink:actuate="user">
+   <string name="from">is origin of</string>
+   <string name="to">origin is</string>
+  </valueset>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="is origin of/origin is" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="keyPropertyField"></string>
+   <integer name="mapTo">0</integer>
+   <integer name="fieldValueRole">0</integer>
+   <integer name="evaluateKeyPropertyField">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="is origin of/origin is" xlink:href="#oid3" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Relationship Mapping End Point" xlink:href="../symbols/relationship_symbols/relationship_mapping_endpoint.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_icons/relationship_mapping_endpoint.png"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="target is/is target of" xlink:href="#oid2" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Relationship Mapping End Point" xlink:href="../symbols/relationship_symbols/relationship_mapping_endpoint.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_icons/relationship_mapping_endpoint.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="3">
+
+ <metamodel id="oid1" name="Interface_Specification" title="Interface Specification">
+  <metamodel-links size="7">
+   <metamodel-link xlink:role="metamodel" xlink:title="Specification Setup" xlink:href="../../common/domains/configuration_setup.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Type Mapping" xlink:href="../../common/domains/type_mapping.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Database Configuration" xlink:href="../../dbif/domains/database_configuration.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="XML Configuration" xlink:href="../../xmlif/domains/xml_configuration.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Parameters, Actions And Conditions" xlink:href="../../common/domains/parameters_actions_and_conditions.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Interface Specification Utilities" xlink:href="../domains/dif_utilities.kmd#oid1"/>
+  </metamodel-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="5">
+   <complex-type-link xlink:role="type" xlink:title="maps to/comes from" xlink:href="../../common/relationship_types/mapping.kmd#oid2"/>
+   <complex-type-link xlink:role="type" xlink:title="is query for/uses query" xlink:href="../../common/relationship_types/is_query_for-uses_query.kmd#oid1"/>
+   <complex-type-link xlink:role="type" xlink:title="is mapping for/is mapped by" xlink:href="../../common/relationship_types/type_identifying_relationship.kmd#oid2"/>
+   <complex-type-link xlink:role="type" xlink:title="includes/included in" xlink:href="../../common/relationship_types/includes-included_in.kmd#oid1"/>
+   <complex-type-link xlink:role="type" xlink:title="is data source for/uses data source" xlink:href="../../common/relationship_types/is_data_source_for-uses_data_source.kmd#oid1"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

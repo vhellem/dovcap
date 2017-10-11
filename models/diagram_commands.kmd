@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<?metis version="3.4?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ instances="24"
+ modelviews="0"
+ instanceviews="0"
+ nextoid="1003">
+
+ <object id="oid1">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-create-lines-from-selection</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">New Lines from Selection</string>
+   <string name="desc">Creates new Line objects based on the current selection. 
+Connects the new Line to the selected object using a relationship.</string>
+   <string name="dll"></string>
+   <string name="state">create-lines-from-selection</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1201" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Creates new Line objects based on the current selection</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid2">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-create-nodes-from-selection</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">New Nodes from Selection</string>
+   <string name="desc">Creates new Node objects based on the current selection. 
+Connects the new Node to the selected object using a relationship.</string>
+   <string name="dll"></string>
+   <string name="state">create-nodes-from-selection</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1202" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Creates new Node objects based on the current selection</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid3">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-create-lines-from-clipboard</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">New Lines from Copied</string>
+   <string name="desc">Creates new Line objects based on the current clipboard copy. 
+Connects the new Line to the object using a relationship.</string>
+   <string name="dll"></string>
+   <string name="state">create-lines-from-clipboard</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1203" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Creates new Line objects based on the current clipboard copy</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid4">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-create-nodes-from-clipboard</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">New Nodes from Copied</string>
+   <string name="desc">Creates new Node objects based on the current  clipboard copy. 
+Connects the new Node to the object using a relationship.</string>
+   <string name="dll"></string>
+   <string name="state">create-nodes-from-clipboard</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1204" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Creates new Node objects based on the current clipboard copy</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid5">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-clear-all-overrides</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">Clear All Overrides</string>
+   <string name="desc">Clear any additional toggling of 'Active', and any 'Stops' - leaving only the default active toggling as defined by any connected sequences.</string>
+   <string name="dll"></string>
+   <string name="state">edit-all-connectors-from-node</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1205" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Clear any additional toggling of 'Active', and any 'Stops'</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid6">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-toggle-selected-stops</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">Toggle Stop for selection.</string>
+   <string name="desc">Toggle Stop-flag at selected positions - removing stop if already there, and inserting stop if not defined.</string>
+   <string name="dll"></string>
+   <string name="state">edit-selected-connectors-from-node</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1206" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Toggle Stop-flag at selected positions - removing stop if already there, and inserting stop if not defined.</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid7">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-toggle-selected-active</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">Toggle Active for selection.</string>
+   <string name="desc">Toggle Active at selected positions - changing state to just alive until next relationship if previously active, and prolonging the active state if previously just alive.</string>
+   <string name="dll"></string>
+   <string name="state">edit-selected-connectors-from-node</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1207" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Toggle Active at selected positions - changing state to just alive until next relationship if previously active, and prolonging the active state if previously just alive.</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid8">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-toggle-sequence-insert-mode</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">Toggle Inserting Mode</string>
+   <string name="desc">Toggle insert mode ON by ensuring always additional lines available for insertion of new sequences, or toggle insert mode OFF removing any eccess empty lines effectively compressing the diagram.</string>
+   <string name="dll"></string>
+   <string name="state">generic-sequence-diagram-methods</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1208" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Toggle insert mode ON by ensuring always additional lines available for insertion of new sequences, or toggle insert mode OFF removing any eccess empty lines effectively compressing the diagram.</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid9">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-synchronize-diagram</string>
+   <string name="category">SequenceDiagram</string>
+   <string name="title">Synchronize Diagram</string>
+   <string name="desc">Ensure that this diagram properly reflects the latest edited version of the diagram, with the appropriate order of lines and nodes and all lines, nodes and sequences visible.</string>
+   <string name="dll"></string>
+   <string name="state">generic-sequence-diagram-methods</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="../object_types/sequence_diagram.kmd#oid2035" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Ensure that this diagram properly reflects the latest edited version of the diagram, with the appropriate order of lines and nodes and all lines, nodes and sequences visible.</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid101">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">SequenceDiagram.Menu</string>
+   <string name="kind">Replace</string>
+   <string name="reference"></string>
+   <collection name="commands" structure="list" size="8" 
+	       xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>mtd-toggle-sequence-insert-mode</string>
+    <string>mtd-create-lines-from-selection</string>
+    <string>mtd-create-nodes-from-selection</string>
+    <string>mtd-create-lines-from-clipboard</string>
+    <string>mtd-create-nodes-from-clipboard</string>
+    <string>mtd-clear-all-overrides</string>
+    <string>mtd-toggle-selected-stops</string>
+    <string>mtd-toggle-selected-active</string>
+    <string>mtd-synchronize-diagram</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1001">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">SequenceDiagram.Menu</string>
+   <string name="category">Menus</string>
+   <string name="title">Sequence Diagram &#38;Modeling</string>
+   <string name="desc">Special menu designed for this project.</string>
+   <string name="dll"></string>
+   <string name="state"></string>
+   <pointer name="method"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip"></string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid1002">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DeveloperEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" 
+	       xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>SequenceDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1003">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ModelEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>SequenceDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1004">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DesignerEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>SequenceDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <cpp-method id="oid1201" title="Create Lines From Selection" desc="Create Lines" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createLinesNodesFromSelection" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="4">
+   <pointer name="TypeToCreate" xlink:role="type" 
+     xlink:title="Sequence Diagram Line" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid2"
+     xlink:actuate="user"/>
+   <pointer name="TypeOfConnectionRelationship" xlink:role="type" 
+     xlink:title="Sequence Represents" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid6"
+     xlink:actuate="user"/>
+   <string name="Kind">Line</string>
+   <integer name="LayoutFlags">1</integer>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1202" title="Create Nodes From Selection" desc="Create Nodes" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createLinesNodesFromSelection" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="4">
+   <pointer name="TypeToCreate" xlink:role="type" 
+     xlink:title="Sequence Diagram Node" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid3"
+     xlink:actuate="user"/>
+   <pointer name="TypeOfConnectionRelationship" xlink:role="type" 
+     xlink:title="Sequence Represents" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid6"
+     xlink:actuate="user"/>
+   <string name="Kind">Node</string>
+   <integer name="LayoutFlags">2</integer>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1203" title="Create Lines From Clipboard" desc="Create Lines" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createLinesNodesFromClipboard" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="4">
+   <pointer name="TypeToCreate" xlink:role="type" 
+     xlink:title="Sequence Diagram Line" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid2"
+     xlink:actuate="user"/>
+   <pointer name="TypeOfConnectionRelationship" xlink:role="type" 
+     xlink:title="Sequence Represents" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid6"
+     xlink:actuate="user"/>
+   <string name="Kind">Line</string>
+   <integer name="LayoutFlags">1</integer>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1204" title="Create Nodes From Clipboard" desc="Create Nodes" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createLinesNodesFromClipboard" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="4">
+   <pointer name="TypeToCreate" xlink:role="type" 
+     xlink:title="Sequence Diagram Node" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid3"
+     xlink:actuate="user"/>
+   <pointer name="TypeOfConnectionRelationship" xlink:role="type" 
+     xlink:title="Sequence Represents" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid6"
+     xlink:actuate="user"/>
+   <string name="Kind">Node</string>
+   <integer name="LayoutFlags">2</integer>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1205" title="Clear All Overrides" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.setConnectionProperty" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="4">
+   <string name="Property">flag</string>
+   <string name="Value">None</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1206" title="Toggle Selected Stop-flags" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.setConnectionProperty" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="4">
+   <string name="Property">flag</string>
+   <string name="Condition1">Stop</string>
+   <string name="Value1">None</string>
+   <string name="Value2">Stop</string>
+   <string name="UseSelection">true</string>
+   <pointer name="LineType" xlink:role="type" 
+     xlink:title="Sequence Diagram Line" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid2" 
+     xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1207" title="Toggle Selected Active-flags" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.setConnectionProperty" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="4">
+   <string name="Property">flag</string>
+   <string name="Condition1">Break</string>
+   <string name="Value1">None</string>
+   <string name="Value2">Break</string>
+   <string name="UseSelection">true</string>
+   <pointer name="LineType" xlink:role="type" 
+     xlink:title="Sequence Diagram Line" 
+     xlink:href="../object_types/sequence_diagram.kmd#oid2" 
+     xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1208" name="toggleExtraLines" language="c++" bind="NO.METIS.GEM.DIAGRAM.maintainExtraLines" required-dll="gem_diagram">
+   <arg-list size="6">
+    <pointer name="LineCriteria" xlink:role="criteria" xlink:title="All Lines From Diagram" 
+                                 xlink:href="../object_types/sequence_diagram.kmd#oid2027" xlink:actuate="user"/>
+    <pointer name="AllLinesCriteria" xlink:role="criteria" xlink:title="All Lines From Diagram" 
+                                     xlink:href="../object_types/sequence_diagram.kmd#oid2027" xlink:actuate="user"/>
+    <pointer name="DiagramType" xlink:role="type" xlink:title="Sequence Diagram" xlink:href="../object_types/sequence_diagram.kmd#oid1" xlink:actuate="user"/>
+    <pointer name="LineType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="../object_types/sequence_diagram.kmd#oid2" xlink:actuate="user"/>
+    <pointer name="SequenceRelationship" xlink:role="type" xlink:title="Sequence Relationship" xlink:href="../object_types/sequence_diagram.kmd#oid5" xlink:actuate="user"/>
+    <string name="ActionProp">mode</string>
+    <string name="ToggleAction">true</string>
+    <string name="ConnectionFlagProperty">flag</string>
+   </arg-list>
+ </cpp-method>
+
+</metis>

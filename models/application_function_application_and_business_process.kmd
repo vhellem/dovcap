@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="4">
+
+ <criteria id="oid1" name="ApplicationFunctionApplicationAndBusinessProcess" title="Application Function-&#62;Application/Business Process" desc="This criterium is only valid if the types referred to in its name are used in the model.&#10;Drag this onto an Application Function instance, and the following types will be traversed.&#10;- &#34;provided by/provides&#34;  and &#34;uses/used by&#34;&#10;- Application and Business Process" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="endof">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="provided by/provides" xlink:href="../relationship_types/provided_by-provides.kmd#oid1"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="uses/used by" xlink:href="../relationship_types/uses-used_by4.kmd#oid1"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="end">
+     <c-op kind="or">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Application, Physical" xlink:href="../object_types/application.kmd#oid1"/>
+      </c-op>
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Business Process" xlink:href="../object_types/business_process.kmd#oid1"/>
+      </c-op>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

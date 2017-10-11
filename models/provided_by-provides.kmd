@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="3">
+
+ <type id="oid1" name="ProvidedBy" title="provided by/provides" desc="Allows you to connect Function objects to the physical IT elements (including applications) providing the functions." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ApplicationFunction" xlink:href="../object_types/application_function.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="TechnologyFunction" xlink:href="../object_types/technology_function.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="PhysicalTechnologyItem" xlink:href="../object_types/physical_it_technology_item.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="ProvidedBy" xlink:href="#oid1">
+   <string name="from">provided by</string>
+   <string name="to">provides</string>
+  </valueset>
+ </type>
+
+
+</metis>

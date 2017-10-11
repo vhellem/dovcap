@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_MEAF:Measure_UUID" name="measure" title="Measure" desc="A Measure is used to store and follow up items that are important to measure the business&#39; goals and objectives against what the business achieves.&#60;p&#62;The object type is a base type for the Key Performance Indicator and Metric object types." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Control Component" xlink:href="../abstracttypes/control_component.kmd#CompType_MEAF:ControlComponent_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="baselineValue" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Baseline Value" desc="An external baseline value, if available (e.g. an industry average)." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_baselineValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="plannedValue" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Planned Value" desc="The planned value to be achieved by the end of a first period." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_plannedValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="actualValue" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Actual Value" desc="The actual, current measured value." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_actualValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="measureUnit" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Measure Unit" desc="The unit used to measure the value (currency, instances, volumes, time units, etc.)." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_measureUnit_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="calculationMethod" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Calculation Method" desc="Verbal description of the calculation method used." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_calculationMethod_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="leadinglagging" xlink:role="integer-type" xlink:title="Leading/Lagging" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_leadinglagging_UUID" label="Leading/Lagging" desc="Leading / Lagging are business cycle indicators (BCI&#39;s) used for financial analysis. &#34;Leading&#34; is an indicator that signals future events, while &#34;Lagging&#34; is an indicator that follows an event." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_leadinglagging_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="investingharvesting" xlink:role="integer-type" xlink:title="Investing/Harvesting" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_investingharvesting_UUID" label="Investing/Harvesting" desc="Investing / Harvesting are indicators used to describe financial phases for investment and profit management." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_investingharvesting_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="reportingMethod" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Reporting Method" desc="Verbal description of how the reporting of the values measured is achieved." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_reportingMethod_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="collectionMethod" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Collection Method" desc="Verbal description of how the data for the value measured is collected." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_collectionMethod_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="strategicValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Strategic Value" desc="This property is calculated as the sum of all products of Strategic Value on Strategy or Critical Success Factor and Weight on the &#39;measured by&#39; relationship from Strategy or Critical Success Factor to Measure or Key Performance Indicator." method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="asOfDate" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#oid35" label="As of Date" desc="The As of Date." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Measure_asOfDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Measure" xlink:href="#CompType_MEAF:Measure_UUID"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="key_performance_indicator.kmd#CompType_MEAF:KeyPerformanceIndicator_UUID"/>
+  <named-method-link name="MetisTrouxClient_--Get Change_Component----QueryInitiative_DomainOvermeasure_measures_is_measured_by_change_component" xlink:role="cpp-method" xlink:title="measures Change Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInitiative_DomainOvermeasure_measures_is_measured_by_change_component"/>
+  <named-method-link name="MetisTrouxClient_--Get Goal----QueryGoalOvermeasure_measures_is_measured_by_goal" xlink:role="cpp-method" xlink:title="measures Goal" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryGoalOvermeasure_measures_is_measured_by_goal"/>
+  <named-method-link name="MetisTrouxClient_--Get Information_Need----QueryInformationNeedOvermeasure_leads_to_follows_from_information_need" xlink:role="cpp-method" xlink:title="leads to Information Need" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInformationNeedOvermeasure_leads_to_follows_from_information_need"/>
+  <named-method-link name="MetisTrouxClient_--Get Requirement----QueryITRequirementOverrequirement_applies_to_has_measure" xlink:role="cpp-method" xlink:title="has Requirement" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryITRequirementOverrequirement_applies_to_has_measure"/>
+  <named-method-link name="MetisTrouxClient_--Get Risk----QueryProjectRiskOvermeasure_measures_is_measured_by_risk" xlink:role="cpp-method" xlink:title="measures Risk" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryProjectRiskOvermeasure_measures_is_measured_by_risk"/>
+  <named-method-link name="MetisTrouxClient_--Get Strategy----QueryMarketStrategyOvermeasure_measures_is_measured_by_strategy" xlink:role="cpp-method" xlink:title="measures Strategy" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryMarketStrategyOvermeasure_measures_is_measured_by_strategy"/>
+  <named-method-link name="MetisTrouxClient_--Get Success_Factor----QueryCriticalSuccessFactorOvermeasure_measures_is_measured_by_weight_success_factor" xlink:role="cpp-method" xlink:title="measures Success Factor" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryCriticalSuccessFactorOvermeasure_measures_is_measured_by_weight_success_factor"/>
+  <named-method-link name="strategicValue" xlink:role="cpp-method" xlink:title="getStrategicValueForMeasure" xlink:href="../methods/measure_methods.kmd#oid1"/>
+  <named-criteria-link name="findStrategicValueChainMeasure" xlink:role="criteria" xlink:title="Find Strategic Value Chain" xlink:href="../criteria/measure_criteria.kmd#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Measure" xlink:href="#CompType_MEAF:Measure_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias">Icon_CompType_MEAF:Measure_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="21" xlink:role="type" xlink:title="Measure" xlink:href="#CompType_MEAF:Measure_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="baselineValue">0</decimal>
+   <decimal name="plannedValue">0</decimal>
+   <decimal name="actualValue">0</decimal>
+   <string name="measureUnit"></string>
+   <string name="calculationMethod"></string>
+   <integer name="leadinglagging">-1</integer>
+   <integer name="investingharvesting">-1</integer>
+   <string name="reportingMethod"></string>
+   <string name="collectionMethod"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <date-time name="asOfDate">00000000 000000000</date-time>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Measure" xlink:href="#CompType_MEAF:Measure_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="baselineValue" visible-flag="true"/>
+   <propertyview name="plannedValue" visible-flag="true"/>
+   <propertyview name="actualValue" visible-flag="true"/>
+   <propertyview name="measureUnit" visible-flag="true"/>
+   <propertyview name="calculationMethod" visible-flag="true"/>
+   <propertyview name="leadinglagging" visible-flag="true"/>
+   <propertyview name="investingharvesting" visible-flag="true"/>
+   <propertyview name="reportingMethod" visible-flag="true"/>
+   <propertyview name="collectionMethod" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.propertyList" visible-flag="false"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+   <propertyview name="asOfDate" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/measure.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/measure.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/measure.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Measure" xlink:href="#CompType_MEAF:Measure_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="baselineValue" visible-flag="true"/>
+   <propertyview name="plannedValue" visible-flag="true"/>
+   <propertyview name="actualValue" visible-flag="true"/>
+   <propertyview name="measureUnit" visible-flag="true"/>
+   <propertyview name="calculationMethod" visible-flag="true"/>
+   <propertyview name="leadinglagging" visible-flag="true"/>
+   <propertyview name="investingharvesting" visible-flag="true"/>
+   <propertyview name="reportingMethod" visible-flag="true"/>
+   <propertyview name="collectionMethod" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/measure.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/measure.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/measure.png"/>
+ </typeview>
+
+
+</metis>

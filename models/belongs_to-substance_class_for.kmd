@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="BelongsToSubstanceclass" title="belongs to Substance Class" desc="A substance can belong to a substance class.&#10;For instance, &#39;Gasoline&#39; belongs to the substance class &#39;Liquid&#39;, while the substance &#39;Iron&#39; belongs to the substance class &#39;Metal&#39;. A substance class can belong to another substance class. For example, the substance class &#39;Metal&#39; belongs to the substance class &#39;Solid&#39;.&#10;belongs to/substance class for&#10;-&#62; from Substance Class to Substance Class&#10;-&#62; from Substance to Substance Class" usage="relationship" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="0" xlink:role="type" xlink:href="metis:stdtypes#oid113" xlink:actuate="user"/>
+   <target-rule min="0" max="0" xlink:role="type" xlink:href="metis:stdtypes#oid113" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="from">belongs to</string>
+   <string name="to">substance class for</string>
+  </valueset>
+ </type>
+
+
+</metis>

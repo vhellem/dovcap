@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics_Service:Service_Level_Contract_UUID" name="Service_Level_Contract" title="Service Level Contract" desc="Represents a Service Level Agreement (SLA) from a service contract management standpoint, i.e., provides a means for the consuming organization to monitor the actual delivery of the SLA regarding the satisfaction of terms of service." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/service_level_contract.kmd#UUID4_E06DDB7D-C9A4-44DE-B013-B281F1E7F4DF"/>
+  <property name="contractedValue" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Contracted Value" desc="The monetary value of the contracted service level." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Service:Service_Level_Contract_contractedValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <property name="monetaryUnits" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Monetary Unit" desc="The units in which contracted value is expressed. Examples are USD, GBP, EURO, etc." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Service:Service_Level_Contract_monetaryUnits_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <property name="contractedStartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Contracted Start Date" desc="The date the contracted service level begins." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Service:Service_Level_Contract_contractedStartDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <property name="contractedStopDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Contracted Stop Date" desc="The date the contracted service level ends." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Service:Service_Level_Contract_contractedStopDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service Level Contract" xlink:href="#CompType_Semantics_Service:Service_Level_Contract_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="13" xlink:role="type" xlink:title="Service Level Contract" xlink:href="#CompType_Semantics_Service:Service_Level_Contract_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="contractedValue">0</decimal>
+   <string name="monetaryUnits"></string>
+   <date name="contractedStartDate">00000000</date>
+   <date name="contractedStopDate">00000000</date>
+  </valueset>
+ </type>
+
+
+</metis>

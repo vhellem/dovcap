@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9" 
+ instances="24" 
+ modelviews="0" 
+ instanceviews="0" 
+ nextoid="1003">
+
+<!-- ALWAYS REPLACE ENTIRE GENERATED CONTENTS WITH HANDCODED -->
+ 
+ <cpp-method id="oid1205" title="Create Sub-Processes" desc="Create sub-processes, flows and icoms, using a dialog to specify the numbers of each" language="c++" bind="NO.METIS.GEM.createSubObjects" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="9">
+   <string name="ObjectType1">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+   <string name="ObjectType2">http://metadata.troux.info/meaf/objecttypes/process_gateway.kmd#CompType_TRM:ProcessDecision_UUID</string>
+   <string name="ObjectType3">http://metadata.troux.info/meaf/objecttypes/process_intermediate_event.kmd#CompType_MEAF:ProcessIntermediateEvent_UUID</string>
+   <string name="InterfaceType1">http://metadata.troux.info/meaf/objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID</string>
+   <string name="InterfaceType2">http://metadata.troux.info/meaf/objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID</string>
+   <string name="InterfaceType3">http://metadata.troux.info/meaf/objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID</string>
+   <string name="InterfaceType4">http://metadata.troux.info/meaf/objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID</string>
+   <pointer name="Strategy" xlink:role="object" xlink:href="metis:layout#oid61" xlink:actuate="user"/>
+   <pointer name="AutoLayoutMethod" xlink:role="cpp-method" xlink:href="metis:layout#oid201" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1301" title="Connect Input to Process via Output" desc="Connect to Process via Output and Input." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="5">
+   <string name="Direction">into</string>
+   <string name="InterfaceTypeFrom">http://metadata.troux.info/meaf/objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+
+ <cpp-method id="oid1305" title="Connect Input to Process" desc="Connect Input to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1306" title="Connect Control to Process" desc="Connect Control from Internal Flow to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_process_control_corresponds_to_corresponds_to_process_control_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1307" title="Connect Output to Process" desc="Connect Output to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">outof</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1308" title="Connect Mechanism to Process" desc="Connect Mechanism to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_process_mechanism_corresponds_to_corresponds_to_process_mechanism_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1311" title="Connect Alternative to Process" desc="Connect Alternative to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1312" title="Connect Condition to Process" desc="Connect Condition to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">outof</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1313" title="Connect Start Portal to Process" desc="Connect Start Portal to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1314" title="Connect End Portal from Process" desc="Connect End Portal from Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">outof</string>
+   <string name="InterfaceTypeTo">http://metadata.troux.info/meaf/objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID</string>
+   <string name="RelType">http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID</string>
+   <string name="ToType">http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1315" title="Create Process Tree Diagram" desc="Create Process Tree Diagram"  
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createAlternativeView"  
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="13">
+   <pointer name="CreateCriteria" xlink:role="criteria"  
+     xlink:title="FindAllProcesses"  
+     xlink:href="../criteria/flowlogic_criteria.kmd#oid1" 
+     xlink:actuate="auto"/>
+   <pointer name="DiagramType" xlink:role="type"  
+     xlink:title="Container"  
+     xlink:href="metis:stdtypes#oid3" 
+     xlink:actuate="auto"/>
+   <string name="FromProperty1">Label</string>
+   <string name="ToProperty1">Label</string>
+   <pointer name="ActionButtonSymbol" xlink:role="symbol"  
+     xlink:title="Browse Next"  
+     xlink:href="metis:stdsyms#oid15" 
+     xlink:actuate="auto"/>
+   <float name="ActionButtonScale">0.33</float>
+   <pointer name="NewViewStyle" xlink:role="viewstyle"  
+     xlink:title="BPM_Process_Tree_Viewstyle"  
+     xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1010" 
+     xlink:actuate="auto"/>
+   <string name="DefaultViews">true</string>
+   <string name="DoLayout">true</string>
+   <string name="Unique">true</string>
+   <string name="ReadOnly">true</string>
+   <string name="BackButton">true</string>
+   <pointer name="BackButtonSymbol" xlink:role="symbol"  
+     xlink:title="Browse Next"  
+     xlink:href="metis:stdsyms#oid15" 
+     xlink:actuate="auto"/>
+   <float name="BackButtonScale">0.33</float>
+  </arg-list>
+ </cpp-method>
+
+</metis>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: sensor.svg</title>
+ <defs>
+  <symbol id="_002as9o01h2afckjqhrt" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Top view</title>
+    <polyline points="5 43.28 4.86637 0"
+     style=" stroke:#000000; stroke-width:2;"     class="TAG:sensor"></polyline>
+    <polyline points="11 43.28 10.8664 0"
+     style=" stroke:#000000; stroke-width:2;"     class="TAG:sensor"></polyline>
+    <rect x="0" y="43.28" width="16" height="22.72" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:2; fill:#ffffff; fill-opacity:100%"     class="TAG:sensor"></rect>
+    <ellipse  cx="8" cy="51" rx="2" ry="2"
+     style=" stroke:#000000; stroke-width:2; fill:#00a500; fill-opacity:100%"     class="TAG:sensor"></ellipse>
+  </symbol>
+  <symbol id="_002as9o01hhsbcjb3pdc" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Front view</title>
+    <rect x="0" y="0" width="256" height="32"
+     style=" stroke:#000000; stroke-width:2; fill:#ffffff; fill-opacity:100%"></rect>
+    <rect x="112" y="0" width="32" height="32"
+     style=" stroke:#000000; stroke-width:2; fill:#00a500; fill-opacity:100%"></rect>
+    <polyline points="96 0 96 32"
+     style=" stroke:#000000; stroke-width:2;"></polyline>
+    <polyline points="96 0 96 32"
+     style=" stroke:#000000; stroke-width:2;"></polyline>
+    <polyline points="160 0 160 32"
+     style=" stroke:#000000; stroke-width:2;"></polyline>
+  </symbol>
+  <symbol id="_002as9o01hr9qbst3snv" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Side view</title>
+    <rect x="688" y="0" width="368" height="32"
+     style=" stroke:#000000; stroke-width:2; fill:#ffffff; fill-opacity:100%"></rect>
+    <rect x="784" y="0" width="64" height="32"
+     style=" stroke:#000000; stroke-width:2; fill:#00a500; fill-opacity:100%"></rect>
+    <polyline points="688 16 0 16"
+     style=" stroke:#000000; stroke-width:3;"></polyline>
+  </symbol>
+ </defs>
+ <use xlink:href="#_002as9o01h2afckjqhrt"/>
+</svg>

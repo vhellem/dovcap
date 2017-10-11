@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_TRM:FileServer_UUID" name="file_server" title="File Server" desc="The File Server type describes the File Server class of Software Servers." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="software_server.kmd#CompType_TRM:SoftwareServer_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="File Server" xlink:href="#CompType_TRM:FileServer_UUID">
+   <string name="troux_color">#CCBBDD</string>
+   <string name="troux_iconAlias">632bef1f-495a-3996-af46-4245d671e5f8</string>
+   <string name="troux_shape">Rectangle</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="File Server" xlink:href="#CompType_TRM:FileServer_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="purchaseDate"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="productName"/>
+   <propertyview name="productVersion"/>
+   <propertyview name="productPatchLevel"/>
+   <propertyview name="productSerialNumber"/>
+   <propertyview name="vendorName"/>
+   <propertyview name="vendorSalesPhone"/>
+   <propertyview name="vendorSalesEmail"/>
+   <propertyview name="vendorSupportPhone"/>
+   <propertyview name="vendorSupportEmail"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/fileserver.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/fileserver.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/fileserver.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="File Server" xlink:href="#CompType_TRM:FileServer_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="purchaseDate"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="productName"/>
+   <propertyview name="productVersion"/>
+   <propertyview name="productPatchLevel"/>
+   <propertyview name="productSerialNumber"/>
+   <propertyview name="vendorName"/>
+   <propertyview name="vendorSalesPhone"/>
+   <propertyview name="vendorSalesEmail"/>
+   <propertyview name="vendorSupportPhone"/>
+   <propertyview name="vendorSupportEmail"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/fileserver.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/fileserver.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/fileserver.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

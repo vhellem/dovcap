@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="11"
+ nextoid="1">
+
+ <type id="RelType_ITG:Hardware_Product_has_owner_Organization_Component_UUID" name="Hardware_Product_has_owner_Person" title="Hardware Product has owner Person" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="IT Product has owner Organization Component" xlink:href="#RelType_OwnsSoftwareProduct_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Hardware Product" xlink:href="../objecttypes/hardware_product.kmd#CompType_TRM:HardwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Hardware Product has owner Person" xlink:href="#RelType_ITG:Hardware_Product_has_owner_Organization_Component_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color">#6B8E23</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Hardware Product has owner Person" xlink:href="#RelType_ITG:Hardware_Product_has_owner_Organization_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Industry_Standard_has_owner_Person_UUID" name="Industry_Standard_has_owner_Person" title="Industry Standard has owner Person" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Industry Standard" xlink:href="../objecttypes/industry_standard.kmd#CompType_ITG:IndustryStandard_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Industry Standard has owner Person" xlink:href="#RelType_ITG:Industry_Standard_has_owner_Person_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Industry Standard has owner Person" xlink:href="#RelType_ITG:Industry_Standard_has_owner_Person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Software_Product_has_owner_Organization_Component_UUID" name="Software_Product_has_owner_Person" title="Software Product has owner Person" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="IT Product has owner Organization Component" xlink:href="#RelType_OwnsSoftwareProduct_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Software Product" xlink:href="../objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product has owner Person" xlink:href="#RelType_ITG:Software_Product_has_owner_Organization_Component_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color">#6B8E23</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Software Product has owner Person" xlink:href="#RelType_ITG:Software_Product_has_owner_Organization_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Standards_Category_has_owner_Person_UUID" name="Standards_Category_has_owner_Person" title="Standards Category has owner Person" desc="Identifies the Person responsible for reviewing, maintaining, or approving changes to a Standards Category. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Standards Category" xlink:href="../objecttypes/standards_category.kmd#CompType_ITG:Standards_Category_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Standards Category has owner Person" xlink:href="#RelType_ITG:Standards_Category_has_owner_Person_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Standards Category has owner Person" xlink:href="#RelType_ITG:Standards_Category_has_owner_Person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_OwnsApplication_UUID" name="application_component_has_owner_is_owner_of_organization_component" title="Application Component has owner Organization Component" desc="Use this relationship to specify ownership of physical IT elements, resources and of information and business objects." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component has owner Organization Component" xlink:href="#RelType_OwnsApplication_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color">#6B8E23</string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Application Component has owner Organization Component" xlink:href="#RelType_OwnsApplication_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_OwnsServiceCat_UUID" name="catalog_has_owner_is_owner_of_organization_component" title="Catalog has owner Organization Component" desc="Use this relationship for when a service catalog is owned by an organization." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Catalog" xlink:href="../objecttypes/catalog.kmd#CompType_MEAF:Catalog_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Catalog has owner Organization Component" xlink:href="#RelType_OwnsServiceCat_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color">#6B8E23</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Catalog has owner Organization Component" xlink:href="#RelType_OwnsServiceCat_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_OwnsSoftwareProduct_UUID" name="it_product_has_owner_is_owner_of_organization_component" title="IT Product has owner Organization Component" desc="Use this relationship to specify ownership of physical IT elements, resources and of information and business objects." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="IT Product" xlink:href="../objecttypes/it_product.kmd#CompType_MEAF:ITProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="IT Product has owner Organization Component" xlink:href="#RelType_OwnsSoftwareProduct_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color">#6B8E23</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="IT Product has owner Organization Component" xlink:href="#RelType_OwnsSoftwareProduct_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_has_owner-is_owner_of_UUID" name="has_owner-is_owner_of" title="has owner" desc="Allows you to specify ownership of physical IT elements, resources and of business objects as expressed in information models." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <property name="impactRating" xlink:role="integer-type" xlink:title="Impact" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_impact_UUID" label="Impact Rating" desc="An evaluation of how strong the impact will be if the risk occurs." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:has_owner_impactRating_UUID&#34;;"/>
+  <named-criteria-link name="FindAllhas_owner-is_owner_of" xlink:role="criteria" xlink:title="Find all Has owner relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_has_owner-is_owner_of_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_information_component_has_owner_is_owner_of_organization_component_UUID" name="information_component_has_owner_is_owner_of_organization_component" title="Information Component has owner Organization Component" desc="Use this relationship to specify ownership of physical IT elements, resources and of information and business objects." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Information Component has owner Organization Component" xlink:href="#Reltype_information_component_has_owner_is_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Information Component has owner Organization Component" xlink:href="#Reltype_information_component_has_owner_is_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_has_owner_is_owner_of_organization_component_UUID" name="infrastructure_component_has_owner_is_owner_of_organization_component" title="Infrastructure Component has owner Organization Component" desc="Use this relationship to specify ownership of physical IT elements, resources and of information and business objects." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component has owner Organization Component" xlink:href="#Reltype_infrastructure_component_has_owner_is_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Infrastructure Component has owner Organization Component" xlink:href="#Reltype_infrastructure_component_has_owner_is_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_resource_has_owner_is_owner_of_organization_component_UUID" name="resource_has_owner_is_owner_of_organization_component" title="Resource has owner Organization Component" desc="Use this relationship to specify ownership of physical IT elements, resources and of information and business objects." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has owner" xlink:href="#Reltype_has_owner-is_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Resource" xlink:href="../objecttypes/resource.kmd#CompType_MEAF:Resource_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Resource has owner Organization Component" xlink:href="#Reltype_resource_has_owner_is_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="from">has owner</string>
+   <string name="to">is owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Resource has owner Organization Component" xlink:href="#Reltype_resource_has_owner_is_owner_of_organization_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

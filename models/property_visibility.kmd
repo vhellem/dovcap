@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ nextoid="4">
+
+ <integer-type id="oid1" name="Property_Visibility_Line_Style" title="Property Visibility Line Style">
+  <range name="dashdotdot" min="0" max="0"/>
+  <range name="solid" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid2" name="Property_Visibility_Fill_Color" title="Property Visibility Fill Color">
+  <range name="#DCDADC" min="0" max="0"/>
+  <range name="#FFDCFF" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid3" name="Property_Visibility_Fill_Pattern" title="Property Visibility Fill Pattern">
+  <range name="dense1" min="0" max="0"/>
+  <range name="solid" min="1" max="1"/>
+ </integer-type>
+
+
+</metis>

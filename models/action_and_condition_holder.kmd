@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ typeviews="3"
+ nextoid="8">
+
+ <type id="oid1" name="Action_And_Condition_Holder" title="Action And Condition Holder" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - IF Configuration" xlink:href="object.kmd#oid1"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Action And Condition Holder" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="Pre_Processing" title="Pre Processing" usage="interface" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Action And Condition Holder" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Pre Condition" xlink:href="condition.kmd#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Pre Action" xlink:href="action.kmd#oid2"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Pre Processing" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Post_Processing" title="Post Processing" usage="interface" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Action And Condition Holder" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Post Action" xlink:href="action.kmd#oid3"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Post Processing" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid6" name="Recordset_Pre_Processing" title="Recordset Pre Processing" usage="interface" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Action And Condition Holder" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid7"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Pre Action" xlink:href="action.kmd#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Pre Condition" xlink:href="condition.kmd#oid2"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Recordset Pre Processing" xlink:href="#oid6" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Pre Processing" xlink:href="#oid2" tree-size="0.15" nested-size="0.15" behavior="nested" position="top" placement="internal">
+  <layout-link xlink:role="object" xlink:title="Pre- and post-processing Interface layout" xlink:href="../layouts/pre-and_postprocessing_interface_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Action And Condition Container" xlink:href="../symbols/action_and_condition_container.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Action And Condition Container" xlink:href="../symbols/action_and_condition_container.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/pre_processing_container.png"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Post Processing" xlink:href="#oid3" tree-size="0.15" nested-size="0.15" behavior="nested" position="bottom" placement="internal">
+  <layout-link xlink:role="object" xlink:title="Pre- and post-processing Interface layout" xlink:href="../layouts/pre-and_postprocessing_interface_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Action And Condition Container" xlink:href="../symbols/action_and_condition_container.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Action And Condition Container" xlink:href="../symbols/action_and_condition_container.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/post_processing_container.png"/>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:title="Recordset Pre Processing" xlink:href="#oid6" tree-size="0.15" nested-size="0.15" behavior="nested" position="top" placement="external">
+  <layout-link xlink:role="object" xlink:title="Pre- and post-processing Interface layout" xlink:href="../layouts/pre-and_postprocessing_interface_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Action And Condition Container" xlink:href="../symbols/action_and_condition_container.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Action And Condition Container" xlink:href="../symbols/action_and_condition_container.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/recordset_pre_processing_container.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="6"
+ instanceviews="7"
+ nextoid="1">
+
+ <model id="_002asge01g7sso6dnurr" name="Configurable Component" title="Configurable Component" desc="Configurable component model." submodel-flag="true">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Configurable Component</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="CC" xlink:href="#_002asge01gb6fcghimbl"/>
+  <part-link xlink:role="object" xlink:title="Composition set" xlink:href="#_002asli00uo6dla001vf"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr" xlink:actuate="user"/>
+   </bundle-rule>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+  <bundle>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asli00uo9akeo6oe1"/>
+  </bundle>
+ </model>
+
+ <object id="_002asge01g95ote1n8q7">
+  <valueset size="9" xlink:role="type" xlink:title="Connector" xlink:href="metis:stdtypes#oid125" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name" class="volatile">Configurable Component</string>
+   <string name="description" class="volatile"></string>
+   <pointer name="model" xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr" xlink:actuate="user"/>
+   <collection name="metamodels" structure="list" size="2" xlink:role="pointer-type" xlink:title="Metamodel Pointer" xlink:href="metis:std#oid55" xlink:actuate="user">
+    <pointer xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   </collection>
+   <integer name="viewState">1</integer>
+   <pointer name="type" class="volatile" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+   <integer name="lazyLoad">1</integer>
+   <integer name="bundleWeight">0</integer>
+  </valueset>
+  <part-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr"/>
+ </object>
+
+ <model id="_002asge01g95otvs8snf" name="Configurable Component" title="Configurable Component" desc="Configurable component model." submodel-ok="false" standalone-flag="true" reusable-flag="true">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Configurable Component</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Configurable Component" xlink:href="#_002asge01g95ote1n8q7"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr" xlink:actuate="user"/>
+   </bundle-rule>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g95otvs8snf" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g95otvs8snf" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="_002asge01gb6fcghimbl">
+  <valueset size="14" xlink:role="type" xlink:title="Configurable_component" xlink:href="../class/configurable_component.kmd#configurable_component" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">CC</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="ruleEvaluatedTo">-1</integer>
+   <integer name="ruleEngine">1</integer>
+   <string name="ruleCode"></string>
+   <integer name="status">-1</integer>
+   <string name="color" class="volatile">White</string>
+  </valueset>
+ </object>
+
+ <object id="_002asli00uo6dla001vf">
+  <valueset size="12" xlink:role="type" xlink:title="Composition set" xlink:href="../class/composition_set.kmd#composition_set" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Composition set</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <time name="dbms-admin.commitTime">000000000</time>
+   <date-time name="dbms-admin.system-modifiedTime">20070913 130845905</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="ruleEvaluatedTo">-1</integer>
+   <integer name="ruleEngine">1</integer>
+   <string name="ruleCode"></string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asli00uo9akeo6oe1">
+  <valueset size="10" xlink:role="type" xlink:title="Is_composed_using" xlink:href="../class/is_composed_using.kmd#is_composed_using" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070403 085733268</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="ruleEvaluatedTo">0</integer>
+   <integer name="ruleEngine">1</integer>
+   <string name="ruleCode"></string>
+   <string name="ruleIds"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="CC" xlink:href="#_002asge01gb6fcghimbl"/>
+  <target seq="0" xlink:role="object" xlink:title="Composition set" xlink:href="#_002asli00uo6dla001vf"/>
+ </relationship>
+
+ <modelview id="_002asge01g95otf9pm7e" title="Main" primary-flag="true" standalone-flag="true" reusable-flag="true" zoom-level="1.60014" x="328.341" y="272.266" seq="1" xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g95otvs8snf" behavior="nested" text-scale="1" decomp-scale="1" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Configurable Component" xlink:href="#_002asge01g95ph632t5v"/>
+ </modelview>
+
+ <objectview id="_002asge01g95ph632t5v" xlink:role="object" xlink:title="Configurable Component" xlink:href="#_002asge01g95ote1n8q7" state="open" behavior="connector" text-scale="1.70015" decomp-scale="1" left="0" top="0" width="672" height="544">
+  <child-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+ </objectview>
+
+ <objectview id="_002asge01gb6fcfbp4jm" xlink:role="object" xlink:title="CC" xlink:href="#_002asge01gb6fcghimbl" state="open" behavior="nested" text-scale="1.60014" decomp-scale="0.125" left="0" top="0" width="640" height="512">
+  <child-link xlink:role="objectview" xlink:title="Composition set" xlink:href="#_002asli00uo6e9l0p8p6"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asli00uo6e9t8ht8f"/>
+ </objectview>
+
+ <relationshipview id="_002asge01gb6fcl8iejl" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+  <target-link xlink:role="objectview" xlink:title="CC" xlink:href="#_002asge01gb6fcfbp4jm"/>
+ </relationshipview>
+
+ <objectview id="_002asli00uo6e9l0p8p6" xlink:role="object" xlink:title="Composition set" xlink:href="#_002asli00uo6dla001vf" state="closed" behavior="nested" text-scale="0.26669" decomp-scale="0.125" left="448" top="3136" width="4160" height="512">
+ </objectview>
+
+ <relationshipview id="_002asli00uo6e9t8ht8f" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="CC" xlink:href="#_002asge01gb6fcfbp4jm"/>
+  <target-link xlink:role="objectview" xlink:title="Composition set" xlink:href="#_002asli00uo6e9l0p8p6"/>
+ </relationshipview>
+
+ <modelview id="oid1" name="Main" title="Main" submodel-flag="true" zoom-level="1" x="-28.5" y="-22.5" xlink:role="model" xlink:title="Configurable Component" xlink:href="#_002asge01g7sso6dnurr" state="open" behavior="nested" text-scale="1.70015" decomp-scale="1" left="16" top="16" width="640" height="512" visible-in="browser">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Nested Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+  </symbol-override>
+  <child-link xlink:role="objectview" xlink:title="CC" xlink:href="#_002asge01gb6fcfbp4jm"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asge01gb6fcl8iejl"/>
+ </modelview>
+
+
+</metis>

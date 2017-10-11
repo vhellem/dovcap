@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="2">
+
+  <metamodel id="turnOffAutoloadOfOnlineDocs" 
+           name="turnOffAutoloadOfOnlineDocs" 
+           title="Turn off autoloading of Online Documents" 
+           desc="Methods to convert Online Document objects to avoid autoloading of the referenced documents when the model loads.">
+    <method-links>
+      <method-link xlink:role="cpp-method" xlink:href="metis:stdmethods#turnOffAutoloadOfOnlineDocsInStructure" xlink:actuate="user"/>
+      <method-link xlink:role="cpp-method" xlink:href="metis:stdmethods#turnOffAutoloadOfOnlineDocsInSelection" xlink:actuate="user"/>
+    </method-links>
+  </metamodel>
+
+</metis>

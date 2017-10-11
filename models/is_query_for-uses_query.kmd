@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="is_query_for_uses_query" title="is query for/uses query" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="mapping" xlink:href="mapping.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Data Accessor" xlink:href="../object_types/data_accessor.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Type Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Data Accessor" xlink:href="../object_types/data_accessor.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="List Property" xlink:href="../object_types/object_property.kmd#oid5" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="XML Entity" xlink:href="../../xmlif/object_types/xml_entity.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Type Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="is query for/uses query" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from">is query for</string>
+   <string name="to">uses query</string>
+  </valueset>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="is query for/uses query" xlink:href="#oid1" xlink:actuate="user">
+   <integer name="isProposal">0</integer>
+   <string name="lineStyle" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="is query for/uses query" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="mapping connection" xlink:href="../symbols/relationship_symbols/mapping.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+   <replace tag="line" property="linestyle" macro="(expand (property lineStyle))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_icons/query_for.png"/>
+ </typeview>
+
+
+</metis>

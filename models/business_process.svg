@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: business_process.svg</title>
+ <defs>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>business process basic</title>
+    <polygon points="0 0 16 64 0 128 
+     256 128 320 64 256 0 0 0 
+     0 0 0 0 0 0 0 0 
+     0 0 0 0 0 0 0 0 0 0 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffc8c8; fill-opacity:100%"     class="TAG:canvas"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16.0001" y="15"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text">text</text>
+      <rect x="16.0001" y="0" width="272" height="128"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>business process</title>
+    <polygon points="0.12025 0 16.1202 64 0.12025 128 
+     256.12 128 320.12 64 256.12 0 0.12025 0 
+     0.12025 0 0.12025 0 0.12025 0 0.12025 0 
+     0.12025 0 0.12025 0 0.12025 0 0.12025 0 0.12025 0 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffc8c8; fill-opacity:100%"     class="TAG:canvas"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16.1203" y="15"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text">text</text>
+      <rect x="16.1203" y="0" width="272" height="128"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <polygon points="288.146 96.0306 256.163 128.014 0 128 
+     7.45358 96 7.45358 96 7.45358 96 288.146 96.0306 
+     288.146 96.0306 288.146 96.0306 288.146 96.0306 288.146 96.0306 
+     288.146 96.0306 288.146 96.0306 "
+     style=" stroke:#000000; stroke-width:1; fill:#dcdcdc; fill-opacity:100%"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="105.835"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:13;"
+       class="TAG:strat_value">strat_value</text>
+      <rect x="8" y="93.8347" width="264.835" height="34.6012"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>
