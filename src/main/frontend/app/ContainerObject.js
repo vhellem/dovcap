@@ -46,6 +46,7 @@ class ContainerObject extends React.Component {
           dash={[10, 10]}
           cornerRadius={0}
           draggable={true}
+          onDragStart={console.log('DRAGGING')}
         />
         <Text
           width={this.state.width}
