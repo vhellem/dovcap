@@ -25,7 +25,6 @@ class Uploader extends Component {
     return fileNames;
   }
   updateModels() {
-    console.log('Update models');
     fetch('http://localhost:8080/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
@@ -46,6 +45,8 @@ class Uploader extends Component {
           if (err) {
             console.log(err);
           }
+          console.log(res);
+          this.updateModels();
           return res;
         }
       );
@@ -62,6 +63,7 @@ class Uploader extends Component {
         if (err) {
           console.log(err);
         }
+        this.updateModels();
         return res;
       }
     );
@@ -79,14 +81,19 @@ class Uploader extends Component {
             </tr>
           </thead>
           <tbody id="upload-table-body">
-            {this.getFileNameRows()}
+            {this.state.fileNames.map(file => {
+              return (<tr key={file}>
+                      <td>{file}</td>
+                      <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
+                    </tr>);
+            })}
           </tbody>
         </table>
         <h3>Select model to be uploaded: </h3>
         <Dropzone
           className="dropzone-container"
           multiple={false}
-          onDrop={this.dropHandler}
+          onDrop={this.dropHandler.bind(this)}
         >
           <div>Drop a file, or click to add!</div>
         </Dropzone>
