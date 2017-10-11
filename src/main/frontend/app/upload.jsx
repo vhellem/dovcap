@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import { selectModelFromBackend } from './utlities';
 const Dropzone = require('react-dropzone');
 const request = require('superagent');
+
 
 class Uploader extends Component {
   constructor(props) {
     super(props);
     this.state = {
       fileNames: [],
+      selected: '',
     };
   }
   componentWillMount() {
@@ -20,7 +23,7 @@ class Uploader extends Component {
     const fileNames = this.state.fileNames.map((file) =>
       <tr key={file}>
         <td>{file}</td>
-        <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
+        <td><button o nClick={() => this.handleDelete(file)}>Delete</button></td>
       </tr>);
     return fileNames;
   }
@@ -54,6 +57,20 @@ class Uploader extends Component {
       console.log('File type illegal!');
     }
   }
+  handleSelect(model) {
+    const req = new FormData();
+    req.append('name', model);
+    console.log(selectModelFromBackend(model));
+    /* request.post('/api/selectModel')
+      .send(req)
+      .end((err, res) => {
+        if (err) {
+          console.log(err);
+        }
+        console.log(res.text);
+      }); */
+    this.props.onModelSelect(model);
+  }
   handleDelete(fileName) {
     const req = new FormData();
     req.append('name', fileName.toString());
@@ -84,6 +101,7 @@ class Uploader extends Component {
             {this.state.fileNames.map(file => {
               return (<tr key={file}>
                       <td>{file}</td>
+                      <td><button onClick={() => this.handleSelect(file)}>Select</button></td>
                       <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
                     </tr>);
             })}

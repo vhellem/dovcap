@@ -11,6 +11,11 @@ class App extends React.Component {
     super();
     this.state = {
       selectedTab: '0',
+      model: 'simple.kmv',
+    };
+    App.propTypes = {
+      model: String.isRequired,
+      onModelSelect: Function.isRequired,
     };
   }
   onChange = activeKey => {
@@ -18,13 +23,16 @@ class App extends React.Component {
       selectedTab: activeKey,
     });
   };
+  selectModel = (model) => {
+    this.setState({ model });
+  }
 
   render() {
     return (
       <Tabs activeKey={this.state.selectedTab} onChange={this.onChange} type="card">
-        <TabPane tab="Workplace" key="0"><Workplace /></TabPane>
+        <TabPane tab="Workplace" key="0"><Workplace model={this.state.model} /></TabPane>
         <TabPane tab={<span><Icon type="file-add" />Upload</span>} key="1">
-          <Uploader />
+          <Uploader onModelSelect={ (model) => this.setState({ model }) } />
         </TabPane>
       </Tabs>
     );

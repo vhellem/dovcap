@@ -14,6 +14,19 @@ export function findModelByReference(reference, list) {
   return false;
 }
 
+export function selectModelFromBackend(model) {
+  const req = new FormData();
+  req.append('name', model);
+  request.post('/api/selectModel')
+    .send(req)
+    .end((err, res) => {
+      if (err) {
+        console.log(err);
+      }
+      return res;
+    });
+}
+
 export function getModelNamesFromBackend() {
   let files = [];
   fetch('http://localhost:8080/api/getModelNames')
