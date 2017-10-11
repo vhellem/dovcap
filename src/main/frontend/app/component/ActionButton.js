@@ -15,24 +15,26 @@ class ActionButton extends React.Component {
       y: props.parentY + containerJson.attributes.scaleY * props.parentHeight,
       name: containerJson.name,
       type: containerJson.type,
-      action: containerJson.objectReference.valueset.description
+      action: containerJson.objectReference.valueset.description,
     };
   }
   componentWillReceiveProps(nextProps) {
     var containerJson = nextProps.container;
-    console.log(containerJson);
     this.setState({
       width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
       height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
-      x: nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth,
-      y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight,
-      action: containerJson.objectReference.valueset.description
+      x:
+        nextProps.parentX +
+        containerJson.attributes.scaleX * nextProps.parentWidth,
+      y:
+        nextProps.parentY +
+        containerJson.attributes.scaleY * nextProps.parentHeight,
+      action: containerJson.objectReference.valueset.description,
     });
   }
 
   handleClick = () => {
     var x = String(this.state.action).trim();
-    console.log('Click: ' + x);
     debugger;
     eval(x);
   };
