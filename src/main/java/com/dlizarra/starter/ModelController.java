@@ -27,6 +27,15 @@ public class ModelController {
         }
 
         @CrossOrigin(origins = "http://localhost:9090")
+        @RequestMapping(value = "/api/selectModel", method=RequestMethod.POST)
+        public String selectModel(@RequestParam("name") String fileName) {
+          Parser parser = new Parser("models/"+fileName);
+          String json = parser.getJson();
+          System.out.println(json);
+          return json;
+        }
+
+        @CrossOrigin(origins = "http://localhost:9090")
         @RequestMapping(value="/api/getModelNames", method=RequestMethod.GET)
         public String getModelNames() {
           File folder = new File("models");
@@ -35,7 +44,9 @@ public class ModelController {
 
           for(File file : files) {
             if (file.isFile()) {
-             fileNames.add(file.getName());
+              if (file.getName().split(".")[1].equals("kmv")) {
+                fileNames.add(file.getName());
+              }
             }
           }
           String json = new Gson().toJson(fileNames);
