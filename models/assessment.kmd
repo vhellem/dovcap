@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:Assessment_UUID" name="Assessment" desc="Represents an assessment (for example, &#34;Capability Maturity&#34;) and the date of the assessment. An Assessment is a point in time when the measures defined on the Assessment (or on the Assessment Category) are taken for the components that are the target of the Assessment." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Assessment Component" xlink:href="../abstract_types/assessment_component.kmd#CompType_Semantics:Assessment_Component_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/assessment.kmd#UUID4_F6089A1F-4043-43B6-A987-7810F144A6C2"/>
+  <property name="targetValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Target Value" desc="The desired value of the associated measure at the time of the next assessment." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:Assessment_targetValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="assessmentValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Assessment Value" desc="The importance rating of the assessed Capability. Typically an Assessment will measure only one Capability." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:Assessment_assessmentValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="priorityLevel" xlink:role="integer-type" xlink:title="Assessment Priority Level" xlink:href="../primitive_types/assessment_priority_level.kmd#PrimType_Semantics:Assessment_Priority_Level_UUID" label="Priority Level" desc="The priority of this assessment." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:Assessment_priorityLevel_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Assessment" xlink:href="#CompType_Semantics:Assessment_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="18" xlink:role="type" xlink:title="Assessment" xlink:href="#CompType_Semantics:Assessment_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="measurementCriteria"></string>
+   <string name="measurementUnit"></string>
+   <string name="calculationMethod"></string>
+   <date name="assessmentDate">00000000</date>
+   <string name="targetDate"></string>
+   <integer name="targetValue">0</integer>
+   <integer name="assessmentValue">0</integer>
+   <integer name="priorityLevel">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

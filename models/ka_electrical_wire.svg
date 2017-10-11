@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: ka_electrical_wire.svg</title>
+ <defs>
+  <symbol id="_002as9o01euh8ihqjl6o" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Wire - top view</title>
+    <polyline points="0 0 0 49.2353 48 49.2353 
+     48 65.2353 0 65.2353 0 81.2353 48 81.2353 
+     48 97.2353 0 97.2353 0 113.235 48 113.235 
+     48 129.235 0 129.235 0 145.235 48 145.235 
+     48 161.235 0 161.235 0 177.235 48 177.235 
+     48 193.235 0 193.235 0 209.235 48 209.235 
+     48 225.235 0 225.235 0 241.235 48 241.235 
+     48 257.235 0 257.235 0 273.235 48 273.235 
+     48 289.235 0 289.235 0 305.235 144 305.235 
+     144 289.235 96 289.235 96 273.235 144 273.235 
+     144 257.235 96 257.235 96 241.235 144 241.235 
+     144 225.235 96 225.235 96 209.235 144 209.235 
+     144 193.235 96 193.235 96 177.235 144 177.235 
+     144 161.235 96 161.235 96 145.235 144 145.235 
+     144 129.235 96 129.235 96 113.235 144 113.235 
+     144 97.2353 96 97.2353 96 81.2353 144 81.2353 
+     144 65.2353 96 65.2353 96 49.2353 144 49.2353 
+     144 33.2353 3.52353 33.2353 3.52353 0"
+     style=" stroke:#000000; stroke-width:4;"     class="TAG:wires"></polyline>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="319"
+       style=" stroke:#000000; stroke-width:2; font-family:sans-serif; font-size:16;"
+       class="TAG:text">text</text>
+      <rect x="0" y="304" width="144" height="32"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="_002as9o01f1ves9cmths" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Wire - front view</title>
+    <rect x="0" y="0" width="576" height="16"
+     style=" stroke:#000000; stroke-width:2; fill:#000000; fill-opacity:100%"></rect>
+    <rect x="384" y="0" width="192" height="16"
+     style=" stroke:#000000; stroke-width:2; fill:#ffffff; fill-opacity:0%"></rect>
+    <rect x="0" y="0" width="192" height="16"
+     style=" stroke:#000000; stroke-width:2; fill:#ffffff; fill-opacity:0%"></rect>
+    <rect x="0" y="0" width="16" height="16"
+     style=" stroke:#000000; stroke-width:2; fill:#000000; fill-opacity:100%"></rect>
+    <rect x="32" y="0" width="16" height="16"
+     style=" stroke:#000000; stroke-width:2; fill:#000000; fill-opacity:100%"></rect>
+  </symbol>
+  <symbol id="_002as9o01hdp6cg5boph" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Wire - side view</title>
+    <rect x="0" y="0" width="1472" height="16"
+     style=" stroke:#ffffff; stroke-width:2; fill:#000000; fill-opacity:100%"></rect>
+  </symbol>
+ </defs>
+ <use xlink:href="#_002as9o01euh8ihqjl6o"/>
+</svg>

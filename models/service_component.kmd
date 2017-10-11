@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_ITG:ServiceComponent_UUID" name="service_component" title="Service Component" desc="The base type for service-related components." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="generic_component.kmd#BasicComponentType"/>
+  <property name="workspaceID" xlink:role="decimal-type" xlink:title="decimal" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:WorkspaceID_UUID" label="Workspace ID" desc="The ID of the workspace where the object lives." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceComponent_WorkspaceID_UUID&#34;;"/>
+  <property name="correspondingLiveID" xlink:role="decimal-type" xlink:title="decimal" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:CorrespondingLiveID_UUID" label="Corresponding Live ID" desc="For components in private workspaces, the ID of the corresponding component from the live workspace, if any." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceComponent_CorrespondingLiveID_UUID&#34;;"/>
+  <property name="lockingWorkspaceID" xlink:role="decimal-type" xlink:title="decimal" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:LockingWorkspaceID_UUID" label="Locking Workspace ID" desc="For components in the live workspace, this value indicates whether or not the component is locked by specifying the private workspace that has locked this component." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceComponent_LockingWorkspaceID_UUID&#34;;"/>
+  <property name="markedForDeletion" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Marked For Deletion" desc="For components in the live workspace, this value indicates if the component is marked to be deleted when the corresponding private workspace is checked in." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceComponent_MarkedForDeletion_UUID&#34;;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service Component" xlink:href="#CompType_ITG:ServiceComponent_UUID">
+   <string name="troux_color">#BCCD4D</string>
+   <string name="troux_iconAlias">DEFAULT_COMPONENT_ICON</string>
+   <string name="troux_shape">Ellipse</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Service Component" xlink:href="#CompType_ITG:ServiceComponent_UUID">
+   <decimal name="workspaceID">0</decimal>
+   <decimal name="correspondingLiveID"></decimal>
+   <decimal name="lockingWorkspaceID">0</decimal>
+  </valueset>
+ </type>
+
+</metis>

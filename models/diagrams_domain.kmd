@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="4"
+ nextoid="9">
+
+ <metamodel id="oid10" name="Metis_Diagramming_Library" title="Metis Diagramming Library">
+  <metamodel-links size="5">
+   <metamodel-link xlink:role="metamodel" xlink:title="State Transition Diagram" xlink:href="#oid11"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Sequence Diagram" xlink:href="#oid12"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Timeline Diagram Types" xlink:href="#oid13"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Swimlane Diagram Types" xlink:href="#oid15"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Utilizing types" xlink:href="#oid14"/>
+  </metamodel-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="DeveloperEd.ModelEd.UriToolBar.State_Transition_Diagram" title="State Transition Diagram">
+  <complex-type-links size="9">
+   <complex-type-link xlink:role="type" xlink:title="State Diagram" xlink:href="../object_types/state_diagram.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Composite State" xlink:href="../object_types/state_diagram.kmd#oid106" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Concurrent State" xlink:href="../object_types/state_diagram.kmd#oid107" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Simple State" xlink:href="../object_types/state_diagram.kmd#oid103" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Initial State" xlink:href="../object_types/state_diagram.kmd#oid101" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Final State" xlink:href="../object_types/state_diagram.kmd#oid102" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Fork State" xlink:href="../object_types/state_diagram.kmd#oid104" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Join State" xlink:href="../object_types/state_diagram.kmd#oid105" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Transition" xlink:href="../relationship_types/transition.kmd#oid1"/>
+  </complex-type-links>
+  <typeview-links size="8">
+   <typeview-link xlink:role="typeview" xlink:title="Initial State" xlink:href="../object_types/state_diagram.kmd#oid1101"/>
+   <typeview-link xlink:role="typeview" xlink:title="Final State" xlink:href="../object_types/state_diagram.kmd#oid1102"/>
+   <typeview-link xlink:role="typeview" xlink:title="Simple State" xlink:href="../object_types/state_diagram.kmd#oid1103"/>
+   <typeview-link xlink:role="typeview" xlink:title="Composite State" xlink:href="../object_types/state_diagram.kmd#oid1106"/>
+   <typeview-link xlink:role="typeview" xlink:title="State Diagram" xlink:href="../object_types/state_diagram.kmd#oid1001"/>
+   <typeview-link xlink:role="typeview" xlink:title="Concurrent State" xlink:href="../object_types/state_diagram.kmd#oid1107"/>
+   <typeview-link xlink:role="typeview" xlink:title="Join State" xlink:href="../object_types/state_diagram.kmd#oid1105"/>
+   <typeview-link xlink:role="typeview" xlink:title="Fork Stat" xlink:href="../object_types/state_diagram.kmd#oid1104"/>
+  </typeview-links>
+ </metamodel>
+
+ <metamodel id="oid3" name="DeveloperEd.ModelEd.UriToolBar.Sequence_Diagram" title="Sequence Diagram">
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="Sequence Diagram" xlink:href="../object_types/sequence_diagram.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="../object_types/sequence_diagram.kmd#oid3" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="../object_types/sequence_diagram.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Sequence Relationship" xlink:href="../object_types/sequence_diagram.kmd#oid5" xlink:actuate="user"/>
+  </complex-type-links>
+  <typeview-links size="3">
+   <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram" xlink:href="../object_types/sequence_diagram.kmd#oid1001"/>
+   <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram Node" xlink:href="../object_types/sequence_diagram.kmd#oid1003"/>
+   <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram Line" xlink:href="../object_types/sequence_diagram.kmd#oid1002"/>
+  </typeview-links>
+ </metamodel>
+
+ <metamodel id="oid4" name="DeveloperEd.ModelEd.UriToolBar.Timeline_Diagram" title="Timeline Diagram">
+  <complex-type-links size="5">
+   <complex-type-link xlink:role="type" xlink:title="Timeline Diagram" xlink:href="../object_types/timeline_diagram.kmd#oid11" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Timeline" xlink:href="../object_types/timeline_diagram.kmd#oid21" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Timeline Milestone" xlink:href="../object_types/timeline_diagram.kmd#oid32" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Timeline Event" xlink:href="../object_types/timeline_diagram.kmd#oid41" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Event_Milestone" xlink:href="../object_types/timeline_diagram.kmd#oid81" xlink:actuate="user"/>
+  </complex-type-links>
+  <typeview-links size="4">
+   <typeview-link xlink:role="typeview" xlink:title="Timeline Diagram" xlink:href="../object_types/timeline_diagram.kmd#oid111"/>
+   <typeview-link xlink:role="typeview" xlink:title="Timeline" xlink:href="../object_types/timeline_diagram.kmd#oid121"/>
+   <typeview-link xlink:role="typeview" xlink:title="Timeline Milestone" xlink:href="../object_types/timeline_diagram.kmd#oid132"/>
+   <typeview-link xlink:role="typeview" xlink:title="Timeline Event" xlink:href="../object_types/timeline_diagram.kmd#oid141"/>
+  </typeview-links>
+ </metamodel>
+
+ <metamodel id="oid5" name="DeveloperEd.ModelEd.UriToolBar.Swimlane_Diagram" title="Swimlane Diagram">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Swimlane Diagram" xlink:href="../object_types/swimlane_diagram.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="../object_types/swimlane_diagram.kmd#oid12" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Vertical Swimlane" xlink:href="../object_types/swimlane_diagram.kmd#oid13" xlink:actuate="user"/>
+  </complex-type-links>
+  <typeview-links size="2">
+   <typeview-link xlink:role="typeview" xlink:title="Swimlane Diagram" xlink:href="../object_types/swimlane_diagram.kmd#oid1001"/>
+   <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="../object_types/swimlane_diagram.kmd#oid1012"/>
+   <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="../object_types/swimlane_diagram.kmd#oid1013"/>
+  </typeview-links>
+ </metamodel>
+
+ <metamodel id="oid11" name="Lib.State_Transition_Diagram" title="State Transition DiagramLibrary">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="State Transition Diagram" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="3">
+   <complex-type-link xlink:role="type" xlink:title="State Vertex" xlink:href="../object_types/state_diagram.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="State" xlink:href="../object_types/state_diagram.kmd#oid4" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pseudo State" xlink:href="../object_types/state_diagram.kmd#oid3" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid12" name="Lib.Sequence_Diagram" title="Sequence Diagram Library">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Sequence Diagram" xlink:href="#oid3"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="../object_types/sequence_diagram.kmd#oid4" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Sequence Represents" xlink:href="../object_types/sequence_diagram.kmd#oid6" xlink:actuate="user"/>
+  </complex-type-links>
+  <typeview-links size="1">
+   <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram Coordinate" xlink:href="../object_types/sequence_diagram.kmd#oid1004"/>
+  </typeview-links>
+ </metamodel>
+
+ <metamodel id="oid13" name="Lib.Timeline_Diagram" title="Timeline Diagram Library">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Timeline Diagram" xlink:href="#oid4"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Timeline Start" xlink:href="../object_types/timeline_diagram.kmd#oid33" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Timeline End" xlink:href="../object_types/timeline_diagram.kmd#oid34" xlink:actuate="user"/>
+  </complex-type-links>
+  <typeview-links size="2">
+   <typeview-link xlink:role="typeview" xlink:title="Timeline Start" xlink:href="../object_types/timeline_diagram.kmd#oid133"/>
+   <typeview-link xlink:role="typeview" xlink:title="Timeline End" xlink:href="../object_types/timeline_diagram.kmd#oid134"/>
+  </typeview-links>
+ </metamodel>
+
+ <metamodel id="oid14" name="Lib.Utilizing_types" title="Utilizing types">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="../object_types/diagram.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="ToSystem Basetype" xlink:href="../relationship_types/date_feedback.kmd#oid2" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid15" name="Lib.Swimlane_Diagram" title="Swimlane Diagram Library">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Swimlane Diagram" xlink:href="#oid5"/>
+  </metamodel-links>
+  <complex-type-links size="5">
+   <complex-type-link xlink:role="type" xlink:title="Swimlane" xlink:href="../object_types/swimlane_diagram.kmd#oid11" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Title" xlink:href="../object_types/swimlane_diagram.kmd#oid21" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Title Left" xlink:href="../object_types/swimlane_diagram.kmd#oid22" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Title Right" xlink:href="../object_types/swimlane_diagram.kmd#oid23" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Title Top" xlink:href="../object_types/swimlane_diagram.kmd#oid24" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Title Bottom" xlink:href="../object_types/swimlane_diagram.kmd#oid25" xlink:actuate="user"/>
+  </complex-type-links>
+  <typeview-links size="5">
+   <typeview-link xlink:role="typeview" xlink:title="Swimlane" xlink:href="../object_types/swimlane_diagram.kmd#oid1011"/>
+   <typeview-link xlink:role="typeview" xlink:title="Title" xlink:href="../object_types/swimlane_diagram.kmd#oid1021"/>
+   <typeview-link xlink:role="typeview" xlink:title="Title Left" xlink:href="../object_types/swimlane_diagram.kmd#oid1022"/>
+   <typeview-link xlink:role="typeview" xlink:title="Title Right" xlink:href="../object_types/swimlane_diagram.kmd#oid1023"/>
+   <typeview-link xlink:role="typeview" xlink:title="Title Top" xlink:href="../object_types/swimlane_diagram.kmd#oid1024"/>
+   <typeview-link xlink:role="typeview" xlink:title="Title Bottom" xlink:href="../object_types/swimlane_diagram.kmd#oid1025"/>
+  </typeview-links>
+ </metamodel>
+
+</metis>

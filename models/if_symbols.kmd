@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ symbolpalettes="3"
+ nextoid="4">
+
+ <symbol-palette id="oid1" name="Interface_Configuration_Symbols" title="Interface Configuration Symbols">
+  <symbol-link xlink:role="symbol" xlink:title="Relationship Type Update" xlink:href="../symbols/object_type_update.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Object Type Update" xlink:href="../symbols/object_type_update.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Validation Error" xlink:href="../symbols/validation_comments.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Validation Warning" xlink:href="../symbols/validation_comments.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Automapper Question" xlink:href="../symbols/validation_comments.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Action And Condition Container" xlink:href="../symbols/action_and_condition_container.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Post Condition" xlink:href="../symbols/condition.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Pre Condition" xlink:href="../symbols/condition.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Post Action" xlink:href="../symbols/action.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Pre Action" xlink:href="../symbols/action.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Interface Mapping" xlink:href="../symbols/interface_mapping.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Source Attribute" xlink:href="../symbols/attribute.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Object Mapping" xlink:href="../symbols/object_type_mapping.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Metis Attribute" xlink:href="../symbols/attribute.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Complex Property" xlink:href="../symbols/attribute.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Relationship Mapping" xlink:href="../symbols/object_type_mapping.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Parameter" xlink:href="../symbols/parameter.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Has Comment In" xlink:href="../symbols/relationship_symbols/has_comment_in.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Uses As Conditional" xlink:href="../../xmlif/symbols/relationship_symbols/uses_as_conditional.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Relationship Mapping End Point" xlink:href="../symbols/relationship_symbols/relationship_mapping_endpoint.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Parent Assignment Relationship" xlink:href="../symbols/relationship_symbols/parent_assignment.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="is mapped by" xlink:href="../symbols/relationship_symbols/mapping.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="mapping connection" xlink:href="../symbols/relationship_symbols/mapping.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="maps to" xlink:href="../symbols/relationship_symbols/mapping.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="precedes/follows" xlink:href="../symbols/relationship_symbols/precedes-follows.svg#oid1" xlink:actuate="user"/>
+ </symbol-palette>
+
+ <symbol-palette id="oid2" name="Interface_Configuration_Symbol_Components" title="Interface Configuration Symbol Components">
+  <symbol-palette-link xlink:role="symbol-palette" xlink:title="Interface Configuration Symbol Bodies" xlink:href="#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Comment Stop" xlink:href="../symbols/common_symbol_components.svg#oid18" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Comment Warning" xlink:href="../symbols/common_symbol_components.svg#oid17" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Comment Question" xlink:href="../symbols/common_symbol_components.svg#oid16" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Stringy Star" xlink:href="../symbols/common_symbol_components.svg#oid15" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Delete/Discard" xlink:href="../symbols/delete-discard.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Data Source Lightning" xlink:href="../symbols/common_symbol_components.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="View Glasses" xlink:href="../symbols/common_symbol_components.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Key" xlink:href="../symbols/common_symbol_components_field_status.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Star" xlink:href="../symbols/common_symbol_components_field_status.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Left Hand" xlink:href="../symbols/common_symbol_components_field_status.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Right Hand" xlink:href="../symbols/common_symbol_components_field_status.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Deleted Banner" xlink:href="../symbols/common_symbol_components_field_status.svg#oid5" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Object Mapping Object Symbol" xlink:href="../symbols/common_symbol_components.svg#oid14" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Relationship Mapping Relationship Symbol" xlink:href="../symbols/common_symbol_components.svg#oid12" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Metis Logo" xlink:href="../symbols/common_symbol_components.svg#oid11" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Generator Gear" xlink:href="../symbols/common_symbol_components.svg#oid19" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Relationship Mapping Decomposition Symbol" xlink:href="../symbols/common_symbol_components.svg#oid20" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Relationship Mapping Member Symbol" xlink:href="../symbols/common_symbol_components.svg#oid21" xlink:actuate="user"/>
+ </symbol-palette>
+
+ <symbol-palette id="oid3" name="Interface_Configuration_Symbol_Bodies" title="Interface Configuration Symbol Bodies">
+  <symbol-link xlink:role="symbol" xlink:title="Mapping Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid11" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Parameter Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid5" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Origin Attribute Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Atomic Property Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Data Source / Query - XML" xlink:href="../symbols/common_symbol_components_bodies.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Data Source / Query - DB" xlink:href="../symbols/common_symbol_components_bodies.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Type Mapping Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid8" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Update Options Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid9" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Mapping Background" xlink:href="../symbols/common_symbol_components_bodies.svg#oid10" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Complex Property Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid6" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Comment Body" xlink:href="../symbols/common_symbol_components_bodies.svg#oid12" xlink:actuate="user"/>
+ </symbol-palette>
+
+
+</metis>

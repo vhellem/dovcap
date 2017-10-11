@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="4"
+ instanceviews="8"
+ nextoid="1">
+
+ <object id="UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41">
+  <valueset size="17" xlink:role="type" xlink:title="ME Marshalling" xlink:href="metis:troux#TrouxMarshalling" xlink:actuate="user">
+   <string name="name">Troux Metaverse</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <string name="serverName">servername</string>
+   <integer name="secureHTTP">0</integer>
+   <string name="repositoryPath">bpserver/do</string>
+   <string name="uploadJobName">MCT</string>
+   <integer name="views-customize.createViews">1</integer>
+   <integer name="news-customize.numberOfNews">4</integer>
+   <integer name="news-customize.newsClear">0</integer>
+   <string name="tuxJobId"></string>
+   <string name="tuxDebugOutputFilename"></string>
+   <string name="bluePrintID">1</string>
+   <string name="bluePrintName">Troux Blueprint</string>
+   <string name="bluePrintChange">0</string>
+   <string name="trouxUUID4Update">0</string>
+   <integer name="trouxCollaborationEnabled">0</integer>
+  </valueset>
+  <part-link xlink:role="object" xlink:href="#UUID4_3DF83B8C-2C7C-42DF-AEF9-3E690AC8A3FE"/>
+ </object>
+
+ <object id="UUID4_3DF83B8C-2C7C-42DF-AEF9-3E690AC8A3FE">
+  <valueset size="1" xlink:role="type" xlink:title="Pushpin" xlink:href="metis:stdtypes#oid21" xlink:actuate="user">
+   <string name="name"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#UUID4_DB9575C5-1F57-4411-B049-F30A47F68AF6"/>
+ </object>
+
+ <model id="UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" name="Troux Semantics Extension Pack 1 Blank Model" title="Troux Semantics Extension Pack 1 Blank Model" desc="Troux Semantics Extension Pack 1 Blank Model with Repository Connection." standalone-flag="true">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../../meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Metaverse Queries" xlink:href="../../meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Semantics Extension Pack 1" xlink:href="../metamodels/troux_semantics_extension_pack_1.kmd#UUID4_1546F8C0-69DB-4414-8F26-A9EF14987A35" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Troux Semantics Extension Pack 1 Blank Model</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="servername" xlink:href="#UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41"/>
+  <member-link xlink:role="object" xlink:title="servername" xlink:href="#UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Blank Model" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Blank Model" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="UUID4_DB9575C5-1F57-4411-B049-F30A47F68AF6">
+  <valueset size="2" xlink:role="type" xlink:title="Comment" xlink:href="metis:stdtypes#oid22" xlink:actuate="user">
+   <string name="name">&#60;h2&#62;Marshalling Object&#60;/h2&#62;</string>
+   <string name="description">The Marshalling object stores information required to connect to the Metaverse, such as the name and location of the server. The Marshalling object is also used to keep track of the queries run against the Metaverse. Queries are stored here for future refresh operations.&#60;p&#62; 
+The Marshalling object displays the name of the Metaverse and the state to which you are connected. The News objects at the bottom display the number of instances from the Metaverse that were added or updated during query or refresh operations. A separate News object is created each day.
+&#60;br/&#62;
+&#60;h4&#62;To configure the Marshalling object:&#60;/h4&#62;
+&#60;ol&#62;
+&#60;li&#62;Right-click the object and click &#60;b&#62;Properties&#60;/b&#62;.&#60;/li&#62;
+&#60;li&#62;On the &#60;b&#62;Instance&#60;/b&#62; tab,  enter the location of the Metaverse in the &#60;b&#62;Server Name&#60;/b&#62; field.&#60;/li&#62;
+&#60;li&#62;If the server is running in secure mode (SSL), select the &#60;b&#62;Use Secure HTTP Connection&#60;/b&#62; option.&#60;/li&#62;
+&#60;/ol&#62;
+&#60;br/&#62;
+Tip: See the Troux Architect online help for more information about configuring the Marshalling object, querying the Metaverse, and connecting to a different state. 
+</string>
+  </valueset>
+ </object>
+
+ <relationshipview id="_002as0b01f853paqpehv" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:href="#_002as0b01f853ps5nnfd"/>
+  <target-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+ </relationshipview>
+
+ <relationshipview id="_002as0b01f853pjd3n0g" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <target-link xlink:role="objectview" xlink:href="#_002as0b01f853ps5nnfd"/>
+ </relationshipview>
+
+ <objectview id="_002as0b01f853po9srvf" xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#UUID4_DB9575C5-1F57-4411-B049-F30A47F68AF6" state="open" behavior="tree" text-scale="0.041639" decomp-scale="2" left="1072.19" top="-2031.34" width="7564.53" height="9448.76">
+ </objectview>
+
+ <objectview id="_002as0b01f853ps5nnfd" xlink:role="object" xlink:href="#UUID4_3DF83B8C-2C7C-42DF-AEF9-3E690AC8A3FE" state="open" behavior="tree" text-scale="0.25" decomp-scale="0.5" left="2743.74" top="617.995" width="144" height="256">
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0b01f853paqpehv"/>
+  <child-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+ </objectview>
+
+ <modelview id="_002as0b01f99768ufljt" name="Data" title="Data" primary-flag="true" standalone-flag="true" zoom-level="0.0844026" x="-232.651" y="-74.767" seq="1" xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Blank Model" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+ </modelview>
+
+ <relationshipview id="_002as0h01f8ibv4sh1dg" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <target-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+ </relationshipview>
+
+ <objectview id="_002as0h01f8ibvgmutui" xlink:role="object" xlink:title="servername" xlink:href="#UUID4_105B4E74-25E6-48B3-A4F5-2D6F47340F41" state="open" behavior="nested" text-scale="1" decomp-scale="0.125" left="-260.131" top="-387.571" width="391.529" height="512">
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0h01f8ibv4sh1dg"/>
+  <child-link xlink:role="objectview" xlink:href="#_002as0b01f853ps5nnfd"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0b01f853pjd3n0g"/>
+ </objectview>
+
+ <modelview id="oid1" name="Main" title="Troux Metaverse" standalone-flag="true" zoom-level="0.822095" x="166.187" y="-131.743" seq="2" xlink:role="model" xlink:title="Troux Semantics Extension Pack 1 Blank Model" xlink:href="#UUID4_982EB76B-CF49-47D1-B6EF-AE3A3B096C8B" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+ </modelview>
+
+
+</metis>

@@ -1,0 +1,867 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="33"
+ nextoid="1">
+
+ <type id="Reltype_action_leads_to_follows_from_constraint_UUID" name="action_leads_to_follows_from_constraint" title="Action leads to Constraint" desc="Use this relationship to model that an action leads to a constraint or condition." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Constraint" xlink:href="../objecttypes/constraint.kmd#CompType_MEAF:Constraint_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Action leads to Constraint" xlink:href="#Reltype_action_leads_to_follows_from_constraint_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Action leads to Constraint" xlink:href="#Reltype_action_leads_to_follows_from_constraint_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_action_leads_to_follows_from_factor_UUID" name="action_leads_to_follows_from_factor" title="Action leads to Factor" desc="Use this relationship to model that an action leads to an issue, could be an opportunity or strength as well as a threat or weakness." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Action leads to Factor" xlink:href="#Reltype_action_leads_to_follows_from_factor_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Action leads to Factor" xlink:href="#Reltype_action_leads_to_follows_from_factor_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_component_leads_to_follows_from_requirement_UUID" name="analysis_component_leads_to_follows_from_requirement" title="Analysis Component leads to Requirement" desc="Use this relationship to connect an analysis element to the requirement that it sets." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis Component leads to Requirement" xlink:href="#Reltype_analysis_component_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis Component leads to Requirement" xlink:href="#Reltype_analysis_component_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_leads_to_follows_from_action_UUID" name="analysis_leads_to_follows_from_action" title="Analysis leads to Action" desc="Use this relationship to specify that an analysis element leads to an action." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis" xlink:href="../objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis leads to Action" xlink:href="#Reltype_analysis_leads_to_follows_from_action_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis leads to Action" xlink:href="#Reltype_analysis_leads_to_follows_from_action_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_leads_to_follows_from_finding_UUID" name="analysis_leads_to_follows_from_finding" title="Analysis leads to Finding" desc="Use this relationship to specify that an analysis element leads to a finding." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis" xlink:href="../objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Finding" xlink:href="../objecttypes/finding.kmd#CompType_MEAF:Finding_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis leads to Finding" xlink:href="#Reltype_analysis_leads_to_follows_from_finding_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis leads to Finding" xlink:href="#Reltype_analysis_leads_to_follows_from_finding_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_analysis_leads_to_follows_from_information_need_UUID" name="analysis_leads_to_follows_from_information_need" title="Analysis leads to Information Need" desc="Use this relationship to specify that an analysis element leads to an information need." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Analysis" xlink:href="../objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Analysis leads to Information Need" xlink:href="#Reltype_analysis_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Analysis leads to Information Need" xlink:href="#Reltype_analysis_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_business_question_leads_to_follows_from_information_need_UUID" name="business_question_leads_to_follows_from_information_need" title="Business Question leads to Information Need" desc="Use this relationship to specify that a business question leads to an information need." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Question" xlink:href="../objecttypes/business_question.kmd#CompType_MEAF:BusinessQuestion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Question leads to Information Need" xlink:href="#Reltype_business_question_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Business Question leads to Information Need" xlink:href="#Reltype_business_question_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_factor_leads_to_follows_from_factor_UUID" name="factor_leads_to_follows_from_factor" title="Factor leads to Factor" desc="Use this relationship to model that a problem or issue is caused by another problem or issue." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Factor leads to Factor" xlink:href="#Reltype_factor_leads_to_follows_from_factor_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Factor leads to Factor" xlink:href="#Reltype_factor_leads_to_follows_from_factor_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_factor_leads_to_follows_from_goal_UUID" name="factor_leads_to_follows_from_goal" title="Factor leads to Goal" desc="Use this relationship to model that an opportunity (issue) promotes (leads to) a goal." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Factor leads to Goal" xlink:href="#Reltype_factor_leads_to_follows_from_goal_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Factor leads to Goal" xlink:href="#Reltype_factor_leads_to_follows_from_goal_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_factor_leads_to_follows_from_information_need_UUID" name="factor_leads_to_follows_from_information_need" title="Factor leads to Information Need" desc="Use this relationship to specify that an external factor or issue leads to an information need." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Factor leads to Information Need" xlink:href="#Reltype_factor_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Factor leads to Information Need" xlink:href="#Reltype_factor_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_factor_leads_to_follows_from_policy_component_UUID" name="factor_leads_to_follows_from_policy_component" title="Factor leads to Policy Component" desc="Use this relationship to specify that an external factor or issue leads to a policy, principle or rule." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Factor leads to Policy Component" xlink:href="#Reltype_factor_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Factor leads to Policy Component" xlink:href="#Reltype_factor_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_factor_leads_to_follows_from_technology_UUID" name="factor_leads_to_follows_from_technology" title="Factor leads to Technology" desc="Use this relationship to specify that an external factor or issue leads to an enabling technology." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Factor leads to Technology" xlink:href="#Reltype_factor_leads_to_follows_from_technology_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Factor leads to Technology" xlink:href="#Reltype_factor_leads_to_follows_from_technology_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_finding_leads_to_follows_from_finding_UUID" name="finding_leads_to_follows_from_finding" title="Finding leads to Finding" desc="Use this relationship to specify that a finding leads to another finding, e.g. a conclusion." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Finding" xlink:href="../objecttypes/finding.kmd#CompType_MEAF:Finding_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Finding" xlink:href="../objecttypes/finding.kmd#CompType_MEAF:Finding_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Finding leads to Finding" xlink:href="#Reltype_finding_leads_to_follows_from_finding_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Finding leads to Finding" xlink:href="#Reltype_finding_leads_to_follows_from_finding_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_finding_leads_to_follows_from_information_need_UUID" name="finding_leads_to_follows_from_information_need" title="Finding leads to Information Need" desc="Use this relationship to specify that abusiness question leads to an information need." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Finding" xlink:href="../objecttypes/finding.kmd#CompType_MEAF:Finding_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Finding leads to Information Need" xlink:href="#Reltype_finding_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Finding leads to Information Need" xlink:href="#Reltype_finding_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_finding_leads_to_follows_from_policy_component_UUID" name="finding_leads_to_follows_from_policy_component" title="Finding leads to Policy Component" desc="Use this relationship to specify that a finding leads to a policy or IT principle." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Finding" xlink:href="../objecttypes/finding.kmd#CompType_MEAF:Finding_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Finding leads to Policy Component" xlink:href="#Reltype_finding_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Finding leads to Policy Component" xlink:href="#Reltype_finding_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_function_leads_to_follows_from_function_UUID" name="function_leads_to_follows_from_function" title="Function leads to Function" desc="Use this relationship to specify that a function translates into (leads to) another function." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Function leads to Function" xlink:href="#Reltype_function_leads_to_follows_from_function_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Function leads to Function" xlink:href="#Reltype_function_leads_to_follows_from_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_goal_leads_to_follows_from_goal_UUID" name="goal_leads_to_follows_from_goal" title="Goal leads to Goal" desc="Use this relationship to specify goals leading to goals." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Goal leads to Goal" xlink:href="#Reltype_goal_leads_to_follows_from_goal_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Goal leads to Goal" xlink:href="#Reltype_goal_leads_to_follows_from_goal_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_initiative_leads_to_follows_from_initiative_UUID" name="initiative_leads_to_follows_from_initiative" title="Initiative leads to Initiative" desc="Use this relationship to specify initiatives leading to initiatives." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Initiative" xlink:href="../objecttypes/initiative.kmd#CompType_MEAF:Initiative_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Initiative" xlink:href="../objecttypes/initiative.kmd#CompType_MEAF:Initiative_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Initiative leads to Initiative" xlink:href="#Reltype_initiative_leads_to_follows_from_initiative_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Initiative leads to Initiative" xlink:href="#Reltype_initiative_leads_to_follows_from_initiative_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_leads_to-follows_from_UUID" name="leads_to-follows_from" title="leads to" desc="Allows you to connect an Environmental Factor to an Enabling Technology, a Rule or a Business Question." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllleads_to-follows_from" xlink:role="criteria" xlink:title="Find all Leads to relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_leads_to-follows_from_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_measure_leads_to_follows_from_information_need_UUID" name="measure_leads_to_follows_from_information_need" title="Measure leads to Information Need" desc="Use this relationship to specify that a measure (e.g. a KPI or metric) leads to an information need." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Measure" xlink:href="../objecttypes/measure.kmd#CompType_MEAF:Measure_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Measure leads to Information Need" xlink:href="#Reltype_measure_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Measure leads to Information Need" xlink:href="#Reltype_measure_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_policy_component_leads_to_follows_from_implication_UUID" name="policy_component_leads_to_follows_from_implication" title="Policy Component leads to Implication" desc="Use this relationship to show how an (IT) implication is implied by (followed from) an (IT) principle or rule." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Implication" xlink:href="../objecttypes/implication.kmd#CompType_MEAF:Implication_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Policy Component leads to Implication" xlink:href="#Reltype_policy_component_leads_to_follows_from_implication_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Policy Component leads to Implication" xlink:href="#Reltype_policy_component_leads_to_follows_from_implication_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_policy_component_leads_to_follows_from_policy_component_UUID" name="policy_component_leads_to_follows_from_policy_component" title="Policy Component leads to Policy Component" desc="Use this relationship to specify that a policy or principle leads to definition of a rule." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Policy Component leads to Policy Component" xlink:href="#Reltype_policy_component_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Policy Component leads to Policy Component" xlink:href="#Reltype_policy_component_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_policy_component_leads_to_follows_from_requirement_UUID" name="policy_component_leads_to_follows_from_requirement" title="Policy Component leads to Requirement" desc="Use this relationship to specify that policies and rules leads to requirements." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Policy Component leads to Requirement" xlink:href="#Reltype_policy_component_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Policy Component leads to Requirement" xlink:href="#Reltype_policy_component_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_requirement_leads_to_follows_from_action_UUID" name="requirement_leads_to_follows_from_action" title="Requirement leads to Action" desc="Use this relationship to specify that a requirement leads to a change, like an initiative, project or task." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requirement leads to Action" xlink:href="#Reltype_requirement_leads_to_follows_from_action_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Requirement leads to Action" xlink:href="#Reltype_requirement_leads_to_follows_from_action_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_requirement_leads_to_follows_from_change_component_UUID" name="requirement_leads_to_follows_from_change_component" title="Requirement leads to Change Component" desc="Use this relationship to specify that a requirement leads to an action." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requirement leads to Change Component" xlink:href="#Reltype_requirement_leads_to_follows_from_change_component_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Requirement leads to Change Component" xlink:href="#Reltype_requirement_leads_to_follows_from_change_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_requirement_leads_to_follows_from_policy_component_UUID" name="requirement_leads_to_follows_from_policy_component" title="Requirement leads to Policy Component" desc="Use this relationship to specify that a requirement leads to a policy, principle or rule, e.g. an IT requirement can lead to an IT design rule." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requirement leads to Policy Component" xlink:href="#Reltype_requirement_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Requirement leads to Policy Component" xlink:href="#Reltype_requirement_leads_to_follows_from_policy_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_requirement_leads_to_follows_from_requirement_UUID" name="requirement_leads_to_follows_from_requirement" title="Requirement leads to Requirement" desc="Use this relationship to model that a requirement implies or leads to another requirement." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requirement leads to Requirement" xlink:href="#Reltype_requirement_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Requirement leads to Requirement" xlink:href="#Reltype_requirement_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_requirement_leads_to_follows_from_strategy_UUID" name="requirement_leads_to_follows_from_strategy" title="Requirement leads to Strategy" desc="Use this relationship to specify that a requirement leads to a transition strategy." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requirement leads to Strategy" xlink:href="#Reltype_requirement_leads_to_follows_from_strategy_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Requirement leads to Strategy" xlink:href="#Reltype_requirement_leads_to_follows_from_strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_component_leads_to_follows_from_requirement_UUID" name="strategy_component_leads_to_follows_from_requirement" title="Strategy Component leads to Requirement" desc="Use this relationship to specify strategy objects that leads to requirements." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy Component" xlink:href="../abstracttypes/strategy_component.kmd#CompType_MEAF:StrategyComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_MEAF:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy Component leads to Requirement" xlink:href="#Reltype_strategy_component_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy Component leads to Requirement" xlink:href="#Reltype_strategy_component_leads_to_follows_from_requirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_leads_to_follows_from_strategy_UUID" name="strategy_leads_to_follows_from_strategy" title="Strategy leads to Strategy" desc="Use this relationship to specify how market or product strategies support general business strategies." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy leads to Strategy" xlink:href="#Reltype_strategy_leads_to_follows_from_strategy_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy leads to Strategy" xlink:href="#Reltype_strategy_leads_to_follows_from_strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_success_factor_leads_to_follows_from_information_need_UUID" name="success_factor_leads_to_follows_from_information_need" title="Success Factor leads to Information Need" desc="Use this relationship to specify that a success factor gives rise to an information need." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Success Factor" xlink:href="../objecttypes/success_factor.kmd#CompType_MEAF:SuccessFactor_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Success Factor leads to Information Need" xlink:href="#Reltype_success_factor_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Success Factor leads to Information Need" xlink:href="#Reltype_success_factor_leads_to_follows_from_information_need_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_trend_leads_to_follows_from_factor_UUID" name="trend_leads_to_follows_from_factor" title="Trend leads to Factor" desc="Use this relationship to connect a trend (some major development in a market or environment) to an environmental factor." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Trend" xlink:href="../objecttypes/trend.kmd#CompType_MEAF:Trend_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Factor" xlink:href="../objecttypes/factor.kmd#CompType_MEAF:Factor_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Trend leads to Factor" xlink:href="#Reltype_trend_leads_to_follows_from_factor_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Trend leads to Factor" xlink:href="#Reltype_trend_leads_to_follows_from_factor_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_vision_leads_to_follows_from_goal_UUID" name="vision_leads_to_follows_from_goal" title="Vision leads to Goal" desc="Use this relationship to specify how a visions leads to one or more goals." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="leads to" xlink:href="#Reltype_leads_to-follows_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Vision" xlink:href="../objecttypes/vision.kmd#CompType_MEAF:Vision_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Vision leads to Goal" xlink:href="#Reltype_vision_leads_to_follows_from_goal_UUID" xlink:actuate="user">
+   <string name="from">leads to</string>
+   <string name="to">follows from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Vision leads to Goal" xlink:href="#Reltype_vision_leads_to_follows_from_goal_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics_APM:Application_Usage_UUID" name="Application_Usage" title="Application Usage" desc="A representation of how and when an Application is supporting the business. An Application can have different Application Usages for different Organizations, Locations, Processes, etc." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="#UUID4_EBE682B2-1F8E-4AC6-9EE1-2A483A54C3A6"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Application Usage" xlink:href="#CompType_Semantics_APM:Application_Usage_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Application Usage" xlink:href="#CompType_Semantics_APM:Application_Usage_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_EBE682B2-1F8E-4AC6-9EE1-2A483A54C3A6" xlink:role="type" xlink:title="Application Usage" xlink:href="#CompType_Semantics_APM:Application_Usage_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/application_usage.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/application_usage.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/application_usage.png"/>
+ </typeview>
+
+
+</metis>

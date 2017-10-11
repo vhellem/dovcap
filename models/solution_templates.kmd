@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?metis version="3.7"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="1"
+ nextoid="2">
+
+ <template id="UUID4_A0377258-2EC1-42F2-B8D5-A2D2DE7BD6B8" name="Troux_Optimization_with_Metaverse_Connection" title="Troux Optimization Blank with Metaverse Connection">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../../meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Metaverse Queries" xlink:href="../../meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Optimization" xlink:href="../../semantics/metamodels/troux_solutions.kmd#UUID4_44252042-B23A-41EC-A10D-20B7D3738CE4" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Semantics model" xlink:href="../../semantics/templates/troux_optimization.kmv#UUID4_52619813-3754-4D89-9C16-358DAE773899" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Data" xlink:href="../../semantics/templates/troux_optimization.kmv#_002as0b01f99768ufljt" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+ 
+ 
+ <template id="UUID4_C98038FE-0EA1-4A5C-86C7-BC38DE2C193B" name="Troux_Standards_with_Metaverse_Connection" title="Troux Standards Blank with Metaverse Connection">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../../meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Metaverse Queries" xlink:href="../../meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Standards" xlink:href="../../semantics/metamodels/troux_solutions.kmd#UUID4_D697C110-21FF-4721-A6B1-B8822FFD073D" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Semantics model" xlink:href="../../semantics/templates/troux_standards.kmv#UUID4_52619813-3754-4D89-9C16-358DAE773899" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Data" xlink:href="../../semantics/templates/troux_standards.kmv#_002as0b01f99768ufljt" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+ 
+ <template id="UUID4_1A071E23-AEB4-4EEE-A292-F9AD30404F7E" name="Troux_Alignment_Blank_with_Metaverse_Connection" title="Troux Alignment Blank with Metaverse Connection">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../../meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Metaverse Queries" xlink:href="../../meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Alignment" xlink:href="../../semantics/metamodels/troux_solutions.kmd#UUID4_759BF6C3-EC0B-4B79-BFDF-5739DA626A7B" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Semantics model" xlink:href="../../semantics/templates/troux_alignment.kmv#UUID4_52619813-3754-4D89-9C16-358DAE773899" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Data" xlink:href="../../semantics/templates/troux_alignment.kmv#_002as0b01f99768ufljt" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+  
+ <template id="UUID4_D1858276-DDFA-474C-BE6C-8F5B350C77CC" name="Troux_Solutions_Blank_with_Metaverse_Connection" title="Troux Solutions Blank with Metaverse Connection">
+  <metamodel-links size="6">
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="../../meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Metaverse Queries" xlink:href="../../meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Solutions" xlink:href="../../semantics/metamodels/troux_solutions.kmd#UUID4_F0EEFBE6-F9D3-436F-B93B-D8B63075C7E8" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Semantics model" xlink:href="../../semantics/templates/troux_solutions.kmv#UUID4_52619813-3754-4D89-9C16-358DAE773899" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Data" xlink:href="../../semantics/templates/troux_solutions.kmv#_002as0b01f99768ufljt" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+</metis>

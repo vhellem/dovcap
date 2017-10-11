@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="BelongsToClass" title="belongs to" desc="A Document (e.g. &#39;METIS Users Guide&#39;) belongs to one or more classes (e.g. &#39;Users Guide&#39;, &#39;METIS Documentation&#39;).&#10;Alternatively, the Document Class can be used to represent the type of document, e.g. &#39;Microsoft Word&#39; or &#39;Microsoft Excel&#39;.&#10;belongs to/document class for&#10;-&#62; from Document Class to Document Class&#10;-&#62; from Document to Document Class&#10;" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/document_class.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/document_class.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/document.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/document_class.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/file_document.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/document_class.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="from">belongs to</string>
+   <string name="to">document class for</string>
+  </valueset>
+ </type>
+</metis>

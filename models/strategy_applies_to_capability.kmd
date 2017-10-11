@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Strategy_applies_to_Capability_UUID" name="Strategy_applies_to_Capability" title="Strategy applies to Capability" desc="Associates a strategy to the capabilities it affects." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="applies to" xlink:href="../../meaf/relationshiptypes/applies_to-has.kmd#Reltype_applies_to-has_UUID"/>
+  <property name="dependencyType" xlink:role="integer-type" xlink:title="Dependency Type for Strategies" xlink:href="../primitive_types/dependency_type_for_strategies.kmd#Dependency_Type_for_Strategies" label="Dependency Type" desc="Specifies how the strategy applies to the capability." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:StrategyAppliesToCapability_dependencyType_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <property name="importance" xlink:role="integer-type" xlink:title="Percentage" xlink:href="http://xml.metis.no/xml/primitive_types/primitive_types.kmd#oid105" label="Importance" desc="Specifies the importance of the relationship." default-visible="top" mer-property-metadata="uuid=&#34;StrategyAppliesToCapability_importance_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../../meaf/objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../../meaf/objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy applies to Capability" xlink:href="#RelType_Semantics:Strategy_applies_to_Capability_UUID" xlink:actuate="user">
+   <string name="from">applies to</string>
+   <string name="to">has</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Strategy applies to Capability" xlink:href="#RelType_Semantics:Strategy_applies_to_Capability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="dependencyType">0</integer>
+   <integer name="importance">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

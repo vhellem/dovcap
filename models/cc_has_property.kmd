@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CC_hasProperty" name="CC_hasProperty" title="CC_hasProperty" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="EKA relship" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+  <property name="ruleEvaluatedTo" xlink:role="integer-type" xlink:title="CC_boolean" xlink:href="primitive_types.kmd#CC_boolean" label="Rule evaluated to" default-visible="top" protected-flag="true"/>
+  <property name="ruleEngine" xlink:role="integer-type" xlink:title="Rule_Engine" xlink:href="primitive_types.kmd#Rule_Engine" label="Rule engine" default-visible="top" protected-flag="true"/>
+  <property name="ruleCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Code" default-visible="top"/>
+  <property name="ruleStatus" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Rule status" default-visible="top"/>
+  <property name="ruleIds" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Rule ids" default-visible="top" protected-flag="true"/>
+<!--
+  <named-method-link name="evaluate_" xlink:role="cpp-method" xlink:title="evaluateRule" xlink:href="../methods/rule_methods.kmd#evaluateRule"/>
+  <named-method-link name="test_getVPV_" xlink:role="cpp-method" xlink:title="test_getVPV" xlink:href="../methods/rule_methods.kmd#test_getVPV"/>
+  <named-method-link name="test_setVPV_" xlink:role="cpp-method" xlink:title="test_setVPV" xlink:href="../methods/rule_methods.kmd#test_setVPV"/>
+  <named-method-link name="test_includeInConfiguration_" xlink:role="cpp-method" xlink:title="test_includeInConfiguration" xlink:href="../methods/rule_methods.kmd#includeInConfiguration"/>
+  <named-method-link name="test_excludeFromConfiguration_" xlink:role="cpp-method" xlink:title="test_excludeFromConfiguration" xlink:href="../methods/rule_methods.kmd#excludeFromConfiguration"/>
+-->
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="CC_hasProperty" xlink:href="#CC_hasProperty" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="ruleEvaluatedTo">-1</integer>
+   <integer name="ruleEngine">1</integer>
+   <string name="ruleCode"></string>
+  </valueset>
+ </type>
+
+
+</metis>

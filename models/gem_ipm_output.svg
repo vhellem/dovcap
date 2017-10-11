@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: gem_ipm_output.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>IPM Output</title>
+    <g>
+      <polygon points="0 0 512 128 0 256 
+       0 0 0 0 0 0 "
+       style=" stroke:#000000; stroke-width:1; fill:#ff962d; fill-opacity:100%"       class="TAG:canvas"></polygon>
+      <polyline points="0 256 0 256 32 256 
+       512 136 512 128"
+       style=" stroke:#000000; stroke-width:1;"       class="TAG:polyline"></polyline>
+      <polyline points="32 256 32 256 64 256 
+       512 144 512 136"
+       style=" stroke:#000000; stroke-width:1;"       class="TAG:polyline"></polyline>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="16" y="95"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+	 class="TAG:text"></text>
+	<rect x="16" y="80" width="304" height="96"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+      </g>
+    </g>
+  </symbol>
+ </defs>
+</svg>

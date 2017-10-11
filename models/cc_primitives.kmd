@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ typeviews="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_CPPD:ParameterColorTable_UUID" name="ParameterColorTable" title="Parameter Color Table">
+  <range name="white" min="-2" max="-2"/>
+  <range name="grey" min="-1" max="-1"/>
+  <range name="red" min="0" max="0"/>
+  <range name="green" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="PrimType_CPPD:ParameterValueLogical_UUID" name="ParameterValueLogical" title="Parameter value logical" default="-1">
+  <range name="Unknown" min="-2" max="-2"/>
+  <range name="Not known" min="-1" max="-1"/>
+  <range name="False" min="0" max="0"/>
+  <range name="True" min="1" max="1"/>
+ </integer-type>
+
+</metis>

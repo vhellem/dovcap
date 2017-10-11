@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_TRM:FinancialDomain_UUID" name="financial_component" title="Financial Component" desc="The Financial Component is the abstract base type for object types relating to costs, budgets, and investments." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Financial Component" xlink:href="#CompType_TRM:FinancialDomain_UUID">
+   <string name="troux_color">#BBCC88</string>
+   <string name="troux_iconAlias">15b893e6-28d6-3c34-8ef4-5f17f472c2ff</string>
+   <string name="troux_shape">Rectangle</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Financial Component" xlink:href="#CompType_TRM:FinancialDomain_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/financialcomponent.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/financialcomponent.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/financialcomponent.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Financial Component" xlink:href="#CompType_TRM:FinancialDomain_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/financialcomponent.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/financialcomponent.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/financialcomponent.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

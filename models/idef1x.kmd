@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="15"
+ typeviews="5"
+ nextoid="25">
+
+ <type id="oid1" name="idef1x" title="IDEF1X Base Class" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="umlclass" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="class" title="Class" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="umlclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid11"/>
+  <property name="stereotype" xlink:role="string-type" xlink:title="stereotype" xlink:href="#oid15" label="Stereotype"/>
+  <property name="attributes" xlink:role="collection-type" xlink:title="attributes" xlink:href="#oid19" label="Attributes" list-flag="true"/>
+  <property name="methods" xlink:role="collection-type" xlink:title="methods" xlink:href="#oid22" label="Methods" list-flag="true"/>
+  <property name="attrtext" xlink:role="text-type" xlink:href="metis:std#oid4" label="Attribute Text" method-flag="true"/>
+  <property name="mtdtext" xlink:role="text-type" xlink:href="metis:std#oid4" label="Method Text" method-flag="true"/>
+  <named-method-link name="attrtext" xlink:role="cpp-method" xlink:href="#oid27"/>
+  <named-method-link name="mtdtext" xlink:role="cpp-method" xlink:href="#oid28"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="class" xlink:href="#oid2">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="stereotype">Class</string>
+   <collection name="attributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="attribute" xlink:href="#oid18">
+   </collection>
+   <collection name="methods" structure="list" size="0" xlink:role="valueset-type" xlink:href="#oid21">
+   </collection>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="stereotypevalue" title="Stereotype Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1015"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description" description-flag="true"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="stereotypevalue" xlink:href="#oid3">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="association" title="Association" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="umlclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid16"/>
+  <property name="constraint" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Constraint"/>
+  <property name="from" xlink:role="type" xlink:title="cardinality" xlink:href="#oid24" label="Role A Detail ('Origin')"/>
+  <property name="to" xlink:role="type" xlink:title="cardinality" xlink:href="#oid24" label="Role B Detail ('Target')"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="association" xlink:href="#oid4">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="constraint"></string>
+   <string name="from.role"></string>
+   <string name="from.cardinality">0..n</string>
+   <string name="to.role"></string>
+   <string name="to.cardinality">0..n</string>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="aggregates" title="Aggregates" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="umlclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid12"/>
+  <property name="constraint" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Constraint"/>
+  <property name="from" xlink:role="type" xlink:title="cardinality" xlink:href="#oid24" label="Role A Detail ('Origin')"/>
+  <property name="to" xlink:role="type" xlink:title="cardinality" xlink:href="#oid24" label="Role B Detail ('Target')"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="aggregates" xlink:href="#oid5">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="constraint"></string>
+   <string name="from.role"></string>
+   <string name="from.cardinality">0..1</string>
+   <string name="to.role"></string>
+   <string name="to.cardinality">0..n</string>
+  </valueset>
+ </type>
+
+ <type id="oid6" name="composition" title="Composition" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="umlclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid13"/>
+  <property name="constraint" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Constraint"/>
+  <property name="from" xlink:role="type" xlink:title="cardinality" xlink:href="#oid24" label="Role A Detail ('Origin')"/>
+  <property name="to" xlink:role="type" xlink:title="cardinality" xlink:href="#oid24" label="Role B Detail ('Target')"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="composition" xlink:href="#oid6">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="constraint"></string>
+   <string name="from.role"></string>
+   <string name="from.cardinality">0..1</string>
+   <string name="to.role"></string>
+   <string name="to.cardinality">0..n</string>
+  </valueset>
+ </type>
+
+ <type id="oid7" name="generalization" title="Generalization" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid14"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="class" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="generalization" xlink:href="#oid7">
+   <string name="from">generalizes</string>
+   <string name="to">is generalized by</string>
+  </valueset>
+ </type>
+
+ <string-type id="oid15" name="stereotype" title="Stereotype">
+  <dynamic-range property="name">
+   <complex-type-link xlink:role="type" xlink:title="stereotypevalue" xlink:href="#oid3"/>
+  </dynamic-range>
+ </string-type>
+
+ <type id="oid17" name="attributedefinition" desc="Attribute Definition" usage="abstract">
+  <property name="attribute" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Attribute"/>
+  <property name="datatype" xlink:role="string-type" xlink:title="string" xlink:href="#oid25" label="Datatype"/>
+  <property name="description" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid4" label="Description"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="attributedefinition" xlink:href="#oid17">
+   <string name="attribute"></string>
+   <string name="datatype"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <valueset-type id="oid18" name="attribute" desc="Attribute" xlink:role="type" xlink:title="attributedefinition" xlink:href="#oid17">
+  <complex-type-link xlink:role="type" xlink:title="attributedefinition" xlink:href="#oid17"/>
+ </valueset-type>
+
+ <collection-type id="oid19" name="attributes" title="Attributes" desc="A list of attributes" xlink:role="valueset-type" xlink:title="attribute" xlink:href="#oid18"/>
+
+ <type id="oid20" name="methoddefinition" desc="Method Definition" usage="abstract">
+  <property name="method" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Method"/>
+  <property name="parameters" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Parameters"/>
+  <property name="returntype" xlink:role="string-type" xlink:title="string" xlink:href="#oid25" label="Return Type"/>
+  <property name="description" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid4" label="Description"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="methoddefinition" xlink:href="#oid20">
+   <string name="method"></string>
+   <string name="parameters"></string>
+   <string name="returntype"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <valueset-type id="oid21" desc="Attribute" xlink:role="type" xlink:title="methoddefinition" xlink:href="#oid20">
+  <complex-type-link xlink:role="type" xlink:title="methoddefinition" xlink:href="#oid20"/>
+ </valueset-type>
+
+ <collection-type id="oid22" name="methods" title="Methods" desc="A list of methods" xlink:role="valueset-type" xlink:href="#oid21"/>
+
+ <string-type id="oid23" name="cardinality" title="Cardinality" default="0..1">
+  <string class="shared">0</string>
+  <string class="shared">0..1</string>
+  <string class="shared">0..n</string>
+  <string class="shared">1</string>
+  <string class="shared">1..n</string>
+  <string class="shared">2</string>
+  <string class="shared">3</string>
+  <string class="shared">4</string>
+  <string class="shared">5</string>
+ </string-type>
+
+ <type id="oid24" name="rolecardinality" desc="Role-Cardinality Definition" usage="abstract">
+  <property name="role" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Role Name"/>
+  <property name="cardinality" xlink:role="string-type" xlink:title="string" xlink:href="#oid23" label="Cardinality"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="attributedefinition" xlink:href="#oid24">
+   <string name="role"></string>
+   <string name="cardinality">0..1</string>
+  </valueset>
+ </type>
+
+ <string-type id="oid25" name="datatype" title="Datatype">
+  <dynamic-range property="name">
+   <complex-type-link xlink:role="type" xlink:title="datatypevalue" xlink:href="#oid26"/>
+  </dynamic-range>
+ </string-type>
+
+ <type id="oid26" name="datatypevalue" title="Datatype Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1015"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description" description-flag="true"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="datatypevalue" xlink:href="#oid26">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid27" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <string name="Property">attributes</string>
+   <string name="Column">attribute</string>
+   <string name="Separator">&#60;br&#62;</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid28" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <string name="Property">methods</string>
+   <string name="Column">method</string>
+   <string name="Separator">&#60;br&#62;</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid11" xlink:role="type" xlink:title="umlclass" xlink:href="#oid1" tree-size="0.35" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.computas.com/xml/symbols/class.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;h3&#62;&#34; (property name) &#34;&#60;/h3&#62;&#60;hr&#62;&#34; (property attrtext) &#34;&#60;hr&#62;&#34; (property mtdtext) )"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.computas.com/xml/symbols/class.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;h3&#62;&#34; (property name) &#34;&#60;/h3&#62;&#60;hr&#62;&#34; (property attrtext) &#34;&#60;hr&#62;&#34; (property mtdtext) )"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid12" xlink:role="type" xlink:title="aggregates" xlink:href="#oid5" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="http://xml.computas.com/xml/symbols/aggregation.svg#oid0" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from.role) (newline) (property from.cardinality))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to.role) (newline) (property to.cardinality))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid13" xlink:role="type" xlink:title="composition" xlink:href="#oid6" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="http://xml.computas.com/xml/symbols/aggregation.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from.role) (newline) (property from.cardinality))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to.role) (newline) (property to.cardinality))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid14" xlink:role="type" xlink:title="generalization" xlink:href="#oid7" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="http://xml.computas.com/xml/symbols/generalization.svg#oid0" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid16" xlink:role="type" xlink:title="association" xlink:href="#oid4" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="http://xml.computas.com/xml/symbols/association.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from.role) (newline) (property from.cardinality))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to.role) (newline) (property to.cardinality))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <type id="oid1" name="vbscript" title="VB Script Object" desc="The purpose of this object is to allow users to build VBScripts interactively and test them." usage="object" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid23"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <property name="evaluated" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Evaluated" method-flag="true"/>
+  <property name="script" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Script"/>
+  <named-method-link name="addCode_" xlink:role="cpp-method" xlink:title="Add Code" xlink:href="#oid13"/>
+  <named-method-link name="evaluated" xlink:role="cpp-method" xlink:title="Evaluate Script" xlink:href="#oid12"/>
+  <named-method-link name="executeScript_" xlink:role="cpp-method" xlink:title="Execute Script" xlink:href="#oid11"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="VB Script Object" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="evaluated" class="volatile"></string>
+   <string name="script"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="vbscriptfile" title="VB ScriptFile Object" desc="The purpose of this object is to allow users to build VBScripts interactively and test them." usage="object" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid23"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <property name="evaluated" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Evaluated" method-flag="true"/>
+  <property name="scriptFile" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Script File"/>
+  <named-method-link name="addCode_" xlink:role="cpp-method" xlink:title="Add Code" xlink:href="#oid16"/>
+  <named-method-link name="evaluated" xlink:role="cpp-method" xlink:title="Evaluate Script" xlink:href="#oid15"/>
+  <named-method-link name="executeScript_" xlink:role="cpp-method" xlink:title="Execute Script" xlink:href="#oid14"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="VB ScriptFile Object" xlink:href="#oid2">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="evaluated" class="volatile"></string>
+   <string name="scriptFile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="vbcode" title="VB Code" desc="VB code" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="metis:stdtypes#oid2"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <property name="script" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Script"/>
+  <named-method-link name="vbcode" xlink:role="cpp-method" xlink:title="Add Code" xlink:href="#oid13"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="VB Code" xlink:href="#oid3">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="script"></string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="vbcodefile" title="VB Code File" desc="VB code in file" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="metis:stdtypes#oid2"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <property name="scriptFile" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Script File"/>
+  <named-method-link name="vbcodefile" xlink:role="cpp-method" xlink:title="Add Code" xlink:href="#oid16"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="VB Code" xlink:href="#oid3">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="scriptFile"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid11" title="Execute Script" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Language">VBScript</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">(expand (property script))</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid12" title="Evaluate Script" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="3">
+   <string name="Language">VBScript</string>
+   <string name="Mode">Eval</string>
+   <string name="Script">(expand (property script))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid13" title="Add Code" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="3">
+   <string name="Language">VBScript</string>
+   <string name="Mode">AddCode</string>
+   <string name="Script">(expand (property script))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid14" title="Execute Script" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Language">VBScript</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">(expand (property scriptFile))</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid15" title="Evaluate Script" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="3">
+   <string name="Language">VBScript</string>
+   <string name="Mode">Eval</string>
+   <string name="ScriptFile">(expand (property scriptFile))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid16" title="Add Code" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="3">
+   <string name="Language">VBScript</string>
+   <string name="Mode">AddCode</string>
+   <string name="ScriptFile">(expand (property scriptFile))</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

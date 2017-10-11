@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="generateoptionsgroup" title="Generate OptionsGroup" usage="abstract">
+  <!--
+  <complex-type-link xlink:role="type" xlink:title="object" xlink:href="metis:std#oid21"/>
+  -->
+  <property name="generateVia" xlink:role="string-type" xlink:title="Generation Options" xlink:href="../primitive_types/primitive_types.kmd#oid2" label="Generate via:"/>
+  <property name="formatPropertySet" xlink:role="type" xlink:title="Format PropertyGroup" xlink:href="format_propertygroup.kmd#oid1" label="Format Information"/>
+  <property name="templatePropertySet" xlink:role="type" xlink:title="Template PropertyGroup" xlink:href="template_propertygroup.kmd#oid1" label="Template Information"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Generate OptionsGroup" xlink:href="#oid1">
+   <string name="generateVia">Format</string>
+   <string name="formatPropertySet.formatName"></string>
+   <string name="templatePropertySet.templateType"></string>
+   <string name="templatePropertySet.templateStyle">Base</string>
+   <string name="templatePropertySet.templateName"></string>
+  </valueset>
+ </type>
+
+</metis>

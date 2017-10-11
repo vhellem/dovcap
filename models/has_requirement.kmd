@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_CPPD:HasRequirement_UUID" name="has_requirement" title="Has requirement" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Product element" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Functional Requirement" xlink:href="fm_objects.kmd#ObjType_CPPD:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has requirement" xlink:href="#RelType_CPPD:HasRequirement_UUID" xlink:actuate="user">
+   <string name="from">has requirement</string>
+   <string name="to">requires</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has requirement" xlink:href="#RelType_CPPD:HasRequirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

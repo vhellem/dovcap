@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="UiReltype_AKM:genericRel_UUID" name="genericRel" title="Generic relationship" desc="" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#oid111"/>
+ </type>
+
+ <type id="UiReltype_AKM:hasWorkContext_UUID" name="hasWorkContext" title="Has work context" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="UiReltype_AKM:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workspace.kmd#UiType_AKM:Workspace_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workspace_context.kmd#CompType_AKM:WorkspaceContext_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workspace_context.kmd#CompType_AKM:WorkspaceContext_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workmenu_context.kmd#CompType_AKM:WorkmenuContext_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workspace_context.kmd#CompType_AKM:WorkspaceContext_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workarea_context.kmd#CompType_AKM:WorkareaContext_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has work context" xlink:href="#Reltype_AKM:hasWorkContext_UUID">
+   <string name="from">has context</string>
+   <string name="to">context of</string>
+  </valueset>
+ </type>
+
+ <type id="UiReltype_AKM:hasViewport_UUID" name="hasViewport" title="Has viewport" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="UiReltype_AKM:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workarea.kmd#CompType_AKM:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/viewport.kmd#CompType_AKM:Viewport_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has work context" xlink:href="#Reltype_AKM:hasViewport_UUID">
+   <string name="from">has context</string>
+   <string name="to">context of</string>
+  </valueset>
+ </type>
+
+ <type id="UiReltype_AKM:hasContentSpecification_UUID" name="hasContentSpecification" title="Has content specification" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="UiReltype_AKM:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workarea_context.kmd#CompType_AKM:WorkareaContext_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/modelcontentspec.kmd#CompType_AKM:ModelContentSpecification_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workmenu_context.kmd#CompType_AKM:WorkmenuContext_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/menucontentspec.kmd#CompType_AKM:MenuContentSpecification_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has content specification" xlink:href="#Reltype_AKM:hasContentSpecification_UUID">
+   <string name="from">has context</string>
+   <string name="to">context of</string>
+  </valueset>
+ </type>
+
+ <type id="UiReltype_AKM:hasViewSpecification_UUID" name="hasViewSpecification" title="Has view specification" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="UiReltype_AKM:genericRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workarea_context.kmd#CompType_AKM:WorkareaContext_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/viewspecification.kmd#CompType_AKM:ViewSpecification_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/workmenu_context.kmd#CompType_AKM:WorkmenuContext_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/viewspecification.kmd#CompType_AKM:ViewSpecification_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/viewspecification.kmd#CompType_AKM:ViewSpecification_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/objectviewspec.kmd#CompType_AKM:ObjectViewSpecification_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/viewspecification.kmd#CompType_AKM:ViewSpecification_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/relshipviewspec.kmd#CompType_AKM:RelshipViewSpecification_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has view specification" xlink:href="#Reltype_AKM:hasViewSpecification_UUID">
+   <string name="from">has context</string>
+   <string name="to">context of</string>
+  </valueset>
+ </type>
+
+</metis>

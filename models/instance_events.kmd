@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ nextoid="4">
+
+ <integer-type id="oid1" name="Instance_Events" title="Object Events" default="1">
+  <range min="0" max="0"/>
+  <range name="is added" min="1" max="1"/>
+  <range name="is deleted" min="2" max="2"/>
+  <range name="is updated/changed" min="3" max="3"/>
+  <range name="gets new coordinate settings" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="oid2" name="Relationship_Events" title="Relationship Events" default="1">
+  <range min="0" max="0"/>
+  <range name="is added" min="1" max="1"/>
+  <range name="is updated" min="2" max="2"/>
+  <range name="is deleted" min="3" max="3"/>
+  <range name="is broken (an endpoint is removed)" min="4" max="4"/>
+  <range name="an endpoint view is changed" min="5" max="5"/>
+  <range name="gets new breakpoint information" min="6" max="6"/>
+ </integer-type>
+
+ <integer-type id="oid3" name="Instance_Change_Events" title="Instance Change Events">
+  <range min="0" max="0"/>
+  <range name="is updated/changed" min="1" max="1"/>
+  <range name="is deleted" min="2" max="2"/>
+ </integer-type>
+
+
+</metis>

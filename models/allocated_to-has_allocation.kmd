@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="6">
+
+ <type id="oid1" name="allocated_to_has_allocation" title="allocated to/has allocation" desc="Allows you to specify that a Person or Manpower is allocated to either a Task or a Project. The Percentage property indicates the percentage of the Person or Manpower&#39;s time the allocation covers. All percentages on allocation connections from a Person will be summed to give the Allocation property on the Person. All Percentages on allocation connections to a Task or Project will be summed, and the total divided by 100, to give the Direct Allocation (full-time equivalents) property on Task/Project. Direct Allocation values will be aggregated upwards in the Task/Project decomposition structure, to give the Total Allocation (including sub-Tasks/sub-Projects) property on each level.&#10;&#10;Color used on relationship; The color is set automatically depending on the percentage of the allocation, ranging from light grey for minor allocation to black for 100% allocation. When exeeding 100% the color is ranging from ligth purple to darker purple as the percentage increases.&#10;&#10;PS! If a Person is a resource for a Manpower object that is allocated to a Task or Project, that Person should not in addition be allocated directly to the same Task or Project." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from, to and middlepoint texts - User" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="fromtext" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="fromtext" method-flag="true" visible-flag="false" origin-text-flag="true"/>
+  <property name="totext" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="totext" method-flag="true" visible-flag="false" target-text-flag="true"/>
+  <property name="allocation" xlink:role="integer-type" xlink:title="Percentage (unlimited)" xlink:href="../primitive_types/primitive_types.kmd#oid107" label="Allocation (%)" desc="The percentage of total time allocated to the Project/Task. Zero percentage allocations not allowed." default-visible="top" mid-point-text-flag="true"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="The color represents the given allocation. Between the values 1% and 100% the color goes from ligth grey to black. As the allocation goes from 101% and to infinity, the color goes from light purple to dark purple." method-flag="true" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../object_types/person.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Project" xlink:href="../object_types/project.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../object_types/person.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="../object_types/task.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Manpower" xlink:href="../object_types/manpower.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Project" xlink:href="../object_types/project.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Manpower" xlink:href="../object_types/manpower.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="../object_types/task.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="Allocation Color" xlink:href="../object_types/allocation_methods.kmd#oid8"/>
+  <named-method-link name="fromtext" xlink:role="cpp-method" xlink:title="Allocation From Text" xlink:href="../object_types/allocation_methods.kmd#oid9"/>
+  <named-method-link name="totext" xlink:role="cpp-method" xlink:title="Allocation To Text" xlink:href="../object_types/allocation_methods.kmd#oid10"/>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="allocated to/has allocation" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from">allocated to</string>
+   <string name="to">has allocation</string>
+   <string name="middle"></string>
+  </valueset>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="allocated to/has allocation" xlink:href="#oid1" xlink:actuate="user">
+   <string name="fromtext" class="volatile"></string>
+   <string name="totext" class="volatile"></string>
+   <integer name="allocation">100</integer>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="allocated to/has allocation" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Origin, target and midpoint text black line" xlink:href="metis:stdsyms#oid104" xlink:actuate="user">
+   <replace tag="line" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property allocation) &#34;%&#34;)"/>
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: state.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>SimpleState</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="224" height="96" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="39"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:32; text-align:center vertical-align:middle;"
+       class="TAG:text">text</text>
+      <rect x="8" y="8" width="208" height="80"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid3" xml:space="preserve" class="METIS_SYMBOL">
+   <title>ComplexState_Closed</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="256" height="104" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#96a5ff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="42"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:36; text-align:center"
+       class="TAG:text">text</text>
+      <rect x="8" y="8" width="240" height="88"
+       style=" stroke:#000000; stroke-width:1; fill:#96a5ff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>ComplexState_Open</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="256" height="104" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="12" y="23"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:24; text-align:center"
+       class="TAG:text">text</text>
+      <rect x="12" y="0" width="232" height="52"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid5" xml:space="preserve" class="METIS_SYMBOL">
+   <title>ConcurrentState_Closed</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="256" height="104"
+     style=" stroke:#000000; stroke-width:1; fill:#a5ffa5; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="42"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:36; text-align:center"
+       class="TAG:text">text</text>
+      <rect x="8" y="8" width="240" height="88"
+       style=" stroke:#000000; stroke-width:1; fill:#c8c8ff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid4" xml:space="preserve" class="METIS_SYMBOL">
+   <title>ConcurrentState_Open</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="256" height="104"
+     style=" stroke:#000000; stroke-width:1; stroke-dasharray: 2 2; fill:#c8ffc8; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="12" y="23"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:24; text-align:center"
+       class="TAG:text">text</text>
+      <rect x="12" y="0" width="232" height="52"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid6" xml:space="preserve" class="METIS_SYMBOL">
+   <title>JoinState</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="32" height="144"
+     style=" stroke:#000000; stroke-width:1; fill:#878787; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <rect x="0" y="68" width="32" height="8"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:connection_area"></rect>
+  </symbol>
+  <symbol id="oid9" xml:space="preserve" class="METIS_SYMBOL">
+   <title>InitialState</title>
+    <ellipse  cx="32" cy="32" rx="32" ry="32"
+     style=" stroke:#000000; stroke-width:1; fill:#878787; fill-opacity:100%"     class="TAG:canvas"></ellipse>
+  </symbol>
+  <symbol id="oid10" xml:space="preserve" class="METIS_SYMBOL">
+   <title>FinalState</title>
+    <ellipse  cx="32" cy="32" rx="32" ry="32"
+     style=" stroke:#000000; stroke-width:1; fill:#696969; fill-opacity:0%"></ellipse>
+    <ellipse  cx="32" cy="32" rx="16" ry="16"
+     style=" stroke:#000000; stroke-width:1; fill:#878787; fill-opacity:100%"     class="TAG:canvas"></ellipse>
+  </symbol>
+  <symbol id="oid11" xml:space="preserve" class="METIS_SYMBOL">
+   <title>DecisionState</title>
+    <polygon points="64 0 0 96 64 192 
+     128 96 64 0 64 0 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"></polygon>
+  </symbol>
+ </defs>
+</svg>

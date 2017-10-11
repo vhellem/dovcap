@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_AKM:DropContext_UUID" name="DropContext_AKM_" title="Drop context (AKM)" desc="Drop context for method execution." default="0">
+  <range name="Background" min="0" max="0"/>
+  <range name="Selection" min="1" max="1"/>
+  <range name="Current" min="2" max="2"/>
+ </integer-type>
+
+</metis>

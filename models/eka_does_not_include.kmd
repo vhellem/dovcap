@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">   
+
+ <type id="Does_not_include" name="Does_not_include" title="Does not include" desc="This relationship is used for removing inherited features, such as properties or service tasks. Just create a relationship between the local object and the inherited part or property that you want to remove." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Does not include" xlink:href="#Does_not_include" xlink:actuate="user">
+   <string name="from">remove</string>
+   <string name="to">not included in</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Does not include" xlink:href="#Does_not_include" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <string name="name"></string>
+  </valueset>
+ </type>
+
+
+</metis>

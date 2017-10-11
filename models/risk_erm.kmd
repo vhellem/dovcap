@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_MEAF:Risk_UUID" name="risk" title="Risk" desc="A Risk is a definition of a factor that, if it occurs, will have strong negative impact on an organization or activity." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Analysis Component" xlink:href="../abstracttypes/analysis_component.kmd#CompType_MEAF:AnalysisComponent_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="priority" xlink:role="integer-type" xlink:title="Priority" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_priority_UUID" label="Priority" desc="Priority to be selected. The priority may affect the color of the object." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Risk_priority_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="impact" xlink:role="integer-type" xlink:title="Impact" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_impact_UUID" label="Impact" desc="An evaluation of how strong the impact will be if the risk occurs." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Risk_impact_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="probability" xlink:role="integer-type" xlink:title="Impact" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_impact_UUID" label="Probability" desc="An evaluation of the probability that the risk will occur." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Risk_probability_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="response" xlink:role="integer-type" xlink:title="Response" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_response_UUID" label="Response" desc="Classification of the risk by possible response." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Risk_response_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="The colorvalue for the Factor based on the priority property" method-flag="true" visible-flag="false" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="riskID" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Risk ID" desc="A unique identifier for this risk." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_RiskID_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="type" xlink:role="integer-type" xlink:title="Risk Type" xlink:href="../../semantics/primitive_types/risk_type.kmd#PrimType_ERM:Risk_Type_UUID" label="Type" desc="The type of harm associated with this risk." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_Type_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="dateRaised" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date Raised" desc="The date on which the risk was raised." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_dateRaised_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="preMitigationLikelihood" xlink:role="integer-type" xlink:title="Pre-Mitigation Likelihood" xlink:href="../../semantics/primitive_types/pre-mitigation_likelihood.kmd#PrimType_ERM:Risk_Pre-Mitigation_Likelihood_UUID" label="Pre-Mitigation Likelihood" desc="The likelihood of the risk occurring before any mitigating action is put in place. " default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_preMitigationLikelihood_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="preMitigationImpact" xlink:role="integer-type" xlink:title="Current Impact" xlink:href="../../semantics/primitive_types/current_impact.kmd#PrimType_ERM:Risk_Current_Impact_UUID" label="Pre-Mitigation Impact" desc="The impact of the risk if it occurs before any mitigating action is put in place. " default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_preMitigationImpact_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="proximity" xlink:role="integer-type" xlink:title="Risk Proximity" xlink:href="../../semantics/primitive_types/risk_proximity.kmd#PrimType_ERM:Risk_Proximity_UUID" label="Proximity" desc="The time period during which the risk is likely to occur." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_proximity_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="controlsMitigation" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Controls/Mitigation" desc="A description of the controls currently in place to reduce the impact of the risk or the likelihood of it occurring. " default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_controlsMitigation_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="currentLikelihood" xlink:role="integer-type" xlink:title="Current Likelihood" xlink:href="../../semantics/primitive_types/current_likelihood.kmd#PrimType_ERM:Risk_Current_Likelihood_UUID" label="Current Likelihood" desc="The current likelihood of the risk occuring, taking into account any controls or mitigations." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_currentLikelihood_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="currentImpact" xlink:role="integer-type" xlink:title="Current Impact" xlink:href="../../semantics/primitive_types/current_impact.kmd#PrimType_ERM:Risk_Current_Impact_UUID" label="Current Impact" desc="The current impact of the risk, taking into account any controls or mitigations." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_currentImpact_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="currentLikelihoodAndImpactChanges" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Current Likelihood and Impact Changes" desc="An explanation of ongoing changes in the current likelihood or current impact assessments." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_currentLikelihoodAndImpactChanges_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="notable" xlink:role="integer-type" xlink:title="Notable" xlink:href="../../semantics/primitive_types/notable.kmd#PrimType_ERM:Risk_Notable_UUID" label="Notable" desc="Specify whether the risk is notable." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_notable_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="status" xlink:role="integer-type" xlink:title="Risk Status" xlink:href="../../semantics/primitive_types/risk_status.kmd#PrimType_ERM:Risk_Status_UUID" label="Status" desc="Indicates whether the risk is open (still being managed) or closed." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_status_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="closedDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Closed Date" desc="The date on which the risk was closed." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_closedDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="reasonForClosure" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Reason for Closure" desc="The reason the risk can be considered closed." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_ERM:Risk_reasonForClosure_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Risk" xlink:href="#CompType_MEAF:Risk_UUID"/>
+  <named-method-link name="MetisTrouxClient_--Get Action----QueryActionOverrisk_affects_is_affected_by_action" xlink:role="cpp-method" xlink:title="affects Action" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryActionOverrisk_affects_is_affected_by_action"/>
+  <named-method-link name="MetisTrouxClient_--Get Cause----QueryCauseOvercause_applies_to_has_risk" xlink:role="cpp-method" xlink:title="has Cause" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryCauseOvercause_applies_to_has_risk"/>
+  <named-method-link name="MetisTrouxClient_--Get Change_Component----QueryInitiative_DomainOverrisk_applies_to_has_change_component" xlink:role="cpp-method" xlink:title="applies to Change Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInitiative_DomainOverrisk_applies_to_has_change_component"/>
+  <named-method-link name="MetisTrouxClient_--Get Goal----QueryGoalOvergoal_not_targeting_generates_is_generated_by_not_targeting_risk" xlink:role="cpp-method" xlink:title="is generated by not targeting Goal" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryGoalOvergoal_not_targeting_generates_is_generated_by_not_targeting_risk"/>
+  <named-method-link name="MetisTrouxClient_--Get Goal----QueryGoalOvergoal_targeting_generates_is_generated_by_targeting_risk" xlink:role="cpp-method" xlink:title="is generated by targeting Goal" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryGoalOvergoal_targeting_generates_is_generated_by_targeting_risk"/>
+  <named-method-link name="MetisTrouxClient_--Get Measure----QueryMeasureOvermeasure_measures_is_measured_by_risk" xlink:role="cpp-method" xlink:title="is measured by Measure" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryMeasureOvermeasure_measures_is_measured_by_risk"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="Pick_Priority_Color" xlink:href="../methods/colormapping_methods.kmd#oid1"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Risk" xlink:href="#CompType_MEAF:Risk_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias">Icon_CompType_MEAF:Risk_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="29" xlink:role="type" xlink:title="Risk" xlink:href="#CompType_MEAF:Risk_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="priority">-1</integer>
+   <integer name="impact">-1</integer>
+   <integer name="probability">-1</integer>
+   <integer name="response">-1</integer>
+   <string name="color" class="volatile"></string>
+   <string name="riskID"></string>
+   <integer name="type">0</integer>
+   <date name="dateRaised">00000000</date>
+   <integer name="preMitigationLikelihood">0</integer>
+   <integer name="preMitigationImpact">0</integer>
+   <integer name="proximity">0</integer>
+   <string name="controlsMitigation"></string>
+   <integer name="currentLikelihood">0</integer>
+   <integer name="currentImpact">0</integer>
+   <string name="currentLikelihoodAndImpactChanges"></string>
+   <integer name="notable">0</integer>
+   <integer name="status">0</integer>
+   <date name="closedDate">00000000</date>
+   <string name="reasonForClosure"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Risk" xlink:href="#CompType_MEAF:Risk_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="priority" visible-flag="true"/>
+   <propertyview name="impact" visible-flag="true"/>
+   <propertyview name="probability" visible-flag="true"/>
+   <propertyview name="response" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/risk.svg#oid1&#34;)"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;Possible Response: &#34; (property response))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/risk.svg#oid1&#34;)"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;Possible Response: &#34; (property response))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/risk.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Risk" xlink:href="#CompType_MEAF:Risk_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="priority" visible-flag="true"/>
+   <propertyview name="impact" visible-flag="true"/>
+   <propertyview name="probability" visible-flag="true"/>
+   <propertyview name="response" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/risk.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/risk.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/risk.png"/>
+ </typeview>
+
+
+</metis>

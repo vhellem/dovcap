@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="4"
+ nextoid="5">
+
+ <criteria id="oid1" name="FindChildProcessesConnectedToUsed_ByRelationships" title="FindChildProcessesConnectedToUsed_ByRelationships" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="FindChildProcesses" xlink:href="findchildprocesses.kmd#oid1"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="FindAllProcessesConnectedToUsed_ByRelationships" xlink:href="findallprocessesconnectedtoused_by.kmd#oid1"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

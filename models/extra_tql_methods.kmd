@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<?metis version="3.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2005 Troux Technologies, Inc. All rights reserved.
+-->
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="4"
+ nextoid="1">
+
+<cpp-method id="QueryComponentType" name="QueryComponentType" title="Find All of Type" 
+              language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+              background-flag="true"
+              container-flag="true"
+              selection-flag="true"
+              model-flag="true"
+              object-flag="true"
+              nested-flag="true"
+              tree-flag="true"
+              relationship-fl="true"
+              desc="Component.type = &quot;%INSTANCE-NAME%&quot;">
+    
+  </cpp-method>
+  
+  <cpp-method id="QueryUsingParameters_from_script" name="QueryUsingParameters_from_script" title="QueryUsingParameters_from_script" 
+                language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+                background-flag="true"
+                container-flag="true"
+                selection-flag="true"
+                model-flag="true"
+                object-flag="true"
+                nested-flag="true"
+                tree-flag="true"
+                relationship-fl="true">
+               
+      <arg-list size="2">
+        <integer name="Metis_State_AllowModifyOnly">1</integer>
+        
+        <integer name="ComponentFlag1">0</integer>
+        
+      </arg-list>
+  
+  </cpp-method>
+  
+  
+  
+
+ 
+
+  <cpp-method id="DynamicRelationships" name="DynamicRelationships"
+              title="Get relationships dynamically" 
+              language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+              object-flag="true"
+              nested-flag="true"
+              tree-flag="true">
+    <arg-list size="3">
+      <integer name="Metis_State_AllowModifyOnly">1</integer>
+      
+      <integer name="ComponentFlag1">0</integer>
+      
+    </arg-list>
+
+  </cpp-method>
+
+  
+  
+  <cpp-method id="RelationshipOnlyQuery" 
+                name="QueryRelsUseDescription" title="Find Relships using query in Description" 
+                language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+                container-flag="true"
+                object-flag="true"
+                nested-flag="true"
+                tree-flag="true">
+      <arg-list size="1">
+        <integer name="ComponentFlag0">0</integer>
+      </arg-list>
+  </cpp-method>
+
+</metis>

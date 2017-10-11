@@ -1,0 +1,455 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="17"
+ nextoid="1">
+
+ <type id="RelType_ITG:External_Organization_provides_Industry_Standard_UUID" name="External_Organization_provides_Industry_Standard" title="External Organization provides Industry Standard" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="External Organization" xlink:href="../objecttypes/external_organization.kmd#CompType_ITG:External_Organization_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Industry Standard" xlink:href="../objecttypes/industry_standard.kmd#CompType_ITG:IndustryStandard_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="External Organization provides Industry Standard" xlink:href="#RelType_ITG:External_Organization_provides_Industry_Standard_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="External Organization provides Industry Standard" xlink:href="#RelType_ITG:External_Organization_provides_Industry_Standard_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:External_Organization_provides_Industry_Standard_Version_UUID" name="External_Organization_provides_Industry_Std_Ver" title="External Organization provides Industry Std Version" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="External Organization" xlink:href="../objecttypes/external_organization.kmd#CompType_ITG:External_Organization_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="External Organization provides Industry Std Version" xlink:href="#RelType_ITG:External_Organization_provides_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="External Organization provides Industry Std Version" xlink:href="#RelType_ITG:External_Organization_provides_Industry_Standard_Version_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:HW_Product_Version_provides_Business_Function_UUID" name="HW_Product_Model_provides_Business_Function" title="HW Product Model provides Business Function" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Deliverable provides Function" xlink:href="provides-is_provided_by_criticality.kmd#Reltype_deliverable_provides_is_provided_by_criticality_function_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Hardware Product Model" xlink:href="../objecttypes/hardware_product_version.kmd#CompType_MEAF:HardwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Business Function" xlink:href="../objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="HW Product Model provides Business Function" xlink:href="#RelType_ITG:HW_Product_Version_provides_Business_Function_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="HW Product Model provides Business Function" xlink:href="#RelType_ITG:HW_Product_Version_provides_Business_Function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:SW_Product_Version_provides_Business_Function_UUID" name="SW_Product_Version_provides_Business_Function" title="SW Product Version provides Business Function" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Deliverable provides Function" xlink:href="provides-is_provided_by_criticality.kmd#Reltype_deliverable_provides_is_provided_by_criticality_function_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product Version" xlink:href="../objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Business Function" xlink:href="../objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="SW Product Version provides Business Function" xlink:href="#RelType_ITG:SW_Product_Version_provides_Business_Function_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="SW Product Version provides Business Function" xlink:href="#RelType_ITG:SW_Product_Version_provides_Business_Function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_application_component_provides_is_provided_by_capability_UUID" name="application_component_provides_is_provided_by_capability" title="Application Component provides Capability" desc="Use this relationship to connect a capability to several different assets this capability can be based on." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component provides Capability" xlink:href="#Reltype_application_component_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component provides Capability" xlink:href="#Reltype_application_component_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_application_component_provides_is_provided_by_knowledge_access_UUID" name="application_component_provides_is_provided_by_knowledge_access" title="Application Component provides Knowledge Access" desc="Use this relationship to connect an access method used in knowledge mapping and acquisition to an IT object serving as an agent for that knowledge." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Knowledge Access" xlink:href="../objecttypes/knowledge_access.kmd#CompType_MEAF:KnowledgeAccess_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component provides Knowledge Access" xlink:href="#Reltype_application_component_provides_is_provided_by_knowledge_access_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component provides Knowledge Access" xlink:href="#Reltype_application_component_provides_is_provided_by_knowledge_access_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_datastore_provides_is_provided_by_knowledge_access_UUID" name="datastore_provides_is_provided_by_knowledge_access" title="Datastore provides Knowledge Access" desc="Use this relationship to connect an access method used in knowledge mapping and aquisition to an IT object serving as an agent for that knowledge." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Knowledge Access" xlink:href="../objecttypes/knowledge_access.kmd#CompType_MEAF:KnowledgeAccess_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Datastore provides Knowledge Access" xlink:href="#Reltype_datastore_provides_is_provided_by_knowledge_access_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Datastore provides Knowledge Access" xlink:href="#Reltype_datastore_provides_is_provided_by_knowledge_access_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_provides_is_provided_by_capability_UUID" name="deliverable_provides_is_provided_by_capability" title="Deliverable provides Capability" desc="Use this relationship to connect capabilities to product items and services by which they can be realized." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable provides Capability" xlink:href="#Reltype_deliverable_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable provides Capability" xlink:href="#Reltype_deliverable_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_provides_is_provided_by_resource_UUID" name="deliverable_provides_is_provided_by_resource" title="Deliverable provides Resource" desc="Use this relationship to connect an IT resource  or manpower to the product used to implement it." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Resource" xlink:href="../objecttypes/resource.kmd#CompType_MEAF:Resource_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable provides Resource" xlink:href="#Reltype_deliverable_provides_is_provided_by_resource_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable provides Resource" xlink:href="#Reltype_deliverable_provides_is_provided_by_resource_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deployed_software_provides_is_provided_by_resource_UUID" name="deployed_software_provides_is_provided_by_resource" title="Deployed Software provides Resource" desc="Use this relationship to specify that an application provides (acts as) a resource." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Resource" xlink:href="../objecttypes/resource.kmd#CompType_MEAF:Resource_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software provides Resource" xlink:href="#Reltype_deployed_software_provides_is_provided_by_resource_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deployed Software provides Resource" xlink:href="#Reltype_deployed_software_provides_is_provided_by_resource_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_function_provides_is_provided_by_capability_UUID" name="function_provides_is_provided_by_capability" title="Function provides Capability" desc="Use this relationship to connect a capability to several different assets this capability can be based on." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Function provides Capability" xlink:href="#Reltype_function_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Function provides Capability" xlink:href="#Reltype_function_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_provides_is_provided_by_capability_UUID" name="infrastructure_component_provides_is_provided_by_capability" title="Infrastructure Component provides Capability" desc="Use this relationship to connect a capability to several different assets this capability can be based on." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component provides Capability" xlink:href="#Reltype_infrastructure_component_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Infrastructure Component provides Capability" xlink:href="#Reltype_infrastructure_component_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_provides_is_provided_by_resource_UUID" name="infrastructure_component_provides_is_provided_by_resource" title="Infrastructure Component provides Resource" desc="Use this relationship to specify that a hardware or network element provides (acts as) a resource." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Resource" xlink:href="../objecttypes/resource.kmd#CompType_MEAF:Resource_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component provides Resource" xlink:href="#Reltype_infrastructure_component_provides_is_provided_by_resource_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Infrastructure Component provides Resource" xlink:href="#Reltype_infrastructure_component_provides_is_provided_by_resource_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_person_provides_is_provided_by_manpower_UUID" name="person_provides_is_provided_by_manpower" title="Person provides Manpower" desc="Use this relationship to specify manpower provided by a person." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Manpower" xlink:href="../objecttypes/manpower.kmd#CompType_MEAF:Manpower_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Person provides Manpower" xlink:href="#Reltype_person_provides_is_provided_by_manpower_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Person provides Manpower" xlink:href="#Reltype_person_provides_is_provided_by_manpower_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_process_component_provides_is_provided_by_capability_UUID" name="process_component_provides_is_provided_by_capability" title="Process Component provides Capability" desc="Use this relationship to connect a capability to several different assets this capability can be based on." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Process Component" xlink:href="../abstracttypes/process_component.kmd#CompType_TRM:ProcessDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Process Component provides Capability" xlink:href="#Reltype_process_component_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Process Component provides Capability" xlink:href="#Reltype_process_component_provides_is_provided_by_capability_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_provides-is_provided_by_UUID" name="provides-is_provided_by" title="provides" desc="Allows you to specify that an application acts as a resource." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllprovides-is_provided_by" xlink:role="criteria" xlink:title="Find all Provides relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_provides-is_provided_by_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_training_program_provides_is_provided_by_skill_profile_UUID" name="training_program_provides_is_provided_by_skill_profile" title="Training Program provides Skill Profile" desc="Use this relationship to connect a competence/skill profile to a training program that can help develop and sustain the needed competence or skill." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Training Program" xlink:href="../objecttypes/training_program.kmd#CompType_MEAF:TrainingProgram_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Skill Profile" xlink:href="../objecttypes/skill_profile.kmd#CompType_MEAF:SkillProfile_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Training Program provides Skill Profile" xlink:href="#Reltype_training_program_provides_is_provided_by_skill_profile_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Training Program provides Skill Profile" xlink:href="#Reltype_training_program_provides_is_provided_by_skill_profile_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

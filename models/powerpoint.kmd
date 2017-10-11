@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="metisreport_powerpoint" title="Powerpoint" desc="Standard report for MS PowerPoint. Container images are created as individual slides." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="MetisReportingBaseActionObject" xlink:href="base.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="quality" xlink:role="string-type" xlink:title="Image Quality" xlink:href="../primitive_types/primitive_types.kmd#oid4" label="Image Quality"/>
+  <property name="imageByStructure" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Images by structure" desc="Check to report selected containers and subcontainers. If not checked, only selected containers will be reported."/>
+  <property name="fileName" xlink:role="url-type" xlink:href="metis:stdprimtypes#oid9" label="File Name" desc="An optional new or existing Powerpoint file"/>
+  <valueset vset="default" size="20" xlink:role="type" xlink:title="Powerpoint" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">6</integer>
+   <string name="reference">http://xml.computas.com/xml/reporting_object/methods/reporting_methods.kmd#oid1</string>
+   <string name="metisReportType">Powerpoint</string>
+   <string name="metisReportSource">Criteria</string>
+   <string name="selection.criteriaURI">Use Current Selection</string>
+   <string name="selection.customCriteriaURI"></string>
+   <integer name="includeRelationships">0</integer>
+   <integer name="sortByStructure">0</integer>
+   <integer name="omitProperties">0</integer>
+   <integer name="invisibleProperties">0</integer>
+   <integer name="omitBlankProperties">0</integer>
+   <integer name="omitTypeDescription">0</integer>
+   <integer name="omitInstanceDescription">1</integer>
+   <integer name="interactive">0</integer>
+   <integer name="iAmAReportingObject">1</integer>
+   <string name="quality">Standard</string>
+   <integer name="imageByStructure">1</integer>
+   <url name="fileName"></url>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Powerpoint" xlink:href="#oid1" typelabel="Powerpoint" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="quality" visible-flag="true"/>
+   <propertyview name="imageByStructure" visible-flag="true"/>
+   <propertyview name="interactive" visible-flag="true"/>
+   <propertyview name="fileName" visible-flag="true"/>
+   <propertyview name="mode" visible-flag="false"/>
+   <propertyview name="reference" visible-flag="false"/>
+   <propertyview name="execute_on_parent" visible-flag="false"/>
+   <propertyview name="metisReportType" visible-flag="false"/>
+   <propertyview name="metisReportSource" visible-flag="false"/>
+   <propertyview name="selection.criteriaURI" visible-flag="false"/>
+   <propertyview name="selection.customCriteriaURI" visible-flag="false"/>
+   <propertyview name="includeRelationships" visible-flag="false"/>
+   <propertyview name="sortByStructure" visible-flag="false"/>
+   <propertyview name="omitProperties" visible-flag="false"/>
+   <propertyview name="invisibleProperties" visible-flag="false"/>
+   <propertyview name="omitBlankProperties" visible-flag="false"/>
+   <propertyview name="omitTypeDescription" visible-flag="false"/>
+   <propertyview name="omitInstanceDescription" visible-flag="false"/>
+   <propertyview name="iAmAReportingObject" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.xCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" protected-flag="true" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="../symbols/reportpowerpoint.svg#oid1" xlink:actuate="user">
+   <replace tag="ReportName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="../symbols/reportpowerpoint.svg#oid1" xlink:actuate="user">
+   <replace tag="ReportName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/powerpoint.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

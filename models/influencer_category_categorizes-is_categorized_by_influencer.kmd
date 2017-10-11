@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Influencer_Category_categorizes-is_categorized_by_Influencer_UUID" name="Influencer_Category_categorizes_is_categorized_by_Influencer" title="Influencer Category categorizes-is categorized by Influencer" desc="Used to associate an instance of Influencer with an instance of Influencer Category that characterizes it." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/influencer_category_categorizes-is_categorized_by_influencer.kmd#UUID4_0DA6A5C1-8ED2-438E-8B41-AC613621F1A1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Influencer Category" xlink:href="../object_types/influencer_category.kmd#CompType_Semantics:Influencer_Category_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Influencer" xlink:href="../object_types/influencer.kmd#CompType_Semantics:Influencer_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Influencer Category categorizes-is categorized by Influencer" xlink:href="#RelType_Semantics:Influencer_Category_categorizes-is_categorized_by_Influencer_UUID" xlink:actuate="user">
+   <string name="from">categorizes</string>
+   <string name="to">is categorized by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Influencer Category categorizes-is categorized by Influencer" xlink:href="#RelType_Semantics:Influencer_Category_categorizes-is_categorized_by_Influencer_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ typeviews="3"
+ nextoid="8">
+
+ <type id="oid1" name="Parent_Assignment_Relationship" title="Parent Assignment Relationship" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts - IF Configuration" xlink:href="relshipsharedprop.kmd#oid1"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Parent Assignment Relationship" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from"></string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Parent Assignment Relationship" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="put_view_in_will_be_parent_for_view" title="put view in/will be parent for view" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Parent Assignment Relationship" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Object View Mapping" xlink:href="../object_types/object_view_mapping.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Object View Mapping" xlink:href="../object_types/object_view_mapping.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="put view in/will be parent for view" xlink:href="#oid2" xlink:actuate="user">
+   <string name="from">put view in</string>
+   <string name="to">will be parent for view</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="put view in/will be parent for view" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="put_new_instances_in_will_be_parent_for_new_instances" title="put new instances in/will be parent for new instances" desc="Specifies that the instance will get the specified object as parent if it is not mapped to another parent by a decomposition relationship during the import. Typically this is used to specify the container to put the object in.&#10;&#10;By default the name of the object that is the target is the key that is used to determine the parent. It is also possible to map to a type mapping to specify another key value set.&#10;&#10;As a last resort if you cannot determine the key of the object to map to, you may give the URI of the target object on the type mapping instead of using this relationship. this is not recommended, but can be used when there is no other good way to identify the target. An example would be when you have multiple containers with the same name in the model." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Parent Assignment Relationship" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Waste Basket" xlink:href="../object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Waste Basket" xlink:href="../object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Waste Basket" xlink:href="../object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="../object_types/update_options.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Waste Basket" xlink:href="../object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="put new instances in/will be parent for new instances" xlink:href="#oid4" xlink:actuate="user">
+   <string name="from">put new instances in</string>
+   <string name="to">will be parent for new instances</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="put new instances in/will be parent for new instances" xlink:href="#oid4" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid6" name="move_deleted_instances_to_will_be_parent_for_deleted_instances" title="move deleted instances to/will be parent for deleted instances" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Parent Assignment Relationship" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid7"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Waste Basket" xlink:href="../object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Waste Basket" xlink:href="../object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="move deleted instances to/will be parent for deleted instances" xlink:href="#oid6" xlink:actuate="user">
+   <string name="from">move deleted instances to</string>
+   <string name="to">will be parent for deleted instances</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="move deleted instances to/will be parent for deleted instances" xlink:href="#oid6" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="put view in/will be parent for view" xlink:href="#oid2" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Parent Assignment Relationship" xlink:href="../symbols/relationship_symbols/parent_assignment.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_icons/parent_assignment_relationship.png"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="put new instances in/will be parent for new instances" xlink:href="#oid4" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Parent Assignment Relationship" xlink:href="../symbols/relationship_symbols/parent_assignment.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_icons/parent_assignment_relationship.png"/>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:title="move deleted instances to/will be parent for deleted instances" xlink:href="#oid6" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Parent Assignment Relationship" xlink:href="../symbols/relationship_symbols/parent_assignment.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_icons/parent_assignment_relationship.png"/>
+ </typeview>
+
+
+</metis>

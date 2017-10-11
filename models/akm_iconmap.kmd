@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="AKM_Status_Iconmap" name="AKM_Status_Iconmap" title="AKM Status Iconmap">
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task_completed.svg#oid1" min="-1" max="-1"/>
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task.svg#oid1" min="0" max="0"/>
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task-greenlight.svg#oid1" min="5" max="5"/>
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task.svg#oid1" min="2" max="2"/>
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task-redlight.svg#oid1" min="3" max="3"/>
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task-x.svg#oid1" min="1" max="1"/>
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task_completed.svg#oid1" min="4" max="4"/>
+  <range name="http://xml.activeknowledgemodeling.com/task/symbols/icons/task_cancelled.svg#oid1" min="6" max="6"/>
+ </integer-type>
+
+
+</metis>

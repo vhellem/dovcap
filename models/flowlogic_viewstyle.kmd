@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ viewstyles="1"
+ nextoid="3">
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="IPM Process Open" xlink:href="../symbols/gem/gem_ipm_process_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62;&#34; (property identification) &#34;&#60;br&#62;&#34; (label) &#34;&#60;br&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="IPM Process Open" xlink:href="../symbols/gem/gem_ipm_process_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62;&#34; (property identification) &#34;&#60;br&#62;&#34; (label) &#34;&#60;br&#62;&#34;)"/>
+  </symbol-override>
+  <layout-link xlink:role="object" xlink:title="IDEF1X Hierarchical Layout" xlink:href="../types/idef1xclass.kmd#oid120" xlink:actuate="auto"/>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_logical_process.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:href="http://xml.metis.no/xml/symbols/cont_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="http://xml.metis.no/xml/symbols/container_closed_1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+  <layout-link xlink:role="object" xlink:title="IDEF1X Matrix Layout" xlink:href="../types/idef1xclass.kmd#oid117" xlink:actuate="auto"/>
+ </typeview>
+
+ <viewstyle id="oid1" name="Flowlogic_Viewstyle" title="Flowlogic View Style">
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="auto"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3" xlink:actuate="auto"/>
+ </viewstyle>
+
+</metis>

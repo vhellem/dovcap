@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_MEAF:OfferComponent_UUID" name="offer_component" title="Offer Component" desc="The Offer Component is the abstract base type for all Market Offering types." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="generic_component.kmd#BasicComponentType"/>
+ </type>
+
+</metis>

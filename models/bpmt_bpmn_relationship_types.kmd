@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_41D955B8-4F86-4EB1-875F-546A23CD3E7C" name="BPMN_Relationship_Types" title="BPMN Relationship Types">
+  <complex-type-links size="33">
+   <complex-type-link xlink:role="type" xlink:title="Business Process Sequence Flow Business Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#RelType_PrecedesProcessStep_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Association Process Data" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/association.kmd#Reltype_process_association_process_data_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Connection Sequence Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_connection_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Data Association Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/association.kmd#Reltype_process_data_association_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Data Sequence Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_data_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Input" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Intermediate Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Start Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process End Event Sequence Flow Business Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_end_event_sequence_flow_business_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Event Association Process Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/association.kmd#Reltype_process_event_association_process_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Gateway Sequence Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_gateway_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Interaction Sequence Flow Process Interaction" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Input" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Intermediate Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Start Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Intermediate Event Sequence Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_intermediate_event_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Input" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Intermediate Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Start Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Input" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Intermediate Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Start Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Connection" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_connection_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Data" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_data_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process End Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_end_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Gateway" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_gateway_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Intermediate Event" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Start Event Sequence Flow Process" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_process_start_event_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software uses Information Component" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/uses-is_used_by_crud.kmd#Reltype_deployed_software_uses_is_used_by_crud_information_component_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

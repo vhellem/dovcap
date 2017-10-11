@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="17"
+ nextoid="1">
+
+ <type id="RelType_ITG:Hardware_Product_Version_needs_Skill_UUID" name="Hardware_Product_Model_needs_Skill" title="Hardware Product Model needs Skill" desc="Indicates that the use of a Hardware Product Model requires a specific Skill. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Deliverable needs Skill" xlink:href="needs-is_needed_by_resources.kmd#Reltype_deliverable_needs_is_needed_by_resources_skill_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Hardware Product Model" xlink:href="../objecttypes/hardware_product_version.kmd#CompType_MEAF:HardwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Skill" xlink:href="../objecttypes/skill.kmd#CompType_TRM:Skill_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Hardware Product Model needs Skill" xlink:href="#RelType_ITG:Hardware_Product_Version_needs_Skill_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Hardware Product Model needs Skill" xlink:href="#RelType_ITG:Hardware_Product_Version_needs_Skill_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <decimal name="resources">0</decimal>
+   <string name="resourceUnit"></string>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Industry_Standard_Version_needs_Skill_UUID" name="Industry_Standard_Version_needs_Skill" title="Industry Standard Version needs Skill" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Deliverable needs Skill" xlink:href="needs-is_needed_by_resources.kmd#Reltype_deliverable_needs_is_needed_by_resources_skill_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Skill" xlink:href="../objecttypes/skill.kmd#CompType_TRM:Skill_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Industry Standard Version needs Skill" xlink:href="#RelType_ITG:Industry_Standard_Version_needs_Skill_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Industry Standard Version needs Skill" xlink:href="#RelType_ITG:Industry_Standard_Version_needs_Skill_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <decimal name="resources">0</decimal>
+   <string name="resourceUnit"></string>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Software_Product_Version_needs_Skill_UUID" name="Software_Product_Version_needs_Skill" title="Software Product Version needs Skill" desc="Indicates that the use of a Software Product Version requires a specific Skill. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Deliverable needs Skill" xlink:href="needs-is_needed_by_resources.kmd#Reltype_deliverable_needs_is_needed_by_resources_skill_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product Version" xlink:href="../objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Skill" xlink:href="../objecttypes/skill.kmd#CompType_TRM:Skill_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product Version needs Skill" xlink:href="#RelType_ITG:Software_Product_Version_needs_Skill_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Software Product Version needs Skill" xlink:href="#RelType_ITG:Software_Product_Version_needs_Skill_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <decimal name="resources">0</decimal>
+   <string name="resourceUnit"></string>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ReqStep_UUID" name="business_process_needs_is_needed_by_role" title="Business Process needs Role" desc="Use this relationship for when a process step requires a role." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Role" xlink:href="../objecttypes/role.kmd#CompType_TRM:Role_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Process needs Role" xlink:href="#RelType_ReqStep_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color">#FA8072</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Business Process needs Role" xlink:href="#RelType_ReqStep_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_action_needs_is_needed_by_action_UUID" name="action_needs_is_needed_by_action" title="Action needs Action" desc="Use this relationship to specify that an action requires another action." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Action needs Action" xlink:href="#Reltype_action_needs_is_needed_by_action_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Action needs Action" xlink:href="#Reltype_action_needs_is_needed_by_action_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_application_component_needs_is_needed_by_application_component_UUID" name="application_component_needs_is_needed_by_application_component" title="Application Component needs Application Component" desc="Use this relationship to model that an application needs another application to perform properly. You may also use the more general relationship uses/used by to show that an application is exactly using another application." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component needs Application Component" xlink:href="#Reltype_application_component_needs_is_needed_by_application_component_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component needs Application Component" xlink:href="#Reltype_application_component_needs_is_needed_by_application_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_business_process_needs_is_needed_by_knowledge_component_UUID" name="business_process_needs_is_needed_by_knowledge_component" title="Business Process needs Knowledge Component" desc="Use this relationship to specify what knowledge elements are required by a business process." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Knowledge Component" xlink:href="../abstracttypes/knowledge_component.kmd#CompType_MEAF:KnowledgeComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Process needs Knowledge Component" xlink:href="#Reltype_business_process_needs_is_needed_by_knowledge_component_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Business Process needs Knowledge Component" xlink:href="#Reltype_business_process_needs_is_needed_by_knowledge_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_needs_is_needed_by_analysis_UUID" name="change_component_needs_is_needed_by_analysis" title="Change Component needs Analysis" desc="Use this relationship to connect a strategy element to a required analysis." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Analysis" xlink:href="../objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component needs Analysis" xlink:href="#Reltype_change_component_needs_is_needed_by_analysis_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component needs Analysis" xlink:href="#Reltype_change_component_needs_is_needed_by_analysis_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_needs_is_needed_by_deliverable_UUID" name="deliverable_needs_is_needed_by_deliverable" title="Deliverable needs Deliverable" desc="Use this relationship to specify that a product or service needs another product or service." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable needs Deliverable" xlink:href="#Reltype_deliverable_needs_is_needed_by_deliverable_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable needs Deliverable" xlink:href="#Reltype_deliverable_needs_is_needed_by_deliverable_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_needs_is_needed_by_function_UUID" name="deliverable_needs_is_needed_by_function" title="Deliverable needs Function" desc="Use this relationship to specify that a product item or sales item needs specific functions or product methods." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable needs Function" xlink:href="#Reltype_deliverable_needs_is_needed_by_function_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable needs Function" xlink:href="#Reltype_deliverable_needs_is_needed_by_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_needs_is_needed_by_resource_UUID" name="deliverable_needs_is_needed_by_resource" title="Deliverable needs Resource" desc="Use this relationship to specify a tool, resource or manpower needed for a deliverable, e.g. a service or a commercial product." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Resource" xlink:href="../objecttypes/resource.kmd#CompType_MEAF:Resource_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable needs Resource" xlink:href="#Reltype_deliverable_needs_is_needed_by_resource_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable needs Resource" xlink:href="#Reltype_deliverable_needs_is_needed_by_resource_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_information_need_needs_is_needed_by_information_component_UUID" name="information_need_needs_is_needed_by_information_component" title="Information Need needs Information Component" desc="Use this relationship to connect information need and business questions to a business information model." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Need" xlink:href="../objecttypes/information_need.kmd#CompType_MEAF:InformationNeed_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Information Need needs Information Component" xlink:href="#Reltype_information_need_needs_is_needed_by_information_component_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Information Need needs Information Component" xlink:href="#Reltype_information_need_needs_is_needed_by_information_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_needs-is_needed_by_UUID" name="needs-is_needed_by" title="needs" desc="Allows you to connect Business Questions to a business information model." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllneeds-is_needed_by" xlink:role="criteria" xlink:title="Find all Needs relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_needs-is_needed_by_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_position_needs_is_needed_by_skill_profile_UUID" name="position_needs_is_needed_by_skill_profile" title="Position needs Skill Profile" desc="Use this relationship to connect a comptence/skill profile to a position or role." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Position" xlink:href="../objecttypes/position.kmd#CompType_MEAF:Position_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Skill Profile" xlink:href="../objecttypes/skill_profile.kmd#CompType_MEAF:SkillProfile_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Position needs Skill Profile" xlink:href="#Reltype_position_needs_is_needed_by_skill_profile_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Position needs Skill Profile" xlink:href="#Reltype_position_needs_is_needed_by_skill_profile_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_process_mechanism_needs_is_needed_by_knowledge_component_UUID" name="process_mechanism_needs_is_needed_by_knowledge_component" title="Process Mechanism needs Knowledge Component" desc="Use this relationship to connect a comptence/skill profile to a process mechanism (of a BPM process)." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Process Mechanism" xlink:href="../objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Knowledge Component" xlink:href="../abstracttypes/knowledge_component.kmd#CompType_MEAF:KnowledgeComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Process Mechanism needs Knowledge Component" xlink:href="#Reltype_process_mechanism_needs_is_needed_by_knowledge_component_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Process Mechanism needs Knowledge Component" xlink:href="#Reltype_process_mechanism_needs_is_needed_by_knowledge_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_role_needs_is_needed_by_skill_profile_UUID" name="role_needs_is_needed_by_skill_profile" title="Role needs Skill Profile" desc="Use this relationship to connect a comptence/skill profile to a position or role." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Role" xlink:href="../objecttypes/role.kmd#CompType_TRM:Role_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Skill Profile" xlink:href="../objecttypes/skill_profile.kmd#CompType_MEAF:SkillProfile_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Role needs Skill Profile" xlink:href="#Reltype_role_needs_is_needed_by_skill_profile_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Role needs Skill Profile" xlink:href="#Reltype_role_needs_is_needed_by_skill_profile_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_strategy_component_needs_is_needed_by_analysis_UUID" name="strategy_component_needs_is_needed_by_analysis" title="Strategy Component needs Analysis" desc="Use this relationship to connect a change item (e.g. initiative) to a required analysis." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="needs" xlink:href="#Reltype_needs-is_needed_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Strategy Component" xlink:href="../abstracttypes/strategy_component.kmd#CompType_MEAF:StrategyComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Analysis" xlink:href="../objecttypes/analysis.kmd#CompType_MEAF:Analysis_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategy Component needs Analysis" xlink:href="#Reltype_strategy_component_needs_is_needed_by_analysis_UUID" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">is needed by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategy Component needs Analysis" xlink:href="#Reltype_strategy_component_needs_is_needed_by_analysis_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

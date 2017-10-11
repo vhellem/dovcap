@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_ERM:Risk_Type_UUID" name="Risk_Type" title="Risk Type">
+  <range name="Undefined" min="0" max="0"/>
+  <range name="Unknown" min="1" max="1"/>
+  <range name="Financial" min="2" max="2"/>
+  <range name="Reputation" min="3" max="3"/>
+  <range name="Customer" min="4" max="4"/>
+  <range name="Employee" min="5" max="5"/>
+  <range name="Regulatory" min="6" max="6"/>
+  <range name="Operational" min="8" max="8"/>
+  <range name="Market" min="9" max="9"/>
+  <range name="IT" min="10" max="10"/>
+  <range name="Information" min="11" max="11"/>
+  <range name="Mortality" min="7" max="7"/>
+ </integer-type>
+
+
+</metis>

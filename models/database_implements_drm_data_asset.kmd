@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_Troux_Information:Database_implements_DRM_Data_Asset_UUID" name="Database_implements_DRM_Data_Asset" title="Database implements DRM Data Asset" desc="Associates a physical database instance with a conceptual DRM: Data Asset." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements/is implemented by (Weight)" xlink:href="../../meaf/relationshiptypes/implements-is_implemented_by_weight.kmd#Reltype_implements-is_implemented_by_weight_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Database" xlink:href="../../meaf/objecttypes/database.kmd#CompType_TRM:Database_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="DRM: Data Asset" xlink:href="../../eagov/object_types/data_asset.kmd#CompType_FEA_DRM:data_asset_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Database implements DRM Data Asset" xlink:href="#RelType_Semantics_Troux_Information:Database_implements_DRM_Data_Asset_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Database implements DRM Data Asset" xlink:href="#RelType_Semantics_Troux_Information:Database_implements_DRM_Data_Asset_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="weight">0</integer>
+   <integer name="objectWeight" class="volatile">0</integer>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+
+</metis>

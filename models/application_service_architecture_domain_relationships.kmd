@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_7B79BFCC-ED9F-41DB-AC5E-BE47019A8DDD" name="Application_Service_Architecture_Domain_Relationships" title="Application Service Architecture Domain Relationships" desc="The metamodel for the relationship types used to connect application service architecture domain object types.">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Application Service provides-is provided by Application Service Interface" xlink:href="../relationship_types/application_service_provides-is_provided_by_application_service_interface.kmd#Application_Service_provides-is_provided_by_Application_Service_Interface"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Service requires-is required by Application Service Interface" xlink:href="../relationship_types/application_service_requires-is_required_by_application_service_interface.kmd#Application_Service_requires-is_required_by_Application_Service_Interface"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

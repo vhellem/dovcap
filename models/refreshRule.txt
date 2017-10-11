@@ -1,0 +1,24 @@
+option explicit
+
+' Refresh Rule
+
+dim ccRule
+dim inst, instView, workWindow
+dim ruleType
+
+set ruleType = metis.findType("http://xml.chalmers.se/class/rule.kmd#rule")
+
+set inst = metis.currentModel.currentInstance
+set instView = metis.currentModel.currentModelView.currentInstanceView
+set workWindow = instView.parent
+if inst.type.uri = ruleType.uri then
+
+'stop
+
+    set ccRule = new CC_Rule
+    ccRule.ObjectAspectRatio = 0.35
+    call ccRule.populateRule(workWindow, inst, false)
+end if
+
+' End
+

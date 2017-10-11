@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_TRM:Project_UUID" name="project" title="Project" desc="A Project is a time-delimited set of coordinated and planned activities or tasks that are performed to achieve a set of specific goals and objectives." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="projectId" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Project ID" desc="Unique number identifying the project." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_projectId_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="baselineStartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Baseline Start Date" desc="Original planned start date." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_baselineStartDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="plannedStartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Planned Start Date" desc="Current planned start date." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_GenInfo_StartDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="actualStartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Actual Start Date" desc="The date this project/task actually started." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_GenInfo_ActualStartDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="baselineFinishDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Baseline Finish Date" desc="Original planned completion date." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_baselineFinishDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="plannedFinishDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Planned Finish Date" desc="Current planned completion date based on current project/task progress evaluation." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_GenInfo_FinishDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="actualFinishDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Actual Finish Date" desc="The day this project/task actually finished." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_GenInfo_ActualFinishDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="baselineCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Baseline Cost" desc="Original planned (budgeted) cost." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_baselineCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="plannedCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Planned Cost" desc="Current planned cost based on current project/task cost consumption." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_plannedCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="actualCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Actual Cost" desc="The actual cost of the project/task." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_actualCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="plannedResources" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Planned Resources" desc="The total planned resource consumption." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_plannedResources_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="actualResources" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Actual Resources" desc="The actual (reported) resource consumption." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_actualResources_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="completionPercentage" xlink:role="integer-type" xlink:title="Percentage" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_percentage0_UUID" label="Completion Percentage" desc="An estimation of how much of the project/task has been completed (%)." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_completionPercentage_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="phase" xlink:role="integer-type" xlink:title="Status Phase" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_status_phase_UUID" label="Phase" desc="The current status of this project." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_GenInfo_ProjectStatus_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=4;isVisibleInDiagramExport=1;"/>
+  <property name="baselineResources" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Baseline Resources" desc="Original planned use of resources." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_baselineResources_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="resourceUnit" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Resource Unit" desc="A description of the type of resources used/consumed in the project/task. (Normally FTE&#39;s Full Time Equivalents.)" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Project_resourceUnit_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="rolledUpBaselineCost" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Rolled up Baseline Cost" desc="This property is calculated as the sum of all Baseline Costs from this Projects decomposed Projects and Tasks" method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="rolledUpPlannedCost" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Rolled up Planned Cost" desc="This property is calculated as the sum of all Planned Costs from this Projects decomposed Projects and Tasks" method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="rolledUpActualCost" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Rolled up Actual Cost" desc="This property is calculated as the sum of all Actual Costs from this Projects decomposed Projects and Tasks" method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="allocationDirect" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Allocation, direct" desc="The number of full-time equivalents allocated to this project directly. Computed by aggregating property values on allocated to/has allocation relationships from Person objects." method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="allocationTotal" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Allocation, total" desc="The number of full-time equivalents allocated to this project and its subprojects and subtasks. Computed by aggregating property values on allocated to/has allocation relationships from Person objects." method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="The colorvalue for the Application Component based on the phase property" method-flag="true" visible-flag="false" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="capexSoftwareCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="CapEx Software Cost" desc="The capital expenditure for software required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_capexSoftwareCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="capexHardwareCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="CapEx Hardware Cost" desc="The capital expenditure for hardware required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_capexHardwareCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="capexLaborCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="CapEx Labor Cost" desc="The capital expenditure for labor required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_capexLaborCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="capexOtherCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="CapEx Other Cost" desc="All other capital expenditure required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_capexOtherCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexSoftwareCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Software Cost" desc="The operational expenditure for software required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_opexSoftwareCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexHardwareCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Hardware Cost" desc="The operational expenditure for hardware required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_opexHardwareCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexLaborCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Labor Cost" desc="The operational expenditure for labor required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_opexLaborCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexOtherCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Other Cost" desc="All other operational expenditures required by the project." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Project_opexOtherCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Project" xlink:href="#CompType_TRM:Project_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="task.kmd#CompType_TRM:Task_UUID"/>
+  <named-method-link name="MetisTrouxClient_--Get Contract----QueryContractOverproject_signs_is_signed_by_contract" xlink:role="cpp-method" xlink:title="signs Contract" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryContractOverproject_signs_is_signed_by_contract"/>
+  <named-method-link name="MetisTrouxClient_--Get Initiative----QueryITInitiativeOverproject_supports_is_supported_by_initiative" xlink:role="cpp-method" xlink:title="supports Initiative" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryITInitiativeOverproject_supports_is_supported_by_initiative"/>
+  <named-method-link name="MetisTrouxClient_--Get Manpower----QueryManpowerOverproject_allocates_is_allocated_to_percentage_manpower" xlink:role="cpp-method" xlink:title="allocates Manpower" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryManpowerOverproject_allocates_is_allocated_to_percentage_manpower"/>
+  <named-method-link name="MetisTrouxClient_--Get Person----QueryPersonOverproject_allocates_is_allocated_to_percentage_person" xlink:role="cpp-method" xlink:title="allocates Person" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryPersonOverproject_allocates_is_allocated_to_percentage_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Program----QueryProgramOverprogram_governs_is_governed_by_project" xlink:role="cpp-method" xlink:title="is governed by Program" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryProgramOverprogram_governs_is_governed_by_project"/>
+  <named-method-link name="MetisTrouxClient_--Get Project----QueryProjectOverproject_consists_of_is_part_of_project" xlink:role="cpp-method" xlink:title="consists of Project" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryProjectOverproject_consists_of_is_part_of_project"/>
+  <named-method-link name="MetisTrouxClient_--Get Task----QueryGenericTaskOverproject_consists_of_is_part_of_task" xlink:role="cpp-method" xlink:title="consists of Task" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryGenericTaskOverproject_consists_of_is_part_of_task"/>
+  <named-method-link name="MetisTrouxClient_--Get Timeline Diagram" xlink:role="cpp-method" xlink:title="Find Timeline Diagrams" xlink:href="../methods/timeline_queries.kmd#QueryTimeline"/>
+  <named-method-link name="allocationDirect" xlink:role="cpp-method" xlink:title="Allocation, direct" xlink:href="../methods/project_methods.kmd#oid1"/>
+  <named-method-link name="allocationTotal" xlink:role="cpp-method" xlink:title="Allocation, total" xlink:href="../methods/project_methods.kmd#oid2"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="Pick_Project_Phase_Color" xlink:href="../methods/colormapping_methods.kmd#oid3"/>
+  <named-method-link name="rolledUpActualCost" xlink:role="cpp-method" xlink:title="CalculateRolledUpActualCost" xlink:href="../methods/project_methods.kmd#oid7"/>
+  <named-method-link name="rolledUpBaselineCost" xlink:role="cpp-method" xlink:title="CalculateRolledUpBaselineCost" xlink:href="../methods/project_methods.kmd#oid5"/>
+  <named-method-link name="rolledUpPlannedCost" xlink:role="cpp-method" xlink:title="CalculateRolledUpPlannedCost" xlink:href="../methods/project_methods.kmd#oid6"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Project" xlink:href="#CompType_TRM:Project_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#EEBBAA</string>
+   <string name="troux_iconAlias">a270becc-aca9-3180-bf90-5e65323fdb39</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="42" xlink:role="type" xlink:title="Project" xlink:href="#CompType_TRM:Project_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="monetaryUnit"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <string name="projectId"></string>
+   <date name="baselineStartDate">00000000</date>
+   <date name="plannedStartDate">00000000</date>
+   <date name="actualStartDate">00000000</date>
+   <date name="baselineFinishDate">00000000</date>
+   <date name="plannedFinishDate">00000000</date>
+   <date name="actualFinishDate">00000000</date>
+   <decimal name="baselineCost">0</decimal>
+   <decimal name="plannedCost">0</decimal>
+   <decimal name="actualCost">0</decimal>
+   <decimal name="plannedResources">0</decimal>
+   <decimal name="actualResources">0</decimal>
+   <integer name="completionPercentage">0</integer>
+   <integer name="phase">-1</integer>
+   <decimal name="baselineResources">0</decimal>
+   <string name="resourceUnit"></string>
+   <float name="rolledUpBaselineCost" class="volatile">0</float>
+   <float name="rolledUpPlannedCost" class="volatile">0</float>
+   <float name="rolledUpActualCost" class="volatile">0</float>
+   <float name="allocationDirect" class="volatile">0</float>
+   <float name="allocationTotal" class="volatile">0</float>
+   <string name="color" class="volatile"></string>
+   <decimal name="capexSoftwareCost">0</decimal>
+   <decimal name="capexHardwareCost">0</decimal>
+   <decimal name="capexLaborCost">0</decimal>
+   <decimal name="capexOtherCost">0</decimal>
+   <decimal name="opexSoftwareCost">0</decimal>
+   <decimal name="opexHardwareCost">0</decimal>
+   <decimal name="opexLaborCost">0</decimal>
+   <decimal name="opexOtherCost">0</decimal>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Project" xlink:href="#CompType_TRM:Project_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="projectId" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="baselineStartDate" visible-flag="true"/>
+   <propertyview name="plannedStartDate" visible-flag="true"/>
+   <propertyview name="actualStartDate" visible-flag="true"/>
+   <propertyview name="baselineFinishDate" visible-flag="true"/>
+   <propertyview name="plannedFinishDate" visible-flag="true"/>
+   <propertyview name="actualFinishDate" visible-flag="true"/>
+   <propertyview name="baselineCost" visible-flag="true"/>
+   <propertyview name="plannedCost" visible-flag="true"/>
+   <propertyview name="actualCost" visible-flag="true"/>
+   <propertyview name="rolledUpBaselineCost" visible-flag="true"/>
+   <propertyview name="rolledUpPlannedCost" visible-flag="true"/>
+   <propertyview name="rolledUpActualCost" visible-flag="true"/>
+   <propertyview name="baselineResources" visible-flag="true"/>
+   <propertyview name="plannedResources" visible-flag="true"/>
+   <propertyview name="actualResources" visible-flag="true"/>
+   <propertyview name="resourceUnit" visible-flag="true"/>
+   <propertyview name="completionPercentage" visible-flag="true"/>
+   <propertyview name="allocationDirect" visible-flag="true"/>
+   <propertyview name="allocationTotal" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/project.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/project.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/project.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Project" xlink:href="#CompType_TRM:Project_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="projectId" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="baselineStartDate" visible-flag="true"/>
+   <propertyview name="plannedStartDate" visible-flag="true"/>
+   <propertyview name="actualStartDate" visible-flag="true"/>
+   <propertyview name="baselineFinishDate" visible-flag="true"/>
+   <propertyview name="plannedFinishDate" visible-flag="true"/>
+   <propertyview name="actualFinishDate" visible-flag="true"/>
+   <propertyview name="baselineCost" visible-flag="true"/>
+   <propertyview name="plannedCost" visible-flag="true"/>
+   <propertyview name="actualCost" visible-flag="true"/>
+   <propertyview name="rolledUpBaselineCost" visible-flag="true"/>
+   <propertyview name="rolledUpPlannedCost" visible-flag="true"/>
+   <propertyview name="rolledUpActualCost" visible-flag="true"/>
+   <propertyview name="baselineResources" visible-flag="true"/>
+   <propertyview name="plannedResources" visible-flag="true"/>
+   <propertyview name="actualResources" visible-flag="true"/>
+   <propertyview name="resourceUnit" visible-flag="true"/>
+   <propertyview name="completionPercentage" visible-flag="true"/>
+   <propertyview name="allocationDirect" visible-flag="true"/>
+   <propertyview name="allocationTotal" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Nested Open" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/project.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Nested Closed" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/project.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/project.png"/>
+ </typeview>
+
+
+</metis>

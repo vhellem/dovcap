@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="5">
+
+ <type id="oid1" name="TransitionPlanItem" title="Transition Plan Item" desc="A Transition Plan Item is a proposed change that is part of the business or IT plan. It will often be the result of an Initiative that has been formalized, have gone through cost benefit analyses, budgeting, etc.&#10;Transition Plan Items will typically be implemented via Projects. One Transition Plan Item can be associated with another Transition Plan Item with the Followed By relationship." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="name" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:title="description" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <property name="BusinessBenefitPerYear" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Business Benefit Per Year" desc="Estimated business benefit per year"/>
+  <property name="ImplementationCost" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Implementation Cost" desc="Estimated cost of implementing the change."/>
+  <property name="CostBenefitUnit" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Cost/Benefit Unit" desc="The unit used for the benefit and cost figures (MUSD, KSEK, EURO,..."/>
+  <property name="PlannedStartDate" xlink:href="metis:std#oid40" label="Planned Start Date" desc="Planned date for starting the change activities."/>
+  <property name="PlannedDuration" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Planned Duration (months)" desc="Planned duration for the change activities."/>
+  <property name="stratValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Strategic Value" desc="This property is calculated as the sum of all products of Strategic Value on IT Initiative and Weight on the &#39;leads to&#39; relationship from IT Initiative to Transition Plan Itemy." method-flag="true"/>
+  <property name="svCount" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="SV Count" desc="The number of steps used to calculate the strategic value." method-flag="true"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="TransitionPlanItem" xlink:href="#oid1"/>
+  <named-method-link name="stratValue" xlink:role="cpp-method" xlink:title="getStrategicValue1" xlink:href="strategicvalue_methods.kmd#oid30"/>
+  <named-method-link name="svCount" xlink:role="cpp-method" xlink:href="strategicvalue_methods.kmd#oid107"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="TransitionPlanItem" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="BusinessBenefitPerYear">0</integer>
+   <integer name="ImplementationCost">0</integer>
+   <string name="CostBenefitUnit"></string>
+   <date name="PlannedStartDate">00000000</date>
+   <integer name="PlannedDuration">0</integer>
+   <integer name="stratValue" class="volatile">0</integer>
+   <integer name="svCount" class="volatile">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="TransitionPlanItem" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/plan_item.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property stratValue))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/plan_item.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property stratValue))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/change_plan.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>
+

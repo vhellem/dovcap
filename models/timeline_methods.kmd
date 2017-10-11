@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="TimelinePropertyDialog" language="c++" bind="NO.METIS.TOOLS.setupPropertyDialogTabs" required-dll="metis_ui">
+    <arg-list size="3">
+      <string name="TabName1">MetisDataTab</string>
+      <pointer name="Widget1" xlink:role="cpp-method" xlink:title="MainDataTab" xlink:href="#oid2" xlink:actuate="auto"/>
+      <string name="TabName2">ME Repository</string>
+      <pointer name="Widget2" xlink:role="cpp-method" xlink:title="RepositoryDataTab" xlink:href="metis:mer#RepositoryDataTab" xlink:actuate="auto"/>
+      <string name="InsertPosition2">MetisLinksTab</string>
+   </arg-list>
+ </cpp-method>
+  
+ <cpp-method id="oid2" name="MainDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+    <arg-list size="1">
+      <string name="Exclude">dbms-admin.commitFlag, dbms-admin.commitTime, dbms-admin.system-modifiedTime, dbms-admin.system-uploaded</string>
+      <string name="Row1">name</string>
+      <string name="Row2">Group1</string>
+      <string name="Group1.Caption">Timespan</string>
+      <string name="Group1.Row1">timespanLowdate</string>
+      <string name="Group1.Row2">timespanHighdate</string>
+      <string name="Row3">Group2</string>
+      <string name="Group2.Caption">Granularity</string>
+      <string name="Group2.Row1">granularityQuantity,granularityUnit</string>
+      <string name="Row4">Group3</string>
+      <string name="Group3.Caption">Tolerance</string>
+      <string name="Group3.Row1">tolerancePercentLow, tolerancePercentHigh</string>
+     <string name="IncludeInvisibleAccess">true</string>
+      <string name="IncludeRemainingProperties">true</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1001" name="TimelineDiagramConstructor" language="c++" bind="NO.METIS.GEM.DIAGRAM.enableTimelineDiagram" required-dll="gem_diagram">
+  <arg-list size="5">
+   <url name="CommandObjectUrl" xlink:href="../commands/timeline_commands.kmd" xlink:role="url" xlink:title="Command Object Url" xlink:actuate="auto"/>
+   <pointer name="DiagramUri" xlink:role="type" xlink:title="Timeline Diagram" xlink:href="../objecttypes/timeline_diagram.kmd#CompType_MEAF:TimelineDiagram_UUID"/>
+   <pointer name="TimelineUri" xlink:role="type" xlink:title="Timeline" xlink:href="../objecttypes/timeline.kmd#CompType_MEAF:Timeline_UUID"/>
+   <pointer name="TypeFilterAtCreate1" xlink:role="type" xlink:title="Timeline Start" xlink:href="../objecttypes/timeline_start.kmd#CompType_MEAF:TimelineStart_UUID"/>
+   <pointer name="TypeFilterAtCreate2" xlink:role="type" xlink:title="Timeline End" xlink:href="../objecttypes/timeline_end.kmd#CompType_MEAF:TimelineEnd_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1002" name="setEqualTextscale" language="c++" bind="NO.METIS.GEM.setTextScale" required-dll="gem_modeling">
+  <arg-list size="1">
+   <float name="TextScaleFactor">8</float>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1003" name="calculateNewEndDate" language="c++" bind="NO.METIS.GEM.getRoundedEnd" required-dll="gem_datehandling">
+  <arg-list size="6">
+   <string name="FromDate">timespanLowdate</string>
+   <string name="GranularityProp">granularityUnit</string>
+   <string name="GranularityWeight">granularityQuantity</string>
+   <string name="Integer">true</string>
+   <integer name="Round">1</integer>
+   <string name="ToDate">timespanHighdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1004" name="calculateTickmarks" language="c++" bind="NO.METIS.GEM.getPeriod" required-dll="gem_datehandling">
+  <arg-list size="6">
+   <string name="FromDate">timespanLowdate</string>
+   <string name="GranularityProp">granularityUnit</string>
+   <string name="GranularityWeight">granularityQuantity</string>
+   <string name="Integer">true</string>
+   <integer name="Round">1</integer>
+   <string name="ToDate">timespanHighdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1005" name="getWorstConnectedDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="9">
+   <string name="CompareDateProp">date</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="externalObjectFromEvent" xlink:href="../criteria/timeline_criteria.kmd#oid2002"/>
+   <pointer name="ExternalCriteria" xlink:role="criteria" xlink:title="Find Interface Relationships" xlink:href="../criteria/timeline_criteria.kmd#oid3001"/>
+   <string name="ExternalValueProp">ExternalDateProperty</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="Property"></string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="../criteria/diagram_criteria.kmd#oid2003"/>
+   <string name="What">worst</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1006" name="getDateFromPos" language="c++" bind="NO.METIS.GEM.getGeometryValue" required-dll="gem_analyse">
+  <arg-list size="5">
+   <float name="FractionHighX">0.95</float>
+   <float name="FractionLowX">0.05</float>
+   <string name="HighValueProperty">roundhighdate</string>
+   <string name="LowValueProperty">timespanLowdate</string>
+   <string name="ResultValueProperty">date</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1007" name="getStartDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="Property">timespanLowdate</string>
+   <string name="Structure">Parent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1008" name="getEndDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="Property">timespanHighdate</string>
+   <string name="Structure">Parent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1009" name="getEventDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="7">
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="externalObjectFromEvent" xlink:href="../criteria/timeline_criteria.kmd#oid2002"/>
+   <pointer name="Criteria3" xlink:role="criteria" xlink:title="milestoneFromEvent" xlink:href="../criteria/timeline_criteria.kmd#oid2003"/>
+   <pointer name="ExternalCriteria2" xlink:role="criteria" xlink:title="Find Interface Relationships" xlink:href="../criteria/timeline_criteria.kmd#oid3001"/>
+   <string name="ExternalValueProp2">ExternalDateProperty</string>
+   <string name="Property1">localdate</string>
+   <string name="Property2"></string>
+   <string name="Property3">date</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1010" name="getDateAsText" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="FormatString">Default</string>
+   <string name="Property">date</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1012" name="setPositionAsDate" language="c++" bind="NO.METIS.GEM.setGeometryValue" required-dll="gem_modeling">
+  <arg-list size="6">
+   <string name="CurrentValueProperty">date</string>
+   <float name="FractionHighX">0.95</float>
+   <float name="FractionLowX">0.05</float>
+   <string name="HighValueProperty">roundhighdate</string>
+   <string name="LowValueProperty">timespanLowdate</string>
+   <pointer name="ParentType" xlink:role="type" xlink:title="Timeline" xlink:href="../objecttypes/timeline.kmd#CompType_MEAF:Timeline_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1013" name="milestoneChange" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="#oid1012" xlink:actuate="auto"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="#oid1024" xlink:actuate="auto"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1014" name="getEventColor" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">white</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">red</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">blue</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="../criteria/diagram_criteria.kmd#oid2003"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1015" name="getEventPattern" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">none</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">solid</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">dense7</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="../criteria/diagram_criteria.kmd#oid2003"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1016" name="getHighTolerance" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="timelineFromDiagram" xlink:href="../criteria/timeline_criteria.kmd#oid2007"/>
+   <string name="Property">highTolerance</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1017" name="getLowTolerance" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="timelineFromDiagram" xlink:href="../criteria/timeline_criteria.kmd#oid2007"/>
+   <string name="Property">lowTolerance</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1018" name="calculateHighTolerance" language="c++" bind="NO.METIS.GEM.getTolerance" required-dll="gem_datehandling">
+  <arg-list size="3">
+   <string name="GranularityUnitProp">granularityUnit</string>
+   <string name="GranularityWeightProp">granularityQuantity</string>
+   <string name="PercentageProp">tolerancePercentHigh</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1019" name="calculateLowTolerance" language="c++" bind="NO.METIS.GEM.getTolerance" required-dll="gem_datehandling">
+  <arg-list size="3">
+   <string name="GranularityUnitProp">granularityUnit</string>
+   <string name="GranularityWeightProp">granularityQuantity</string>
+   <string name="PercentageProp">tolerancePercentLow</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1020" name="getMilestoneColor" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">black</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">red</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">blue</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="timelineFromMilestone" xlink:href="../criteria/timeline_criteria.kmd#oid2001"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1021" name="getMilestonePattern" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">3</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">4</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">2</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="timelineFromMilestone" xlink:href="../criteria/timeline_criteria.kmd#oid2001"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1022" name="verticalCenterAlignment" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="VerticalAlignment">Center</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1023" name="milestonePositioning" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="4">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="getDateFromPos" xlink:href="#oid1006" xlink:actuate="auto"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="verticalCenterAlignment" xlink:href="#oid1022" xlink:actuate="auto"/>
+   <pointer name="Method3" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="#oid1024" xlink:actuate="auto"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1024" name="updateMacro" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="AllViews">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1025" name="extendMilestones" language="c++" bind="NO.METIS.GEM.extendSelection" required-dll="gem_modeling">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="allMilestonesFromTimeline" xlink:href="../criteria/timeline_criteria.kmd#oid2005"/>
+   <string name="Kind">Criteria</string>
+   <string name="ReferenceView">Current</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1026" name="horizontalCenterAlignment" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="HorizontalAlignment">Center</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1027" name="timelineCreation" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="setEqualTextscale" xlink:href="#oid1002" xlink:actuate="auto"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="horizontalCenterAlignment" xlink:href="#oid1026" xlink:actuate="auto"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1028" name="timelineChange" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="4">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="repositionMilestones" xlink:href="#oid1029" xlink:actuate="auto"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="updateMilestoneMacros" xlink:href="#oid1033" xlink:actuate="auto"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="ReferenceView">All</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1029" name="repositionMilestones" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="milestonesFromTimeline" xlink:href="../criteria/timeline_criteria.kmd#oid2008"/>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="#oid1012" xlink:actuate="auto"/>
+   <string name="Mode">UseCriteria</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1030" name="getStartDateAsText" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="FormatString">Default</string>
+   <string name="Property">timespanLowdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1031" name="getEndDateAsText" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="FormatString">Default</string>
+   <string name="Property">timespanHighdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1032" name="getTimelineLabel" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Macro">(expand (type label) &#34; &#34; (property name) &#34; from &#34; (property textstartdate) &#34; to &#34; (property textenddate))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1033" name="updateMilestoneMacros" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+  <arg-list size="1">
+   <pointer name="ChildrenOf" xlink:role="type" xlink:title="Timeline Milestones" xlink:href="../abstracttypes/timeline_milestones.kmd#CompType_MEAF:TimelineMilestones_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2003" name="getLineColorReverse" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+   <arg-list size="10">
+    <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromRelOrigin" xlink:href="../criteria/diagram_criteria.kmd#oid2004" xlink:actuate="user"/>
+    <string name="HighToleranceProp">highTolerance</string>
+    <string name="LowToleranceProp">lowTolerance</string>
+    <pointer name="FromObjectCriteria" xlink:role="criteria" xlink:title="toObject" xlink:href="../criteria/diagram_criteria.kmd#oid2002" xlink:actuate="user"/>
+    <pointer name="ToObjectCriteria" xlink:role="criteria" xlink:title="fromObject" xlink:href="../criteria/diagram_criteria.kmd#oid2001" xlink:actuate="user"/>
+    <string name="ExternalValueProp">ExternalDateProperty</string>
+    <string name="FromValue"></string>
+    <string name="ToValue">date</string>
+    <string name="LessThan">blue</string>
+    <string name="Equal">black</string>
+    <string name="GreaterThan">red</string>
+   </arg-list>
+ </cpp-method>
+  
+ <cpp-method id="oid2004" name="getLinePatternReverse" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+   <arg-list size="10">
+    <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromRelOrigin" xlink:href="../criteria/diagram_criteria.kmd#oid2004" xlink:actuate="user"/>
+    <string name="HighToleranceProp">highTolerance</string>
+    <string name="LowToleranceProp">lowTolerance</string>
+    <pointer name="FromObjectCriteria" xlink:role="criteria" xlink:title="toObject" xlink:href="../criteria/diagram_criteria.kmd#oid2002" xlink:actuate="user"/>
+    <pointer name="ToObjectCriteria" xlink:role="criteria" xlink:title="fromObject" xlink:href="../criteria/diagram_criteria.kmd#oid2001" xlink:actuate="user"/>
+    <string name="ExternalValueProp">ExternalDateProperty</string>
+    <string name="FromValue"></string>
+    <string name="ToValue">date</string>
+    <string name="LessThan">dot</string>
+    <string name="Equal">solid</string>
+    <string name="GreaterThan">dash</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2005" name="updateRelMacro" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_analyse">
+ </cpp-method>
+ 
+ <cpp-method id="oid2006" name="updateConnectedRelMacro" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_analyse">
+   <arg-list size="1">
+     <string name="ExtraLevel">true</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2007" name="getInternalLineColor" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+   <arg-list size="10">
+    <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromRelTarget" xlink:href="../criteria/diagram_criteria.kmd#oid2005" xlink:actuate="user"/>
+    <string name="HighToleranceProp">highTolerance</string>
+    <string name="LowToleranceProp">lowTolerance</string>
+    <pointer name="FromObjectCriteria" xlink:role="criteria" xlink:title="fromObject" xlink:href="../criteria/diagram_criteria.kmd#oid2001" xlink:actuate="user"/>
+    <pointer name="ToObjectCriteria" xlink:role="criteria" xlink:title="toObject" xlink:href="../criteria/diagram_criteria.kmd#oid2002" xlink:actuate="user"/>
+    <string name="FromValue">date</string>
+    <string name="ToValue">date</string>
+    <string name="LessThan">blue</string>
+    <string name="Equal">black</string>
+    <string name="GreaterThan">red</string>
+   </arg-list>
+ </cpp-method>
+  
+ <cpp-method id="oid2008" name="getInternalLinePattern" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+   <arg-list size="10">
+    <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromRelTarget" xlink:href="../criteria/diagram_criteria.kmd#oid2005" xlink:actuate="user"/>
+    <string name="HighToleranceProp">highTolerance</string>
+    <string name="LowToleranceProp">lowTolerance</string>
+    <pointer name="FromObjectCriteria" xlink:role="criteria" xlink:title="fromObject" xlink:href="../criteria/diagram_criteria.kmd#oid2001" xlink:actuate="user"/>
+    <pointer name="ToObjectCriteria" xlink:role="criteria" xlink:title="toObject" xlink:href="../criteria/diagram_criteria.kmd#oid2002" xlink:actuate="user"/>
+    <string name="FromValue">date</string>
+    <string name="ToValue">date</string>
+    <string name="LessThan">dot</string>
+    <string name="Equal">solid</string>
+    <string name="GreaterThan">dash</string>
+   </arg-list>
+ </cpp-method>
+ 
+<!--
+++++++++++++++++++++++++++
+-->
+
+
+
+</metis>

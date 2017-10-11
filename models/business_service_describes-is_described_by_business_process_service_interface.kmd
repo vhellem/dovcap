@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Business_Service_describes-is_described_by_Business_Process_Service_Interface_UUID" name="Business_Service_describes_is_described_by_Business_Process_Service_Interface" title="Business Service describes-is described by Business Process Service Interface" desc="Associates a Business Service [offering] description with the Business Process Service Interface that it describes. The association is made with the Business Process Service Interface, since the interface is the externally visible aspect of the service." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/business_service_describes-is_described_by_business_process_service_interface.kmd#UUID4_5EB05002-9AB3-47FC-A7BA-5F9FED209A81"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Business Service" xlink:href="../../meaf/objecttypes/business_service.kmd#CompType_MEAF:BusinessService_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Business Process Service Interface" xlink:href="../object_types/business_process_service_interface.kmd#CompType_Semantics:Business_Process_Service_Interface_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Service describes-is described by Business Process Service Interface" xlink:href="#RelType_Semantics:Business_Service_describes-is_described_by_Business_Process_Service_Interface_UUID" xlink:actuate="user">
+   <string name="from">describes</string>
+   <string name="to">is described by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Business Service describes-is described by Business Process Service Interface" xlink:href="#RelType_Semantics:Business_Service_describes-is_described_by_Business_Process_Service_Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

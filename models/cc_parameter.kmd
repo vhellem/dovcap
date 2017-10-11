@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CC_parameter" name="CC_parameter" title="CC parameter" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <property name="parameterParent" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Parameter parent" desc="" visible-flag="true" method-flag="true"/>
+  <named-method-link name="parameterParent" xlink:role="cpp-method" xlink:title="Get parameter name" xlink:href="../methods/cc_methods.kmd#parameterParentName"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="CC parameter" xlink:href="#CC_parameter" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="parameter" name="parameter" title="Parameter" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC parameter" xlink:href="#CC_parameter"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="inputvalue" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Parameter value" desc="" visible-flag="true"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value" desc="" visible-flag="true"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="parameter" xlink:href="#parameter" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="parameter" xlink:href="#parameter" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

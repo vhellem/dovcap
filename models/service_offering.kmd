@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="4">
+
+ <type id="CompType_ITG:ServiceOffering_UUID" name="service_offering" title="Service Offering" desc="A Service Offering defines a specific service offered by the organization." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Service Component" xlink:href="../abstracttypes/service_component.kmd#CompType_ITG:ServiceComponent_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="service_level_agreement_template.kmd#CompType_ITG:ServiceLevelAgreementTemplate_UUID"/>
+  <property name="approvalNotes" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Approval Notes" desc="Any approval notes that were added by the approver." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_ApprovalNotes_UUID&#34;;"/>
+  <property name="approvalStatus" xlink:role="integer-type" xlink:title="Workflow Approval Status" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:ApprovalStatus_UUID" label="Approval Status" desc="Specifies the approval status of this offering (editing, pending, approved)." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_ApprovalStatus_UUID&#34;;"/>
+  <property name="authorUsername" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Author Username" desc="The name of the user who created this service offering." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_AuthorUsername_UUID&#34;;"/>
+  <property name="active" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Active" desc="Whether or not this service offering is currently active and available." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_Active_UUID&#34;;isRequired=1;"/>
+  <property name="startDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Start Date" desc="The date at which this service offering is made available for purchase." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_StartDate_UUID&#34;;"/>
+  <property name="endDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="End Date" desc="The date at which this service offering is no longer available for purchase." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_EndDate_UUID&#34;;"/>
+  <property name="workflowApprovalXML" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Workflow Approval XML" desc="The XML structure that lists the approvers with workflow process." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_WorkflowApprovalXML_UUID&#34;;"/>
+  <property name="complianceRollupXML" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Compliance Rollup XML" desc="The compliance rollup rules stored as an XML string." mer-property-metadata="uuid=&#34;PropDef_ITG:ServiceOffering_ComplianceRollupXML_UUID&#34;;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service Offering" xlink:href="#CompType_ITG:ServiceOffering_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#BCCD4D</string>
+   <string name="troux_iconAlias">Icon_CompType_ITG:ServiceOffering_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Service Offering" xlink:href="#CompType_ITG:ServiceOffering_UUID" xlink:actuate="user">
+   <integer name="active">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Service Offering" xlink:href="#CompType_ITG:ServiceOffering_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="approvalNotes" visible-flag="true"/>
+   <propertyview name="approvalStatus" visible-flag="true"/>
+   <propertyview name="authorUsername"  visible-flag="true"/>
+   <propertyview name="active" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="endDate" visible-flag="true"/>
+   <propertyview name="workflowApprovalXML" visible-flag="true"/>
+   <propertyview name="complianceRollupXML" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="workspaceID" visible-flag="false"/>
+   <propertyview name="correspondingLiveID" visible-flag="false"/>
+   <propertyview name="lockingWorkspaceID" visible-flag="false"/>
+   <propertyview name="markedForDeletion" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/serviceoffering.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/serviceoffering.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/serviceoffering.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Service Offering" xlink:href="#CompType_ITG:ServiceOffering_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="approvalNotes" visible-flag="true"/>
+   <propertyview name="approvalStatus" visible-flag="true"/>
+   <propertyview name="authorUsername"  visible-flag="true"/>
+   <propertyview name="active" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="endDate" visible-flag="true"/>
+   <propertyview name="workflowApprovalXML" visible-flag="true"/>
+   <propertyview name="complianceRollupXML" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="workspaceID" visible-flag="false"/>
+   <propertyview name="correspondingLiveID" visible-flag="false"/>
+   <propertyview name="lockingWorkspaceID" visible-flag="false"/>
+   <propertyview name="markedForDeletion" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/serviceoffering.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E7F084&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/serviceoffering.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/serviceoffering.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

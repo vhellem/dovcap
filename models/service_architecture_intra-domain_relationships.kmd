@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_59B476E6-801B-4C1F-9C3E-20C768257CAF" name="Service_Architecture_Intra_Domain_Relationships" title="Service Architecture Intra-Domain Relationships" desc="The metamodel for the relationship types used to connect service architecture object types across all service architecture subdomains.">
+  <complex-type-links size="8">
+   <complex-type-link xlink:role="type" xlink:title="Application Service requires-is required by Infrastructure Service Interface" xlink:href="../relationship_types/application_service_requires-is_required_by_infrastructure_service_interface.kmd#RelType_Semantics:Application_Service_requires-is_required_by_Infrastructure_Service_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process Service requires-is required by Application Service Interface" xlink:href="../relationship_types/business_process_service_requires-is_required_by_application_service_interface.kmd#RelType_Semantics:Business_Process_Service_requires-is_required_by_Application_Service_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process Service requires-is required by System Service Interface" xlink:href="../relationship_types/business_process_service_requires-is_required_by_system_service_interface.kmd#RelType_Semantics:Business_Process_Service_requires-is_required_by_System_Service_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Service requires-is required by Application Service Interface" xlink:href="../relationship_types/process_service_requires-is_required_by_application_service_interface.kmd#RelType_Semantics:Process_Service_requires-is_required_by_Application_Service_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Service requires-is required by System Service Interface" xlink:href="../relationship_types/process_service_requires-is_required_by_system_service_interface.kmd#RelType_Semantics:Process_Service_requires-is_required_by_System_Service_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Service Architecture includes-is included in Abstract Service" xlink:href="../relationship_types/service_architecture_includes-is_included_in_abstract_service.kmd#RelType_Semantics:Service_Architecture_includes-is_included_in_Abstract_Service_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="System Service requires-is required by Application Service Interface" xlink:href="../relationship_types/system_service_requires-is_required_by_application_service_interface.kmd#RelType_Semantics:System_Service_requires-is_required_by_Application_Service_Interface_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="System Service requires-is required by Infrastructure Service Interface" xlink:href="../relationship_types/system_service_requires-is_required_by_infrastructure_service_interface.kmd#RelType_Semantics:System_Service_requires-is_required_by_Infrastructure_Service_Interface_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

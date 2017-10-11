@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="allocation" title="Allocation" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 1" xlink:href="metis:stdmethods#oid521"/>
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Get Allocation" xlink:href="../criteria/person_criteria.kmd#oid1"/>
+   <string name="Expression">add (property percentage)</string>
+   <string name="Function">sum</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

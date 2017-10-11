@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="3"
+ nextoid="1">
+
+ <typeview id="Nested" xlink:role="type" xlink:title="Task (EKA)" xlink:href="../languages/eka_task.kmd#ekaTask" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="../../cvw/views/cvw_layout_strategies.kmd#Layout_CVW:ContainerLayout"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Compact container" xlink:href="../../cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="edge" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="left" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="right" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="top" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="bottom" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Nested Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="edge" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="left" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="right" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="top" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="bottom" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="Tree" xlink:role="type" xlink:title="Task (EKA)" xlink:href="../languages/eka_task.kmd#ekaTask" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="edge" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="left" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="right" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="top" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="bottom" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="edge" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="left" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="right" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="top" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="bottom" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="icons/task.png"/>
+ </typeview>
+
+ <typeview id="_002askm019ssgn73rorb" xlink:role="type" xlink:title="Task (EKA)" xlink:href="../languages/eka_task.kmd#ekaTask" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="icons/task.png"/>
+ </typeview>
+
+
+</metis>

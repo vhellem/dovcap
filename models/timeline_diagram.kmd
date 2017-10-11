@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="12"
+ methods="33"
+ criteria="8"
+ typeviews="7"
+ nextoid="2009">
+
+ <type id="oid11" name="Timeline_Diagram" title="Timeline Diagram" desc="Timeline Diagram is a set of object and relationship types that can be used to give a one-page summary of a number of events that mark progress from some known state (e.g., &#34;as is&#34;) to a specified future state (e.g., &#34;to be&#34;). Typically, major programs,  projects and other change acitvities are broken down into a set of discrete steps, indicated by milestones, that is,  points of progress towards the end state of the change activity.  Each of the milestones is &#34;achieved&#34; by the accomplishment of one or more &#34;events&#34; that contribute to the achievement of the milestone.  The Timeline Diagram provides a compact way to show (initially) the plan and then track &#34;progress&#34; as time marches on with the change activity. &#10; &#10;The Timeline Diagram consists of a Timeline that is used to visualize the time period during which the change activity takes place. Timeline Milestone objects are used to define the milestones on the timeline. These milestones are automatically placed correctly on the timeline according to the date specified for each milestone.&#10; &#10;Timeline Event objects are used to model the change activity events. These events are normally related to Timeline Milestones using a special relationship whose color and pattern provide indication of when things begin to get &#34;off target&#34;.&#10; &#10;Templates, like the ITM template support connections to these Timeline Events and directly to Timeline Milestones, so that the timeline can, e. g., be used to illustrate project tasks that fail to live up to the planned dates for completion.&#10;&#10;" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="diagram.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:title="Timeline Diagram" xlink:href="#oid111"/>
+  <property name="highTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="High Tolerance" desc="Number of days AFTER current date that is still considered a hit" method-flag="true" visible-flag="false"/>
+  <property name="lowTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Low Tolerance" desc="Number of days BEFORE current date that is still considered a hit" method-flag="true" visible-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Event" xlink:href="#oid41"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Timeline" xlink:href="#oid21"/>
+  <named-method-link name="Timeline_Diagram" xlink:role="cpp-method" xlink:title="TimelineDiagramConstructor" xlink:href="#oid1001"/>
+  <named-method-link name="highTolerance" xlink:role="cpp-method" xlink:title="getHighTolerance" xlink:href="#oid1016"/>
+  <named-method-link name="lowTolerance" xlink:role="cpp-method" xlink:title="getLowTolerance" xlink:href="#oid1017"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Timeline Diagram" xlink:href="#oid11" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <integer name="highTolerance" class="volatile">0</integer>
+   <integer name="lowTolerance" class="volatile">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid21" name="Timeline" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Timeline Property Base" xlink:href="../user/timelinepropertybase.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:title="Timeline" xlink:href="#oid121"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" desc="Generated timeline label, containing the current start and end date" method-flag="true" protected-flag="true" label-flag="true" default-visible="top"/>
+  <property name="timespan" xlink:role="type" xlink:title="DateRange" xlink:href="#oid503" label="Timespan" default-visible="top"/>
+  <property name="textstartdate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted start-date" desc="The start date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <property name="textenddate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted end-date" desc="The end date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <property name="granularity" xlink:role="type" xlink:title="Granularity" xlink:href="#oid502" label="Granularity" default-visible="top"/>
+  <property name="roundhighdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Rounded High Date" desc="New end date to conpensate for rounding-off error due to chosen granularity v.s. given end date. Used for positioning calculations" method-flag="true" visible-flag="false"/>
+  <property name="tickmarks" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="TickmarkCnt" desc="Number of tickmarks calculated from start-date, end-date and the given granularity" method-flag="true" visible-flag="false"/>
+  <property name="tolerancePercent" xlink:role="type" xlink:title="Tolerance" xlink:href="#oid504" label="Tolerance - in % of Granularity" default-visible="top"/>
+  <property name="highTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="High Tolerance (days)" desc="Allowed deviation AFTER current date in days." method-flag="true" visible-flag="false"/>
+  <property name="lowTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Low Tolerance (days)" desc="Allowunited deviation BEFORE current date in days." method-flag="true" visible-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Milestone" xlink:href="#oid32"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Timeline Start" xlink:href="#oid33"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Timeline End" xlink:href="#oid34"/>
+  <named-method-link name="View.includeInResize" xlink:role="cpp-method" xlink:title="extendMilestones" xlink:href="#oid1025"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="timelineCreation" xlink:href="#oid1027"/>
+  <named-method-link name="highTolerance" xlink:role="cpp-method" xlink:title="calculateHighTolerance" xlink:href="#oid1018"/>
+  <named-method-link name="lowTolerance" xlink:role="cpp-method" xlink:title="calculateLowTolerance" xlink:href="#oid1019"/>
+  <named-method-link name="name" xlink:role="cpp-method" xlink:title="getTimelineLabel" xlink:href="#oid1032"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="timelineChange" xlink:href="#oid1028"/>
+  <named-method-link name="roundhighdate" xlink:role="cpp-method" xlink:title="calculateNewEndDate" xlink:href="#oid1003"/>
+  <named-method-link name="textenddate" xlink:role="cpp-method" xlink:title="getEndDateAsText" xlink:href="#oid1031"/>
+  <named-method-link name="textstartdate" xlink:role="cpp-method" xlink:title="getStartDateAsText" xlink:href="#oid1030"/>
+  <named-method-link name="tickmarks" xlink:role="cpp-method" xlink:title="calculateTickmarks" xlink:href="#oid1004"/>
+  <valueset vset="default" size="14" xlink:role="type" xlink:title="Timeline" xlink:href="#oid21" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name" class="volatile"></string>
+   <date name="timespan.lowdate">00000000</date>
+   <date name="timespan.highdate">00000000</date>
+   <string name="textstartdate" class="volatile"></string>
+   <string name="textenddate" class="volatile"></string>
+   <integer name="granularity.quantity">0</integer>
+   <string name="granularity.unit">Weeks</string>
+   <date name="roundhighdate" class="volatile">00000000</date>
+   <integer name="tickmarks" class="volatile">0</integer>
+   <integer name="tolerancePercent.high">0</integer>
+   <integer name="tolerancePercent.low">0</integer>
+   <integer name="highTolerance" class="volatile">0</integer>
+   <integer name="lowTolerance" class="volatile">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid31" name="Timeline_Milestones" title="Timeline Milestones" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Milestones Property Base" xlink:href="../user/timelinepropertybase.kmd#oid2"/>
+  <property name="systemdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Worst Deviance Date" desc="The date from connected objects that differs MOST compared to current date." method-flag="true" default-visible="top"/>
+  <property name="textdate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted date" desc="The current date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <named-method-link name="systemdate" xlink:role="cpp-method" xlink:title="getWorstConnectedDate" xlink:href="#oid1005"/>
+  <named-method-link name="textdate" xlink:role="cpp-method" xlink:title="getDateAsText" xlink:href="#oid1010"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <date name="systemdate" class="volatile">00000000</date>
+   <string name="textdate" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid32" name="Timeline_Milestone" title="Timeline Milestone" desc="A specific date on a timeline to be compared with planned dates, either related directly to other objects or via Timeline Event objects." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid132"/>
+  <property name="localdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="REDUNDANT localdate" desc="This property is now redundant (v.3.6 onwards) - and will exactly mirror the date-property. It is only kept in the type for compatibility-reasons, in case anyone has subclassed and written methods to access this property." method-flag="true" visible-flag="false"/>
+  <property name="date" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date" desc="The date represented by the position of the milestone on the timeline calculated from position or explicitly set." default-visible="top"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status color" desc="Color of the status" method-flag="true" visible-flag="false"/>
+  <property name="style" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status style" desc="Style of the status" method-flag="true" visible-flag="false"/>
+  <named-method-link name="Timeline_Milestone" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="#oid1012"/>
+  <named-method-link name="View" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="#oid1012"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="milestonePositioning" xlink:href="#oid1023"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="milestonePositioning" xlink:href="#oid1023"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="getMilestoneColor" xlink:href="#oid1020"/>
+  <named-method-link name="localdate" xlink:role="cpp-method" xlink:title="getDate" xlink:href="#oid1011"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="milestoneChange" xlink:href="#oid1013"/>
+  <named-method-link name="style" xlink:role="cpp-method" xlink:title="getMilestonePattern" xlink:href="#oid1021"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Timeline Milestone" xlink:href="#oid32" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <date name="systemdate" class="volatile">00000000</date>
+   <string name="textdate" class="volatile"></string>
+   <date name="localdate" class="volatile">00000000</date>
+   <date name="date">00000000</date>
+   <string name="color" class="volatile">black</string>
+   <string name="style" class="volatile">3</string>
+  </valueset>
+ </type>
+
+ <type id="oid33" name="Timeline_Start" title="Timeline Start" desc="The start point for the Timeline" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid133"/>
+  <property name="date" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Start Date" desc="The Start Date from Timeline." method-flag="true" default-visible="top"/>
+  <named-method-link name="date" xlink:role="cpp-method" xlink:title="getStartDate" xlink:href="#oid1007"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Timeline Start" xlink:href="#oid33" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <date name="systemdate" class="volatile">00000000</date>
+   <string name="textdate" class="volatile"></string>
+   <date name="date" class="volatile">00000000</date>
+  </valueset>
+ </type>
+
+ <type id="oid34" name="Timeline_End" title="Timeline End" desc="The end point for the Timeline" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid134"/>
+  <property name="date" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="End Date" desc="The End Date for the Timeline." method-flag="true" default-visible="top"/>
+  <named-method-link name="date" xlink:role="cpp-method" xlink:title="getEndDate" xlink:href="#oid1008"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Timeline End" xlink:href="#oid34" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <date name="systemdate" class="volatile">00000000</date>
+   <string name="textdate" class="volatile"></string>
+   <date name="date" class="volatile">00000000</date>
+  </valueset>
+ </type>
+
+ <type id="oid41" name="Timeline_Event" title="Timeline Event" desc="A planning occurence modeled as part of timeline modeling in order to relate the occurence with specific dates as identified with Timeline Milestone. " usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Event Property Base" xlink:href="../user/timelinepropertybase.kmd#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid141"/>
+  <property name="localdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date" desc="Specific event date" default-visible="top"/>
+  <property name="date" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Current Date" desc="Date to use for calculations, either locally entered, or inherited from connected milestone if no local date." method-flag="true" default-visible="top"/>
+  <property name="systemdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Worst Deviance Date" desc="The date from connected objects that differs MOST compared to current date." method-flag="true" default-visible="top"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status color" desc="Color of the status" method-flag="true" visible-flag="false"/>
+  <property name="style" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status style" desc="Style of the status" method-flag="true" visible-flag="false"/>
+  <property name="textdate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted date" desc="The current date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="getEventColor" xlink:href="#oid1014"/>
+  <named-method-link name="date" xlink:role="cpp-method" xlink:title="getEventDate" xlink:href="#oid1009"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="#oid1024"/>
+  <named-method-link name="style" xlink:role="cpp-method" xlink:title="getEventPattern" xlink:href="#oid1015"/>
+  <named-method-link name="systemdate" xlink:role="cpp-method" xlink:title="getWorstConnectedDate" xlink:href="#oid1005"/>
+  <named-method-link name="textdate" xlink:role="cpp-method" xlink:title="getDateAsText" xlink:href="#oid1010"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Timeline Event" xlink:href="#oid41" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <date name="localdate">00000000</date>
+   <date name="date" class="volatile">00000000</date>
+   <date name="systemdate" class="volatile">00000000</date>
+   <string name="color" class="volatile">white</string>
+   <string name="style" class="volatile">none</string>
+   <string name="textdate" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid81" name="Event_Milestone" title="Event-Milestone" desc="Connects Timeline Events to Timeline Milestone objects. The Date of the Timeline Event object is compared to the date of the Timeline Milestone object and the relationship changes colour and linestyle depending on this comparison. If the Timeline Event Date is later than the Timeline Milestone date, the line color is red and if the Timeline Event Date is earlier than the Timeline Milestone date, the color is blue. A black line indicates an exact match of the two dates" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Date Difference Relationship" xlink:href="../relationship_types/date_feedback.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid181"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Timeline Event" xlink:href="#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Event-Milestone" xlink:href="#oid81" xlink:actuate="user">
+   <string name="from">compared with</string>
+   <string name="to">compared with</string>
+  </valueset>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Event-Milestone" xlink:href="#oid81" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="color" class="volatile"></string>
+   <string name="style" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <string-type id="oid501" name="TimeUnit" default="Weeks">
+  <string class="shared">Days</string>
+  <string class="shared">Weeks</string>
+  <string class="shared">Months</string>
+  <string class="shared">Quarters</string>
+  <string class="shared">Years</string>
+ </string-type>
+
+ <type id="oid502" name="Granularity" desc="Date-granularity based on unit and quantity" usage="abstract">
+  <property name="quantity" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Quantity" default-visible="top"/>
+  <property name="unit" xlink:role="string-type" xlink:title="TimeUnit" xlink:href="#oid501" label="Unit" default-visible="top"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Granularity" xlink:href="#oid502" xlink:actuate="user">
+   <integer name="quantity">0</integer>
+   <string name="unit">Weeks</string>
+  </valueset>
+ </type>
+
+ <type id="oid503" name="DateRange" desc="Date-range based on from and to dates" usage="abstract">
+  <property name="lowdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Start Date" default-visible="top"/>
+  <property name="highdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="End Date" default-visible="top"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="DateRange" xlink:href="#oid503" xlink:actuate="user">
+   <date name="lowdate">00000000</date>
+   <date name="highdate">00000000</date>
+  </valueset>
+ </type>
+
+ <type id="oid504" name="Tolerance" desc="Allowed deviation relative to current date, relative to the currently chosen granularity" usage="abstract">
+  <property name="high" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="High (%)" desc="Allowed deviation AFTER current date - in percentage of the currently chosen granularity." default-visible="top"/>
+  <property name="low" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Low (%)" desc="Allowed deviation BEFORE current date - in percentage of the currently chosen granularity." default-visible="top"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Tolerance" xlink:href="#oid504" xlink:actuate="user">
+   <integer name="high">0</integer>
+   <integer name="low">0</integer>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid1001" name="TimelineDiagramConstructor" language="c++" bind="NO.METIS.GEM.DIAGRAM.enableTimelineDiagram" required-dll="gem_diagram">
+  <arg-list size="5">
+   <url name="CommandObjectUrl" xlink:href="../commands/timeline_commands.kmd" xlink:role="url" xlink:title="Command Object Url" xlink:actuate="auto"/>
+   <pointer name="DiagramUri" xlink:role="type" xlink:title="Timeline Diagram" xlink:href="#oid11"/>
+   <pointer name="TimelineUri" xlink:role="type" xlink:title="Timeline" xlink:href="#oid21"/>
+   <pointer name="TypeFilterAtCreate1" xlink:role="type" xlink:title="Timeline Start" xlink:href="#oid33"/>
+   <pointer name="TypeFilterAtCreate2" xlink:role="type" xlink:title="Timeline End" xlink:href="#oid34"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1002" name="setEqualTextscale" language="c++" bind="NO.METIS.GEM.setTextScale" required-dll="gem_modeling">
+  <arg-list size="1">
+   <float name="TextScaleFactor">8</float>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1003" name="calculateNewEndDate" language="c++" bind="NO.METIS.GEM.getRoundedEnd" required-dll="gem_datehandling">
+  <arg-list size="6">
+   <string name="FromDate">timespan.lowdate</string>
+   <string name="GranularityProp">granularity.unit</string>
+   <string name="GranularityWeight">granularity.quantity</string>
+   <string name="Integer">true</string>
+   <integer name="Round">1</integer>
+   <string name="ToDate">timespan.highdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1004" name="calculateTickmarks" language="c++" bind="NO.METIS.GEM.getPeriod" required-dll="gem_datehandling">
+  <arg-list size="6">
+   <string name="FromDate">timespan.lowdate</string>
+   <string name="GranularityProp">granularity.unit</string>
+   <string name="GranularityWeight">granularity.quantity</string>
+   <string name="Integer">true</string>
+   <integer name="Round">1</integer>
+   <string name="ToDate">timespan.highdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1005" name="getWorstConnectedDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="9">
+   <string name="CompareDateProp">date</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="systemStatusFromEvent" xlink:href="#oid2002"/>
+   <pointer name="ExternalCriteria" xlink:role="criteria" xlink:title="Find Interface Relationships" xlink:href="../relationship_types/date_feedback.kmd#oid3001"/>
+   <string name="ExternalValueProp">ExternalDateProperty</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="Property"></string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003"/>
+   <string name="What">worst</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1006" name="getDateFromPos" language="c++" bind="NO.METIS.GEM.getGeometryValue" required-dll="gem_analyse">
+  <arg-list size="5">
+   <float name="FractionHighX">0.95</float>
+   <float name="FractionLowX">0.05</float>
+   <string name="HighValueProperty">roundhighdate</string>
+   <string name="LowValueProperty">timespan.lowdate</string>
+   <string name="ResultValueProperty">date</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1007" name="getStartDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="Property">timespan.lowdate</string>
+   <string name="Structure">Parent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1008" name="getEndDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="Property">timespan.highdate</string>
+   <string name="Structure">Parent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1009" name="getEventDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="7">
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="systemStatusFromEvent" xlink:href="#oid2002"/>
+   <pointer name="Criteria3" xlink:role="criteria" xlink:title="milestoneFromEvent" xlink:href="#oid2003"/>
+   <pointer name="ExternalCriteria2" xlink:role="criteria" xlink:title="Find Interface Relationships" xlink:href="../relationship_types/date_feedback.kmd#oid3001"/>
+   <string name="ExternalValueProp2">ExternalDateProperty</string>
+   <string name="Property1">localdate</string>
+   <string name="Property2"></string>
+   <string name="Property3">date</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1010" name="getDateAsText" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="FormatString">Default</string>
+   <string name="Property">date</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1011" name="getDate" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="1">
+   <string name="Property">date</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1012" name="setPositionAsDate" language="c++" bind="NO.METIS.GEM.setGeometryValue" required-dll="gem_modeling">
+  <arg-list size="6">
+   <string name="CurrentValueProperty">date</string>
+   <float name="FractionHighX">0.95</float>
+   <float name="FractionLowX">0.05</float>
+   <string name="HighValueProperty">roundhighdate</string>
+   <string name="LowValueProperty">timespan.lowdate</string>
+   <pointer name="ParentType" xlink:role="type" xlink:title="Timeline" xlink:href="#oid21"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1013" name="milestoneChange" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="#oid1012"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="#oid1024"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1014" name="getEventColor" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">white</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">red</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">blue</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1015" name="getEventPattern" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">none</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">solid</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">dense7</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1016" name="getHighTolerance" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="timelineFromDiagram" xlink:href="#oid2007"/>
+   <string name="Property">highTolerance</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1017" name="getLowTolerance" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <integer name="BreakAfter">1</integer>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="timelineFromDiagram" xlink:href="#oid2007"/>
+   <string name="Property">lowTolerance</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1018" name="calculateHighTolerance" language="c++" bind="NO.METIS.GEM.getTolerance" required-dll="gem_datehandling">
+  <arg-list size="3">
+   <string name="GranularityUnitProp">granularity.unit</string>
+   <string name="GranularityWeightProp">granularity.quantity</string>
+   <string name="PercentageProp">tolerancePercent.high</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1019" name="calculateLowTolerance" language="c++" bind="NO.METIS.GEM.getTolerance" required-dll="gem_datehandling">
+  <arg-list size="3">
+   <string name="GranularityUnitProp">granularity.unit</string>
+   <string name="GranularityWeightProp">granularity.quantity</string>
+   <string name="PercentageProp">tolerancePercent.low</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1020" name="getMilestoneColor" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">black</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">red</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">blue</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="timelineFromMilestone" xlink:href="#oid2001"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1021" name="getMilestonePattern" language="c++" bind="NO.METIS.GEM.compareValues" required-dll="gem_analyse">
+  <arg-list size="8">
+   <string name="Equal">3</string>
+   <string name="FromValue">systemdate</string>
+   <string name="GreaterThan">4</string>
+   <string name="HighToleranceProp">highTolerance</string>
+   <string name="LessThan">2</string>
+   <string name="LowToleranceProp">lowTolerance</string>
+   <string name="ToValue">date</string>
+   <pointer name="ToleranceCriteria" xlink:role="criteria" xlink:title="timelineFromMilestone" xlink:href="#oid2001"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1022" name="verticalCenterAlignment" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="VerticalAlignment">Center</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1023" name="milestonePositioning" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="4">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="getDateFromPos" xlink:href="#oid1006"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="verticalCenterAlignment" xlink:href="#oid1022"/>
+   <pointer name="Method3" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="#oid1024"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1024" name="updateMacro" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="AllViews">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1025" name="extendMilestones" language="c++" bind="NO.METIS.GEM.extendSelection" required-dll="gem_modeling">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="allMilestonesFromTimeline" xlink:href="#oid2005"/>
+   <string name="Kind">Criteria</string>
+   <string name="ReferenceView">Current</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1026" name="horizontalCenterAlignment" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="HorizontalAlignment">Center</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1027" name="timelineCreation" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="setEqualTextscale" xlink:href="#oid1002"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="horizontalCenterAlignment" xlink:href="#oid1026"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1028" name="timelineChange" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="4">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="repositionMilestones" xlink:href="#oid1029"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="updateMilestoneMacros" xlink:href="#oid1033"/>
+   <string name="Mode">UseCurrent</string>
+   <string name="ReferenceView">All</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1029" name="repositionMilestones" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="milestonesFromTimeline" xlink:href="#oid2008"/>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="#oid1012"/>
+   <string name="Mode">UseCriteria</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1030" name="getStartDateAsText" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="FormatString">Default</string>
+   <string name="Property">timespan.lowdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1031" name="getEndDateAsText" language="c++" bind="NO.METIS.GEM.getConnectedDate" required-dll="gem_datehandling">
+  <arg-list size="2">
+   <string name="FormatString">Default</string>
+   <string name="Property">timespan.highdate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1032" name="getTimelineLabel" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Macro">(expand (type label) &#34; from &#34; (property textstartdate) &#34; to &#34; (property textenddate))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1033" name="updateMilestoneMacros" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+  <arg-list size="1">
+   <pointer name="ChildrenOf" xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31"/>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid2001" name="timelineFromMilestone" title="timelineFromMilestone" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="partof">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline" xlink:href="#oid21"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2002" name="systemStatusFromEvent" title="systemStatusFromEvent" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="originof" use-off-flag="true">
+    <c-op kind="relshp">
+     <complex-type-link xlink:role="type" xlink:title="ToSystem Basetype" xlink:href="../relationship_types/date_feedback.kmd#oid2"/>
+    </c-op>
+   </c-op>
+   <c-op kind="target">
+    <c-op kind="object"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2003" name="milestoneFromEvent" title="milestoneFromEvent" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="originof" use-off-flag="true">
+    <c-op kind="relshp">
+     <complex-type-link xlink:role="type" xlink:title="Event-Milestone" xlink:href="#oid81"/>
+    </c-op>
+   </c-op>
+   <c-op kind="target">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2004" name="timelineFromEMrel" title="timelineFromEMrel" relationship-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="target" use-off-flag="true">
+    <c-op kind="object"/>
+   </c-op>
+   <c-op kind="partof">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline" xlink:href="#oid21"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2005" name="allMilestonesFromTimeline" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="part">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline Milestones" xlink:href="#oid31"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2006" name="timelineFromEventViaDiagram" title="timelineFromEventViaDiagram" desc="From timeline event, find diagram, and return timelines encountered in the diagram." object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="partof" use-off-flag="true">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline Diagram" xlink:href="#oid11"/>
+    </c-op>
+   </c-op>
+   <c-op kind="part">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline" xlink:href="#oid21"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2007" name="timelineFromDiagram" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="part">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline" xlink:href="#oid21"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2008" name="milestonesFromTimeline" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="part">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Timeline Milestone" xlink:href="#oid32"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <typeview id="oid111" xlink:role="type" xlink:title="Timeline Diagram" xlink:href="#oid11" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutlocked autolayoutme fixedlayoutset fixedlayoutlocked ">
+  <layout-link xlink:role="object" xlink:title="Standard Timeline Layout Strategy" xlink:href="../layout_strategies/timeline_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Diagram" xlink:href="../symbols/diagram.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Timeline Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid4&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Diagram" xlink:href="../symbols/diagram.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Timeline Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid4&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/tl_diagram.png"/>
+ </typeview>
+
+ <typeview id="oid121" xlink:role="type" xlink:title="Timeline" xlink:href="#oid21" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutlocked fixedlayoutset fixedlayoutlocked ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Timeline" xlink:href="../symbols/timeline.svg#oid1" xlink:actuate="user">
+   <replace tag="repeat" property="repeathorizontally" macro="(expand (property tickmarks))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Timeline" xlink:href="../symbols/timeline.svg#oid1" xlink:actuate="user">
+   <replace tag="repeat" property="repeathorizontally" macro="(expand (property tickmarks))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/timeline.png"/>
+ </typeview>
+
+ <typeview id="oid132" xlink:role="type" xlink:title="Timeline Milestone" xlink:href="#oid32" tree-size="0.5" nested-size="1" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Milestone" xlink:href="../symbols/timeline.svg#oid4" xlink:actuate="user">
+   <replace tag="bottomtext" property="value" macro="(expand (property name))"/>
+   <replace tag="toptext" property="value" macro="(expand (property textdate))"/>
+   <replace tag="status" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="status" property="linewidth" macro="(expand (property style))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Milestone" xlink:href="../symbols/timeline.svg#oid4" xlink:actuate="user">
+   <replace tag="bottomtext" property="value" macro="(expand (property name))"/>
+   <replace tag="toptext" property="value" macro="(expand (property textdate))"/>
+   <replace tag="status" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="status" property="linewidth" macro="(expand (property style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/milestone.png"/>
+ </typeview>
+
+ <typeview id="oid133" xlink:role="type" xlink:title="Timeline Start" xlink:href="#oid33" tree-size="0.5" nested-size="1" behavior="tree" position="left" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="MilestoneStart" xlink:href="../symbols/timeline.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;&#60;br&#62;&#34; (property textdate))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="MilestoneStartText" xlink:href="../symbols/timeline.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;&#60;br&#62;&#34; (property textdate))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid134" xlink:role="type" xlink:title="Timeline End" xlink:href="#oid34" tree-size="0.5" nested-size="1" behavior="tree" position="right" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="MilestoneEnd" xlink:href="../symbols/timeline.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;&#60;br&#62;&#34; (property textdate))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="MilestoneEndText" xlink:href="../symbols/timeline.svg#oid9" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34;&#60;br&#62;&#34; (property textdate))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid141" xlink:role="type" xlink:title="Timeline Event" xlink:href="#oid41" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Event" xlink:href="../symbols/timeline.svg#oid6" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="status_text" property="value" macro="(expand (property textdate))"/>
+   <replace tag="status" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="status" property="fillpattern" macro="(expand (property style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.metis.no/xml/smallicons/gem/gem_event.png"/>
+ </typeview>
+
+ <typeview id="oid181" xlink:role="type" xlink:title="Event-Milestone" xlink:href="#oid81" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="no arrow" xlink:href="../symbols/relnoarrow.svg#oid1" xlink:actuate="user">
+   <replace tag="line" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="line" property="linestyle" macro="(expand (property style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/eventmilestone_rel.png"/>
+ </typeview>
+
+
+</metis>

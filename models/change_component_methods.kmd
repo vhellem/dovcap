@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="2">
+
+ <cpp-method id="oid1" name="GetStrategicValueForChangeComponent" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Calculate Value 2" xlink:href="metis:stdmethods#oid522"/>
+  <arg-list size="15">
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="getImplements_is_implemented_by_relationship" xlink:href="../criteria/strategic_value_calculations_criteria.kmd#oid3"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="getParts" xlink:href="../criteria/strategic_value_calculations_criteria.kmd#oid4"/>
+   <string name="Expression1">multiply (property weight) (property objectWeight)</string>
+   <string name="Expression2">property strategicValue</string>
+   <string name="Expression3"></string>
+   <string name="Expression4"></string>
+   <string name="Expression5"></string>
+   <string name="Function1">sum</string>
+   <string name="Function2">sum</string>
+   <string name="Function3"> </string>
+   <string name="Function4"> </string>
+   <string name="Function5"> </string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

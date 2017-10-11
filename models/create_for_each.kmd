@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Create_for_each" name="Create_for_each" title="Create for each" desc="Links a parameter to an object, implying that an object of the given type should be created for each entry of the parameter (identified by its name and location in the decomposition hierarchy) that is created." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Value for parameter" xlink:href="value_for_parameter.kmd#AKM_Parameter_Value"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Parameter" xlink:href="../objecttypes/parameter.kmd#AKM_Parameter" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Create for each" xlink:href="#AKM_Create_for_each" xlink:actuate="user">
+   <string name="from">Is created by</string>
+   <string name="to">Creates</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Create for each" xlink:href="#AKM_Create_for_each" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <string name="Property">name</string>
+  </valueset>
+ </type>
+
+
+</metis>

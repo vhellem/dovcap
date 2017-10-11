@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_6712BD41-9CD9-4BE7-B664-1CFABF2FF856" name="Application_Service_Architecture_Domain" title="Application Service Architecture Domain" desc="The metamodel for types related to modeling application service architecture.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Application Service Architecture Domain Relationships" xlink:href="application_service_architecture_domain_relationships.kmd#UUID4_7B79BFCC-ED9F-41DB-AC5E-BE47019A8DDD"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Application Service Interface" xlink:href="../object_types/application_service_interface.kmd#CompType_Semantics:Application_Service_Interface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Service" xlink:href="../object_types/application_service.kmd#CompType_Semantics:Application_Service_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

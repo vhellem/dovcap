@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_37AE31BA-BB93-4A2C-92F1-6555E75C61FA" name="Relationship_Types" title="Relationship Types" desc="The relationship types in this domain connect objects in the Troux Information domain.">
+  <complex-type-links size="7">
+   <complex-type-link xlink:role="type" xlink:title="Datastore has business owner Person" xlink:href="../relationship_types/datastore_has_business_owner_person.kmd#RelType_Semantics:Datastore_has_business_owner_Person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application provides Report" xlink:href="../relationship_types/application_provides_report.kmd#RelType_Semantics_Troux Information:Application_provides_Report_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Information Component has business owner Person" xlink:href="../relationship_types/information_component_has_business_owner_person.kmd#RelType_Semantics_Troux Information:Information_Component_has_business_owner_Person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Report uses Information Object" xlink:href="../relationship_types/report_uses_information_object.kmd#RelType_Semantics_Troux Information:Report_uses_Information_Object_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="DRM Data Asset stores Information Object" xlink:href="../relationship_types/drm_data_asset_stores_information_object.kmd#RelType_Semantics_Troux_Information:DRM_Data_Asset_stores_Information_Object_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="DRM Topic categorizes Information Object" xlink:href="../relationship_types/drm_topic_categorizes_information_object.kmd#RelType_Semantics_Troux_Information:DRM_Topic_categorizes_Information_Object_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Database implements DRM Data Asset" xlink:href="../relationship_types/database_implements_drm_data_asset.kmd#RelType_Semantics_Troux_Information:Database_implements_DRM_Data_Asset_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

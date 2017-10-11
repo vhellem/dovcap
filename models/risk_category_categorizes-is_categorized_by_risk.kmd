@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Risk_Category_categorizes-is_categorized_by_Risk_UUID" name="Risk_Category_categorizes_is_categorized_by_Risk" title="Risk Category categorizes-is categorized by Risk" desc="Used to associate an instance of Risk with an instance of Risk Category that categorizes it." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/risk_category_categorizes-is_categorized_by_risk.kmd#UUID4_A9B319A2-DC38-4FA4-B96E-9462F68AE0FB"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Risk Category" xlink:href="../object_types/risk_category.kmd#CompType_Semantics:Risk_Category_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Risk" xlink:href="../../meaf/objecttypes/risk.kmd#CompType_MEAF:Risk_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Risk Category categorizes-is categorized by Risk" xlink:href="#RelType_Semantics:Risk_Category_categorizes-is_categorized_by_Risk_UUID" xlink:actuate="user">
+   <string name="from">categorizes</string>
+   <string name="to">is categorized by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Risk Category categorizes-is categorized by Risk" xlink:href="#RelType_Semantics:Risk_Category_categorizes-is_categorized_by_Risk_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

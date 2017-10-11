@@ -1,0 +1,1157 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="50"
+ typeviews="29"
+ nextoid="142">
+
+ <type id="oid1" name="usercontainer" title="User Container" usage="object" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="usercontainer" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="model" title="Model" usage="object" decomposition-flag="true" container-flag="true">
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" desc="Name" label-flag="true"/>
+  <property name="modelfile" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" desc="Model File"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveModel" xlink:href="ect_methods.kmd#oid42"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="model" xlink:href="#oid2">
+   <string name="name"></string>
+   <string name="modelfile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="xchips" title="XCHIPS installation" usage="object" decomposition-flag="true" container-flag="true">
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" desc="Name"/>
+  <property name="server" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" desc="XCHIPS server" label-flag="true"/>
+  <property name="iscurrent" xlink:role="integer-type" xlink:title="bool" xlink:href="metis:std#oid30" desc="Is Current"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="xchips" xlink:href="#oid3">
+   <string name="name"></string>
+   <string name="server"></string>
+   <integer name="iscurrent">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid6" name="property" desc="Property-Value pair" usage="abstract" decomposition-flag="true" container-flag="true">
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" desc="Property Name"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" desc="Property Value"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="property" xlink:href="#oid6">
+   <string name="name"></string>
+   <string name="value"></string>
+  </valueset>
+ </type>
+
+ <valueset-type id="oid12" name="properties" desc="Properties" xlink:role="type" xlink:title="property" xlink:href="#oid6">
+  <complex-type-link xlink:role="type" xlink:title="property" xlink:href="#oid6"/>
+ </valueset-type>
+
+ <collection-type id="oid13" name="propertyList" title="Property List" desc="A list of properties, collection of valuesets" xlink:role="valueset-type" xlink:title="properties" xlink:href="#oid12"/>
+
+ <type id="oid21" name="folder" title="Folder" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid136"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description" description-flag="true"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="ModelingObject" xlink:href="metis:stdtypes#oid1"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="folder" xlink:href="#oid21">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid31" name="simvisioncase" title="SimVision Case" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid97"/>
+  <property name="start-date" xlink:href="metis:std#oid40" label="Start Date"/>
+  <property name="work-day" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Work Day"/>
+  <property name="work-week" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Work Week"/>
+  <property name="team-experience" xlink:role="string-type" xlink:title="hml" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid10" label="Team Experience"/>
+  <property name="centralization" xlink:role="string-type" xlink:title="hml" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid10" label="Centralization"/>
+  <property name="formalization" xlink:role="string-type" xlink:title="hml" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid10" label="Formalization"/>
+  <property name="matrix-strength" xlink:role="string-type" xlink:title="hml" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid10" label="Matrix Strength"/>
+  <property name="communication-prob" xlink:role="float-type" xlink:title="probability" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid23" label="Communication Probability"/>
+  <property name="noise-prob" xlink:role="float-type" xlink:title="probability" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid23" label="Noise Probability"/>
+  <property name="func-except-prob" xlink:role="float-type" xlink:title="probability" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid23" label="Function Exception Probability"/>
+  <property name="proj-except-prob" xlink:role="float-type" xlink:title="probability" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid23" label="Project Exception Probability"/>
+  <property name="priority" xlink:role="string-type" xlink:title="hml" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid10" label="Priority"/>
+  <property name="behavior-data" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Behavior Data"/>
+  <property name="seed" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Seed"/>
+  <property name="trials" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Trials"/>
+  <property name="backlog-interval" xlink:role="float-type" xlink:title="positive number" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid24" label="Backlog Intervals"/>
+  <property name="backlog-interval-unit" xlink:role="string-type" xlink:title="timeunits" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid11" label="Effort Unit"/>
+  <property name="demand-interval" xlink:role="float-type" xlink:title="positive number" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid24" label="Backlog Intervals"/>
+  <property name="demand-interval-unit" xlink:role="string-type" xlink:title="timeunits" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid11" label="Effort Unit"/>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="simvisioncase" xlink:href="#oid31">
+   <date name="start-date">00000000</date>
+   <integer name="work-day">480</integer>
+   <integer name="work-week">2400</integer>
+   <string name="team-experience">medium</string>
+   <string name="centralization">medium</string>
+   <string name="formalization">medium</string>
+   <string name="matrix-strength">medium</string>
+   <float name="communication-prob">0</float>
+   <float name="noise-prob">0</float>
+   <float name="func-except-prob">0</float>
+   <float name="proj-except-prob">0</float>
+   <string name="priority">medium</string>
+   <string name="behavior-data"></string>
+   <integer name="seed">0</integer>
+   <integer name="trials">100</integer>
+   <float name="backlog-interval">0</float>
+   <string name="backlog-interval-unit">Days</string>
+   <float name="demand-interval">0</float>
+   <string name="demand-interval-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid41" name="organization" title="Organization" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Organization" xlink:href="metis:stdtypes#oid19"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid103"/>
+  <property name="phoneNr" xlink:role="string-type" xlink:href="metis:stdprimtypes#oid5" label="Phone no."/>
+  <property name="faxNr" xlink:role="string-type" xlink:href="metis:stdprimtypes#oid5" label="Fax no."/>
+  <property name="homepage" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Homepage"/>
+  <property name="image" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Image"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_organization_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid13" label="SimVision"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:href="ect_methods.kmd#oid19"/>
+  <valueset vset="default" size="21" xlink:role="type" xlink:title="organization" xlink:href="#oid41">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="phoneNr"></string>
+   <string name="faxNr"></string>
+   <string name="homepage"></string>
+   <string name="image"></string>
+   <string name="simvision.team-experience">medium</string>
+   <string name="simvision.centralization">medium</string>
+   <string name="simvision.formalization">medium</string>
+   <string name="simvision.matrix-strength">medium</string>
+  </valueset>
+ </type>
+
+ <type id="oid42" name="person" title="Person" desc="An individual human being; male or female." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid135"/>
+  <property name="name" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="description" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <property name="username" xlink:role="string-type" xlink:href="metis:std#oid42" label="User Name"/>
+  <property name="email" xlink:role="string-type" xlink:href="metis:std#oid42" label="E-Mail"/>
+  <property name="homepage" xlink:role="string-type" xlink:href="metis:std#oid42" label="Homepage"/>
+  <property name="image" xlink:role="string-type" xlink:href="metis:std#oid42" label="Image"/>
+  <property name="phonework" xlink:role="string-type" xlink:href="metis:std#oid42" label="Phone Work"/>
+  <property name="phoneprivate" xlink:role="string-type" xlink:href="metis:std#oid42" label="Phone Private"/>
+  <property name="phonemobile" xlink:role="string-type" xlink:href="metis:std#oid42" label="Mobile Phone"/>
+  <property name="fax" xlink:role="string-type" xlink:href="metis:std#oid42" label="Fax"/>
+  <property name="simvision" xlink:role="type" xlink:href="http://xml.metis.no/xml/primitive_types/ect_primitivetypes.kmd#oid9" label="SimVision"/>
+  <property name="password" xlink:role="string-type" xlink:href="metis:std#oid42" label="Password"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:href="ect_methods.kmd#oid14"/>
+  <valueset vset="default" size="15" xlink:role="type" xlink:href="#oid42">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="username"></string>
+   <string name="email"></string>
+   <string name="homepage"></string>
+   <string name="image"></string>
+   <string name="phonework"></string>
+   <string name="phoneprivate"></string>
+   <string name="phonemobile"></string>
+   <string name="fax"></string>
+   <string name="simvision.role">sl</string>
+   <string name="simvision.app-experience">medium</string>
+   <float name="simvision.fte">0</float>
+   <float name="simvision.salary">0</float>
+   <string name="password"></string>
+  </valueset>
+ </type>
+
+ <type id="oid43" name="personuser" title="Person User" desc="An individual human being; male or female." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid135"/>
+  <property name="username" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="User Name"/>
+  <property name="name" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Name" method-flag="true" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="description" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <property name="email" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="E-Mail" method-flag="true"/>
+  <property name="homepage" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Homepage"/>
+  <property name="image" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Image"/>
+  <property name="phonework" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Phone Work"/>
+  <property name="phoneprivate" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Phone Private"/>
+  <property name="phonemobile" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Mobile Phone"/>
+  <property name="fax" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Fax"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_person_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid22" label="SimVision"/>
+  <property name="password" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Password"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="savePerson" xlink:href="ect_methods.kmd#oid14"/>
+  <named-method-link name="email" xlink:role="cpp-method" xlink:href="ect_methods.kmd#oid40"/>
+  <named-method-link name="name" xlink:role="cpp-method" xlink:href="ect_methods.kmd#oid39"/>
+  <valueset vset="default" size="15" xlink:role="type" xlink:title="personuser" xlink:href="#oid43">
+   <string name="username"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="email"></string>
+   <string name="homepage"></string>
+   <string name="image"></string>
+   <string name="phonework"></string>
+   <string name="phoneprivate"></string>
+   <string name="phonemobile"></string>
+   <string name="fax"></string>
+   <string name="simvision.role">dm</string>
+   <string name="simvision.app-experience">medium</string>
+   <float name="simvision.fte">0</float>
+   <float name="simvision.salary">0</float>
+   <string name="password"></string>
+  </valueset>
+ </type>
+
+ <type id="oid51" name="informationobject" title="Information Object" desc="Information object" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="informationobject" xlink:href="resourceobject.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid128"/>
+  <property name="creationdate" xlink:href="metis:std#oid40" label="Creation Date" desc="Creation date."/>
+  <property name="author" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Author" desc="Author."/>
+  <property name="version" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Version" desc="Version."/>
+  <property name="status" xlink:role="string-type" xlink:title="infostatus" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid5" label="Status" desc="Status of information."/>
+  <property name="reference" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Reference" desc="Reference to the real document/information resource represented by the information object."/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="informationobject" xlink:href="#oid51"/>
+  <named-method-link name="openDocument_" xlink:role="cpp-method" xlink:title="executeDocument" xlink:href="ect_methods.kmd#oid15"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="informationobject" xlink:href="#oid51">
+   <string name="name"></string>
+   <string name="description"></string>
+   <date name="creationdate">00000000</date>
+   <string name="author"></string>
+   <float name="version">0</float>
+   <string name="status">Draft</string>
+   <string name="reference"></string>
+  </valueset>
+ </type>
+
+  <type id="oid56" name="SoftwareTool" title="Software Tool" usage="object">
+  <complex-type-link xlink:role="type" xlink:href="tool.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid131"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveSoftwareTool" xlink:href="ect_methods.kmd#oid17"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid56">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid57" name="ManualTool" title="Manual Tool" usage="object">
+  <complex-type-link xlink:role="type" xlink:href="tool.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid130"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveManualTool" xlink:href="ect_methods.kmd#oid16"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid57">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid59" name="MaterialObject" title="Material Object" usage="object">
+  <complex-type-link xlink:role="type" xlink:href="resourceobject.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid132"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveManualTool" xlink:href="ect_methods.kmd#oid18"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid59">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+<type id="oid61" name="role" title="Role" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid2"/>
+  <property name="name" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="description" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="role" xlink:href="#oid61">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid62" name="flowrole" title="Flow Role" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="role" xlink:href="#oid61"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid100"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveFlowObject" xlink:href="ect_methods.kmd#oid35"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="flowrole" xlink:href="#oid62">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid63" name="objectrole" title="Object Role" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="role" xlink:href="#oid61"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid99"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="objectrole" xlink:href="#oid63"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveObjectRole" xlink:href="ect_methods.kmd#oid11"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="objectrole" xlink:href="#oid63">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid64" name="toolrole" title="Tool Role" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="role" xlink:href="#oid61"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid98"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="toolrole" xlink:href="#oid64"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveToolRole" xlink:href="ect_methods.kmd#oid13"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="toolrole" xlink:href="#oid64">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid65" name="person_orgunitrole" title="Person/Org Unit Role" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="role" xlink:href="#oid61"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid66" name="personrole" title="Person Role" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid96"/>
+  <property name="roletype" xlink:role="string-type" xlink:title="roletype" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid12" label="Role Type"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_personrole_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid9" label="SimVision"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="savePersonRole" xlink:href="ect_methods.kmd#oid10"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="personrole" xlink:href="#oid66">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="roletype">Participant</string>
+   <string name="simvision.role">st</string>
+   <string name="simvision.app-experience">medium</string>
+   <float name="simvision.fte">1</float>
+   <float name="simvision.salary">50</float>
+  </valueset>
+ </type>
+
+ <type id="oid67" name="orgunitrole" title="Organization Unit Role" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid123"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveOrgunitRole" xlink:href="ect_methods.kmd#oid12"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <forward-reference id="oid68" stamp="20010104 080000000" 
+     xlink:role="type" xlink:title="objectrole" xlink:href="#oid63" xlink:actuate="user"/>
+
+ <forward-reference id="oid69" stamp="20010104 080000000" 
+     xlink:role="type" xlink:title="toolrole" xlink:href="#oid64" xlink:actuate="user"/>
+
+ <forward-reference id="oid70" stamp="20010104 080000000" 
+     xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67" xlink:actuate="user"/>
+
+ <forward-reference id="oid71" stamp="20010104 080000000" 
+     xlink:role="type" xlink:title="personrole" xlink:href="#oid66" xlink:actuate="user"/>
+
+ <type id="oid72" name="meeting" title="Meeting" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid113"/>
+  <property name="name" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="description" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <property name="duration" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Duration"/>
+  <property name="duration-unit" xlink:role="string-type" xlink:title="timeunits" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid11" label="Duration Unit"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_meeting_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid8" label="SimVision"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveMeeting" xlink:href="ect_methods.kmd#oid21"/>
+  <valueset vset="default" size="17" xlink:role="type" xlink:title="meeting" xlink:href="#oid72">
+   <string name="name"></string>
+   <string name="description"></string>
+   <float name="duration">1</float>
+   <string name="duration-unit">Hours</string>
+   <float name="simvision.interval">1</float>
+   <string name="simvision.interval-unit">Days</string>
+   <string name="simvision.priority">medium</string>
+   <integer name="simvision.repeating">1</integer>
+   <float name="simvision.meeting-time">480</float>
+   <float name="simvision.calendar-start-lag">0</float>
+   <string name="simvision.calendar-start-lag-unit">Days</string>
+   <float name="simvision.calendar-end-lag">0</float>
+   <string name="simvision.calendar-end-lag-unit">Days</string>
+   <float name="simvision.first-lag">0</float>
+   <string name="simvision.first-lag-unit">Days</string>
+   <float name="simvision.last-lag">0</float>
+   <string name="simvision.last-lag-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid73" name="skilltype" title="Skill Type" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid114"/>
+  <property name="name" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="description" xlink:href="metis:std#oid43" label="Description" description-flag="true"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveSkillType" xlink:href="ect_methods.kmd#oid20"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="skilltype" xlink:href="#oid73">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid75" name="processelement" title="Process Element" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="GenericProcess" xlink:href="process.kmd#oid1"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="processelement" xlink:href="#oid75">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid76" name="task" title="Task" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="processelement" xlink:href="#oid75"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid91"/>
+  <property name="starttime" xlink:href="metis:std#oid40" label="Start Time"/>
+  <property name="finishtime" xlink:href="metis:std#oid40" label="Finish Time"/>
+  <property name="duration" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Duration"/>
+  <property name="duration-unit" xlink:role="string-type" xlink:title="timeunits" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid11" label="Duration Unit" desc="The duration value is given in this unit."/>
+  <property name="state" xlink:role="integer-type" xlink:title="state" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid1" label="State"/>
+  <property name="delayed" xlink:role="integer-type" xlink:title="bool" xlink:href="metis:std#oid30" label="Delayed"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_task_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid7" label="SimVision"/>
+  <property name="modelfile" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Model file" method-flag="true"/>
+  <property name="xchipsserver" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="XCHIPS Server" method-flag="true"/>
+  <property name="delaysym" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Delay symbol" method-flag="true"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="processelement" xlink:href="#oid75"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="role" xlink:href="#oid61"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="outputport" xlink:href="#oid81"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="inputport" xlink:href="#oid82"/>
+  <named-method-link name="delaysym" xlink:role="cpp-method" xlink:title="setdelaysym" xlink:href="ect_methods.kmd#oid49"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveTask" xlink:href="ect_methods.kmd#oid3"/>
+  <named-method-link name="loadIntoXCHIPS_" xlink:role="cpp-method" xlink:title="loadIntoXCHIPS" xlink:href="ect_methods.kmd#oid45"/>
+  <named-method-link name="modelfile" xlink:role="cpp-method" xlink:href="ect_methods.kmd#oid43"/>
+  <named-method-link name="openInXCHIPS_" xlink:role="cpp-method" xlink:title="openInXCHIPS" xlink:href="ect_methods.kmd#oid46"/>
+  <named-method-link name="xchipsserver" xlink:role="cpp-method" xlink:href="ect_methods.kmd#oid47"/>
+  <valueset vset="default" size="18" xlink:role="type" xlink:title="task" xlink:href="#oid76">
+   <string name="name"></string>
+   <string name="description"></string>
+   <date name="starttime">00000000</date>
+   <date name="finishtime">00000000</date>
+   <integer name="duration">0</integer>
+   <string name="duration-unit">Days</string>
+   <integer name="state">16777215</integer>
+   <integer name="delayed">0</integer>
+   <float name="simvision.effort">5</float>
+   <string name="simvision.effort-unit">Days</string>
+   <string name="simvision.effort-type">work-volume</string>
+   <string name="simvision.priority">medium</string>
+   <string name="simvision.requirement-complexity">medium</string>
+   <string name="simvision.solution-complexity">medium</string>
+   <string name="simvision.uncertainty">medium</string>
+   <string name="modelfile" class="volatile"></string>
+   <string name="xchipsserver" class="volatile"></string>
+   <string name="delaysym" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid77" name="decisionpoint" title="Decision Point" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="logicaldecision" xlink:href="#oid133"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid92"/>
+  <property name="starttime" xlink:href="metis:std#oid40" label="Target date"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveDecisionPoint" xlink:href="ect_methods.kmd#oid7"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="logicalrelation"> </string>
+   <integer name="transitioncondition">1</integer>
+   <date name="starttime">00000000</date>
+  </valueset>
+ </type>
+
+ <type id="oid78" name="milestone" title="Milestone" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid93"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_milestone_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid14" label="SimVision"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveMilestone" xlink:href="ect_methods.kmd#oid4"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="milestone" xlink:href="#oid78">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="logicalrelation"> </string>
+   <integer name="transitioncondition">1</integer>
+   <date name="starttime">00000000</date>
+   <float name="simvision.target-lag">1</float>
+   <string name="simvision.target-lag-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid79" name="start" title="Start" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="milestone" xlink:href="#oid78"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveStart" xlink:href="ect_methods.kmd#oid5"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="start" xlink:href="#oid79">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="logicalrelation"> </string>
+   <integer name="transitioncondition">1</integer>
+   <date name="starttime">00000000</date>
+   <float name="simvision.target-lag">1</float>
+   <string name="simvision.target-lag-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid80" name="finish" title="Finish" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="milestone" xlink:href="#oid78"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveFinish" xlink:href="ect_methods.kmd#oid6"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="finish" xlink:href="#oid80">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="logicalrelation"> </string>
+   <integer name="transitioncondition">1</integer>
+   <date name="starttime">00000000</date>
+   <float name="simvision.target-lag">1</float>
+   <string name="simvision.target-lag-unit">Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid81" name="outputport" title="Output Port" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="logicaldecision" xlink:href="#oid133"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid95"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveOutputPort" xlink:href="ect_methods.kmd#oid9"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="outputport" xlink:href="#oid81">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="logicalrelation"> </string>
+   <integer name="transitioncondition">1</integer>
+  </valueset>
+ </type>
+
+ <type id="oid82" name="inputport" title="Input Port" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="logicaldecision" xlink:href="#oid133"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid94"/>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveInputPort" xlink:href="ect_methods.kmd#oid8"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="inputport" xlink:href="#oid82">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="logicalrelation"> </string>
+   <integer name="transitioncondition">1</integer>
+  </valueset>
+ </type>
+
+ <type id="oid83" name="flow" title="Flow" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="SendReceiveRelship" xlink:href="metis:stdtypes#oid104"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid104"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="transitioncondition" xlink:role="integer-type" xlink:title="bool" xlink:href="metis:std#oid30" label="Transition Condition"/>
+  <property name="iscontrolflow" xlink:role="integer-type" xlink:title="bool" xlink:href="metis:std#oid30" label="Is Control Flow"/>
+  <property name="carriesresource" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Carries Resources"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_flow_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid18" label="SimVision"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="outputport" xlink:href="#oid81" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="outputport" xlink:href="#oid81" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="outputport" xlink:href="#oid81" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="inputport" xlink:href="#oid82" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="inputport" xlink:href="#oid82" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="inputport" xlink:href="#oid82" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="outputport" xlink:href="#oid81" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="outputport" xlink:href="#oid81" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="inputport" xlink:href="#oid82" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="inputport" xlink:href="#oid82" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="outputport" xlink:href="#oid81" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="flowrole" xlink:href="#oid62" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="flowrole" xlink:href="#oid62" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="inputport" xlink:href="#oid82" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveFlow" xlink:href="ect_methods.kmd#oid24"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="flow" xlink:href="#oid83">
+   <string name="name"></string>
+   <integer name="transitioncondition">1</integer>
+   <integer name="iscontrolflow">1</integer>
+   <string name="carriesresource" class="volatile"></string>
+   <string name="simvision.precedence">finish-start</string>
+   <string name="simvision.time-lag">0.00 Days</string>
+  </valueset>
+ </type>
+
+ <type id="oid84" name="isfilledby" title="Is Filled By" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid105"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_isfilledby_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid19" label="SimVision"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="objectrole" xlink:href="#oid63" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="objectrole" xlink:href="#oid63" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="objectrole" xlink:href="#oid63" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="informationobject" xlink:href="#oid51" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="objectrole" xlink:href="#oid63" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="materialobject" xlink:href="#oid59" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="toolrole" xlink:href="#oid64" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="toolrole" xlink:href="#oid64" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="toolrole" xlink:href="#oid64" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Tool" xlink:href="tool.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="personrole" xlink:href="#oid66" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="personrole" xlink:href="#oid66" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="personrole" xlink:href="#oid66" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Organization" xlink:href="#oid41" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="#oid120" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="ect" xlink:role="cpp-method" xlink:title="saveIsFilledBy" xlink:href="ect_methods.kmd#oid33"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="isfilledby" xlink:href="#oid84">
+   <string name="from">is filled by</string>
+   <string name="to">fills</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="isfilledby" xlink:href="#oid84">
+   <float name="simvision.allocation">1</float>
+  </valueset>
+ </type>
+
+ <type id="oid85" name="communication" title="Communication" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid106"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="task" xlink:href="#oid76" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="task" xlink:href="#oid76" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="communiation" xlink:href="#oid85">
+   <string name="from">exchange info  with</string>
+   <string name="to"></string>
+  </valueset>
+ </type>
+
+ <type id="oid86" name="supervision" title="Supervision" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid108"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="supervision" xlink:href="#oid86">
+   <string name="from">supervises</string>
+   <string name="to">supervised by</string>
+  </valueset>
+ </type>
+
+ <type id="oid87" name="meetingassignment" title="Meeting Assignment" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid109"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_meetingassignment_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid17" label="SimVision"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="person_orgunitrole" xlink:href="#oid65" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="meeting" xlink:href="#oid72" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="meetingassignment" xlink:href="#oid87">
+   <string name="from">participates in</string>
+   <string name="to">has participant</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="meetingassignment" xlink:href="#oid87">
+   <float name="simvision.allocation">1</float>
+  </valueset>
+ </type>
+
+ <type id="oid88" name="hasskillrating" title="Has Skill Rating" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid110"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_hasskillrating_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid15" label="SimVision"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="#oid42" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="skilltype" xlink:href="#oid73" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization" xlink:href="#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="skilltype" xlink:href="#oid73" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="hasskillrating" xlink:href="#oid88">
+   <string name="from">has skill level</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="hasskillrating" xlink:href="#oid88">
+   <string name="simvision.rating">medium</string>
+  </valueset>
+ </type>
+
+ <type id="oid89" name="requiresskill" title="Requires Skill" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="personrole" xlink:href="#oid66" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="skilltype" xlink:href="#oid73" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="skilltype" xlink:href="#oid73" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="requiresskill" xlink:href="#oid89">
+   <string name="from">requires skill</string>
+   <string name="to">skill required by</string>
+  </valueset>
+ </type>
+
+ <type id="oid90" name="rework" title="Rework" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid107"/>
+  <property name="simvision" xlink:role="type" xlink:title="simvision_rework_properties" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid16" label="SimVision"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="task" xlink:href="#oid76" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="task" xlink:href="#oid76" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="rework" xlink:href="#oid90">
+   <string name="from">failure dependancy on</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="rework" xlink:href="#oid90">
+   <float name="simvision.strength">0.1</float>
+  </valueset>
+ </type>
+
+ <forward-reference id="oid118" stamp="20010104 080000000" 
+     xlink:role="type" xlink:title="personrole" xlink:href="#oid66" xlink:actuate="user"/>
+
+ <type id="oid133" name="logicaldecision" title="Logical Decision" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="processelement" xlink:href="#oid75"/>
+  <property name="logicalrelation" xlink:role="string-type" xlink:title="logicalrelation" xlink:href="../primitive_types/ect_primitivetypes.kmd#oid3" label="Logical Relation"/>
+  <property name="transitioncondition" xlink:role="integer-type" xlink:title="bool" xlink:href="metis:std#oid30" label="Transition Condition"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="logicaldecision" xlink:href="#oid133">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="logicalrelation"> </string>
+   <integer name="transitioncondition">1</integer>
+  </valueset>
+ </type>
+
+ <type id="oid134" name="hasmember" title="Has Member" desc="A person is a member of an organization.&#10;has member/is member of&#10;-&#62; from Organization to Person" usage="relationship" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="organization" xlink:href="#oid41" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="person" xlink:href="#oid42" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="hasmember" xlink:href="#oid134">
+   <string name="from">has member</string>
+   <string name="to">member of</string>
+  </valueset>
+ </type>
+
+ <type id="oid137" name="primaryskillrequired" title="Primary Skill Required" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="task" xlink:href="#oid76" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="skilltype" xlink:href="#oid73" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="primaryskillrequired" xlink:href="#oid137">
+   <string name="from">primary skill required</string>
+   <string name="to">required by</string>
+  </valueset>
+ </type>
+
+ <type id="oid138" name="hasfirstmilestone" title="Has First Milestone" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="meeting" xlink:href="#oid72" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="milestone" xlink:href="#oid78" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="hasfirstmilestone" xlink:href="#oid138">
+   <string name="from">has first milestone</string>
+   <string name="to">is first milestone for</string>
+  </valueset>
+ </type>
+
+ <type id="oid139" name="haslastmilestone" title="Has Last Milestone" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="meeting" xlink:href="#oid72" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="milestone" xlink:href="#oid78" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="haslastmilestone" xlink:href="#oid139">
+   <string name="from">has last milestone</string>
+   <string name="to">is last milestone for</string>
+  </valueset>
+ </type>
+
+ <type id="oid140" name="hastargetmilestone" title="Has Target Milestone" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="milestone" xlink:href="#oid78" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="milestone" xlink:href="#oid78" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="hastargetmilestone" xlink:href="#oid140">
+   <string name="from">has target milestone</string>
+   <string name="to">is target milestone for</string>
+  </valueset>
+ </type>
+
+ <type id="oid141" name="hassimulationvalues" title="Has Simulation Values" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="metis:stdtypes#oid111"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="task" xlink:href="#oid76" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="simvisioncase" xlink:href="#oid31" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="hassimulationvalues" xlink:href="#oid141">
+   <string name="from">has simulation values</string>
+   <string name="to">is simulation values for</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid91" xlink:role="type" xlink:title="task" xlink:href="#oid76" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid6" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid7" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="delayed" property="value" macro="(expand (property delaysym))"/>
+   <replace tag="delayed" property="linecolor" macro="(expand &#34;red&#34;)"/>
+   <replace tag="decomposed" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="main" property="fillcolor" macro="(expand (property state (format rgb)))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid92" xlink:role="type" xlink:title="decisionpoint" xlink:href="#oid77" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property logicalrelation))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property logicalrelation))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid93" xlink:role="type" xlink:title="milestone" xlink:href="#oid78" tree-size="0.5" nested-size="0.03125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid12" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid12" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid94" xlink:role="type" xlink:title="inputport" xlink:href="#oid82" tree-size="0.5" nested-size="0.125" behavior="tree" position="left" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property logicalrelation))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property logicalrelation))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid95" xlink:role="type" xlink:title="outputport" xlink:href="#oid81" tree-size="0.5" nested-size="0.125" behavior="tree" position="right" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property logicalrelation))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property logicalrelation))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid96" xlink:role="type" xlink:title="personrole" xlink:href="#oid66" tree-size="0.5" nested-size="0.125" behavior="tree" position="bottom" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/personrole.svg#oid1" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/personrole.svg#oid1" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid97" xlink:role="type" xlink:title="simvisioncase" xlink:href="#oid31" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/workware_objects.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid98" xlink:role="type" xlink:title="toolrole" xlink:href="#oid64" tree-size="0.5" nested-size="0.125" behavior="tree" position="bottom" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/toolrole.svg#oid1" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/toolrole.svg#oid1" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid99" xlink:role="type" xlink:title="objectrole" xlink:href="#oid63" tree-size="0.5" nested-size="0.125" behavior="tree" position="bottom" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/objectrole.svg#oid0" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/objectrole.svg#oid0" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid100" xlink:role="type" xlink:title="flowrole" xlink:href="#oid62" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/objectrole.svg#oid0" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/objectrole.svg#oid0" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid103" xlink:role="type" xlink:title="organization" xlink:href="#oid41" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+    <propertyview name="name" visible-flag="true"/>
+    <propertyview name="description" visible-flag="true"/>
+    <propertyview name="phoneNr" visible-flag="true"/>
+    <propertyview name="faxNr" visible-flag="true"/>
+    <propertyview name="homepage" visible-flag="true"/>
+    <propertyview name="image" visible-flag="true"/>
+    <propertyview name="simvision.team-experience" visible-flag="true"/>
+    <propertyview name="simvision.centralization" visible-flag="true"/>
+    <propertyview name="simvision.formalization" visible-flag="true"/>
+    <propertyview name="simvision.matrix-strength" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/organisation.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/organisation.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/organization.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid104" xlink:role="type" xlink:title="flow" xlink:href="#oid83" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+   <replace tag="line" property="linecolor" macro="(expand &#34;blue&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid105" xlink:role="type" xlink:title="isfilledby" xlink:href="#oid84" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid5" xlink:actuate="user">
+   <replace tag="line" property="linecolor" macro="(expand &#34;brown&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid106" xlink:role="type" xlink:title="communiation" xlink:href="#oid85" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid5" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid107" xlink:role="type" xlink:title="rework" xlink:href="#oid90" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid5" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid108" xlink:role="type" xlink:title="supervision" xlink:href="#oid86" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid5" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid109" xlink:role="type" xlink:title="meetingassignment" xlink:href="#oid87" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid5" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid110" xlink:role="type" xlink:title="hasskillrating" xlink:href="#oid88" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid5" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid111" xlink:role="type" xlink:title="requiresskill" xlink:href="#oid89" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="metis:stdsyms#oid5" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid113" xlink:role="type" xlink:title="meeting" xlink:href="#oid72" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/meeting.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/meeting.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid114" xlink:role="type" xlink:title="skilltype" xlink:href="#oid73" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/gem/gem_competence.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/gem/gem_competence.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid123" xlink:role="type" xlink:title="orgunitrole" xlink:href="#oid67" tree-size="0.5" nested-size="0.125" behavior="tree" position="bottom" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/orgunitrole.svg#oid1" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/orgunitrole.svg#oid1" xlink:actuate="user">
+   <replace tag="frame" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid128" xlink:role="type" xlink:title="informationobject" xlink:href="#oid51" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+    <propertyview name="name" visible-flag="true"/>
+    <propertyview name="description" visible-flag="true"/>
+    <propertyview name="creationdate" visible-flag="true"/>
+    <propertyview name="author" visible-flag="true"/>
+    <propertyview name="version" visible-flag="true"/>
+    <propertyview name="status" visible-flag="true"/>
+    <propertyview name="reference" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/informationobject.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/informationobject.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/information_object.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid129" xlink:role="type" xlink:title="Person" xlink:href="#oid42" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/person.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/person.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/person.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid130" xlink:role="type" xlink:title="ManualTool" xlink:href="#oid57" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+    <propertyview name="name" visible-flag="true"/>
+    <propertyview name="description" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/manualtool.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/manualtool.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid131" xlink:role="type" xlink:title="SoftwareTool" xlink:href="#oid56" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+    <propertyview name="name" visible-flag="true"/>
+    <propertyview name="description" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/softwaretool.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/softwaretool.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid132" xlink:role="type" xlink:title="MaterialObject" xlink:href="#oid59" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+    <propertyview name="name" visible-flag="true"/>
+    <propertyview name="description" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/materialobject.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/materialobject.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid135" xlink:role="type" xlink:title="person" xlink:href="#oid42" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+    <propertyview name="username" visible-flag="true"/>
+    <propertyview name="name" visible-flag="true"/>
+    <propertyview name="description" visible-flag="true"/>
+    <propertyview name="email" visible-flag="true"/>
+    <propertyview name="homepage" visible-flag="true"/>
+    <propertyview name="image" visible-flag="true"/>
+    <propertyview name="phonework" visible-flag="true"/>
+    <propertyview name="phoneprivate" visible-flag="true"/>
+    <propertyview name="phonemobile" visible-flag="true"/>
+    <propertyview name="fax" visible-flag="true"/>
+    <propertyview name="simvision.role" visible-flag="true"/>
+    <propertyview name="simvision.app-experience" visible-flag="true"/>
+    <propertyview name="simvision.fte" visible-flag="true"/>
+    <propertyview name="simvision.salary" visible-flag="true"/>
+    <propertyview name="password" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/person.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/person.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/person.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid136" xlink:role="type" xlink:title="folder" xlink:href="#oid21" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/proj_model_open_sym.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/proj_model_closed_sym.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

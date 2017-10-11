@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: comment.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Comment</title>
+    <g>
+      <polygon points="850.609 62.5662 0 54.687 15.752 984.375 
+       968.75 952.86 850.609 62.5662"
+       style="stroke:none; fill:#999999; fill-opacity:100%"     class="TAG:shadow"></polygon>
+      <polygon points="921.201 0 0 0 0 7.8781 
+        0 149.674 7.87352 425.39 23.6205 582.942 
+       39.3676 732.617 62.9881 850.781 78.7352 898.046 94.4822 929.557 
+        141.723 937.434 291.32 945.312 574.766 937.434 
+       999.937 913.802 1007.81 913.802 929.075 0 921.201 0"
+       style="stroke:none; fill:#333333; fill-opacity:100%"></polygon>
+      <polygon points="913.487 15.625  984.375 898.234 
+        748.08 906.114 464.525 913.995 220.351 921.875 
+       110.079 913.995  94.3264 890.354 78.5733 843.07 
+       54.9437 732.745 39.1906 598.777 31.314 456.929 23.4375 181.114 
+       23.4375 15.625  913.487 15.625 "
+       style="stroke:none; fill:#fcf168; fill-opacity:100%"     class="TAG:canvas"></polygon>
+      <polygon points="906.113 23.437 31.25 23.437 31.25 203.125 
+       921.875 203.125 906.113 23.437"
+       style="stroke:none; fill:#e2d752; fill-opacity:100%"></polygon>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="95.9381" y="41.6047"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:10;"
+       class="TAG:text"></text>
+      <rect x="95.9381" y="26.6047" width="806.622" height="867.148"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <rect x="105.25" y="205.854" width="821.754" height="692.554"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:LAYOUTAREA"></rect>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid1"/>
+</svg>

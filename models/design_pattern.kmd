@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics_Patterns:Design_Pattern_UUID" name="Design_Pattern" title="Design Pattern" desc="Design Patterns represent a roll-up of deployment time and cost estimates for commonly implemented projects, installations, and designs. A Design Pattern can be connected to the various elements required by or affected by the implementation. For example, the Design Pattern can be connected to the Software Product Versions or Hardware Product Models that are used within it." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/design_pattern.kmd#UUID4_7547FB3C-C77A-498E-B93A-05F2F4CB912A"/>
+  <property name="estimatedTime" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Estimated Time" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Patterns:Design_Pattern_estimatedTime_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="estimatedCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Estimated Cost" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Patterns:Design_Pattern_estimatedCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="monetaryUnits" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Monetary Units" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Patterns:Design_Pattern_monetaryUnits_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="estimatedTimeVariationPercentage" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Estimated Time Variation Percentage" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Patterns:Design_Pattern_estimatedTimeVariationPercentage_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="timeUnits" xlink:role="integer-type" xlink:title="Duration Unit" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_duration_unit_UUID" label="Time Units" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Patterns:Design_Pattern_timeUnits_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="estimatedCostVariationPercentage" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Estimated Cost Variation Percentage" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Patterns:Design_Pattern_estimatedCostVariationPercentage_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Design Pattern" xlink:href="#CompType_Semantics_Patterns:Design_Pattern_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="15" xlink:role="type" xlink:title="Design Pattern" xlink:href="#CompType_Semantics_Patterns:Design_Pattern_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="estimatedTime">0</decimal>
+   <decimal name="estimatedCost">0</decimal>
+   <string name="monetaryUnits">0</string>
+   <integer name="estimatedTimeVariationPercentage">0</integer>
+   <integer name="timeUnits">-1</integer>
+   <integer name="estimatedCostVariationPercentage">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

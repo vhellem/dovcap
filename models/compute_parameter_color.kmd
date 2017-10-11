@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="5.2.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="_002asd301gm7697qsv3i" name="Compute_Parameter_Color" title="Compute Parameter Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="Parameter Color Table" xlink:href="../object_types/parameter.kmd#Parameter_Color_Table"/>
+   <string name="Property">value</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

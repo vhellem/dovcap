@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="3"
+ nextoid="4">
+
+ <metamodel id="oid1" name="Database_Configuration" title="Database Configuration">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Auto Types" xlink:href="#oid3"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Database Data Source" xlink:href="../object_types/database_data_source.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Database Query" xlink:href="../object_types/database_query.kmd#oid1" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="Relationship_Types" title="Relationship Types">
+ </metamodel>
+
+ <metamodel id="oid3" name="Auto_Types" title="Auto Types">
+  <complex-type-links size="1">
+   <complex-type-link xlink:role="type" xlink:title="Database Field" xlink:href="../object_types/database_field.kmd#oid1" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

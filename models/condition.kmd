@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ typeviews="1"
+ nextoid="5">
+
+ <type id="oid1" name="General_Condition" title="General Condition" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - IF Configuration" xlink:href="objectprop.kmd#oid1"/>
+  <property name="sequenceNumber" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence Number" desc="0 Used by layout. Makes sure conditions are sorted before actions." visible-flag="false"/>
+  <property name="conditionCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Condition Code" desc="Use Metis Object Expression Syntax to type in the condition to evaluate." default-visible="top"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="General Condition" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="sequenceNumber">0</integer>
+   <string name="conditionCode"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="Pre_Condition" title="Pre Condition" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="General Condition" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Pre Condition" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="sequenceNumber">0</integer>
+   <string name="conditionCode"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Pre Condition" xlink:href="#oid2" tree-size="0.2" nested-size="0.2" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="conditionCode" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="sequenceNumber" protected-flag="true" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Pre Condition" xlink:href="../symbols/condition.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="expression" property="value" macro="(expand (property conditionCode))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Pre Condition" xlink:href="../symbols/condition.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="expression" property="value" macro="(expand (property conditionCode))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/condition.png"/>
+ </typeview>
+
+
+</metis>

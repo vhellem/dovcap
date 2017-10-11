@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Context" name="Context" desc="A Context is a high-level task that groups related elements, such as tasks, documents, services and content. Typical contexts include a project, a collaboration between two partners (if we use our site for multiple collaborations). Users have roles in conbtexts just like on tasks, and these roles are used for controlling access to the content of a context. In the user interface, the context shopuld determine the set of available elements, e.g. for linking reltionships to. " usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Task (AKM)" xlink:href="task.kmd#AKM_Task"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Context" xlink:href="#AKM_Context" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#EEBBAA</string>
+   <string name="troux_iconAlias">04a1f2be-aff5-348c-affb-34ff09d1e7a8</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">0</integer>
+  </valueset>
+  <valueset vset="default" size="39" xlink:role="type" xlink:title="Context" xlink:href="#AKM_Context" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="monetaryUnit"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <string name="taskId"></string>
+   <date name="baselineStartDate">00000000</date>
+   <date name="plannedStartDate">00000000</date>
+   <date name="actualStartDate">00000000</date>
+   <date name="baselineFinishDate">00000000</date>
+   <date name="plannedFinishDate">00000000</date>
+   <date name="actualFinishDate">00000000</date>
+   <string name="baselineCost"></string>
+   <string name="plannedCost"></string>
+   <string name="actualCost"></string>
+   <integer name="milestone">-1</integer>
+   <integer name="completionPercentage">0</integer>
+   <integer name="status">-1</integer>
+   <string name="baselineResources"></string>
+   <string name="plannedResources"></string>
+   <string name="actualResources"></string>
+   <string name="resourceUnit"></string>
+   <float name="rolledUpBaselineCost" class="volatile">0</float>
+   <float name="rolledUpPlannedCost" class="volatile">0</float>
+   <float name="rolledUpActualCost" class="volatile">0</float>
+   <float name="allocationDirect" class="volatile">0</float>
+   <float name="allocationTotal" class="volatile">0</float>
+   <string name="color" class="volatile"></string>
+   <integer name="status_AKM">0</integer>
+   <string name="icon_Status" class="volatile"></string>
+   <string name="color_Status" class="volatile"></string>
+   <integer name="delayed">0</integer>
+   <string name="delayed_Color" class="volatile">black</string>
+  </valueset>
+ </type>
+
+
+</metis>

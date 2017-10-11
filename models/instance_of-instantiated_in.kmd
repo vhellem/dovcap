@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="InstanceOf" title="instance of/instantiated in" usage="relationship" desc="Allows you to specify in an Architecture or a Logical Architecture that an element is an instance of one of the Logical Library elements (Logical Application, Logical Datastore, Logical Technology Item). This relationship is needed to specify what an architecture element represents. The name of the Library element is propagated onto the symbol of the architecture element.">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/logical_application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/logical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="../object_types/architecture_template_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/logical_application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="../object_types/architecture_template_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/logical_technology_item.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="../object_types/logical_architecture_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/logical_technology_item.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="../object_types/architecture_template_element.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/logical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="from">instance of</string>
+   <string name="to">instantiated in</string>
+  </valueset>
+ </type>
+
+
+</metis>

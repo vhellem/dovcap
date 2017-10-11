@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Object" title="Modeling Object with no properties - User" 
+  desc="Abstract object type with no properties" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#oid2"/>
+  <!-- Enable document reference on all modeling objects by uncommenting the following section.
+       This will provide Filename with Browse... dialog at the bottom of every objects property dialog, 
+       except containers and some special objects used for process and role modeling.
+       Notes:
+       - If the Filename is needed at the top of the property dialog, change the value of the
+         default-visible flag to "top". Other placements of the Filename property requires definition
+         of type view and view style with the Metamodel Developer.
+       - To open the document, right click the object and activate Execute Method - Open Document.
+       - An action button can also be used to open the document: Drop an action button on the model
+         and set the URI reference to the object. Open the property dialog of the action button and
+         set the Action property to 'OpenDocument'. Double-clicking the action button will then open
+         the document specified on the object.
+       - If your are adding more properties, please note that the default values must be provided
+         in the same <valueset clause, and the size attribute must be updated accordingly.
+  -->
+  <!--
+  <property name="filename" xlink:role="url-type" xlink:href="metis:stdprimtypes#oid9" label="Filename" 
+   desc="The filename identifying the Online Document." default-visible="bottom"/>
+  <named-method-link name="Open_Doc_" xlink:role="cpp-method" xlink:title="Open_Doc" 
+   xlink:href="metis:stdmethods#oid5" xlink:actuate="auto"/>
+  -->
+ </type>
+
+</metis>

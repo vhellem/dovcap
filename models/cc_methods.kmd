@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="18"
+ nextoid="1">
+
+ <cpp-method id="initGlobals" name="initGlobals" title="initGlobals" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/ccInitGlobals.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="addViewNeighbours" name="addViewNeighbours" title="addViewNeighbours" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/addViewNeighbours.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="addViewNeighboursFromDoc" name="addViewNeighboursFromDoc" title="addViewNeighbours" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/addViewNeighboursFromDoc.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="createViewAsHierarchy" name="createViewAsHierarchy" title="createViewAsHierarchy" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/view_hierarchy.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="editParameters" name="editParameters" title="editParameters" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/openObjectWindow.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="executeScript" name="executeScript" title="executeScript" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">(expand (property description))</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="getParameterName" name="getParameterName" title="getParameterName" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">MsgBox getParameterTitle</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="getParameterStatus" name="getParameterStatus" title="getParameterStatus" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">Eval</string>
+   <string name="Script">getParameterStatusValue</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="getParameterStatus2" name="getParameterStatus2" title="getParameterStatus2" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">
+   stop
+   status = getParameterStatusValue
+   MsgBox status
+   </string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="getObjectStatus" name="getObjectStatus" title="getObjectStatus" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">Eval</string>
+   <string name="Script">getObjectStatusValue</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="getObjectStatus2" name="getObjectStatus2" title="getObjectStatus2" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">
+   stop
+   status = getObjectStatusValue
+   MsgBox status
+   </string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="insertSubmodel" name="insertSubmodel" title="insertSubmodel" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="4">
+   <string name="Command">insertSubmodel</string>
+   <string name="ParentUri">ParentUri</string>
+   <string name="ParentViewUri">ParentViewUri</string>
+   <string name="SubModelUrl">SubModelUrl</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="parameterName" name="parameterName" title="parameterName" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">Eval</string>
+   <string name="Script">getParameterTitle</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="parameterParentName" name="parameterParentName" title="parameterParentName" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">Eval</string>
+   <string name="Script">getParameterParentTitle</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="relocateRelship" name="relocateRelship" title="relocateRelship" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">relocateRelship</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="relocateRelshipToFile" name="relocateRelshipToFile" title="relocateRelshipToFile" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/relocateRelship.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="relocateToModel" name="relocateToModel" title="relocateToModel" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/relocateToModel3.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+
+ <cpp-method id="showDocument" name="showDocument" title="showDocument" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/showDocument.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="togglePropertyValue" name="togglePropertyValue" title="togglePropertyValue" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/togglePropertyValue.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="Database_Data_Source" title="Database Data Source" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Data Source" xlink:href="../../common/object_types/data_source.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="connectionString" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Connection String" desc="This is the OLEDB connection string returned by the &#34;Edit Connection String&#34; method. It can also be entered manually. This stringed is passed by the database import engine to the windows OLEDB component to establish a connection to a database." default-visible="top"/>
+  <property name="evaluateConnectionString" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute Connection String As Expression" desc="If you want the connection string to be determined run-time, you must enter a valid value expression in the &#60;em&#62;Connection String&#60;/em&#62; field and then check this box." default-visible="top"/>
+  <property name="databaseShortcut" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Shortcut to open database (enter manually)" desc="A windows shortcut that enables the opening of the database with an associate tool. This can be found by copying the shortcut for the tool itself.&#10;&#10;Examples:&#10;SQL Server Query Debugger:&#10;&#34;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\sqlmangr.exe&#34;&#10;&#10;SQL Server Enterprise Manager:&#10;C:\WINNT\system32\mmc.exe /s &#34;C:\Program Files\Microsoft SQL Server\80\Tools\BINN\SQL Server Enterprise Manager.MSC&#34;&#10;&#10;Microsoft Access use file path to database, example:&#10;C:\Program Files\Microsoft Office\Office\Samples\Northwind.mdb&#10;&#10;Oracle 9.2 Enterprise Manager:&#10;C:\oracle\ora92\bin\oemapp.bat console&#10;&#10;Oracle 9.2 SQL Plus:&#10;C:\oracle\ora92\bin\sqlplusw.exe" default-visible="top"/>
+  <property name="attributes" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Attributes" desc="This value is only for reference and is not used by the mapping engine. The value set by the &#34;Edit Connection String&#34; method when it gets a valid connection string from Windows. This integer number can be decoded by refering to the OLEDB reference on MSDN." default-visible="top"/>
+  <property name="connectionTimeout" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Connection Timeout (seconds)" desc="Indicates the number of seconds to wait for a response when DIF attempts to connect to the database. Use a positive integer value. The value 0 means no limit and should be avoided.&#10;&#10;Leave this as it is to use the DIF default timeout of 600 seconds." default-visible="top"/>
+  <property name="provider" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Provider" desc="This value is only for reference and is not used by the mapping engine. The value set by the &#34;Edit Connection String&#34; method when it gets a valid connection string from Windows. This value contains the name of the database provider." default-visible="top"/>
+  <property name="version" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Version" desc="This value is only for reference and is not used by the mapping engine. The value set by the &#34;Edit Connection String&#34; method when it gets a valid connection string from Windows. This value gives the version of the Provider given in the property above." default-visible="top"/>
+  <named-method-link name="Edit Connection String_" xlink:role="cpp-method" xlink:title="Edit Connection String" xlink:href="../methods/edit_connection_string.kmd#oid1"/>
+  <named-method-link name="Open Database_" xlink:role="cpp-method" xlink:title="Open Database" xlink:href="../methods/open_database.kmd#oid1"/>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Database Data Source" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="providerType">OLEDB</string>
+   <string name="connectionString"></string>
+   <integer name="evaluateConnectionString">0</integer>
+   <string name="databaseShortcut"></string>
+   <integer name="attributes">0</integer>
+   <integer name="connectionTimeout">600</integer>
+   <string name="provider"></string>
+   <string name="version"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Database Data Source" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="providerType" protected-flag="true" visible-flag="true"/>
+   <propertyview name="connectionString" visible-flag="true"/>
+   <propertyview name="evaluateConnectionString" visible-flag="true"/>
+   <propertyview name="databaseShortcut" visible-flag="true"/>
+   <propertyview name="connectionTimeout" visible-flag="true"/>
+   <propertyview name="attributes" protected-flag="true" visible-flag="true"/>
+   <propertyview name="provider" protected-flag="true" visible-flag="true"/>
+   <propertyview name="version" label="Provider Version" protected-flag="true" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="externalID" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Database Data Source" xlink:href="../symbols/database_data_source.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (property connectionString))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Database Data Source" xlink:href="../symbols/database_data_source.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="DBBody" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="DBBody" property="fillcolor" macro="(expand &#34;darkgreen&#34;)"/>
+   <replace tag="description" property="value" macro="(expand (property connectionString))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/database_data_source.png"/>
+ </typeview>
+
+
+</metis>

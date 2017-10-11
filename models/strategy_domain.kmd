@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Strategy_Domain" title="Strategy Domain" desc="Use the Strategy domain to define the business goals and strategies, and the success factors and measures that control the direction in which the business wants to move. Company visions can be broken down into concrete items such as goals and objectives, strategies and critical success factors.&#10;You can also use the domain to model lower level strategies, like program, project or process strategies or strategies for the IT department.&#10;The domain may be used to model both non-IT-related and IT-related issues, depending on what you intend to achieve with the model.&#10;Use the Vision and Goal object types to define what the business wants to achieve. Use the Strategy and the Critical Success Factor (aggregations of Success Factors) object types to define how the business intends to make it happen.Use the Measure and KPI object types to identify high-level measures used to identify and follow up the goals, strategies and critical success factors. The properties of these object types are there to support methods like Balanced Scorecard analysis.&#10;If you have an interest to show the strategic value of different objects in the model, use the weight on the Goal object and the relationships from the Goal object to Strategy objects, and further to Success Factors, Measures and KPI&#39;s. This strategic value can then be further calculated and displayed in certain other objects in other domains.&#10;The Strategy domain will have multiple links to object types in other domains that are affected, like Initiatives and Plan objects in the Transistion domain, External Factor and Issue objects in the Analysis domain, Policy and Rule objects in the Policy domain, Business Process and Services objects in the Product and Service domain, and Organization and Position objects in the Organization domain.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="13">
+   <complex-type-link xlink:role="type" xlink:title="Capability" xlink:href="../objecttypes/capability.kmd#CompType_MEAF:Capability_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="../objecttypes/key_performance_indicator.kmd#CompType_MEAF:KeyPerformanceIndicator_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Measure" xlink:href="../objecttypes/measure.kmd#CompType_MEAF:Measure_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Success Factor" xlink:href="../objecttypes/success_factor.kmd#CompType_MEAF:SuccessFactor_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Vision" xlink:href="../objecttypes/vision.kmd#CompType_MEAF:Vision_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Value Chain" xlink:href="../../semantics/object_types/value_chain.kmd#CompType_Semantics_EBA:Value_Chain_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Mission" xlink:href="../../semantics/object_types/mission.kmd#CompType_eaGov_SP:Mission_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="KPI Category" xlink:href="../../semantics/object_types/kpi_category.kmd#CompType_Semantics_ERM:KPI_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="KPI Pattern" xlink:href="../../semantics/object_types/kpi_pattern.kmd#CompType_Semantics:KPI_Pattern_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Capability Operations" xlink:href="../../semantics/object_types/capability_operations.kmd#CompType_Semantics_APM:Capability_Operations_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="KPI History" xlink:href="../../semantics/object_types/kpi_history.kmd#CompType_Semantics:KPI_History_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="28">
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process contributes to-has contributing Value Chain" xlink:href="../../semantics/relationship_types/business_process_contributes_to-has_contributing_value_chain.kmd#RelType_Semantics_EBA:Business_Process_contributes_to-has_contributing_Value_Chain_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy affects-is affected by Value Chain" xlink:href="../../semantics/relationship_types/strategy_affects-is_affected_by_value_chain.kmd#RelType_Semantics_EBA:Strategy_affects-is_affected_by_Value_Chain_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Value Chain supports-is supported by Goal" xlink:href="../../semantics/relationship_types/value_chain_supports-is_supported_by_goal.kmd#RelType_Semantics_EBA:Value_Chain_supports-is_supported_by_Goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal supports-is supported by Mission" xlink:href="../../semantics/relationship_types/goal_supports-is_supported_by_mission.kmd#RelType_Semantics_Strategy:Goal_supports-is_supported_by_Mission_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal affects Capability" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_goal_affects_is_affected_by_capability_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal conflicts with Goal" xlink:href="../relationshiptypes/conflicts_with-conflicts_with.kmd#Reltype_goal_conflicts_with_conflicts_with_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal leads to Goal" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_goal_leads_to_follows_from_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Measure measures Goal" xlink:href="../relationshiptypes/measures-is_measured_by.kmd#Reltype_measure_measures_is_measured_by_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Measure measures Strategy" xlink:href="../relationshiptypes/measures-is_measured_by.kmd#Reltype_measure_measures_is_measured_by_strategy_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Measure measures Success Factor" xlink:href="../relationshiptypes/measures-is_measured_by_weight.kmd#Reltype_measure_measures_is_measured_by_weight_success_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy achieves Goal" xlink:href="../relationshiptypes/achieves-is_achieved_by_weight.kmd#Reltype_strategy_achieves_is_achieved_by_weight_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy affects Success Factor" xlink:href="../relationshiptypes/affects-is_affected_by.kmd#Reltype_strategy_affects_is_affected_by_success_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy depends on Success Factor" xlink:href="../relationshiptypes/depends_on-is_critical_to_weight.kmd#Reltype_strategy_depends_on_is_critical_to_weight_success_factor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy leads to Strategy" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_strategy_leads_to_follows_from_strategy_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Vision leads to Goal" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_vision_leads_to_follows_from_goal_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy applies to Capability" xlink:href="../../semantics/relationship_types/strategy_applies_to_capability.kmd#RelType_Semantics:Strategy_applies_to_Capability_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="KPI Pattern has category KPI Category" xlink:href="../../semantics/relationship_types/kpi_pattern_has_category_kpi_category.kmd#RelType_Semantics:KPI_Pattern_has_category_KPI_Category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="KPI is instance of KPI Pattern" xlink:href="../../semantics/relationship_types/kpi_is_instance_of_kpi_pattern.kmd#RelType_Semantics:KPI_is_instance_of_KPI_Pattern_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Capability has Capability Operations" xlink:href="../../semantics/relationship_types/capability_has_capability_operations.kmd#RelType_Semantics_APM:Capability_has_Capability_Operations_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

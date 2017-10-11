@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="7.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_FEA_DRM:dataReferenceModelComponent_UUID" name="Data_Reference_Model_Component" title="Data Reference Model Component" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Reference Model Component" xlink:href="../object_types/reference_model_component.kmd#CompType_FEA_RM:reference_model_component_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Data Reference Model Component" xlink:href="#CompType_FEA_DRM:dataReferenceModelComponent_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="16" xlink:role="type" xlink:title="Data Reference Model Component" xlink:href="#CompType_FEA_DRM:dataReferenceModelComponent_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="version"></string>
+   <string name="source"></string>
+   <integer name="originType">1</integer>
+   <date name="dateSubmitted">00000000</date>
+   <string name="submittedBy"></string>
+   <date name="dateApproved">00000000</date>
+   <string name="approvedBy"></string>
+   <date name="dateRetired">00000000</date>
+  </valueset>
+ </type>
+
+
+</metis>

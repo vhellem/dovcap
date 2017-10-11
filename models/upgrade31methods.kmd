@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <cpp-method id="oid1" language="c++" bind="NO.METIS.GEM.convert31RelsMethod" required-dll="gem_qt_utilities">
+  <arg-list size="1">
+   <string name="MappingFile">http://xml.metis.no/xml/methods/RelshipMappingTable_32_to_33.csv</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

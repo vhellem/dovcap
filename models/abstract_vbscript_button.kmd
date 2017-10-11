@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="5.2.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="Abstract_VBScript_Button" name="VBScript_Button" title="Utilities - Abstract VBScript Button" desc="Abstract supertype for the buttons used for calling scripts in metadata.troux.info/serviceutilities" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23"/>
+  <property name="scriptFile" xlink:role="url-type" xlink:title="FileUrl" xlink:href="metis:stdprimtypes#oid9" label="Script File" default-visible="top"/>
+  <named-method-link name="View.DClickAction" xlink:role="cpp-method" xlink:title="executeScript" xlink:href="executescript (method) &#60;http://metadata.troux.info/serviceutilities/_common/methods/executescript.kmd#oid1"/>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Utilities - Abstract VBScript Button" xlink:href="#VBScript_Button" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">6</integer>
+   <string name="reference"></string>
+   <integer name="execute_on_parent">0</integer>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+   <url name="scriptFile"/>
+  </valueset>
+ </type>
+
+
+</metis>

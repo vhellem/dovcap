@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="18"
+ nextoid="19">
+
+ <criteria id="oid1" name="FirstDate&#60;=Date" title="FirstDate&#60;=Date" background-flag="true">
+  <c-op kind="property-range">
+   <c-macro name="FIRSTDATEPROPERTY"/>
+   <c-string>00000000</c-string>
+   <c-macro name="DATE"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="Date&#60;=SecondDate" title="Date&#60;=SecondDate" background-flag="true">
+  <c-op kind="property-range">
+   <c-macro name="SECONDDATEPROPERTY"/>
+   <c-macro name="DATE"/>
+   <c-string>99999999</c-string>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3" name="Date&#60;=FirstDate" title="Date&#60;=FirstDate" background-flag="true">
+  <c-op kind="property-range">
+   <c-macro name="FIRSTDATEPROPERTY"/>
+   <c-macro name="DATE"/>
+   <c-string>99999999</c-string>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid4" name="SecondDate&#60;=Date" title="SecondDate&#60;=Date" background-flag="true">
+  <c-op kind="property-range">
+   <c-macro name="SECONDDATEPROPERTY"/>
+   <c-string>00000000</c-string>
+   <c-macro name="DATE"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid5" name="FirstDateIsInfinityPast" title="FirstDateIsInfinityPast" background-flag="true">
+  <c-op kind="property-values">
+   <c-macro name="FIRSTDATEPROPERTY"/>
+   <c-string>00000000</c-string>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid6" name="SecondDateIsInfinityFuture" title="SecondDateIsInfinityFuture" background-flag="true">
+  <c-op kind="property-values">
+   <c-macro name="SECONDDATEPROPERTY"/>
+   <c-string>00000000</c-string>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid7" name="FirstDateAndSecondDateConsistent" title="FirstDateAndSecondDateConsistent" background-flag="true">
+  <c-op kind="and">
+   <c-op kind="property">
+    <c-macro name="FIRSTDATEPROPERTY"/>
+   </c-op>
+   <c-op kind="property">
+    <c-macro name="SECONDDATEPROPERTY"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid8" name="DateInsideSpan" title="DateInsideSpan" background-flag="true">
+  <c-op kind="and">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="FirstDateAndSecondDateConsistent" xlink:href="#oid7"/>
+   </c-op>
+   <c-op kind="or">
+    <c-op kind="and">
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="FirstDateIsInfinityPast" xlink:href="#oid5"/>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="SecondDateIsInfinityFuture" xlink:href="#oid6"/>
+     </c-op>
+    </c-op>
+    <c-op kind="and">
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="FirstDateIsInfinityPast" xlink:href="#oid5"/>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="Date&#60;=SecondDate" xlink:href="#oid2"/>
+     </c-op>
+    </c-op>
+    <c-op kind="and">
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="SecondDateIsInfinityFuture" xlink:href="#oid6"/>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="FirstDate&#60;=Date" xlink:href="#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="and">
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="FirstDate&#60;=Date" xlink:href="#oid1"/>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="Date&#60;=SecondDate" xlink:href="#oid2"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid9" name="DateBeforeSpan" title="DateBeforeSpan" background-flag="true">
+  <c-op kind="and">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="FirstDateAndSecondDateConsistent" xlink:href="#oid7"/>
+   </c-op>
+   <c-op kind="or">
+    <c-op kind="and">
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="SecondDateIsInfinityFuture" xlink:href="#oid6"/>
+     </c-op>
+     <c-op kind="not">
+      <c-op kind="criteria">
+       <criteria-link xlink:role="criteria" xlink:title="FirstDateIsInfinityPast" xlink:href="#oid5"/>
+      </c-op>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="Date&#60;=FirstDate" xlink:href="#oid3"/>
+     </c-op>
+    </c-op>
+    <c-op kind="and">
+     <c-op kind="not">
+      <c-op kind="criteria">
+       <criteria-link xlink:role="criteria" xlink:title="FirstDateIsInfinityPast" xlink:href="#oid5"/>
+      </c-op>
+     </c-op>
+     <c-op kind="not">
+      <c-op kind="criteria">
+       <criteria-link xlink:role="criteria" xlink:title="SecondDateIsInfinityFuture" xlink:href="#oid6"/>
+      </c-op>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="Date&#60;=FirstDate" xlink:href="#oid3"/>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="Date&#60;=SecondDate" xlink:href="#oid2"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid10" name="DateAfterSpan" title="DateAfterSpan" background-flag="true">
+  <c-op kind="and">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="FirstDateAndSecondDateConsistent" xlink:href="#oid7"/>
+   </c-op>
+   <c-op kind="or">
+    <c-op kind="and">
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="FirstDateIsInfinityPast" xlink:href="#oid5"/>
+     </c-op>
+     <c-op kind="not">
+      <c-op kind="criteria">
+       <criteria-link xlink:role="criteria" xlink:title="SecondDateIsInfinityFuture" xlink:href="#oid6"/>
+      </c-op>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="SecondDate&#60;=Date" xlink:href="#oid4"/>
+     </c-op>
+    </c-op>
+    <c-op kind="and">
+     <c-op kind="not">
+      <c-op kind="criteria">
+       <criteria-link xlink:role="criteria" xlink:title="SecondDateIsInfinityFuture" xlink:href="#oid6"/>
+      </c-op>
+     </c-op>
+     <c-op kind="not">
+      <c-op kind="criteria">
+       <criteria-link xlink:role="criteria" xlink:title="FirstDateIsInfinityPast" xlink:href="#oid5"/>
+      </c-op>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="SecondDate&#60;=Date" xlink:href="#oid4"/>
+     </c-op>
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="FirstDate&#60;=Date" xlink:href="#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid11" name="DateLabel" title="DateLabel" background-flag="true">
+  <c-op kind="property-values">
+   <c-id>dummy</c-id>
+   <c-macro name="DATE" desc="Date"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid12" name="FindValidAtDate" title="Find entities valid at given date (all types)" desc="Finds all entities whose start date (e.g. Installation Date) is before the date you supply, and stop date (e.g. Phase-out Date) is after. A blank start date means &#39;some time in the past&#39;, and a blank stop date means &#39;some time in the future&#39;, so this criteria will always find objects where these two dates haven&#39;t been set.&#10;The date you supply should be on the form yyyymmdd, e.g. 20031225 for 25th December 2003." background-flag="true" container-flag="true" selection-flag="true">
+  <arg-list size="2">
+   <string name="FIRSTDATEPROPERTY">StartDate</string>
+   <string name="SECONDDATEPROPERTY">StopDate</string>
+  </arg-list>
+  <c-op kind="or">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateLabel" xlink:href="#oid11"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateInsideSpan" xlink:href="#oid8"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid13" name="FindNotValidAtDate" title="Find entities not yet valid at given date (all types)" desc="Finds all entities where start date (e.g. Installation Date) is after the date you supply. A blank start date means &#39;some time in the past&#39;, so this criteria will never find objects where start date hasn&#39;t been set.&#10;The date you supply should be on the form yyyymmdd, e.g. 20031225 for 25th December 2003." background-flag="true" container-flag="true" selection-flag="true">
+  <arg-list size="2">
+   <string name="FIRSTDATEPROPERTY">StartDate</string>
+   <string name="SECONDDATEPROPERTY">StopDate</string>
+  </arg-list>
+  <c-op kind="or">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateLabel" xlink:href="#oid11"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateBeforeSpan" xlink:href="#oid9"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid14" name="FindPhasedOutAtDate" title="Find entities phased out at given date (all types)" desc="Finds all entities where stop date (e.g. Phase-out Date) is before the date you supply. A blank stop date means &#39;some time in the future&#39;, so this criteria will never find objects where stop date hasn&#39;t been set.&#10;The date you supply should be on the form yyyymmdd, e.g. 20031225 for 25th December 2003." background-flag="true" container-flag="true" selection-flag="true">
+  <arg-list size="2">
+   <string name="FIRSTDATEPROPERTY">StartDate</string>
+   <string name="SECONDDATEPROPERTY">StopDate</string>
+  </arg-list>
+  <c-op kind="or">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateLabel" xlink:href="#oid11"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateAfterSpan" xlink:href="#oid10"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid15" name="TypeMatchesObject">
+  <c-op kind="object" exactly-flag="true">
+   <c-macro name="%TYPE_OF_PRIMARY%"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid16" name="FindValidAtDateByType" title="Find entities valid at given date (this type)" desc="Finds all entities of the selected type whose start date (e.g. Installation Date) is before the date you supply, and stop date (e.g. Phase-out Date) is after. A blank start date means &#39;some time in the past&#39;, and a blank stop date means &#39;some time in the future&#39;, so this criteria will always find objects where these two dates haven&#39;t been set.&#10;The date you supply should be on the form yyyymmdd, e.g. 20031225 for 25th December 2003." selection-flag="true">
+  <arg-list size="2">
+   <string name="FIRSTDATEPROPERTY">StartDate</string>
+   <string name="SECONDDATEPROPERTY">StopDate</string>
+  </arg-list>
+  <c-op kind="or">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateLabel" xlink:href="#oid11"/>
+   </c-op>
+   <c-op kind="and">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="TypeMatchesObject" xlink:href="#oid15"/>
+    </c-op>
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="DateInsideSpan" xlink:href="#oid8"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid17" name="FindNotValidAtDateByType" title="Find entities not yet valid at given date (this type)" desc="Finds all entities of the selected type where start date (e.g. Installation Date) is after the date you supply. A blank start date means &#39;some time in the past&#39;, so this criteria will never find objects where start date hasn&#39;t been set.&#10;The date you supply should be on the form yyyymmdd, e.g. 20031225 for 25th December 2003." selection-flag="true">
+  <arg-list size="2">
+   <string name="FIRSTDATEPROPERTY">StartDate</string>
+   <string name="SECONDDATEPROPERTY">StopDate</string>
+  </arg-list>
+  <c-op kind="or">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateLabel" xlink:href="#oid11"/>
+   </c-op>
+   <c-op kind="and">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="TypeMatchesObject" xlink:href="#oid15"/>
+    </c-op>
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="DateBeforeSpan" xlink:href="#oid9"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid18" name="FindPhasedOutAtDateByType" title="Find entities phased out at given date (this type)" desc="Finds all entities of the selected type where stop date (e.g. Phase-out Date) is before the date you supply. A blank stop date means &#39;some time in the future&#39;, so this criteria will never find objects where stop date hasn&#39;t been set.&#10;The date you supply should be on the form yyyymmdd, e.g. 20031225 for 25th December 2003." selection-flag="true">
+  <arg-list size="2">
+   <string name="FIRSTDATEPROPERTY">StartDate</string>
+   <string name="SECONDDATEPROPERTY">StopDate</string>
+  </arg-list>
+  <c-op kind="or">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="DateLabel" xlink:href="#oid11"/>
+   </c-op>
+   <c-op kind="and">
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="TypeMatchesObject" xlink:href="#oid15"/>
+    </c-op>
+    <c-op kind="criteria">
+     <criteria-link xlink:role="criteria" xlink:title="DateAfterSpan" xlink:href="#oid10"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

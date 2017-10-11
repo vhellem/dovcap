@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="Object_View_Mapping" title="Object View Mapping" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="View Mapping" xlink:href="view_mapping.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="event" xlink:role="integer-type" xlink:title="Object Events" xlink:href="../primitive_types/instance_events.kmd#oid1" label="When instance" desc="Each view mapping on an object or relationship is triggered by an event. This field tells the import engine what event this view is triggered by. An event may be that a new instance is created and we then want a view as specified here to be created. &#10;&#10;But if an existing instance is deleted, we may want something else to happen to the existing views of the objects, and may then specify that here." label-flag="true" default-visible="top"/>
+  <property name="action" xlink:role="integer-type" xlink:title="Instance View Actions" xlink:href="../primitive_types/instance_view_actions.kmd#oid1" label="Use these settings" desc="Select what to do when the event given above in When: happens during an import." default-visible="top"/>
+  <property name="matchChangeEvent" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Use these settings for any view already created like above" default-visible="top"/>
+  <property name="changeEvent" xlink:role="integer-type" xlink:title="Instance Change Events" xlink:href="../primitive_types/instance_events.kmd#oid3" label="When existing" default-visible="top"/>
+  <property name="changeAction" xlink:role="integer-type" xlink:title="Instance View Actions" xlink:href="../primitive_types/instance_view_actions.kmd#oid1" label="Update by" default-visible="top"/>
+  <property name="layoutChildren" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Perform A Layout on Children After Import" desc="If the object has children after the import, this options regulates whether to run an automatic layout on that object. &#10;&#10;A typical case where you would turn this off is when the object has existing children that arelaid out manually before the import is run.&#10;&#10;Perform layout always has priority over no layout. So if at least one of the children of an object has this turned on, or the object itself has perform layout turned on, then layout will be done." default-visible="top"/>
+  <property name="ownLayoutStrategy" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Layout Strategy" desc="Select the Layout Strategy you wish to apply to the object after import." default-visible="top"/>
+  <property name="layoutParent" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Perform A Layout on Parent After Import" desc="Perform a layout on the parent of the new object after import.&#10;&#10;Perform layout always has priority over no layout. So if at least one of the children of an object has this turned on, or the object itself has perform layout turned on, then layout will be done." default-visible="top"/>
+  <property name="parentLayoutStrategy" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Parent Layout Strategy" desc="Gives the layout strategy to apply to the parent.&#10;&#10;This field is not mandatory.&#10;If there is a value in this field it will be used as the layout for the parent. If not, the object at the end of the &#34;put view in&#34; or &#34;put object in&#34; relationship will be used. If no layout is given anywhere, the default layout strategy for the parent is used. If the parent has been mapped elsewhere and given a different layout strategy, that will have presedence.&#10;&#10;Notice that different children may define a different layout strategy to use on the parent. If this is the case, only one layout will in fact be used. The layout used will be the one that was last set during the import. There is no way to define this explicitly. " default-visible="top"/>
+  <property name="positionDefinition" xlink:role="integer-type" xlink:title="Position Definition Types" xlink:href="../primitive_types/position_definition_types.kmd#oid1" label="Position Definition" desc="This information is only necessary if the position of the view of the instance is to be set by the import.&#10;&#10;There are basically two ways to define the dimensions of a drawing; either by specifying two coordinates opposite each other that span out the object, or by specifying one fixed point and a set of dimensions." default-visible="top"/>
+  <property name="reverseXAxis" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Reverse X Axis" desc="The default cartesian coordinate system has an X axis that increases when going right and a Y axis that increases when going up. Some systems turn these coordinates around. For instance, defining the upper left hand corner of the screen as (0,0) and increasing Y values as you go down. If these coordinates were used directly in Metis, all views would be upside down." default-visible="top"/>
+  <property name="reverseYAxis" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Reverse Y Axis" desc="The default cartesian coordinate system has an X axis that increases when going right and a Y axis that increases when going up. Some systems turn these coordinates around. For instance, defining the upper left hand corner of the screen as (0,0) and increasing Y values as you go down. If these coordinates were used directly in Metis, all views would be upside down." default-visible="top"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Width Coordinate Value" xlink:href="coordinate_value.kmd#oid5"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Height Coordinate Value" xlink:href="coordinate_value.kmd#oid4"/>
+  <part-rule min="0" max="2" xlink:role="type" xlink:title="Y Coordinate Value" xlink:href="coordinate_value.kmd#oid3"/>
+  <part-rule min="0" max="2" xlink:role="type" xlink:title="X Coordinate Value" xlink:href="coordinate_value.kmd#oid2"/>
+  <valueset vset="default" size="14" xlink:role="type" xlink:title="Object View Mapping" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="event">1</integer>
+   <integer name="action">1</integer>
+   <integer name="matchChangeEvent">0</integer>
+   <integer name="changeEvent">0</integer>
+   <integer name="changeAction">1</integer>
+   <integer name="layoutChildren">0</integer>
+   <string name="ownLayoutStrategy"></string>
+   <integer name="layoutParent">0</integer>
+   <string name="parentLayoutStrategy"></string>
+   <integer name="positionDefinition">1</integer>
+   <integer name="reverseXAxis">0</integer>
+   <integer name="reverseYAxis">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Object View Mapping" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Metis Type Attribute Layout" xlink:href="../layouts/attribute.kmd#oid3"/>
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true" default-visible="top"/>
+   <propertyview name="event" label="When instance" desc="Each view mapping on an object or relationship is triggered by an event. This field tells the import engine what event this view is triggered by. An event may be that a new instance is created and we then want a view as specified here to be created. &#10;&#10;But if an existing instance is deleted, we may want something else to happen to the existing views of the objects, and may then specify that here." visible-flag="true" default-visible="top"/>
+   <propertyview name="action" label="Use these settings" desc="Select what to do when the event given above in When: happens during an import." visible-flag="true" default-visible="top"/>
+   <propertyview name="matchChangeEvent" label="Use these settings for any view already created like above" visible-flag="true" default-visible="top"/>
+   <propertyview name="changeEvent" label="When existing" visible-flag="true" default-visible="top"/>
+   <propertyview name="changeAction" label="Update by" visible-flag="true" default-visible="top"/>
+   <propertyview name="layoutChildren" label="Perform A Layout on Children After Import" desc="If the object has children after the import, this options regulates whether to run an automatic layout on that object. &#10;&#10;A typical case where you would turn this off is when the object has existing children that arelaid out manually before the import is run.&#10;&#10;Perform layout always has priority over no layout. So if at least one of the children of an object has this turned on, or the object itself has perform layout turned on, then layout will be done." visible-flag="true" default-visible="top"/>
+   <propertyview name="ownLayoutStrategy" label="Layout Strategy" desc="Select the Layout Strategy you wish to apply to the object after import." visible-flag="true" default-visible="top"/>
+   <propertyview name="layoutParent" label="Perform A Layout on Parent After Import" desc="Perform a layout on the parent of the new object after import.&#10;&#10;Perform layout always has priority over no layout. So if at least one of the children of an object has this turned on, or the object itself has perform layout turned on, then layout will be done." visible-flag="true" default-visible="top"/>
+   <propertyview name="parentLayoutStrategy" label="Parent Layout Strategy" desc="Gives the layout strategy to apply to the parent.&#10;&#10;This field is not mandatory.&#10;If there is a value in this field it will be used as the layout for the parent. If not, the object at the end of the &#34;put view in&#34; or &#34;put object in&#34; relationship will be used. If no layout is given anywhere, the default layout strategy for the parent is used. If the parent has been mapped elsewhere and given a different layout strategy, that will have presedence.&#10;&#10;Notice that different children may define a different layout strategy to use on the parent. If this is the case, only one layout will in fact be used. The layout used will be the one that was last set during the import. There is no way to define this explicitly. " visible-flag="true" default-visible="top"/>
+   <propertyview name="positionDefinition" label="Position Definition" desc="This information is only necessary if the position of the view of the instance is to be set by the import.&#10;&#10;There are basically two ways to define the dimensions of a drawing; either by specifying two coordinates opposite each other that span out the object, or by specifying one fixed point and a set of dimensions." visible-flag="true" default-visible="top"/>
+   <propertyview name="reverseXAxis" label="Reverse X Axis" desc="The default cartesian coordinate system has an X axis that increases when going right and a Y axis that increases when going up. Some systems turn these coordinates around. For instance, defining the upper left hand corner of the screen as (0,0) and increasing Y values as you go down. If these coordinates were used directly in Metis, all views would be upside down." visible-flag="true" default-visible="top"/>
+   <propertyview name="reverseYAxis" label="Reverse Y Axis" desc="The default cartesian coordinate system has an X axis that increases when going right and a Y axis that increases when going up. Some systems turn these coordinates around. For instance, defining the upper left hand corner of the screen as (0,0) and increasing Y values as you go down. If these coordinates were used directly in Metis, all views would be upside down." visible-flag="true" default-visible="top"/>
+   <propertyview name="description" label="Description" visible-flag="true" default-visible="top"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object View Mapping" xlink:href="../symbols/object_view_mapping.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;em&#62;When instance: &#60;/em&#62;&#34; (property event) &#34;,&#60;br&#62;&#34; &#34;&#60;em&#62;do: &#60;/em&#62;&#34; (property action))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object View Mapping" xlink:href="../symbols/object_view_mapping.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;em&#62;When instance: &#60;/em&#62;&#34; (property event) &#34;,&#60;br&#62;&#34; &#34;&#60;em&#62;do: &#60;/em&#62;&#34; (property action))"/>
+   <replace tag="IDBox" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="IDBox" property="fillcolor" macro="(expand &#34;gray&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/object_view_mapping.png"/>
+ </typeview>
+
+
+</metis>

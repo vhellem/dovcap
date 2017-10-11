@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002asno00mcdjvabftgc" name="Workplace_configuration" title="IRTV" desc="Types for configuring personal and role workplaces using the IRTV approach.">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Information" xlink:href="information.kmd#_002asno00mdtjuv39t57"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Roles" xlink:href="roles.kmd#_002asno00mlkpeegqbla"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Tasks" xlink:href="tasks.kmd#_002asno00seb6lcl5nbu"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Views" xlink:href="views.kmd#_002asno00si4l64hfjmp"/>
+  </metamodel-links>
+  <method-links size="1">
+   <method-link xlink:role="cpp-method" xlink:title="loadContentModelView" xlink:href="../operations/view_methods.kmd#ModelView_onLoaded"/>
+  </method-links>
+ </metamodel>
+
+
+</metis>

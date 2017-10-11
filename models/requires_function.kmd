@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="requires_function" name="requires_function" title="Requires_function" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Design_solution" xlink:href="design_solution.kmd#design_solution" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Functional_requirement" xlink:href="functional_requirement.kmd#functional_requirement" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Requires_function" xlink:href="#requires_function" xlink:actuate="user">
+   <string name="from">requires</string>
+   <string name="to">is required by</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Requires_function" xlink:href="#requires_function" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

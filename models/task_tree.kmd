@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002as5l01102a2rke3f6" xlink:role="type" xlink:title="Task (AKM)" xlink:href="../objecttypes/task.kmd#AKM_Task" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Stacked Layout, Alternative 2" xlink:href="metis:layout#oid69"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="taskId" visible-flag="true"/>
+   <propertyview name="status" visible-flag="false"/>
+   <propertyview name="milestone" visible-flag="true"/>
+   <propertyview name="baselineStartDate" visible-flag="true"/>
+   <propertyview name="plannedStartDate" visible-flag="true"/>
+   <propertyview name="actualStartDate" visible-flag="true"/>
+   <propertyview name="baselineFinishDate" visible-flag="true"/>
+   <propertyview name="plannedFinishDate" visible-flag="true"/>
+   <propertyview name="actualFinishDate" visible-flag="true"/>
+   <propertyview name="baselineCost" visible-flag="true"/>
+   <propertyview name="plannedCost" visible-flag="true"/>
+   <propertyview name="actualCost" visible-flag="true"/>
+   <propertyview name="rolledUpBaselineCost" visible-flag="true"/>
+   <propertyview name="rolledUpPlannedCost" visible-flag="true"/>
+   <propertyview name="rolledUpActualCost" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="completionPercentage" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="baselineResources" visible-flag="true"/>
+   <propertyview name="plannedResources" visible-flag="true"/>
+   <propertyview name="actualResources" visible-flag="true"/>
+   <propertyview name="resourceUnit" visible-flag="true"/>
+   <propertyview name="allocationDirect" visible-flag="true"/>
+   <propertyview name="allocationTotal" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="false"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="false"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="false"/>
+   <propertyview name="troux_color" visible-flag="false"/>
+   <propertyview name="troux_iconAlias" visible-flag="false"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="false"/>
+   <propertyview name="troux_toplevel" visible-flag="false"/>
+   <propertyview name="color" visible-flag="false"/>
+   <propertyview name="color_Status" visible-flag="false"/>
+   <propertyview name="status_AKM" visible-flag="true"/>
+   <propertyview name="icon_Status" visible-flag="false"/>
+   <propertyview name="delayed" visible-flag="true"/>
+   <propertyview name="delayed_Color" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="edge" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="left" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="right" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="top" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="bottom" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (property icon_Status))"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="edge" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="left" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="right" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="top" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="bottom" property="fillcolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="textbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="iconbackground" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/task.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="is_composed_using" name="is_composed_using" title="Is_composed_using" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Configurable_component" xlink:href="configurable_component.kmd#configurable_component" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Composition_set" xlink:href="composition_set.kmd#composition_set" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Is_composed_using" xlink:href="#is_composed_using" xlink:actuate="user">
+   <string name="from">is composed using</string>
+   <string name="to">is used by</string>
+  </valueset>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Is_composed_using" xlink:href="#is_composed_using" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="ruleEvaluatedTo">0</integer>
+   <integer name="ruleEngine">1</integer>
+   <string name="ruleCode"></string>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_A81BE2D4-477B-4A11-9197-7A45847C417F" name="Business_Service_Architecture_Domain" title="Business Service Architecture Domain" desc="The metamodel for types related to modeling business service architecture. This includes both business service and business process service concepts.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Business Service Architecture Domain Relationships" xlink:href="business_service_architecture_domain_relationships.kmd#UUID4_4E07A2D1-370C-4CD8-A559-B2DF513DEBA8"/>
+  </metamodel-links>
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="Business Process Service Interface" xlink:href="../object_types/business_process_service_interface.kmd#CompType_Semantics:Business_Process_Service_Interface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process Service" xlink:href="../object_types/business_process_service.kmd#CompType_Semantics:Business_Process_Service_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Service Interface" xlink:href="../object_types/process_service_interface.kmd#CompType_Semantics:Process_Service_Interface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Service" xlink:href="../object_types/process_service.kmd#CompType_Semantics:Process_Service_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

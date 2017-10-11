@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="7.1.2008.0401"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="ReType_Semantics_Process:Business_Process_supports-is_supported_by_Business_Function_UUID" name="Business_Process_supports_is_supported_by_Business_Function" title="Business Process supports-is supported by Business Function" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by_criticality.kmd#Reltype_provides-is_provided_by_criticality_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/business_process_supports-is_supported_by_business_function.kmd#UUID4_DF3ED6D6-595C-4BAB-AACE-3FB402455DC1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Process" xlink:href="../../meaf/objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Business Function" xlink:href="../../meaf/objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Process supports-is supported by Business Function" xlink:href="#ReType_Semantics_Process:Business_Process_supports-is_supported_by_Business_Function_UUID" xlink:actuate="user">
+   <string name="from">supports</string>
+   <string name="to">is supported by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Business Process supports-is supported by Business Function" xlink:href="#ReType_Semantics_Process:Business_Process_supports-is_supported_by_Business_Function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

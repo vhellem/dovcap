@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?metis version="3.2.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ nextoid="2">
+
+ <viewstyle id="oid1" name="logicalapplicationviewstyle(default)" title="Logical Application Viewstyle (Default)">
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.metis.no/xml/object_types/logical_application.kmd#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="4"
+ instanceviews="8"
+ nextoid="1">
+
+ <object id="UUID4_3D9AE9FC-07AB-4C2B-B3F0-3222EEC965BB">
+  <valueset size="2" xlink:role="type" xlink:title="Comment" xlink:href="metis:stdtypes#oid22" xlink:actuate="user">
+   <string name="name">&#60;h2&#62;Marshalling Object&#60;/h2&#62;</string>
+   <string name="description">The Marshalling object stores information required to connect to the TrouxSource repository, such as the name and location of the server. The Marshalling object is also used to keep track of the queries run against the TrouxSource repository. Queries are stored here for future refresh operations.&#60;p&#62; 
+The Marshalling object displays the name of the TrouxSource repository server and the state to which you are connected. The News objects at the bottom display the number of instances from the TrouxSource repository that were added or updated during query or refresh operations. A separate News object is created each day.
+&#60;br/&#62;
+&#60;h4&#62;To configure the Marshalling object:&#60;/h4&#62;
+&#60;ol&#62;
+&#60;li&#62;Right-click the object and click &#60;b&#62;Properties&#60;/b&#62;.&#60;/li&#62;
+&#60;li&#62;On the &#60;b&#62;Instance&#60;/b&#62; tab,  enter the location of the TrouxSource repository in the &#60;b&#62;Server Name&#60;/b&#62; field.&#60;/li&#62;
+&#60;li&#62;If the server is running in secure mode (SSL), select the &#60;b&#62;Use Secure HTTP Connection&#60;/b&#62; option.&#60;/li&#62;
+&#60;/ol&#62;
+&#60;br/&#62;
+Tip: See the Troux Architect online help for more information about configuring the Marshalling object, querying the TrouxSource repository, and connecting to a different state. 
+</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_74BA4B3D-65AD-4564-BB82-3763F868A0A4">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Processes</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </object>
+
+ <model id="UUID4_88FD19EE-9127-441C-9AD5-77A86F70E183" name="Prosessmodel" title="BPM Prosessmodel" desc="BPM prosessmodell" standalone-flag="true">
+  <metamodel-links size="8">
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="http://metadata.troux.info/meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="TrouxSource Queries" xlink:href="http://metadata.troux.info/meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="BPMN Domain" xlink:href="../metamodels/bpmt_bpmn_domain.kmd#UUID4_A27C2C93-84D6-490C-B90F-E6D10C99F7BA" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="BPMN Relationship Types" xlink:href="../metamodels/bpmt_bpmn_relationship_types.kmd#UUID4_41D955B8-4F86-4EB1-875F-546A23CD3E7C" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="IDEF0 Domain" xlink:href="../metamodels/bpmt_idef0_domain.kmd#UUID4_575D7C4D-49A8-42E6-89E8-A9E4871B6551" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="ProcEnv" xlink:href="../metamodels/bpmt_env_domain.kmd#UUID4_9EDE4374-57D2-48F0-A979-CA962831AADC" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="BPMT Scripts" xlink:href="../methods/bpmt_scripts.kmd#UUID4_DF778072-C249-4623-B09E-6EA50914BCAA" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="test.troux.com" xlink:href="#UUID4_ED29FFCB-909E-4006-943B-5B9963894532"/>
+  <part-link xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#UUID4_3D9AE9FC-07AB-4C2B-B3F0-3222EEC965BB"/>
+  <part-link xlink:role="object" xlink:title="Processes" xlink:href="#UUID4_74BA4B3D-65AD-4564-BB82-3763F868A0A4"/>
+  <member-link xlink:role="object" xlink:title="test.troux.com" xlink:href="#UUID4_ED29FFCB-909E-4006-943B-5B9963894532"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="BPM Prosessmodel" xlink:href="#UUID4_88FD19EE-9127-441C-9AD5-77A86F70E183" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="BPM Prosessmodel" xlink:href="#UUID4_88FD19EE-9127-441C-9AD5-77A86F70E183" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="UUID4_ED29FFCB-909E-4006-943B-5B9963894532">
+  <valueset size="19" xlink:role="type" xlink:title="ME Marshalling" xlink:href="metis:troux#TrouxMarshalling" xlink:actuate="user">
+   <string name="name">TrouxSource Repository</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <string name="serverName">test.troux.com</string>
+   <integer name="secureHTTP">1</integer>
+   <string name="repositoryPath">bpserver/do</string>
+   <string name="uploadJobName">MCT</string>
+   <integer name="views-customize.createViews">1</integer>
+   <integer name="news-customize.numberOfNews">4</integer>
+   <integer name="news-customize.newsClear">0</integer>
+   <string name="tuxJobId"></string>
+   <string name="tuxDebugOutputFilename"></string>
+   <string name="bluePrintID">1</string>
+   <string name="bluePrintName">Troux Blueprint</string>
+   <string name="bluePrintChange">0</string>
+   <string name="trouxUUID4Update">0</string>
+   <integer name="trouxCollaborationEnabled">0</integer>
+   <string name="tipPath">tip</string>
+   <string name="seQueryElement">ACE81293-3D6B-3AC8-B35D-F67C9EC1992F</string>
+  </valueset>
+ </object>
+
+ <objectview id="UUID4_4B8D7FE8-8F39-4ACD-B68F-5FE6B6EB61CC" xlink:role="object" xlink:title="Processes" xlink:href="#UUID4_74BA4B3D-65AD-4564-BB82-3763F868A0A4" state="open" behavior="nested" text-scale="1.94872" decomp-scale="0.125" left="-509.409" top="-499.933" width="682.667" height="512">
+ </objectview>
+
+ <relationshipview id="UUID4_F491C677-3D2D-4727-B083-748D76647502" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Data" xlink:href="#_002as0b01f99768ufljt"/>
+  <target-link xlink:role="objectview" xlink:title="Processes" xlink:href="#UUID4_4B8D7FE8-8F39-4ACD-B68F-5FE6B6EB61CC"/>
+ </relationshipview>
+
+ <relationshipview id="_002as0b01f853paqpehv" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+  <target-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+ </relationshipview>
+
+ <objectview id="_002as0b01f853po9srvf" xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#UUID4_3D9AE9FC-07AB-4C2B-B3F0-3222EEC965BB" state="open" behavior="tree" text-scale="1.29827" decomp-scale="0.125" left="352.538" top="-343.581" width="501.592" height="563.398">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="gray box with text" xlink:href="http://xml.metis.no/xml/symbols/library/object/color_box/gray_box_text.svg#oid0" xlink:actuate="user">
+  </symbol-override>
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0b01f853paqpehv"/>
+ </objectview>
+
+ <modelview id="_002as0b01f99768ufljt" name="Data" title="Data" primary-flag="true" standalone-flag="true" zoom-level="2.06101" x="-161.768" y="-251.696" seq="1" xlink:role="model" xlink:title="BPM Prosessmodel" xlink:href="#UUID4_88FD19EE-9127-441C-9AD5-77A86F70E183" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Processes" xlink:href="#UUID4_4B8D7FE8-8F39-4ACD-B68F-5FE6B6EB61CC"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_F491C677-3D2D-4727-B083-748D76647502"/>
+  <viewstyle-links size="3">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPMT Process with no ID" xlink:href="http://metadata.bpmt.info/viewstyles/bpmt-processid.kmd#UUID4_36F955F2-2009-42FF-A960-7332961227A3"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Default Viewstyle" xlink:href="http://metadata.troux.info/meaf/viewstyles/meaf_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1000"/>
+  </viewstyle-links>
+ </modelview>
+
+ <relationshipview id="_002as0h01f8ibv4sh1dg" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="test.troux.com" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <target-link xlink:role="objectview" xlink:title="test.troux.com" xlink:href="#_002as0h01f8ibvgmutui"/>
+ </relationshipview>
+
+ <objectview id="_002as0h01f8ibvgmutui" xlink:role="object" xlink:title="test.troux.com" xlink:href="#UUID4_ED29FFCB-909E-4006-943B-5B9963894532" state="open" behavior="nested" text-scale="0.751315" decomp-scale="0.125" left="-260.131" top="-387.571" width="505.705" height="651.378">
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0h01f8ibv4sh1dg"/>
+ </objectview>
+
+ <modelview id="oid1" name="Main" title="TrouxSource Repository" standalone-flag="true" zoom-level="0.822095" x="322.495" y="70.4634" seq="2" xlink:role="model" xlink:title="BPM Prosessmodel" xlink:href="#UUID4_88FD19EE-9127-441C-9AD5-77A86F70E183" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="test.troux.com" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <child-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+  <viewstyle-links size="2">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Default Viewstyle" xlink:href="http://metadata.troux.info/meaf/viewstyles/meaf_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1000"/>
+  </viewstyle-links>
+ </modelview>
+
+
+</metis>

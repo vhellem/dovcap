@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9" 
+ instances="1" 
+ modelviews="0" 
+ instanceviews="0" 
+ nextoid="2">
+
+ <cpp-method id="oid1" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbolPair" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="7">
+   <string name="Mode">UseSelection</string>
+	<string name="Symbol1Pair1">http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid1</string>
+	<string name="Symbol1Pair2">http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid2</string>
+	<string name="Symbol1Pair3">http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid3</string>
+	<string name="Symbol2Pair1">http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid4</string>
+	<string name="Symbol2Pair2">http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid5</string>
+	<string name="Symbol2Pair3">http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid6</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

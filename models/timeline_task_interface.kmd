@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ nextoid="5">
+
+ <type id="Reltype_TimelineEvent_Task_plannedFinishDate_UUID" name="TimelineEvent_Task_plannedFinishDate" title="Event to Task using Planned Finish Date" desc="Connects Task to Timeline Event objects. The Planned Finish Date of the Task object is transferred to the Timeline Event object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="TimelineInterfaceBasetype" xlink:href="../abstracttypes/timeline_interface_basetype.kmd#Reltype_timeline_interface_basetype_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Event" xlink:href="../objecttypes/timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="../objecttypes/task.kmd#CompType_TRM:Task_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="4" xlink:role="type" xlink:href="#Reltype_TimelineEvent_Task_plannedFinishDate_UUID" xlink:actuate="user">
+   <string name="from">represents Planned Finish Date of</string>
+   <string name="to">Planned Finish Date represented by</string>
+   <string name="ExternalDateProperty">plannedFinishDate</string>
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_TimelineMilestone_Task_plannedFinishDate_UUID" name="TimelineMilestone_Task_plannedFinishDate" title="Milestone to Task using Planned Finish Date" desc="Connects Tasks to Timeline Milestone objects. The Planned Finish Date of the Task object is compared to the date of the Timeline Milestone object and the relationship changes color and linestyle depending on this comparison. If the planned date is later than the Milestone date, the line color is red and if the planned date is earlier than the Milestone date, the color is blue. A black line indicates an exact match of the two dates." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="TimelineInterfaceBasetype" xlink:href="../abstracttypes/timeline_interface_basetype.kmd#Reltype_timeline_interface_basetype_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Milestone" xlink:href="../objecttypes/timeline_milestone.kmd#CompType_MEAF:TimelineMilestone_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="../objecttypes/task.kmd#CompType_TRM:Task_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="4" xlink:role="type" xlink:href="#Reltype_TimelineMilestone_Task_plannedFinishDate_UUID" xlink:actuate="user">
+   <string name="from">represents Planned Finish Date of</string>
+   <string name="to">Planned Finish Date represented by</string>
+   <string name="ExternalDateProperty">plannedFinishDate</string>
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+
+</metis>

@@ -1,0 +1,573 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<svg>
+ <title>Symbol library: common_symbol_components.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Data Source Lightning</title>
+    <polygon points="0 60.4378 112.929 0 102.371 43.2705 
+     205.342 0.131988 202.683 15.6755 72.1803 86.6343 82.1402 40.1043 
+     3.0322 70.9741 0 60.4378"
+     style=" stroke:#6e0000; stroke-width:1; fill:#6e0000; fill-opacity:100%"></polygon>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>View Glasses</title>
+    <g>
+      <ellipse  cx="47.2981" cy="46.0969" rx="47.2981" ry="46.0969"
+       style=" stroke:#008d9c; stroke-width:1; fill:#6ff1ff; fill-opacity:100%"></ellipse>
+      <ellipse  cx="168.671" cy="46.0969" rx="47.2981" ry="46.0969"
+       style=" stroke:#008d9c; stroke-width:1; fill:#6ff1ff; fill-opacity:100%"></ellipse>
+      <polygon points="84.9309 18.1613 91.1711 11.6603 108.396 7.83831 
+       128.068 10.6948 132.067 16.874 140.292 9.15003 134.324 5.65215 
+       107.985 1.93557 82.4675 5.87076 76.3281 9.79373 84.9309 18.1613"
+       style=" stroke:#6e6e00; stroke-width:1; fill:#dcdc00; fill-opacity:100%"></polygon>
+    </g>
+  </symbol>
+  <symbol id="oid11" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Metis Logo</title>
+    <g>
+      <g>
+	<polygon points="27.2427 133.295 79.4383 61.7142 59.5213 0.2278 
+	 1.52588e-005 80.5282 27.2427 133.295"
+	 style=" stroke:#696969; stroke-width:1; fill:#9b9b9b; fill-opacity:100%"></polygon>
+	<polygon points="114.466 177.573 171.467 100.028 79.2093 61.2542 
+	 27.2427 133.295 114.466 177.573"
+	 style=" stroke:#696969; stroke-width:1; fill:#dcdcdc; fill-opacity:100%"></polygon>
+	<polygon points="59.5213 0 149.739 36.3592 88.1163 121.189 
+	 0 80.5282 59.5213 0"
+	 style=" stroke:#696969; stroke-width:1; fill:#dcdcdc; fill-opacity:100%"></polygon>
+	<polygon points="114.466 177.573 171.696 100.028 149.739 36.3592 
+	 87.9802 121.126 114.466 177.573"
+	 style=" stroke:#696969; stroke-width:1; fill:#9b9b9b; fill-opacity:100%"></polygon>
+      </g>
+      <ellipse  cx="49.5803" cy="155.3" rx="37.2954" ry="35.5913"
+       style=" stroke:#008d9c; stroke-width:1; fill:#008d9c; fill-opacity:100%"></ellipse>
+    </g>
+  </symbol>
+  <symbol id="oid12" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Relationship Mapping Relationship Symbol</title>
+    <g>
+      <polyline points="20.5793 10.677 99.9565 106.775"
+       style=" stroke:#696969; stroke-width:1;"       class="TAG:END_ARROW"></polyline>
+      <rect x="99.9565" y="85.42" width="29.399" height="42.7101"
+       style=" stroke:#696969; stroke-width:1; fill:#ffffa5; fill-opacity:100%"></rect>
+      <rect x="0" y="0" width="29.399" height="42.7101"
+       style=" stroke:#696969; stroke-width:1; fill:#ffffa5; fill-opacity:100%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid20" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Relationship Mapping Decomposition Symbol</title>
+    <polyline points="64 42 114 86"
+     style=" stroke:#464646; stroke-width:1;"     class="TAG:END_ARROW"></polyline>
+    <rect x="99.9565" y="86" width="30.0435" height="42.1301"
+     style=" stroke:#696969; stroke-width:1; fill:#ffb367; fill-opacity:100%"></rect>
+    <rect x="49.9783" y="0" width="30.0217" height="42"
+     style=" stroke:#696969; stroke-width:1; fill:#ffb367; fill-opacity:100%"></rect>
+    <rect x="0" y="86" width="30" height="42.1301"
+     style=" stroke:#696969; stroke-width:1; fill:#ffb367; fill-opacity:100%"></rect>
+    <polyline points="64 42 14 86"
+     style=" stroke:#464646; stroke-width:1;"     class="TAG:END_ARROW"></polyline>
+  </symbol>
+  <symbol id="oid21" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Relationship Mapping Member Symbol</title>
+    <polyline points="40 42 114 86"
+     style=" stroke:#464646; stroke-width:1;"     class="TAG:END_ARROW"></polyline>
+    <rect x="99.9565" y="86" width="30.0435" height="42.1301"
+     style=" stroke:#696969; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"></rect>
+    <rect x="76" y="0" width="30.0217" height="42"
+     style=" stroke:#696969; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"></rect>
+    <rect x="0" y="86" width="30" height="42.1301"
+     style=" stroke:#696969; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"></rect>
+    <polyline points="40 42 14 86"
+     style=" stroke:#464646; stroke-width:1;"     class="TAG:END_ARROW"></polyline>
+    <rect x="24" y="0" width="30.0217" height="42"
+     style=" stroke:#696969; stroke-width:1; fill:#c8c8ff; fill-opacity:100%"></rect>
+    <polyline points="88 42 14 86"
+     style=" stroke:#464646; stroke-width:1;"     class="TAG:END_ARROW"></polyline>
+    <polyline points="88 42 114 86"
+     style=" stroke:#464646; stroke-width:1;"     class="TAG:END_ARROW"></polyline>
+  </symbol>
+  <symbol id="oid14" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Object Mapping Object Symbol</title>
+    <g>
+      <rect x="9.7947" y="0" width="97.9468" height="61.3202"
+       style=" stroke:#696969; stroke-width:1; fill:#dcdcdc; fill-opacity:100%"></rect>
+      <rect x="0" y="73.365" width="48.8892" height="30.6601"
+       style=" stroke:#696969; stroke-width:1; fill:#dcdcdc; fill-opacity:100%"></rect>
+      <polyline points="58.7678 61.32 58.7678 67.89 24.4872 67.89 
+       24.4872 73.365"
+       style=" stroke:#696969; stroke-width:1;"></polyline>
+      <polyline points="58.7678 61.32 58.7678 67.89 93.0498 67.89 
+       93.0498 73.365"
+       style=" stroke:#696969; stroke-width:1;"></polyline>
+      <rect x="68.5628" y="73.365" width="48.8892" height="30.6601"
+       style=" stroke:#696969; stroke-width:1; fill:#dcdcdc; fill-opacity:100%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid15" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Stringy Star</title>
+    <g>
+      <polyline points="30.3409 30.3409 6.0682 6.0682"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+      <polyline points="30.3409 30.3409 54.614 6.0682"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+      <polyline points="30.3409 30.3409 54.614 54.6136"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+      <polyline points="30.3409 30.3409 6.0682 54.6136"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+      <polyline points="30.3409 30.3409 60.682 30.3409"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+      <polyline points="30.3409 30.3409 30.3409 0"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+      <polyline points="30.3409 60.6818 30.3409 30.3409"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+      <polyline points="0 30.3409 30.3409 30.3409"
+       style=" stroke:#4bff4b; stroke-width:2;"></polyline>
+    </g>
+  </symbol>
+  <symbol id="oid16" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Comment Question</title>
+    <rect x="0" y="0" width="80.8889" height="81.3333"
+     style=" stroke:#6e6eff; stroke-width:1; fill:#ffffff; fill-opacity:100%"></rect>
+    <rect x="1.81444" y="1.74103" width="77.26" height="77.8513"
+     style=" stroke:#ffffff; stroke-width:1; fill:#96a5ff; fill-opacity:100%"></rect>
+    <g>
+      <polygon points="15.9497 29.5898 16.1235 27.706 16.4708 25.8222 
+       16.8184 24.1097 17.3395 22.5684 17.8606 21.0272 18.5555 19.486 
+       19.2504 18.116 20.119 16.746 20.9877 15.5473 21.8561 14.3485 
+       22.8986 13.321 23.9408 12.2935 25.157 11.4373 26.373 10.581 
+       28.805 9.21106 30.0211 8.52599 31.4109 8.01232 32.8007 7.49858 
+       34.1905 7.15605 35.7539 6.81361 37.1437 6.64229 38.5334 6.47107 
+       40.097 6.29975 41.4868 6.29975 43.0502 6.47107 44.44 6.64229 
+       46.0035 6.81361 47.567 6.98472 48.9568 7.32726 51.7363 8.18353 
+       53.4736 8.86864 54.8635 9.55348 56.2529 10.4098 57.469 11.2661 
+       58.6851 12.2935 59.7274 13.321 60.7696 14.3485 61.6386 15.5473 
+       62.3333 16.5747 63.028 17.9448 63.5493 19.1435 64.0707 20.3422 
+       64.4178 21.7121 64.5916 23.0822 64.7654 24.4521 64.9392 25.8222 
+       64.9392 27.1922 64.7654 28.5621 64.5916 30.1034 64.2441 31.4735 
+       63.7231 32.6722 63.3756 34.0421 62.6808 35.4122 61.9857 36.7822 
+       61.291 37.9809 60.4225 39.1796 59.3798 40.3785 58.3379 41.4059 
+       57.2952 42.4334 56.0792 43.461 54.6897 44.3172 53.4736 45.1734 
+       52.4312 45.687 51.5625 46.372 50.694 46.8859 49.9991 47.3995 
+       49.4779 47.9135 48.9568 48.4271 48.4356 48.9407 47.9144 49.7973 
+       47.5786 50.3704 47.4335 51.0382 47.2196 51.8521 47.0466 52.8026 
+       47.0459 53.5646 47.0459 54.5921 47.0459 56.1333 33.4956 56.1333 
+       33.4956 54.2495 33.4956 52.3657 33.4956 50.8245 33.6692 49.2833 
+       33.6692 47.9135 33.843 46.5433 34.1905 45.3448 34.5379 44.3172 
+       35.059 43.2896 35.5802 42.2621 36.2751 41.4059 37.1437 40.3785 
+       38.186 39.5222 39.4021 38.4946 40.6181 37.6384 42.1817 36.6109 
+       43.3977 35.7547 44.44 34.8984 45.3085 34.0421 46.1772 33.0147 
+       46.6983 31.9872 47.3932 30.9597 47.7407 29.7609 48.0881 28.2197 
+       48.2619 27.021 48.0881 25.9935 47.9144 24.966 47.7407 23.9385 
+       47.2196 22.911 46.6983 22.0547 45.4823 20.856 44.44 20.171 
+       43.3977 19.6571 42.1817 19.3147 40.9656 19.1435 39.7495 19.1435 
+       38.3598 19.3147 36.97 19.6571 35.2328 20.3422 34.0168 21.1985 
+       32.9744 22.0547 32.1058 23.2534 31.2372 24.6234 30.716 26.1647 
+       30.3686 28.0484 30.3686 31.1309 15.9497 29.5898"
+       style=" stroke:#ffffff; stroke-width:1; fill:#ffffff; fill-opacity:100%"></polygon>
+      <polygon points="33.5588 61.3097 47.33 61.3097 47.33 75.0336 
+       33.5588 75.0336 33.5588 61.3097"
+       style=" stroke:#ffffff; stroke-width:1; fill:#ffffff; fill-opacity:100%"></polygon>
+    </g>
+  </symbol>
+  <symbol id="oid17" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Comment Warning</title>
+    <polygon points="36.3578 0.383649 37.9731 0.00198634 42.6456 0 
+     44.171 0.391295 46.3501 1.62697 47.4397 3.29511 80.5904 68.2017 
+     80.7964 73.2287 80.5518 74.5001 80.0355 75.7714 79.1658 76.9271 
+     77.2091 78.9176 75.4426 79.9064 73.0395 80.9533 7.65752 80.9654 
+     5.31935 80.3024 3.56571 79.2528 1.63672 77.3193 0.759906 76.1592 
+     0.233817 74.8886 0 73.5627 0 69.4747 0.292271 67.3754 
+     0.935267 65.8286 33.127 3.24612 34.2376 1.62405 36.3578 0.383649"
+     style=" stroke:#dcdc00; stroke-width:1; fill:#ffff6e; fill-opacity:100%"></polygon>
+    <g>
+      <ellipse  cx="40.3982" cy="69.9059" rx="9.13937" ry="8.3244"
+       style=" stroke:#ff0000; stroke-width:1; fill:#ff5050; fill-opacity:100%"></ellipse>
+      <path d="M 39.8692 9.41523 C 39.8692 9.41523 34.4746 9.41523 
+       31.9358 13.398 C 28.1905 19.2736 25.166 31.7185 37.0132 57.2079 
+       C 38.5302 60.4715 42.2662 60.4715 43.7832 57.2079 C 55.6305 31.7185 
+       52.6059 19.2736 48.8606 13.398 C 46.3219 9.41523 40.0809 9.41523 
+       40.0809 9.41523 Z"
+       style=" stroke:#ff0000; stroke-width:1; fill:#ff5050; fill-opacity:100%"></path>
+    </g>
+  </symbol>
+  <symbol id="oid18" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Comment Stop</title>
+    <ellipse  cx="37.8259" cy="39.0692" rx="37.8259" ry="39.0692"
+     style=" stroke:#ff8c8c; stroke-width:1; fill:#ff0000; fill-opacity:100%"></ellipse>
+    <rect x="8.37617" y="30.3871" width="58.6332" height="17.364"
+     style=" stroke:#ffffff; stroke-width:1; fill:#ffffff; fill-opacity:100%"></rect>
+  </symbol>
+  <symbol id="oid19" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Generator Gear</title>
+    <g>
+      <polygon points="45.413 49.9832 25.1441 45.0508 2.5658 53.6007 
+       5.9012 47.3527 15.3944 40.447 12.3155 33.8703 16.4208 27.6226 
+       47.466 1.973 53.624 0 58.755 5.919 64.399 6.9057 
+       69.531 2.3018 75.689 4.6037 77.485 13.4824 83.13 16.7707 
+       91.852 14.4689 97.498 20.0591 97.498 30.5821 102.117 35.5143 
+       112.122 36.1723 116.227 42.0915 115.457 51.9565 118.537 56.8889 
+       127.517 58.8622 131.108 65.1099 128.287 75.962 131.365 82.21 
+       139.319 83.525 141.885 90.759 138.036 97.994 139.832 104.242 
+       149.069 108.845 150.864 116.408 144.45 121.34 145.22 126.931 
+       153.687 133.179 153.944 137.783 145.99 146.005 154.2 154.225 
+       152.917 160.802 143.938 168.365 148.043 174.942 144.193 180.861 
+       133.931 186.452 134.188 190.068 109.556 213.415 102.629 213.415 
+       99.294 207.827 90.57 215.389 84.926 213.415 81.847 203.55 
+       76.716 198.618 65.682 202.563 60.551 199.604 59.781 186.452 
+       56.189 181.519 43.361 182.504 39.512 176.587 41.052 161.787 
+       38.486 157.842 26.9402 157.184 24.1179 151.595 25.914 139.099 
+       24.1179 135.153 12.3155 130.55 10.0063 124.959 16.9338 114.107 
+       15.3944 109.832 2.5658 101.611 1.7961 94.376 9.4932 88.129 
+       8.9801 83.525 0.5131 77.935 0 72.344 6.6709 66.7541 
+       2.5658 53.6007 25.1441 45.7085 45.413 50.97 45.413 55.5735 
+       46.183 65.1099 47.723 74.646 50.288 84.183 57.215 102.597 
+       66.197 120.027 76.459 135.153 87.234 147.977 97.754 157.513 
+       102.629 160.802 109.556 163.761 122.386 125.944 74.919 49.3257 
+       45.413 49.9832"
+       style="stroke:none; fill:#0085ff; fill-opacity:100%"></polygon>
+      <polyline points="45.413 49.9832 25.1441 45.0508 2.5658 53.6007 
+       5.9012 47.3527 15.3944 40.447 12.3155 33.8703 16.4208 27.6226 
+       47.466 1.973 53.624 0 58.755 5.919 64.399 6.9057 
+       69.531 2.3018 75.689 4.6037 77.485 13.4824 83.13 16.7707 
+       91.852 14.4689 97.498 20.0591 97.498 30.5821 102.117 35.5143 
+       112.122 36.1723 116.227 42.0915 115.457 51.9565 118.537 56.8889 
+       127.517 58.8622 131.108 65.1099 128.287 75.962 131.365 82.21 
+       139.319 83.525 141.885 90.759 138.036 97.994 139.832 104.242 
+       149.069 108.845 150.864 116.408 144.45 121.34 145.22 126.931 
+       153.687 133.179 153.944 137.783 145.99 146.005 154.2 154.225 
+       152.917 160.802 143.938 168.365 148.043 174.942 144.193 180.861 
+       133.931 186.452 134.188 190.068 109.556 213.415 102.629 213.415 
+       99.294 207.827 90.57 215.389 84.926 213.415 81.847 203.55 
+       76.716 198.618 65.682 202.563 60.551 199.604 59.781 186.452 
+       56.189 181.519 43.361 182.504 39.512 176.587 41.052 161.787 
+       38.486 157.842 26.9402 157.184 24.1179 151.595 25.914 139.099 
+       24.1179 135.153 12.3155 130.55 10.0063 124.959 16.9338 114.107 
+       15.3944 109.832 2.5658 101.611 1.7961 94.376 9.4932 88.129 
+       8.9801 83.525 0.5131 77.935 0 72.344 6.6709 66.7541 
+       2.5658 53.6007 25.1441 45.7085 45.413 50.97 45.413 55.5735 
+       46.183 65.1099 47.723 74.646 50.288 84.183 57.215 102.597 
+       66.197 120.027 76.459 135.153 87.234 147.977 97.754 157.513 
+       102.629 160.802 109.556 163.761 122.386 125.944 74.919 49.3257 
+       45.413 49.9832"
+       style=" stroke:#0085ff; stroke-width:1;"></polyline>
+      <polyline points="134.222 189.774 128.058 192.076 124.208 184.512 
+       118.816 184.512 114.707 192.734 109.573 191.748 105.721 182.867 
+       98.788 179.578 89.546 183.196 84.924 178.591 83.897 165.107 
+       79.532 160.83 69.004 160.501 65.924 156.225 64.897 140.767 
+       62.328 137.148 52.058 136.49 48.464 130.9 51.288 118.072 
+       49.234 114.455 38.964 110.837 36.14 105.245 41.531 95.049 
+       39.991 90.116 29.7205 82.222 27.6664 73.342 33.829 68.737 
+       33.315 64.4613 26.6395 56.5674 26.6395 49.3315 34.599 46.7003 
+       34.599 43.7402 29.4636 35.5175 30.491 28.9395 37.68 29.5975 
+       38.45 26.9661 33.829 17.428 37.423 10.8498 45.639 15.1256 
+       48.464 12.4944 47.18 2.2983"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="103.228 213.746 127.818 191.421"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="99.384 208.166 115.01 192.076"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="85.553 213.419 109.632 191.421"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="81.711 203.569 105.788 182.555"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="76.844 198.643 98.616 179.601"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="66.086 202.584 89.907 182.226"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="60.707 199.301 85.042 178.287"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="59.939 186.168 84.016 165.154"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="43.289 181.9 69.416 159.901"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="40.471 176.974 66.343 154.975"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="27.1517 157.273 52.254 136.26"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="24.0777 151.036 49.18 129.693"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="12.295 130.349 39.19 110.65"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="10.2459 125.096 36.629 104.739"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="16.9057 113.932 41.496 94.889"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="15.8811 109.993 40.215 89.964"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="3.0739 101.784 29.7131 81.756"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="9.2214 88.322 28.1761 73.219"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="1.0246 77.816 26.8955 56.4737"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="6.916 66.6522 26.8953 49.2503"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="2.5614 53.5189 29.4569 35.4605"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="15.3689 40.7136 30.994 29.2217"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="12.5512 34.147 34.068 17.4019"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="8.9651 84.054 33.299 64.3539"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="133.727 186.495 132.941 179.052 137.139 175.331 
+       143.699 180.744"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="152.408 160.935 144.788 159.572 142.162 165.709 
+       143.738 168.437"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="145.491 146.11 146.285 138.268 153.689 137.244"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="144.723 127.065 150.871 116.231"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="38.422 26.5955 34.58 29.5505"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polygon points="38.166 10.7165 47.361 2.955 48.412 12.4038 
+       45.785 15.1036 38.166 10.7165"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="38.166 10.7165 47.361 2.955 48.412 12.4038 
+       45.785 15.1036 38.166 10.7165"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="0.5184 77.159 0.2563 72.72 11.2705 68.622 
+       0.5184 77.159"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="0.5184 77.159 0.2563 72.72 11.2705 68.622 
+       0.5184 77.159"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="1.5369 78.077 26.8449 57.4587 33.043 64.4423 
+       9.026 83.397 1.5369 78.077"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="1.5369 78.077 26.8449 57.4587 33.043 64.4423 
+       9.026 83.397 1.5369 78.077"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="9.739 87.666 9.2214 84.001 33.294 65.0108 
+       33.812 68.676 9.739 87.666"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="9.739 87.666 9.2214 84.001 33.294 65.0108 
+       33.812 68.676 9.739 87.666"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="13.0635 34.3909 33.767 18.0586 38.166 26.7247 
+       34.284 29.0579 30.402 28.7246 15.3926 40.0572 13.0635 34.3909"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="13.0635 34.3909 33.767 18.0586 38.166 26.7247 
+       34.284 29.0579 30.402 28.7246 15.3926 40.0572 13.0635 34.3909"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="35.092 29.5503 38.422 27.2519 37.867 29.5503 
+       35.092 29.5503"
+       style="stroke:none; fill:#000065; fill-opacity:100%"></polygon>
+      <polyline points="35.092 29.5503 38.422 27.2519 37.867 29.5503 
+       35.092 29.5503"
+       style=" stroke:#000065; stroke-width:1;"></polyline>
+      <polygon points="27.1517 49.8279 35.151 46.8535 35.41 43.8791 
+       29.9904 34.9561 31.022 29.3377 38.248 30.3293 39.022 27.0244 
+       34.119 17.4406 37.474 11.4917 61.731 23.7197 60.442 24.05 
+       57.861 24.7111 55.538 25.7026 53.732 27.0244 51.925 29.0075 
+       50.377 30.9903 49.087 33.3036 48.055 35.6171 46.506 41.2353 
+       45.732 47.5144 45.474 57.0985 45.732 62.0556 43.926 54.1241 
+       27.1517 49.8279"
+       style="stroke:none; fill:#83c2ff; fill-opacity:100%"></polygon>
+      <polygon points="6.9475 65.9958 3.0739 53.7124 29.6731 36.1172 
+       34.58 43.7528 34.322 46.4087 26.5742 49.0645 6.9475 65.9958"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="6.9475 65.9958 3.0739 53.7124 29.6731 36.1172 
+       34.58 43.7528 34.322 46.4087 26.5742 49.0645 6.9475 65.9958"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="2.824 101.456 2.3054 94.747 23.0532 86.024 
+       2.824 101.456"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="2.824 101.456 2.3054 94.747 23.0532 86.024 
+       2.824 101.456"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="3.8422 102.021 29.6425 82.412 39.447 90.389 
+       15.7105 109.664 3.8422 102.021"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="3.8422 102.021 29.6425 82.412 39.447 90.389 
+       15.7105 109.664 3.8422 102.021"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="17.1749 113.605 15.8811 110.274 40.204 90.621 
+       41.24 94.618 17.1749 113.605"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="17.1749 113.605 15.8811 110.274 40.204 90.621 
+       41.24 94.618 17.1749 113.605"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="10.7582 124.111 17.2372 114.109 32.787 102.441 
+       10.7582 124.111"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="10.7582 124.111 17.2372 114.109 32.787 102.441 
+       10.7582 124.111"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="12.3117 129.693 10.5021 125.017 38.422 110.321 
+       12.3117 129.693"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="12.3117 129.693 10.5021 125.017 38.422 110.321 
+       12.3117 129.693"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="28.4323 156.784 52.423 136.589 62.225 137.251 
+       64.805 141.224 40.041 176.318 41.588 161.087 38.751 157.447 
+       28.4323 156.784"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="28.4323 156.784 52.423 136.589 62.225 137.251 
+       64.805 141.224 40.041 176.318 41.588 161.087 38.751 157.447 
+       28.4323 156.784"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polyline points="38.422 157.929 62.5 136.916"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="40.984 161.542 65.062 140.857"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polygon points="13.0635 130.182 39.368 110.978 49.168 114.62 
+       50.973 118.262 24.6687 150.049 26.2158 138.791 24.6687 134.487 
+       13.0635 130.182"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="13.0635 130.182 39.368 110.978 49.168 114.62 
+       50.973 118.262 24.6687 150.049 26.2158 138.791 24.6687 134.487 
+       13.0635 130.182"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polyline points="23.5655 134.619 49.436 114.261"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="25.6147 139.214 51.229 118.529"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polygon points="145.015 126.081 144.212 121.648 149.846 117.215 
+       145.015 126.081"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="145.015 126.081 144.212 121.648 149.846 117.215 
+       145.015 126.081"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="146.004 145.454 146.799 138.588 153.432 137.902 
+       146.004 145.454"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="146.004 145.454 146.799 138.588 153.432 137.902 
+       146.004 145.454"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="143.998 168.108 142.418 165.714 145.052 159.901 
+       151.639 161.268 143.998 168.108"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="143.998 168.108 142.418 165.714 145.052 159.901 
+       151.639 161.268 143.998 168.108"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="133.986 185.839 133.196 179.385 136.88 175.989 
+       142.931 180.744 133.986 185.839"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="133.986 185.839 133.196 179.385 136.88 175.989 
+       142.931 180.744 133.986 185.839"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="44.57 181.85 69.344 160.886 79.149 160.886 
+       60.053 185.51 56.956 180.851 44.57 181.85"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="44.57 181.85 69.344 160.886 79.149 160.886 
+       60.053 185.51 56.956 180.851 44.57 181.85"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polyline points="56.096 181.571 79.662 160.228"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polygon points="102.999 213.09 99.897 208.109 115.41 192.497 
+       119.287 184.525 123.943 184.525 127.561 191.169 102.999 213.09"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="102.999 213.09 99.897 208.109 115.41 192.497 
+       119.287 184.525 123.943 184.525 127.561 191.169 102.999 213.09"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="85.067 213.09 82.224 204.127 105.498 183.54 
+       109.119 191.508 85.067 213.09"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="85.067 213.09 82.224 204.127 105.498 183.54 
+       109.119 191.508 85.067 213.09"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="76.402 198.271 68.903 200.942 89.586 183.585 
+       96.567 180.913 76.402 198.271"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="76.402 198.271 68.903 200.942 89.586 183.585 
+       96.567 180.913 76.402 198.271"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="45.338 50.955 48.934 51.6134 56.127 53.9173 
+       62.806 57.2081 69.483 61.8152 75.649 67.4102 81.557 73.992 
+       92.088 88.801 100.565 105.914 106.473 124.015 108.529 133.228 
+       109.813 142.115 110.326 151.002 109.556 163.836 112.895 164.823 
+       119.317 165.81 124.454 164.823 128.564 162.52 131.903 158.899 
+       134.215 153.633 135.757 147.71 136.271 140.799 136.271 132.899 
+       135.242 124.673 131.39 106.902 124.968 88.472 112.382 63.7899 
+       104.675 52.6007 94.914 41.4113 83.613 32.1966 77.96 28.5766 
+       72.31 25.6148 66.914 24.2984 61.778 23.6401 57.155 24.6274 
+       53.044 27.2601 49.705 31.5387 47.136 37.7911 45.338 50.955"
+       style="stroke:none; fill:#83c2ff; fill-opacity:100%"></polygon>
+      <polyline points="45.338 50.955 48.934 51.6134 56.127 53.9173 
+       62.806 57.2081 69.483 61.8152 75.649 67.4102 81.557 73.992 
+       92.088 88.801 100.565 105.914 106.473 124.015 108.529 133.228 
+       109.813 142.115 110.326 151.002 109.556 163.836 112.895 164.823 
+       119.317 165.81 124.454 164.823 128.564 162.52 131.903 158.899 
+       134.215 153.633 135.757 147.71 136.271 140.799 136.271 132.899 
+       135.242 124.673 131.39 106.902 124.968 88.472 112.382 63.7899 
+       104.675 52.6007 94.914 41.4113 83.613 32.1966 77.96 28.5766 
+       72.31 25.6148 66.914 24.2984 61.778 23.6401 57.155 24.6274 
+       53.044 27.2601 49.705 31.5387 47.136 37.7911 45.338 50.955"
+       style=" stroke:#83c2ff; stroke-width:1;"></polyline>
+      <polygon points="109.221 92.057 121.638 81.756 125 89.731 
+       102.238 109.336 98.616 101.029 109.221 92.057"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="109.221 92.057 121.638 81.756 125 89.731 
+       102.238 109.336 98.616 101.029 109.221 92.057"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="105.02 119.127 128.827 99.158 130.378 104.483 
+       106.315 123.455 105.02 119.127"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="105.02 119.127 128.827 99.158 130.378 104.483 
+       106.315 123.455 105.02 119.127"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="108.606 132.547 133.179 114.59 134.99 123.902 
+       109.899 140.528 108.606 132.547"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="108.606 132.547 133.179 114.59 134.99 123.902 
+       109.899 140.528 108.606 132.547"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="110.661 152.881 136.014 137.573 135.755 142.897 
+       135.237 147.556 134.98 148.556 110.143 162.197 110.661 152.881"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="110.661 152.881 136.014 137.573 135.755 142.897 
+       135.237 147.556 134.98 148.556 110.143 162.197 110.661 152.881"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polyline points="109.887 163.511 134.733 150.049"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polyline points="111.937 164.825 132.428 153.99"
+       style=" stroke:#000000; stroke-width:1;"></polyline>
+      <polygon points="110.4 142.784 135.242 126.739 135.501 129.413 
+       110.4 145.125 110.4 142.784"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="110.4 142.784 135.242 126.739 135.501 129.413 
+       110.4 145.125 110.4 142.784"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+      <polygon points="111.424 62.9282 89.052 83.069 78.508 69.532 
+       67.451 59.9567 58.708 54.6737 53.051 52.0325 45.851 50.3814 
+       46.365 45.7589 47.136 39.8156 47.908 36.8441 48.936 34.2025 
+       50.222 31.8913 51.508 29.9102 53.051 27.9289 54.851 26.6083 
+       57.165 25.2877 59.48 24.6272 62.051 24.2971 64.88 24.6272 
+       67.965 24.9572 73.365 26.6083 85.452 34.2025 98.053 45.7589 
+       106.795 56.3248 111.424 62.9282"
+       style="stroke:none; fill:#001221; fill-opacity:100%"></polygon>
+      <polyline points="111.424 62.9282 89.052 83.069 78.508 69.532 
+       67.451 59.9567 58.708 54.6737 53.051 52.0325 45.851 50.3814 
+       46.365 45.7589 47.136 39.8156 47.908 36.8441 48.936 34.2025 
+       50.222 31.8913 51.508 29.9102 53.051 27.9289 54.851 26.6083 
+       57.165 25.2877 59.48 24.6272 62.051 24.2971 64.88 24.6272 
+       67.965 24.9572 73.365 26.6083 85.452 34.2025 98.053 45.7589 
+       106.795 56.3248 111.424 62.9282"
+       style=" stroke:#001221; stroke-width:1;"></polyline>
+    </g>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid1"/>
+</svg>

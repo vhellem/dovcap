@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Task_Executable" name="Task_Executable" title="Task (Executable)" desc="An executable task links to a workflow instance (or Template if it&#39;s a template task) in the Troux process engine." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Task (AKM)" xlink:href="task.kmd#AKM_Task"/>
+  <property name="workflowTemplate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Workflow Template" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Task_workflowTemplate_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="workflowInstance" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Workflow Instance" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Task_workflowInstance_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Task (Executable)" xlink:href="#AKM_Task_Executable" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#EEBBAA</string>
+   <string name="troux_iconAlias">04a1f2be-aff5-348c-affb-34ff09d1e7a8</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">0</integer>
+  </valueset>
+  <valueset vset="default" size="41" xlink:role="type" xlink:title="Task (Executable)" xlink:href="#AKM_Task_Executable" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="monetaryUnit"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <string name="taskId"></string>
+   <date name="baselineStartDate">00000000</date>
+   <date name="plannedStartDate">00000000</date>
+   <date name="actualStartDate">00000000</date>
+   <date name="baselineFinishDate">00000000</date>
+   <date name="plannedFinishDate">00000000</date>
+   <date name="actualFinishDate">00000000</date>
+   <string name="baselineCost"></string>
+   <string name="plannedCost"></string>
+   <string name="actualCost"></string>
+   <integer name="milestone">-1</integer>
+   <integer name="completionPercentage">0</integer>
+   <integer name="status">-1</integer>
+   <string name="baselineResources"></string>
+   <string name="plannedResources"></string>
+   <string name="actualResources"></string>
+   <string name="resourceUnit"></string>
+   <float name="rolledUpBaselineCost" class="volatile">0</float>
+   <float name="rolledUpPlannedCost" class="volatile">0</float>
+   <float name="rolledUpActualCost" class="volatile">0</float>
+   <float name="allocationDirect" class="volatile">0</float>
+   <float name="allocationTotal" class="volatile">0</float>
+   <string name="color" class="volatile"></string>
+   <integer name="status_AKM">-1</integer>
+   <string name="icon_Status" class="volatile"></string>
+   <string name="color_Status" class="volatile"></string>
+   <integer name="delayed">0</integer>
+   <string name="delayed_Color" class="volatile"></string>
+   <string name="workflowTemplate"></string>
+   <string name="workflowInstance"></string>
+  </valueset>
+ </type>
+
+
+</metis>

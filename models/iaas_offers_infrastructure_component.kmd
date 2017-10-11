@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:IaaS_offers_Infrastructure_Component_UUID" name="IaaS_offers_Infrastructure_Component" title="IaaS offers Infrastructure Component" desc="Connects an IaaS component to an Infrastructure Component available through that IaaS. The Infrastructure Component does not represent a deployed hardware or network component. It is a template that designates the specifications of a hardware or network component included in the service offering." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure as a Service" xlink:href="../object_types/infrastructure_as_a_service.kmd#CompType_Semantics:Infrastructure_as_a_Service_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../../meaf/abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="IaaS offers Infrastructure Component" xlink:href="#RelType_Semantics:IaaS_offers_Infrastructure_Component_UUID" xlink:actuate="user">
+   <string name="from">offers</string>
+   <string name="to">is offered by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="IaaS offers Infrastructure Component" xlink:href="#RelType_Semantics:IaaS_offers_Infrastructure_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

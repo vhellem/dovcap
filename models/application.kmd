@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_TRM:Application_UUID" name="application" title="Application" desc="The Application type describes a logical grouping of one or more instances of executable software that fulfill a set of requirements." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Deployed Software" xlink:href="deployed_software.kmd#CompType_TRM:DeployedInstance_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="nextRevisionDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Next Revision Date" desc="The date planned for the next revision of the application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_nextRevisionDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="previousRevisionDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Previous Revision Date" desc="The date of the last previous revision of the application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_previousRevisionDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="businessCriticalityScore" xlink:role="integer-type" xlink:title="Business Criticality Score" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_business_criticality_score_UUID" label="Business Criticality Score" desc="A rating (score) of how critical the application is to the business. Defined by business people." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_businessCriticalityScore_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="failureProbabilityScore" xlink:role="integer-type" xlink:title="Business Criticality Score" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_business_criticality_score_UUID" label="Failure Probability Score" desc="The probability of failure of the application during a major revision or other event. Defined by the IT staff" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_failureProbabilityScore_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="accounts" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Accounts" desc="The number of unique users that have access to this application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_GenInfo_Accounts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="serviceLevelAgreement" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Service Level Agreement" desc="A verbal description of the service level agreement (SLA) between the supplier and the business." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_serviceLevelAgreement_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="sessions" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Sessions" desc="Number of sessions." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_GenInfo_Sessions_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="sessionDurationDays" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Session Duration Days" desc="Number of days that sessions are measured over." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_GenInfo_DayRange_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="initialDeploymentCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Initial Deployment Cost" desc="The initial cost of deploying the application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_initalDeploymentCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="loginDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Login Date" desc="Last login date." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_GenInfo_LoginDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="recommendation" xlink:role="integer-type" xlink:title="Application Recommendation" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_application_recommendation_UUID" label="Recommendation" desc="A recommendation for present and future strategy for the application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_recommendation_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="recommendationDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Recommendation Date" desc="The date on which an Application recommendation was made.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_recommendationDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="recommendationComments" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Recommendation Comments" desc="Any pertinent elaboration to the recommended disposition.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Application_recommendationComments_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="strategicValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Strategic Value" desc="This property is calculated as the sum of all products of Strategic Value on Business Process and Weight on the &#39;supported by&#39; relationship from Business Process to Application." method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="businessRiskScore" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Business Risk Score" desc="Business Criticality Score multiplied by Failure Probability Score &#10;" method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="annualExternalStaffCosts" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Annual External Staff Costs" desc="The current annual cost of the external labor resources on which this application depends.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_annualExternalStaffCosts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="annualHardwareCosts" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Annual Hardware Costs" desc="The current annual cost of the hardware on which this application depends.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_annualHardwareCosts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="annualInternalStaffCosts" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Annual Internal Staff Costs" desc="The current annual cost of the internal labor resources on which this application depends.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_annualInternalStaffCosts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="annualOtherCosts" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Annual Other Costs" desc="Any current annual cost which this application incurs not captured in the other annual cost properties.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_annualOtherCosts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="annualSoftwarCosts" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Annual Software Costs" desc="The current annual cost of the software products on which this application depends.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_annualSoftwareCosts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="creatorName" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Creator Name" desc="The login name of the user who created the application.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_creatorName_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="architectureModel" xlink:role="integer-type" xlink:title="Application Architecture Model" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:ApplicationArchitectureModel_UUID" label="Architecture Model" desc="The architectural design pattern on which the Application is based. One of a fixed number of values, such as, &#39;Client/Server&#39;, &#39;N-tier&#39; and &#39;Centralized&#39;.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_architectureModel_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="staffedFTE" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Staffed FTE" desc="The number of full time equivalent (FTE) labor resources currently developing, supporting, managing and/or maintaining the Application.&#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_staffedFTE_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="relatedArtifacts" xlink:role="collection-type" xlink:title="urls" xlink:href="metis:std#urls" label="Related Artifacts" desc="A list of links to externally stored related artifacts (e.g. word processing documents, spreadsheets, design documents, etc.) &#10;" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:Application_relatedArtifacts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="lastReviewDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Last Review Date" desc="The date on which the most recent application review was completed. " default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_LastReviewDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexSoftwareCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Software Cost" desc="The annual operational expenditure for software required to support this application." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opexSoftwareCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexHardwareCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Hardware Cost" desc="The annual operational expenditure for hardware required to support this application." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opexHardwareCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexLaborCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Labor Cost" desc="The annual operational expenditure for labor required to support this application." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opexLaborCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexDeprecationCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Depreciation Cost" desc="The annual operational expenditure for depreciation associated with this application." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opexDeprecationCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opexOtherCost" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Other Cost" desc="All other annual operational expenditures required to support this application." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opexOtherCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="replacementDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Replacement Date" desc="The date on which the application was or will be replaced by another application." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_replacementDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExDeprecationCostYr0" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Depreciation Cost (Year 0)" desc="The OpEx deprecation cost for the baseline year" default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExDeprecationCostYr0_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExDeprecationCostYr1" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Depreciation Cost (Year 1)" desc="The OpEx deprecation cost for the first year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExDeprecationCostYr1_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExDeprecationCostYr2" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Depreciation Cost (Year 2)" desc="The OpEx deprecation cost for the second year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExDeprecationCostYr2_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExLaborCostYr0" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Labor Cost (Year 0)" desc="The OpEx labor cost for the baseline year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExLaborCostYr0_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExLaborCostYr1" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Labor Cost (Year 1)" desc="The OpEx labor cost for the first year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExLaborCostYr1_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExLaborCostYr2" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Labor Cost (Year 2)" desc="The OpEx labor cost for the second year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExLaborCostYr2_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExSoftwareCostYr0" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Software Cost  (Year 0)" desc="The OpEx software cost for the baseline year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExSoftwareCostYr0_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExSoftwareCostYr1" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Software Cost  (Year 1)" desc="The OpEx software cost for the first year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExSoftwareCostYr1_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExSoftwareCostYr2" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Software Cost  (Year 2)" desc="The OpEx software cost for the second year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExSoftwareCostYr2_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExOtherCostYr0" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Other Cost (Year 0)" desc="The OpEx other cost for the baseline year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExOtherCostYr0_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExOtherCostYr1" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Other Cost (Year 1)" desc="The OpEx other cost for the first year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExOtherCostYr1_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="opExOtherCostYr2" xlink:role="type" xlink:title="Currency" xlink:href="../../semantics/primitive_types/currency.kmd#PrimType_Semantics:Currency_UUID" label="OpEx Other Cost (Year 2)" desc="The OpEx other cost for the second year." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef_Semantics:Application_opExOtherCostYr2_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="#CompType_TRM:Application_UUID"/>
+  <named-method-link name="MetisTrouxClient_--Get Application----QueryApplicationOverapplication_consists_of_is_part_of_application" xlink:role="cpp-method" xlink:title="consists of Application" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryApplicationOverapplication_consists_of_is_part_of_application"/>
+  <named-method-link name="MetisTrouxClient_--Get Business_Process----QueryWorkflowProcessOverbusiness_process_uses_is_used_by_weight_criticality_application" xlink:role="cpp-method" xlink:title="is used by Business Process" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryWorkflowProcessOverbusiness_process_uses_is_used_by_weight_criticality_application"/>
+  <named-method-link name="MetisTrouxClient_--Get Deliverable----QueryDeliverableOverdeliverable_uses_is_used_by_criticality_application" xlink:role="cpp-method" xlink:title="is used by Deliverable" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryDeliverableOverdeliverable_uses_is_used_by_criticality_application"/>
+  <named-method-link name="MetisTrouxClient_--Get Function----QueryActionOverapplication_provides_is_provided_by_criticality_function" xlink:role="cpp-method" xlink:title="provides Function" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryActionOverapplication_provides_is_provided_by_criticality_function"/>
+  <named-method-link name="MetisTrouxClient_--Get Logical_Technology_Item----QueryLogicalTechnologyItemOverapplication_uses_is_used_by_logical_technology_item" xlink:role="cpp-method" xlink:title="uses Logical Technology Item" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryLogicalTechnologyItemOverapplication_uses_is_used_by_logical_technology_item"/>
+  <named-method-link name="MetisTrouxClient_--Get Organization_Component----QueryOrganization_DomainOverapplication_has_sponsor_is_sponsor_of_organization_component" xlink:role="cpp-method" xlink:title="has sponsor Organization Component" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryOrganization_DomainOverapplication_has_sponsor_is_sponsor_of_organization_component"/>
+  <named-method-link name="MetisTrouxClient_--Get Role----QueryRoleOverapplication_fills_is_filled_by_role" xlink:role="cpp-method" xlink:title="fills Role" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryRoleOverapplication_fills_is_filled_by_role"/>
+  <named-method-link name="MetisTrouxClient_--Get Skill_Profile----QueryCompetenceprofileOverapplication_holds_is_held_by_skill_profile" xlink:role="cpp-method" xlink:title="holds Skill Profile" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryCompetenceprofileOverapplication_holds_is_held_by_skill_profile"/>
+  <named-method-link name="MetisTrouxClient_--Get Software_Module----QueryApplicationBuildingBlockOverapplication_consists_of_is_part_of_software_module" xlink:role="cpp-method" xlink:title="consists of Software Module" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryApplicationBuildingBlockOverapplication_consists_of_is_part_of_software_module"/>
+  <named-method-link name="businessRiskScore" xlink:role="cpp-method" xlink:title="getRiskValue" xlink:href="../methods/application_methods.kmd#oid2"/>
+  <named-method-link name="strategicValue" xlink:role="cpp-method" xlink:title="getStrategicValueForApplication" xlink:href="../methods/application_methods.kmd#oid1"/>
+  <named-criteria-link name="ApplicationBusinessProcess" xlink:role="criteria" xlink:title="Application-&#62;BusinessProcess" xlink:href="../criteria/application_criteria.kmd#oid2"/>
+  <named-criteria-link name="findStrategicValueChainApplication" xlink:role="criteria" xlink:title="Find Strategic Value Chain" xlink:href="../criteria/application_criteria.kmd#oid4"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Application" xlink:href="#CompType_TRM:Application_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#CCBBDD</string>
+   <string name="troux_iconAlias">Icon_CompType_TRM:DeployedInstance_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="66" xlink:role="type" xlink:title="Application" xlink:href="#CompType_TRM:Application_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile"></string>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="developmentPlatform">-1</integer>
+   <integer name="customizationDegree">-1</integer>
+   <date name="nextRevisionDate">00000000</date>
+   <date name="previousRevisionDate">00000000</date>
+   <integer name="businessCriticalityScore">-1</integer>
+   <integer name="failureProbabilityScore">-1</integer>
+   <integer name="accounts">0</integer>
+   <string name="serviceLevelAgreement"></string>
+   <integer name="sessions">0</integer>
+   <integer name="sessionDurationDays">0</integer>
+   <decimal name="initialDeploymentCost">0</decimal>
+   <date name="loginDate">00000000</date>
+   <integer name="recommendation">-1</integer>
+   <date name="recommendationDate">00000000</date>
+   <string name="recommendationComments"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <integer name="businessRiskScore" class="volatile">0</integer>
+   <decimal name="annualExternalStaffCosts">0</decimal>
+   <decimal name="annualHardwareCosts">0</decimal>
+   <decimal name="annualInternalStaffCosts">0</decimal>
+   <decimal name="annualOtherCosts">0</decimal>
+   <decimal name="annualSoftwarCosts">0</decimal>
+   <string name="creatorName"></string>
+   <integer name="architectureModel">-1</integer>
+   <decimal name="staffedFTE">0</decimal>
+   <collection name="relatedArtifacts" structure="list" size="0" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" xlink:actuate="user">
+   </collection>
+   <date name="lastReviewDate">00000000</date>
+   <decimal name="opexSoftwareCost">0</decimal>
+   <decimal name="opexHardwareCost">0</decimal>
+   <decimal name="opexLaborCost">0</decimal>
+   <decimal name="opexDeprecationCost">0</decimal>
+   <decimal name="opexOtherCost">0</decimal>
+   <date name="replacementDate">00000000</date>
+   <decimal name="opExDeprecationCostYr0">0</decimal>
+   <decimal name="opExDeprecationCostYr1">0</decimal>
+   <decimal name="opExDeprecationCostYr2">0</decimal>
+   <decimal name="opExLaborCostYr0">0</decimal>
+   <decimal name="opExLaborCostYr1">0</decimal>
+   <decimal name="opExLaborCostYr2">0</decimal>
+   <decimal name="opExSoftwareCostYr0">0</decimal>
+   <decimal name="opExSoftwareCostYr1">0</decimal>
+   <decimal name="opExSoftwareCostYr2">0</decimal>
+   <decimal name="opExOtherCostYr0">0</decimal>
+   <decimal name="opExOtherCostYr1">0</decimal>
+   <decimal name="opExOtherCostYr2">0</decimal>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Application" xlink:href="#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="previousRevisionDate" visible-flag="true"/>
+   <propertyview name="nextRevisionDate" visible-flag="true"/>
+   <propertyview name="recommendationDate" visible-flag="true"/>
+   <propertyview name="recommendation" visible-flag="true"/>
+   <propertyview name="recommendationComments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="recurringCost" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="recurringCostInterval" visible-flag="true"/>
+   <propertyview name="accounts" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="businessCriticalityScore" visible-flag="true"/>
+   <propertyview name="failureProbabilityScore" visible-flag="true"/>
+   <propertyview name="businessRiskScore" visible-flag="true"/>
+   <propertyview name="openIncidentCount" visible-flag="true"/>
+   <propertyview name="serviceManHours" visible-flag="true"/>
+   <propertyview name="developmentPlatform" visible-flag="true"/>
+   <propertyview name="customizationDegree" visible-flag="true"/>
+   <propertyview name="sessions" visible-flag="true"/>
+   <propertyview name="sessionDurationDays" visible-flag="true"/>
+   <propertyview name="serviceLevelAgreement" visible-flag="true"/>
+   <propertyview name="initialDeploymentCost" visible-flag="true"/>
+   <propertyview name="loginDate" visible-flag="true"/>
+   <propertyview name="annualExternalStaffCosts" visible-flag="true"/>
+   <propertyview name="annualHardwareCosts" visible-flag="true"/>
+   <propertyview name="annualInternalStaffCosts" visible-flag="true"/>
+   <propertyview name="annualOtherCosts" visible-flag="true"/>
+   <propertyview name="annualSoftwarCosts" visible-flag="true"/>
+   <propertyview name="creatorName" visible-flag="true"/>
+   <propertyview name="architectureModel" visible-flag="true"/>
+   <propertyview name="staffedFTE" visible-flag="true"/>
+   <propertyview name="relatedArtifacts" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Application" xlink:href="#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="previousRevisionDate" visible-flag="true"/>
+   <propertyview name="nextRevisionDate" visible-flag="true"/>
+   <propertyview name="recommendationDate" visible-flag="true"/>
+   <propertyview name="recommendation" visible-flag="true"/>
+   <propertyview name="recommendationComments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="recurringCost" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="recurringCostInterval" visible-flag="true"/>
+   <propertyview name="accounts" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="businessCriticalityScore" visible-flag="true"/>
+   <propertyview name="failureProbabilityScore" visible-flag="true"/>
+   <propertyview name="businessRiskScore" visible-flag="true"/>
+   <propertyview name="openIncidentCount" visible-flag="true"/>
+   <propertyview name="serviceManHours" visible-flag="true"/>
+   <propertyview name="developmentPlatform" visible-flag="true"/>
+   <propertyview name="customizationDegree" visible-flag="true"/>
+   <propertyview name="sessions" visible-flag="true"/>
+   <propertyview name="sessionDurationDays" visible-flag="true"/>
+   <propertyview name="serviceLevelAgreement" visible-flag="true"/>
+   <propertyview name="initialDeploymentCost" visible-flag="true"/>
+   <propertyview name="loginDate" visible-flag="true"/>
+   <propertyview name="annualExternalStaffCosts" visible-flag="true"/>
+   <propertyview name="annualHardwareCosts" visible-flag="true"/>
+   <propertyview name="annualInternalStaffCosts" visible-flag="true"/>
+   <propertyview name="annualOtherCosts" visible-flag="true"/>
+   <propertyview name="annualSoftwarCosts" visible-flag="true"/>
+   <propertyview name="creatorName" visible-flag="true"/>
+   <propertyview name="architectureModel" visible-flag="true"/>
+   <propertyview name="staffedFTE" visible-flag="true"/>
+   <propertyview name="relatedArtifacts" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png"/>
+ </typeview>
+
+
+</metis>

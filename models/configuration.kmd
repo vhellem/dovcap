@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Configuration" name="Configuration" desc="A configuration can be linked to the context where it applies. It will contain other elements that define either user interface parameters (for user interface configurations) or services (for service configurations)." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <property name="Inherited" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Inherited" desc="If set, this flag implies that the configuration is inherited to parts and members (for tasks, objects and user groups)&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:configuration_Inherited_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="bottom"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Configuration" xlink:href="#AKM_Configuration" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Configuration" xlink:href="#AKM_Configuration" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="Inherited">1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

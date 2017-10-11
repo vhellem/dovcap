@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Data_Accessor" title="Data Accessor" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - IF Configuration" xlink:href="objectprop.kmd#oid1"/>
+  <named-method-link name="Remove_Deleted_Fields_" xlink:role="cpp-method" xlink:title="Remove Deleted Fields" xlink:href="../methods/remove_deleted_fields.kmd#oid1"/>
+  <named-method-link name="Reset_Field_Presence_Status_" xlink:role="cpp-method" xlink:title="Reset Field Presence Status" xlink:href="../methods/reset_field_presence_status.kmd#oid1"/>
+  <named-criteria-link name="FindElementsMarkedAsDeleted" xlink:role="criteria" xlink:title="Find Elements Marked As Deleted" xlink:href="../criteria/interface_configuration_criteria.kmd#oid2"/>
+  <named-criteria-link name="FindElementsMarkedAsManual" xlink:role="criteria" xlink:title="Find Elements Marked As Manual" xlink:href="../criteria/interface_configuration_criteria.kmd#oid3"/>
+  <named-criteria-link name="FindElementsMarkedAsNew" xlink:role="criteria" xlink:title="Find Elements Marked As New" xlink:href="../criteria/interface_configuration_criteria.kmd#oid1"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Data Accessor" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+
+</metis>

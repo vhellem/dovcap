@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="8">
+
+ <type id="oid1" name="evolved_to_evolved_from" title="evolved to/evolved from" desc="Allows you to specify that any object has evolved/will evolve to something newer, which is another instance of the same object type. This capability is useful for representing changes to objects through time, where comparing properties will show you what has changed between each instance in the change chain defined by this relationship. This relationship can only connect two objects of the exact same type. An object can evolve to any number of newer objects (splitting). Likewise, an object can evolve from any number of older objects (merging)." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule exactly="true">
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="metis:stdtypes#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="metis:stdtypes#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="evolved to/evolved from" xlink:href="#oid1">
+   <string name="from">evolved to</string>
+   <string name="to">evolved from</string>
+  </valueset>
+ </type>
+
+
+</metis>

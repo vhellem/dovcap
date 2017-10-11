@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_97186C95-B808-4E78-9A2B-80D34FA3042F" name="Systems_Domain" title="Systems Domain" desc="Use the types in the Systems domain to model systems such as Web Services or Service-Oriented Architecture (SOA) initiatives.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="systems_domain_relationship_types.kmd#UUID4_F7DD877A-C6FE-41D8-B07A-7BAFF4E2FD8F"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Interface" xlink:href="../object_types/interface.kmd#CompType_Semantics_System:Interface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="System" xlink:href="../object_types/system.kmd#CompType_Semantics_System:System_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

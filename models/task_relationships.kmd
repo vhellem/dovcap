@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002as5l01bnf2mcko7ac" name="Task_Relationships" title="Relationships">
+  <complex-type-links size="16">
+   <complex-type-link xlink:role="type" xlink:title="Create for each" xlink:href="../../system/relationshiptypes/create_for_each.kmd#AKM_Create_for_each"/>
+   <complex-type-link xlink:role="type" xlink:title="Part" xlink:href="../../system/relationshiptypes/part.kmd#AKM_ParameterPart"/>
+   <complex-type-link xlink:role="type" xlink:title="Value for parameter" xlink:href="../../system/relationshiptypes/value_for_parameter.kmd#AKM_Parameter_Value"/>
+   <complex-type-link xlink:role="type" xlink:title="Task content" xlink:href="../relationshiptypes/task_content.kmd#AKM_Task_Content"/>
+   <complex-type-link xlink:role="type" xlink:title="Task works on" xlink:href="../relationshiptypes/task_works_on.kmd#AKM_Task_Works_On"/>
+   <complex-type-link xlink:role="type" xlink:title="Template" xlink:href="../../system/relationshiptypes/template.kmd#AKM_Template"/>
+   <complex-type-link xlink:role="type" xlink:title="Fills role" xlink:href="../relationshiptypes/fills_role.kmd#Fills_role"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component before Change Component" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/before-after.kmd#Reltype_change_component_before_after_change_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has business owner Person" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_business_owner-is_business_owner_of.kmd#Reltype_change_component_has_business_owner_is_business_owner_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has initiator Organization Com..." xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_initiator-is_initiator_of.kmd#Reltype_change_component_has_initiator_is_initiator_of_organization_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has IT owner Person" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_it_owner-is_it_owner_of.kmd#Reltype_change_component_has_it_owner_is_it_owner_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has manager Person" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_manager-is_manager_of.kmd#Reltype_change_component_has_manager_is_manager_of_person_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has participant Organization C..." xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_participant-is_participant_in.kmd#Reltype_change_component_has_participant_is_participant_in_organization_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Change Component has responsible Organization C..." xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_responsible-is_responsible_for.kmd#Reltype_change_component_has_responsible_is_responsible_for_organization_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Repeat for each" xlink:href="../relationshiptypes/repeat_for_each.kmd#AKM_Repeat_for_each"/>
+  </complex-type-links>
+  <primitive-type-links size="1">
+   <primitive-type-link xlink:role="integer-type" xlink:title="Standard queries" xlink:href="../../system/primitivetypes/standard_queries.kmd#AKM_Standard_queries"/>
+  </primitive-type-links>
+ </metamodel>
+
+
+</metis>

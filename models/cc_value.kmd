@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CC_value" name="CC_value" title="CC value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <property name="parameter" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Parameter" desc="" visible-flag="true" method-flag="true"/>
+  <property name="parameterParent" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Parameter parent" desc="" visible-flag="true" method-flag="true"/>
+  <named-method-link name="parameter" xlink:role="cpp-method" xlink:title="Get parameter name" xlink:href="../methods/cc_methods.kmd#parameterName"/>
+  <named-method-link name="parameterParent" xlink:role="cpp-method" xlink:title="Get parameter name" xlink:href="../methods/cc_methods.kmd#parameterParentName"/>
+  <named-method-link name="getParameterName_" xlink:role="cpp-method" xlink:title="Get parameter name" xlink:href="../methods/cc_methods.kmd#getParameterName"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="CC value" xlink:href="#CC_value" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+
+</metis>

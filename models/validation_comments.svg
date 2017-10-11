@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<svg
+ width="200" height="200">
+ <title>Symbol library: validation_comments.svg</title>
+ <defs>
+  <symbol id="oid3" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Automapper Question</title>
+    <g>
+      <image x="56.7192" y="52.4924" width="638.064" height="262.5" xlink:role="symbol" xlink:title="Comment Body" xlink:href="common_symbol_components_bodies.svg#oid12"></image>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="81.8764" y="74.4049"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:8;"
+	 class="TAG:text">text</text>
+	<rect x="81.8764" y="67.4049" width="607.288" height="242.745"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffff6e; fill-opacity:0%"></rect>
+      </g>
+    </g>
+    <image x="0" y="1.13687e-013" width="76.9104" height="77.3329" xlink:role="symbol" xlink:title="Comment Question" xlink:href="common_symbol_components.svg#oid16"></image>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Validation Warning</title>
+    <g>
+      <image x="56.7772" y="52.4064" width="638.064" height="262.5" xlink:role="symbol" xlink:title="Comment Body" xlink:href="common_symbol_components_bodies.svg#oid12"></image>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="81.9344" y="74.3189"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:8;"
+	 class="TAG:text">text</text>
+	<rect x="81.9344" y="67.3189" width="607.288" height="242.745"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffff6e; fill-opacity:0%"></rect>
+      </g>
+    </g>
+    <image x="0" y="1.13687e-013" width="80.7964" height="80.9654" xlink:role="symbol" xlink:title="Comment Warning" xlink:href="common_symbol_components.svg#oid17"></image>
+  </symbol>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Validation Error</title>
+    <g>
+      <image x="53.6172" y="47.3124" width="638.064" height="262.5" xlink:role="symbol" xlink:title="Comment Body" xlink:href="common_symbol_components_bodies.svg#oid12"></image>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="78.7744" y="69.2249"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:8;"
+	 class="TAG:text">text</text>
+	<rect x="78.7744" y="62.2249" width="607.288" height="242.745"
+	 style=" stroke:#000000; stroke-width:1; fill:#ffff6e; fill-opacity:0%"></rect>
+      </g>
+    </g>
+    <image x="0" y="1.13687e-013" width="75.6518" height="78.1384" xlink:role="symbol" xlink:title="Comment Stop" xlink:href="common_symbol_components.svg#oid18"></image>
+  </symbol>
+ </defs>
+</svg>

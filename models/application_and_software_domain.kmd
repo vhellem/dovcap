@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Application_and_Software_Domain" title="Application and Software Domain" desc="Use the Application and Software domain to capture the deployed physical business applications and software modules, the services or functions they provide and how they are technically built. You can also model the interfaces between applications and the messages flowing between them. A status value can be entered for all software components and applications, from planned to retired in 7 different life-cycle steps.&#10;To define different classifications of the Applications use the Category Type. For logical representations of Applications use the Logical Application type found under the IT Architecture Domain.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="17">
+   <complex-type-link xlink:role="type" xlink:title="APO Category" xlink:href="../objecttypes/apo_category.kmd#CompType_ITG:APO_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Function" xlink:href="../objecttypes/application_function.kmd#CompType_MEAF:ApplicationFunction_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software" xlink:href="../objecttypes/software.kmd#CompType_MEAF:Software_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployment Environment" xlink:href="../../semantics/object_types/deployment_environment.kmd#CompType_Semantics:Deployment_Environment_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Operating System" xlink:href="../../semantics/object_types/operating_system.kmd#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Hypervisor" xlink:href="../../semantics/object_types/virtual_host.kmd#CompType_Semantics_AppDomain:Virtual_Host_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Server" xlink:href="../objecttypes/application_server.kmd#CompType_TRM:ApplicationServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Database Server" xlink:href="../objecttypes/database_server.kmd#CompType_TRM:DatabaseServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="File Server" xlink:href="../objecttypes/file_server.kmd#CompType_TRM:FileServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module" xlink:href="../objecttypes/software_module.kmd#CompType_TRM:Module_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Patch" xlink:href="../objecttypes/software_patch.kmd#CompType_TRM:SoftwarePatch_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Server" xlink:href="../objecttypes/software_server.kmd#CompType_TRM:SoftwareServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Web Server" xlink:href="../objecttypes/web_server.kmd#CompType_TRM:WebServer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Usage" xlink:href="../../semantics/object_types/application_usage.kmd#CompType_Semantics_APM:Application_Usage_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="32">
+   <complex-type-link xlink:role="type" xlink:title="Application consists of Software Module" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_AppConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application provides Function" xlink:href="../relationshiptypes/provides-is_provided_by_criticality.kmd#RelType_EnablesAction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="APO Category has category APO Category" xlink:href="../relationshiptypes/has_category-is_category_for.kmd#RelType_ITG:APO_Category_has_category_APO_Category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application has category APO Category" xlink:href="../relationshiptypes/has_category-is_category_for.kmd#RelType_ITG:Application_has_category_APO_Category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application sends data to Application" xlink:href="../relationshiptypes/sends_data_to-receives_data_from.kmd#RelType_ITG:Application_sends_data_to_Application_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module deploys Software Patch" xlink:href="../relationshiptypes/deploys-is_deployed_in.kmd#RelType_InstantiateModulePatch_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Module consists of Software Module" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_ModuleConsistsOfModule_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Patch requires Software Patch" xlink:href="../relationshiptypes/requires-is_required_by.kmd#RelType_RequiresPatch_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Computing Hardware hosts Hypervisor" xlink:href="../../semantics/relationship_types/computing_hardware_hosts-is_hosted_by_virtual_host.kmd#RelType_Semantics_AppDomain:Computing_Hardware_hosts-is_hosted_by_Virtual_Host_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Operating System hosts-is hosted by Deployed Software" xlink:href="../../semantics/relationship_types/operating_system_hosts-is_hosted_by_deployed_software.kmd#RelType_Semantics_AppDomain:Operating_System_hosts-is_hosted_by_Deployed_Software_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component has template Application Component" xlink:href="../relationshiptypes/has_template-is_template_for.kmd#Reltype_application_component_has_template_is_template_for_application_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component needs Application Component" xlink:href="../relationshiptypes/needs-is_needed_by.kmd#Reltype_application_component_needs_is_needed_by_application_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component receives Message" xlink:href="../relationshiptypes/receives-is_received_by.kmd#Reltype_application_component_receives_is_received_by_message_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application Component sends Message" xlink:href="../relationshiptypes/sends-is_sent_by.kmd#Reltype_application_component_sends_is_sent_by_message_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application consists of Application" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_application_consists_of_is_part_of_application_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software implements Message" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_deployed_software_implements_is_implemented_by_message_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Deployed Software sends data to Deployed Software" xlink:href="../relationshiptypes/sends_data_to-receives_data_from.kmd#Reltype_deployed_software_sends_data_to_receives_data_from_deployed_software_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Function leads to Function" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_function_leads_to_follows_from_function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component has category Category" xlink:href="../relationshiptypes/has_category-is_category_for.kmd#Reltype_generic_component_has_category_is_category_for_category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Component corresponds to Process Component" xlink:href="../relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_process_component_corresponds_to_corresponds_to_process_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application manages Hypervisor" xlink:href="../../semantics/relationship_types/application_manages_hypervisor.kmd#Reltype_application_manages_is_managed_by_hypervisor_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application replaces Application" xlink:href="../../semantics/relationship_types/application_replaces_application.kmd#RelType_Semantics_APM:Application_replaces_Application_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Application has Application Usage" xlink:href="../../semantics/relationship_types/application_has_application_usage.kmd#RelType_Semantics_APM:Application_has_Application_Usage_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

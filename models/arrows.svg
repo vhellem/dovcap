@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: arrows.svg</title>
+ <defs>
+  <symbol id="_002ashq014uor75ir7n8" xml:space="preserve" class="METIS_SYMBOL">
+   <title>down</title>
+    <polygon points="128 0 640 0 640 416 
+     768 416 384 640 0 416 128 416 128 0 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:1.0"     class="TAG:polygon"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="128" y="447"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center vertical-align:bottom;"
+       class="TAG:text"></text>
+      <rect x="128" y="432" width="512" height="80"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:0.0"></rect>
+    </g>
+  </symbol>
+  <symbol id="_002ashq0154rkiij8al1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>up</title>
+    <polygon points="640 640 128 640 128 224 
+     0 224 384 0 768 224 640 224 640 640 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:1.0"     class="TAG:polygon"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="128" y="159"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center"
+       class="TAG:text"></text>
+      <rect x="128" y="144" width="512" height="80"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:0.0"></rect>
+    </g>
+  </symbol>
+  <symbol id="_002ashq0156g292pkabl" xml:space="preserve" class="METIS_SYMBOL">
+   <title>left</title>
+    <polygon points="640 640 224 640 224 768 
+     0 384 224 0 224 128 640 128 640 640 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:1.0"     class="TAG:polygon"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="128" y="143"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center vertical-align:middle;"
+       class="TAG:text"></text>
+      <rect x="128" y="128" width="512" height="80"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:0.0"></rect>
+    </g>
+  </symbol>
+  <symbol id="_002ashq015bjpm0tndoe" xml:space="preserve" class="METIS_SYMBOL">
+   <title>right</title>
+    <polygon points="0 640 416 640 416 768 
+     640 384 416 0 416 128 0 128 0 640 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:1.0"     class="TAG:polygon"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="143"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center vertical-align:middle;"
+       class="TAG:text"></text>
+      <rect x="0" y="128" width="512" height="80"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:0.0"></rect>
+    </g>
+  </symbol>
+ </defs>
+ <use xlink:href="#_002ashq014uor75ir7n8"/>
+</svg>

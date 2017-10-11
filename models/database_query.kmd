@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="Database_Query" title="Database Query" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Data Accessor" xlink:href="../../common/object_types/data_accessor.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="evaluateQuery" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Evaluate Query As Expression" desc="Whether to use the Metis Object Expression scripting language to compute the actual value of the query at runtime. Useful for instance when the query depends on values of specific objects in the model." default-visible="top"/>
+  <property name="query" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Query" desc="The SQL Query to use to pull the necessary data from the database." default-visible="top"/>
+  <property name="commandTimeout" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Query Timeout (seconds)" desc="Indicates the number of seconds to wait for a response when DIF attempts to connect to the database. &#10;&#60;P&#62;&#10;Use a positive integer value. The value 0 means no limit and should be avoided.&#10;&#60;P&#62;&#10;Leave this value as it is to use the DIF default timeout of 600 seconds.&#10;&#10;" default-visible="top"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Database Field" xlink:href="database_field.kmd#oid1"/>
+  <named-method-link name="Generate Query Fields_" xlink:role="cpp-method" xlink:title="Generate Query Fields" xlink:href="../methods/generate_database_fields.kmd#oid1"/>
+  <named-method-link name="Sample Query Result_" xlink:role="cpp-method" xlink:title="Sample Query Result" xlink:href="../methods/sample_query_result.kmd#oid1"/>
+  <named-method-link name="Verify_Query_" xlink:role="cpp-method" xlink:title="Verify Query" xlink:href="../methods/verify_query.kmd#oid1"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Database Query" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="evaluateQuery">0</integer>
+   <string name="query"></string>
+   <integer name="commandTimeout">600</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Database Query" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Source Attribute Layout - Sort By Sequence Number" xlink:href="../../common/layouts/attribute.kmd#oid2"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="evaluateQuery" visible-flag="true"/>
+   <propertyview name="query" visible-flag="true"/>
+   <propertyview name="commandTimeout" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="externalID" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Database Query" xlink:href="../symbols/database_query.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (property query))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Database Query" xlink:href="../symbols/database_query.svg#oid1" xlink:actuate="user">
+   <replace tag="DBBody" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="DBBody" property="fillcolor" macro="(expand &#34;darkgreen&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="DBBody" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (property query))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/database_query.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CC_object" name="CC_object" title="CC object" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <property name="ruleEvaluatedTo" xlink:role="integer-type" xlink:title="CC_boolean" xlink:href="primitive_types.kmd#CC_boolean" label="Rule evaluated to" default-visible="top" protected-flag="true"/>
+  <property name="ruleEngine" xlink:role="integer-type" xlink:title="Rule_Engine" xlink:href="primitive_types.kmd#Rule_Engine" label="Rule engine" default-visible="top" protected-flag="true"/>
+  <property name="ruleCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Code" default-visible="top"/>
+  <property name="ruleStatus" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Rule status" default-visible="top"/>
+  <named-method-link name="addViewNeighbours_" xlink:role="cpp-method" xlink:title="addViewNeighbours" xlink:href="../methods/cc_methods.kmd#addViewNeighbours"/>
+  <named-method-link name="showDocument_" xlink:role="cpp-method" xlink:title="showDocument" xlink:href="../methods/cc_methods.kmd#showDocument"/>
+  <named-method-link name="EkaDelete_" xlink:role="cpp-method" xlink:title="Delete" xlink:href="../methods/cc_methods.kmd#ccDelete"/>
+  <named-method-link name="View.DClickAction" xlink:role="cpp-method" xlink:title="openClose" xlink:href="http://xml.activeknowledgemodeling.com/cvw/operations/view_methods.kmd#Method_CVW:openClose_UUID"/>
+  <named-method-link name="getSymbol" xlink:role="cpp-method" xlink:title="getSymbol" xlink:href="http://xml.activeknowledgemodeling.com/eka/operations/eka_methods.kmd#Method_EKA:GetSymbol_UUID"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="CC object" xlink:href="#CC_object" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="CC_virtual_object" name="CC_virtual_object" title="CC_virtual_object" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="metis:stdtypes#oid1"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" default-visible="top" label-flag="true"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="CC_virtual_object" xlink:href="#CC_virtual_object" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+
+</metis>

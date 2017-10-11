@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<?metis version="3.0.1"?>
+
+<?metisxml version="1.0"?>
+
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+
+<metis
+
+ xmlns="http://www.metis.no/metis"
+
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+
+ types="1"
+
+ typeviews="1"
+
+ nextoid="102">
+
+
+
+ <type id="oid1" name="user" title="User" usage="object">
+
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+
+  <typeview-link xlink:role="typeview" xlink:href="#oid101"/>
+
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid3" label="Name" desc="Enter a short name for the object"/>
+
+  <property name="username" xlink:role="string-type" xlink:href="metis:std#oid3" label="User ID" label-flag="true"/>
+
+  <property name="password" xlink:role="string-type" xlink:href="metis:std#oid3" label="Password"/>
+
+  <property name="email" xlink:role="string-type" xlink:href="metis:std#oid3" label="E-mail"/>
+
+  <valueset vset="default" size="4" xlink:role="type" xlink:href="#oid1">
+
+   <string name="name"></string>
+
+   <string name="username"></string>
+
+   <string name="password"></string>
+
+   <string name="email"></string>
+
+  </valueset>
+
+ </type>
+
+
+
+ <typeview id="oid101" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/external/person.svg#oid1" xlink:actuate="user">
+
+   <replace tag="text" property="value" macro="(expand (label))"/>
+
+  </symbol-override>
+
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/external/person.svg#oid1" xlink:actuate="user">
+
+   <replace tag="text" property="value" macro="(expand (label))"/>
+
+  </symbol-override>
+
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/person.png" xlink:actuate="user"/>
+
+ </typeview>
+
+
+
+</metis>
+

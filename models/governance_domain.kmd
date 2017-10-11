@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_3B593C06-D96B-4D38-9A17-E7EC6C87DBE8" name="Governance_Domain" title="Governance Domain" desc="Contains the types required by the Troux governance engine, which is used to execute workflows.">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Review Specification" xlink:href="../../semantics/object_types/review_specification.kmd#CompType_Semantics:Review_Specification_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Review" xlink:href="../../semantics/object_types/review.kmd#CompType_Semantics:Review_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

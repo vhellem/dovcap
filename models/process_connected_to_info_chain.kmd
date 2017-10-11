@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="6">
+
+ <criteria id="oid1" name="ProcessICOMInformationGroupInformationObjectAttribute" title="Process-&#62;Input/Output&#39;s-&#62;InformationGroup-&#62;InformationObject-&#62;Attribute" desc="This criterium is only valid if the types referred to in its name are used in the model.&#10;Drag this onto an Logical Process instance, and the following types will be traversed.&#10;- Input/Output types&#10;- &#34;represent/has&#34; &#10;- Information Group type&#10;- &#34;related to/related to&#34;&#10;- Information Object&#10;- &#34;described by/describes&#10;- Attribute" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="part">
+    <c-op kind="or">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Input" xlink:href="../object_types/flowlogic.kmd#oid3"/>
+     </c-op>
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5"/>
+     </c-op>
+    </c-op>
+   </c-op>
+   <c-op kind="originof" use-off-flag="true">
+    <c-op kind="relshp">
+     <complex-type-link xlink:role="type" xlink:title="represents/has" xlink:href="../relationship_types/represents-has_representation.kmd#oid1"/>
+    </c-op>
+   </c-op>
+   <c-op kind="target" use-on-flag="true">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Information Group" xlink:href="../object_types/informationgroup.kmd#oid1"/>
+    </c-op>
+   </c-op>
+   <c-op kind="originof">
+    <c-op kind="relshp">
+     <complex-type-link xlink:role="type" xlink:title="related to/related to" xlink:href="../relationship_types/related_to-related_to.kmd#oid1"/>
+    </c-op>
+   </c-op>
+   <c-op kind="target">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Information Object" xlink:href="../object_types/information_object.kmd#oid1"/>
+    </c-op>
+   </c-op>
+   <c-op kind="originof">
+    <c-op kind="relshp">
+     <complex-type-link xlink:role="type" xlink:title="described by/describes" xlink:href="../relationship_types/described_by-describes.kmd#oid1"/>
+    </c-op>
+   </c-op>
+   <c-op kind="end"/>
+  </c-op>
+ </criteria>
+
+
+</metis>

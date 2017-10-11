@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="2"
+ nextoid="3">
+
+ <type id="oid1" name="formatpropertygroup" title="Format PropertyGroup" usage="abstract">
+  <!--
+  <complex-type-link xlink:role="type" xlink:title="object" xlink:href="metis:std#oid21"/>
+  -->
+  <property name="formatName" xlink:role="string-type" xlink:title="formattypes" xlink:href="#oid2" label="Format Name"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Format PropertyGroup" xlink:href="#oid1">
+   <string name="formatName">BASE</string>
+  </valueset>
+ </type>
+
+ <string-type id="oid2" name="formattypes" default="BASE">
+  <string class="shared">BASE</string>
+  <string class="shared">TABBED</string>
+  <string class="shared">MODEL INSTANCE DATA DICTIONARY</string>
+ </string-type>
+
+</metis>

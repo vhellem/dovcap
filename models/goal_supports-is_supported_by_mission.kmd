@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="7.1.2008.0401"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_Strategy:Goal_supports-is_supported_by_Mission_UUID" name="Goal_supports_is_supported_by_Mission" title="Goal supports-is supported by Mission" desc="Use this relationship to denote a Goal that supports a Mission." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/goal_supports-is_supported_by_mission.kmd#UUID4_51050A4C-9662-46B1-BA33-8241C5A9F5C4"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Goal" xlink:href="../../meaf/objecttypes/goal.kmd#CompType_TRM:Goal_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Mission" xlink:href="../object_types/mission.kmd#CompType_eaGov_SP:Mission_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Goal supports-is supported by Mission" xlink:href="#RelType_Semantics_Strategy:Goal_supports-is_supported_by_Mission_UUID" xlink:actuate="user">
+   <string name="from">supports</string>
+   <string name="to">is supported by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Goal supports-is supported by Mission" xlink:href="#RelType_Semantics_Strategy:Goal_supports-is_supported_by_Mission_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

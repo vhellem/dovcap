@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_17BB60B3-8945-4153-90BE-FB16CCAA6E56" name="IT_Pattern_Domain_Relationships" title="IT Pattern Domain Relationships">
+  <complex-type-links size="7">
+   <complex-type-link xlink:role="type" xlink:title="Design Pattern consists of Design Pattern" xlink:href="../relationship_types/design_pattern_consists_of_design_pattern.kmd#RelType_Semantics:Design_Pattern_consists_of_Design_Pattern_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Solution Pattern consists of Design Pattern" xlink:href="../relationship_types/solution_pattern_consists_of_design_pattern.kmd#RelType_Semantics:Solution_Pattern_consists_of_Design_Pattern_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Solution Pattern consists of Solution Pattern" xlink:href="../relationship_types/solution_pattern_consists_of_solution_pattern.kmd#RelType_Semantics:Solution_Pattern_consists_of_Solution_Pattern_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Solution Pattern has category Solution Pattern Category" xlink:href="../relationship_types/solution_pattern_has_category_solution_pattern_category.kmd#RelType_Semantics:solution_pattern_has_category_solution_pattern_category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Pattern has category-is category for Design Pattern Category" xlink:href="../relationship_types/design_pattern_has_category-is_category_for_design_pattern_category.kmd#RelType_Semantics_Patterns:Design_Pattern_has_category-is_category_for_Design_Pattern_Category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Solution Pattern needs Solution Pattern" xlink:href="../relationship_types/solution_pattern_needs_solution_pattern.kmd#RelType_Semantics:Solution_Pattern_needs_Solution_Pattern_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Solution Pattern replaces Solution Pattern" xlink:href="../relationship_types/solution_pattern_replaces_solution_pattern.kmd#RelType_Semantics:Solution_Pattern_replaces_Solution_Pattern_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

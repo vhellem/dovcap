@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_EKA:HasParameter_UUID" name="hasParameter" title="Has parameter" desc="Has parameter relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_parameter.kmd#ObjType_EKA:Parameter_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Has parameter" xlink:href="#RelType_EKA:HasParameter_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has parameter</string>
+   <string name="to">parameter of</string>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasParameterSet_UUID" name="hasParameterSet" title="Has parameterset" desc="Has parameterset relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_parameterset.kmd#ObjType_EKA:ParameterSet_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Has parameterset" xlink:href="#RelType_EKA:HasParameterSet_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has parameterset</string>
+   <string name="to">parameterset of</string>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasEnumeration_UUID" name="hasEnumeration" title="Has enumeration" desc="Has enumeration relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_enumeration.kmd#ObjType_EKA:Enumeration_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Has enumeration" xlink:href="#RelType_EKA:HasEnumeration_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has enumeration</string>
+   <string name="to">enumeration of</string>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasValue_UUID" name="hasValue" title="Has value" desc="Has value relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_value.kmd#ObjType_EKA:Value_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Has value" xlink:href="#RelType_EKA:HasValue_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has value</string>
+   <string name="to">value of</string>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasDefinition_UUID" name="hasDefinition1" title="Has definition" desc="Has definition relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_value.kmd#ObjType_EKA:Value_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Has definition" xlink:href="#RelType_EKA:HasDefinition_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has definition</string>
+   <string name="to">definition of</string>
+  </valueset>
+ </type>
+
+
+</metis>
+

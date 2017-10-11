@@ -1,0 +1,5 @@
+stop
+
+MsgBox getWorkareaLabelText
+
+

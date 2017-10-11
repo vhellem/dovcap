@@ -13,37 +13,43 @@ class ModelView extends React.Component {
       relationships: props.relationships,
       width: 0,
       height: 0,
-      x: 5, //Some space in between stage and top-container is needed
-      y: 5
+      x: 5, // Some space in between stage and top-container is needed
+      y: 5,
+      zoom: props.zoom,
+      xOffset: props.xOffset,
+      yOffset: props.yOffset,
+      width: props.width,
+      height: props.height,
     };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-  }
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({ width: window.innerWidth * 0.9, height: window.innerHeight * 0.9 });
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      children: newProps.modelView.children,
+      relationships: newProps.relationships,
+      zoom: newProps.zoom,
+      xOffset: newProps.xOffset,
+      yOffset: newProps.yOffset,
+      width: newProps.width,
+      height: newProps.height,
+    });
   }
   render() {
     return (
-      <Stage width={this.state.width} height={this.state.height}>
-        <Layer>
-          <Container
-            container={this.state.children[0]}
-            parentWidth={this.state.width * 0.99} //Some space in between stage and top-container is needed
-            parentHeight={this.state.height * 0.99}
-            parentX={this.state.x}
-            parentY={this.state.y}
-          />
-          <Relationship data={this.state.relationships} />
-        </Layer>
-      </Stage>
+      <div>
+        <Stage width={this.state.width} height={this.state.height}>
+          <Layer>
+            <Container
+              container={this.state.children[0]}
+              parentWidth={this.state.width * this.state.zoom} // Some space in between stage and top-container is needed
+              parentHeight={this.state.height * this.state.zoom}
+              parentX={this.state.x + this.state.xOffset}
+              parentY={this.state.y + this.state.yOffset}
+            />
+            {this.state.relationships.map(a => <Relationship data={a} />)}
+          </Layer>
+        </Stage>
+      </div>
     );
   }
 }

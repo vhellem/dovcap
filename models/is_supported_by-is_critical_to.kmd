@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="IsCriticalTo" title="is supported by/is critical to" desc="Allows you to specify that a Critical Success Factor is supported by an Initiative. The relationship has a weight property used for strategic value calculation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <property name="objectWeight" xlink:role="integer-type" xlink:href="metis:std#oid1" label="Object Value" method-flag="true"/>
+  <property name="weight" xlink:role="integer-type" xlink:href="../primitive_types/primitive_types.kmd#oid8" label="Weight"/>
+  <property name="svCount" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="SV Count" method-flag="true"/>
+  <property name="name" xlink:role="collection-type" xlink:href="metis:std#oid14" label="Name"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/critical_success_factor.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/initiative.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="objectWeight" xlink:role="cpp-method" xlink:href="methods.kmd#oid1"/>
+  <named-method-link name="svCount" xlink:role="cpp-method" xlink:href="methods.kmd#oid8"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="from">is supported by</string>
+   <string name="to">is critical to</string>
+  </valueset>
+  <valueset vset="default" size="3" xlink:role="type" xlink:href="#oid1">
+   <integer name="objectWeight" class="volatile">0</integer>
+   <integer name="weight">0</integer>
+   <integer name="svCount" class="volatile">0</integer>
+   <collection name="name" structure="list" size="0" xlink:role="string-type" xlink:href="metis:std#oid3"></collection>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ typeviews="3"
+ nextoid="1">
+
+ <type id="Visual_TQL_Get_Instances_Query" name="Visual_TQL_Get_Instances_Query" title="Utilities - Visual TQL Get Instances Query" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="VBScript Button" xlink:href="vbscript_button.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#_002asb20217k327mv0vq"/>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="Utilities - Visual TQL Get Instances Query" xlink:href="#Visual_TQL_Get_Instances_Query" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">6</integer>
+   <string name="reference"></string>
+   <integer name="execute_on_parent">0</integer>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+   <url name="scriptFile" xlink:href="http://metadata.troux.info/serviceutilities/tqlmodeler/scripting/tqlGetInstancesQuery.vbs" xlink:role="Role" xlink:actuate="user"/>
+   <collection name="variables" structure="list" size="0" xlink:role="valueset-type" xlink:title="Variable Pointer" xlink:href="../primitivetypes/variable_pointer.kmd#oid1" xlink:actuate="user">
+   </collection>
+  </valueset>
+ </type>
+
+ <type id="Visual_TQL_Structured_Query" name="Visual_TQL_Structured_Query" title="Utilities - Visual TQL Structured Query" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="VBScript Button" xlink:href="vbscript_button.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#_002asb50136k5f13ralo"/>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="Utilities - Visual TQL Structured Query" xlink:href="#Visual_TQL_Structured_Query" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">6</integer>
+   <string name="reference"></string>
+   <integer name="execute_on_parent">0</integer>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+   <url name="scriptFile" xlink:href="http://metadata.troux.info/serviceutilities/tqlmodeler/scripting/tqlStructuredQuery.vbs" xlink:role="Role" xlink:actuate="user"/>
+   <collection name="variables" structure="list" size="0" xlink:role="valueset-type" xlink:title="Variable Pointer" xlink:href="variable_pointer.kmd#oid1" xlink:actuate="user">
+   </collection>
+  </valueset>
+ </type>
+
+ <type id="Visual_TQL_Structured_Query_With_Dynamic_Container_Support" name="Visual_TQL_Dynamic_Starting_Container_Support" title="Utilities - Visual TQL Dynamic Starting Container Support" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="VBScript Button" xlink:href="vbscript_button.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#_002asb2020f13r1cm5j9"/>
+  <property name="targetContainerType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Target Container Type" default-visible="top"/>
+  <property name="topContainerType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Top Container Type" default-visible="top"/>
+  <valueset vset="default" size="14" xlink:role="type" xlink:title="Utilities - Visual TQL Dynamic Starting Container Support" xlink:href="#Visual_TQL_Structured_Query_With_Dynamic_Container_Support" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">6</integer>
+   <string name="reference"></string>
+   <integer name="execute_on_parent">0</integer>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+   <url name="scriptFile" xlink:href="http://metadata.troux.info/serviceutilities/tqlmodeler/scripting/tqlStructuredDynamicStartingContainer.vbs" xlink:role="Role" xlink:actuate="user"/>
+   <collection name="variables" structure="list" size="0" xlink:role="valueset-type" xlink:title="Variable Pointer" xlink:href="../primitivetypes/variable_pointer.kmd#oid1" xlink:actuate="user">
+   </collection>
+   <string name="targetContainerType"></string>
+   <string name="topContainerType"></string>
+  </valueset>
+ </type>
+
+ <typeview id="_002asb2020f13r1cm5j9" xlink:role="type" xlink:title="Utilities - Visual TQL Dynamic Starting Container Support" xlink:href="#Visual_TQL_Structured_Query_With_Dynamic_Container_Support" typelabel="Visual TQL Structured Query With Dynamic Container Support" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="mode" visible-flag="false"/>
+   <propertyview name="reference" visible-flag="false"/>
+   <propertyview name="topContainerType" visible-flag="true"/>
+   <propertyview name="targetContainerType" visible-flag="true"/>
+   <propertyview name="variables" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="execute_on_parent" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" visible-flag="false"/>
+   <propertyview name="scriptFile" protected-flag="true" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="SU_Blue Action Button" xlink:href="../symbols/symbols.svg#_002asat027f43dat0boh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="SU_Blue Action Button" xlink:href="../symbols/symbols.svg#_002asat027f43dat0boh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/actionbutton.png"/>
+ </typeview>
+
+ <typeview id="_002asb20217k327mv0vq" xlink:role="type" xlink:title="Utilities - Visual TQL Get Instances Query" xlink:href="#Visual_TQL_Get_Instances_Query" typelabel="Visual TQL Get Instances Query" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="variables" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="mode" visible-flag="false"/>
+   <propertyview name="reference" visible-flag="false"/>
+   <propertyview name="execute_on_parent" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" visible-flag="false"/>
+   <propertyview name="scriptFile" protected-flag="true" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="SU_Blue Action Button" xlink:href="../symbols/symbols.svg#_002asat027f43dat0boh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="SU_Blue Action Button" xlink:href="../symbols/symbols.svg#_002asat027f43dat0boh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/actionbutton.png"/>
+ </typeview>
+
+ <typeview id="_002asb50136k5f13ralo" xlink:role="type" xlink:title="Utilities - Visual TQL Structured Query" xlink:href="#Visual_TQL_Structured_Query" typelabel="Visual TQL Structured Query" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="variables" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="mode" visible-flag="false"/>
+   <propertyview name="reference" visible-flag="false"/>
+   <propertyview name="execute_on_parent" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" visible-flag="false"/>
+   <propertyview name="scriptFile" protected-flag="true" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="SU_Blue Action Button" xlink:href="../symbols/symbols.svg#_002asat027f43dat0boh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="SU_Blue Action Button" xlink:href="../symbols/symbols.svg#_002asat027f43dat0boh" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/actionbutton.png"/>
+ </typeview>
+
+
+</metis>

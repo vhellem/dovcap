@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CC_instance" name="CC_instance" title="CC instance" usage="object">
+<!--  <complex-type-link xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="http://xml.activeknowledgemodeling.com/cppd/languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID"/> -->
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="reqtype" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Type" desc="" method-flag="true" default-visible="bottom"/>
+  <property name="status" xlink:role="integer-type" xlink:title="integer" xlink:href="primitive_types.kmd#CC_status" label="Status" desc="" method-flag="true"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="" method-flag="true" default-visible="bottom"/>
+  <property name="linecolor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Line Color" desc="" method-flag="true" default-visible="bottom"/>
+  <named-method-link name="reqtype" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#getRequirementTypeName"/>
+  <named-method-link name="reqtype_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#getRequirementTypeName2"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#calculateCCstatusColor"/>
+  <named-method-link name="linecolor" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#calculateCCobjectLineColor"/>
+  <named-method-link name="status" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#getRequirementStatus"/>
+  <named-method-link name="getRequirementStatus_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/cc_methods.kmd#getRequirementStatus2"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="CC property" xlink:href="#CC_property" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="CC instance" xlink:href="#CC_instance" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Specifications" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/material_specification_layout.kmd#oid2"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_collection.svg#_002asr900ivenura1dap" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="text2" property="value" macro="(expand (property reqtype))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_collection.svg#_002asr900ivenura1dap" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="text2" property="value" macro="(expand (property reqtype))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="CC instance" xlink:href="#CC_instance" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Specifications" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/material_specification_layout.kmd#oid2"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_collection.svg#_002aspo015j1tsi9tl6v" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_collection.svg#_002aspo015j1tsi9tl6v" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="CC instance" xlink:href="#CC_instance" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Specifications" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/material_specification_layout.kmd#oid2"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_as_fields.svg#_002aspo015ldsrveaja9" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="variant" property="value" macro="(expand (property variant))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_as_fields.svg#_002aspo015ldsrveaja9" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="variant" property="value" macro="(expand (property variant))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

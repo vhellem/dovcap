@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="3"
+ nextoid="6">
+
+ <object id="oid1">
+  <valueset size="4" xlink:role="type" xlink:title="Layout Strategy Collection" xlink:href="metis:layout#oid26">
+   <string name="IDENTIFIER">Sequence state collection</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="useAll">1</integer>
+   <collection name="strategies" structure="list" size="2" xlink:role="valueset-type" xlink:title="Layout Strategy Element Valueset" xlink:href="metis:layout#oid24">
+    <valueset size="2" xlink:role="type" xlink:title="Layout Collection Element" xlink:href="metis:layout#oid23">
+
+     <string name="match"></string>
+     <pointer name="layout" xlink:role="object" xlink:title="Node Layout Strategy" xlink:href="#oid2" xlink:actuate="user"/>
+        </valueset>
+    <valueset size="2" xlink:role="type" xlink:title="Layout Collection Element" xlink:href="metis:layout#oid23">
+
+     <string name="match"></string>
+     <pointer name="layout" xlink:role="object" xlink:title="Line Layout Strategy" xlink:href="#oid3" xlink:actuate="user"/>
+        </valueset>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid2">
+  <valueset size="41" xlink:role="type" xlink:title="Matrix Layout Strategy" xlink:href="metis:layout#oid13">
+   <string name="IDENTIFIER">Node Layout Strategy</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">0</float>
+   <float name="VerticalObjectSpacing">0</float>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ObjectSorting">7</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">0</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">2</integer>
+   <integer name="HorizontalStrJustification">0</integer>
+   <integer name="VerticalStrJustification">2</integer>
+   <integer name="HorizontalDrawingDirection">1</integer>
+   <integer name="VerticalDrawingDirection">1</integer>
+   <integer name="ChannelMerging">0</integer>
+   <integer name="DrawingPriority">0</integer>
+   <integer name="RowColumnNumberingMethod">0</integer>
+   <integer name="ScaleNestedObjects">1</integer>
+   <integer name="UseTotalOption">0</integer>
+   <integer name="UseSymbolLayoutArea">1</integer>
+   <integer name="AssociativeHierarchy">0</integer>
+   <integer name="AssociativeRelDirNormal">1</integer>
+   <pointer name="AssociativeType"/>
+   <integer name="RowColumnNumber">1</integer>
+   <string name="LayoutAreaTag">NodeLayoutArea</string>
+   <pointer name="LayoutObjectType" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="../object_types/sequence_diagram.kmd#oid3" xlink:actuate="user"/>
+  </valueset>
+ </object>
+
+ <object id="oid3">
+  <valueset size="41" xlink:role="type" xlink:title="Matrix Layout Strategy" xlink:href="metis:layout#oid13">
+   <string name="IDENTIFIER">Line Layout Strategy</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">0</float>
+   <float name="VerticalObjectSpacing">0</float>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ObjectSorting">7</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">0</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">2</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="HorizontalStrJustification">2</integer>
+   <integer name="VerticalStrJustification">0</integer>
+   <integer name="HorizontalDrawingDirection">1</integer>
+   <integer name="VerticalDrawingDirection">1</integer>
+   <integer name="ChannelMerging">0</integer>
+   <integer name="DrawingPriority">1</integer>
+   <integer name="RowColumnNumberingMethod">1</integer>
+   <integer name="ScaleNestedObjects">1</integer>
+   <integer name="UseTotalOption">0</integer>
+   <integer name="UseSymbolLayoutArea">1</integer>
+   <integer name="AssociativeHierarchy">0</integer>
+   <integer name="AssociativeRelDirNormal">1</integer>
+   <pointer name="AssociativeType"/>
+   <integer name="RowColumnNumber">1</integer>
+   <string name="LayoutAreaTag">LineLayoutArea</string>
+   <pointer name="LayoutObjectType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="../object_types/sequence_diagram.kmd#oid2" xlink:actuate="user"/>
+  </valueset>
+ </object>
+
+
+</metis>

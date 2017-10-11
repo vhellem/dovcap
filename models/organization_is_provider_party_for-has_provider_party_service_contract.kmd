@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Organization_is_provider_party_for-has_provider_party_Service_Contract_UUID" name="Organization_is_provider_party_for_has_provider_party_Service_Contract" title="Organization is provider party for-has provider party Service Contract" desc="Used to denote the Organization instance that is entering into a Service Contract as the providing party, i.e., the service supplier." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/organization_is_provider_party_for-has_provider_party_service_contract.kmd#UUID4_2F697CA1-29C6-4B6F-ABD3-C9C19FE2386E"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization" xlink:href="../../meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Service Contract" xlink:href="../object_types/service_contract.kmd#CompType_Semantics_Service:Service_Contract_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Organization is provider party for-has provider party Service Contract" xlink:href="#RelType_Semantics:Organization_is_provider_party_for-has_provider_party_Service_Contract_UUID" xlink:actuate="user">
+   <string name="from">is provider party for</string>
+   <string name="to">has provider party</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Organization is provider party for-has provider party Service Contract" xlink:href="#RelType_Semantics:Organization_is_provider_party_for-has_provider_party_Service_Contract_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

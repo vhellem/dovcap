@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ nextoid="3">
+
+ <cpp-method id="oid1" name="Get_Atomic_Property_Label" title="Get Atomic Property Label" desc="Gets the label of an atomic property. The label is picked up from a complex property. This method is used by a hidden non-complex property. The purpose of the method is to circumvent the shortcoming in Metis where complex properties are not considered the label even when declared as such.&#10;&#10;This method should be deleted once Metis is fixed." language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property propertyInformation.propertyLabel))</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="Get_Atomic_Property_Description" title="Get Atomic Property Description" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property propertyInformation.propertyDescription))</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

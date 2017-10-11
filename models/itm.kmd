@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="6"
+ viewstyles="1"
+ nextoid="7">
+
+ <viewstyle id="oid1" name="ITM" title="ITM Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6" xlink:actuate="user"/>
+ </viewstyle>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="../object_types/productfunction.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/function.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/function.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_function.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:href="../object_types/productitem.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/product_item.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/product_item.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_product_item.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:href="../object_types/productmodule.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/module.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/module.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_module.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:href="../symbols/cont_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:href="../symbols/container_closed_1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+<typeview id="oid6" xlink:role="type" xlink:href="../object_types/informationgroup.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/info_group.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/info_group.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/information_group.png" xlink:actuate="user"/>
+ </typeview>
+</metis>
+

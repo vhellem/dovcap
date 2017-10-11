@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="composition_rule" name="composition_rule" title="Composition rule" desc="" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="composition_rule" xlink:href="#composition_rule" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

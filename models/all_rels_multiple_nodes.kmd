@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="1"
+ nextoid="1">
+
+ <object id="UUID4_0927B087-A390-4C40-88AD-DB7B577789A1">
+  <valueset size="15" xlink:role="type" xlink:title="Relationships Only Layout Strategy" xlink:href="metis:layout#oid111" xlink:actuate="user">
+   <string name="IDENTIFIER">all rels multiple nodes</string>
+   <string name="DESCRIPTION" class="shared"></string>
+   <integer name=":LayoutBase.IsSystemStrategy">0</integer>
+   <integer name="LayoutDecompRels">1</integer>
+   <integer name="LayoutIntraContRels">1</integer>
+   <integer name="LayoutInterContRels">1</integer>
+   <integer name="CrossContainers">0</integer>
+   <integer name="BridgeRels">0</integer>
+   <integer name="SpaceRels">1</integer>
+   <integer name="SpaceDecompRels">1</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="IsSystemStrategy">0</integer>
+  </valueset>
+ </object>
+
+
+</metis>

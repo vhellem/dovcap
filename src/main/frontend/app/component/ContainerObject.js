@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
 
+import ObjectEmitter from './ObjectEmitter';
+
+import ActionButton from './ActionButton.js';
+import Container from '../Container.js';
+
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => {
@@ -10,7 +15,9 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context('../image/', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(
+  require.context('../image/', false, /\.(png|jpe?g|svg)$/),
+);
 
 import org from '../image/networkdevice.svg';
 
@@ -26,56 +33,122 @@ class ContainerObject extends React.Component {
       x: props.parentX + containerJson.attributes.scaleX * props.parentWidth,
       y: props.parentY + containerJson.attributes.scaleY * props.parentHeight,
       name: containerJson.name,
-      type: containerJson.type
+      type: containerJson.type,
+      imageWidth: 1,
+      imageHeight: 1,
+      id: containerJson.objectReference.id,
     };
-
+    if (containerJson.objectReference.valueset.iconProp) {
+      var img = containerJson.objectReference.valueset.iconProp;
+      img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
+      // TODO: Has to set a generic icon value
+    }
     if (containerJson.objectReference.valueset.icon) {
       const image = new window.Image();
 
       image.src = images[containerJson.objectReference.valueset.icon];
       image.onload = () => {
         this.setState({
-          image: image
+          image,
         });
         this.drawImage();
       };
     }
+
+    this.drawImage = this.drawImage.bind(this);
   }
 
+  handleDragMove = e => {
+    this.state.x = e.target.position()['x'];
+    this.state.y = e.target.position()['y'];
+
+    var emitter = ObjectEmitter;
+    emitter.emit(
+      this.state.id,
+      this.state.x,
+      this.state.y,
+      this.state.width,
+      this.state.height,
+    );
+  };
+
   drawImage() {
-    var ratio = this.state.width / this.state.image.naturalWidth / 3;
-    var width = this.state.image.naturalWidth * ratio;
-    var height = this.state.image.naturalHeight * ratio;
-    if (height > this.state.height) height = this.state.height;
     var x = this.state.x;
     var y = this.state.y;
-    y = y + (this.state.height - height) / 2;
 
     this.setState({
-      imageWidth: width,
-      imageHeight: height,
-      imageX: x,
-      imageY: y
+      imageWidth: this.state.image.naturalHeight,
+      imageHeight: this.state.image.naturalWidth,
     });
   }
 
   componentWillReceiveProps(nextProps) {
     var containerJson = nextProps.container;
+    var width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
+    var height = containerJson.attributes.scaleHeight * nextProps.parentHeight;
+    var x =
+      nextProps.parentX +
+      containerJson.attributes.scaleX * nextProps.parentWidth;
+    var y =
+      nextProps.parentY +
+      containerJson.attributes.scaleY * nextProps.parentHeight;
 
     this.setState({
-      width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
-      height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
-      x: nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth,
-      y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
+      width,
+      height,
+      x,
+      y,
     });
-    //fix undefined
+    // fix undefined
 
     if (this.state.image) {
       this.drawImage();
     }
+
+    var emitter = ObjectEmitter;
+    emitter.emit(this.state.id, x, y, width, height);
   }
 
   render() {
+    var children =
+      this.props.container.children.length > 0
+        ? this.props.container.children.map(child => {
+            if (child.type !== 'Action Button') {
+            return (
+                <Container
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                />
+              );
+        } else if (child.type !== 'Action Button') {
+              return (
+                <ContainerObject
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                />
+              );
+              } else {
+                  return (
+                <ActionButton
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                />
+              );
+              }
+          })
+        : null;
     return (
       <Group>
         <Rect
@@ -86,12 +159,16 @@ class ContainerObject extends React.Component {
           stroke={1}
           dash={[10, 10]}
           cornerRadius={0}
+          draggable
+          onDragMove={this.handleDragMove}
         />
         <Image
-          x={this.state.imageX}
-          y={this.state.imageY}
-          width={this.state.imageWidth}
-          height={this.state.imageHeight}
+          x={this.state.x}
+          y={this.state.y}
+          height={this.state.height}
+          width={
+            this.state.imageHeight / this.state.imageWidth * this.state.height
+          }
           image={this.state.image}
         />
         <Text
@@ -102,8 +179,10 @@ class ContainerObject extends React.Component {
           y={this.state.y + this.state.height / 2 - 7}
           text={this.state.name}
           witdth={14}
+          fontSize={7}
           fontFamily="Arial"
         />
+        {children}
       </Group>
     );
   }

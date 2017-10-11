@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<?metis version="5.2.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ methods="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="ObjType_EKA:Value_UUID" name="ekaValue" title="Value (EKA)" desc="Value." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="ekaValue" xlink:href="#ObjType_EKA:Value_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="ekaValue" xlink:href="#ObjType_EKA:Value_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_EKA:IntegerValue_UUID" name="ekaIntegerValue" title="Integer Value (EKA)" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Value (EKA)" xlink:href="#ObjType_EKA:Value_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="value" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Value" label-flag="true" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:IntegerValue&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="ekaIntegerValue" xlink:href="#ObjType_EKA:IntegerValue_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="ekaIntegerValue" xlink:href="#ObjType_EKA:IntegerValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="value">0</integer>
+  </valueset>
+ </type>
+
+ <type id="ObjType_EKA:FloatValue_UUID" name="ekaFloatValue" title="Float Value (EKA)" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Value (EKA)" xlink:href="#ObjType_EKA:Value_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="value" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Value" label-flag="true" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:FloatValue&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="ekaFloatValue" xlink:href="#ObjType_EKA:FloatValue_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="ekaFloatValue" xlink:href="#ObjType_EKA:FloatValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <float name="value">0.0</float>
+  </valueset>
+ </type>
+
+ <type id="ObjType_EKA:StringValue_UUID" name="ekaStringValue" title="String Value (EKA)" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="ekaValue" xlink:href="#ObjType_EKA:Value_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value" label-flag="true" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:StringValue&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="ekaStringValue" xlink:href="#ObjType_EKA:StringValue_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="ekaStringValue" xlink:href="#ObjType_EKA:StringValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="value"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid121" name="ValuesTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+  <arg-list size="9">
+   <string name="ReadOnly">name</string>
+   <string name="Row1">name</string>
+   <string name="Row2">Subform</string>
+   <string name="Subform.Caption">Values:</string>
+   <string name="Subform.Columns">name,description,value</string>
+   <string name="Subform.Link">relationship-to</string>
+   <string name="Subform.Link.RelDir">out</string>
+   <string name="Subform.Link.RelType">eka_relships.kmd#RelType_EKA:Member_UUID</string>
+   <string name="Subform.Link.Type">#ObjType_EKA:Value_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Value (EKA)" xlink:href="#ObjType_EKA:Value_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../views/layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="false"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="description" visible-flag="false"/>
+   <propertyview name="comments" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../views/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../views/symbols/productproperty.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../views/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../views/symbols/productproperty.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../views/icons/productproperty.png"/>
+ </typeview>
+
+
+</metis>

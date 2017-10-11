@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="2"
+ nextoid="4">
+
+ <domain id="oid1" name="OrganizationDomain" title="Organization Domain" desc="Contains Organization, Network, Partnership, Competitor, Position, Communication and Responsible Position.&#10;The organization domain is used to represent the organizational aspect of the enterprise. The most central modelling object in this domain is the organization, which is a generic concept covering corporations, departments, sections, groups, etc. The organization can be decomposed (e.g. department has sections), or attached to one or more functions. A function is also an organization, but it is not a decomposition, but rather a characteristic of the other organization.">
+  <domain-link xlink:role="domain" xlink:href="#oid3" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization.kmd#oid11" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization.kmd#oid10" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization.kmd#oid8" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization.kmd#oid9" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization.kmd#oid7" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization.kmd#oid40" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/person.kmd#oid1" xlink:actuate="user"/> 
+  <complex-type-link xlink:role="type" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/position.kmd#oid1" xlink:actuate="user"/> 
+  <complex-type-link xlink:role="type" xlink:href="../object_types/organization_network.kmd#oid1" xlink:actuate="user"/> 
+ </domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_part_of-includes.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/uses-used_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_employee-employed_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/requires-required_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_responsible_for-performed_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/participant_in-has_participant.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_customer_of-has_customer.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_partner_of-has_partner.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_manager_of-has_manager.kmd#oid2" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_role_of-has_role.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/cooperate_with-cooperate_with.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+</metis>

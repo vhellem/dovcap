@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="5">
+
+ <type id="oid1" name="ProcessCondition" title="Process Condition" usage="object" desc="A Process Condition can be used to express that a process has reached a certain state, for instance a milestone. &#10;This &#34;state&#34; can be defined by the properties. The Value property picks up the name of the object connected via the &#34;represents&#34; relationship. The Predicate property can include a logical expression describing the state. The color of the object symbol will change automatically depending on the type of Condition chosen.">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" desc="  " label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" desc=" " description-flag="true"/>
+  <property name="predicate" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Predicate"/>
+  <property name="condition" xlink:role="integer-type" xlink:title="Condition" xlink:href="../primitive_types/primitive_types.kmd#oid74" label="Condition"/>
+  <property name="value" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Value" method-flag="true"/>
+  <property name="color" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Color" method-flag="true"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:href="color_methods.kmd#oid17"/>
+  <named-method-link name="value" xlink:role="cpp-method" xlink:href="process_condition_methods.kmd#oid1"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Process Condition" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="predicate"></string>
+   <integer name="condition">0</integer>
+   <string name="value" class="volatile"></string>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Process Condition" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process Condition" xlink:href="../symbols/process_condition.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="condition" property="value" macro="(expand (property condition))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Condition" xlink:href="../symbols/process_condition.svg#oid0" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="condition" property="value" macro="(expand (property condition))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/process_condition.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

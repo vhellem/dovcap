@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="Flow_Oil_process_Gas" name="Flow_Oil_process_Gas" title="Gas Flow" desc="Any kind of gas flow, normally taking place through some kind of pipes." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Flow" xlink:href="flow.kmd#OilProcessFlow"/>
+  <typeview-link xlink:role="typeview" xlink:href="#_002aso901bcpnaebbeik"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Gas Flow" xlink:href="#Flow_Oil_process_Gas" xlink:actuate="user">
+   <string name="from">gas to</string>
+   <string name="to">gas from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Gas Flow" xlink:href="#Flow_Oil_process_Gas" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <typeview id="_002aso901bcpnaebbeik" xlink:role="type" xlink:title="Gas Flow" xlink:href="#Flow_Oil_process_Gas" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Midpoint text black line" xlink:href="http://xml.metis.no/xml/symbols/relship_midpoint_text_black.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+   <replace tag="line" property="linecolor" macro="(expand &#34;red&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34; &#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/relshp.png"/>
+ </typeview>
+
+
+</metis>

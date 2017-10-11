@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ nextoid="1">
+
+ <cpp-method id="_002as5l01dk7qa89su7j" name="AKM_status_color" title="AKM status color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="AKM Status Colormap" xlink:href="../primitivetypes/akm_colormap.kmd#AKM_Status_Colormap"/>
+   <string name="Property">status_AKM</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="_002as5l01l0nqm0idabe" name="AKM_delayed_color" title="AKM delayed color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="AKM Delayed Colormap" xlink:href="../primitivetypes/akm_colormap.kmd#AKM_Delayed_Colormap"/>
+   <string name="Property">delayed</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>
