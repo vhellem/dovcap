@@ -1,7 +1,6 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?metis version="9.5"?>
 <?metisxml version="1.2"?>
-<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
 <metis
  xmlns="http://www.metis.no/metis"
  xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,7 +46,7 @@
  <object id="UUID4_58429F60-E355-4DC7-837A-753A4C861102">
   <valueset size="14" xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23" xlink:actuate="user">
    <string name="name">ActionButton</string>
-   <string name="description">alert('test');
+   <string name="description">alert('this is from xml file');
 </string>
    <integer name="mode">12</integer>
    <integer name="scriptEnum">0</integer>
