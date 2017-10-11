@@ -122,7 +122,11 @@ public class Model {
           if (referenceIndex != -1) {
             String icon;
             icon = typeviewL.get(referenceIndex).valueset.get("icon");
-            currObject.addValueset("icon", icon);
+            if(icon != null){
+              if(icon.substring(icon.length()-3, icon.length()).equals("svg")){
+                currObject.addValueset("icon", icon);
+              }
+            }
           }
         }
       }
