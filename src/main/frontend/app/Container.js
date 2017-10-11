@@ -79,7 +79,6 @@ class Container extends React.Component {
           stroke={1}
           cornerRadius={10}
           draggable={true}
-          onDragStart={console.log('DRAGGING')}
         />
         <Text
           x={this.state.x + 10}
