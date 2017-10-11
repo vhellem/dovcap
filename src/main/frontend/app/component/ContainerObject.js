@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
+
+import ObjectEmitter from './ObjectEmitter';
+
 import ActionButton from './ActionButton.js';
 import Container from '../Container.js';
+
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => {
@@ -27,7 +31,8 @@ class ContainerObject extends React.Component {
       x: props.parentX + containerJson.attributes.scaleX * props.parentWidth,
       y: props.parentY + containerJson.attributes.scaleY * props.parentHeight,
       name: containerJson.name,
-      type: containerJson.type
+      type: containerJson.type,
+      id: containerJson.objectReference.id
     };
     if (containerJson.objectReference.valueset.iconProp) {
       var img = containerJson.objectReference.valueset.iconProp;
@@ -47,6 +52,14 @@ class ContainerObject extends React.Component {
       };
     }
   }
+
+  handleDragMove = (e) => {
+  this.state.x = e.target.position()["x"]
+  this.state.y = e.target.position()["y"]
+
+  var emitter = ObjectEmitter;
+  emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
+}
 
   drawImage() {
     var ratio = this.state.width / this.state.image.naturalWidth / 3;
@@ -82,6 +95,11 @@ class ContainerObject extends React.Component {
   }
 
   render() {
+    var emitter = ObjectEmitter;
+    console.log('yoyoyo: ', this.state.x);
+    console.log('tilsvarende ting: ', this.state.id, this.state.name);
+    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
+
     var children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
@@ -131,6 +149,8 @@ class ContainerObject extends React.Component {
           stroke={1}
           dash={[10, 10]}
           cornerRadius={0}
+          draggable={true}
+          onDragMove={this.handleDragMove}
         />
         <Image
           x={this.state.imageX}
