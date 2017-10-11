@@ -40,6 +40,7 @@ public class Parser extends DefaultHandler {
     boolean readingValueset;
     boolean readingRelationshipView;
     boolean readingRelationship;
+    boolean readingIcon;
     myObject objectTmp;
 
     public Parser(String objectXmlFileName) {
@@ -55,6 +56,7 @@ public class Parser extends DefaultHandler {
         readingValueset = false;
         readingRelationshipView = false;
         readingRelationship = false;
+        readingIcon = false;
         parseDocument();
         //printJson();
     }
@@ -291,7 +293,17 @@ public class Parser extends DefaultHandler {
             String iconLink = attributes.getValue("macro");
             int dotIndex = iconLink.lastIndexOf(".");
             int startIndex = iconLink.lastIndexOf("/");
-            objectTmp.addValueset("icon", iconLink.substring(startIndex+1, dotIndex+4));
+            if(iconLink.substring(dotIndex+1, dotIndex+4).equals("svg")){
+              objectTmp.addValueset("icon", iconLink.substring(startIndex+1, dotIndex+4));
+            }
+          }
+        }
+        if (elementName.equals("string")) {
+          String name = attributes.getValue("name");
+          if (name.length() >= 4){
+            if (name.substring(0, 4).equals("icon")) {
+              readingIcon = true;
+            }
           }
         }
     }
@@ -324,6 +336,21 @@ public class Parser extends DefaultHandler {
 
         if (element.equals("relationship")) {
           readingRelationship = false;
+        }
+        if (element.equals("string")) {
+          if(readingIcon & tmpValue != null){
+            String iconLink = tmpValue;
+            int dotIndex = iconLink.lastIndexOf(".");
+            int startIndex = iconLink.lastIndexOf("/");
+            try{
+              if(iconLink.substring(dotIndex+1, dotIndex+4).equals("svg")){
+                String icon = iconLink.substring(startIndex+1, dotIndex+4);
+                objectTmp.addValueset("icon", icon);
+              }
+            } catch (StringIndexOutOfBoundsException e) {
+              // Not a valid icon.
+            }
+          }
         }
     }
 
