@@ -22,16 +22,10 @@ class Relationship extends React.Component {
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   componentDidMount() {
-    console.log('hdlfalskjdfklsdf');
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
 
     var emitter = ObjectEmitter;
-    console.log('lolol fromId: ', this.state.fromId);
-    console.log('lolol toId:', this.state.toId);
-    console.log('TEEEEEST:', this.props.data['type'].split(' ').slice(1,2));
-    console.log('halla:', this.state.text2);
-
     var num = this.props.data['type'].split(' ').length;
     var x = this.props.data['type']
       .split(' ')
@@ -42,16 +36,12 @@ class Relationship extends React.Component {
       text2: "is " + x + " of"
     });
 
-    emitter.addListener(this.state.fromId, (x, y, width, height) => {
-      console.log('theeee position of from: ', x, y, width, height);
-      this.setState({
+    emitter.addListener(this.state.fromId, (x, y, width, height) => {      this.setState({
         fromPos: { left: x, top: y, width: width, height }
       });
     });
 
-    emitter.addListener(this.state.toId, (x, y, width, height) => {
-      console.log('theeee position of to: ', x, y, width, height);
-      this.setState({
+    emitter.addListener(this.state.toId, (x, y, width, height) => {      this.setState({
         toPos: { left: x, top: y, width: width, height }
       });
     });
@@ -84,16 +74,23 @@ class Relationship extends React.Component {
       return Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2);
     }
 
+    function getPerpendicularity(x1, y1, x2, y2, horizontal) {
+      if(!horizontal) {
+        return (Math.abs(y2-y1) / (Math.abs(x2-x1) + Math.abs(y2-y1)))
+      }
+      else {
+        return (Math.abs(x2-x1) / (Math.abs(x2-x1) + Math.abs(y2-y1)))
+      }
+    }
+
     function getTextPosition(x1, y1, x2, y2, distanceFromObject, rightPerpendicular) {
       const perpendicularDistanceFromLine = 20;
 
-      var a = Math.sqrt(distanceFromObject ** 2 / (2 * ((x2 - x1) * 2 + (y2 - y1) ** 2)));
+      var a = Math.sqrt(distanceFromObject ** 2 / (2 * ((x2 - x1) ** 2 + (y2 - y1) ** 2)));
       var x = x1 + (x2 - x1) * a;
       var y = y1 + (y2 - y1) * a;
-      //console.log(a);
-
       var a2 = Math.sqrt(
-        perpendicularDistanceFromLine ** 2 / (2 * ((x2 - x1) * 2 + (y2 - y1) ** 2))
+        perpendicularDistanceFromLine ** 2 / (2 * ((x2 - x1) ** 2 + (y2 - y1) ** 2))
       );
 
       if (rightPerpendicular) {
@@ -104,10 +101,16 @@ class Relationship extends React.Component {
         y += (x2 - x1) * a2;
       }
 
-      //console.log('a2:', a2);
-
       return [x, y];
     }
+
+    function sortByKey(array, key) {
+        return array.sort(function(a, b) {
+            var x = a[key]; var y = b[key];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
+    }
+
     var fromNodes = getRectangleNodes(
       this.state.fromPos.left,
       this.state.fromPos.top,
@@ -122,16 +125,35 @@ class Relationship extends React.Component {
       this.state.toPos.height
     );
 
+    var possiblePositions = []
     var minDistance = 999999999;
 
     for (var i = 0; i < fromNodes.length; i++) {
       for (var j = 0; j < toNodes.length; j++) {
-        var d = squareDistance(fromNodes[i][0], fromNodes[i][1], toNodes[j][0], toNodes[j][1]);
-        if (d < minDistance) {
-          minDistance = d;
-          minFrom = fromNodes[i];
-          minTo = toNodes[j];
+        var fromHori = true
+        var toHori = true
+        if (i % 2 == 0) {
+          fromHori = false
         }
+        if (j % 2 == 0) {
+          toHori = false
+        }
+        var d = squareDistance(fromNodes[i][0], fromNodes[i][1], toNodes[j][0], toNodes[j][1]);
+        possiblePositions.push({dist: d, from:fromNodes[i], to:toNodes[j], fromHori:fromHori, toHori:toHori})
+      }
+    }
+    possiblePositions = sortByKey(possiblePositions, "dist")
+    possiblePositions = possiblePositions.slice(0, 3)
+    var bestPerpendiculatiry = 0;
+
+    for (var i = 0; i < possiblePositions.length; i++) {
+      var fromP = getPerpendicularity(possiblePositions[i]["from"][0], possiblePositions[i]["from"][1], possiblePositions[i]["to"][0],possiblePositions[i]["to"][1], possiblePositions[i]["fromHori"]);
+      var toP = getPerpendicularity(possiblePositions[i]["to"][0], possiblePositions[i]["to"][1], possiblePositions[i]["from"][0],possiblePositions[i]["from"][1], possiblePositions[i]["toHori"]);
+      var currentP = Math.min(fromP, toP)
+      if (currentP > bestPerpendiculatiry) {
+        bestPerpendiculatiry = currentP;
+        minFrom = possiblePositions[i]["from"];
+        minTo = possiblePositions[i]["to"];
       }
     }
 
@@ -145,14 +167,14 @@ class Relationship extends React.Component {
     if (minTo[0] < minFrom[1]) {
       toDist = 20;
     }
-    toDist = 70
+    toDist = 30
 
     textFrom = getTextPosition(
       minFrom[0],
       minFrom[1],
       minTo[0],
       minTo[1],
-      30,
+      toDist,
       rightPerpendicular
     );
     textTo = getTextPosition(
@@ -163,7 +185,6 @@ class Relationship extends React.Component {
       toDist,
       !rightPerpendicular
     );
-    console.log('textFrom', textFrom);
 
     return (
       <Group>
