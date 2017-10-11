@@ -33,7 +33,7 @@ class Container extends React.Component {
     var children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
-            if (child.type === 'Container') {
+            if (child.type == 'View') {
               return (
                 <Container
                   container={child}
@@ -86,7 +86,7 @@ class Container extends React.Component {
           y={this.state.y + 10}
           width={this.state.width - 10}
           text={this.state.name}
-          fontSize={14}
+          fontSize={7}
           fontFamily="Arial"
         />
         {children}
