@@ -31,7 +31,7 @@ class App extends React.Component {
 
       console.log(json);
       this.setState({
-        selectedModel: 2,
+        selectedModel: 0,
         modelViews: json.modelViewL,
         relationships: json.relationshipL,
       });

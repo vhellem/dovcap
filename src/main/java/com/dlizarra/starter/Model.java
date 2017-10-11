@@ -85,7 +85,7 @@ public class Model {
                 queue.add(child);
 
                 if(child.name != null){
-                  if(!child.name.equals("Workplace")){
+                  if(!child.name.equals("Top-Container")){
                     double childScaleX = Double.parseDouble(child.attributes.get("left"))*decomp/width;
                     double childScaleY = Double.parseDouble(child.attributes.get("top"))*decomp/height;
                     double childScaleHeight = Double.parseDouble(child.attributes.get("height"))*decomp/height;
