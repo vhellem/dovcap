@@ -13,7 +13,7 @@ class ModelView extends React.Component {
       relationships: props.relationships,
       width: 0,
       height: 0,
-      x: 5, //Some space in between stage and top-container is needed
+      x: 5, // Some space in between stage and top-container is needed
       y: 5
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -28,7 +28,17 @@ class ModelView extends React.Component {
   }
 
   updateWindowDimensions() {
-    this.setState({ width: window.innerWidth * 0.9, height: window.innerHeight * 0.9 });
+    this.setState({
+      width: window.innerWidth * 0.9,
+      height: window.innerHeight * 0.9
+    });
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      children: newProps.modelView.children,
+      relationships: newProps.relationships
+    });
   }
   render() {
     return (
@@ -36,7 +46,7 @@ class ModelView extends React.Component {
         <Layer>
           <Container
             container={this.state.children[0]}
-            parentWidth={this.state.width * 0.99} //Some space in between stage and top-container is needed
+            parentWidth={this.state.width * 0.99} // Some space in between stage and top-container is needed
             parentHeight={this.state.height * 0.99}
             parentX={this.state.x}
             parentY={this.state.y}
