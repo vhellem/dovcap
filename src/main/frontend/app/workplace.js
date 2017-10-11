@@ -17,8 +17,7 @@ class Workplace extends React.Component {
   componentWillMount() {
     getModelsFromBackend().then(res => {
       const json = JSON.parse(res.text);
-
-      console.log(json);
+      // console.log(json);
       this.setState({
         selectedModel: 0,
         modelViews: json.modelViewL,

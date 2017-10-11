@@ -34,9 +34,8 @@ class Uploader extends Component {
   }
   dropHandler(files) {
     const file = files[0];
-    const name = file.name;
     const allowedFileExt = ['kmv', 'kmd'];
-    const valid = (allowedFileExt.indexOf(name.split('.')[1]) > -1);
+    const valid = (allowedFileExt.indexOf(file.name.split('.')[1]) > -1);
     if (valid) {
       const fileRequest = new FormData();
       fileRequest.append('file', file);
@@ -66,7 +65,6 @@ class Uploader extends Component {
         return res;
       }
     );
-    //  this.updateModels();
   }
   render() {
     return (
@@ -80,7 +78,7 @@ class Uploader extends Component {
               <td><strong>Delete model</strong></td>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="upload-table-body">
             {this.getFileNameRows()}
           </tbody>
         </table>
