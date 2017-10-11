@@ -1,6 +1,7 @@
 package com.dlizarra.starter;
 
 import java.util.*;
+import java.io.File;
 
 public class Model {
 
@@ -85,7 +86,7 @@ public class Model {
                 queue.add(child);
 
                 if(child.name != null){
-                  if(!child.name.equals("Workplace")){
+                  if(!(child.name.equals("Workplace") | child.name.equals("Top-Container"))){
                     double childScaleX = Double.parseDouble(child.attributes.get("left"))*decomp/width;
                     double childScaleY = Double.parseDouble(child.attributes.get("top"))*decomp/height;
                     double childScaleHeight = Double.parseDouble(child.attributes.get("height"))*decomp/height;
@@ -104,10 +105,50 @@ public class Model {
         this.putNewScalesOnObjects(newScales);
       }
 
+      File folder = new File("models/");
+      File[] listOfFiles = folder.listFiles();
+      // Attempts to find and add icons for the files that does not have any icons yet.
+      Iterator<myObject> objectIterator = objectL.iterator();
+      while(objectIterator.hasNext()){
+        myObject currObject = objectIterator.next();
+        if(currObject.valueset.containsKey("icon")) {
+          if(!currObject.valueset.get("icon").equals(null)){
+            continue;
+          }
+        }
+        ArrayList<String> candidates = new ArrayList<String>();
+        int lowestCandidate = 100;
+        String name = currObject.type;
+        if(name != null) {
+          for(String subtype : name.split(" ")){
+            for (File file : listOfFiles){
+              String filename = file.getName();
+              int dotIndex = filename.lastIndexOf(".");
+              int startIndex = filename.lastIndexOf("/");
+              if(filename.length() - dotIndex > 3) {
+                if(filename.substring(dotIndex+1, dotIndex+4).equals("svg")){
+                  filename = filename.substring(startIndex+1, dotIndex+4);
+                  if(filename.contains(subtype.toLowerCase())) {
+                    candidates.add(filename);
+                    if(filename.length() < lowestCandidate) {
+                      lowestCandidate = filename.length();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        for (String cand : candidates) {
+          if(cand.length() == lowestCandidate) {
+            currObject.addValueset("icon", cand);
+          }
+        }
+      }
 
       // Adds the icon as part of the valueset of each object which
       // has a metamodel reference that exists in the parsed file list.
-      Iterator<myObject> objectIterator = objectL.iterator();
+      objectIterator = objectL.iterator();
       while(objectIterator.hasNext()){
         myObject currObject = objectIterator.next();
         if(currObject.attributes.containsKey("xlink:href")) {
@@ -122,7 +163,11 @@ public class Model {
           if (referenceIndex != -1) {
             String icon;
             icon = typeviewL.get(referenceIndex).valueset.get("icon");
-            currObject.addValueset("icon", icon);
+            if(icon != null){
+              if(icon.substring(icon.length()-3, icon.length()).equals("svg")){
+                currObject.addValueset("icon", icon);
+              }
+            }
           }
         }
       }
