@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Container from './Container.js';
+import Container from '../Container.js';
 import { Layer, Arrow, Stage, Group, Text } from 'react-konva';
 import ObjectEmitter from './ObjectEmitter';
 
@@ -11,15 +11,13 @@ class Relationship extends React.Component {
       id: '',
       name: '',
       children: null,
-      fromPos: { left: 30, top: 30, width: 100, height: 100 },
-      toPos: { left: 200, top: 200, width: 100, height: 100 },
-      minFrom: [0, 0],
-      minTo: [0, 0],
       data: props.data,
       fromId: props.data['valueset']['origin_href'].substring(1),
       toId: props.data['valueset']['target_href'].substring(1),
-      textFrom: [0, 0],
-      textTo: [0, 0]
+      text1: ' ',
+      text2: ' ',
+      fromPos: { left: 30, top: 30, width: 100, height: 100 },
+      toPos: { left: 200, top: 200, width: 100, height: 100 }
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -31,6 +29,18 @@ class Relationship extends React.Component {
     var emitter = ObjectEmitter;
     console.log('lolol fromId: ', this.state.fromId);
     console.log('lolol toId:', this.state.toId);
+    console.log('TEEEEEST:', this.props.data['type'].split(' ').slice(1,2));
+    console.log('halla:', this.state.text2);
+
+    var num = this.props.data['type'].split(' ').length;
+    var x = this.props.data['type']
+      .split(' ')
+      .slice(2, num - 1)
+      .join(' ');
+    this.setState({
+      text1: "has " + x,
+      text2: "is " + x + " of"
+    });
 
     emitter.addListener(this.state.fromId, (x, y, width, height) => {
       console.log('theeee position of from: ', x, y, width, height);
@@ -55,6 +65,12 @@ class Relationship extends React.Component {
     this.setState({ width: window.innerWidth * 0.9, height: window.innerHeight * 0.9 });
   }
   render() {
+    var minFrom = [0, 0];
+    var minTo = [0, 0];
+
+    var textFrom = [0, 0]
+    var textTo = [0, 0]
+
     function getRectangleNodes(left, top, width, height) {
       return [
         [left + width / 2, top],
@@ -113,51 +129,52 @@ class Relationship extends React.Component {
         var d = squareDistance(fromNodes[i][0], fromNodes[i][1], toNodes[j][0], toNodes[j][1]);
         if (d < minDistance) {
           minDistance = d;
-          this.state.minFrom = fromNodes[i];
-          this.state.minTo = toNodes[j];
+          minFrom = fromNodes[i];
+          minTo = toNodes[j];
         }
       }
     }
 
     //todo: make more general
     var rightPerpendicular = true;
-    if (this.state.minTo[1] < this.state.minFrom[1]) {
+    if (minTo[1] < minFrom[1]) {
       rightPerpendicular = false;
     }
 
     var toDist = 100;
-    if (this.state.minTo[0] < this.state.minFrom[1]) {
+    if (minTo[0] < minFrom[1]) {
       toDist = 20;
     }
+    toDist = 70
 
-    this.state.textFrom = getTextPosition(
-      this.state.minFrom[0],
-      this.state.minFrom[1],
-      this.state.minTo[0],
-      this.state.minTo[1],
+    textFrom = getTextPosition(
+      minFrom[0],
+      minFrom[1],
+      minTo[0],
+      minTo[1],
       30,
       rightPerpendicular
     );
-    this.state.textTo = getTextPosition(
-      this.state.minTo[0],
-      this.state.minTo[1],
-      this.state.minFrom[0],
-      this.state.minFrom[1],
+    textTo = getTextPosition(
+      minTo[0],
+      minTo[1],
+      minFrom[0],
+      minFrom[1],
       toDist,
       !rightPerpendicular
     );
-    console.log('textFrom', this.state.textFrom);
+    console.log('textFrom', textFrom);
 
     return (
       <Group>
         <Arrow
-          x={this.state.minFrom[0]}
-          y={this.state.minFrom[1]}
+          x={minFrom[0]}
+          y={minFrom[1]}
           points={[
             0,
             0,
-            this.state.minTo[0] - this.state.minFrom[0],
-            this.state.minTo[1] - this.state.minFrom[1]
+            minTo[0] - minFrom[0],
+            minTo[1] - minFrom[1]
           ]}
           pointerLength={5}
           pointerWidth={5}
@@ -167,18 +184,18 @@ class Relationship extends React.Component {
         />
         <Text
           align="center"
-          x={this.state.textFrom[0]}
-          y={this.state.textFrom[1]}
-          text={'Arrowtekst 1'}
+          x={textFrom[0]}
+          y={textFrom[1]}
+          text={this.state.text1}
           witdth={14}
           fontFamily="Calibri"
         />
 
         <Text
           align="center"
-          x={this.state.textTo[0]}
-          y={this.state.textTo[1]}
-          text={'Arrowtekst 2'}
+          x={textTo[0]}
+          y={textTo[1]}
+          text={this.state.text2}
           witdth={14}
           fontFamily="Calibri"
         />

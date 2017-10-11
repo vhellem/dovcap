@@ -8,6 +8,7 @@ import java.io.StringReader;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.nio.file.*;
 import java.nio.charset.*;
@@ -29,6 +30,9 @@ public class Parser extends DefaultHandler {
     List<myObject> modelViewL;
     List<myObject> relationshipL;
     List<myObject> relationshipViewL;
+    List<myObject> typeviewL;
+    List<String> linkedDocsL;
+    List<String> loadedDocsL;
 
     String objectXmlFileName;
     String tmpValue;
@@ -45,6 +49,9 @@ public class Parser extends DefaultHandler {
         modelViewL = new ArrayList<myObject>();
         relationshipL = new ArrayList<myObject>();
         relationshipViewL = new ArrayList<myObject>();
+        typeviewL = new ArrayList<myObject>();
+        linkedDocsL = new ArrayList<String>();
+        loadedDocsL = new ArrayList<String>();
         readingValueset = false;
         readingRelationshipView = false;
         readingRelationship = false;
@@ -52,13 +59,34 @@ public class Parser extends DefaultHandler {
         //printJson();
     }
 
+    public void parseFile(String fileName){
+      this.objectXmlFileName = fileName;
+      parseDocument();
+    }
+
+    private void loadLinkedDocuments(){
+      List<String> currentLinkedDocsL = new ArrayList<String>(linkedDocsL);
+      Iterator<String> currentLinkedDocsIterator = currentLinkedDocsL.iterator();
+      while(currentLinkedDocsIterator.hasNext()){
+        String doc = currentLinkedDocsIterator.next();
+        doc = lookupFileName(doc);
+        if(!loadedDocsL.contains(doc)){
+          loadedDocsL.add(doc);
+          parseFile(doc);
+        }
+      }
+    }
+
     private void parseDocument() {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser parser = factory.newSAXParser();
             parser.parse(objectXmlFileName, this);
+            loadedDocsL.add(objectXmlFileName);
+            loadLinkedDocuments();
         } catch (ParserConfigurationException e) {
             System.out.println("ParserConfig error");
+            System.out.println(e);
         } catch (SAXException e) {
             System.out.println("SAXException : xml not well formed");
             System.out.println(e);
@@ -68,9 +96,26 @@ public class Parser extends DefaultHandler {
         }
     }
 
+    private class MyExclusionStrategy implements ExclusionStrategy {
+      private final Class<?> typeToSkip;
+
+      private MyExclusionStrategy(Class<?> typeToSkip) {
+        this.typeToSkip = typeToSkip;
+      }
+
+      public boolean shouldSkipClass(Class<?> clazz) {
+        return (clazz == typeToSkip);
+      }
+
+      public boolean shouldSkipField(FieldAttributes f) {
+        return f.getAnnotation(gsonSkip.class) != null;
+      }
+    }
+
     public String getJson(){
         Gson gson = new GsonBuilder()
             .setPrettyPrinting()
+            .setExclusionStrategies(new MyExclusionStrategy(Parser.class))
             .serializeNulls()
             .create();
         Model model = new Model();
@@ -79,12 +124,23 @@ public class Parser extends DefaultHandler {
         model.setviewL(viewL);
         model.setRelationshipL(relationshipL);
         model.setRelationshipViewL(relationshipViewL);
+        model.settypeviewL(typeviewL);
+        model.setParser(this);
         model.preprocess();
         return gson.toJson(model);
     }
 
     private void printJson(){
         System.out.println(getJson());
+    }
+
+    public String lookupFileName(String filename) {
+      int dotIndex = filename.lastIndexOf(".");
+      int startIndex = filename.lastIndexOf("/");
+      if (dotIndex == -1 | startIndex == -1){
+        return filename;
+      }
+      return "models" + filename.substring(startIndex, dotIndex+4);
     }
 
     @Override
@@ -159,6 +215,7 @@ public class Parser extends DefaultHandler {
             if (attributes.getValue("xlink:role").equals("type")) {
                 objectTmp.setType(attributes.getValue("xlink:title"));
             }
+            linkedDocsL.add(attributes.getValue("xlink:href"));
             objectTmp.setAttributes(modelAtt);
         }
         if (elementName.equals("relationship")) {
@@ -217,6 +274,24 @@ public class Parser extends DefaultHandler {
             objectTmp.addValueset("target_role", attributes.getValue("xlink:role"));
             objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
             objectTmp.addValueset("target_href", attributes.getValue("xlink:href"));
+          }
+        }
+        if (elementName.equals("typeview")) {
+          int index = typeviewL.indexOf(objectXmlFileName + ":" + attributes.getValue("id"));
+          if(index != -1){
+            objectTmp = typeviewL.get(index);
+          } else {
+            objectTmp = new myObject();
+            typeviewL.add(objectTmp);
+          }
+          objectTmp.setId(objectXmlFileName + ":" + attributes.getValue("id"));
+        }
+        if (elementName.equals("replace")){
+          if (attributes.getValue("tag").equals("icon")) {
+            String iconLink = attributes.getValue("macro");
+            int dotIndex = iconLink.lastIndexOf(".");
+            int startIndex = iconLink.lastIndexOf("/");
+            objectTmp.addValueset("icon", iconLink.substring(startIndex+1, dotIndex+4));
           }
         }
     }

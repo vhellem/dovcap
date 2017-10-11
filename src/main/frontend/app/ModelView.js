@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Container from './Container.js';
-import Relationship from './Relationship.js';
+import Relationship from './component/Relationship.js';
 import { Layer, Rect, Stage, Group } from 'react-konva';
 
 class ModelView extends React.Component {
@@ -31,11 +31,8 @@ class ModelView extends React.Component {
     this.setState({ width: window.innerWidth * 0.9, height: window.innerHeight * 0.9 });
   }
   render() {
-    console.log('lol: ', this.props);
-    console.log('wtf: ', this.state.relationships);
     return (
       <div>
-        {this.state.relationships.map(a => <h1>{a['id']}</h1>)}
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
             <Container
