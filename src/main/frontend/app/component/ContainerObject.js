@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
+
+import ObjectEmitter from './ObjectEmitter';
+
 import ActionButton from './ActionButton.js';
 import Container from '../Container.js';
+
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => {
@@ -32,11 +36,11 @@ class ContainerObject extends React.Component {
       type: containerJson.type,
       imageWidth: 1,
       imageHeight: 1,
+      id: containerJson.objectReference.id,
     };
     if (containerJson.objectReference.valueset.iconProp) {
       var img = containerJson.objectReference.valueset.iconProp;
       img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
-      console.log(img);
       // TODO: Has to set a generic icon value
     }
     if (containerJson.objectReference.valueset.icon) {
@@ -54,9 +58,21 @@ class ContainerObject extends React.Component {
     this.drawImage = this.drawImage.bind(this);
   }
 
-  drawImage() {
-    console.log('kake');
+  handleDragMove = e => {
+    this.state.x = e.target.position()['x'];
+    this.state.y = e.target.position()['y'];
 
+    var emitter = ObjectEmitter;
+    emitter.emit(
+      this.state.id,
+      this.state.x,
+      this.state.y,
+      this.state.width,
+      this.state.height,
+    );
+  };
+
+  drawImage() {
     var x = this.state.x;
     var y = this.state.y;
 
@@ -68,22 +84,29 @@ class ContainerObject extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     var containerJson = nextProps.container;
+    var width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
+    var height = containerJson.attributes.scaleHeight * nextProps.parentHeight;
+    var x =
+      nextProps.parentX +
+      containerJson.attributes.scaleX * nextProps.parentWidth;
+    var y =
+      nextProps.parentY +
+      containerJson.attributes.scaleY * nextProps.parentHeight;
 
     this.setState({
-      width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
-      height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
-      x:
-        nextProps.parentX +
-        containerJson.attributes.scaleX * nextProps.parentWidth,
-      y:
-        nextProps.parentY +
-        containerJson.attributes.scaleY * nextProps.parentHeight,
+      width,
+      height,
+      x,
+      y,
     });
     // fix undefined
 
     if (this.state.image) {
       this.drawImage();
     }
+
+    var emitter = ObjectEmitter;
+    emitter.emit(this.state.id, x, y, width, height);
   }
 
   render() {
@@ -136,6 +159,8 @@ class ContainerObject extends React.Component {
           stroke={1}
           dash={[10, 10]}
           cornerRadius={0}
+          draggable
+          onDragMove={this.handleDragMove}
         />
         <Image
           x={this.state.x}

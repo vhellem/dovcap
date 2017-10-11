@@ -78,6 +78,7 @@ class Container extends React.Component {
           height={this.state.height}
           stroke={1}
           cornerRadius={10}
+          draggable={true}
         />
         <Text
           x={this.state.x + 10}
