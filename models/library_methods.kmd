@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ methods="1"
+ criteria="1"
+ nextoid="3">
+
+ <cpp-method id="oid1" title="getLibraryName" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid2" xlink:actuate="user"/>
+   <string name="Property">name</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid2" name="getLibrary" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="type">
+      <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/instance_of-instantiated_in.kmd#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

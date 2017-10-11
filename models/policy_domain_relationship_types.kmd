@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_02F64D93-6146-415D-A5AA-839DC60DDA71" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="13">
+   <complex-type-link xlink:role="type" xlink:title="Analysis Component influences-is influenced by Principle" xlink:href="../relationship_types/analysis_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Analysis_Component_influences-is_influenced_by_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Demand Component influences-is influenced by Principle" xlink:href="../relationship_types/demand_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Demand_Component_influences-is_influenced_by_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Principle leads to-is derived from Principle" xlink:href="../relationship_types/principle_leads_to-is_derived_from_principle.kmd#RelType_Semantics:Principle_leads_to-is_derived_from_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy Component influences-is influenced by Principle" xlink:href="../relationship_types/strategy_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Strategy_Component_influences-is_influenced_by_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Application Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_application_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Application_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Change Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_change_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Change_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Data Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_data_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Data_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable IT Architecture Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_it_architecture_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_IT_Architecture_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable IT Product" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_it_product.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_IT_Product_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Infrastructure Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_infrastructure_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Infrastructure_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable System" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_system.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_System_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Technology influences-is influenced by Architecture Principle" xlink:href="../relationship_types/technology_influences-is_influenced_by_architecture_principle.kmd#RelType_Semantics_ITArchitecture:Technology_influences-is_influenced_by_Architecture_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Resource Component" xlink:href="../relationship_types/architecture_principle_applies_to-has_applicable_resource_component.kmd#elType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Resource_Component_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

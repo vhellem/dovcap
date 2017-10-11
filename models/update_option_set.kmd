@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="7">
+
+ <type id="oid1" name="Update_Option_Set" title="Update Option Set" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - IF Configuration" xlink:href="object.kmd#oid1"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Update Option Set" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="New_Objects_Update_Option_Set" title="New Objects Update Option Set" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Update Option Set" xlink:href="#oid1"/>
+  <property name="action" xlink:role="integer-type" xlink:title="NewObjects Actions" xlink:href="../primitive_types/actions_for_updateoptions.kmd#oid1" label="Action" desc="New objects are objects that are found in the datasource now, but not in the model already.&#10;&#10;Please note that the new action and any container assignment given here is overridden by what is defined by the object mapping, unless the object mapping explicity defines &#60;em&#62;Use Type Update definition&#60;/em&#62; " default-visible="top"/>
+  <property name="actionOverride" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Calculated Action" desc="If you wish to use an expression to calculate the action to use for new objects of this type, specify that here. If this field contains any text, and select &#60;em&#62;calculate&#60;/em&#62; from the &#60;em&#62; Deleted Objects Action&#60;/em&#62; dropdown above." default-visible="top"/>
+  <property name="parentReferenceType" xlink:role="integer-type" xlink:title="Default Parent Adressing Options For Mapping" xlink:href="../primitive_types/default_parent_adressing_options.kmd#oid1" label="Container Reference Type" default-visible="top"/>
+  <property name="evaluateParentReference" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Container" default-visible="top"/>
+  <property name="parentReference" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Container" default-visible="top"/>
+  <property name="evaluateOpenSymbolURI" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Open Symbol URI" default-visible="top"/>
+  <property name="openSymbolURI" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Open Symbol URI" default-visible="top"/>
+  <property name="evaluateClosedSymbolURI" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Closed Symbol URI" default-visible="top"/>
+  <property name="closedSymbolURI" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Closed Symbol URI" default-visible="top"/>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="New Objects Update Option Set" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="action">1</integer>
+   <string name="actionOverride"></string>
+   <integer name="parentReferenceType">1</integer>
+   <integer name="evaluateParentReference">0</integer>
+   <string name="parentReference"></string>
+   <integer name="evaluateOpenSymbolURI">0</integer>
+   <string name="openSymbolURI"></string>
+   <integer name="evaluateClosedSymbolURI">0</integer>
+   <string name="closedSymbolURI"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Deleted_Objects_Update_Option_Set" title="Deleted Objects Update Option Set" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Update Option Set" xlink:href="#oid1"/>
+  <property name="action" xlink:role="integer-type" xlink:title="DeletedObjects Actions" xlink:href="../primitive_types/actions_for_updateoptions.kmd#oid2" label="Action" desc="Deleted objects are objects that exist in the model, but not in the data source." default-visible="top"/>
+  <property name="actionOverride" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Calculated Action" desc="If you wish to use an expression to calculate the action to use for deleted objects of this type, specify that here. If this field contains any text, and select &#60;em&#62;calculate&#60;/em&#62; from the &#60;em&#62; Deleted Objects Action&#60;/em&#62; dropdown above." default-visible="top"/>
+  <property name="parentReferenceType" xlink:role="integer-type" xlink:title="Default Parent Adressing Options For Mapping" xlink:href="../primitive_types/default_parent_adressing_options.kmd#oid1" label="Container Reference Type" default-visible="top"/>
+  <property name="evaluateParentReference" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Container" default-visible="top"/>
+  <property name="parentReference" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Container" default-visible="top"/>
+  <property name="evaluateOpenSymbolURI" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Open Symbol URI" default-visible="top"/>
+  <property name="openSymbolURI" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Open Symbol URI" default-visible="top"/>
+  <property name="evaluateClosedSymbolURI" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Closed Symbol URI" default-visible="top"/>
+  <property name="closedSymbolURI" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Closed Symbol URI" default-visible="top"/>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Deleted Objects Update Option Set" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="action">2</integer>
+   <string name="actionOverride"></string>
+   <integer name="parentReferenceType">1</integer>
+   <integer name="evaluateParentReference">0</integer>
+   <string name="parentReference"></string>
+   <integer name="evaluateOpenSymbolURI">0</integer>
+   <string name="openSymbolURI"></string>
+   <integer name="evaluateClosedSymbolURI">0</integer>
+   <string name="closedSymbolURI"></string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="New_Relationships_Update_Option_Set" title="New Relationships Update Option Set" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Update Option Set" xlink:href="#oid1"/>
+  <property name="action" xlink:role="integer-type" xlink:title="NewRelationships Actions" xlink:href="../primitive_types/actions_for_updateoptions.kmd#oid3" label="Action" desc="New objects are objects that are found in the datasource now, but not in the model already.&#10;&#10;Please note that the new action given here is overridden by what is defined by the relationship mapping, unless the relationship mapping explicity defines &#60;em&#62;Use Type Update definition&#60;/em&#62; " default-visible="top"/>
+  <property name="actionOverride" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Calculated Action" desc="If you wish to use an expression to calculate the action to use for new Relationships of this type, specify that here. If this field contains any text, and select &#60;em&#62;calculate&#60;/em&#62; from the &#60;em&#62; Deleted Relationships Action&#60;/em&#62; dropdown above." default-visible="top"/>
+  <property name="evaluateSymbolURI" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Symbol URI" default-visible="top"/>
+  <property name="symbolURI" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Symbol URI" default-visible="top"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="New Relationships Update Option Set" xlink:href="#oid4" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="action">1</integer>
+   <string name="actionOverride"></string>
+   <integer name="evaluateSymbolURI">0</integer>
+   <string name="symbolURI"></string>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="Deleted_Relationships_Update_Options_Set" title="Deleted Relationships Update Options Set" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Update Option Set" xlink:href="#oid1"/>
+  <property name="action" xlink:role="integer-type" xlink:title="DeletedRelationships Actions" xlink:href="../primitive_types/actions_for_updateoptions.kmd#oid4" label="Action" default-visible="top"/>
+  <property name="actionOverride" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Calculated Action" default-visible="top"/>
+  <property name="evaluateSymbolURI" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Symbol URI" default-visible="top"/>
+  <property name="symbolURI" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Symbol URI" default-visible="top"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Deleted Relationships Update Options Set" xlink:href="#oid5" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="action">1</integer>
+   <string name="actionOverride"></string>
+   <integer name="evaluateSymbolURI">0</integer>
+   <string name="symbolURI"></string>
+  </valueset>
+ </type>
+
+ <type id="oid6" name="Broken_Relationships_Update_Options_Set" title="Broken Relationships Update Options Set" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Update Option Set" xlink:href="#oid1"/>
+  <property name="action" xlink:role="integer-type" xlink:title="BrokenRelationships Actions" xlink:href="../primitive_types/actions_for_updateoptions.kmd#oid5" label="Action" default-visible="top"/>
+  <property name="actionOverride" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Calculated Action" default-visible="top"/>
+  <property name="evaluateSymbolURI" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Calculate Symbol URI" default-visible="top"/>
+  <property name="symbolURI" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Symbol URI" default-visible="top"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Broken Relationships Update Options Set" xlink:href="#oid6" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="action">1</integer>
+   <string name="actionOverride"></string>
+   <integer name="evaluateSymbolURI">0</integer>
+   <string name="symbolURI"></string>
+  </valueset>
+ </type>
+
+
+</metis>

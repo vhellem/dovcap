@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:KPI_History_UUID" name="KPI_History" title="KPI History" desc="A means of tracking historic KPI values." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="#UUID4_34C027E1-51AA-4C73-BA7B-C989CB8DF266"/>
+  <property name="asOfDate" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#oid35" label="As of Date" desc="The date that the Actual Value applied." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_History_AsOfDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="actualValue" xlink:role="string-type" xlink:title="numeric" xlink:href="metis:std#numeric" label="Actual Value" desc="The actual measured value on the As of Date." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_History_ActualValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="KPI History" xlink:href="#CompType_Semantics:KPI_History_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="KPI History" xlink:href="#CompType_Semantics:KPI_History_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <date-time name="asOfDate">00000000 000000000</date-time>
+   <string name="actualValue"></string>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_34C027E1-51AA-4C73-BA7B-C989CB8DF266" xlink:role="type" xlink:title="KPI History" xlink:href="#CompType_Semantics:KPI_History_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/kpi_history.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/kpi_history.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/kpi_history.png"/>
+ </typeview>
+
+
+</metis>

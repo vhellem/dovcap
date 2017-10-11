@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: timeline_event.svg</title>
+ <defs>
+  <symbol id="oid6" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Event</title>
+    <polyline points="0 128 512 128"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+    <rect x="0" y="144" width="512" height="48"
+     style=" stroke:#ffffff; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:status"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="15"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; vertical-align:bottom;"
+       class="TAG:text"></text>
+      <rect x="0" y="0" width="512" height="112"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="157"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:14;"
+       class="TAG:status_text"></text>
+      <rect x="16" y="144" width="480" height="48"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <rect x="0" y="0" width="512" height="256"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"></rect>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid6"/>
+</svg>

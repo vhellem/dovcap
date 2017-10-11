@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Sematics_Policy:Policy_Exception_UUID" name="Policy_Exception" title="Policy Exception" desc="In cases where a (potential) need for an exception to a policy may be necessary, used to represent the specific details of that exception." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/policy_exception.kmd#UUID4_7E8611C1-C2AC-4A81-B1B6-28A43BFE3734"/>
+  <property name="exceptionStatus" xlink:role="integer-type" xlink:title="Exception Status" xlink:href="../primitive_types/exception_status.kmd#PrimType_Semantics:Exception_Status_UUID" label="Status" desc="Used to capture the status (state) of the Policy Exception in the policy governance workflow." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics_Policy:Policy_Exception_exceptionStatus_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Policy Exception" xlink:href="#CompType_Sematics_Policy:Policy_Exception_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Policy Exception" xlink:href="#CompType_Sematics_Policy:Policy_Exception_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="exceptionStatus">1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="2"
+ nextoid="4">
+
+ <domain id="oid1" name="SMPMMarketDomain" title="Market Domain" desc="">
+  <domain-link xlink:role="domain" xlink:href="#oid3"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/trend_truth.kmd#oid2" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/target_customer.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/reference_customer.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/scenario.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/market_segment.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/effect.kmd#oid1" xlink:actuate="user"/> 
+  <complex-type-link xlink:role="type" xlink:href="../object_types/opportunity.kmd#oid4" xlink:actuate="user"/> 
+  <complex-type-link xlink:role="type" xlink:href="../object_types/strategy.kmd#oid2" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/prerequisite.kmd#oid1" xlink:actuate="user"/>
+</domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/markets-marketed_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/competes_with-in_competition_with.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/approached_with-approaches.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/approached_by-approaches.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/requests-of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/reference_for-has.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/supported_by-supports2.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-has.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/marketed_by-markets_in.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/includes-is_part_of.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/addressed_in-addresses.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_open_to-has.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_scenario-applies_to.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/involves-involved_in.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_addressed_by-addresses.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/influences-is_influenced_by.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/capitalizes_on-suggests.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_channel_to_market-is_channel_to_market_for.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/delivers-delivered_by.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-is.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/affects-affected_by2.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/affects-affected_by.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/applies_in-has.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/satisfied_by-satisfies2.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/sets_requirement-is_requirement_of.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/sold_to-buys.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/responds_to-considered_by.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/address_question-question_applies_to.kmd#oid1" xlink:actuate="auto"/> 
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/leads_to-derived_from.kmd#oid1" xlink:actuate="auto"/> 
+
+</domain>
+
+</metis>
+
+

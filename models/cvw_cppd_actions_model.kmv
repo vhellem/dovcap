@@ -1,0 +1,2290 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="81"
+ instanceviews="114"
+ nextoid="1">
+
+ <model id="_002ask601qdpf3rbns5p" name="CVW CPPD Actions model" title="CVW CPPD Actions model" submodel-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="../../eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="../../cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Actions" xlink:href="#_002ask601qg2tl2ra0ce"/>
+  <part-link xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpt8lvj25g"/>
+  <part-link xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask801fr8t0scuuou"/>
+  <part-link xlink:role="object" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002askm00smtbgj47ckt"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qdpf3rbns5p" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qdpf3rbns5p" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+  <bundle>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch3k0j65"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chu1dkl8"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch9368c5"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chggj1ik"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chn8905n"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch0k5b69"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chk75sik"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch6n9bqa"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chfcqlaj"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chk0ddup"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch7bnmmr"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chuc0q8u"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch8qotsp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9chemkh4g"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch1npkhp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch8g9isq"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask601qg9ch8kulr2"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask800nq9pnd73gkh"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask801fri3p99lnsp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask801frskh1fq3aa"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask8022svkmh9k1rs"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ask8022v01523s042"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askj01uv3g2ti27f5"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askj01v01eab7fnv1"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askj01v12r1l8hlk7"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askm00smtceqpj7o3"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askm00smtce5tmf97"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askm00smtceuh2gfi"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askm00smtco0oud1k"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askm00smtcohukihp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askm00smtcodbdngs"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askn00p3ces7dp7e8"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asko00s0jpqcuemoa"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askr017pi9cm547d8"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askr017pi9contcag"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askr017pi9c68n83f"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askr017pi9cqcenp7"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askr017sfh1jlkcaq"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002askr017vadja2ol7k"/>
+  </bundle>
+ </model>
+
+ <object id="_002ask601qg2tl2ra0ce">
+  <valueset size="3" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="../../cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="name">Actions</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9ch7vlr6u"/>
+  <part-link xlink:role="object" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002ask601qg9ch0t655g"/>
+  <part-link xlink:role="object" xlink:title="Instance tree" xlink:href="#_002ask601qg9cheqjfqr"/>
+  <part-link xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <part-link xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <part-link xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cht2ioce"/>
+  <part-link xlink:role="object" xlink:title="Visualization_Model" xlink:href="#_002ask601qg9chk8gvgo"/>
+  <part-link xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cho6a9g3"/>
+  <part-link xlink:role="object" xlink:title="Specification Models" xlink:href="#_002ask601qg9chjirrbr"/>
+  <part-link xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch1oglp4"/>
+  <part-link xlink:role="object" xlink:title="SearchMode" xlink:href="#_002ask601qg9chgo48ai"/>
+  <part-link xlink:role="object" xlink:title="ContextMode" xlink:href="#_002ask601qg9ch55ea9t"/>
+  <part-link xlink:role="object" xlink:title="SearchMode" xlink:href="#_002ask601qg9chk7q1dn"/>
+  <part-link xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9ch3oiefn"/>
+  <part-link xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9chqqrr1b"/>
+  <part-link xlink:role="object" xlink:title="ContextMode" xlink:href="#_002ask601qg9chq9iu31"/>
+  <part-link xlink:role="object" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9chl9fpdb"/>
+  <part-link xlink:role="object" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9chgkrmef"/>
+  <part-link xlink:role="object" xlink:title="Name" xlink:href="#_002askj01uv3fo28sqc6"/>
+  <part-link xlink:role="object" xlink:title="Name" xlink:href="#_002askj01v01e0j30or6"/>
+  <part-link xlink:role="object" xlink:title="Name" xlink:href="#_002askj01v12qnfi1tuo"/>
+  <part-link xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbgnc6m7u"/>
+  <part-link xlink:role="object" xlink:title="Visualization_Model" xlink:href="#_002askm00smtbgk095g0"/>
+  <part-link xlink:role="object" xlink:title="Language_Model" xlink:href="#_002askm00smtbgek8blj"/>
+  <part-link xlink:role="object" xlink:title="Model Context" xlink:href="#_002askr017pi926roj50"/>
+  <part-link xlink:role="object" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgn7orvn3"/>
+ </object>
+
+ <relationship id="_002ask601qg9ch0k5b69">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Instance tree" xlink:href="#_002ask601qg9cheqjfqr"/>
+  <target seq="0" xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9chqqrr1b"/>
+ </relationship>
+
+ <object id="_002ask601qg9ch0t655g">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">WorkwinLayoutStrategy</string>
+   <string name="name">WorkwinLayoutStrategy</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 171716836</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">akm:layout#CircularLayout1</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">WorkwinLayoutStrategy</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask601qg9ch1npkhp">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9chgkrmef"/>
+ </relationship>
+
+ <object id="_002ask601qg9ch1oglp4">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ViewStrategy_Model</string>
+   <string name="name">ViewStrategy_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">3</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ViewStrategy_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask601qg9ch3k0j65">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Instance tree" xlink:href="#_002ask601qg9cheqjfqr"/>
+  <target seq="0" xlink:role="object" xlink:title="SearchMode" xlink:href="#_002ask601qg9chgo48ai"/>
+ </relationship>
+
+ <object id="_002ask601qg9ch3oiefn">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ClearMode</string>
+   <string name="name">Mode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 150736071</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">New</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Mode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9ch55ea9t">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ContextMode</string>
+   <string name="name">ContextMode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">SubModel</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ContextMode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask601qg9ch6n9bqa">
+  <valueset size="1" xlink:role="type" xlink:title="Has value" xlink:href="../../cvw/languages/cvw_relships.kmd#RelType_CVW:hasValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cht2ioce"/>
+  <target seq="0" xlink:role="object" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chqomdbe"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9ch7bnmmr">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9ch3oiefn"/>
+ </relationship>
+
+ <object id="_002ask601qg9ch7vlr6u">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Mode</string>
+   <string name="name">Mode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">New</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Mode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask601qg9ch8g9isq">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002ask601qg9ch0t655g"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9ch8kulr2">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch1oglp4"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9ch8qotsp">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="SearchMode" xlink:href="#_002ask601qg9chk7q1dn"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9ch9368c5">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9chl9fpdb"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9chemkh4g">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="ContextMode" xlink:href="#_002ask601qg9ch55ea9t"/>
+ </relationship>
+
+ <object id="_002ask601qg9cheqjfqr">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="../../cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Instance tree</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 200022237</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">3</integer>
+   <string name="script" class="volatile">option explicit
+
+    &#39; doViewAction
+    dim model, modelView
+    dim aObject
+    dim component, components
+    dim instances
+    dim workspace
+    dim cvwWorkspace, cvwWorkarea
+    dim cvwViewStrategy, cvwContentSpec
+    dim usesType, componentType
+    dim doIt
+
+    set model = metis.currentModel
+    set modelView = model.currentModelView
+    set aObject = model.currentInstance
+
+    set usesType      = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/cvw_relships.kmd#RelType_CVW:usesComponent2_UUID&#34;)
+    set componentType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/cvw_objects.kmd#ObjType_CVW:CVW_Component_UUID&#34;)
+
+&#39;stop
+    doIt = true
+    set instances = Nothing
+    set components = aObject.getNeighbourObjects(0, usesType, componentType)
+
+    &#39; 3 Locate content specification component
+    for each component in components
+        if isEnabled(component) then
+            if component.name = &#34;ContentSpecification&#34; then
+                doIt = false
+                &#39; Configure content specification
+                call resetCVWcomponent(component)
+                call configureCVWcomponent(aObject, component)
+                &#39; Build and execute
+                set cvwContentSpec = new CVW_ContentSpecification
+                set cvwContentSpec.component = component
+                set cvwContentSpec.configObject = aObject
+                call cvwContentSpec.build                          &#39; Build internal structures
+                set instances = cvwContentSpec.execute             &#39; Execute methods dependent on configuration
+                if instances.count &#62; 0 then doIt = true
+                exit for
+            end if
+        end if
+    next
+
+    if doIt then
+      &#39; 1. Locate workspace component
+      for each component in components
+        if isEnabled(component) then
+            if component.name = &#34;Workspace&#34; then
+                &#39; Configure workspace
+                call resetCVWcomponent(component)
+                call configureCVWcomponent(aObject, component)
+                &#39; Build and execute
+                set cvwWorkspace = new CVW_Workspace
+                set cvwWorkspace.component = component
+                set cvwWorkspace.configObject = aObject
+                call cvwWorkspace.build                          &#39; Build internal structures
+                set workspace = cvwWorkspace.execute             &#39; Execute methods dependent on configuration
+                exit for
+            end if
+        end if
+      next
+
+      &#39; 2. Locate workarea component
+      for each component in components
+        if isEnabled(component) then
+            if component.name = &#34;Workarea&#34; then
+                &#39; Configure workarea
+                call resetCVWcomponent(component)
+                call configureCVWcomponent(aObject, component)
+                &#39; Build and execute
+                set cvwWorkarea = new CVW_Workarea
+                set cvwWorkarea.component = component
+                set cvwWorkarea.configObject = aObject
+                set cvwWorkarea.workspace = workspace
+                call cvwWorkarea.build                          &#39; Build internal structures
+                call cvwWorkarea.configure
+                call cvwWorkarea.execute                        &#39; Execute: Builds workarea (as an empty window w titlebar)
+                exit for
+            end if
+        end if
+      next
+&#39;stop
+      &#39; 5. Populate workarea
+      if isValid(instances) then
+        if instances.count &#62; 0 then
+            call cvwWorkarea.populate(instances)            &#39; Populates view with instances dependent on view specifications
+        end if
+      end if
+    end if
+
+
+
+    
+    
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask601qg9chfcqlaj">
+  <valueset size="1" xlink:role="type" xlink:title="Has value" xlink:href="../../cvw/languages/cvw_relships.kmd#RelType_CVW:hasValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch1oglp4"/>
+  <target seq="0" xlink:role="object" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chpkldfp"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9chggj1ik">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Instance tree" xlink:href="#_002ask601qg9cheqjfqr"/>
+  <target seq="0" xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cho6a9g3"/>
+ </relationship>
+
+ <object id="_002ask601qg9chgkrmef">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">WorkwinLayoutMode</string>
+   <string name="name">WorkwinLayoutMode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">Manual</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">WorkwinLayoutMode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chgo48ai">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">SearchMode</string>
+   <string name="name">SearchMode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070309 121345690</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">SelectManyFromList</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">SearchMode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chj8kk3o">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="../../cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Neighbours</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 200010059</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">3</integer>
+   <string name="script" class="volatile">option explicit
+
+    &#39; doViewAction
+    dim model, modelView
+    dim aObject
+    dim component, components
+    dim instances
+    dim workspace
+    dim cvwWorkspace, cvwWorkarea
+    dim cvwViewStrategy, cvwContentSpec
+    dim usesType, componentType
+    dim doIt
+
+    set model = metis.currentModel
+    set modelView = model.currentModelView
+    set aObject = model.currentInstance
+
+    set usesType      = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/cvw_relships.kmd#RelType_CVW:usesComponent2_UUID&#34;)
+    set componentType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/cvw_objects.kmd#ObjType_CVW:CVW_Component_UUID&#34;)
+
+&#39;stop
+    doIt = true
+    set instances = Nothing
+    set components = aObject.getNeighbourObjects(0, usesType, componentType)
+
+    &#39; 3 Locate content specification component
+    for each component in components
+        if isEnabled(component) then
+            if component.name = &#34;ContentSpecification&#34; then
+                doIt = false
+                &#39; Configure content specification
+                call resetCVWcomponent(component)
+                call configureCVWcomponent(aObject, component)
+                &#39; Build and execute
+                set cvwContentSpec = new CVW_ContentSpecification
+                set cvwContentSpec.component = component
+                set cvwContentSpec.configObject = aObject
+                call cvwContentSpec.build                          &#39; Build internal structures
+                set instances = cvwContentSpec.execute             &#39; Execute methods dependent on configuration
+                if instances.count &#62; 0 then doIt = true
+                exit for
+            end if
+        end if
+    next
+
+    if doIt then
+      &#39; 1. Locate workspace component
+      for each component in components
+        if isEnabled(component) then
+            if component.name = &#34;Workspace&#34; then
+                &#39; Configure workspace
+                call resetCVWcomponent(component)
+                call configureCVWcomponent(aObject, component)
+                &#39; Build and execute
+                set cvwWorkspace = new CVW_Workspace
+                set cvwWorkspace.component = component
+                set cvwWorkspace.configObject = aObject
+                call cvwWorkspace.build                          &#39; Build internal structures
+                set workspace = cvwWorkspace.execute             &#39; Execute methods dependent on configuration
+                exit for
+            end if
+        end if
+      next
+
+      &#39; 2. Locate workarea component
+      for each component in components
+        if isEnabled(component) then
+            if component.name = &#34;Workarea&#34; then
+                &#39; Configure workarea
+                call resetCVWcomponent(component)
+                call configureCVWcomponent(aObject, component)
+                &#39; Build and execute
+                set cvwWorkarea = new CVW_Workarea
+                set cvwWorkarea.component = component
+                set cvwWorkarea.configObject = aObject
+                set cvwWorkarea.workspace = workspace
+                call cvwWorkarea.build                          &#39; Build internal structures
+                call cvwWorkarea.configure
+                call cvwWorkarea.execute                        &#39; Execute: Builds workarea (as an empty window w titlebar)
+                exit for
+            end if
+        end if
+      next
+&#39;stop
+      &#39; 5. Populate workarea
+      if isValid(instances) then
+        if instances.count &#62; 0 then
+            call cvwWorkarea.populate(instances)            &#39; Populates view with instances dependent on view specifications
+        end if
+      end if
+    end if
+
+
+
+    
+    
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chjirrbr">
+  <valueset size="3" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="../../cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="name">Specification Models</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chqomdbe"/>
+  <part-link xlink:role="object" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chpkldfp"/>
+ </object>
+
+ <relationship id="_002ask601qg9chk0ddup">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cht2ioce"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9chk75sik">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Instance tree" xlink:href="#_002ask601qg9cheqjfqr"/>
+  <target seq="0" xlink:role="object" xlink:title="ContextMode" xlink:href="#_002ask601qg9chq9iu31"/>
+ </relationship>
+
+ <object id="_002ask601qg9chk7q1dn">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">SearchMode</string>
+   <string name="name">SearchMode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">SelectOneFromList</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">SearchMode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chk8gvgo">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Visualization_Model</string>
+   <string name="name">Visualization_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">3</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Visualization_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chl9fpdb">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">WorkwinLayoutMode</string>
+   <string name="name">WorkwinLayoutMode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 090609517</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">Auto</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">WorkwinLayoutMode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask601qg9chn8905n">
+  <valueset size="1" xlink:role="type" xlink:title="Has value" xlink:href="../../cvw/languages/cvw_relships.kmd#RelType_CVW:hasValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cho6a9g3"/>
+  <target seq="0" xlink:role="object" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chqomdbe"/>
+ </relationship>
+
+ <object id="_002ask601qg9cho6a9g3">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ContentSpecification_Model</string>
+   <string name="name">ContentSpecification_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">3</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ContentSpecification_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chpkldfp">
+  <valueset size="3" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="../../cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="name">Object-Property structure</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chq9iu31">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ContextMode</string>
+   <string name="name">ContextMode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">SubModel</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ContextMode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9chqomdbe">
+  <valueset size="3" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="../../cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="name">Object w Properties</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp"/>
+  <part-link xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe8h7eg8i"/>
+ </object>
+
+ <object id="_002ask601qg9chqqrr1b">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Mode</string>
+   <string name="name">Mode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070309 121045471</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">Reuse</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Mode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qg9cht2ioce">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ContentSpecification_Model</string>
+   <string name="name">ContentSpecification_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">3</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ContentSpecification_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask601qg9chu1dkl8">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9ch7vlr6u"/>
+ </relationship>
+
+ <relationship id="_002ask601qg9chuc0q8u">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231333</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="Visualization_Model" xlink:href="#_002ask601qg9chk8gvgo"/>
+ </relationship>
+
+ <object id="_002ask601qg9chuuv6pd">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="../../cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">New window</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070218 170231323</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">3</integer>
+   <string name="script" class="volatile">option explicit
+
+dim cvwAction
+stop
+set cvwAction = new CVW_MenuAction
+call cvwAction.execute</string>
+  </valueset>
+ </object>
+
+ <object id="_002ask601qhopnjce1l7">
+  <valueset size="9" xlink:role="type" xlink:title="Connector" xlink:href="metis:stdtypes#oid125" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name" class="volatile">CVW CPPD Actions model</string>
+   <string name="description" class="volatile"></string>
+   <pointer name="model" xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qdpf3rbns5p" xlink:actuate="user"/>
+   <collection name="metamodels" structure="list" size="2" xlink:role="pointer-type" xlink:title="Metamodel Pointer" xlink:href="metis:std#oid55" xlink:actuate="user">
+    <pointer xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="Workplace" xlink:href="../../cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+   </collection>
+   <integer name="viewState">1</integer>
+   <pointer name="type" class="volatile" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+   <integer name="lazyLoad">1</integer>
+   <integer name="bundleWeight">0</integer>
+  </valueset>
+  <part-link xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qdpf3rbns5p"/>
+ </object>
+
+ <model id="_002ask601qhopnkogrhb" title="CVW CPPD Actions model" submodel-ok="false" standalone-flag="true" reusable-flag="true">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="../../cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qhopnjce1l7"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qdpf3rbns5p" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qdpf3rbns5p" xlink:actuate="user"/>
+   </bundle-rule>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qhopnkogrhb" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qhopnkogrhb" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="_002ask800np6hhcmv0sp">
+  <valueset size="9" xlink:role="type" xlink:title="Object (EKA)" xlink:href="../../eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Object (EKA)</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 144418241</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="_002ask800npoe8h7eg8i">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Property (EKA)</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 144425872</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Property (EKA)</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask800nq9pnd73gkh">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 065656148</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp"/>
+  <target seq="0" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe8h7eg8i"/>
+ </relationship>
+
+ <object id="_002ask801fqpt8lvj25g">
+  <valueset size="9" xlink:role="type" xlink:title="Object (EKA)" xlink:href="../../eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Object (EKA)</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 135750322</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="_002ask801fr8t0scuuou">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Property (EKA)</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 135759315</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Property (EKA)</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ask801fri3p99lnsp">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 135626361</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpt8lvj25g"/>
+  <target seq="0" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask801fr8t0scuuou"/>
+ </relationship>
+
+ <relationship id="_002ask801frskh1fq3aa">
+  <valueset size="3" xlink:role="type" xlink:title="isTop relationship" xlink:href="../../cvw/languages/spec_relships.kmd#RelType_CVW:isTop_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="type"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chpkldfp"/>
+  <target seq="0" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpt8lvj25g"/>
+ </relationship>
+
+ <relationship id="_002ask8022svkmh9k1rs">
+  <valueset size="6" xlink:role="type" xlink:title="Depends on" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:DependsOn_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 193014711</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe8h7eg8i"/>
+  <target seq="0" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe8h7eg8i"/>
+ </relationship>
+
+ <relationship id="_002ask8022v01523s042">
+  <valueset size="6" xlink:role="type" xlink:title="Constrains" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Constrains_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070220 193021861</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe8h7eg8i"/>
+  <target seq="0" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp"/>
+ </relationship>
+
+ <object id="_002askj01uv3fo28sqc6">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ClearMode</string>
+   <string name="name">Name</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070303 182053638</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">Neighbours</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Name</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002askj01uv3g2ti27f5">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070303 182031106</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o"/>
+  <target seq="0" xlink:role="object" xlink:title="Name" xlink:href="#_002askj01uv3fo28sqc6"/>
+ </relationship>
+
+ <object id="_002askj01v01e0j30or6">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Name</string>
+   <string name="name">Name</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070309 121045481</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">$Current$</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Name</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002askj01v01eab7fnv1">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070303 182101770</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Instance tree" xlink:href="#_002ask601qg9cheqjfqr"/>
+  <target seq="0" xlink:role="object" xlink:title="Name" xlink:href="#_002askj01v01e0j30or6"/>
+ </relationship>
+
+ <object id="_002askj01v12qnfi1tuo">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Mode</string>
+   <string name="name">Name</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070303 182153544</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">Workarea</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Name</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002askj01v12r1l8hlk7">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070303 182135969</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="Name" xlink:href="#_002askj01v12qnfi1tuo"/>
+ </relationship>
+
+ <object id="_002askm00smtbgek8blj">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Visualization_Model</string>
+   <string name="name">Language_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082151088</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Language_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002askm00smtbgj47ckt">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ClearMode</string>
+   <string name="name">WorkwinLayoutStrategy</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082151088</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">3</integer>
+   <string name="value">metis:layout#oid51</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">WorkwinLayoutStrategy</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002askm00smtbgk095g0">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Visualization_Model</string>
+   <string name="name">Visualization_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082151088</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">3</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">Visualization_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002askm00smtbgnc6m7u">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ViewStrategy_Model</string>
+   <string name="name">ViewStrategy_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082151088</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">3</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ViewStrategy_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productproperty.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002askm00smtce5tmf97">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082255911</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="Visualization_Model" xlink:href="#_002askm00smtbgk095g0"/>
+ </relationship>
+
+ <relationship id="_002askm00smtceqpj7o3">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082250253</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbgnc6m7u"/>
+ </relationship>
+
+ <relationship id="_002askm00smtceuh2gfi">
+  <valueset size="1" xlink:role="type" xlink:title="Has value" xlink:href="../../cvw/languages/cvw_relships.kmd#RelType_CVW:hasValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbgnc6m7u"/>
+  <target seq="0" xlink:role="object" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chpkldfp"/>
+ </relationship>
+
+ <relationship id="_002askm00smtco0oud1k">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082307618</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002askm00smtbgj47ckt"/>
+ </relationship>
+
+ <relationship id="_002askm00smtcodbdngs">
+  <valueset size="1" xlink:role="type" xlink:title="Has value" xlink:href="../../cvw/languages/cvw_relships.kmd#RelType_CVW:hasValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Language_Model" xlink:href="#_002askm00smtbgek8blj"/>
+  <target seq="0" xlink:role="object" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chqomdbe"/>
+ </relationship>
+
+ <relationship id="_002askm00smtcohukihp">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070306 082243133</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="Language_Model" xlink:href="#_002askm00smtbgek8blj"/>
+ </relationship>
+
+ <relationship id="_002askn00p3ces7dp7e8">
+  <valueset size="6" xlink:role="type" xlink:title="Depends on" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:DependsOn_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070307 071845468</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp"/>
+  <target seq="0" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp"/>
+ </relationship>
+
+ <relationship id="_002asko00s0jpqcuemoa">
+  <valueset size="3" xlink:role="type" xlink:title="isTop relationship" xlink:href="../../cvw/languages/spec_relships.kmd#RelType_CVW:isTop_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="type"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chqomdbe"/>
+  <target seq="0" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp"/>
+ </relationship>
+
+ <object id="_002askr017pi926roj50">
+  <valueset size="3" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="../../cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="name">Model Context</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="CVW context" xlink:href="#_002askr017pi92aluaol"/>
+  <part-link xlink:role="object" xlink:title="ContextMode" xlink:href="#_002askr017pi92itdrvs"/>
+  <part-link xlink:role="object" xlink:title="ContentModelView" xlink:href="#_002askr017pi92rvsqt2"/>
+  <part-link xlink:role="object" xlink:title="ModelObjectType" xlink:href="#_002askr017pi92vjc2m9"/>
+  <part-link xlink:role="object" xlink:title="OperationModelView" xlink:href="#_002askr017pi92ldjaiu"/>
+ </object>
+
+ <object id="_002askr017pi92aluaol">
+  <valueset size="9" xlink:role="type" xlink:title="Context (EKA)" xlink:href="../../eka/languages/eka_context.kmd#ObjType_EKA:Context_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">CVW context</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <time name="dbms-admin.commitTime">000000000</time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113802872</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="_002askr017pi92itdrvs">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ContextMode</string>
+   <string name="name">ContextMode</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070219 135929293</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">SubModel</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ContextMode</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002askr017pi92ldjaiu">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">OperationModelView</string>
+   <string name="name">OperationModelView</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113802862</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value"></string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">OperationModelView</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002askr017pi92rvsqt2">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ContentModelView</string>
+   <string name="name">ContentModelView</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070221 064149321</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">ContentModel</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ContentModelView</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <object id="_002askr017pi92vjc2m9">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">ModelObjectType</string>
+   <string name="name">ModelObjectType</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070219 163521235</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">http://xml.activeknowledgemodeling.com/eka/languages/eka_space.kmd#ObjType_EKA:Space_UUID</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ModelObjectType</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002askr017pi9c68n83f">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113532396</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="CVW context" xlink:href="#_002askr017pi92aluaol"/>
+  <target seq="0" xlink:role="object" xlink:title="ContentModelView" xlink:href="#_002askr017pi92rvsqt2"/>
+ </relationship>
+
+ <relationship id="_002askr017pi9cm547d8">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113532396</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="CVW context" xlink:href="#_002askr017pi92aluaol"/>
+  <target seq="0" xlink:role="object" xlink:title="ModelObjectType" xlink:href="#_002askr017pi92vjc2m9"/>
+ </relationship>
+
+ <relationship id="_002askr017pi9contcag">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113532396</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="CVW context" xlink:href="#_002askr017pi92aluaol"/>
+  <target seq="0" xlink:role="object" xlink:title="ContextMode" xlink:href="#_002askr017pi92itdrvs"/>
+ </relationship>
+
+ <relationship id="_002askr017pi9cqcenp7">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113532396</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="CVW context" xlink:href="#_002askr017pi92aluaol"/>
+  <target seq="0" xlink:role="object" xlink:title="OperationModelView" xlink:href="#_002askr017pi92ldjaiu"/>
+ </relationship>
+
+ <object id="_002askr017sfgn7orvn3">
+  <valueset size="16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID">Mode</string>
+   <string name="name">ModelContext_Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <time name="dbms-admin.commitTime">000000000</time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113725208</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="datatype">0</integer>
+   <string name="value">Workarea</string>
+   <string name="tempvalue"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile">ModelContext_Model</string>
+   <string name="iconProp" class="volatile">http://xml.activeknowledgemodeling.com/eka/views/symbols/productmodule.svg#oid1</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002askr017sfh1jlkcaq">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070311 113707873</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd"/>
+  <target seq="0" xlink:role="object" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgn7orvn3"/>
+ </relationship>
+
+ <relationship id="_002askr017vadja2ol7k">
+  <valueset size="1" xlink:role="type" xlink:title="Has value" xlink:href="../../cvw/languages/cvw_relships.kmd#RelType_CVW:hasValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgn7orvn3"/>
+  <target seq="0" xlink:role="object" xlink:title="Model Context" xlink:href="#_002askr017pi926roj50"/>
+ </relationship>
+
+ <objectview id="_002ask601qg2tlhoo227" xlink:role="object" xlink:title="Actions" xlink:href="#_002ask601qg2tl2ra0ce" state="open" behavior="nested" text-scale="1.47163" decomp-scale="0.35355" left="62.6482" top="298.593" width="1112.24" height="1334.69">
+  <child-link xlink:role="objectview" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9ch3siqks"/>
+  <child-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <child-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chbtj97o"/>
+  <child-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9ch80740a"/>
+  <child-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch7h4sk5"/>
+  <child-link xlink:role="objectview" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002ask601qg9ch7da6ck"/>
+  <child-link xlink:role="objectview" xlink:title="SearchMode" xlink:href="#_002ask601qg9cha5btdk"/>
+  <child-link xlink:role="objectview" xlink:title="Visualization_Model" xlink:href="#_002ask601qg9chpdd7pm"/>
+  <child-link xlink:role="objectview" xlink:title="ContextMode" xlink:href="#_002ask601qg9chqhe9lu"/>
+  <child-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9chj0rs4a"/>
+  <child-link xlink:role="objectview" xlink:title="ContextMode" xlink:href="#_002ask601qg9ch54nhsh"/>
+  <child-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <child-link xlink:role="objectview" xlink:title="Instance tree" xlink:href="#_002ask601qg9chuphdau"/>
+  <child-link xlink:role="objectview" xlink:title="Specification Models" xlink:href="#_002ask601qg9chnhs2cu"/>
+  <child-link xlink:role="objectview" xlink:title="SearchMode" xlink:href="#_002ask601qg9ch5dhdcv"/>
+  <child-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9chejnpln"/>
+  <child-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chrmo4g1"/>
+  <child-link xlink:role="objectview" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9ch6adcei"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dflid00u"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dfkd4qin"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dfme84kp"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dfl3idrp"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9df0ic3uf"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9df022up5"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9df81ng3t"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dfvpceme"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dfni7u3i"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dfh90klm"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dffs09pg"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dpmfaq4b"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dpmtean3"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dpsinbvj"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dp94pnb8"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dp3moal1"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dpevceq6"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9dpfvk53a"/>
+  <child-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01uv3fo6877ed"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askj01uv3g2ga6ell"/>
+  <child-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01v01e0somf3v"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askj01v01ea0o9c8b"/>
+  <child-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01v12qns30q5r"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askj01v12r1rtg806"/>
+  <child-link xlink:role="objectview" xlink:title="Visualization_Model" xlink:href="#_002askm00smtbg00m3uq"/>
+  <child-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbg3qorfc"/>
+  <child-link xlink:role="objectview" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002askm00smtbgfloetb"/>
+  <child-link xlink:role="objectview" xlink:title="Language_Model" xlink:href="#_002askm00smtbg5vvpfe"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askm00smtco6fl383"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askm00smtcouvdbmu"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askm00smtd2jpcmij"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askm00smtd2rinp6j"/>
+  <child-link xlink:role="objectview" xlink:title="Model Context" xlink:href="#_002askr017pi92eun2fl"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askr017pi9c01ducq"/>
+  <child-link xlink:role="objectview" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgnu7m6ag"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askr017sfh1dkcefq"/>
+ </objectview>
+
+ <relationshipview id="_002ask601qg2ujci6gml" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+  <target-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+ </relationshipview>
+
+ <objectview id="_002ask601qg9ch1pvgi4" xlink:role="object" xlink:title="New window" xlink:href="#_002ask601qg9chuuv6pd" state="open" behavior="tree" text-scale="0.242403" decomp-scale="0.125" left="441.984" top="288.442" width="1090.56" height="256">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light" xlink:href="../../cvw/symbols/akm.svg#_002ash6027k7906qdnsd" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002ask601qg9ch3siqks" xlink:role="object" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9chgkrmef" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="3399.63" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9ch54nhsh" xlink:role="object" xlink:title="ContextMode" xlink:href="#_002ask601qg9ch55ea9t" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="3079.62" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9ch5dhdcv" xlink:role="object" xlink:title="SearchMode" xlink:href="#_002ask601qg9chk7q1dn" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="3015.63" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9ch5tlm5v" xlink:role="object" xlink:title="Neighbours" xlink:href="#_002ask601qg9chj8kk3o" state="open" behavior="tree" text-scale="0.242403" decomp-scale="0.125" left="513.629" top="2570.78" width="1090.56" height="256">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light" xlink:href="../../cvw/symbols/akm.svg#_002ash6027k7906qdnsd" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002ask601qg9ch6adcei" xlink:role="object" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9chl9fpdb" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="766.847" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9ch7da6ck" xlink:role="object" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002ask601qg9ch0t655g" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="3335.63" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9ch7h4sk5" xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch1oglp4" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="3207.62" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9ch80740a" xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9chqqrr1b" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="450.158" top="1797.86" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9cha5btdk" xlink:role="object" xlink:title="SearchMode" xlink:href="#_002ask601qg9chgo48ai" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="450.158" top="1861.86" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9chbtj97o" xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cht2ioce" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="3143.62" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002ask601qg9chdur30r" xlink:role="relationship" xlink:href="#_002ask601qg9ch9368c5">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9ch6adcei"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002ask601qg9chejnpln" xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9ch3oiefn" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="2951.63" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002ask601qg9chev4nnq" xlink:role="relationship" xlink:href="#_002ask601qg9ch3k0j65">
+  <origin-link xlink:role="objectview" xlink:title="Instance tree" xlink:href="#_002ask601qg9chuphdau"/>
+  <target-link xlink:role="objectview" xlink:title="SearchMode" xlink:href="#_002ask601qg9cha5btdk"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002ask601qg9chfeg75r" xlink:role="object" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chqomdbe" state="open" behavior="nested" text-scale="2.2799" decomp-scale="0.25" left="346.72" top="507.346" width="912" height="528">
+  <child-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhircg6t"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask800np6hhi7tidl"/>
+  <child-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe84bdpro"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask800npoe83thm74"/>
+  <child-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask8022sifpho64cc"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask8022sifph11pfi"/>
+  <child-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask8022u4cobfan97"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask8022u4d2tlcnsq"/>
+ </objectview>
+
+ <objectview id="_002ask601qg9chg5a2bh" xlink:role="object" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chpkldfp" state="open" behavior="nested" text-scale="2.2799" decomp-scale="0.176778" left="346.72" top="1144.77" width="912" height="530.886">
+  <child-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpsu9tcv1g"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask801fqpsuekdjp8"/>
+  <child-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask801fr8q5fe982l"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask801fr8qq598ulo"/>
+ </objectview>
+
+ <objectview id="_002ask601qg9chj0rs4a" xlink:role="object" xlink:title="Mode" xlink:href="#_002ask601qg9ch7vlr6u" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="702.847" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9chnhs2cu" xlink:role="object" xlink:title="Specification Models" xlink:href="#_002ask601qg9chjirrbr" state="open" behavior="nested" text-scale="1.51994" decomp-scale="0.25" left="2288.66" top="2943.28" width="630.68" height="542.836">
+  <child-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+  <child-link xlink:role="objectview" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chg5a2bh"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crlvgm50"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg9cr3uvoad"/>
+ </objectview>
+
+ <objectview id="_002ask601qg9chpdd7pm" xlink:role="object" xlink:title="Visualization_Model" xlink:href="#_002ask601qg9chk8gvgo" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="3271.62" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9chqhe9lu" xlink:role="object" xlink:title="ContextMode" xlink:href="#_002ask601qg9chq9iu31" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="450.158" top="1925.85" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002ask601qg9chrmo4g1" xlink:role="object" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9cho6a9g3" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="450.158" top="1989.85" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002ask601qg9chtlt957" xlink:role="relationship" xlink:href="#_002ask601qg9chu1dkl8">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9chj0rs4a"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9chtto1fq" xlink:role="relationship" xlink:href="#_002ask601qg9chggj1ik">
+  <origin-link xlink:role="objectview" xlink:title="Instance tree" xlink:href="#_002ask601qg9chuphdau"/>
+  <target-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chrmo4g1"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002ask601qg9chuphdau" xlink:role="object" xlink:title="Instance tree" xlink:href="#_002ask601qg9cheqjfqr" state="open" behavior="tree" text-scale="0.242403" decomp-scale="0.125" left="406.746" top="1391.03" width="1090.56" height="256">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light" xlink:href="../../cvw/symbols/akm.svg#_002ash6027k7906qdnsd" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002ask601qg9cr0alpdg" xlink:role="relationship" xlink:href="#_002ask601qg9ch8kulr2">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch7h4sk5"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9cr2alk4c" xlink:role="relationship" xlink:href="#_002ask601qg9chn8905n">
+  <origin-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chrmo4g1"/>
+  <target-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9cr3uvoad" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Specification Models" xlink:href="#_002ask601qg9chnhs2cu"/>
+  <target-link xlink:role="objectview" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chg5a2bh"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crg87slj" xlink:role="relationship" xlink:href="#_002ask601qg9ch8g9isq">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002ask601qg9ch7da6ck"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crgal73i" xlink:role="relationship" xlink:href="#_002ask601qg9chuc0q8u">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="Visualization_Model" xlink:href="#_002ask601qg9chpdd7pm"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crh4hbmm" xlink:role="relationship" xlink:href="#_002ask601qg9chk75sik">
+  <origin-link xlink:role="objectview" xlink:title="Instance tree" xlink:href="#_002ask601qg9chuphdau"/>
+  <target-link xlink:role="objectview" xlink:title="ContextMode" xlink:href="#_002ask601qg9chqhe9lu"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9cri2nf09" xlink:role="relationship" xlink:href="#_002ask601qg9ch0k5b69">
+  <origin-link xlink:role="objectview" xlink:title="Instance tree" xlink:href="#_002ask601qg9chuphdau"/>
+  <target-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9ch80740a"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crkv64sl" xlink:role="relationship" xlink:href="#_002ask601qg9ch6n9bqa">
+  <origin-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chbtj97o"/>
+  <target-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crls65bf" xlink:role="relationship" xlink:href="#_002ask601qg9ch7bnmmr">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9chejnpln"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crlvgm50" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Specification Models" xlink:href="#_002ask601qg9chnhs2cu"/>
+  <target-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crnfro9o" xlink:role="relationship" xlink:href="#_002ask601qg9ch1npkhp">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9ch3siqks"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crpf7ekd" xlink:role="relationship" xlink:href="#_002ask601qg9chk0ddup">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chbtj97o"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crr3g33u" xlink:role="relationship" xlink:href="#_002ask601qg9chfcqlaj">
+  <origin-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch7h4sk5"/>
+  <target-link xlink:role="objectview" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chg5a2bh"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crv5esj7" xlink:role="relationship" xlink:href="#_002ask601qg9chemkh4g">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="ContextMode" xlink:href="#_002ask601qg9ch54nhsh"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9crvss1ea" xlink:role="relationship" xlink:href="#_002ask601qg9ch8qotsp">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="SearchMode" xlink:href="#_002ask601qg9ch5dhdcv"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9df022up5" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002ask601qg9ch7da6ck"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9df0ic3uf" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002ask601qg9ch7h4sk5"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9df81ng3t" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="SearchMode" xlink:href="#_002ask601qg9cha5btdk"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dffs09pg" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="ContextMode" xlink:href="#_002ask601qg9ch54nhsh"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dfh90klm" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9chj0rs4a"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dfkd4qin" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dfl3idrp" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9ch80740a"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dflid00u" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9ch3siqks"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dfme84kp" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chbtj97o"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dfni7u3i" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="ContextMode" xlink:href="#_002ask601qg9chqhe9lu"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dfvpceme" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Visualization_Model" xlink:href="#_002ask601qg9chpdd7pm"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dp3moal1" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Mode" xlink:href="#_002ask601qg9chejnpln"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dp94pnb8" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="SearchMode" xlink:href="#_002ask601qg9ch5dhdcv"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dpevceq6" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="ContentSpecification_Model" xlink:href="#_002ask601qg9chrmo4g1"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dpfvk53a" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutMode" xlink:href="#_002ask601qg9ch6adcei"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dpmfaq4b" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dpmtean3" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Instance tree" xlink:href="#_002ask601qg9chuphdau"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask601qg9dpsinbvj" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Specification Models" xlink:href="#_002ask601qg9chnhs2cu"/>
+ </relationshipview>
+
+ <modelview id="_002ask601qhopnv6s87b" title="Main" primary-flag="true" standalone-flag="true" reusable-flag="true" zoom-level="0.485398" x="1007.13" y="889.795" seq="1" xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qhopnkogrhb" behavior="nested" text-scale="1" decomp-scale="1" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qhoqb7p8af5"/>
+ </modelview>
+
+ <objectview id="_002ask601qhoqb7p8af5" xlink:role="object" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qhopnjce1l7" state="open" behavior="connector" text-scale="1" decomp-scale="1" left="0" top="0" width="2014.26" height="1779.59">
+  <child-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+ </objectview>
+
+ <relationshipview id="_002ask800np6hhi7tidl" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+  <target-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhircg6t"/>
+ </relationshipview>
+
+ <objectview id="_002ask800np6hhircg6t" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp" state="open" behavior="tree" text-scale="0.63962" decomp-scale="0.125005" left="827.572" top="662.105" width="449.116" height="179.899">
+ </objectview>
+
+ <relationshipview id="_002ask800npoe83thm74" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+  <target-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe84bdpro"/>
+ </relationshipview>
+
+ <objectview id="_002ask800npoe84bdpro" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe8h7eg8i" state="open" behavior="tree" text-scale="0.63962" decomp-scale="0.125005" left="1810.69" top="662.105" width="449.116" height="179.899">
+ </objectview>
+
+ <relationshipview id="_002ask800nq9pn6pp60p" xlink:role="relationship" xlink:href="#_002ask800nq9pnd73gkh">
+  <origin-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhircg6t"/>
+  <target-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe84bdpro"/>
+ </relationshipview>
+
+ <forward-reference id="_002ask800v3iml2onpom" stamp="20070220 090355164" 
+     xlink:role="objectview" xlink:href="file:///D|/dag/metismodels/akm/concepts/cvw_concepts_3.kmv#_002ask800v3u8stjq6do" xlink:actuate="user"/>
+
+ <forward-reference id="_002ask800v3imlprle3p" stamp="20070220 090355164" 
+     xlink:role="relationshipview" xlink:href="file:///D|/dag/metismodels/akm/concepts/cvw_concepts_3.kmv#_002ask800v3u8sp8b8st" xlink:actuate="user"/>
+
+ <objectview id="_002ask801fqpsu9tcv1g" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpt8lvj25g" state="open" behavior="tree" text-scale="0.806072" decomp-scale="0.5" left="1114.74" top="1001.04" width="778.588" height="256">
+ </objectview>
+
+ <relationshipview id="_002ask801fqpsuekdjp8" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chg5a2bh"/>
+  <target-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpsu9tcv1g"/>
+ </relationshipview>
+
+ <objectview id="_002ask801fr8q5fe982l" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask801fr8t0scuuou" state="open" behavior="tree" text-scale="0.806072" decomp-scale="0.5" left="1114.74" top="1612.79" width="778.588" height="256">
+ </objectview>
+
+ <relationshipview id="_002ask801fr8qq598ulo" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chg5a2bh"/>
+  <target-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask801fr8q5fe982l"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask801fri3p898uhp" xlink:role="relationship" xlink:href="#_002ask801fri3p99lnsp">
+  <origin-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpsu9tcv1g"/>
+  <target-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask801fr8q5fe982l"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask801frskhqanqh4" xlink:role="relationship" xlink:href="#_002ask801frskh1fq3aa">
+  <origin-link xlink:role="objectview" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chg5a2bh"/>
+  <target-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask801fqpsu9tcv1g"/>
+  <path>
+   <origin-point type="fixed" x="1504.03" y="1.0116e-010"/>
+   <target-point type="floating"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002ask8022sifph11pfi" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+  <target-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask8022sifpho64cc"/>
+ </relationshipview>
+
+ <objectview id="_002ask8022sifpho64cc" xlink:role="object" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhcmv0sp" state="open" behavior="tree" text-scale="0.63962" decomp-scale="0.125005" left="827.572" top="1212.65" width="449.116" height="179.899">
+ </objectview>
+
+ <relationshipview id="_002ask8022svkmlf8ik9" xlink:role="relationship" xlink:href="#_002ask8022svkmh9k1rs">
+  <origin-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe84bdpro"/>
+  <target-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask8022u4cobfan97"/>
+ </relationshipview>
+
+ <objectview id="_002ask8022u4cobfan97" xlink:role="object" xlink:title="Property (EKA)" xlink:href="#_002ask800npoe8h7eg8i" state="open" behavior="tree" text-scale="0.63962" decomp-scale="0.125005" left="1810.69" top="1212.65" width="449.116" height="179.899">
+ </objectview>
+
+ <relationshipview id="_002ask8022u4d2tlcnsq" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+  <target-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask8022u4cobfan97"/>
+ </relationshipview>
+
+ <relationshipview id="_002ask8022v0159qq4a7" xlink:role="relationship" xlink:href="#_002ask8022v01523s042">
+  <origin-link xlink:role="objectview" xlink:title="Property (EKA)" xlink:href="#_002ask8022u4cobfan97"/>
+  <target-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask8022sifpho64cc"/>
+ </relationshipview>
+
+ <objectview id="_002askj01uv3fo6877ed" xlink:role="object" xlink:title="Name" xlink:href="#_002askj01uv3fo28sqc6" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="485.396" top="2892.64" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002askj01uv3fovdbsnd" xlink:role="relationship" xlink:href="#_002askj01uv3g2ti27f5">
+  <origin-link xlink:role="objectview" xlink:title="Neighbours" xlink:href="#_002ask601qg9ch5tlm5v"/>
+  <target-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01uv3fo6877ed"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002askj01uv3g2ga6ell" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01uv3fo6877ed"/>
+ </relationshipview>
+
+ <relationshipview id="_002askj01v01e025jkpq" xlink:role="relationship" xlink:href="#_002askj01v01eab7fnv1">
+  <origin-link xlink:role="objectview" xlink:title="Instance tree" xlink:href="#_002ask601qg9chuphdau"/>
+  <target-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01v01e0somf3v"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002askj01v01e0somf3v" xlink:role="object" xlink:title="Name" xlink:href="#_002askj01v01e0j30or6" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="450.158" top="1738.87" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002askj01v01ea0o9c8b" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01v01e0somf3v"/>
+ </relationshipview>
+
+ <relationshipview id="_002askj01v12qnabjiqv" xlink:role="relationship" xlink:href="#_002askj01v12r1l8hlk7">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01v12qns30q5r"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002askj01v12qns30q5r" xlink:role="object" xlink:title="Name" xlink:href="#_002askj01v12qnfi1tuo" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="565.21" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002askj01v12r1rtg806" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Name" xlink:href="#_002askj01v12qns30q5r"/>
+ </relationshipview>
+
+ <objectview id="_002askm00smtbg00m3uq" xlink:role="object" xlink:title="Visualization_Model" xlink:href="#_002askm00smtbgk095g0" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="963.474" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002askm00smtbg3qorfc" xlink:role="object" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbgnc6m7u" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="899.474" width="320" height="64">
+ </objectview>
+
+ <objectview id="_002askm00smtbg5vvpfe" xlink:role="object" xlink:title="Language_Model" xlink:href="#_002askm00smtbgek8blj" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="840.484" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002askm00smtbgdmkqr8" xlink:role="relationship" xlink:href="#_002askm00smtcohukihp">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="Language_Model" xlink:href="#_002askm00smtbg5vvpfe"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtbgdrm5mr" xlink:role="relationship" xlink:href="#_002askm00smtcodbdngs">
+  <origin-link xlink:role="objectview" xlink:title="Language_Model" xlink:href="#_002askm00smtbg5vvpfe"/>
+  <target-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+  <path>
+   <origin-point type="right"/>
+   <target-point type="floating"/>
+  </path>
+ </relationshipview>
+
+ <objectview id="_002askm00smtbgfloetb" xlink:role="object" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002askm00smtbgj47ckt" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="1037.11" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002askm00smtbgiprrv0" xlink:role="relationship" xlink:href="#_002askm00smtceuh2gfi">
+  <origin-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbg3qorfc"/>
+  <target-link xlink:role="objectview" xlink:title="Object-Property structure" xlink:href="#_002ask601qg9chg5a2bh"/>
+  <path>
+   <origin-point type="right"/>
+   <target-point type="floating"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtbgmu3c4m" xlink:role="relationship" xlink:href="#_002askm00smtco0oud1k">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002askm00smtbgfloetb"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtbgr35g5b" xlink:role="relationship" xlink:href="#_002askm00smtce5tmf97">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="Visualization_Model" xlink:href="#_002askm00smtbg00m3uq"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtbgvggrub" xlink:role="relationship" xlink:href="#_002askm00smtceqpj7o3">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbg3qorfc"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtco6fl383" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Visualization_Model" xlink:href="#_002askm00smtbg00m3uq"/>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtcouvdbmu" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="ViewStrategy_Model" xlink:href="#_002askm00smtbg3qorfc"/>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtd2jpcmij" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="WorkwinLayoutStrategy" xlink:href="#_002askm00smtbgfloetb"/>
+ </relationshipview>
+
+ <relationshipview id="_002askm00smtd2rinp6j" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Language_Model" xlink:href="#_002askm00smtbg5vvpfe"/>
+ </relationshipview>
+
+ <relationshipview id="_002askn00p3cesp4aln4" xlink:role="relationship" xlink:href="#_002askn00p3ces7dp7e8">
+  <origin-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhircg6t"/>
+  <target-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask8022sifpho64cc"/>
+ </relationshipview>
+
+ <relationshipview id="_002asko00s0jpqesbfcs" xlink:role="relationship" xlink:href="#_002asko00s0jpqcuemoa">
+  <origin-link xlink:role="objectview" xlink:title="Object w Properties" xlink:href="#_002ask601qg9chfeg75r"/>
+  <target-link xlink:role="objectview" xlink:title="Object (EKA)" xlink:href="#_002ask800np6hhircg6t"/>
+ </relationshipview>
+
+ <objectview id="_002askr017pi92eun2fl" xlink:role="object" xlink:title="Model Context" xlink:href="#_002askr017pi926roj50" state="open" behavior="nested" text-scale="2.89352" decomp-scale="0.18" left="1665.14" top="683.185" width="320" height="256">
+  <child-link xlink:role="objectview" xlink:title="CVW context" xlink:href="#_002askr017pi92h9empp"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002askr017pi9c4g2b1i"/>
+ </objectview>
+
+ <objectview id="_002askr017pi92h9empp" xlink:role="object" xlink:title="CVW context" xlink:href="#_002askr017pi92aluaol" state="open" behavior="tree" text-scale="0.547178" decomp-scale="0.5" left="533.333" top="533.333" width="768" height="256">
+ </objectview>
+
+ <relationshipview id="_002askr017pi9c01ducq" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="Model Context" xlink:href="#_002askr017pi92eun2fl"/>
+ </relationshipview>
+
+ <relationshipview id="_002askr017pi9c4g2b1i" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Model Context" xlink:href="#_002askr017pi92eun2fl"/>
+  <target-link xlink:role="objectview" xlink:title="CVW context" xlink:href="#_002askr017pi92h9empp"/>
+ </relationshipview>
+
+ <relationshipview id="_002askr017sfgnnpfo1v" xlink:role="relationship" xlink:href="#_002askr017sfh1jlkcaq">
+  <origin-link xlink:role="objectview" xlink:title="New window" xlink:href="#_002ask601qg9ch1pvgi4"/>
+  <target-link xlink:role="objectview" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgnu7m6ag"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002askr017sfgnu7m6ag" xlink:role="object" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgn7orvn3" state="open" behavior="tree" text-scale="1" decomp-scale="0.125" left="564.045" top="624.197" width="320" height="64">
+ </objectview>
+
+ <relationshipview id="_002askr017sfh1dkcefq" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <target-link xlink:role="objectview" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgnu7m6ag"/>
+ </relationshipview>
+
+ <relationshipview id="_002askr017vadtn5abar" xlink:role="relationship" xlink:href="#_002askr017vadja2ol7k">
+  <origin-link xlink:role="objectview" xlink:title="ModelContext_Model" xlink:href="#_002askr017sfgnu7m6ag"/>
+  <target-link xlink:role="objectview" xlink:title="Model Context" xlink:href="#_002askr017pi92eun2fl"/>
+ </relationshipview>
+
+ <modelview id="oid1" name="Main" title="Main" submodel-flag="true" zoom-level="1" x="-28.5" y="-22.5" xlink:role="model" xlink:title="CVW CPPD Actions model" xlink:href="#_002ask601qdpf3rbns5p" state="open" behavior="nested" text-scale="1" decomp-scale="1" left="16" top="16" width="1982.26" height="1747.59" visible-in="browser">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Nested Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+  </symbol-override>
+  <child-link xlink:role="objectview" xlink:title="Actions" xlink:href="#_002ask601qg2tlhoo227"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ask601qg2ujci6gml"/>
+  <viewbundle>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9chev4nnq"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9chtlt957"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9chdur30r"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9chtto1fq"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9cr2alk4c"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9cri2nf09"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crh4hbmm"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crkv64sl"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crr3g33u"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crpf7ekd"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crls65bf"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crgal73i"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crvss1ea"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crv5esj7"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crnfro9o"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9crg87slj"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask601qg9cr0alpdg"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask800nq9pn6pp60p"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask801fri3p898uhp"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask801frskhqanqh4"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask8022svkmlf8ik9"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ask8022v0159qq4a7"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askj01uv3fovdbsnd"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askj01v01e025jkpq"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askj01v12qnabjiqv"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askm00smtbgvggrub"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askm00smtbgr35g5b"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askm00smtbgiprrv0"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askm00smtbgmu3c4m"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askm00smtbgdmkqr8"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askm00smtbgdrm5mr"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askn00p3cesp4aln4"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asko00s0jpqesbfcs"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askr017sfgnnpfo1v"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002askr017vadtn5abar"/>
+  </viewbundle>
+ </modelview>
+
+
+</metis>

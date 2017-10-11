@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: association.svg</title>
+ <defs>
+  <symbol id="oid102" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>Arrow</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:END_ARROW"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid101" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>Generalization</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:16;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:END_HOLLOW_ARROW"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:16; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:16;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid36" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>BothIsNavigable</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:STICK_ARROWS"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid34" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>CompositionIsNavigable</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:FILLED_DIAMOND_ARROW"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid33" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>AggregationIsNavigable</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:HOLLOW_DIAMOND_ARROW"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid32" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>isNavigableReverted</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:END_STICK_ARROW"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid20" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>CompositionIsNavigableReverted</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:ARROW_FILLED_DIAMOND"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid12" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>AggregationIsNavigableReverted</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:ARROW_HOLLOW_DIAMOND"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid16" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>CompositionReverted</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:END_FILLED_DIAMOND"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid8" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>AggregationReverted</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:END_HOLLOW_DIAMOND"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid4" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>isNavigable</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:START_STICK_ARROW"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid1" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>Aggregation</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:START_HOLLOW_DIAMOND"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>Composition</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:START_FILLED_DIAMOND"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="oid0" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>Association</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <text x="110" y="55" class="TAG:METIS_START_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">Start</text>
+   <path d="M200,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"></path>
+   <text x="410" y="55" class="TAG:METIS_MIDPOINT_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48; text-align:center">Mid Point</text>
+   <text x="510" y="305" class="TAG:METIS_END_TEXT" style="stroke:#000000; font-family:sans-serif; font-size:48;">End</text>
+   <rect x="600" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid102"/>
+</svg>

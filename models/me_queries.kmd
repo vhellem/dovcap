@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ nextoid="1">
+
+ <cpp-method id="QueryTasks" name="QueryTasks" title="Get All Tasks" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    background-flag="true"
+    container-flag="true"
+    selection-flag="true"
+    model-flag="true"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true"
+    relationship-fl="true">
+  <arg-list size="1">
+   <string name="Query0">Component.type = "Task (AKM)"</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="QueryRelatedTasks" name="QueryRelatedTasks"
+    title="Get All Related Tasks" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="4">
+   <integer name="Metis_State_AllowModifyOnly">1</integer>
+   <string name="Query0">component.relatedTo(component.id="%DESTINATION_ID%" )</string>
+   <integer name="ComponentFlag1">0</integer>
+   <string name="Query1">relationship.hasComponent(component.relatedTo(component.id="%DESTINATION_ID%")) and relationship.hasComponent( component.id="%DESTINATION_ID%" )</string>
+   <string name="Query2">component.type = "Task (AKM)"</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_6F6006A8-7B5F-4F3E-A6D0-80CF3B9B8F40" name="Infrastructure_Service_Architecture_Domain" title="Infrastructure Service Architecture Domain" desc="The metamodel for types related to modeling infrastructure service architecture.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Infrastructure Service Architecture Domain Relationships" xlink:href="infrastructure_service_architecture_domain_relationships.kmd#UUID4_2EFCACF5-3BE3-45C0-AEB8-E1495BDD6E3E"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Service Interface" xlink:href="../object_types/infrastructure_service_interface.kmd#CompType_Semantics:Infrastructure_Service_Interface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Service" xlink:href="../object_types/infrastructure_service.kmd#CompType_Semantics:Infrastructure_Service_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

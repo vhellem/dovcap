@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="Waste_Basket" title="Waste Basket" desc="Use the waste basket to specify to delete or discard instances.&#10;&#60;P&#62;&#10;The waste basket is a visual way of specifying to delete instances. There are two events where you can specify to delete an instance:&#10;&#60;UL&#62;&#10;&#60;LI&#62;When a new instance is discovered in the data source, i.e. no instance with that type and key exists in the model. Use the &#60;EM&#62;put new instancse in/will be parent for new instances&#60;/EM&#62; relationship from a &#60;em&#62;Mapping&#60;/EM&#62; or &#60;EM&#62;Update Options&#60;/EM&#62; object to specify to &#60;EM&#62;discard&#60;/EM&#62; the new instances. This is useful when you just wish to update existing instances but not add new ones. Note that you can also specify &#60;EM&#62;Action&#60;/EM&#62; on on the Update Options object to be &#60;EM&#62;Discard (do not create any new objects)&#60;/EM&#62; to acheive the same effect. The Action drop-down overrides the action given by the relationship.&#10;&#60;LI&#62;When an instance no longer appears in the data source, i.e. an instance with a specific type and key exists in the model but not in the data source. Use the &#60;EM&#62;move deleted instances to/will be parent for deleted instances&#60;/EM&#62; relationship from a &#60;em&#62;Mapping&#60;/EM&#62; or &#60;EM&#62;Update Options&#60;/EM&#62; object to specify to &#60;EM&#62;delete&#60;/EM&#62; the missing instances. Note that you can also specify &#60;EM&#62;Action&#60;/EM&#62; on the Update Options object to be &#60;EM&#62;Delete From Model&#60;/EM&#62; to acheive the same effect. The Action drop-down overrides the action given by the relationship.&#10;&#60;/UL&#62;&#10;&#10;You can have as many waste baskets as you wish in the model and connect as many types as you wish to one waste basket. This object has no visible properties.&#10;&#10;&#10;&#10;" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - IF Configuration" xlink:href="object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" shared-flag="true" label-flag="true" visible-flag="false"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Waste Basket" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Waste Basket" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Waste Basket" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Delete/Discard" xlink:href="../symbols/delete-discard.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Delete/Discard" xlink:href="../symbols/delete-discard.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/delete-discard.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="2"
+ nextoid="5">
+
+ <domain id="oid1" name="ChangeDomain" title="Change Domain" desc="Information that is related to changes in the existing IT support and business processes.">
+  <domain-link xlink:role="domain" xlink:href="#oid3"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/change_plan_item.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/strategy.kmd#oid6" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/project.kmd#oid5" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/benefit.kmd#oid2" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/change_directive.kmd#oid1" xlink:actuate="user"/>
+ </domain>
+
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/supported_by-supports.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/applies_to-has.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_member-member_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_responsible-responsible_for.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/implemented_by-implements.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/needs-needed_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/affects-affected_by.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+</metis>
+
+
+
+

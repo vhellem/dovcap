@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="7">
+
+ <criteria id="oid1" name="ProcessICOMDocument" title="Process-&#62;ICOM&#39;s-&#62;Document" desc="This criterium is only valid if the types referred to in its name are used in the model.&#10;Drag this onto an Logical Process instance, and the following types will be traversed.&#10;- ICOM&#39;s&#10;- &#34;represent/has&#34; &#10;- Documents " object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="part">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12"/>
+    </c-op>
+   </c-op>
+   <c-op kind="originof" use-off-flag="true">
+    <c-op kind="relshp">
+     <complex-type-link xlink:role="type" xlink:title="represents/has" xlink:href="../relationship_types/represents-has_representation.kmd#oid1"/>
+    </c-op>
+   </c-op>
+   <c-op kind="target">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Document" xlink:href="metis:stdtypes#oid31"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

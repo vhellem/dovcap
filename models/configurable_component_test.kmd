@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002asd2016o92195fqca" name="Configurable_Component_Test" title="Configurable Component Test">
+  <complex-type-links size="5">
+   <complex-type-link xlink:role="type" xlink:title="Configurable Component" xlink:href="../object_types/configurable_component.kmd#Configurable_Component" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Parameter" xlink:href="../relationship_types/has_parameter.kmd#Has_Parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Is Composed Using" xlink:href="../relationship_types/is_composed_using.kmd#Is_Composed_Using"/>
+   <complex-type-link xlink:role="type" xlink:title="Variant Parameter" xlink:href="../object_types/parameter.kmd#VariantParameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Definition" xlink:href="../relationship_types/has_definition.kmd#Has_Definition"/>
+  </complex-type-links>
+  <primitive-type-links size="2">
+   <primitive-type-link xlink:role="integer-type" xlink:title="Parameter Color Table" xlink:href="../object_types/parameter.kmd#Parameter_Color_Table"/>
+   <primitive-type-link xlink:role="integer-type" xlink:title="Parameter Value" xlink:href="../object_types/parameter.kmd#Parameter_Value"/>
+  </primitive-type-links>
+  <method-links size="2">
+   <method-link xlink:role="cpp-method" xlink:title="Configure component" xlink:href="../methods/configure_component.kmd#_002asd2017i1ofakqter"/>
+   <method-link xlink:role="cpp-method" xlink:title="Compute Parameter Color" xlink:href="../methods/compute_parameter_color.kmd#_002asd301gm7697qsv3i"/>
+  </method-links>
+  <typeview-links size="2">
+   <typeview-link xlink:role="typeview" xlink:href="../object_types/configurable_component.kmd#_002asd20177ois8n1pqn"/>
+   <typeview-link xlink:role="typeview" xlink:href="../object_types/parameter.kmd#_002asd2017bae8u1c2j1"/>
+  </typeview-links>
+  <viewstyle-links size="1">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="CC Viewstyle" xlink:href="../viewstyles/cc_viewstyle.kmd#_002ase300vv29at2v24r"/>
+  </viewstyle-links>
+ </metamodel>
+
+
+</metis>

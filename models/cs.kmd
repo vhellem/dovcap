@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompositionSet" name="CompositionSet" title="Composition set" desc="This Composition Set carries the definitions of how this component (CC) utilizes other components in order to achive its purposes." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description" xlink:href="metis:stdtypes#oid19"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="CompositionSet" xlink:href="#CompositionSet" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

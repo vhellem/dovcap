@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="1">
+
+ <type id="RelType_CPPD:InteractsWith_UUID" name="InteractsWith" title="Interacts with" desc="Interacts with relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Depends on" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:DependsOn_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Product Element" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Product Element" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Interacts with" xlink:href="#RelType_CPPD:InteractsWith_UUID" xlink:actuate="user">
+   <string name="from">depends on</string>
+   <string name="to">depends on</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Interacts with" xlink:href="#RelType_CPPD:InteractsWith_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_CPPD:IsConstrainedBy_UUID" name="IsConstrainedBy" title="Is constrained by" desc="Is constrained by relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Product element" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Constraint" xlink:href="fm_objects.kmd#ObjType_CPPD:Constraint_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is constrained by" xlink:href="#RelType_CPPD:IsConstrainedBy_UUID" xlink:actuate="user">
+   <string name="from">is constrained by</string>
+   <string name="to">constrains</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Is constrained by" xlink:href="#RelType_CPPD:IsConstrainedBy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_CPPD:IsInfluencedBy_UUID" name="IsInfluencedBy" title="Is influenced by" desc="Is influenced by relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Requirement " xlink:href="fm_objects.kmd#ObjType_CPPD:FunctionalRequirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Product Element" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is influenced by" xlink:href="#RelType_CPPD:IsInfluencedBy_UUID" xlink:actuate="user">
+   <string name="from">is influenced by</string>
+   <string name="to">influences</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Is influenced by" xlink:href="#RelType_CPPD:IsInfluencedBy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_CPPD:IsPartlyMetBy_UUID" name="IsPartlyMetBy" title="Is partly met by" desc="Is partly met by relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Constraint" xlink:href="fm_objects.kmd#ObjType_CPPD:Constraint_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Design solution" xlink:href="fm_objects.kmd#ObjType_CPPD:DesignSolution_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is partly met by" xlink:href="#RelType_CPPD:IsPartlyMetBy_UUID" xlink:actuate="user">
+   <string name="from">is partly met by</string>
+   <string name="to">meets partly</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Is partly met by" xlink:href="#RelType_CPPD:IsPartlyMetBy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_CPPD:IsSolvedBy_UUID" name="IsSolvedBy" title="Is solved by" desc="Is solved by relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Requirement " xlink:href="fm_objects.kmd#ObjType_CPPD:Requirement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Product element" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is solved by" xlink:href="#RelType_CPPD:IsSolvedBy_UUID" xlink:actuate="user">
+   <string name="from">is solved by</string>
+   <string name="to">solves</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Is solved by" xlink:href="#RelType_CPPD:IsSolvedBy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="min">0</integer>
+   <integer name="max">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

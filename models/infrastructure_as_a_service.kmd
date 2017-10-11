@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:Infrastructure_as_a_Service_UUID" name="Infrastructure_as_a_Service" title="Infrastructure as a Service" desc="Represents an Infrastructure as a Service (IaaS) offering." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="IT Service" xlink:href="../../meaf/objecttypes/it_service.kmd#CompType_TRM:ServiceOffering_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#UUID4_D29E156D-8814-45C0-846C-3D45D78B00D4"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Infrastructure as a Service" xlink:href="#CompType_Semantics:Infrastructure_as_a_Service_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#DDCC99</string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">0</integer>
+  </valueset>
+  <valueset vset="default" size="20" xlink:role="type" xlink:title="Infrastructure as a Service" xlink:href="#CompType_Semantics:Infrastructure_as_a_Service_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <string name="shortName"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <decimal name="price">0</decimal>
+   <string name="pricedUnit"></string>
+   <decimal name="recurringCost">0</decimal>
+   <decimal name="recurringPrice">0</decimal>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="recurringPriceInterval">-1</integer>
+   <string name="monetaryUnit"></string>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_D29E156D-8814-45C0-846C-3D45D78B00D4" xlink:role="type" xlink:title="Infrastructure as a Service" xlink:href="#CompType_Semantics:Infrastructure_as_a_Service_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/iaas.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#DCED9D&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/iaas.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#DCED9D&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/iaas.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="design_parameter_value" name="design_parameter_value" title="Design parameter value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC value" xlink:href="cc_value.kmd#CC_value"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Design_parameter_value" xlink:href="#design_parameter_value" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Design_parameter_value" xlink:href="#design_parameter_value" tree-size="1" nested-size="0.0625" behavior="tree" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.chalmers.se/symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="http://xml.chalmers.se/symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Design_parameter_value" xlink:href="#design_parameter_value" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/object_tree_open.svg#_002ash401d1mk84cm13r" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Design_parameter_value" xlink:href="#design_parameter_value" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#Layout_CVW:ContainerLayout"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DS:  &#34; (property parameterParent)(newline) &#34;DP:  &#34; (property parameter)(newline) &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DS:  &#34; (property parameterParent)(newline) &#34;DP:  &#34; (property parameter)(newline) &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Design_parameter_value" xlink:href="#design_parameter_value" tree-size="1" nested-size="0.125" behavior="tree" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.chalmers.se/symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="http://xml.chalmers.se/symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;DPV: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

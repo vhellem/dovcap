@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:Virtual_Server_UUID" name="Virtual_Server" title="Virtual Server" desc="A server that shares hardware and software resources with other virtual servers. One physical computer can run the server software to host multiple virtual servers.  " usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Server" xlink:href="../../meaf/objecttypes/server.kmd#CompType_TRM:Server_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#UUID4_47AF47FD-BCDC-4A27-A8D6-8CCFCF20F4A5"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Virtual Server" xlink:href="#CompType_Semantics:Virtual_Server_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#CCCCCC</string>
+   <string name="troux_iconAlias">796cafca-ff28-3912-bf65-190c9ca08646</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="48" xlink:role="type" xlink:title="Virtual Server" xlink:href="#CompType_Semantics:Virtual_Server_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <string name="productName"></string>
+   <string name="productVersion"></string>
+   <string name="productSerialNumber"></string>
+   <string name="vendorName"></string>
+   <string name="vendorSalesPhone"></string>
+   <string name="vendorSalesEmail"></string>
+   <string name="vendorSupportPhone"></string>
+   <string name="vendorSupportEmail"></string>
+   <date name="purchaseDate">00000000</date>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="color" class="volatile"></string>
+   <decimal name="memoryRamAmount">0</decimal>
+   <integer name="processorCpuCount">0</integer>
+   <decimal name="processorCpuClockSpeed">0</decimal>
+   <integer name="processorCpuClockSpeedUnit">-1</integer>
+   <integer name="diskCount">0</integer>
+   <decimal name="diskCapacity">0</decimal>
+   <integer name="diskCapacityUnit">-1</integer>
+   <date-time name="processorPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="processorPercentageUsed">0</integer>
+   <date-time name="diskCapacityFreeTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityFree">0</decimal>
+   <integer name="diskCapacityFreeUnit">-1</integer>
+   <date-time name="diskCapacityUsedTimestamp">00000000 000000000</date-time>
+   <decimal name="diskCapacityUsed">0</decimal>
+   <integer name="diskCapacityUsedUnit">-1</integer>
+   <date-time name="diskPercentageUsedTimestamp">00000000 000000000</date-time>
+   <integer name="diskPercentageUsed">0</integer>
+   <integer name="memoryRamUnit">-1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_47AF47FD-BCDC-4A27-A8D6-8CCFCF20F4A5" xlink:role="type" xlink:title="Virtual Server" xlink:href="#CompType_Semantics:Virtual_Server_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/virtual_server.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/virtual_server.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/virtual_server.png"/>
+ </typeview>
+
+
+</metis>

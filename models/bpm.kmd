@@ -1,0 +1,660 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="11"
+ methods="12"
+ typeviews="12"
+ nextoid="1014">
+
+ <type id="oid0" name="BPM_object" title="BPM Object" usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - User" xlink:href="http://xml.computas.com/xml/user/objectprop.kmd#oid1"/>
+  <property name="data" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Data" default-visible="top"/>
+  <property name="BPM_ProcessModelChange" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Value" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid1" label="Process Model Change" desc="The attribute to indicate process model change (baseline, added, removed, updated)" default-visible="bottom"/>
+  <property name="BPM_Object_Color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="BPM Color" method-flag="true" visible-flag="false"/>
+  <property name="BPM_FillPattern" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="BPM Fillpatterin" method-flag="true" visible-flag="false"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5"/>
+  <named-method-link name="BPM_FillPattern" xlink:role="cpp-method" xlink:title="Pick_BPM_Process_Model_Change_FillPattern" xlink:href="../methods/bpm_methods.kmd#oid5"/>
+  <named-method-link name="BPM_Object_Color" xlink:role="cpp-method" xlink:title="Pick_BPM_Object_Color" xlink:href="../methods/bpm_methods.kmd#oid3"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="setTitleTextscale" xlink:href="#oid115"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="BPM Object" xlink:href="#oid0" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="data"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_Object_Color" class="volatile"></string>
+   <string name="BPM_FillPattern" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid1" name="BPM_StartEvent" title="Start Event" desc="&#60;b&#62;Start Events&#60;/b&#62; will &#60;b&#62;trigger&#60;/b&#62; a process; the various event types correspond to different triggering mechanisms:&#10;&#60;ul&#62;&#10;&#60;li&#62;&#60;b&#62;None: &#60;/b&#62;Type of start event not indicated, often used for sub-processes.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Message: &#60;/b&#62;Message arriving from participant triggers the process&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Timer: &#60;/b&#62;A specific date or cycle (&#34;every monday&#34;) triggers the process&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Rule: &#60;/b&#62;A rule condition triggers the process&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Link: &#60;/b&#62;Mechanism for connecting the end (result) of one process to the start (trigger) of another. &#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Multiple: &#60;/b&#62;Multiple ways of triggering the process&#60;/li&#62;&#10;&#60;/ul&#62;&#10;&#10;Choose the wanted Event Type in the property dialog of the object." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="BPM Object" xlink:href="#oid0"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1007"/>
+  <property name="eventType" xlink:role="pair-type" xlink:title="Start Event Type" xlink:href="#oid21" label="Event Type" desc="Specifies the event type of the event." default-visible="top"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="BPM Gateway on Change" xlink:href="#oid101"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Start Event" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="data"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_Object_Color" class="volatile">white</string>
+   <string name="BPM_FillPattern" class="volatile"></string>
+   <pair name="eventType">
+    <first>
+     <string></string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid1</string>
+    </second>
+   </pair>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="BPM_IntermediateEvent" title="Intermediate Event" desc="&#60;b&#62;Intermediate Events&#60;/b&#62; indicate the different ways in which a process can be &#60;b&#62;interrupted&#60;/b&#62; or &#60;b&#62;delayed&#60;/b&#62; after it has started. &#10;Intermediate events for error-handling are often attached to the boundary of a process.&#10;There are several subtypes for intermediate events:&#10;&#60;ul&#62;&#10;&#60;li&#62;&#60;b&#62;None: &#60;/b&#62;May be used to indicate some change of state in process&#39; main flow&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Message: &#60;/b&#62;A message arrives from a participant and triggers the event. Causes process to continue after waiting for the message. Also may be used for exception handling.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Timer: &#60;/b&#62;A specific date or cycle (&#34;every monday&#34;) triggers the event. Used within main flow as a delay, can also be used for exception handling.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Error: &#60;/b&#62;Used for error-handling; both set (throw) and react to (catch) a named  error. &#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Cancel: &#60;/b&#62;Used within transaction processes, always attached to its boundary; triggered when a cancel end event was received during performance of process. &#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Compensation: &#60;/b&#62;Used for compensation-handling; both setting and performing compensation.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Rule: &#60;/b&#62;Used for exception handling; event triggered when named rule is true. A rule is an expression that can evaluate process data.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Link: &#60;/b&#62;Mechanism for connecting the end (result) of one process to an intermediate event of another. Kind of &#34;process go-to&#34;, but also used as an &#34;off-page&#34; connector for printed process models. &#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Multiple: &#60;/b&#62;Multiple ways of triggering the event.&#60;/li&#62;&#10;&#60;/ul&#62;&#10;&#10;Choose the wanted Event Type in the property dialog of the object.&#10;" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="BPM Object" xlink:href="#oid0"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1008"/>
+  <property name="eventType" xlink:role="pair-type" xlink:title="Intermediate Event Type" xlink:href="#oid22" label="Event Type" desc="Specifies the event type of the event." default-visible="top"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="BPM Gateway on Change" xlink:href="#oid101"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Intermediate Event" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="data"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_Object_Color" class="volatile">white</string>
+   <string name="BPM_FillPattern" class="volatile"></string>
+   <pair name="eventType">
+    <first>
+     <string></string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid3</string>
+    </second>
+   </pair>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="BPM_EndEvent" title="End Event" desc="Processes&#39; &#60;b&#62;End Events&#60;/b&#62; have &#60;b&#62;results&#60;/b&#62; indicating the consequence of reaching the end event&#10;Different subtypes of End Events indicates different kinds of process results:&#10;&#60;ul&#62;&#10;&#60;li&#62;&#60;b&#62;None: &#60;/b&#62;Type of event not indicated. Also used for sub-process end and control returning to parent process.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Message: &#60;/b&#62;A message is sent to a participant ant conclusion of process&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Error: &#60;/b&#62;A named error is generated. To be caught by another intermediate event.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Cancel: &#60;/b&#62;Used within transaction processes; triggers a cancel intermediate event on the sub-process boundary&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Compensation: &#60;/b&#62;Indicates neccessity of a compensation for doing roll-back&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Link: &#60;/b&#62;Mechanism for connecting the end (result) of one process to the start (trigger) of another. &#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Terminate: &#60;/b&#62;A fatal error occured, and the process is terminated without compensation or event handling.&#60;/li&#62;&#10;&#60;li&#62;&#60;b&#62;Multiple: &#60;/b&#62;Multiple consequences of ending the process.&#60;/li&#62;&#10;&#60;/ul&#62;&#10;Choose the wanted Event Type in the property dialog of the object.&#10;" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="BPM Object" xlink:href="#oid0"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1009"/>
+  <property name="eventType" xlink:role="pair-type" xlink:title="End Event Type" xlink:href="#oid23" label="Event Type" desc="Specifies the event type of the event." default-visible="top"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="BPM Gateway on Change" xlink:href="#oid101"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="End Event" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="data"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_Object_Color" class="volatile">white</string>
+   <string name="BPM_FillPattern" class="volatile"></string>
+   <pair name="eventType">
+    <first>
+     <string></string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid2</string>
+    </second>
+   </pair>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="BPM_Gateway" title="Gateway" desc="Gateways are elements used to control how sequence flows interact as they converge and diverge within a process. &#60;br&#62;&#10;Gateways are used for decisions - i.e. a point from which multiple paths may be followed.&#60;br&#62;&#10;Gateways are also used for merging -i.e. where multiple paths converge again.&#60;br&#62;&#10;&#10;There are different gateway subtypes, controlled by the attribute Gateway Type available in the property dialog:&#10;&#60;ul&#62;&#10;&#60;li&#62;Data-based exclusive decision/merge (XOR)&#60;/li&#62;&#10;&#60;li&#62;Event-based exclusive decision (XOR)&#60;/li&#62;&#10;&#60;li&#62;Parallel fork/join (AND)&#60;/li&#62;&#10;&#60;li&#62;Inclusive decision/merge (OR)&#60;/li&#62;&#10;&#60;li&#62;Complex decision/merge&#60;/li&#62;&#10;&#60;/ul&#62;" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="BPM Object" xlink:href="#oid0"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1010"/>
+  <property name="gatewayType" xlink:role="pair-type" xlink:title="Gateway Type" xlink:href="#oid24" label="Gateway Type" desc="Specifies the gateway type of the gateway." default-visible="top"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="BPM Gateway on Change" xlink:href="#oid111"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Gateway" xlink:href="#oid4" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="data"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_Object_Color" class="volatile">white</string>
+   <string name="BPM_FillPattern" class="volatile"></string>
+   <pair name="gatewayType">
+    <first>
+     <string>XOR-Data</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid35</string>
+    </second>
+   </pair>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="BPM_Text" title="BPM Text" usage="ghost">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - User" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1005"/>
+  <property name="text" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Text" method-flag="true" label-flag="true" default-visible="top"/>
+  <named-method-link name="BPM_Text" xlink:role="cpp-method" xlink:title="BPM_TextConstructor" xlink:href="#oid114"/>
+  <named-method-link name="View.onClose" xlink:role="cpp-method" xlink:title="hideRelViewFromParent" xlink:href="#oid107"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="BPM Text Constructor " xlink:href="#oid108"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="hideRelViewFromParent" xlink:href="#oid107"/>
+  <named-method-link name="View.onOpen" xlink:role="cpp-method" xlink:title="hideRelViewFromParent" xlink:href="#oid107"/>
+  <named-method-link name="text" xlink:role="cpp-method" xlink:title="Get Parent Name" xlink:href="#oid106"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="text" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <pair-type id="oid21" name="startEventType" title="Start Event Type" store="both" show="first" edit="first">
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <pair>
+   <first>
+    <string></string>
+   </first>
+   <second>
+    <string>http://xml.metis.no/xml/symbols/bpm.svg#oid1</string>
+   </second>
+  </pair>
+  <pairs size="6">
+   <pair>
+    <first>
+     <string></string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid1</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Message</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid8</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Timer</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid17</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Rule</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid18</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Link</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid19</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Multiple</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid20</string>
+    </second>
+   </pair>
+  </pairs>
+ </pair-type>
+
+ <pair-type id="oid22" name="intermediateEventType" title="Intermediate Event Type" store="both" show="first" edit="first">
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <pair>
+   <first>
+    <string></string>
+   </first>
+   <second>
+    <string>http://xml.metis.no/xml/symbols/bpm.svg#oid3</string>
+   </second>
+  </pair>
+  <pairs size="9">
+   <pair>
+    <first>
+     <string></string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid3</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Message</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid5</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Timer</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid22</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Error</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid23</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Cancel</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid24</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Compensate</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid25</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Rule</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid26</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Link</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid27</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Multiple</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid28</string>
+    </second>
+   </pair>
+  </pairs>
+ </pair-type>
+
+ <pair-type id="oid23" name="endEventType" title="End Event Type" store="both" show="first" edit="first">
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <pair>
+   <first>
+    <string></string>
+   </first>
+   <second>
+    <string>http://xml.metis.no/xml/symbols/bpm.svg#oid2</string>
+   </second>
+  </pair>
+  <pairs size="8">
+   <pair>
+    <first>
+     <string></string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid2</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Message</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid6</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Error</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid29</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Cancel</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid30</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Compensate</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid31</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Link</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid32</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Multiple</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid33</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Terminate</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid34</string>
+    </second>
+   </pair>
+  </pairs>
+ </pair-type>
+
+ <pair-type id="oid24" name="gatewayType" title="Gateway Type" store="both" show="first" edit="first">
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <pair>
+   <first>
+    <string>XOR-Data</string>
+   </first>
+   <second>
+    <string>http://xml.metis.no/xml/symbols/bpm.svg#oid35</string>
+   </second>
+  </pair>
+  <pairs size="5">
+   <pair>
+    <first>
+     <string>XOR-Data</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid35</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>XOR-Event</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid40</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>OR</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid36</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>Complex</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid37</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>AND</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm.svg#oid38</string>
+    </second>
+   </pair>
+  </pairs>
+ </pair-type>
+
+ <type id="oid1012" name="BPM_Data_Object" title="Data Object" desc="A Data Object can be used to represent any artifact in the process, for instance an electronic document.&#10;You can use the association relationship to indicate that the Data Object is input to or output from a process.&#10;You can also tie the Data Object to any other object using the represents/has relationship." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="BPM Object" xlink:href="#oid0"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1013"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="BPM Gateway on Change" xlink:href="#oid101"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Data Object" xlink:href="#oid1012" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="data"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_Object_Color" class="volatile"></string>
+   <string name="BPM_FillPattern" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid101" name="BPM_GatewayOnChange" title="BPM Gateway on Change" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="2">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="Set Event Symbol" xlink:href="#oid102"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="showTextObject" xlink:href="#oid113"/>
+   <pointer name="Method3" xlink:role="cpp-method" xlink:title="updateMacros" xlink:href="#oid116"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid102" name="setEventSymbol" title="Set Event Symbol" language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="2">
+   <string name="Mode">SymbolProperty</string>
+   <string name="Property">eventType</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid103" name="PerformLayout" title="Perform Layout" desc="Perform Matrix Layout." language="c++" bind="NO.METIS.GEM.LAYOUT.autoLayout" required-dll="gem_layout">
+ </cpp-method>
+
+ <cpp-method id="oid106" name="getParentName" title="Get Parent Name" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="2">
+   <string name="Property">name</string>
+   <string name="Structure">Parent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid107" name="hideRelViewFromParent" language="c++" bind="NO.METIS.GEM.hideRelViews" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">FromOrigin</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid108" name="BPM_Text.Constructor" title="BPM Text Constructor " language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="1">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="BPM Text Constructor" xlink:href="#oid109"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid109" name="BPM_Text_Constructor" title="BPM Text Constructor" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getParent" xlink:href="../criterias/bpm_criteria.kmd#oid1"/>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Perform Layout" xlink:href="#oid103"/>
+   <string name="Mode">UseCriteria</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid111" name="BPM_Gateway_on_Change" title="BPM Gateway on Change" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="2">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="Set Gateway Symbol" xlink:href="#oid112"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="showTextObject" xlink:href="#oid113"/>
+   <pointer name="Method3" xlink:role="cpp-method" xlink:title="updateMacros" xlink:href="#oid116"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid112" name="setGatewaySymbol" title="Set Gateway Symbol" language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="2">
+   <string name="Mode">SymbolProperty</string>
+   <string name="Property">gatewayType</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid113" name="showTextObject" language="c++" bind="NO.METIS.GEM.showTextObject" required-dll="gem_qt_utilities">
+  <arg-list size="2">
+   <string name="Property">name</string>
+   <pointer name="TextType" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid114" name="BPM_TextConstructor" language="c++" bind="NO.METIS.GEM.setTypeFilter" required-dll="gem_modeling">
+  <arg-list size="2">
+   <string name="Filter1">PropertyList</string>
+   <string name="Filter2">PropertyListAtCreate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid115" name="setTitleTextscale" language="c++" bind="NO.METIS.GEM.setTextScale" required-dll="gem_modeling">
+  <arg-list size="1">
+   <float name="TextScaleFactor">0.25</float>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid116" name="updateMacros" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+  <arg-list size="1">
+   <pointer name="ChildrenOf" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5"/>
+   <string name="AllViews">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid1001" xlink:role="type" xlink:title="Start Event" xlink:href="#oid1" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="StartEvent" xlink:href="../symbols/bpm.svg#oid1" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="StartEvent" xlink:href="../symbols/bpm.svg#oid1" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm_startevent.png"/>
+ </typeview>
+
+ <typeview id="oid1002" xlink:role="type" xlink:title="Intermediate Event" xlink:href="#oid2" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="IntermediateEvent" xlink:href="../symbols/bpm.svg#oid3" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="IntermediateEvent" xlink:href="../symbols/bpm.svg#oid3" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm_intermedevent.png"/>
+ </typeview>
+
+ <typeview id="oid1003" xlink:role="type" xlink:title="End Event" xlink:href="#oid3" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="EndEvent" xlink:href="../symbols/bpm.svg#oid2" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="EndEvent" xlink:href="../symbols/bpm.svg#oid2" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm_endevent.png"/>
+ </typeview>
+
+ <typeview id="oid1004" xlink:role="type" xlink:title="Gateway" xlink:href="#oid4" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="XOR-1" xlink:href="../symbols/bpm.svg#oid35" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="XOR-1" xlink:href="../symbols/bpm.svg#oid35" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_alternative.png"/>
+ </typeview>
+
+ <typeview id="oid1005" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5" tree-size="0.4" nested-size="0.125" behavior="tree" position="top" placement="external" gui-behavior="guibehaviorset guirmbm guiincludeincopy ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property text))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property text))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1006" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5" tree-size="0.4" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:7pt&#62;&#34; (property text) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (property text) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1007" xlink:role="type" xlink:title="Start Event" xlink:href="#oid1" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="StartEvent" xlink:href="../symbols/bpm.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="StartEvent" xlink:href="../symbols/bpm.svg#oid1" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm_startevent.png"/>
+ </typeview>
+
+ <typeview id="oid1008" xlink:role="type" xlink:title="Intermediate Event" xlink:href="#oid2" typedesc="BPM Viewstyle" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="IntermediateEvent" xlink:href="../symbols/bpm.svg#oid3" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="IntermediateEvent" xlink:href="../symbols/bpm.svg#oid3" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm_intermedevent.png"/>
+ </typeview>
+
+ <typeview id="oid1009" xlink:role="type" xlink:title="End Event" xlink:href="#oid3" tree-size="0.5" nested-size="0.5" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="EndEvent" xlink:href="../symbols/bpm.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="EndEvent" xlink:href="../symbols/bpm.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm_endevent.png"/>
+ </typeview>
+
+ <typeview id="oid1010" xlink:role="type" xlink:title="Gateway" xlink:href="#oid4" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="BPM event text" xlink:href="../layout_strategies/bpm_event_txt.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="XOR-1" xlink:href="../symbols/bpm.svg#oid35" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="XOR-1" xlink:href="../symbols/bpm.svg#oid35" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_alternative.png"/>
+ </typeview>
+
+ <typeview id="oid1011" xlink:role="type" xlink:title="BPM Text" xlink:href="#oid5" typedesc="BPM Text with variable font" tree-size="0.125" nested-size="0.125" behavior="tree">
+ </typeview>
+
+ <typeview id="oid1013" xlink:role="type" xlink:title="Data Object" xlink:href="#oid1012" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Data Object" xlink:href="../symbols/bpm.svg#oid64" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Data Object" xlink:href="../symbols/bpm.svg#oid64" xlink:actuate="user">
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/dataobject.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_TRM:ServiceLevelAgreement_UUID" name="service_level_agreement" title="Service Level Agreement" desc="A Service Level Agreement (SLA) represents the definition of terms that a service is being offered by a provider to a customer." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Contract" xlink:href="contract.kmd#CompType_MEAF:Contract_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/service_level_agreement.kmd#UUID4_48AC87DA-921A-45B8-84CA-8836E9883DF2"/>
+  <property name="complianceGoalPercentage" xlink:role="integer-type" xlink:title="Percentage" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_percentage0_UUID" label="Compliance Goal Percentage" desc="Compliance goal objective defined (%)." visible-flag="false" mer-property-metadata="uuid=&#34;PropDef_TRM:ServiceLevelAgreement_Prop_CompGoal_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="serviceTier" xlink:role="integer-type" xlink:title="Service Tier" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_service_tier_UUID" label="Service Tier" desc="The quality tier of this SLA." visible-flag="false" mer-property-metadata="uuid=&#34;PropDef_TRM:ServiceLevelAgreement_serviceTier_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="availabilityProfile" xlink:role="integer-type" xlink:title="SLA Availability Integrity Profile" xlink:href="../../semantics/primitive_types/sla_availability_integrity_profile.kmd#PrimType_Semantics:SLA_Availability_Integrity_Profile_UUID" label="Availability Profile" desc="A high-level summarization of the response time required to deliver this Service Offering to the consumer. “High” indicates the need for a rapid response, while “Low” indicates that the response time is less critical." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef:ITSM:ServiceLevelAgreement_availabilityProfile_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="integrityProfile" xlink:role="integer-type" xlink:title="SLA Availability Integrity Profile" xlink:href="../../semantics/primitive_types/sla_availability_integrity_profile.kmd#PrimType_Semantics:SLA_Availability_Integrity_Profile_UUID" label="Integrity Profile" desc="A high-level summarization of the Integrity required to deliver this Service Offering to the consumer. “High” indicates a strict integrity level is needed, while “Low” indicates that integrity is less critical." default-visible="bottom" mer-property-metadata="uuid=&#34;PropDef:ITSM:ServiceLevelAgreement_integrityProfile_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service Level Agreement" xlink:href="#CompType_TRM:ServiceLevelAgreement_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#DDCC99</string>
+   <string name="troux_iconAlias">f0135439-a540-38f6-8688-fe7a11280751</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="18" xlink:role="type" xlink:title="Service Level Agreement" xlink:href="#CompType_TRM:ServiceLevelAgreement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="value">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="monetaryUnit"></string>
+   <integer name="complianceGoalPercentage">0</integer>
+   <integer name="serviceTier">-1</integer>
+   <integer name="availabilityProfile">0</integer>
+   <integer name="integrityProfile">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Service Level Agreement" xlink:href="#CompType_TRM:ServiceLevelAgreement_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="complianceGoalPercentage" visible-flag="true"/>
+   <propertyview name="serviceTier" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicelevelagreement.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicelevelagreement.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/servicelevelagreement.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Service Level Agreement" xlink:href="#CompType_TRM:ServiceLevelAgreement_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="complianceGoalPercentage" visible-flag="true"/>
+   <propertyview name="serviceTier" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicelevelagreement.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/servicelevelagreement.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/servicelevelagreement.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="2">
+ 
+ <cpp-method id="oid1" name="customButtonLabel" language="c++" bind="NO.METIS.GEM.getButtonLabel" required-dll="gem_util">
+  <arg-list size="1">
+   <string name="stringLabel">buttonlabel</string> 
+   </arg-list>
+ </cpp-method>
+ 
+ </metis>

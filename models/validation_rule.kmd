@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="validation_rule" name="validation_rule" title="Validation_rule" desc="" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="ruleEvaluatedTo" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Rule evaluated to" default-visible="top" protected-flag="true"/>
+  <property name="ruleEngine" xlink:role="integer-type" xlink:title="Rule_Engine" xlink:href="primitive_types.kmd#Rule_Engine" label="Rule engine" default-visible="top"/>
+  <property name="ruleCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Code" default-visible="top"/>
+  <named-method-link name="evaluate_" xlink:role="cpp-method" xlink:title="evaluateRule" xlink:href="../methods/rule_methods.kmd#evaluateRule"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="createViewAsHierarchy" xlink:href="../methods/cc_methods.kmd#createViewAsHierarchy"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="createViewAsHierarchy" xlink:href="../methods/cc_methods.kmd#createViewAsHierarchy"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="validation_rule" xlink:href="#validation_rule" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+  <typeview id="oid1" xlink:role="type" xlink:title="validation_rule" xlink:href="#validation_rule" tree-size="1" nested-size="0.0625" behavior="tree" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../layout/hierarchy_layout.kmd#_002asgf00sj14lu510jk"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="box1" xlink:href="../symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="box1" xlink:href="../symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="validation_rule" xlink:href="#validation_rule" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/object_tree_open.svg#_002ash401d1mk84cm13r" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

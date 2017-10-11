@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="ProblemAffects" title="affects/has problem" desc="Allows you to connect a Problem to a Process or Organization." usage="relationship" decomposition-flag="true" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/problem.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/process.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/problem.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="from">affects</string>
+   <string name="to">has problem</string>
+  </valueset>
+ </type>
+
+
+</metis>

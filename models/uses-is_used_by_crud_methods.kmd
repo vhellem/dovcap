@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="2">
+
+ <cpp-method id="oid1" name="getGRID" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="getMacroValue1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property creates) (property reads) (property updates) (property deletes))</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

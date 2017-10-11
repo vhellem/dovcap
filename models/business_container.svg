@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: business_container.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Business Closed</title>
+    <rect x="0" y="0" width="512" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <polygon points="0 0 32 48 480 48 
+     512 0 0 0 0 0 0 0 
+     0 0 0 0 0 0 0 0 
+     0 0 0 0 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffff00; fill-opacity:100%"     class="TAG:flap"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32" y="21"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:22; text-align:center"
+       class="TAG:text"></text>
+      <rect x="32" y="0" width="448" height="48"
+       style=" stroke:#000000; stroke-width:1; fill:#ffff00; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32" y="79"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text1"></text>
+      <rect x="32" y="64" width="448" height="192"
+       style=" stroke:#000000; stroke-width:1; fill:#ffff00; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Business Open</title>
+    <rect x="0" y="32" width="512" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <polygon points="0 32 32 0 480 0 
+     512 32 0 32 0 32 0 32 0 32 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffff00; fill-opacity:100%"     class="TAG:flap"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32" y="15"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center"
+       class="TAG:text"></text>
+      <rect x="32" y="0" width="448" height="32"
+       style=" stroke:#000000; stroke-width:1; fill:#ffff00; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="55"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:LAYOUTAREA"></text>
+      <rect x="8" y="40" width="496" height="240"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_0AD179E7-D98F-43CE-9114-ADD242D38F11" name="DeveloperEd.ModelEd.UriToolBar.Swimlane_Diagram" title="SL Diag">
+  <complex-type-links size="3">
+    <complex-type-link xlink:role="type" xlink:title="Swimlane Diagram" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid12" xlink:actuate="user"/>
+  </complex-type-links>
+ 
+ </metamodel>
+
+
+</metis>

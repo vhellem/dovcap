@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="Method_AKM:initWorkspace" name="initWorkspace_1" title="Initialize workspace" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">initWorkspace</string>
+   <pointer name="workspaceType" xlink:role="type" xlink:title="Workspace" xlink:href="../objecttypes/workspace.kmd#CompType_AKM:Workspace_UUID" xlink:actuate="auto"/>
+   <pointer name="workareaType" xlink:role="type" xlink:title="Workarea" xlink:href="../objecttypes/workarea.kmd#CompType_AKM:Workarea_UUID" xlink:actuate="auto"/>
+   <pointer name="menuType" xlink:role="type" xlink:title="Workmenu" xlink:href="../objecttypes/workmenu.kmd#CompType_AKM:Workmenu_UUID" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:loadWorkspace" name="loadWorkspace_1" title="Load workspace" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">loadWorkspace</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:relocateToModel" name="relocateToModel" title="Relocate to model" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="2">
+   <string name="Command">relocateToModel</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewAsHierarchy_1" name="ViewAsHierarchy_1" title="View as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">ViewAsHierarchy</string>
+   <integer name="OnDecompose">1</integer>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

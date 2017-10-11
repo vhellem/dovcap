@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="3"
+ nextoid="5">
+
+ <domain id="oid1" name="OrganizationDomain" title="Organization Domain" desc="Contains Organization, Network, Partnership, Competitor, Position, Communication and Responsible Position.&#10;The organization domain is used to represent the organizational aspect of the enterprise. The most central modelling object in this domain is the organization, which is a generic concept covering corporations, departments, sections, groups, etc. The organization can be decomposed (e.g. department has sections), or attached to one or more functions. A function is also an organization, but it is not a decomposition, but rather a characteristic of the other organization.">
+  <domain-link xlink:role="domain" xlink:href="#oid3" xlink:actuate="user"/>
+  <domain-link xlink:role="domain" xlink:href="#oid4" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/ect.kmd#oid41" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/ect.kmd#oid42" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/partnership.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/competitor.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/position.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/communication.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/responsible_position.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/location.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/competenceprofile.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/formalcompetence.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/trainingprogram.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/role.kmd#oid2" xlink:actuate="user"/>
+ </domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/act_as-carried_out_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/delivers-delivered_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/equals-equals.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/located_in-location_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_role-role_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/uses-used_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/applies_to-has_goal.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/input_to-input.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/output-output_from.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/reports_to-supervises.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/owns-owned_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_competence-competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/needs-needed_competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_formal_competence-formal_competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/promoted_by-promotes.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/must_have-formal_competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_competence-of_competence_profile.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/requirement_to-has_requirement.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has-applies_to.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/is_filled_by-fills.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/fills-is_filled_by.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+ <domain id="oid4" name="Criteria" title="Criteria" desc="Contains the criteria for this domain">
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/organization.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/partnership.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/competitor.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/position.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/communication.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/responsible_position.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/location.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/competenceprofile.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/formalcompetence.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/competence.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/trainingprogram.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/person.kmd#oid3" xlink:actuate="user"/>
+  <criteria-link xlink:role="criteria" xlink:href="../object_types/role.kmd#oid6" xlink:actuate="user"/>
+ </domain>
+
+</metis>

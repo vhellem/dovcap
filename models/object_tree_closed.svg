@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: object_tree_closed.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Object Tree Closed</title>
+    <rect x="0" y="0" width="576" height="192" rx="4" ry="9"
+      style=" stroke:#777777; stroke-opacity:1; stroke-width:1.5; fill:#888888; fill-opacity:1.0"     class="TAG:canvas"></rect>
+    <rect x="8" y="8" width="176" height="176" rx="12.01" ry="12.01"
+     style="stroke:none; fill:#888888; fill-opacity:1.0"     class="TAG:iconbackground"></rect>
+    <rect x="192" y="8" width="376" height="176" rx="4" ry="8"
+     style="stroke:none; fill:#ffffff; fill-opacity:1.0"     class="TAG:textbackground"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="200" y="31"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text"></text>
+      <rect x="200" y="16" width="360" height="160"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0.0"></rect>
+    </g>
+    <image x="16" y="16" width="160" height="160" xlink:role="symbol" xlink:title="Text" xlink:href="metis:stdsyms#oid40"     class="TAG:icon"></image>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="200" y="149"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:14;"
+       class="TAG:extratext"></text>
+      <rect x="200" y="136" width="360" height="48"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid1"/>
+</svg>

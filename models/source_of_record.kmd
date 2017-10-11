@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_Semantics_Troux Information:Source_of_Record_UUID" name="Source_of_Record" title="Source of Record">
+  <range name="Unknown" min="0" max="0"/>
+  <range name="Not Defined" min="1" max="1"/>
+  <range name="Yes" min="2" max="2"/>
+  <range name="No" min="3" max="3"/>
+ </integer-type>
+
+
+</metis>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="Primtype_allocation_color_mapping_UUID" name="allocationColorMapping" title="Allocation Color Mapping" default="100">
+  <range name="grey80" min="1" max="19"/>
+  <range name="grey65" min="20" max="39"/>
+  <range name="grey50" min="40" max="59"/>
+  <range name="grey35" min="60" max="79"/>
+  <range name="grey20" min="80" max="99"/>
+  <range name="black" min="100" max="100"/>
+  <range name="purple1" min="101" max="199"/>
+  <range name="purple3" min="200" max="499"/>
+  <range name="purple4" min="500" max="..."/>
+ </integer-type>
+
+
+</metis>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_Patterns:Design_Pattern_has_category-is_category_for_Design_Pattern_Category_UUID" name="Design_Pattern_has_category_is_category_for_Design_Pattern_Category" title="Design Pattern has category-is category for Design Pattern Category" desc="Specifies that a Design Pattern belongs within a Design Pattern Category." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has category" xlink:href="../../meaf/relationshiptypes/has_category-is_category_for.kmd#Reltype_has_category-is_category_for_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/design_pattern_has_category-is_category_for_design_pattern_category.kmd#UUID4_7906BE45-48AD-462D-A379-D7DD858F733A"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Design Pattern" xlink:href="../object_types/design_pattern.kmd#CompType_Semantics_Patterns:Design_Pattern_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Design Pattern Category" xlink:href="../object_types/design_pattern_category.kmd#CompType_Semantics_Patterns:Design_Pattern_Category_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Design Pattern has category-is category for Design Pattern Category" xlink:href="#RelType_Semantics_Patterns:Design_Pattern_has_category-is_category_for_Design_Pattern_Category_UUID" xlink:actuate="user">
+   <string name="from">has category</string>
+   <string name="to">is category for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Design Pattern has category-is category for Design Pattern Category" xlink:href="#RelType_Semantics_Patterns:Design_Pattern_has_category-is_category_for_Design_Pattern_Category_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

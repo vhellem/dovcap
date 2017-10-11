@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="3.2.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="ownscontentof_hascontentowner" title="owns content of/has content owner" usage="relationship" desc="Allows you to specify a Person, a Role or  an Organization as content owner of an Application. This ownership is in many organizations different from the financial ownership.">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../object_types/person.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application, Physical" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application, Physical" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization" xlink:href="../object_types/organization.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application, Physical" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="owns content of/has content owner" xlink:href="#oid1">
+   <string name="from">owns content of</string>
+   <string name="to">has content owner</string>
+  </valueset>
+ </type>
+
+
+</metis>

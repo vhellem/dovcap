@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Information_Architecture_includes-is_included_in_Information_Component_UUID" name="Information_Architecture_includes_is_included_in_Information_Component" title="Information Architecture includes-is included in Information Component" desc="Used to associate a Service Architecture with those services it includes, where the service types have been derived from the Abstract Service type." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/information_architecture_includes-is_included_in_information_component.kmd#UUID4_2E4C60A4-B893-42DF-9527-CB4CBD892C11"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Information Architecture" xlink:href="../object_types/information_architecture.kmd#CompType_Semantics:Information_Architecture_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Component" xlink:href="../../meaf/abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Information Architecture includes-is included in Information Component" xlink:href="#RelType_Semantics:Information_Architecture_includes-is_included_in_Information_Component_UUID" xlink:actuate="user">
+   <string name="from">includes</string>
+   <string name="to">is included in</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Information Architecture includes-is included in Information Component" xlink:href="#RelType_Semantics:Information_Architecture_includes-is_included_in_Information_Component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

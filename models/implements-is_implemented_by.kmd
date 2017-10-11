@@ -1,0 +1,843 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="32"
+ nextoid="1">
+
+ <type id="Reltype_benefit_implements_is_implemented_by_strategy_UUID" name="benefit_implements_is_implemented_by_strategy" title="Benefit implements Strategy" desc="Use this relationship to connect a strategy to the benefits implementing it." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Benefit" xlink:href="../objecttypes/benefit.kmd#CompType_MEAF:Benefit_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Benefit implements Strategy" xlink:href="#Reltype_benefit_implements_is_implemented_by_strategy_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Benefit implements Strategy" xlink:href="#Reltype_benefit_implements_is_implemented_by_strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_implements_is_implemented_by_action_UUID" name="change_component_implements_is_implemented_by_action" title="Change Component implements Action" desc="Use this relationship to connect action items to change items where they are implemented." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component implements Action" xlink:href="#Reltype_change_component_implements_is_implemented_by_action_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component implements Action" xlink:href="#Reltype_change_component_implements_is_implemented_by_action_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_implements_is_implemented_by_plan_UUID" name="change_component_implements_is_implemented_by_plan" title="Change Component implements Plan" desc="Use this relationship to connect change items like initiatives, projects and tasks to plan objects." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <property name="costAllocationWeight" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Cost Allocation Weighting" desc="A relative weighting that indicates how much of the change component cost is allocated to the plan." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:ChangeCompImplementsPlan_costAllocationWeight_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=0;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component implements Plan" xlink:href="#Reltype_change_component_implements_is_implemented_by_plan_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Change Component implements Plan" xlink:href="#Reltype_change_component_implements_is_implemented_by_plan_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="costAllocationWeight">1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_database_object_implements_is_implemented_by_information_component_UUID" name="database_object_implements_is_implemented_by_information_component" title="Database Object implements Information Component" desc="Use this relationship to specify that an information element is implemented by a database object." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Database Object" xlink:href="../abstracttypes/database_object.kmd#CompType_TRM:DataObject_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Information Component" xlink:href="../abstracttypes/information_component.kmd#CompType_MEAF:InformationComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Database Object implements Information Component" xlink:href="#Reltype_database_object_implements_is_implemented_by_information_component_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Database Object implements Information Component" xlink:href="#Reltype_database_object_implements_is_implemented_by_information_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_datastore_implements_is_implemented_by_it_architecture_element_UUID" name="datastore_implements_is_implemented_by_it_architecture_element" title="Datastore implements IT Architecture Element" desc="Use this relationship to connect logical architecture elements to the physical datastores used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Datastore implements IT Architecture Element" xlink:href="#Reltype_datastore_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Datastore implements IT Architecture Element" xlink:href="#Reltype_datastore_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_datastore_implements_is_implemented_by_logical_datastore_UUID" name="datastore_implements_is_implemented_by_logical_datastore" title="Datastore implements Logical Datastore" desc="Use this relationship to connect logical IT architecture elements to the physical datastore elements used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Datastore" xlink:href="../objecttypes/logical_datastore.kmd#CompType_MEAF:LogicalDatastore_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Datastore implements Logical Datastore" xlink:href="#Reltype_datastore_implements_is_implemented_by_logical_datastore_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Datastore implements Logical Datastore" xlink:href="#Reltype_datastore_implements_is_implemented_by_logical_datastore_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_implements_is_implemented_by_deliverable_UUID" name="deliverable_implements_is_implemented_by_deliverable" title="Deliverable implements Deliverable" desc="Use this relationship to specify that a product item or service is implemented by another product item or service." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable implements Deliverable" xlink:href="#Reltype_deliverable_implements_is_implemented_by_deliverable_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable implements Deliverable" xlink:href="#Reltype_deliverable_implements_is_implemented_by_deliverable_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_implements_is_implemented_by_function_UUID" name="deliverable_implements_is_implemented_by_function" title="Deliverable implements Function" desc="Use this relationship to specify that a function is implemented by a product item or service." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable implements Function" xlink:href="#Reltype_deliverable_implements_is_implemented_by_function_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable implements Function" xlink:href="#Reltype_deliverable_implements_is_implemented_by_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deployed_software_implements_is_implemented_by_it_architecture_element_UUID" name="deployed_software_implements_is_implemented_by_it_architecture_element" title="Deployed Software implements IT Architecture Element" desc="Use this relationship to connect logical architecture elements to the physical elements used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software implements IT Architecture Element" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deployed Software implements IT Architecture Element" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deployed_software_implements_is_implemented_by_logical_application_UUID" name="deployed_software_implements_is_implemented_by_logical_application" title="Deployed Software implements Logical Application" desc="Use this relationship to connect logical application elements to the physical software elements used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Application" xlink:href="../objecttypes/logical_application.kmd#CompType_MEAF:LogicalApplication_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software implements Logical Application" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_logical_application_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deployed Software implements Logical Application" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_logical_application_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deployed_software_implements_is_implemented_by_message_UUID" name="deployed_software_implements_is_implemented_by_message" title="Deployed Software implements Message" desc="Use this relationship to connect message and interfaces to the applications and software used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software implements Message" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deployed Software implements Message" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deployed_software_implements_is_implemented_by_process_data_UUID" name="deployed_software_implements_is_implemented_by_process_data" title="Deployed Software implements Process Data" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software implements Process Data" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deployed Software implements Process Data" xlink:href="#Reltype_deployed_software_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_hardware_product_implements_is_implemented_by_logical_technology_item_UUID" name="hardware_product_implements_is_implemented_by_logical_technology_item" title="Hardware Product implements Logical Technology Item" desc="Use this relationship to connect logical technology items to the physical hardware and infrastructure items used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Hardware Product" xlink:href="../objecttypes/hardware_product.kmd#CompType_TRM:HardwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Technology Item" xlink:href="../objecttypes/logical_technology_item.kmd#CompType_MEAF:LogicalTechnologyItem_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Hardware Product implements Logical Technology Item" xlink:href="#Reltype_hardware_product_implements_is_implemented_by_logical_technology_item_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Hardware Product implements Logical Technology Item" xlink:href="#Reltype_hardware_product_implements_is_implemented_by_logical_technology_item_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_implements-is_implemented_by_UUID" name="implements-is_implemented_by" title="implements" desc="Allows you to connect logical elements to the physical elements they define." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllimplements-is_implemented_by" xlink:role="criteria" xlink:title="Find all Implements relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_implements-is_implemented_by_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_implements_is_implemented_by_it_architecture_element_UUID" name="infrastructure_component_implements_is_implemented_by_it_architecture_element" title="Infrastructure Component implements IT Architecture Element" desc="Use this relationship to connect logical architecture elements to the physical hardware and infrastructure elements used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component implements IT Architecture Element" xlink:href="#Reltype_infrastructure_component_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Infrastructure Component implements IT Architecture Element" xlink:href="#Reltype_infrastructure_component_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_implements_is_implemented_by_logical_technology_item_UUID" name="infrastructure_component_implements_is_implemented_by_logical_technology_item" title="Infrastructure Component implements Logical Technology Item" desc="Use this relationship to connect logical technology items to the physical hardware and infrastructure items used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Technology Item" xlink:href="../objecttypes/logical_technology_item.kmd#CompType_MEAF:LogicalTechnologyItem_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component implements Logical Technology Item" xlink:href="#Reltype_infrastructure_component_implements_is_implemented_by_logical_technology_item_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Infrastructure Component implements Logical Technology Item" xlink:href="#Reltype_infrastructure_component_implements_is_implemented_by_logical_technology_item_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_it_product_implements_is_implemented_by_it_architecture_element_UUID" name="it_product_implements_is_implemented_by_it_architecture_element" title="IT Product implements IT Architecture Element" desc="Use this relationship to connect logical architecture elements to the physical IT products used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="IT Product" xlink:href="../objecttypes/it_product.kmd#CompType_MEAF:ITProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="IT Product implements IT Architecture Element" xlink:href="#Reltype_it_product_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="IT Product implements IT Architecture Element" xlink:href="#Reltype_it_product_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_logical_application_implements_is_implemented_by_it_architecture_element_UUID" name="logical_application_implements_is_implemented_by_it_architecture_element" title="Logical Application implements IT Architecture Element" desc="Use this relationship to specify in an Architecture or a Logical Architecture that an element is an instance of one of the Logical Library elements (Logical Application, Logical Datastore, Logical Technology Item). This relationship is needed to specify what an architecture element represents. The name of the Library element is propagated onto the symbol of the architecture element." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Application" xlink:href="../objecttypes/logical_application.kmd#CompType_MEAF:LogicalApplication_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Logical Application implements IT Architecture Element" xlink:href="#Reltype_logical_application_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Logical Application implements IT Architecture Element" xlink:href="#Reltype_logical_application_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_logical_datastore_implements_is_implemented_by_it_architecture_element_UUID" name="logical_datastore_implements_is_implemented_by_it_architecture_element" title="Logical Datastore implements IT Architecture Element" desc="Use this relationship to specify in an Architecture or a Logical Architecture that an element is an instance of one of the Logical Library elements (Logical Application, Logical Datastore, Logical Technology Item). This relationship is needed to specify what an architecture element represents. The name of the Library element is propagated onto the symbol of the architecture element." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Datastore" xlink:href="../objecttypes/logical_datastore.kmd#CompType_MEAF:LogicalDatastore_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Logical Datastore implements IT Architecture Element" xlink:href="#Reltype_logical_datastore_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Logical Datastore implements IT Architecture Element" xlink:href="#Reltype_logical_datastore_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_logical_technology_item_implements_is_implemented_by_it_architecture_element_UUID" name="logical_technology_item_implements_is_implemented_by_it_architecture_element" title="Logical Technology Item implements IT Architecture Element" desc="Use this relationship to specify in an Architecture or a Logical Architecture that an element is an instance of one of the Logical Library elements (Logical Application, Logical Datastore, Logical Technology Item). This relationship is needed to specify what an architecture element represents. The name of the Library element is propagated onto the symbol of the architecture element." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Technology Item" xlink:href="../objecttypes/logical_technology_item.kmd#CompType_MEAF:LogicalTechnologyItem_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Logical Technology Item implements IT Architecture Element" xlink:href="#Reltype_logical_technology_item_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Logical Technology Item implements IT Architecture Element" xlink:href="#Reltype_logical_technology_item_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_organization_component_implements_is_implemented_by_message_UUID" name="organization_component_implements_is_implemented_by_message" title="Organization Component implements Message" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Organization Component implements Message" xlink:href="#Reltype_organization_component_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Organization Component implements Message" xlink:href="#Reltype_organization_component_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_organization_component_implements_is_implemented_by_process_data_UUID" name="organization_component_implements_is_implemented_by_process_data" title="Organization Component implements Process Data" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Organization Component implements Process Data" xlink:href="#Reltype_organization_component_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Organization Component implements Process Data" xlink:href="#Reltype_organization_component_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_plan_implements_is_implemented_by_action_UUID" name="plan_implements_is_implemented_by_action" title="Plan implements Action" desc="Use this relationship to connect action items to plan items where they are implemented." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Plan" xlink:href="../objecttypes/plan.kmd#CompType_MEAF:Plan_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Action" xlink:href="../objecttypes/action.kmd#CompType_MEAF:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Plan implements Action" xlink:href="#Reltype_plan_implements_is_implemented_by_action_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Plan implements Action" xlink:href="#Reltype_plan_implements_is_implemented_by_action_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_software_product_implements_is_implemented_by_communication_UUID" name="software_product_implements_is_implemented_by_communication" title="Software Product implements Communication" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product" xlink:href="../objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Communication" xlink:href="../objecttypes/communication.kmd#CompType_MEAF:Communication_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product implements Communication" xlink:href="#Reltype_software_product_implements_is_implemented_by_communication_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Software Product implements Communication" xlink:href="#Reltype_software_product_implements_is_implemented_by_communication_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_software_product_implements_is_implemented_by_logical_application_UUID" name="software_product_implements_is_implemented_by_logical_application" title="Software Product implements Logical Application" desc="Use this relationship to connect logical application elements to the physical software elements used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product" xlink:href="../objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Application" xlink:href="../objecttypes/logical_application.kmd#CompType_MEAF:LogicalApplication_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product implements Logical Application" xlink:href="#Reltype_software_product_implements_is_implemented_by_logical_application_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Software Product implements Logical Application" xlink:href="#Reltype_software_product_implements_is_implemented_by_logical_application_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_software_product_implements_is_implemented_by_message_UUID" name="software_product_implements_is_implemented_by_message" title="Software Product implements Message" desc="Use this relationship to connect message and interfaces to the physical software elements used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product" xlink:href="../objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product implements Message" xlink:href="#Reltype_software_product_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Software Product implements Message" xlink:href="#Reltype_software_product_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_software_product_implements_is_implemented_by_process_data_UUID" name="software_product_implements_is_implemented_by_process_data" title="Software Product implements Process Data" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software Product" xlink:href="../objecttypes/software_product.kmd#CompType_TRM:SoftwareProduct_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Software Product implements Process Data" xlink:href="#Reltype_software_product_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Software Product implements Process Data" xlink:href="#Reltype_software_product_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_standard_implements_is_implemented_by_it_architecture_element_UUID" name="standard_implements_is_implemented_by_it_architecture_element" title="Standard implements IT Architecture Element" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Standard" xlink:href="../objecttypes/standard.kmd#CompType_MEAF:Standard_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Standard implements IT Architecture Element" xlink:href="#Reltype_standard_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Standard implements IT Architecture Element" xlink:href="#Reltype_standard_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_technology_implements_is_implemented_by_communication_UUID" name="technology_implements_is_implemented_by_communication" title="Technology implements Communication" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Communication" xlink:href="../objecttypes/communication.kmd#CompType_MEAF:Communication_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Technology implements Communication" xlink:href="#Reltype_technology_implements_is_implemented_by_communication_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Technology implements Communication" xlink:href="#Reltype_technology_implements_is_implemented_by_communication_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_technology_implements_is_implemented_by_it_architecture_element_UUID" name="technology_implements_is_implemented_by_it_architecture_element" title="Technology implements IT Architecture Element" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Technology implements IT Architecture Element" xlink:href="#Reltype_technology_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Technology implements IT Architecture Element" xlink:href="#Reltype_technology_implements_is_implemented_by_it_architecture_element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_technology_implements_is_implemented_by_message_UUID" name="technology_implements_is_implemented_by_message" title="Technology implements Message" desc="Use this relationship to connect message and interfaces to the enabling (IT) technology used for implementation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message" xlink:href="../objecttypes/message.kmd#CompType_MEAF:Message_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Technology implements Message" xlink:href="#Reltype_technology_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Technology implements Message" xlink:href="#Reltype_technology_implements_is_implemented_by_message_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_technology_implements_is_implemented_by_process_data_UUID" name="technology_implements_is_implemented_by_process_data" title="Technology implements Process Data" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements" xlink:href="#Reltype_implements-is_implemented_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Technology implements Process Data" xlink:href="#Reltype_technology_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Technology implements Process Data" xlink:href="#Reltype_technology_implements_is_implemented_by_process_data_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

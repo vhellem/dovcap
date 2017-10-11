@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<?metis version="5.2.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+                 xmlns="http://www.metis.no/metis"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 types="1"
+                 typeviews="1"
+                 nextoid="1">
+
+ <type id="CompType_AKM:GeometricalObject_UUID" name="Geometrical_Object" title="Geometrical Object (AKM)" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object (AKM)" xlink:href="object.kmd#CompType_AKM:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="view" xlink:role="integer-type" xlink:title="Geometrical view" xlink:href="../primitivetypes/akm_geometricalview.kmd#PrimType_AKM:GeometricalView_UUID" label="Corresponding view" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:GeometricalView&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="setGeometryValues" xlink:href="../methods/akm_methods.kmd#Method_AKM:setGeometryValues_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Geometrical Object (AKM)" xlink:href="#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Geometrical Object (AKM)" xlink:href="#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="view">0</integer>
+   <integer name="isClosed">0</integer>
+  </valueset>
+ </type>
+
+ <type id="CompType_AKM:GeometricalObject_Backup" name="GeometricalObject_Backup" title="Geometrical Object (Backup)" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object (AKM)" xlink:href="object.kmd#CompType_AKM:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="view" xlink:role="integer-type" xlink:title="Geometrical view" xlink:href="../primitivetypes/akm_geometricalview.kmd#PrimType_AKM:GeometricalView_UUID" label="Corresponding view" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:GeometricalView&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="isClosed" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Is closed" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:IsClosed&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="width" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Width" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectWidth&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="height" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Height" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectHeight&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="xpos" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="X Position" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectXPos&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="ypos" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Y Position" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectYPos&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="scaleFactor" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Scale factor" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectScaleFactor&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="textFactor" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Text factor" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectTextFactor&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="openSymbol" xlink:role="string-type" xlink:title="Url" xlink:href="metis:std#oid3" label="Open symbol" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectOpenSymbol&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="closedSymbol" xlink:role="string-type" xlink:title="Url" xlink:href="metis:std#oid3" label="Closed symbol" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ObjectClosedSymbol&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="setGeometryValues" xlink:href="../methods/akm_methods.kmd#Method_AKM:setGeometryValues_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Geometrical Object (AKM)" xlink:href="#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Geometrical Object (AKM)" xlink:href="#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="view">0</integer>
+   <integer name="isClosed">0</integer>
+   <float name="width">0</float>
+   <float name="height">0</float>
+   <float name="xpos">0</float>
+   <float name="ypos">0</float>
+   <float name="scaleFactor">0</float>
+   <float name="textFactor">0</float>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Geometrical Object (AKM)" xlink:href="#CompType_AKM:GeometricalObject_UUID" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="view" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="isClosed" visible-flag="false"/>
+   <propertyview name="width" visible-flag="false"/>
+   <propertyview name="height" visible-flag="false"/>
+   <propertyview name="xpos" visible-flag="false"/>
+   <propertyview name="ypos" visible-flag="false"/>
+   <propertyview name="scaleFactor" visible-flag="false"/>
+   <propertyview name="textFactor" visible-flag="false"/>
+   <propertyview name="openSymbol" visible-flag="false"/>
+   <propertyview name="closedSymbol" visible-flag="false"/>
+   <propertyview name="viewArea.mdlView" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.xCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.topleft.yCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.xCoord" protected-flag="true" visible-flag="false"/>
+   <propertyview name="viewArea.bottomright.yCoord" protected-flag="true" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/generalobject.png"/>
+ </typeview>
+
+
+</metis>

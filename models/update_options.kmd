@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ typeviews="2"
+ nextoid="6">
+
+ <type id="oid1" name="Update_Options" title="Update Options" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - IF Configuration" xlink:href="objectprop.kmd#oid1"/>
+  <property name="typeUri" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Type Uri" desc="The type uri" default-visible="top"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Update Options" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <string name="typeUri"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="Object_Type_Update_Options" title="Object Type Update Options" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Update Options" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <property name="newObjects" xlink:role="type" xlink:title="New Objects Update Option Set" xlink:href="update_option_set.kmd#oid2" label="New Objects" default-visible="top"/>
+  <property name="deletedObjects" xlink:role="type" xlink:title="Deleted Objects Update Option Set" xlink:href="update_option_set.kmd#oid3" label="Deleted Objects" default-visible="top"/>
+  <valueset vset="default" size="24" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="#oid2" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <string name="typeUri"></string>
+   <string name="newObjects.externalID"></string>
+   <integer name="newObjects.action">1</integer>
+   <string name="newObjects.actionOverride"></string>
+   <integer name="newObjects.parentReferenceType">1</integer>
+   <integer name="newObjects.evaluateParentReference">0</integer>
+   <string name="newObjects.parentReference"></string>
+   <integer name="newObjects.evaluateOpenSymbolURI">0</integer>
+   <string name="newObjects.openSymbolURI"></string>
+   <integer name="newObjects.evaluateClosedSymbolURI">0</integer>
+   <string name="newObjects.closedSymbolURI"></string>
+   <string name="deletedObjects.externalID"></string>
+   <integer name="deletedObjects.action">1</integer>
+   <string name="deletedObjects.actionOverride"></string>
+   <integer name="deletedObjects.parentReferenceType">1</integer>
+   <integer name="deletedObjects.evaluateParentReference">0</integer>
+   <string name="deletedObjects.parentReference"></string>
+   <integer name="deletedObjects.evaluateOpenSymbolURI">0</integer>
+   <string name="deletedObjects.openSymbolURI"></string>
+   <integer name="deletedObjects.evaluateClosedSymbolURI">0</integer>
+   <string name="deletedObjects.closedSymbolURI"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Relationship_Type_Update_Options" title="Relationship Type Update Options" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Update Options" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <property name="newRelationships" xlink:role="type" xlink:title="New Relationships Update Option Set" xlink:href="update_option_set.kmd#oid4" label="New Relationships" default-visible="top"/>
+  <property name="deletedRelationships" xlink:role="type" xlink:title="Deleted Relationships Update Options Set" xlink:href="update_option_set.kmd#oid5" label="Deleted Relationships" default-visible="top"/>
+  <property name="brokenRelationships" xlink:role="type" xlink:title="Broken_Relationships Update Options Set" xlink:href="update_option_set.kmd#oid6" label="Broken Relationships" default-visible="top"/>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+   <string name="typeUri"></string>
+   <string name="newRelationships.externalID"></string>
+   <integer name="newRelationships.action">1</integer>
+   <string name="newRelationships.actionOverride"></string>
+   <integer name="newRelationships.evaluateSymbolURI">0</integer>
+   <string name="newRelationships.symbolURI"></string>
+   <string name="deletedRelationships.externalID"></string>
+   <integer name="deletedRelationships.action">1</integer>
+   <string name="deletedRelationships.actionOverride"></string>
+   <integer name="deletedRelationships.evaluateSymbolURI">0</integer>
+   <string name="deletedRelationships.symbolURI"></string>
+   <string name="brokenRelationships.externalID"></string>
+   <integer name="brokenRelationships.action">1</integer>
+   <string name="brokenRelationships.actionOverride"></string>
+   <integer name="brokenRelationships.evaluateSymbolURI">0</integer>
+   <string name="brokenRelationships.symbolURI"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="#oid2" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Type Update" xlink:href="../symbols/object_type_update.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34; - &#34; (property typeUri))"/>
+   <replace tag="type_info" property="value" macro="(expand &#34;&#60;em&#62;New Objects: &#60;/em&#62;&#34; (property newObjects.action) &#34; &#34; (property newObjects.actionOverride) &#34;&#60;br&#62; \n&#60;em&#62;Deleted Objects: &#60;/em&#62;&#34; (property deletedObjects.action) &#34; &#34; (property deletedObjects.actionOverride))"/>
+   <replace tag="ContainerName" property="value" macro="(expand (property newObjects.ParentReference))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Type Update" xlink:href="../symbols/object_type_update.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) &#34; - &#34; (property typeUri))"/>
+   <replace tag="type_info" property="value" macro="(expand &#34;&#60;em&#62;New Objects: &#60;/em&#62;&#34; (property newObjects.action) &#34; &#34; (property newObjects.actionOverride) &#34;&#60;br&#62; \n&#60;em&#62;Deleted Objects: &#60;/em&#62;&#34; (property deletedObjects.action) &#34; &#34; (property deletedObjects.actionOverride))"/>
+   <replace tag="ContainerName" property="value" macro="(expand (property newObjects.ParentReference))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/object_type_update_options.png"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="#oid3" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Relationship Type Update" xlink:href="../symbols/object_type_update.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Relationship Type Update" xlink:href="../symbols/object_type_update.svg#oid2" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_type_update_options.png"/>
+ </typeview>
+
+
+</metis>

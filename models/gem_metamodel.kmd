@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="4">
+
+ <metamodel id="oid1" name="GEM" title="Generic Enterprise Modeling" desc="The Generic Enterprise Modeling (GEM) metamodel is used for high-level modeling of different aspects of an enterprise. &#10;&#10;With this template you can model Organization structures with its Persons and where they are Located. You can model the Business Processes performed by these Organizations and link them up to responsible Persons as well as to what Business Applications support the Processes and what Information and Products are related to the Process. You can model the Goals and Strategies of these Organizations and link to Change Initiatives and Requirements that may be defined from the Strategies.&#10;&#10;If this Generic Enterprise Modeling template does not cover your needs, please check out our &#34;Advanced Business Modeling&#34; ABM Template and out &#34;IT Management&#34; ITM Template, or any other Metis template offered by Computas or our partners.">
+  <metamodel-links size="10">
+   <metamodel-link xlink:role="metamodel" xlink:title="Analysis2Domain" xlink:href="analysis2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="ApplicationDomain" xlink:href="application2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Information2Domain" xlink:href="information2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="LocationDomain" xlink:href="location_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Organization2Domain" xlink:href="organization2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="ProcessBusiness2Domain" xlink:href="process_business2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Product2Domain" xlink:href="product2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="StrategyRule2Domain" xlink:href="strategy_rule2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Transition2Domain" xlink:href="transition2_domain.kmd#oid1"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="RelshipshipTypes" xlink:href="#oid2"/>
+  </metamodel-links>
+  <symbol-palette-links size="1">
+   <symbol-palette-link xlink:role="symbol-palette" xlink:title="GEM" xlink:href="http://xml.metis.no/xml/symbols/gem/index.kmd#oid0"/>
+  </symbol-palette-links>
+  <viewstyle-links size="3">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="GEM View Style" xlink:href="http://xml.metis.no/xml/viewstyles/gem_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="GEM 3.1 View Style" xlink:href="http://xml.metis.no/xml/viewstyles/gem_31_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Relationship Midpoint Text View Style" xlink:href="http://xml.metis.no/xml/viewstyles/relship_midpoint_text_viewstyle.kmd#oid1"/>
+  </viewstyle-links>
+  <help-file-url>
+   <url-link xlink:href="gemrefguide.chm" xlink:role="chm" xlink:actuate="user"/>
+  </help-file-url>
+ </metamodel>
+
+ <!-- REMOVED id="oid2"
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/execute-executed_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/supported_by-supports9.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/has_stakeholder-stakeholder_of.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/initiates-initiated_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/controls-has_controller.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/delivered_by-delivers2.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/executes-executed_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/observes-has_observer.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/owns_content_of-has_content_owner.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/supported_by-supports11.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/develops-developed_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/relationship_types/uses-used_by7.kmd#oid1" xlink:actuate="auto"/>
+      REMOVED -->
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types" desc="Relationships that belong to the &#39;Generic Enterprise Modeling&#39; metamodel connecting object types in all the domains included in the GEM template.">
+  <!-- AUTOGENERATED -->
+  <complex-type-links size="17">
+   <complex-type-link xlink:role="type" xlink:title="affects/affected by" xlink:href="http://xml.metis.no/xml/relationship_types/affects-affected_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="affects/affected by weighted" xlink:href="http://xml.metis.no/xml/relationship_types/affects-affected_by3.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="applies to/has" xlink:href="http://xml.metis.no/xml/relationship_types/applies_to-has.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="delivered by/delivers" xlink:href="http://xml.metis.no/xml/relationship_types/delivered_by-delivers.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="generates/generated by" xlink:href="http://xml.metis.no/xml/relationship_types/generates-generated_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="has customer/is customer of" xlink:href="http://xml.metis.no/xml/relationship_types/has_customer-is_customer_of.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="implemented by/implements w/CRUD" xlink:href="http://xml.metis.no/xml/relationship_types/implemented_by-implements-crud.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="located in/location of" xlink:href="http://xml.metis.no/xml/relationship_types/located_in-location_of.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="located in/location of" xlink:href="http://xml.metis.no/xml/relationship_types/located_in-location_of2.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="owns/owned by" xlink:href="http://xml.metis.no/xml/relationship_types/owns-owned_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="owns/owned by" xlink:href="http://xml.metis.no/xml/relationship_types/owns-owned_by3.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="performed at/performs" xlink:href="http://xml.metis.no/xml/relationship_types/performed_at-performs.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="requirement to/has requirement" xlink:href="http://xml.metis.no/xml/relationship_types/requirement_to-has_requirement.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="requires/required by" xlink:href="http://xml.metis.no/xml/relationship_types/requires-required_by.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="supported by/supports weighted" xlink:href="http://xml.metis.no/xml/relationship_types/supported_by-supports6.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="used by/uses  w/CRUD" xlink:href="http://xml.metis.no/xml/relationship_types/used_by-uses-crud.kmd#oid1" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="uses/used by" xlink:href="http://xml.metis.no/xml/relationship_types/uses-used_by4.kmd#oid1" xlink:actuate="auto"/>
+  </complex-type-links>
+  <!-- AUTOGENERATED -->
+ </metamodel>
+
+
+</metis>
+

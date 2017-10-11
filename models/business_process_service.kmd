@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:Business_Process_Service_UUID" name="Business_Process_Service" title="Business Process Service" desc="A resource that, when invoked through one or more prescribed interfaces, performs work and produces an outcome or result. To accomplish that work, it may rely upon supporting services provided by other business process services, process services, system services, and application services.&#10;&#10;Business services are often related to high-level, externally-facing business function areas, with the work performed by a combination of human and automated resources." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Abstract Service" xlink:href="../abstract_types/abstract_service.kmd#CompType_Semantics_Abstract:Abstract_Service_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/business_process_service.kmd#UUID4_49784BD6-F3BC-484E-9FFB-4EE7C4AFC51E"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Business Process Service" xlink:href="#CompType_Semantics:Business_Process_Service_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Business Process Service" xlink:href="#CompType_Semantics:Business_Process_Service_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+
+</metis>

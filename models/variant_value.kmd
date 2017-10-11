@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="variant_value" name="variant_value" title="Variant" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC value" xlink:href="cc_value.kmd#CC_value"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Variant" xlink:href="#variant_value" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Variant" xlink:href="#variant_value" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;Var: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;Var: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

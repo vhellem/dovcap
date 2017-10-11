@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ methods="2"
+ typeviews="3"
+ nextoid="1">
+
+ <type id="service" name="service" title="Service" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="serviceEvaluatedTo" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Service evaluated to" default-visible="top"/>
+  <property name="ruleInitCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="InitCode" visible-flag="false" protected-flag="true"/>
+  <property name="rulePreCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Input and output parameters" default-visible="top" protected-flag="true"/>
+  <property name="ruleCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Code" default-visible="top" protected-flag="false"/>
+  <property name="rulePostCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="PostCode" visible-flag="false" protected-flag="false"/>
+  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="FunctionalRequirementPropertyDialog" xlink:href="#oid110"/>
+  <named-method-link name="evaluateExpression_" xlink:role="cpp-method" xlink:title="evaluateExpression" xlink:href="../methods/rule_methods.kmd#evaluateExpression"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service" xlink:href="#service" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="13" xlink:role="type" xlink:title="Service" xlink:href="#service" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="has_service" name="has_service" title="Has_service" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Configurable_component" xlink:href="configurable_component.kmd#configurable_component" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Service" xlink:href="#service" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has_service" xlink:href="#has_service" xlink:actuate="user">
+   <string name="from">has service</string>
+   <string name="to">service of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Has_service" xlink:href="#has_service" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="has_expression" name="has_expression" title="Has_expression" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Service" xlink:href="#service" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Expression" xlink:href="rule_expression.kmd#expression" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has_expression" xlink:href="#has_expression" xlink:actuate="user">
+   <string name="from">has expression</string>
+   <string name="to">part of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Has_expression" xlink:href="#has_expression" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid110" name="ServicePropertyDialog" language="c++" bind="NO.METIS.TOOLS.setupPropertyDialogTabs" required-dll="metis_ui">
+  <arg-list size="4">
+   <string name="TabName1">MetisModelTab</string>
+   <string name="TabName2">MetisDataTab</string>
+   <string name="Visibility1">Hide</string>
+   <pointer name="Widget2" xlink:role="cpp-method" xlink:title="ServiceDataTab" xlink:href="#oid120"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid120" name="ServiceDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+  <arg-list size="2">
+   <string name="Row1">name</string>
+   <string name="Row2">rulePreCode</string>
+   <string name="Row3">ruleCode</string>
+   <string name="Row4">serviceEvaluatedTo</string>
+<!--
+   <string name="Row5">ruleInitCode</string>
+   <string name="Row6">rulePostCode</string>
+-->
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Service" xlink:href="#service" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_layout_strategies.kmd#Layout_CVW:ContainerLayout"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;Rule: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;Rule: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Service" xlink:href="#service" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="Rule layout" xlink:href="http://xml.chalmers.se/layout/hierarchy_layout.kmd#_002aslf0127ri1k8ms47"/>
+<!--  <symbol-override state="open" xlink:role="symbol" xlink:title="Open object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user"> -->
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+<!--  <symbol-override state="closed" xlink:role="symbol" xlink:title="box1" xlink:href="../symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user"> -->
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

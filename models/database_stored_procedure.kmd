@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="Database_Stored_Procedure" title="Database Stored Procedure" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Data Accessor" xlink:href="../../common/object_types/data_accessor.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Database Field" xlink:href="database_field.kmd#oid1"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Database Stored Procedure" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Database Stored Procedure" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Source Attribute Layout" xlink:href="../../common/layouts/attribute.kmd#oid2"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Database Stored Procedure" xlink:href="../symbols/database_stored_procedure.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Database Stored Procedure" xlink:href="../symbols/database_stored_procedure.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="DBBody" property="fillcolor" macro="(expand &#34;darkgreen&#34;)"/>
+   <replace tag="DBBody" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/database_stored_procedure.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Equals3" title="equals/equals" usage="relationship" decomposition-flag="true" container-flag="true" desc="Allows you to specify that Product Items equal different process flows. It can also be used to equal a Communication and an Information Flow.">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Productitem" xlink:href="../object_types/productitem.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="InfoFlow" xlink:href="../object_types/info_flow.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Productitem" xlink:href="../object_types/productitem.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="PhysicalFlow" xlink:href="../object_types/physical_flow.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Communication" xlink:href="../object_types/communication.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="InfoFlow" xlink:href="../object_types/info_flow.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Equals3" xlink:href="#oid1">
+   <string name="from">equals</string>
+   <string name="to">equals</string>
+  </valueset>
+ </type>
+
+
+</metis>

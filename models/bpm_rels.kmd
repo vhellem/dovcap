@@ -1,0 +1,568 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="5"
+ methods="2"
+ typeviews="11"
+ nextoid="1022">
+
+ <type id="oid1" name="BPM_sequenceFlow" title="Sequence Flow" desc="A sequence flow is used to show the order that activities will be performed in a process.&#10;Sequence flows have a Name attribute which will be shown on the flow, and they have a Kind attribute that can be used to specify whether the sequence flow is a conditional flow (mini-diamond) or a default flow (special marker on symbol). Default flows are typically used for one out of several possible outputs from gateway object. Conditional flows are typically starting directly on a process (and not on a gateway)." usage="relationship" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="followed by/follows" xlink:href="followed_by-follows.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1001"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true" default-visible="top"/>
+  <property name="kind" xlink:role="pair-type" xlink:title="sequence-flow type" xlink:href="#oid21" label="Kind" desc="Specifies the kind of sequence flow." default-visible="top"/>
+  <property name="BPM_ProcessModelChange" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Value" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid1" label="Process Model Change" default-visible="bottom"/>
+  <property name="BPM_FlowColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" method-flag="true" visible-flag="false"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" description-flag="true" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="metis:stdtypes#oid17" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Input" xlink:href="metis:stdtypes#oid15" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Input" xlink:href="metis:stdtypes#oid15" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Decision Point" xlink:href="../object_types/decision_point.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Decision Point" xlink:href="../object_types/decision_point.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Decision Point" xlink:href="../object_types/decision_point.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Decision Point" xlink:href="../object_types/decision_point.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Condition" xlink:href="../object_types/process_condition.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Process Condition" xlink:href="../object_types/process_condition.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Process Condition" xlink:href="../object_types/process_condition.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Process Condition" xlink:href="../object_types/process_condition.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Decision Point" xlink:href="../object_types/decision_point.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Decision Point" xlink:href="../object_types/decision_point.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ICOM Object" xlink:href="metis:stdtypes#oid12" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Input" xlink:href="../object_types/flowlogic.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Input" xlink:href="../object_types/flowlogic.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Gateway" xlink:href="../object_types/bpm.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="metis:stdtypes#oid17" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="BPM Object" xlink:href="../object_types/bpm.kmd#oid0" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="BPM Object" xlink:href="../object_types/bpm.kmd#oid0" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="BPM_FlowColor" xlink:role="cpp-method" xlink:title="Pick_BPM_Flow_Color" xlink:href="../methods/bpm_methods.kmd#oid4"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="BPM Gateway on Change" xlink:href="#oid101"/>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Sequence Flow" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="from">followed by</string>
+   <string name="to">follows</string>
+   <string name="name"></string>
+   <pair name="kind">
+    <first>
+     <string>normal</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm_rels.svg#oid1</string>
+    </second>
+   </pair>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_FlowColor" class="volatile"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="BPM_messageFlow" title="Message Flow" desc="A message flow is used to show the flow of messages between two entities that are prepared to send and receive them. &#10;Separate swimlanes in a swimlane diagram typicalIy represents the two entities (participants)." usage="relationship" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="followed by/follows" xlink:href="followed_by-follows.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1002"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true" default-visible="top"/>
+  <property name="BPM_ProcessModelChange" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Value" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid1" label="Process Model Change" default-visible="bottom"/>
+  <property name="BPM_FlowColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" method-flag="true" visible-flag="false"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" description-flag="true" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Intermediate Event" xlink:href="../object_types/bpm.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Input" xlink:href="../object_types/flowlogic.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="End Event" xlink:href="../object_types/bpm.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Start Event" xlink:href="../object_types/bpm.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="BPM_FlowColor" xlink:role="cpp-method" xlink:title="Pick_BPM_Flow_Color" xlink:href="../methods/bpm_methods.kmd#oid4"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Message Flow" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="from">message-to</string>
+   <string name="to">message-from</string>
+   <string name="name"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_FlowColor" class="volatile"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <pair-type id="oid21" name="sequenceFlowType" title="sequence-flow type" store="both" show="first" edit="first">
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <primitive-type-link xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" xlink:actuate="user"/>
+  <pair>
+   <first>
+    <string>normal</string>
+   </first>
+   <second>
+    <string>http://xml.metis.no/xml/symbols/bpm_rels.svg#oid1</string>
+   </second>
+  </pair>
+  <pairs size="3">
+   <pair>
+    <first>
+     <string>normal</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm_rels.svg#oid1</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>conditional</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm_rels.svg#oid2</string>
+    </second>
+   </pair>
+   <pair>
+    <first>
+     <string>default</string>
+    </first>
+    <second>
+     <string>http://xml.metis.no/xml/symbols/bpm_rels.svg#oid3</string>
+    </second>
+   </pair>
+  </pairs>
+ </pair-type>
+
+ <type id="oid1015" name="association" title="Association" desc="The Association relationship is used to associate a Data Object as input to or output from a Logical process.&#10;You can also use it to associate a Data Object with an Internal Flow." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1016"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" default-visible="top"/>
+  <property name="BPM_ProcessModelChange" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Value" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid1" label="Process Model Change" default-visible="top"/>
+  <property name="BPM_FlowColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Flow Color" method-flag="true" visible-flag="false"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Data Object" xlink:href="../object_types/bpm.kmd#oid1012" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Logical Process" xlink:href="../object_types/flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Data Object" xlink:href="../object_types/bpm.kmd#oid1012" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Data Object" xlink:href="../object_types/bpm.kmd#oid1012" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Data Object" xlink:href="../object_types/bpm.kmd#oid1012" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="BPM_FlowColor" xlink:role="cpp-method" xlink:title="Pick_BPM_Flow_Color" xlink:href="../methods/bpm_methods.kmd#oid4"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Association" xlink:href="#oid1015" xlink:actuate="user">
+   <string name="from">followed by</string>
+   <string name="to">follows</string>
+  </valueset>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Association" xlink:href="#oid1015" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_FlowColor" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid1020" name="FlowAssociation" title="Flow Association" desc="Flow Association is used to associate a Data Object with a flow - either a Sequence Flow or a Message Flow. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1021"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" default-visible="top"/>
+  <property name="BPM_ProcessModelChange" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Value" xlink:href="../primitive_types/bpm_primitive_types.kmd#oid1" label="Process Model Change" default-visible="top"/>
+  <property name="BPM_FlowColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Flow Color" method-flag="true" visible-flag="false"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Data Object" xlink:href="../object_types/bpm.kmd#oid1012" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Message Flow" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Data Object" xlink:href="../object_types/bpm.kmd#oid1012" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Flow" xlink:href="#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="BPM_FlowColor" xlink:role="cpp-method" xlink:title="Pick_BPM_Flow_Color" xlink:href="../methods/bpm_methods.kmd#oid4"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Flow Association" xlink:href="#oid1020" xlink:actuate="user">
+   <string name="from">associated-with</string>
+   <string name="to">has-association</string>
+  </valueset>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Flow Association" xlink:href="#oid1020" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <integer name="BPM_ProcessModelChange">0</integer>
+   <string name="BPM_FlowColor" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid101" name="BPM_OnChange" title="BPM Gateway on Change" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="1">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="setSequenceFlowSymbol" xlink:href="#oid102"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid102" name="setSequenceFlowSymbol" language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="2">
+   <string name="Mode">SymbolProperty</string>
+   <string name="Property">kind</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid1001" xlink:role="type" xlink:title="Sequence Flow" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="kind" label="Kind" desc="Specifies the kind of sequence flow." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="from" label="From text" desc="This text will be displayed on the &#39;from&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="to" label="To text" desc="This text will be displayed on the &#39;to&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="BPM_ProcessModelChange" label="Process Model Change" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="BPM_FlowColor" label="Color" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="description" visible-flag="true" show="second" edit="first"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="sequence-flow normal" xlink:href="../symbols/bpm_rels.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/sequenceflow.png"/>
+ </typeview>
+
+ <typeview id="oid1002" xlink:role="type" xlink:title="Message Flow" xlink:href="#oid2" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="from" label="From text" desc="This text will be displayed on the &#39;from&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="to" label="To text" desc="This text will be displayed on the &#39;to&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="BPM_ProcessModelChange" label="Process Model Change" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="BPM_FlowColor" label="Color" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="description" visible-flag="true" show="second" edit="first"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="message-flow" xlink:href="../symbols/bpm_rels.svg#oid4" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/messageflow.png"/>
+ </typeview>
+
+ <typeview id="oid1011" xlink:role="type" xlink:title="Sequence Flow" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="kind" label="Kind" desc="Specifies the kind of sequence flow." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="from" label="From text" desc="This text will be displayed on the &#39;from&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="to" label="To text" desc="This text will be displayed on the &#39;to&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="BPM_ProcessModelChange" label="Process Model Change" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="BPM_FlowColor" label="Color" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="description" visible-flag="true" show="second" edit="first"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="sequence-flow normal" xlink:href="../symbols/bpm_rels.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34;&#60;span style=font-size:7.0pt&#62;&#34; (property name) &#34;&#34;)"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1012" xlink:role="type" xlink:title="Message Flow" xlink:href="#oid2" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="from" label="From text" desc="This text will be displayed on the &#39;from&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="to" label="To text" desc="This text will be displayed on the &#39;to&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="BPM_ProcessModelChange" label="Process Model Change" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="BPM_FlowColor" label="Color" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="description" visible-flag="true" show="second" edit="first"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="message-flow" xlink:href="../symbols/bpm_rels.svg#oid4" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34;&#60;span style=font-size:7.0pt&#62;&#34; (property name) &#34;&#34;)"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1013" xlink:role="type" xlink:title="Message Flow" xlink:href="#oid2" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="from" label="From text" desc="This text will be displayed on the &#39;from&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="to" label="To text" desc="This text will be displayed on the &#39;to&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="name" label="Name" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="from" label="From text" desc="This text will be displayed on the &#39;from&#39; end of the relationship" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="description" visible-flag="true" show="second" edit="first"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="message-flow 2" xlink:href="../symbols/bpm_rels.svg#oid8" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1014" xlink:role="type" xlink:title="Sequence Flow" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="kind" label="Kind" desc="Specifies the kind of sequence flow." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="from" label="From text" desc="This text will be displayed on the &#39;from&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="to" label="To text" desc="This text will be displayed on the &#39;to&#39; end of the relationship" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="BPM_ProcessModelChange" label="Process Model Change" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="BPM_FlowColor" label="Color" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="description" label="Description" visible-flag="true" show="second" edit="first"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="sequence-flow normal 2" xlink:href="../symbols/bpm_rels.svg#oid5" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1016" xlink:role="type" xlink:title="Association" xlink:href="#oid1015" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="association" xlink:href="../symbols/bpm_rels.svg#oid9" xlink:actuate="user">
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm-association.png"/>
+ </typeview>
+
+ <typeview id="oid1017" xlink:role="type" xlink:title="Association" xlink:href="#oid1015" typelabel="association" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="association 2" xlink:href="../symbols/bpm_rels.svg#oid10" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1018" xlink:role="type" xlink:title="Association" xlink:href="#oid1015" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="association" xlink:href="../symbols/bpm_rels.svg#oid9" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1019" xlink:role="type" xlink:title="Association" xlink:href="#oid1015" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="association" xlink:href="../symbols/bpm_rels.svg#oid9" xlink:actuate="user">
+   <replace tag="midpointtext" property="value" macro="(expand &#34;&#60;span style=font-size:7.0pt&#62;&#34; (property name) &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1021" xlink:role="type" xlink:title="Flow Association" xlink:href="#oid1020" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="rel-association" xlink:href="../symbols/bpm_rels.svg#oid11" xlink:actuate="user">
+   <replace tag="line" property="value" macro="(expand (property name))"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/bpm-association2.png"/>
+ </typeview>
+
+
+</metis>

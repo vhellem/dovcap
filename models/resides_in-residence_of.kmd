@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="residesin_residenceof" title="resides in/residence of" usage="relationship" desc="The resides in/residence of relationship ties an Independent or Dependent Entity to the physical manifestations of it, e.g., a Physical Datastore, a Database or a Logical Datastore.">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Independant Entity" xlink:href="../types/idef1xclass.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Datastore" xlink:href="../object_types/logical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Dependant Entity" xlink:href="../types/idef1xclass.kmd#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Datastore" xlink:href="../object_types/logical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Independant Entity" xlink:href="../types/idef1xclass.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Physical Datastore" xlink:href="../object_types/physical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Dependant Entity" xlink:href="../types/idef1xclass.kmd#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Physical Datastore" xlink:href="../object_types/physical_datastore.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="resides in/residence of" xlink:href="#oid1">
+   <string name="from">resides in</string>
+   <string name="to">residence of</string>
+  </valueset>
+ </type>
+
+
+</metis>

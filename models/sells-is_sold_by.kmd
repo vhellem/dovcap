@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ nextoid="1">
+
+ <type id="RelType_ITG:sells-is_sold_by_UUID" name="sells" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="7" xlink:role="type" xlink:title="sells" xlink:href="#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user">
+   <string name="from">sells</string>
+   <string name="to">is sold by</string>
+   <string name="troux_color">#000000</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Organization_Component_sells_HW_Product_Version_UUID" name="Organization_Component_sells_HW_Product_Model" title="Organization Component sells HW Product Model" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="#RelType_ITG:sells-is_sold_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Hardware Product Model" xlink:href="../objecttypes/hardware_product_version.kmd#CompType_MEAF:HardwareProductVersion_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Organization Component sells HW Product Model" xlink:href="#RelType_ITG:Organization_Component_sells_HW_Product_Version_UUID" xlink:actuate="user">
+   <string name="troux_color">#4682B4</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Organization_Component_sells_SW_Product_Version_UUID" name="Organization_Component_sells_SW_Product_Version" title="Organization Component sells SW Product Version" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="#RelType_ITG:sells-is_sold_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Organization Component" xlink:href="../abstracttypes/organization_component.kmd#CompType_TRM:OrganizationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Software Product Version" xlink:href="../objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Organization Component sells SW Product Version" xlink:href="#RelType_ITG:Organization_Component_sells_SW_Product_Version_UUID" xlink:actuate="user">
+   <string name="troux_color">#4682B4</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+
+</metis>

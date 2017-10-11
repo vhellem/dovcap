@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <integer-type id="oid1" name="Uniqueness_Scope" title="Uniqueness Scope" default="4">
+  <range name="Universe" min="1" max="1"/>
+  <range name="Model" min="2" max="2"/>
+  <range name="Submodel" min="3" max="3"/>
+  <range name="Container" min="4" max="4"/>
+  <range name="Parent" min="5" max="5"/>
+ </integer-type>
+
+
+</metis>

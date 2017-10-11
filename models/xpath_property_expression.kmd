@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="Xpath_Property_Expression" title="Xpath Property Expression" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="XML Entity" xlink:href="xml_entity.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="evaluateXPath" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute XPath from expression" default-visible="top"/>
+  <valueset vset="default" size="17" xlink:role="type" xlink:title="Xpath Property Expression" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">0</integer>
+   <string name="fieldPresenceColor" class="volatile">white</string>
+   <string name="newFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="newFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="manualFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="manualFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <integer name="isKey">0</integer>
+   <integer name="sequenceNumber">99999</integer>
+   <string name="xPath"></string>
+   <integer name="evaluateXPath">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Xpath Property Expression" xlink:href="#oid1" tree-size="1" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="isKey" visible-flag="true"/>
+   <propertyview name="xPath" visible-flag="true"/>
+   <propertyview name="evaluateXPath" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="fieldPresenceStatus" visible-flag="true"/>
+   <propertyview name="sequenceNumber" visible-flag="true"/>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="keyLineVisibility" visible-flag="false"/>
+   <propertyview name="keyFillVisibility" visible-flag="false"/>
+   <propertyview name="manualFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="fieldPresenceColor" visible-flag="false"/>
+   <propertyview name="manualFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="newFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="newFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="deletedFieldMarkerFillVisibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Deleted/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." visible-flag="false"/>
+   <propertyview name="deletedFieldMarkerLineVisibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Deleted/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Source Attribute" xlink:href="../../common/symbols/attribute.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="key" property="linestyle" macro="(expand (property keyLineVisibility))"/>
+   <replace tag="key" property="fillpattern" macro="(expand (property keyFillVisibility))"/>
+   <replace tag="Star" property="fillpattern" macro="(expand (property newFieldMarkerFillVisibility))"/>
+   <replace tag="Star" property="linestyle" macro="(expand (property newFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="linestyle" macro="(expand (property deletedFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="fillpattern" macro="(expand (property deletedFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="fillpattern" macro="(expand (property manualFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="linestyle" macro="(expand (property manualFieldMarkerLineVisibility))"/>
+   <replace tag="xPath" property="value" macro="(expand (property xPath))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Source Attribute" xlink:href="../../common/symbols/attribute.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="key" property="linestyle" macro="(expand (property keyLineVisibility))"/>
+   <replace tag="key" property="fillpattern" macro="(expand (property keyFillVisibility))"/>
+   <replace tag="Star" property="fillpattern" macro="(expand (property newFieldMarkerFillVisibility))"/>
+   <replace tag="Star" property="linestyle" macro="(expand (property newFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="linestyle" macro="(expand (property deletedFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="fillpattern" macro="(expand (property deletedFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="fillpattern" macro="(expand (property manualFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="linestyle" macro="(expand (property manualFieldMarkerLineVisibility))"/>
+   <replace tag="IDBox" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="IDBox" property="fillcolor" macro="(expand &#34;darkgray&#34;)"/>
+   <replace tag="xPath" property="value" macro="(expand (property xPath))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../../common/smallicons/source_property.png"/>
+ </typeview>
+
+
+</metis>

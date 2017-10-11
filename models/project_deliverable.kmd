@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="ProjectDeliverable" title="Project Deliverable" usage="object" desc="A Project Deliverable is a planned outcome of a Project. &#10;This is a specialization of the more general Deliverable object type.">
+  <complex-type-link xlink:role="type" xlink:href="deliverable.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="id" xlink:role="string-type" xlink:href="metis:std#oid42" label="Deliverable No."/>
+  <property name="est_pm" xlink:role="string-type" xlink:href="metis:std#oid42" label="Est. PM per deliverable"/>
+  <property name="del_date" xlink:role="string-type" xlink:href="metis:std#oid42" label="Delivery date"/>
+  <property name="nature" xlink:role="string-type" xlink:href="../primitive_types/primitive_types.kmd#oid63" label="Nature"/>
+  <property name="level" xlink:role="string-type" xlink:href="../primitive_types/primitive_types.kmd#oid64" label="Dissemination Level" desc="PU - Public, PP - Restricted to other programme participants, RE - Restricted to a group specified by the consortium, CO - Confidential, only for members of the consortium"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid1"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="id"></string>
+   <string name="est_pm"></string>
+   <string name="del_date"></string>
+   <string name="nature">Report</string>
+   <string name="level">PU</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/deliverable.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="del" property="value" macro="(expand (property id))"/>
+   <replace tag="nature" property="value" macro="(expand (property nature))"/>
+   <replace tag="date" property="value" macro="(expand (property del_date))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/deliverable.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/deliverable.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/deliverable.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/deliverable.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>
+

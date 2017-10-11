@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_ITG:Standard_Candidate_UUID" name="Standard_Candidate" title="Standard Candidate" desc="A Standard Candidate describes another object that is a standard, is being considered as a standard, has been turned down as a standard, was a standard but is no longer or will be a standard some day in the future. A Standard is any object that is widely recognized and employed.  It is usually decided upon by a commitee." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="usageGuidelines" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Usage Guidelines" desc="" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:StandardCandidate_usageGuidelines_UUID&#34;;"/>
+  <property name="lastReview" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#oid35" label="Last Review" desc="" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:StandardCandidate_lastReview_UUID&#34;;"/>
+  <property name="reviewNotes" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Review Notes" desc="" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:StandardCandidate_reviewNotes_UUID&#34;;"/>
+  <property name="reviewCycle" xlink:role="integer-type" xlink:title="Review Cycle" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:ReviewCycle_UUID" label="Review Cycle" desc="" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:StandardCandidate_reviewCycle_UUID&#34;;"/>
+  <property name="recommendedPatch" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Recommended Patch" desc="" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:StandardCandidate_recommendedPatch_UUID&#34;;"/>
+  <property name="scopeOfStandard" xlink:role="integer-type" xlink:title="Scope" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:Scope_UUID" label="Scope of Standard" desc="" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:StandardCandidate_scopeOfStandard_UUID&#34;;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Standard Candidate" xlink:href="#CompType_ITG:Standard_Candidate_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#DDCC99</string>
+   <string name="troux_iconAlias">Icon_CompType_ITG:Standard_Candidate_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Standard Candidate" xlink:href="#CompType_ITG:Standard_Candidate_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="shortName"/>
+   <propertyview name="description"/>
+   <propertyview name="usageGuidelines"/>
+   <propertyview name="lastReview"/>
+   <propertyview name="reviewNotes"/>
+   <propertyview name="reviewCycle"/>
+   <propertyview name="recommendedPatch"/>
+   <propertyview name="scopeOfStandard"/>
+   <propertyview name="comments"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcandidate.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcandidate.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/standardcandidate.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Standard Candidate" xlink:href="#CompType_ITG:Standard_Candidate_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="shortName"/>
+   <propertyview name="description"/>
+   <propertyview name="usageGuidelines"/>
+   <propertyview name="lastReview"/>
+   <propertyview name="reviewNotes"/>
+   <propertyview name="reviewCycle"/>
+   <propertyview name="recommendedPatch"/>
+   <propertyview name="scopeOfStandard"/>
+   <propertyview name="comments"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcandidate.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcandidate.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/standardcandidate.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

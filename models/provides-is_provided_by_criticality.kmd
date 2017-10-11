@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="1">
+
+ <type id="RelType_EnablesAction_UUID" name="application_provides_is_provided_by_criticality_function" title="Application provides Function" desc="Use this relationship to show (with a relationship criticality property) how a (business) function is supported by a physical application. Also use this relationship for when an application enables an action." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="#Reltype_provides-is_provided_by_criticality_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application provides Function" xlink:href="#RelType_EnablesAction_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color">#EEE8AA</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Application provides Function" xlink:href="#RelType_EnablesAction_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_ITG:Industry_Standard_Version_provides_Business_Function_UUID" name="Industry_Std_Version_provides_Business_Function" title="Industry Std Version provides Business Function" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="#Reltype_provides-is_provided_by_criticality_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Business Function" xlink:href="../objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Industry Std Version provides Business Function" xlink:href="#RelType_ITG:Industry_Standard_Version_provides_Business_Function_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Industry Std Version provides Business Function" xlink:href="#RelType_ITG:Industry_Standard_Version_provides_Business_Function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_business_process_provides_is_provided_by_criticality_function_UUID" name="business_process_provides_is_provided_by_criticality_function" title="Business Process provides Function" desc="Use this relationship to specify (with a relationship criticality property) the business processes that are used to produce a business function." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="#Reltype_provides-is_provided_by_criticality_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Process provides Function" xlink:href="#Reltype_business_process_provides_is_provided_by_criticality_function_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Business Process provides Function" xlink:href="#Reltype_business_process_provides_is_provided_by_criticality_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_provides_is_provided_by_criticality_function_UUID" name="deliverable_provides_is_provided_by_criticality_function" title="Deliverable provides Function" desc="Use this relationship to specify (with a relationship criticality property) a functional relation between product items and function objects. It also Use this relationship to specify that a function can have alternative product item implementations." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="#Reltype_provides-is_provided_by_criticality_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable provides Function" xlink:href="#Reltype_deliverable_provides_is_provided_by_criticality_function_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Deliverable provides Function" xlink:href="#Reltype_deliverable_provides_is_provided_by_criticality_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_provides_is_provided_by_criticality_function_UUID" name="infrastructure_component_provides_is_provided_by_criticality_function" title="Infrastructure Component provides Function" desc="Use this relationship to show (with a relationship criticality property) how a (business) function is supported by a hardware or network component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="#Reltype_provides-is_provided_by_criticality_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component provides Function" xlink:href="#Reltype_infrastructure_component_provides_is_provided_by_criticality_function_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Infrastructure Component provides Function" xlink:href="#Reltype_infrastructure_component_provides_is_provided_by_criticality_function_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_provides-is_provided_by_criticality_UUID" name="provides-is_provided_by_criticality" title="provides/is provided by (Criticality)" desc="Allows you to show (with a relationship weight property) how a Business Function is supported by a Physcial Application." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <property name="criticality" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Criticality" desc="This property quantifies the criticality that the origin object has on the target object." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_provides-is_provided_by_criticality_criticality_UUID&#34;;"/>
+  <property name="impactRating" xlink:role="integer-type" xlink:title="Impact" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_impact_UUID" label="Impact Rating" desc="An evaluation of how strong the impact will be if the risk occurs." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:provides_is_provided_by_impactRating_UUID&#34;;"/>
+  <named-criteria-link name="FindAllprovides-is_provided_by_criticality" xlink:role="criteria" xlink:title="Find all Provides/is provided by (Criticality) relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_provides-is_provided_by_criticality_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="#Reltype_provides-is_provided_by_criticality_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="provides/is provided by (Criticality)" xlink:href="#Reltype_provides-is_provided_by_criticality_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="criticality">0</integer>
+   <integer name="impactRating">-1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

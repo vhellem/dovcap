@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ methods="2"
+ criteria="2"
+ typeviews="1"
+ nextoid="7">
+
+<forward-reference id="oid1" stamp="20000128 195900000" xlink:role="type" xlink:href="metis:stdtypes#oid34"/>
+<forward-reference id="oid4" stamp="20000128 195900000" xlink:role="method" xlink:href="metis:stdmethods#oid19"/>
+<forward-reference id="oid5" stamp="20000128 195900000" xlink:role="method" xlink:href="metis:stdmethods#oid20"/>
+<forward-reference id="oid3" stamp="20000128 195900000" xlink:role="criteria" xlink:href="metis:stdcriteria#oid34"/>
+<forward-reference id="oid6" stamp="20000128 195900000" xlink:role="criteria" xlink:href="metis:stdcriteria#oid3032"/>
+<forward-reference id="oid2" stamp="20000128 195900000" xlink:role="typeview" xlink:href="metis:stdtypes#oid1034"/>
+
+</metis>

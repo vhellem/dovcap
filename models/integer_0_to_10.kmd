@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="PrimType_Semantics:Integer_0_to_10_UUID" name="Integer_0_to_10" title="Integer 0 to 10" desc="Integers in the range 0 .. 10 inclusive.">
+  <range name="Integer Range 0 to 10" min="0" max="10"/>
+ </integer-type>
+
+
+</metis>

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="5"
+ instanceviews="8"
+ nextoid="1">
+
+ <object id="UUID4_0962F356-0C20-4C04-AAE4-142FD729C5EC">
+  <valueset size="1" xlink:role="type" xlink:title="Pushpin" xlink:href="metis:stdtypes#oid21" xlink:actuate="user">
+   <string name="name"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:href="#UUID4_48D7D5AD-1EA5-4765-AC49-6EB0A128D80C"/>
+ </object>
+
+ <model id="UUID4_2EFE5108-9346-4295-B748-F11EFC9D8258" name="MEAF model" title="Main" desc="Blank Semantics model" standalone-flag="true">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Utilities" xlink:href="../../metamodel/utilities.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Tip Portal" xlink:href="#UUID4_2FE5BA75-5CB6-443C-B26F-1BF261E737DD"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Main" xlink:href="#UUID4_2EFE5108-9346-4295-B748-F11EFC9D8258" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Main" xlink:href="#UUID4_2EFE5108-9346-4295-B748-F11EFC9D8258" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+  <bundle>
+  </bundle>
+ </model>
+
+ <object id="UUID4_2FE5BA75-5CB6-443C-B26F-1BF261E737DD">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Tip Portal</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:href="#UUID4_0962F356-0C20-4C04-AAE4-142FD729C5EC"/>
+ </object>
+
+ <object id="UUID4_48D7D5AD-1EA5-4765-AC49-6EB0A128D80C">
+  <valueset size="2" xlink:role="type" xlink:title="Comment" xlink:href="metis:stdtypes#oid22" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description">Click the action button on the right to begin the TIP Configurator Widget</string>
+  </valueset>
+ </object>
+
+ <object id="UUID4_B1DE03DF-3A9E-4A68-A83B-9C90F2F91DD0">
+  <valueset size="16" xlink:role="type" xlink:title="Tip Configurator Action Button" xlink:href="../objecttypes/tip_configurator_action_button.kmd#Tip_Configurator_Action_Button" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">11</integer>
+   <integer name="scriptEnum">1</integer>
+   <string name="reference">http://metadata.troux.info/ti/utilities/tip_configurator/scripting/tip_config.js</string>
+   <integer name="execute_on_parent">0</integer>
+   <integer name="autotoolbar">0</integer>
+   <integer name="toolbarlevel">0</integer>
+   <string name="toolbaricon"></string>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+   <string name="Layout">Layout</string>
+   <collection name="variables" structure="list" size="0" xlink:role="valueset-type" xlink:title="Variable Pointer" xlink:href="../primitivetypes/variable_pointer.kmd#oid1" xlink:actuate="user">
+   </collection>
+  </valueset>
+ </object>
+
+ <objectview id="UUID4_30E73F12-8821-4E0A-8F70-55185C116E09" xlink:role="object" xlink:href="#UUID4_48D7D5AD-1EA5-4765-AC49-6EB0A128D80C" state="open" behavior="tree" text-scale="0.0625" decomp-scale="2" left="-179.2" top="768" width="2096.76" height="2048">
+ </objectview>
+
+ <relationshipview id="UUID4_4BB8AC09-33BC-4D55-8226-7639C5AA5129" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Tip Portal" xlink:href="#UUID4_512E26C8-F85C-470A-A652-5C4C52D75FF4"/>
+  <target-link xlink:role="objectview" xlink:href="#UUID4_F3DB8342-CA39-4484-B1A4-0735AC5CF9B5"/>
+ </relationshipview>
+
+ <objectview id="UUID4_512E26C8-F85C-470A-A652-5C4C52D75FF4" xlink:role="object" xlink:title="Tip Portal" xlink:href="#UUID4_2FE5BA75-5CB6-443C-B26F-1BF261E737DD" state="open" behavior="nested" text-scale="1" decomp-scale="0.125" left="-408.251" top="-422.598" width="682.667" height="512">
+  <child-link xlink:role="objectview" xlink:href="#UUID4_F3DB8342-CA39-4484-B1A4-0735AC5CF9B5"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_4BB8AC09-33BC-4D55-8226-7639C5AA5129"/>
+  <child-link xlink:role="objectview" xlink:href="#UUID4_814E040D-4CCE-4013-BD8E-323E434D3C49"/>
+ </objectview>
+
+ <objectview id="UUID4_814E040D-4CCE-4013-BD8E-323E434D3C49" xlink:role="object" xlink:href="#UUID4_B1DE03DF-3A9E-4A68-A83B-9C90F2F91DD0" state="open" behavior="tree" text-scale="0.5" decomp-scale="0.25" left="-772.383" top="599.299" width="512" height="512">
+ </objectview>
+
+ <relationshipview id="UUID4_AE42EE8F-D96E-42E0-90B0-0C98A9DBBCBE" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+  <target-link xlink:role="objectview" xlink:title="Tip Portal" xlink:href="#UUID4_512E26C8-F85C-470A-A652-5C4C52D75FF4"/>
+ </relationshipview>
+
+ <relationshipview id="UUID4_BF0E3D35-210B-4D8C-8A5E-C0A005DE915A" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:href="#UUID4_F3DB8342-CA39-4484-B1A4-0735AC5CF9B5"/>
+  <target-link xlink:role="objectview" xlink:href="#UUID4_30E73F12-8821-4E0A-8F70-55185C116E09"/>
+ </relationshipview>
+
+ <objectview id="UUID4_F3DB8342-CA39-4484-B1A4-0735AC5CF9B5" xlink:role="object" xlink:href="#UUID4_0962F356-0C20-4C04-AAE4-142FD729C5EC" state="open" behavior="tree" text-scale="0.25" decomp-scale="0.5" left="450.008" top="564.784" width="256" height="256">
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_BF0E3D35-210B-4D8C-8A5E-C0A005DE915A"/>
+  <child-link xlink:role="objectview" xlink:href="#UUID4_30E73F12-8821-4E0A-8F70-55185C116E09"/>
+ </objectview>
+
+ <modelview id="oid1" name="Main" title="Main" primary-flag="true" standalone-flag="true" zoom-level="1.03792" x="-105.431" y="-142.554" seq="1" xlink:role="model" xlink:title="Main" xlink:href="#UUID4_2EFE5108-9346-4295-B748-F11EFC9D8258" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Tip Portal" xlink:href="#UUID4_512E26C8-F85C-470A-A652-5C4C52D75FF4"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_AE42EE8F-D96E-42E0-90B0-0C98A9DBBCBE"/>
+  <viewbundle>
+  </viewbundle>
+ </modelview>
+
+
+</metis>

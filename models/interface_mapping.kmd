@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="Interface_Specification" title="Interface Specification" desc="The &#60;EM&#62;Interface Specification&#60;/EM&#62; object is the starting point of a DIF mapping. This is where you specify what specification file to generate and global options for the import.&#10;&#60;P&#62;&#10;Connect the data sources of the import to the Interface Specification with the &#60;em&#62;includes/included in&#60;/em&#62; relationship type. Connect other elements of the model to the data sources via the correct paths to create a complete mapping model.&#10;&#60;P&#62;&#10;If you have types that are not imported by the mapping, but which need to be included as endpoints for relationships, create a &#10;&#60;EM&#62;includes standalone type mapping_in/has standalone type mappings for&#60;/EM&#62; relationship to the &#60;EM&#62; Object Type Update Options&#60;/EM&#62; object that represents the standalone mapping.&#10;&#60;P&#62;&#10;Note that everything in the model must be have a connection path to the Interface Specification object to be included in the mapping. When the specification file is generated, the generating engine will follow the relationships to find the elements of the specification. You can use this to selectively disconnect various parts of the mapping while debugging your import to focus on only a part of the total import.&#10;&#60;P&#62;&#10;Note that you can have multiple Interface Specification objects in one model, but each will generate a separate specification file. You can use this to have a set of different configurations of the import.&#10;&#60;P&#62;&#10;To generate a specification file, right click the Specification Object and select &#60;EM&#62;Execute Method&#60;/EM&#62;, followed by &#60;EM&#62;Generate DIF Specification File.&#60;/EM&#62;&#10;" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - IF Configuration" xlink:href="objectprop.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="configurationFileURL" xlink:role="url-type" xlink:title="FileUrl" xlink:href="metis:stdprimtypes#oid9" label="Generated Specification File Location" desc="When running the import, the DIF import engine reads a &#60;em&#62;specification file&#60;/em&#62;. This specification file is a specially designed XML file. In other words; DIF will not use this specification model directly. The purpose of this model is to generate the DIF specification file.&#10;&#60;P&#62;&#10;Use this property to specify where to put the generated specification file.&#10;&#60;P&#62;&#10;Notice that the &#60;em&#62;Browse&#60;/em&#62; button does not allow you to select a new file. If you want to specify a new file name, you must select an existing file name and then edit the file name in the text field after hitting OK on the &#60;em&#62;Open File&#60;/em&#62; dialogue." default-visible="top"/>
+  <property name="overWriteConfigurationFile" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Overwrite specification file if necessary" desc="Check this box if you want to replace any existing &#60;em&#62;specification file&#60;/em&#62; with the same name each time you regenerate it. &#10;&#60;P&#62;&#10;Uncheck this box if you do any manual editing of the specification file and thus want to ensure that these changes are not lost the next time you generate a file.&#10;&#60;P&#62;&#10;If you uncheck this option, you must change the file name before you will be allowed to generate the file again. If you try to generate the file you will get an error message telling you the file is read-only." default-visible="top"/>
+  <property name="writeMessagesToConfigurationFile" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="If errors or warnings occur, add the messages to the specification file" desc="Check this box to put the generated messages as XML comments in the &#60;em&#62;specification file&#60;/em&#62;.&#10;&#60;P&#62;&#10;The messages will be XML comments inserted at the point where the messages ware generated. This will allow you to go into the generated file to diagnose and fix the problem manually if you wish to." default-visible="top"/>
+  <property name="mappingMessageFlagOptions" xlink:role="integer-type" xlink:title="Mapping Message Flag Options" xlink:href="../primitive_types/mapping_message_flag_options.kmd#oid1" label="Message Flags In Model" desc="Generates a comment flag for each object in the mapping model that has a problem. Select where you want the flags to be placed." default-visible="top"/>
+  <property name="inputFile" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" label="Default Input kmv File Location" desc="If the import is not run on the open model, this is the model that will be loaded as the baseline before the import." default-visible="top"/>
+  <property name="inputFileOverride" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Input File URL Override" desc="If you wish to use an expression for the input file string, enter the expression here instead of using the regular &#60;EM&#62;Default Input kmv File Location&#60;/EM&#62; property. Then turn on &#60;EM&#62;Compute Input File Override&#60;/EM&#62;.&#60;BR&#62;&#10;This field is provided because the automatic file URL completion of the regular property will confuse the expression.&#60;P&#62;&#10;If this field contains any value, it will be used instead of the Default Input kmv File Location property. To return to using the regular property, delete all contents of the field. You may also use this field for a regular file URL without an expression, but this URL must then be an absolute path." default-visible="top"/>
+  <property name="evaluateInputFile" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute Input File Override" default-visible="top"/>
+  <property name="outputFile" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" label="Default Output kmv File Location" desc="If the import is not run on the open model, this is the filename that the model will be saved to after the import.&#10;&#60;P&#62;&#10;It is possible to specify the same file name as for the Input File here. In that case the input file will be overwritten by the result of the import.&#10;&#60;P&#62;&#10;If an existing model has the file name specified here, it will be overwritten by the result of the import." default-visible="top"/>
+  <property name="outputFileOverride" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Output File URL Override" desc="If you wish to use an expression for the output file string, enter the expression here instead of using the regular &#60;EM&#62;Default Output kmv File Location&#60;/EM&#62; property. Then turn on &#60;EM&#62;Compute Output File Override&#60;/EM&#62;.&#60;BR&#62;&#10;This field is provided because the automatic file URL completion of the regular property will confuse the expression.&#60;P&#62;&#10;If this field contains any value, it will be used instead of the Default Output kmv File Location property. To return to using the regular property, delete all contents of the field. You may also use this field for a regular file URL without an expression, but this URL must then be an absolute path." default-visible="top"/>
+  <property name="evaluateOutputFile" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute Output File Override" default-visible="top"/>
+  <property name="autolayout" xlink:role="integer-type" xlink:title="Autolayout Options" xlink:href="../primitive_types/autolayout_options.kmd#oid1" label="Layout After Import" desc="Specify whether layout should be performed on the containers of the model after import. &#10;&#60;P&#62;&#10;Note that &#60;EM&#62;Complete&#60;/EM&#62; will perform a layout on every container in the model including those that were not specified as import target and containers that are used to hold the visual structure of the model.&#10;&#60;P&#62;&#10;Note that DIF inserts object views into all views of the target containers, including views that are on differen model views. All these container views will have a layout performed. When &#60;EM&#62;Complete&#60;/EM&#62; is specified, all containers in all model views will be laid out regardless of whether they were the target of an import." default-visible="top"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Parameter" xlink:href="parameter.kmd#oid1"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Pre Processing" xlink:href="action_and_condition_holder.kmd#oid2"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Post Processing" xlink:href="action_and_condition_holder.kmd#oid3"/>
+  <named-method-link name="Delete_All_Errors_And_Warnings_" xlink:role="cpp-method" xlink:title="Delete All Errors And Warnings" xlink:href="../methods/delete_all_errors_and_warnings.kmd#oid1"/>
+  <named-method-link name="Generate_Specification_File_" xlink:role="cpp-method" xlink:title="Generate DIF Specification File" xlink:href="../methods/generate_specification_file.kmd#oid1"/>
+  <named-method-link name="Open_Generated_Configuration_File_" xlink:role="cpp-method" xlink:title="Open Generated Configuration File" xlink:href="../methods/open_document.kmd#oid1"/>
+  <named-method-link name="Refresh_All_Query_Fields_" xlink:role="cpp-method" xlink:title="Refresh All Query Fields" xlink:href="../methods/refresh_all_query_fields.kmd#oid1"/>
+  <named-criteria-link name="FindAllErrorsAndWarningsInModel" xlink:role="criteria" xlink:title="Find All Errors And Warnings In Model" xlink:href="../criteria/interface_configuration_criteria.kmd#oid4"/>
+  <valueset vset="default" size="14" xlink:role="type" xlink:title="Interface Specification" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <url name="configurationFileURL"/>
+   <integer name="overWriteConfigurationFile">1</integer>
+   <integer name="writeMessagesToConfigurationFile">0</integer>
+   <integer name="mappingMessageFlagOptions">1</integer>
+   <url name="inputFile"/>
+   <string name="inputFileOverride"></string>
+   <integer name="evaluateInputFile">0</integer>
+   <url name="outputFile"/>
+   <string name="outputFileOverride"></string>
+   <integer name="evaluateOutputFile">0</integer>
+   <integer name="autolayout">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Interface Specification" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Source Attribute Layout - Sort By Sequence Number" xlink:href="../layouts/attribute.kmd#oid2"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="configurationFileURL" visible-flag="true"/>
+   <propertyview name="overWriteConfigurationFile" visible-flag="true"/>
+   <propertyview name="writeMessagesToConfigurationFile" visible-flag="true"/>
+   <propertyview name="mappingMessageFlagOptions" visible-flag="true"/>
+   <propertyview name="inputFile" visible-flag="true"/>
+   <propertyview name="inputFileOverride" visible-flag="true"/>
+   <propertyview name="evaluateInputFile" visible-flag="true"/>
+   <propertyview name="outputFile" visible-flag="true"/>
+   <propertyview name="outputFileOverride" visible-flag="true"/>
+   <propertyview name="evaluateOutputFile" visible-flag="true"/>
+   <propertyview name="autolayout" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="externalID" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Interface Mapping" xlink:href="../symbols/interface_mapping.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="URI_strings" property="value" macro="(expand &#34;&#60;em&#62;Spec: &#60;/em&#62;&#34; (property configurationFileURL) &#34;&#60;br&#62;&#34; &#34;&#60;em&#62;Input: &#60;/em&#62;&#34; (property inputFile) &#34;&#60;br&#62;&#34; &#34;&#60;em&#62;Output: &#60;/em&#62;&#34; (property outputFile))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Interface Mapping" xlink:href="../symbols/interface_mapping.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="URI_strings" property="value" macro="(expand &#34;&#60;em&#62;Spec: &#60;/em&#62;&#34; (property configurationFileURL) &#34;&#60;br&#62;&#34; &#34;&#60;em&#62;Input: &#60;/em&#62;&#34; (property inputFile) &#34;&#60;br&#62;&#34; &#34;&#60;em&#62;Output: &#60;/em&#62;&#34; (property outputFile))"/>
+   <replace tag="DBBody" property="fillcolor" macro="(expand &#34;darkgreen&#34;)"/>
+   <replace tag="DBBody" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="SheetBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="SheetBackground" property="fillcolor" macro="(expand &#34;darksalmon&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/interface_mapping.png"/>
+ </typeview>
+
+
+</metis>

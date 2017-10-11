@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="1">
+
+ <criteria id="oid1" name="getNameForOutput" title="GetNameForOutput" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Process Output represents Basic Component" xlink:href="../relationshiptypes/represents-is_output_for.kmd#Reltype_process_output_represents_is_output_for_generic_component_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

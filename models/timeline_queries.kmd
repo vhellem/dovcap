@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="3.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="QueryTimeline" name="QueryTimeline"
+    title="Find Timeline Diagrams" 
+    language="c++" bind="NO.METIS.TrouxClient.Populate" required-dll="metistroux_client"
+    object-flag="true"
+    nested-flag="true"
+    tree-flag="true">
+  <arg-list size="4">
+   <string name="Defines">
+    define.component.set("timeLineDiagram",
+      component.hasDescendant(
+        component.relatedTo(component.id="%DESTINATION_ID%" ) and 
+        component.hasRelationship(relationship.type = "Timeline Interface Basetype")
+      ) and
+      (component.type = "Timeline Diagram")
+    )
+   </string>
+   <string name="Query0">
+    component.set("timeLineDiagram")
+    or
+    (component.hasAncestor(component.set("timeLineDiagram")))
+   </string>
+   <integer name="ComponentFlag1">0</integer>
+   <string name="Query1">relationship.hasComponent(component.hasAncestor(component.set("timeLineDiagram")))</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

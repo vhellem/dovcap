@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_TRM:StandardCost_UUID" name="standard_cost" title="Standard Cost" desc="The Standard Cost type describes a cost with a start date and end date. A standard cost will contain one or more Standard Cost Elements as subcomponents." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="../abstracttypes/financial_component.kmd#CompType_TRM:FinancialDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="standard_cost_element.kmd#CompType_TRM:StandardCostElement_UUID"/>
+  <property name="startDate" xlink:role="date-type" xlink:title="date" xlink:href="metis:std#date" label="Start Date" desc="Begin date of cost." mer-property-metadata="uuid=&#34;PropDef_TRM:StdCost_Prop_StartDate_UUID&#34;;"/>
+  <property name="stopDate" xlink:role="date-type" xlink:title="date" xlink:href="metis:std#date" label="Stop Date" desc="End date of cost." mer-property-metadata="uuid=&#34;PropDef_TRM:StdCost_Prop_EndDate_UUID&#34;;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Standard Cost" xlink:href="#CompType_TRM:StandardCost_UUID">
+   <string name="troux_color">#BBCC88</string>
+   <string name="troux_iconAlias">db51149d-a6a8-3c30-b142-cca8c1d4962f</string>
+   <string name="troux_shape">Rectangle</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Standard Cost" xlink:href="#CompType_TRM:StandardCost_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F6BAA7&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcost.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F6BAA7&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcost.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/standardcost.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Standard Cost" xlink:href="#CompType_TRM:StandardCost_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F6BAA7&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F6BAA7&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcost.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F6BAA7&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F6BAA7&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/standardcost.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/standardcost.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Policy_Domain" title="Policy Domain" desc="Use the Policy domain to capture standards, policies, principles and rules that the business uses for its operation.&#10;The Enterprise Policy and Policy Rule object types are used to define business prerogatives, adopted business policies, and rules, including security policies and rules. Often such objects will be the result of some external environmental factor, such as laws, industry standards, and so on. Note that they may also have connections from Goals and Strategies.&#10;The Standards and Design Principles object types can be linked to the logical architectures or implemented IT artifacts (software, hardware and network) they apply to.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="12">
+   <complex-type-link xlink:role="type" xlink:title="Control" xlink:href="../../semantics/object_types/control.kmd#CompType_ERM:Control_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Regulatory Standard" xlink:href="../../semantics/object_types/regulatory_standard.kmd#CompType_ERM:Regulatory_Standard_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Standard Candidate" xlink:href="../objecttypes/standard_candidate.kmd#CompType_ITG:Standard_Candidate_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Standards Category" xlink:href="../objecttypes/standards_category.kmd#CompType_ITG:Standards_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Principle" xlink:href="../objecttypes/design_principle.kmd#CompType_MEAF:DesignPrinciple_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Standard" xlink:href="../objecttypes/standard.kmd#CompType_MEAF:Standard_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle" xlink:href="../../semantics/object_types/architecture_principle.kmd#CompType_Semantics_IT Architecture:Architecture_Principle_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Exception" xlink:href="../../semantics/object_types/policy_exception.kmd#CompType_Sematics_Policy:Policy_Exception_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Rule" xlink:href="../objecttypes/policy_rule.kmd#CompType_TRM:PolicyRule_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Enterprise Policy" xlink:href="../objecttypes/enterprise_policy.kmd#CompType_TRM:Policy_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Security Policy Rule" xlink:href="../objecttypes/security_policy_rule.kmd#CompType_TRM:SecurityPolicyRule_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Security Policy" xlink:href="../objecttypes/security_policy.kmd#CompType_TRM:SecurityPolicy_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="25">
+   <complex-type-link xlink:role="type" xlink:title="Basic Component has category Standards Category" xlink:href="../relationshiptypes/has_category-is_category_for.kmd#RelType_ITG:Basic_Component_has_category_Standards_Category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Analysis Component influences-is influenced by Principle" xlink:href="../../semantics/relationship_types/analysis_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Analysis_Component_influences-is_influenced_by_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Principle leads to-is derived from Principle" xlink:href="../../semantics/relationship_types/principle_leads_to-is_derived_from_principle.kmd#RelType_Semantics:Principle_leads_to-is_derived_from_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Strategy Component influences-is influenced by Principle" xlink:href="../../semantics/relationship_types/strategy_component_influences-is_influenced_by_principle.kmd#RelType_Semantics:Strategy_Component_influences-is_influenced_by_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Application Component" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_application_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Application_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Change Component" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_change_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Change_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Data Component" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_data_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Data_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable IT Architecture Component" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_it_architecture_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_IT_Architecture_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable IT Product" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_it_product.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_IT_Product_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Infrastructure Component" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_infrastructure_component.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Infrastructure_Component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable System" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_system.kmd#RelType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_System_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Technology influences-is influenced by Architecture Principle" xlink:href="../../semantics/relationship_types/technology_influences-is_influenced_by_architecture_principle.kmd#RelType_Semantics_ITArchitecture:Technology_influences-is_influenced_by_Architecture_Principle_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component has category Category" xlink:href="../relationshiptypes/has_category-is_category_for.kmd#Reltype_generic_component_has_category_is_category_for_category_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Policy Component leads to Policy Component" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_policy_component_leads_to_follows_from_policy_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Standard references Standard" xlink:href="../relationshiptypes/references-is_referenced_by.kmd#Reltype_standard_references_is_referenced_by_standard_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle applies to-has applicable Resource Component" xlink:href="../../semantics/relationship_types/architecture_principle_applies_to-has_applicable_resource_component.kmd#elType_Semantics_ITArchitecture:Architecture_Principle_applies_to-has_applicable_Resource_Component_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

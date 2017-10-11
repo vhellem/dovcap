@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="3.1.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: variable.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>InOutVariable</title>
+    <rect x="0" y="0" width="64" height="64" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#ff8c8c; fill-opacity:100%"     class="TAG:main"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="40"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:24; text-align:center vertical-align:middle;"
+       class="TAG:text">text</text>
+      <rect x="0" y="16" width="64" height="32"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Variable</title>
+    <rect x="0" y="0" width="128" height="128" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:main"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="35.5"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:20; text-align:center vertical-align:middle;"
+       class="TAG:text">text</text>
+      <rect x="8" y="16" width="112" height="96"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

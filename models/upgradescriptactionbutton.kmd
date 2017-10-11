@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="upgradeTaskScript" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="upgradeTaskScript" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="mode">11</integer>
+   <string name="reference">http://xml.metis.no/xml/scripting/task_string_float.vbs</string>
+   <float name="viewArea.topleft.xCoord">0</float>
+   <float name="viewArea.topleft.yCoord">0</float>
+   <float name="viewArea.bottomright.xCoord">0</float>
+   <float name="viewArea.bottomright.yCoord">0</float>
+   <pointer name="viewArea.mdlView"/>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="upgradeTaskScript" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="description" label="Description" visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="mode" label="Action" desc="The mode of the zoom. Choose one of the following modes :&#10;&#60;p&#62;&#60;b&#62;ZoomInstanceView&#60;/b&#62; : Zoom to the instance view. Equivalent to the RMBM command &#39;Zoom To&#39;. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomContext&#60;/b&#62; : Zoom to the context. Equivalent to the View - Zoom Selection or Ctrl+E command. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomTextSize&#60;/b&#62; : Zoom to the text size. Equivalent to the RMBM command &#39;Zoom To Text Size&#39; or Ctrl+T. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomParent&#60;/b&#62; : Zoom to the parent in a part-of structure. Equivalent to the RMBM command &#39;Zoom To&#39; on the parent. The &#39;Reference&#39; property must contain the URI of the instance view.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomAll&#60;/b&#62; : Zoom to all. Equivalent to the View - Zoom All or Ctrl+L command. The &#39;Reference&#39; property will not be used and can be blank.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomModelView&#60;/b&#62; : Zoom to the model view using the current viewing position. The &#39;Reference&#39; property must contain the URI of the model view which is found by activating the Properties... dialog on the Right Mouse Button menu of the model view tab.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ExecuteCriteria&#60;/b&#62; : Executes the criteria defined as a URI in the &#39;Reference&#39; property.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ExecuteMethod&#60;/b&#62; : Executes the method defined as a URI in the &#39;Reference&#39; property.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ExecuteCommand&#60;/b&#62; : Executes the command defined as a name in the &#39;Reference&#39; property. The command name is found in the Customize... dialog on the menu bar. In the Options tab, check the &#39;Show Commands with Command Name&#39; button. In the Commands tab, the command name for each command is then displayed. Please note that you could not use commands requiring a selection to work since the selection will be lost once you double-click the Action Button.&#60;/p&#62;&#60;p&#62;&#60;b&#62;OpenDocument&#60;/b&#62; : Opens the file referenced from the Online Document defined as a URI in the &#39;Reference&#39; property.&#60;/p&#62;&#60;p&#62;&#60;b&#62;ZoomToArea&#60;/b&#62; : Zoom to a specified area in a specified model view.&#60;/p&#62;" protected-flag="true" visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="reference" label="Reference" desc="Depending on the value of the &#39;Action&#39; property, select the object you want to zoom to, or enter the criteria, method or command you want to execute. In case the &#39;Action&#39; property is set to one of the Zoom commands (except ZoomModelView), right click the Action Button and perform the &#39;Set Reference&#39; command. You can set a reference to an instance view in another model view, but then the instance view URI must be copied from the View tab of the property dialog of the referenced instance view, and pasted into this property." protected-flag="true" visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="viewArea.topleft.xCoord" label="X Coordinate" desc="Specifies the position on the x-axis." visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="viewArea.topleft.yCoord" label="Y Coordinate" desc="Specifies the position on the y-axis." visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="viewArea.bottomright.xCoord" label="X Coordinate" desc="Specifies the position on the x-axis." visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="viewArea.bottomright.yCoord" label="Y Coordinate" desc="Specifies the position on the y-axis." visible-flag="true" show="second" edit="first" default-visible="top"/>
+   <propertyview name="viewArea.mdlView" label="Model View" desc="Specifies the model view to which ZoomToArea zooms." visible-flag="true" show="second" edit="first" default-visible="top"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Browse Next" xlink:href="metis:stdsyms#oid15" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Browse Next" xlink:href="metis:stdsyms#oid15" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/action_button.png"/>
+ </typeview>
+
+
+</metis>

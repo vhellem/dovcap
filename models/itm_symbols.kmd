@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ symbolpalettes="1"
+ nextoid="2">
+
+ <symbol-palette id="oid1" name="ITMSymbols" title="ITM Symbols">
+  <symbol-link xlink:role="symbol" xlink:title="Workstn/PC" xlink:href="../symbols/workstn_pc.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Vision" xlink:href="../symbols/vision1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Trend/Truth" xlink:href="../symbols/trend_truth.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transparent Output" xlink:href="../symbols/transparent_output.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transparent Mechansim" xlink:href="../symbols/transparent_mechanism.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transparent Input" xlink:href="../symbols/transparent_input.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transparent Control" xlink:href="../symbols/transparent_control.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transition Milestone" xlink:href="../symbols/transition_milestone.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Training Program" xlink:href="../symbols/training_prog.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Tool" xlink:href="../symbols/tool.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Terminal" xlink:href="../symbols/terminal.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Technology product" xlink:href="../symbols/technology_product.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Technology Area" xlink:href="../symbols/technology_area.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application" xlink:href="../symbols/tech_function.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Task" xlink:href="../symbols/task.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Type device" xlink:href="../symbols/tape_device.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Strategy" xlink:href="../symbols/strategy1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Strategy basic" xlink:href="../symbols/strategy1.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Strategic Requirement" xlink:href="../symbols/strategic_req.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Storage" xlink:href="../symbols/storage.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="CSF" xlink:href="../symbols/ssf.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="CSF Basic" xlink:href="../symbols/ssf.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Sales Item Requirement" xlink:href="../symbols/smpm_sales_item_requirement.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Deliverable" xlink:href="../symbols/smpm_deliverable.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Success Factor" xlink:href="../symbols/sf.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Service System" xlink:href="../symbols/service_system.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Service Software" xlink:href="../symbols/service_software.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Service" xlink:href="../symbols/service.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Server" xlink:href="../symbols/server.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Pres delivarables" xlink:href="../symbols/schedule.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Deliverables" xlink:href="../symbols/schedule.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Milestone" xlink:href="../symbols/schedule.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Scenario open" xlink:href="../symbols/scenario.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Scenario closed" xlink:href="../symbols/scenario.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Sales Item" xlink:href="../symbols/sales_item.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Rule" xlink:href="../symbols/rule.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Role" xlink:href="../symbols/role.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Risk" xlink:href="../symbols/risk2.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Resource" xlink:href="../symbols/resource.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Business Requirement" xlink:href="../symbols/requirement.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Untitled" xlink:href="../symbols/relstartsymbol.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Recmmendation" xlink:href="../symbols/recommendation.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Project" xlink:href="../symbols/project1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Program" xlink:href="../symbols/program.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Product Requirement" xlink:href="../symbols/product_requirement.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Product Properties" xlink:href="../symbols/product_properties.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Product Item" xlink:href="../symbols/product_item2.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Process Condition" xlink:href="../symbols/process_condition.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Problem" xlink:href="../symbols/problem.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Printer" xlink:href="../symbols/printer.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Portal" xlink:href="../symbols/portal.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transition Plan Item" xlink:href="../symbols/plan_item.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Physical Flow" xlink:href="../symbols/physical_flow.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Physical IT Tech comp" xlink:href="../symbols/phy_it_tech_comp.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Person" xlink:href="../symbols/person2.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Organization Network" xlink:href="../symbols/organization_network.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Organization" xlink:href="../symbols/organization1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="NCR Org Unit" xlink:href="../symbols/org_unit_2.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Org Unit" xlink:href="../symbols/org_unit_1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Opportunity" xlink:href="../symbols/opportunity.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Operating System" xlink:href="../symbols/operating_system.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Objective" xlink:href="../symbols/objective1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Network Router" xlink:href="../symbols/network_router.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Network" xlink:href="../symbols/network.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Module" xlink:href="../symbols/module.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Middleware" xlink:href="../symbols/middleware.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Message" xlink:href="../symbols/message.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Measure" xlink:href="../symbols/measure.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Market Strategy" xlink:href="../symbols/market_strategy.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Mainframe" xlink:href="../symbols/mainframe.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Machine" xlink:href="../symbols/machine.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Logical IT tech" xlink:href="../symbols/logical_it_tech.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Logical datastore" xlink:href="../symbols/logical_datastore.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Logical Architecture Element" xlink:href="../symbols/logical_arch_element.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Logical Architecture" xlink:href="../symbols/logical_arch.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Logical Application" xlink:href="../symbols/logical_app.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Location" xlink:href="../symbols/location2.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Location Type" xlink:href="../symbols/location.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="KPI" xlink:href="../symbols/kpi.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Knowledge Category" xlink:href="../symbols/knowledge.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Knowledge Element" xlink:href="../symbols/knowledge.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Knowledge Source" xlink:href="../symbols/knowledge.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Knowledge Access" xlink:href="../symbols/knowledge.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IT Strategy" xlink:href="../symbols/it_strategy.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IT Standard" xlink:href="../symbols/it_standard.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transitin Risk" xlink:href="../symbols/it_risk.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IT Requirement" xlink:href="../symbols/it_req.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IT Product" xlink:href="../symbols/it_product.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Initiative" xlink:href="../symbols/it_initiative.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Initiative basic" xlink:href="../symbols/it_initiative.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IT Implication" xlink:href="../symbols/it_implicate.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Constraint" xlink:href="../symbols/it_constraint.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Issue" xlink:href="../symbols/issue.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Interface" xlink:href="../symbols/interface.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Information Object" xlink:href="../symbols/info_object.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Information Need" xlink:href="../symbols/info_need.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Information Group" xlink:href="../symbols/info_group.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Categorization" xlink:href="../symbols/idef1x.svg#oid5" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="DependantEntity" xlink:href="../symbols/idef1x.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Domain" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IndependantEntity" xlink:href="../symbols/idef1x.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Hats" xlink:href="../symbols/hats.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Hardware Platform" xlink:href="../symbols/hardware_platform.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Goal" xlink:href="../symbols/goal3.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Goal basic" xlink:href="../symbols/goal3.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Portal" xlink:href="../symbols/gem/gem_portal.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Output" xlink:href="../symbols/gem/gem_output.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Mechanism" xlink:href="../symbols/gem/gem_mechanism.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Process Closed" xlink:href="../symbols/gem/gem_logical_process.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Process Open" xlink:href="../symbols/gem/gem_logical_process.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Label" xlink:href="../symbols/gem/gem_label.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IPM Process Open" xlink:href="../symbols/gem/gem_ipm_process_open.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IPM Process Closed" xlink:href="../symbols/gem/gem_ipm_process_closed.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IPM Output" xlink:href="../symbols/gem/gem_ipm_output.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IPM Input" xlink:href="../symbols/gem/gem_ipm_input.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="IPM Ctrl Mech" xlink:href="../symbols/gem/gem_ipm_ctrl_mech.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Internal Flow" xlink:href="../symbols/gem/gem_internal_flow.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Feedback Flow" xlink:href="../symbols/gem/gem_internal_flow.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Input" xlink:href="../symbols/gem/gem_input.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Information Flow" xlink:href="../symbols/gem/gem_info_flow.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Event" xlink:href="../symbols/gem/gem_event.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Control" xlink:href="../symbols/gem/gem_control.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Alternative" xlink:href="../symbols/gem/gem_alternative.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Function" xlink:href="../symbols/function2.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Formal Competence" xlink:href="../symbols/formal_competence.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Finding" xlink:href="../symbols/finding.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="File Document" xlink:href="../symbols/file_document.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Equipment" xlink:href="../symbols/equipment.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Environmental" xlink:href="../symbols/environmental.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Enabling IT Technology" xlink:href="../symbols/enabling_it_tech.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Disk" xlink:href="../symbols/disk.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Design Rule" xlink:href="../symbols/design_rule.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Project Deliverable" xlink:href="../symbols/deliverable.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Untitled" xlink:href="../symbols/deliverable.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="DBMS" xlink:href="../symbols/dbms.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Datastore Area" xlink:href="../symbols/datastore_area.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Database" xlink:href="../symbols/datastore.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Database" xlink:href="../symbols/database.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Contract" xlink:href="../symbols/contract.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Cont_closed_w_descr" xlink:href="../symbols/container_closed_1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Container_closed_no_descr" xlink:href="../symbols/container_closed_1.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="container open" xlink:href="../symbols/cont_open.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Condition" xlink:href="../symbols/condition.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Conclusion" xlink:href="../symbols/conclusion.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Concept" xlink:href="../symbols/concept.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Computing System" xlink:href="../symbols/computing_system.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Competence Profile" xlink:href="../symbols/competence_profile.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Competence" xlink:href="../symbols/competence.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Communication Software" xlink:href="../symbols/communication_software.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Communication" xlink:href="../symbols/communication.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Change Strategy" xlink:href="../symbols/change_strategy.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transition Directive" xlink:href="../symbols/change_directive.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Transition Benefit" xlink:href="../symbols/change_benefit.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Change" xlink:href="../symbols/change.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Cause" xlink:href="../symbols/cause.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Catalog Part" xlink:href="../symbols/catalog_part.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Sales Item" xlink:href="../symbols/capability.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="business process" xlink:href="../symbols/business_process.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="business process basic" xlink:href="../symbols/business_process.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Business Function" xlink:href="../symbols/business_function.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Closed" xlink:href="../symbols/bus_quest.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Open" xlink:href="../symbols/bus_quest.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Policy" xlink:href="../symbols/bus_policy.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Basic Software" xlink:href="../symbols/basic_software.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Automatic Device" xlink:href="../symbols/automatic_device.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Attribute" xlink:href="../symbols/attribute.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Architecture Template element" xlink:href="../symbols/arch_template_element.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Architecture template" xlink:href="../symbols/arch_template.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application Type" xlink:href="../symbols/application_type.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application Environment" xlink:href="../symbols/application_env.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application" xlink:href="../symbols/application.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application basic" xlink:href="../symbols/application.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application Product" xlink:href="../symbols/appl_product.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application Funciton" xlink:href="../symbols/appl_function.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application Area" xlink:href="../symbols/appl_area.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Application Building Block" xlink:href="../symbols/app_build_block.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Analysis" xlink:href="../symbols/analysis.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Action" xlink:href="../symbols/action.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Acceptance Criteria" xlink:href="../symbols/accept_criteria.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Manpower" xlink:href="../symbols/manpower.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Midpoint text blue line" xlink:href="../symbols/relship_midpoint_text_blue.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Midpoint text black line" xlink:href="../symbols/relship_midpoint_text_black.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Identifying" xlink:href="../symbols/idef1xrelationships.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="NonSpecific" xlink:href="../symbols/idef1xrelationships.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Categorization" xlink:href="../symbols/idef1xrelationships.svg#oid5" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="NonIdentifyingOptional" xlink:href="../symbols/idef1xrelationships.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="NonIdentifyingMandatory" xlink:href="../symbols/idef1xrelationships.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Synchronize Relationship" xlink:href="../symbols/gem/gem_rel_synchronize.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Synchronize Relationship" xlink:href="../symbols/gem/gem_rel_synchronize.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Untitled" xlink:href="../symbols/gem/gem_rel_skill.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Output Relationship" xlink:href="../symbols/gem/gem_rel_output.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="AutoOutputRelationship" xlink:href="../symbols/gem/gem_rel_output.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Mechanism Relationship" xlink:href="../symbols/gem/gem_rel_mechanism.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="AutoMechanismRelationship" xlink:href="../symbols/gem/gem_rel_mechanism.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Input Relationship" xlink:href="../symbols/gem/gem_rel_input.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="AutoInputRelationship" xlink:href="../symbols/gem/gem_rel_input.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Gives Takes Relationship" xlink:href="../symbols/gem/gem_rel_gives_takes.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Gives Takes Relationship" xlink:href="../symbols/gem/gem_rel_gives_takes.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Control Relationship" xlink:href="../symbols/gem/gem_rel_control.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="AutoControlRelationship" xlink:href="../symbols/gem/gem_rel_control.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Condition Relationship" xlink:href="../symbols/gem/gem_rel_condition.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Condition Relationship" xlink:href="../symbols/gem/gem_rel_condition.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Alternative Relationship" xlink:href="../symbols/gem/gem_rel_alternative.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:title="Auto Alternative Relationship" xlink:href="../symbols/gem/gem_rel_alternative.svg#oid0" xlink:actuate="user"/>
+ </symbol-palette>
+
+
+</metis>

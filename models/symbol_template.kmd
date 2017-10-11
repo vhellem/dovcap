@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ typeviews="1"
+ nextoid="6">
+
+ <type id="oid1" name="gets_symbols_from_is_symbol_template_for" title="gets symbols from/is symbol template for" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts - IF Configuration" xlink:href="relshipsharedprop.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="gets symbols from/is symbol template for" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from"></string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="gets symbols from/is symbol template for" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="gets_new_instance_symbols_from_is_symbol_template_for_new_symbols_for" title="gets new instance symbols from/is symbol template for new symbols for" desc="Specifies that any new objects of the type mapped by the &#60;EM&#62;Object Mapping&#60;/EM&#62; will use the open and closed symbols currently used on the target object of the relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="gets symbols from/is symbol template for" xlink:href="#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="../object_types/update_options.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Relationship" xlink:href="metis:stdtypes#oid101" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Relationship" xlink:href="metis:stdtypes#oid101" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="gets new instance symbols from/is symbol template for new symbols for" xlink:href="#oid2" xlink:actuate="user">
+   <string name="from">gets new instance symbols from</string>
+   <string name="to">is symbol template for new symbols for</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="gets new instance symbols from/is symbol template for new symbols for" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="gets_deleted_instance_symbols_from_is_symbol_template_for_deleted_symbols" title="gets deleted instance symbols from/is symbol template for deleted symbols" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="gets symbols from/is symbol template for" xlink:href="#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Relationship" xlink:href="metis:stdtypes#oid101" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="../object_types/update_options.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Relationship" xlink:href="metis:stdtypes#oid101" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="gets deleted instance symbols from/is symbol template for deleted symbols" xlink:href="#oid3" xlink:actuate="user">
+   <string name="from">gets deleted instance symbols from</string>
+   <string name="to">is symbol template for deleted symbols</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="gets deleted instance symbols from/is symbol template for deleted symbols" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="gets_broken_relationship_symbols_from_is_symbol_template_for_broken_relationships" title="gets broken relationship symbols from/is symbol template for broken relationships" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="gets symbols from/is symbol template for" xlink:href="#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Relationship" xlink:href="metis:stdtypes#oid101" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="../object_types/update_options.kmd#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Generic Modeling Relationship" xlink:href="metis:stdtypes#oid101" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="gets broken relationship symbols from/is symbol template for broken relationships" xlink:href="#oid4" xlink:actuate="user">
+   <string name="from">gets broken relationship symbols from</string>
+   <string name="to">is symbol template for broken relationships</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="gets broken relationship symbols from/is symbol template for broken relationships" xlink:href="#oid4" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="gets symbols from/is symbol template for" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Parent Assignment Relationship" xlink:href="../symbols/relationship_symbols/parent_assignment.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/relationship_icons/use_as_symbol_template.png"/>
+ </typeview>
+
+
+</metis>

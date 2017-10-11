@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_TRM:Policy_UUID" name="enterprise_policy" title="Enterprise Policy" desc="An Enterprise Policy is a set of written guidelines for the business or its IT operations." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Policy Component" xlink:href="../abstracttypes/policy_component.kmd#CompType_TRM:PolicyDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="weight" xlink:role="integer-type" xlink:title="Weight" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_weight_UUID" label="Weight" desc="Relative weight of the IT Principle." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Policy_weight_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="details" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Details" desc="A more detailed description of the policy." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Policy_Prop_Details_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=1;isVisibleInDiagramExport=1;"/>
+  <property name="applicableRegulation" xlink:role="integer-type" xlink:title="Applicable Regulation" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_applicable_regulation_UUID" label="Applicable Regulation" desc="The regulation type that this rule applies to" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Policy_Prop_ApplicableRegulation_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=3;isVisibleInDiagramExport=1;"/>
+  <property name="status" xlink:role="integer-type" xlink:title="Enterprise Policy Status" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_enterprise_policy_status_UUID" label="Status" desc="Indicates the status of the active object." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Policy_Prop_Status_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=4;isVisibleInDiagramExport=1;"/>
+  <property name="startDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Start Date" desc="The date the policy is made effective." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Policy_Prop_EffectiveDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=5;isVisibleInDiagramExport=1;"/>
+  <property name="runDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Run Date" desc="The date the policy was last run." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Policy_Prop_LastRunDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=6;isVisibleInDiagramExport=1;"/>
+  <property name="stopDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Stop Date" desc="The date the policy is no longer valid." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_TRM:Policy_stopDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="strategicValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Strategic Value" desc="This property is calculated as the sum of all products of Strategic Value on Strategy and Weight on the &#39;supported by&#39; relationship from Strategy to IT Principle." method-flag="true" default-visible="top" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="The colorvalue for the Enterprise Policy based on the status property" method-flag="true" visible-flag="false" mer-property-metadata="uuid=&#34;&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Policy Rule" xlink:href="policy_rule.kmd#CompType_TRM:PolicyRule_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Enterprise Policy" xlink:href="#CompType_TRM:Policy_UUID"/>
+  <named-method-link name="MetisTrouxClient_--Get Goal----QueryGoalOverenterprise_policy_achieves_is_achieved_by_goal" xlink:role="cpp-method" xlink:title="achieves Goal" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryGoalOverenterprise_policy_achieves_is_achieved_by_goal"/>
+  <named-method-link name="MetisTrouxClient_--Get Person----QueryPersonOverenterprise_policy_has_manager_is_manager_of_person" xlink:role="cpp-method" xlink:title="has manager Person" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryPersonOverenterprise_policy_has_manager_is_manager_of_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Strategy----QueryMarketStrategyOverenterprise_policy_implements_is_implemented_by_weight_strategy" xlink:role="cpp-method" xlink:title="implements Strategy" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryMarketStrategyOverenterprise_policy_implements_is_implemented_by_weight_strategy"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="Pick_Status_Color5" xlink:href="../methods/colormapping_methods.kmd#oid8"/>
+  <named-method-link name="strategicValue" xlink:role="cpp-method" xlink:title="getStrategicValueForEnterprisePolicy" xlink:href="../methods/enterprise_policy_methods.kmd#oid1"/>
+  <named-criteria-link name="findStrategicValueChainEnterprisePolicy" xlink:role="criteria" xlink:title="Find Strategic Value Chain" xlink:href="../criteria/enterprise_policy_criteria.kmd#_002as3c010nv47lh4gma"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Enterprise Policy" xlink:href="#CompType_TRM:Policy_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#DDCC99</string>
+   <string name="troux_iconAlias">6269fa32-8c47-3eb0-ba8c-1e91d3c11653</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Enterprise Policy" xlink:href="#CompType_TRM:Policy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="weight">0</integer>
+   <string name="details"></string>
+   <integer name="applicableRegulation">-1</integer>
+   <integer name="status">-1</integer>
+   <date name="startDate">00000000</date>
+   <date name="runDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Enterprise Policy" xlink:href="#CompType_TRM:Policy_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="status" visible-flag="true"/>
+   <propertyview name="weight" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="runDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="details" visible-flag="true"/>
+   <propertyview name="applicableRegulation" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/enterprisepolicy.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/enterprisepolicy.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/enterprisepolicy.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Enterprise Policy" xlink:href="#CompType_TRM:Policy_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="status" visible-flag="true"/>
+   <propertyview name="weight" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="runDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="details" visible-flag="true"/>
+   <propertyview name="applicableRegulation" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/enterprisepolicy.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F1D6BB&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/enterprisepolicy.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/enterprisepolicy.png"/>
+ </typeview>
+
+
+</metis>

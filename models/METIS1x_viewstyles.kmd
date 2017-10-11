@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ typeviews="53"
+ viewstyles="1"
+ nextoid="55">
+
+ <typeview id="oid2" xlink:role="type" xlink:href="metis:stdtypes#oid113" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_object.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_object.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/competenceprofile.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_competence_profile.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_competence_profile.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/formalcompetence.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_formal_competence.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_formal_competence.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/competence.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_competence.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_competence.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/trainingprogram.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_training_program.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_training_program.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/concept.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_concept.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_concept.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid8" xlink:role="type" xlink:href="metis:stdtypes#oid31" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_document.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_document.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid9" xlink:role="type" xlink:href="metis:stdtypes#oid35" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_doc_on_line.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_doc_on_line.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid10" xlink:role="type" xlink:href="metis:stdtypes#oid33" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_doc_off_line.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_doc_off_line.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid11" xlink:role="type" xlink:href="metis:stdtypes#oid30" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_document_class.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_document_class.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid12" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/location.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_location.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_location.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid13" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/informationgroup.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_group.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_group.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid14" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/informationelement.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_elem.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_elem.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid15" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/informationtype.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_type.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_type.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid16" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/goal.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_goal.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_goal.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid17" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/problem.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_problem.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_problem.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid18" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/opportunity.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_opportunity.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_opportunity.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid19" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/condition.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_condition.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_condition.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid20" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/cause.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_cause.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_cause.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid21" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/action.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_action.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_action.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid22" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/organization.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_org_unit.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_org_unit.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid23" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/organization_network.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_network.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_network.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid24" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/partnership.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_partner.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_partner.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid25" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/competitor.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_competitor.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_competitor.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid26" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/position.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_hats.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_hats.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid27" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/communication.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_report.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_report.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid28" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/responsible_position.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_tophat.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_tophat.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid29" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/productitem.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_product_item.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_product_item.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid30" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/productfunction.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_function.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_function.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid31" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/productmodule.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_module.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_module.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid32" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/catalogpart.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_catalog_part.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_catalog_part.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid33" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/standard.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_standard.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_standard.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid34" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/requirement.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_requirement.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_requirement.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid35" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/solution.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_solution.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_solution.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid36" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/work_unit.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid37" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/resource.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid38" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/person.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid39" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/machine.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_machine.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_machine.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid40" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/tool.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_tool.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_tool.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid41" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/storage.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_storage.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_storage.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid42" xlink:role="type" xlink:href="metis:stdtypes#oid34" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_directory.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_directory.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid43" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/substanceclass.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_substance_class.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_substance_class.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid44" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/substance.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_substance.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_substance.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid45" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/system.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_system.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_system.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid46" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/message.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_message.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_message.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid47" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/workflow_process.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_process.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_process.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid48" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/physical_flow.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_physical_flow.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_physical_flow.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid49" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/info_flow.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_flow.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_info_flow.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid50" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/event.kmd#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_event.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_event.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid51" xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/process_role.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_process_role.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_process_role.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid52" xlink:role="type" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_container_rubb.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_container_description.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid53" xlink:role="type" xlink:href="metis:stdtypes#oid23" tree-size="0.5" nested-size="0.25">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="metis:stdsyms#oid18" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="metis:stdsyms#oid18" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="metis:stdsyms#oid17"/>
+ </typeview>
+
+ <typeview id="oid54" xlink:role="type" xlink:href="metis:stdtypes#oid22" tree-size="1" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_scroll.svg#oid0" xlink:actuate="user">
+   <replace tag="header" property="value" macro="(expand (label))"/>
+   <replace tag="body" property="value" macro="(expand (description))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://xml.metis.no/xml/symbols/1xstyle/gem/gem_scroll.svg#oid0" xlink:actuate="user">
+   <replace tag="header" property="value" macro="(expand (label))"/>
+   <replace tag="body" property="value" macro="(expand (description))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="metis:stdsyms#oid21"/>
+ </typeview>
+
+ <viewstyle id="oid1" title="METIS 1.10 Styles">
+  <typeview-link xlink:role="typeview" xlink:href="#oid21"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid32"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid20"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid27"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid25"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid7"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid19"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid42"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid8"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid11"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid50"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid16"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid49"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid14"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid13"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid15"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid12"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid39"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid46"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid10"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid9"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid18"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid22"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid23"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid24"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid38"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid48"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid26"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid17"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid51"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid30"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid29"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid31"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid34"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid37"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid28"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid35"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid33"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid41"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid44"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid43"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid45"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid40"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid36"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid47"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid52"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid54"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid53"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+ </viewstyle>
+
+
+</metis>

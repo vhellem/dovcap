@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="XML_Data_Source" title="XML Data Source" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Data Source" xlink:href="../../common/object_types/data_source.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="connectionString" xlink:role="url-type" xlink:title="FileUrl" xlink:href="metis:stdprimtypes#oid9" label="Connection String (File URL)" desc="The way to get the XML stream.&#10;Typically &#10; a hyperlink (http://www.computas.com/...)&#10; or a file (C:\Program Files\...)&#10;Specify &#34;Relative&#34; to say that the file is located relative to the model, for instance if it is in a sub directory and distributed with the model.&#10;&#10;The URL can also be any other protocol that Windows or Metis will recognize. Examples of such are (Outlook:, metis:)" default-visible="top"/>
+  <property name="connectionStringOverride" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Connection String Override" desc="If you wish to use an expression for the connection string, enter the expression here instead of using the regular &#60;EM&#62;Connection String (File URL)&#60;/EM&#62; property. Then turn on &#60;EM&#62;Compute Connection String Override&#60;/EM&#62;.&#60;BR&#62;&#10;This field is provided because the automatic file URL completion of the regular property will confuse the expression.&#60;P&#62;&#10;If this field contains any value, it will be used instead of the Connection String (File URL) property. To return to using the regular property, delete all contents of the field. You may also use this field for a regular file URL without an expression, but this URL must then be an absolute path." default-visible="top"/>
+  <property name="evaluateConnectionString" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute Connection String Override" desc="If you want the connection string to be determined run-time, you must enter a valid value expression in the &#60;em&#62;Connection String Override&#60;/em&#62; field and then check this option." default-visible="top"/>
+  <property name="XSLTTransform" xlink:role="url-type" xlink:title="FileUrl" xlink:href="metis:stdprimtypes#oid9" label="XSLT Transform URL" desc="Specifies the path to an XSLT template file. The transform will be applied to the specified XML file. If a Transform node is present, the query will be made over the result from the transform, not the original XML document." default-visible="top"/>
+  <property name="XSLTTransformOverride" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="XSLT Transform Override" desc="If you wish to use an expression for the transform file location, enter the expression here instead of using the regular &#60;EM&#62;XSLT Transform URL&#60;/EM&#62; property. Then turn on &#60;EM&#62;Compute XSLT Transform Override&#60;/EM&#62;.&#60;BR&#62;&#10;This field is provided because the automatic file URL completion of the regular property will confuse the expression.&#60;P&#62;&#10;If this field contains any value, it will be used instead of the XSLT Transform URL property. To return to using the regular property, delete all contents of the field. You may also use this field for a regular file URL without an expression, but this URL must then be an absolute path." default-visible="top"/>
+  <property name="evaluateXSLTTransform" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Compute XSLT Transform Override" desc="If you want the transform file location to be determined run-time, you must enter a valid value expression in the &#60;em&#62;XSLT Transform Override&#60;/em&#62; field and then check this option." default-visible="top"/>
+  <property name="autodetectNamespace" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Autodetect XML Namespace" desc="When this option is on, the &#60;EM&#62;Generate DIF Specification File&#60;/EM&#62; and &#60;EM&#62;Generate XML Class Tree&#60;/EM&#62; methods will parse the XML file to detect any namespace declarations needed by the XPath queries.&#10;&#60;P&#62;&#10;Turn this option off if the file uses default name spaces, if you are having problems with detecting the correct namespaces or if the XML file is so large that autodetect becomes too slow." default-visible="top"/>
+  <property name="namespace" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="XML Namespace Declarations" desc="This property will be used both by the &#60;EM&#62;Generate DIF Specification File&#60;/EM&#62; and the &#60;EM&#62;Generate XML Class Tree&#60;/EM&#62; methods.&#10;&#60;P&#62;&#10;If &#60;EM&#62;Autodetect XML Namespace&#60;/EM&#62; is on, this property will be ignored." default-visible="top"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="XML Element" xlink:href="xml_element.kmd#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="XML Processing Instruction" xlink:href="xml_processing-instruction.kmd#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="XML Comment" xlink:href="xml_comment.kmd#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Xpath Property Expression" xlink:href="xpath_property_expression.kmd#oid1"/>
+  <named-method-link name="Generate XML Class Tree_" xlink:role="cpp-method" xlink:title="Generate XML Class Tree" xlink:href="../methods/generate_xml_class_tree.kmd#oid1"/>
+  <named-method-link name="Open_XML_Document_" xlink:role="cpp-method" xlink:title="Open XML Document" xlink:href="../methods/open_xml_document.kmd#oid1"/>
+  <named-method-link name="Open_XSLT_Transform_" xlink:role="cpp-method" xlink:title="Open XSLT Transform" xlink:href="../methods/open_xml_document.kmd#oid2"/>
+  <named-method-link name="Remove_Deleted_Fields_" xlink:role="cpp-method" xlink:title="Remove Deleted Fields" xlink:href="../../common/methods/remove_deleted_fields.kmd#oid1"/>
+  <named-method-link name="Reset_Field_Presence_Status_" xlink:role="cpp-method" xlink:title="Reset Field Presence Status" xlink:href="../../common/methods/reset_field_presence_status.kmd#oid1"/>
+  <named-criteria-link name="FindElementsMarkedAsDeleted" xlink:role="criteria" xlink:title="Find Elements Marked As Deleted" xlink:href="../../common/criteria/interface_configuration_criteria.kmd#oid2"/>
+  <named-criteria-link name="FindElementsMarkedAsManual" xlink:role="criteria" xlink:title="Find Elements Marked As Manual" xlink:href="../../common/criteria/interface_configuration_criteria.kmd#oid3"/>
+  <named-criteria-link name="FindElementsMarkedAsNew" xlink:role="criteria" xlink:title="Find Elements Marked As New" xlink:href="../../common/criteria/interface_configuration_criteria.kmd#oid1"/>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="XML Data Source" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="providerType">MSXML</string>
+   <url name="connectionString"/>
+   <string name="connectionStringOverride"></string>
+   <integer name="evaluateConnectionString">0</integer>
+   <url name="XSLTTransform"/>
+   <string name="XSLTTransformOverride"></string>
+   <integer name="evaluateXSLTTransform">0</integer>
+   <integer name="autodetectNamespace">1</integer>
+   <string name="namespace"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="XML Data Source" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Source Attribute Layout - Sort By Sequence Number" xlink:href="../../common/layouts/attribute.kmd#oid2"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="providerType" protected-flag="true" visible-flag="true"/>
+   <propertyview name="connectionString" visible-flag="true"/>
+   <propertyview name="connectionStringOverride" visible-flag="true"/>
+   <propertyview name="evaluateConnectionString" visible-flag="true"/>
+   <propertyview name="XSLTTransform" label="XSLT Tranform" desc="Specifies the path to an XSLT template file. The transform will be applied when this resultset is used. If a Transform node is present, the query will be made over the result from the transform, not the original XML document." visible-flag="true"/>
+   <propertyview name="XSLTTransformOverride" visible-flag="true"/>
+   <propertyview name="evaluateXSLTTransform" visible-flag="true"/>
+   <propertyview name="autodetectNamespace" visible-flag="true"/>
+   <propertyview name="namespace" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="externalID" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="XML Data Source" xlink:href="../symbols/xml_data_source.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (property connectionString))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="XML Data Source" xlink:href="../symbols/xml_data_source.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="SheetBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="SheetBackground" property="fillcolor" macro="(expand &#34;darksalmon&#34;)"/>
+   <replace tag="description" property="value" macro="(expand (property connectionString))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/xml_data_source.png"/>
+ </typeview>
+
+
+</metis>

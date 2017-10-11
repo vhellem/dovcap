@@ -1,0 +1,132 @@
+<!-- Constraints for MEAF-->
+<configuration>
+  <configName>Type Constraints Configuration</configName>
+  <configDescription>Configuration settings for the MEAF type constraints</configDescription>
+  <group name="TypeConstraints">
+   <list name="Types">
+    <group name="Generic Component" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Basic Component" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Interaction Component" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Process Interaction" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Process Data" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes">
+     </list>
+    </group>
+    <group name="Process Event" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes">
+     </list>
+    </group>
+    <group name="Process End Event" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Process Intermediate Event" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Process Start Event" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Process Gateway" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes">
+     </list>
+    </group>
+    <group name="Process Component" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes"/>
+    </group>
+    <group name="Business Process" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes">
+      <group name="Business Process"/>
+     </list>
+    </group>
+    <group name="Process" replace="true" >
+     <setting name="TopLevel" value="true"/>
+     <list name="Relationships"/>
+     <list name="AllowedSubTypes">
+      <group name="Business Process"/>
+      <group name="Process"/>
+      <group name="Process Interaction"/>
+     </list>
+    </group>
+   </list>
+   <list name="Relationships">
+    <group name="Sequence Flow Connection" replace="true" >
+     <list name="Roles">
+      <group name="Process Component">
+       <setting name="type" value="Process Component"/>
+      </group>
+       <group name="Referenced Process Component">
+       <setting name="type" value="Process Component"/>
+      </group>
+     </list>
+    </group>
+   </list>
+  </group>
+  <group name="MetisPropertyMappings">
+   <setting name="PropDef_GenericComponent_ExternalID_UUID" value="externalID"/>
+   <setting name="TI:Collaboration:Component_Journal_URL_UUID" value="journalID"/>
+   <setting name="PropDef_GenericComponent_Prop_Comments_UUID" value="comments"/>
+   <setting name="PropDef_MEAF:ProcessInteraction_processModelChange_UUID" value="processModelChange"/>
+   <setting name="PropDef_MEAF:ProcessData_frequency_UUID" value="frequency"/>
+   <setting name="PropDef_MEAF:ProcessData_periods_UUID" value="periods"/>
+   <setting name="PropDef_MEAF:ProcessData_periodUnit_UUID" value="periodUnit"/>
+   <setting name="PropDef_MEAF:ProcessEndEvent_data_UUID" value="data"/>
+   <setting name="PropDef_MEAF:ProcessEndEvent_eventType_UUID" value="eventType"/>
+   <setting name="PropDef_MEAF:ProcessIntermediateEvent_eventType_UUID" value="eventType"/>
+   <setting name="PropDef_MEAF:ProcessStartEvent_eventType_UUID" value="eventType"/>
+   <setting name="PropDef_TRM:ProcessDecision_gatewayType_UUID" value="gatewayType"/>
+   <setting name="PropDef_TRM:ProcessDecision_GenInfo_Condition_UUID" value="condition"/>
+   <setting name="PropDef_TRM:ProcessDomain_Prop_BIAScore_UUID" value="businessImpactAnalysisScore"/>
+   <setting name="PropDef_TRM:ProcessStep_itEffectivenessPercentage_UUID" value="itEffectivenessPercentage"/>
+   <setting name="PropDef_TRM:Process_GenInfo_ProcessVersion_UUID" value="versionId"/>
+   <setting name="PropDef_TRM:Process_GenInfo_Criticality_UUID" value="businessCriticalityScore"/>
+   <setting name="PropDef_TRM:ProcessStep_GenInfo_ExpectedDuration_UUID" value="duration"/>
+   <setting name="PropDef_TRM:ProcessStep_GenInfo_DurationUnits_UUID" value="durationUnit"/>
+   <setting name="PropDef_TRM:ProcessStep_GenInfo_ProcessStepType_UUID" value="automation"/>
+   <setting name="PropDef_MEAF:Process_prefix_UUID" value="prefix"/>
+   <setting name="PropDef_MEAF:Process_punctuationMark_UUID" value="punctuationMark"/>
+   <setting name="PropDef_MEAF:Process_sequenceNumber_UUID" value="sequenceNumber"/>
+   <setting name="PropDef_MEAF:Process_processModelChange_UUID" value="processModelChange"/>
+   <setting name="PropDef_GeneralRelationship_ExternalID_UUID" value="externalID"/>
+   <setting name="TI:Collaboration:Relationship_Journal_URL_UUID" value="journalID"/>
+   <setting name="PropDef_GenRel_Prop_ImpactRating_UUID" value="connectionStrength"/>
+   <setting name="PropDef_association_processModelChange_UUID" value="processModelChange"/>
+   <setting name="PropDef_message_flow_name_UUID" value="name"/>
+   <setting name="PropDef_message_flow_description_UUID" value="description"/>
+   <setting name="PropDef_message_flow_BPM_ProcessModelChange_UUID" value="processModelChange"/>
+   <setting name="PropDef_sequence_flow_name_UUID" value="name"/>
+   <setting name="PropDef_sequence_flow_kind_UUID" value="kind"/>
+   <setting name="PropDef_sequence_flow_description_UUID" value="description"/>
+   <setting name="PropDef_sequence_flow_processModelChange_UUID" value="processModelChange"/>
+  </group>
+ </configuration>

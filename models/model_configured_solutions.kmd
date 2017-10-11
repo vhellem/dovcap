@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002as5e00tlmfsn26v4e" name="DeveloperEd.UriToolBar.Model_Configured_Solutions" title="Model Configured Solutions" desc="Here you will find types for configuring customised solutions, consisting of e.g. user interfaces and service menues. Configurations may be reused and specialised for different types, objects, task contexts, users, groups and roles.">
+  <complex-type-links size="14">
+   <complex-type-link xlink:role="type" xlink:title="Configuration for object" xlink:href="../relationshiptypes/configuration_for_object.kmd#AKM_Configuration_for_object"/>
+   <complex-type-link xlink:role="type" xlink:title="Configuration for task" xlink:href="../relationshiptypes/configuration_for_task.kmd#AKM_Configuration_for_task"/>
+   <complex-type-link xlink:role="type" xlink:title="Configuration for type" xlink:href="../relationshiptypes/configuration_for_type.kmd#AKM_Configuration_for_type"/>
+   <complex-type-link xlink:role="type" xlink:title="Parameter" xlink:href="../objecttypes/parameter.kmd#AKM_Parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Preferences for" xlink:href="../relationshiptypes/preferences_for.kmd#AKM_Preferences_for"/>
+   <complex-type-link xlink:role="type" xlink:title="Removes" xlink:href="../relationshiptypes/removes.kmd#AKM_Removes"/>
+   <complex-type-link xlink:role="type" xlink:title="Service (AKM)" xlink:href="../objecttypes/service.kmd#AKM_Service" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Service Configuration" xlink:href="../objecttypes/service_configuration.kmd#AKM_Service_Configuration" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Task (AKM)" xlink:href="../../task/objecttypes/task.kmd#AKM_Task" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Template" xlink:href="../relationshiptypes/template.kmd#AKM_Template"/>
+   <complex-type-link xlink:role="type" xlink:title="User Interface Configuration" xlink:href="../objecttypes/user_interface_configuration.kmd#AKM_User_Interface_Configuration" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization" xlink:href="http://metadata.troux.info/meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Person" xlink:href="http://metadata.troux.info/meaf/objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Role" xlink:href="http://metadata.troux.info/meaf/objecttypes/role.kmd#CompType_TRM:Role_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+  <method-links size="2">
+   <method-link xlink:role="cpp-method" xlink:title="Execute service" xlink:href="../../task/methods/execution_methods.kmd#_002asmt00s2lautl6uql"/>
+   <method-link xlink:role="cpp-method" xlink:title="Execute task" xlink:href="../../task/methods/execution_methods.kmd#_002asmt00ul6hpgnifce"/>
+  </method-links>
+ </metamodel>
+
+
+</metis>

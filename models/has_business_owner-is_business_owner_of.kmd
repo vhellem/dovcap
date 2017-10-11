@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="1">
+
+ <type id="Reltype_application_component_has_business_owner_is_business_owner_of_person_UUID" name="application_component_has_business_owner_is_business_owner_of_person" title="Application Component has business owner Person" desc="Use this relationship to specify business ownership of applications and software elements." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has business owner" xlink:href="#Reltype_has_business_owner-is_business_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Application Component" xlink:href="../abstracttypes/application_component.kmd#CompType_TRM:ApplicationDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application Component has business owner Person" xlink:href="#Reltype_application_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="from">has business owner</string>
+   <string name="to">is business owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">1</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Application Component has business owner Person" xlink:href="#Reltype_application_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_has_business_owner_is_business_owner_of_person_UUID" name="change_component_has_business_owner_is_business_owner_of_person" title="Change Component has business owner Person" desc="Use this relationship to specify business ownership of initiatives, projects/programs and tasks." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has business owner" xlink:href="#Reltype_has_business_owner-is_business_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component has business owner Person" xlink:href="#Reltype_change_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="from">has business owner</string>
+   <string name="to">is business owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Change Component has business owner Person" xlink:href="#Reltype_change_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deliverable_has_business_owner_is_business_owner_of_person_UUID" name="deliverable_has_business_owner_is_business_owner_of_person" title="Deliverable has business owner Person" desc="Use this relationship to specify business ownership of services and products." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has business owner" xlink:href="#Reltype_has_business_owner-is_business_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deliverable" xlink:href="../objecttypes/deliverable.kmd#CompType_MEAF:Deliverable_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deliverable has business owner Person" xlink:href="#Reltype_deliverable_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="from">has business owner</string>
+   <string name="to">is business owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deliverable has business owner Person" xlink:href="#Reltype_deliverable_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_has_business_owner-is_business_owner_of_UUID" name="has_business_owner-is_business_owner_of" title="has business owner" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllhas_business_owner-is_business_owner_of" xlink:role="criteria" xlink:title="Find all Has business owner relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_has_business_owner-is_business_owner_of_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="has business owner" xlink:href="#Reltype_has_business_owner-is_business_owner_of_UUID" xlink:actuate="user">
+   <string name="from">has business owner</string>
+   <string name="to">is business owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="has business owner" xlink:href="#Reltype_has_business_owner-is_business_owner_of_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_infrastructure_component_has_business_owner_is_business_owner_of_person_UUID" name="infrastructure_component_has_business_owner_is_business_owner_of_person" title="Infrastructure Component has business owner Person" desc="Use this relationship to specify business ownership of infrastructure, hardware and network elements." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has business owner" xlink:href="#Reltype_has_business_owner-is_business_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Infrastructure Component" xlink:href="../abstracttypes/infrastructure_component.kmd#CompType_TRM:InfrastructureDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Infrastructure Component has business owner Person" xlink:href="#Reltype_infrastructure_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="from">has business owner</string>
+   <string name="to">is business owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Infrastructure Component has business owner Person" xlink:href="#Reltype_infrastructure_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_process_component_has_business_owner_is_business_owner_of_person_UUID" name="process_component_has_business_owner_is_business_owner_of_person" title="Process Component has business owner Person" desc="Use this relationship to specify business ownership of processes and functions elements." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has business owner" xlink:href="#Reltype_has_business_owner-is_business_owner_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Process Component" xlink:href="../abstracttypes/process_component.kmd#CompType_TRM:ProcessDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Person" xlink:href="../objecttypes/person.kmd#CompType_TRM:Person_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Process Component has business owner Person" xlink:href="#Reltype_process_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="from">has business owner</string>
+   <string name="to">is business owner of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Process Component has business owner Person" xlink:href="#Reltype_process_component_has_business_owner_is_business_owner_of_person_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

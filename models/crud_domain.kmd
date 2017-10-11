@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="3.0.2"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="1"
+ nextoid="2">
+
+ <domain id="oid1" name="CRUDDomain" title="CRUD Domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/create-created_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/delete-deleted_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/modifies-modified_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/read-read_by.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+
+</metis>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <decimal-type id="PrimType_Semantics:Currency_UUID" name="Currency" desc="Has two decimal places. Used for currency values." precision="2">
+ </decimal-type>
+
+
+</metis>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Needs" title="needs/needed by" desc="Allows you to show how a certain Competence/Skill is needed for different aspects of business operation and support." usage="relationship" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts - User" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Transition Plan Item" xlink:href="../object_types/transition_plan_item.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Sales Item" xlink:href="../object_types/sales_item.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Enabling IT Technology" xlink:href="../object_types/enabling_it_tech.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Role" xlink:href="../object_types/role.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Initiative" xlink:href="../object_types/initiative.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Product Item" xlink:href="../object_types/productitem.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="IT Entity" xlink:href="../object_types/it_entity.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Project" xlink:href="../object_types/project.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Task" xlink:href="../object_types/task.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence/Skill" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="needs/needed by" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from">needs</string>
+   <string name="to">needed by</string>
+  </valueset>
+ </type>
+
+
+</metis>

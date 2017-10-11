@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="AvailableIn" title="available in/has available" desc="Allows you to connect a Sales Item to a Location and specify its availability through the Year Quarter property.&#10;It is possible to specify the availability in more detail by using the derived relationships:&#10;* has controlled available&#10;* has official available, and &#10;* has no longer available&#10;" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <property name="yearQuarter" xlink:role="collection-type" xlink:href="metis:std#oid12" label="Year Quarter"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/sales_item.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../object_types/location.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="from">available in</string>
+   <string name="to">has available</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:href="#oid1">
+   <collection name="yearQuarter" structure="list" size="0" xlink:role="integer-type" xlink:href="metis:std#oid1"></collection>
+  </valueset>
+ </type>
+
+
+</metis>

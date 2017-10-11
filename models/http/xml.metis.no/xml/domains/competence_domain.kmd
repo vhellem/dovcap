@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="3"
+ nextoid="5">
+
+ <domain id="oid1" name="CompetenceDomain" title="Competence Domain" desc="Contains Competence Profile, Formal Competence, Competence and Training Program.&#10;The Competence domain is used to represent Competence Profiles (i.e. required Competences and actual Competences, or qualifications). Since the Competence Profile is a common concept covering both &#39;needed Competence Profile&#39; and &#39;has Competence Profile&#39; it is easy to compare qualification with needed competence to find a best fit.&#10;A specific Competence Profile is built up by potentially decomposing the Competence Profile into parts, and relating to Competencies at the atomic level. A Competence is the building-brick for a certain Competence Profile, and is related to the Competence Profile with a skill level. The scale for the skill level is not predefined by METIS; any integer value is accepted, and it is up to the users to attach semantics to the value. It is however recommended to use a scale where 0 (i.e. zero) means no Competence and 5 means high (i.e. &#39;the best&#39;) Competence.">
+  <domain-link xlink:role="domain" xlink:href="#oid3" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/competenceprofile.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/formalcompetence.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/trainingprogram.kmd#oid1" xlink:actuate="user"/>
+ </domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_competence-competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/needs-needed_competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_formal_competence-formal_competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/promoted_by-promotes.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/must_have-formal_competence_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_competence-of_competence_profile.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/requirement_to-has_requirement.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+
+</metis>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ typeviews="1"
+ nextoid="4">
+
+ <type id="oid1" name="Option_For_Question" title="Option For Question" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - IF Configuration" xlink:href="../object_types/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="select" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Select" desc="Check this to select this option" default-visible="top"/>
+  <property name="optionText" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Option" desc="A Description of the option" default-visible="top"/>
+  <property name="optionID" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="ID" desc="The ID used by the dialogue to know which option you selected" default-visible="top"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Option For Question" xlink:href="#oid1" xlink:actuate="user">
+   <integer name="select">0</integer>
+   <string name="optionText"></string>
+   <integer name="optionID">0</integer>
+  </valueset>
+ </type>
+
+ <valueset-type id="oid2" name="Option_For_Question___Wrapper" title="Option For Question - Wrapper" xlink:role="type" xlink:title="Option For Question" xlink:href="#oid1">
+  <complex-type-link xlink:role="type" xlink:title="Option For Question" xlink:href="#oid1"/>
+ </valueset-type>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Option For Question" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="select" label="Select" desc="Check this to select this option" visible-flag="true" default-visible="top"/>
+   <propertyview name="optionText" label="Option" desc="A Description of the option" protected-flag="true" visible-flag="true" default-visible="top"/>
+   <propertyview name="optionID" label="ID" desc="The ID used by the dialogue to know which option you selected" visible-flag="false"/>
+  </propertyviews>
+ </typeview>
+
+
+</metis>

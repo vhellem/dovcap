@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: akm_relationships.svg</title>
+ <defs>
+  <symbol id="_002ashp02gd118a4ne4g" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>base</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <path d="M100,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:END_HOLLOW_ARROW"></path>
+   <rect x="300" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+  <symbol id="_002ashq00fmetgs2fmca" xml:space="preserve" class="METIS_REL_SYMBOL">
+   <title>base3</title>
+   <rect width="100" height="100" style="stroke:#111; fill:none;"></rect>
+   <path d="M100,50l200, 250" style="fill:none; stroke:#000000; stroke-width:1;"
+    class="TAG:HOLLOW_FILLED_CIRCLES"></path>
+   <rect x="300" y="250" width="100" height="100" style="stroke:#111; fill:none;"></rect>
+  </symbol>
+ </defs>
+ <use xlink:href="#_002ashp02gd118a4ne4g"/>
+</svg>

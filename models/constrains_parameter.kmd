@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="constrains_parameter" name="constrains_parameter" title="Constrains_parameter" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Constraint_parameter" xlink:href="constraint_parameter.kmd#constraint_parameter_range" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Design_parameter" xlink:href="design_parameter.kmd#design_parameter" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Constraint_parameter" xlink:href="constraint_parameter.kmd#constraint_parameter_range" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Performance_parameter" xlink:href="performance_parameter.kmd#performance_parameter" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Constrains_parameter" xlink:href="#constrains_parameter" xlink:actuate="user">
+   <string name="from">constrains</string>
+   <string name="to">constrained by</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Constrains_parameter" xlink:href="#constrains_parameter" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

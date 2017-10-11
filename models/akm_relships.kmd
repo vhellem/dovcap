@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="Reltype_AKM:Is_UUID" name="Is" title="Is" desc="The Is-relationship is used to model generalization/specialization, which also captures inheritance." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Classifies" xlink:href="#Reltype_AKM:Is_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">is</string>
+   <string name="to">is</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:IsA_UUID" name="IsA" title="Is-a" desc="The Is-a relationship is used to model instantiation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Classifies" xlink:href="#Reltype_AKM:IsA_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">is-a</string>
+   <string name="to">is-a</string>
+  </valueset>
+ </type>
+
+ <!--
+ <type id="Reltype_AKM:HasTemplate_UUID" name="HasTemplate" title="Has template" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Classifies" xlink:href="#Reltype_AKM:HasTemplate_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has template</string>
+   <string name="to">template of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:CorrespondsTo_UUID" name="CorrespondsTo" title="Corresponds to" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Classifies" xlink:href="#Reltype_AKM:CorrespondsTo_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">corresponds to</string>
+   <string name="to">has correspondance</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:Classifies_UUID" name="Classifies" title="Classifies" desc="Classifies." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/classification.kmd#CompType_AKM:Classification_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="Classifies" xlink:href="#Reltype_AKM:Classifies_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">classifies</string>
+   <string name="to">is classified by</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:ConnectsGeometry_UUID" name="connectsGeometry" title="Connects geometry" desc="Connects geometry." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/geometricalobject.kmd#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/geometricalobject.kmd#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="connectsGeometry" xlink:href="#Reltype_AKM:ConnectsGeometry_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">connects</string>
+   <string name="to">is connected to</string>
+  </valueset>
+ </type>
+-->
+ <type id="Reltype_AKM:ConsistOf_UUID" name="consistOfRelationship" title="Consists of relationship" desc="Consists of relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="consistOfRelationship" xlink:href="#Reltype_AKM:ConsistOf_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">consists of</string>
+   <string name="to">is part of</string>
+  </valueset>
+ </type>
+<!--
+ <type id="Reltype_AKM:ConsistOfGeometry_UUID" name="consistOfGeometry" title="Consists of geometrical object" desc="Consists of geometrical object" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/geometricalobject.kmd#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/geometricalobject.kmd#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Consists of geometrical object" xlink:href="#Reltype_AKM:ConsistOfGeometry_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">consists of</string>
+   <string name="to">is part of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasActionItem_UUID" name="hasActionItem" title="Has actionitem" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/menucontentspec.kmd#CompType_AKM:MenuContentSpecification_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/actionitem.kmd#CompType_AKM:ActionItem_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has actionitem" xlink:href="#Reltype_AKM:hasActionItem_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has actionitem</string>
+   <string name="to">actionitem of</string>
+  </valueset>
+ </type>
+ <type id="Reltype_AKM:hasAspect_UUID" name="hasAspect" title="Has aspect" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/aspect.kmd#CompType_AKM:Aspect_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has aspect" xlink:href="#Reltype_AKM:hasAspect_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has aspect</string>
+   <string name="to">aspect of</string>
+  </valueset>
+ </type>
+-->
+
+ <type id="Reltype_AKM:hasConcept_UUID" name="hasConcept" title="Has concept" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/concept.kmd#CompType_AKM:Concept_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has concept" xlink:href="#Reltype_AKM:hasConcept_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has concept</string>
+   <string name="to">concept of</string>
+  </valueset>
+ </type>
+<!--
+
+ <type id="Reltype_AKM:hasConstraint_UUID" name="hasConstraint" title="Has constraint" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/constraint.kmd#CompType_AKM:Constraint_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has constraint" xlink:href="#Reltype_AKM:hasConstraint_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has constraint</string>
+   <string name="to">constraint of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasCriteria_UUID" name="hasCriteria" title="Has criteria" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/criteria.kmd#CompType_AKM:Criteria_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has criteria" xlink:href="#Reltype_AKM:hasCriteria_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has criteria</string>
+   <string name="to">criteria of</string>
+  </valueset>
+ </type>
+-->
+ <type id="Reltype_AKM:hasGeometry_UUID" name="hasGeometry" title="Has geometry" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/geometricalobject.kmd#CompType_AKM:GeometricalObject_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has geometry" xlink:href="#Reltype_AKM:hasGeometry_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has geometry</string>
+   <string name="to">geometry of</string>
+  </valueset>
+ </type>
+<!--
+ <type id="Reltype_AKM:hasMethod_UUID" name="hasMethod" title="Has method" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/method.kmd#CompType_AKM:Method_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has method" xlink:href="#Reltype_AKM:hasMethod_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has method</string>
+   <string name="to">method of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasParameter_UUID" name="hasParameter" title="Has parameter" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/method.kmd#CompType_AKM:Method_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/parameter.kmd#CompType_AKM:Parameter_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has method argument" xlink:href="#Reltype_AKM:hasParameter_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has parameter</string>
+   <string name="to">parameter of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasPart_UUID" name="hasPart" title="Has part" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has part" xlink:href="#Reltype_AKM:hasPart_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has part</string>
+   <string name="to">part of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasPartStructure_UUID" name="hasPartStructure" title="Has part structure" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/archetype.kmd#CompType_AKM:Archetype_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="hasPartStrucure" xlink:href="#Reltype_AKM:hasPartStrucure_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has part structure</string>
+   <string name="to">part structure of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasProperty_UUID" name="hasProperty" title="Has property" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/property.kmd#CompType_AKM:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has property" xlink:href="#Reltype_AKM:hasProperty_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has property</string>
+   <string name="to">property of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasPurpose_UUID" name="hasPurpose" title="Has purpose" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/property.kmd#CompType_AKM:Purpose_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has property" xlink:href="#Reltype_AKM:hasPurpose_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has purpose</string>
+   <string name="to">purpose of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasRequirement_UUID" name="hasRequirement" title="Has requirement" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/requirement.kmd#CompType_AKM:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has requirement" xlink:href="#Reltype_AKM:hasRequirement_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has requirement</string>
+   <string name="to">requirement of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasTask_UUID" name="hasTask" title="Has task" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/task.kmd#AKM_Task" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has task structure" xlink:href="#Reltype_AKM:hasTask_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has task structure</string>
+   <string name="to">task structure of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:hasValue_UUID" name="hasValue" title="Has value" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_AKM:ConsistOf_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/value.kmd#CompType_AKM:Value_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has value" xlink:href="#Reltype_AKM:hasValue_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has value</string>
+   <string name="to">value of</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:implementsFunction_UUID" name="implementsFunction" title="Implements function" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/function.kmd#CompType_AKM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Implements function" xlink:href="#Reltype_AKM:implementsFunction_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">implements</string>
+   <string name="to">implemented by</string>
+  </valueset>
+ </type>
+-->
+
+ <type id="Reltype_AKM:implementsFunction2_UUID" name="implementsFunction2" title="Implements function" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/concept.kmd#CompType_AKM:Concept_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Implements function" xlink:href="#Reltype_AKM:implementsFunction2_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">implements</string>
+   <string name="to">implemented by</string>
+  </valueset>
+ </type>
+
+<!--
+ <type id="Reltype_AKM:invokesMethod_UUID" name="invokesMethod" title="Invokes method" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/actionitem.kmd#CompType_AKM:ActionItem_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/method.kmd#CompType_AKM:Method_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Has action item" xlink:href="#Reltype_AKM:invokesMethod_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">invokes method</string>
+   <string name="to">invoked by</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:requiresFunction_UUID" name="requiresFunction" title="Requires function" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/concept.kmd#CompType_AKM:Concept_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/function.kmd#CompType_AKM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Requires function" xlink:href="#Reltype_AKM:requiresFunction_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">requires</string>
+   <string name="to">required by</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:requiresFunction2_UUID" name="requiresFunction" title="Requires function" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/function.kmd#CompType_AKM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Requires function" xlink:href="#Reltype_AKM:requiresFunction2_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">requires</string>
+   <string name="to">required by</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_AKM:requires_UUID" name="requires" title="requires" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/organization.kmd#CompType_AKM:Organization_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/requirement.kmd#CompType_AKM:Requirement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="requires" xlink:href="#Reltype_AKM:requires_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">requires</string>
+   <string name="to">required by</string>
+  </valueset>
+ </type>
+-->
+
+ <type id="Reltype_AKM:solvesFunction_UUID" name="solvesFunction" title="Solves function" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/function.kmd#CompType_AKM:Function_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="../objecttypes/concept.kmd#CompType_AKM:Concept_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Solves function" xlink:href="#Reltype_AKM:solvesFunction_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">solves</string>
+   <string name="to">solution of</string>
+  </valueset>
+ </type>
+
+</metis>

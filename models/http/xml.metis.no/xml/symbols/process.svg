@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<?metis version="3.4.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: process.svg</title>
+ <defs>
+  <pattern id="HorPattern_#ffffff">
+    <path style="stroke:#ffffff" d="M 0,0, L 5, 5"/>
+  </pattern>
+  <symbol id="oid19" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Process Open (Transparent)</title>
+    <rect x="0" y="0" width="352" height="256" rx="10" ry="10"
+     style=" stroke:#b9b9b9; stroke-width:1; fill:#ffffdc; fill-opacity:0%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32" y="65.3532"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:64;"
+       class="TAG:text">text</text>
+      <rect x="32" y="3.35323" width="288" height="70.8089"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid28" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Process w/opaque Open</title>
+    <rect x="0" y="0" width="352" height="256" rx="10" ry="10"
+     style=" stroke:#b9b9b9; stroke-width:1; fill:#ffffdc; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="35"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:20;"
+       class="TAG:text">text</text>
+      <rect x="16" y="16" width="320" height="224"
+       style=" stroke:#000000; stroke-width:1; fill:url(#HorPattern_#ffffff);"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid3" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Process Closed</title>
+    <rect x="0" y="0" width="352" height="256" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffa5; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="78"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:64;"
+       class="TAG:text">text</text>
+      <rect x="16" y="16" width="320" height="224"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid26" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Input open</title>
+    <g     class="TAG:connection_points:West">
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:center"
+       class="TAG:text"></text>
+      <rect x="0" y="0" width="384" height="256"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <rect x="0" y="0" width="384" height="256"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <polyline points="0 128 384 128"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:END_ARROW"></polyline>
+  </symbol>
+  <symbol id="oid20" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Input closed</title>
+    <g     class="TAG:connection_points:West">
+    </g>
+    <polyline points="0 128 384 128"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+    <rect x="0" y="0" width="384" height="256"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:center"
+       class="TAG:text"></text>
+      <rect x="0" y="0" width="384" height="256"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid4" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Control open</title>
+    <g     class="TAG:connection_points:North">
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38;"
+       class="TAG:text" transform="rotate(90);"></text>
+      <rect x="0" y="0" width="240" height="312"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <rect x="0" y="0" width="256" height="320"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <polyline points="128 0 128 320"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+  </symbol>
+  <symbol id="oid8" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Control closed</title>
+    <g     class="TAG:connection_points:North">
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:center"
+       class="TAG:text" transform="rotate(90);"></text>
+      <rect x="0" y="0" width="256" height="320"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <polyline points="0 320 256 320"
+     style="stroke:none;"></polyline>
+    <rect x="0" y="0" width="256" height="320"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <polyline points="128 0 128 320"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+  </symbol>
+  <symbol id="oid5" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Output open</title>
+    <g     class="TAG:connection_points:East">
+    </g>
+    <g>
+      <polyline points="0 0 0 256"
+       style="stroke:none;"></polyline>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="8" y="36"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38;"
+	 class="TAG:text"></text>
+	<rect x="8" y="0" width="376" height="256"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+      </g>
+      <rect x="0" y="0" width="384" height="256"
+       style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+      <polyline points="0 128 384 128"
+       style=" stroke:#000000; stroke-width:1;"       class="TAG:connection_area"></polyline>
+    </g>
+  </symbol>
+  <symbol id="oid9" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Output closed</title>
+    <g     class="TAG:connection_points:East">
+    </g>
+    <g>
+      <rect x="0" y="0" width="384" height="256"
+       style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+      <polyline points="0 0 0 256"
+       style="stroke:none;"></polyline>
+      <polyline points="0 128 384 128"
+       style=" stroke:#000000; stroke-width:1;"       class="TAG:connection_area"></polyline>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="0" y="36"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:center"
+	 class="TAG:text"></text>
+	<rect x="0" y="0" width="384" height="256"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+      </g>
+    </g>
+  </symbol>
+  <symbol id="oid6" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mech open</title>
+    <g     class="TAG:connection_points:South">
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="44"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:right"
+       class="TAG:text" transform="rotate(90);"></text>
+      <rect x="0" y="8" width="256" height="312"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <polyline points="128 0 128 320"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+  </symbol>
+  <symbol id="oid10" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Mech closed</title>
+    <g     class="TAG:connection_points:South">
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:center"
+       class="TAG:text" transform="rotate(90);"></text>
+      <rect x="0" y="0" width="256" height="320"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <rect x="0" y="0" width="256" height="320"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <polyline points="128 0 128 320"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+  </symbol>
+  <symbol id="oid12" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Intflow open</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <polyline points="0 0 0 256"
+     style="stroke:none;"></polyline>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38;"
+       class="TAG:text"></text>
+      <rect x="8" y="0" width="376" height="256"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+    <rect x="0" y="0" width="384" height="256"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <polyline points="0 128 384 128"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+  </symbol>
+  <symbol id="oid11" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Intflow closed</title>
+    <g     class="TAG:connection_points:EastWest">
+    </g>
+    <rect x="0" y="0" width="384" height="256"
+     style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+    <polyline points="0 0 0 256"
+     style="stroke:none;"></polyline>
+    <polyline points="0 128 384 128"
+     style=" stroke:#000000; stroke-width:1;"     class="TAG:connection_area"></polyline>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="36"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38; text-align:center"
+       class="TAG:text"></text>
+      <rect x="0" y="0" width="384" height="256"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid25" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Start Portal</title>
+    <g     class="TAG:connection_points:East">
+    </g>
+    <g>
+      <polyline points="0 0 0 256"
+       style="stroke:none;"></polyline>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="8" y="36"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38;"
+	 class="TAG:text"></text>
+	<rect x="8" y="0" width="376" height="256"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+      </g>
+      <rect x="0" y="0" width="384" height="256"
+       style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+      <polyline points="0 128 384 128"
+       style=" stroke:#000000; stroke-width:1;"       class="TAG:START_FILLED_DIAMOND"></polyline>
+    </g>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>End Portal</title>
+    <g     class="TAG:connection_points:West">
+    </g>
+    <g>
+      <polyline points="0 0 0 256"
+       style="stroke:none;"></polyline>
+      <g>
+	<desc>METIS_TEXT_GROUP</desc>
+	<text  x="8" y="36"
+	 style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:38;"
+	 class="TAG:text"></text>
+	<rect x="8" y="0" width="376" height="256"
+	 style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+      </g>
+      <rect x="0" y="0" width="384" height="256"
+       style="stroke:none; fill:#000000; fill-opacity:0%"></rect>
+      <polyline points="0 128 384 128"
+       style=" stroke:#000000; stroke-width:1;"       class="TAG:END_FILLED_DIAMOND"></polyline>
+    </g>
+  </symbol>
+  <symbol id="oid29" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Fish</title>
+    <polygon points="0 0 32 128 0 256 
+     304 256 352 128 304 0 0 0 
+     0 0 0 0 0 0 0 0 
+     0 0 0 0 0 0 0 0 
+     0 0 0 0 0 0 0 0 
+     0 0 0 0 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffc8c8; fill-opacity:100%"     class="TAG:canvas"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32" y="78"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:64;"
+       class="TAG:text">text</text>
+      <rect x="32" y="16" width="304" height="224"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid24" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Condition</title>
+    <ellipse  cx="208" cy="128.155" rx="208" ry="128"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></ellipse>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0.946302" y="15"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center vertical-align:middle;"
+       class="TAG:text">text</text>
+      <rect x="0.946302" y="0" width="416" height="160.155"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32.9463" y="181.155"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:6; text-align:center"
+       class="TAG:condition">condition
+</text>
+      <rect x="32.9463" y="176.155" width="352" height="80"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid23" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Alternative</title>
+    <polygon points="128 0 256 128 128 256 
+     0 128 128 0 128 0 128 0 
+     128 0 128 0 128 0 128 0 
+     128 0 128 0 128 0 128 0 
+     128 0 128 0 128 0 128 0 
+     128 0 128 0 128 0 128 0 
+     128 0 128 0 "
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="15"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center vertical-align:middle;"
+       class="TAG:text">text</text>
+      <rect x="0" y="0" width="256" height="256"
+       style=" stroke:#000000; stroke-width:1; fill:#000000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ nextoid="1">
+
+ <type id="Reltype_business_process_implements_is_implemented_by_weight_strategy_UUID" name="business_process_implements_is_implemented_by_weight_strategy" title="Business Process implements Strategy" desc="Use this relationship to connect strategy items to processes aimed at fulfilling them. The relationship has a weight property to be able to calculate strategic value on the process items." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements/is implemented by (Weight)" xlink:href="#Reltype_implements-is_implemented_by_weight_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Business Process implements Strategy" xlink:href="#Reltype_business_process_implements_is_implemented_by_weight_strategy_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Business Process implements Strategy" xlink:href="#Reltype_business_process_implements_is_implemented_by_weight_strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="weight">0</integer>
+   <integer name="objectWeight" class="volatile">0</integer>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_change_component_implements_is_implemented_by_weight_strategy_UUID" name="change_component_implements_is_implemented_by_weight_strategy" title="Change Component implements Strategy" desc="Use this relationship to connect strategy items to change items like projects and tasks, aimed at fulfilling them. The relationship has a weight property to be able to calculate strategic value on the change items." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements/is implemented by (Weight)" xlink:href="#Reltype_implements-is_implemented_by_weight_UUID"/>
+  <property name="importance" xlink:role="integer-type" xlink:title="Importance 1 to 100" xlink:href="../../semantics/primitive_types/importance_1_to_100.kmd#PrimType_Semantics:Importance_1_to_100_UUID" label="Importance" desc="The relative importance of a change component to implementing a strategy on a scale of 1 to 100. " default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:ChangeComponentImplementsStrategy_importance_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="costAllocationWeight" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Cost Allocation Weighting" desc="A relative weighting that indicates how much of the change component&#39;s cost is allocated to the strategy." default-visible="top" mer-property-metadata="uuid=&#34;PropType_Semantics:ChangeCompImplementsStrategy_costAllocationWeight_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Change Component" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Change Component implements Strategy" xlink:href="#Reltype_change_component_implements_is_implemented_by_weight_strategy_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Change Component implements Strategy" xlink:href="#Reltype_change_component_implements_is_implemented_by_weight_strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="weight">0</integer>
+   <integer name="objectWeight" class="volatile">0</integer>
+   <string name="color" class="volatile"></string>
+   <integer name="importance">0</integer>
+   <integer name="costAllocationWeight">1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_enterprise_policy_implements_is_implemented_by_weight_strategy_UUID" name="enterprise_policy_implements_is_implemented_by_weight_strategy" title="Enterprise Policy implements Strategy" desc="Use this relationship to show (with a relationship weight property) how a strategy is implemented by a policy or principle." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="implements/is implemented by (Weight)" xlink:href="#Reltype_implements-is_implemented_by_weight_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Enterprise Policy" xlink:href="../objecttypes/enterprise_policy.kmd#CompType_TRM:Policy_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Enterprise Policy implements Strategy" xlink:href="#Reltype_enterprise_policy_implements_is_implemented_by_weight_strategy_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Enterprise Policy implements Strategy" xlink:href="#Reltype_enterprise_policy_implements_is_implemented_by_weight_strategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="weight">0</integer>
+   <integer name="objectWeight" class="volatile">0</integer>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_implements-is_implemented_by_weight_UUID" name="implements-is_implemented_by_weight" title="implements/is implemented by (Weight)" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <property name="weight" xlink:role="integer-type" xlink:title="Weight" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_weight_UUID" label="Weight" desc="A weight indicating how well the target object supports the origin object. Used to calculate the value of the target object. Select weight value from 1 to 7 via the drop-down list." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_implements-is_implemented_by_weight_weight_UUID&#34;;"/>
+  <property name="objectWeight" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Object Value" method-flag="true" default-visible="top"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="The colorvalue for the relationship based on the weight property" method-flag="true" default-visible="top"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="Pick_Weight_Color" xlink:href="../methods/colormapping_methods.kmd#oid9"/>
+  <named-method-link name="objectWeight" xlink:role="cpp-method" xlink:title="getStrategicValueTarget" xlink:href="../methods/strategic_value_calculations_methods.kmd#oid1"/>
+  <named-criteria-link name="FindAllimplements-is_implemented_by_weight" xlink:role="criteria" xlink:title="Find all Implements/is implemented by (Weight) relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_implements-is_implemented_by_weight_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="implements/is implemented by (Weight)" xlink:href="#Reltype_implements-is_implemented_by_weight_UUID" xlink:actuate="user">
+   <string name="from">implements</string>
+   <string name="to">is implemented by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="implements/is implemented by (Weight)" xlink:href="#Reltype_implements-is_implemented_by_weight_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="weight">0</integer>
+   <integer name="objectWeight" class="volatile">0</integer>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+
+</metis>

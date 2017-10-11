@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ nextoid="1">
+
+ <viewstyle id="_002as5m00u711i9vngfo" name="Task_process" title="Task process" desc="Represents the task structure and relationships as a process model">
+  <typeview-link xlink:role="typeview" xlink:href="../symbols/task_process_coloured.kmd#_002as5m00u9m7cjrcrqp" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/task_input.kmd#_002as5m00vp3rovn2ee1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/task_output.kmd#_002as5m0104nl0lp476b" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../system/typeviews/template_rel.kmd#_002as5e010dau4nach28" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

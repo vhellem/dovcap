@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: workware_actor_resources.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Any non-human actor.</desc>
+   <title>Agent</title>
+    <path d="M 16 79 C 19.9402 64.7254 25.6 58.6364 
+     28.8 55.7273 C 38.4 47 57.6 47 67.2 55.7273 
+     C 70.4 58.6364 74.6449 63.9304 80 79 Z"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></path>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="54.5"
+       style=" stroke:#000000; stroke-width:2; font-family:sans-serif; font-size:14; text-align:center" class="TAG:text"
+>Agent</text>
+      <rect x="0" y="41" width="80" height="63"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <ellipse  cx="48" cy="34" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></ellipse>
+    <polyline points="0 0 96 0 96 96 
+     0 96"
+     style=" stroke:#000000; stroke-width:1;" class="TAG:frame"></polyline>
+  </symbol>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <desc>Any human actor 
+(individual, group, unit or organisation).s19</desc>
+   <title>Organisational Actor</title>
+    <polyline points="0 0 96 0 96 96 
+     0 96"
+     style=" stroke:#000000; stroke-width:1;" class="TAG:frame"></polyline>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="61.5"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:14; text-align:center" class="TAG:text"
+>Org. Actor</text>
+      <rect x="0" y="48" width="96" height="58"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <ellipse  cx="48" cy="28" rx="12" ry="12"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%" class="TAG:role"></ellipse>
+    <polyline points="12 84 28 48 68 48 
+     84 84"
+     style=" stroke:#000000; stroke-width:1;"></polyline>
+    <polyline points="12 84 84 84"
+     style=" stroke:#000000; stroke-width:1;"></polyline>
+    <rect x="36" y="16" width="24" height="24"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%" class="TAG:concrete"></rect>
+    <polyline points="40 48 24 84"
+     style=" stroke:#000000; stroke-width:1;" class="TAG:team"></polyline>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Software Agent</title>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="53.5"
+       style=" stroke:#000000; stroke-width:2; font-family:sans-serif; font-size:14; text-align:center" class="TAG:text"
+>Software
+Agent</text>
+      <rect x="0" y="40" width="96" height="64"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <ellipse  cx="48" cy="26" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></ellipse>
+    <path d="M 16.4074 69.0171 C 22.8074 65.0171 26.0074 65.0171 
+     32.4074 65.0171 C 41.1553 65.0171 51.6074 75.0171 62.8074 75.0171 
+     C 69.2074 75.0171 77.2074 73.0171 80.4074 69.0171"
+     style=" stroke:#000000; stroke-width:1;"></path>
+    <path d="M 16.4074 69.0171 C 20.4074 57.0171 25.2616 50.1629 
+     30.4074 45.0171 C 38.4074 37.0171 58.4074 37.0171 66.4074 45.0171 
+     C 72.4074 51.0171 76.4074 57.0171 80.4074 69.0171 C 80.4074 69.0171 
+     80.4074 69.0171 80.4074 69.0171"
+     style=" stroke:#000000; stroke-width:1;"></path>
+    <polyline points="0 0 96 0 96 96 
+     0 96"
+     style=" stroke:#000000; stroke-width:1;" class="TAG:frame"></polyline>
+  </symbol>
+ </defs>
+</svg>

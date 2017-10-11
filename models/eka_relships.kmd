@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="16"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="RelType_EKA:DependsOn_UUID" name="dependsOn" title="Depends on" desc="Depends on relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="#RelType_EKA:Relationship_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Depends on" xlink:href="#RelType_EKA:DependsOn_UUID" xlink:actuate="user">
+   <string name="from">depends on</string>
+   <string name="to">depends on</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Depends on" xlink:href="#RelType_EKA:DependsOn_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:Equals_UUID" name="equalsRelationship" title="Equals" desc="The Equals relationship is used to model synonyms and correspondance." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Is" xlink:href="#RelType_EKA:Is_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Equals" xlink:href="#RelType_EKA:Equals_UUID" xlink:actuate="user">
+   <string name="from">equals</string>
+   <string name="to">equals</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Equals" xlink:href="#RelType_EKA:Equals_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasAllowedValue_UUID" name="hasAllowedValue" title="Has allowed value" desc="Has allowed value relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has allowed value" xlink:href="#RelType_EKA:HasAllowedValue_UUID" xlink:actuate="user">
+   <string name="from">has allowed value</string>
+   <string name="to">allowed value of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has allowed value" xlink:href="#RelType_EKA:HasAllowedValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasDefinition_UUID" name="hasDefinition1" title="Has definition" desc="Has definition relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Value (EKA)" xlink:href="eka_value.kmd#ObjType_EKA:Value_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has definition" xlink:href="#RelType_EKA:HasDefinition_UUID" xlink:actuate="user">
+   <string name="from">has definition</string>
+   <string name="to">definition of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has definition" xlink:href="#RelType_EKA:HasDefinition_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasProperty_UUID" name="hasProperty" title="Has property" desc="Has property relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has property" xlink:href="#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="from">has property</string>
+   <string name="to">property of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has property" xlink:href="#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasAggregatedProperty_UUID" name="hasAggregatedProperty" title="Has aggregated property" desc="Has aggregated property relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has aggregated property" xlink:href="#RelType_EKA:HasAggregatedProperty_UUID" xlink:actuate="user">
+   <string name="from">has property</string>
+   <string name="to">property of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has aggregated property" xlink:href="#RelType_EKA:HasAggregatedProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasParameter_UUID" name="hasParameter" title="Has parameter" desc="Has parameter relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has parameter" xlink:href="#RelType_EKA:HasParameter_UUID" xlink:actuate="user">
+   <string name="from">has parameter</string>
+   <string name="to">parameter of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has parameter" xlink:href="#RelType_EKA:HasParameter_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasAggregatedParameter_UUID" name="hasAggregatedParameter" title="Has aggregated parameter" desc="Has aggregated parameter relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has aggregated parameter" xlink:href="#RelType_EKA:HasAggregatedParameter_UUID" xlink:actuate="user">
+   <string name="from">has aggregated parameter</string>
+   <string name="to">aggregated parameter of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has aggregated parameter" xlink:href="#RelType_EKA:HasAggregatedParameter_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasValue_UUID" name="hasValue" title="Has value" desc="Has value relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="#RelType_EKA:HasProperty_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has value" xlink:href="#RelType_EKA:HasValue_UUID" xlink:actuate="user">
+   <string name="from">has value</string>
+   <string name="to">value of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has value" xlink:href="#RelType_EKA:HasValue_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasValueset_UUID" name="hasValueset" title="Has valueset" desc="Has valueset relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Valueset (EKA)" xlink:href="eka_valueset.kmd#ObjType_EKA:Valueset_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has valueset" xlink:href="#RelType_EKA:HasValueset_UUID" xlink:actuate="user">
+   <string name="from">has valueset</string>
+   <string name="to">valueset of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has valueset" xlink:href="#RelType_EKA:HasValueset_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasAspect_UUID" name="hasAspect" title="Has aspect" desc="Has aspect relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Aspect (EKA)" xlink:href="eka_aspect.kmd#ObjType_EKA:Aspect_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has aspect" xlink:href="#RelType_EKA:HasAspect_UUID" xlink:actuate="user">
+   <string name="from">has aspect</string>
+   <string name="to">aspect of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has aspect" xlink:href="#RelType_EKA:HasAspect_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:Implies_UUID" name="implies" title="Implies" desc="Implies relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Value (EKA)" xlink:href="eka_value.kmd#ObjType_EKA:Value_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Value (EKA)" xlink:href="eka_value.kmd#ObjType_EKA:Value_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Implies" xlink:href="#RelType_EKA:Implies_UUID" xlink:actuate="user">
+   <string name="from">implies</string>
+   <string name="to">implied by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Implies" xlink:href="#RelType_EKA:Implies_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:IsA_UUID" name="isARelationship" title="Is a" desc="The Is-a relationship is used to model instantiation." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Is" xlink:href="#RelType_EKA:Is_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is a" xlink:href="#RelType_EKA:IsA_UUID" xlink:actuate="user">
+   <string name="from">is a</string>
+   <string name="to">instance</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Is a" xlink:href="#RelType_EKA:IsA_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:Is_UUID" name="isRelationship" title="Is" desc="The Is-relationship is used to model generalization/specialization, which also captures inheritance." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Depends on" xlink:href="#RelType_EKA:DependsOn_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid101"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is" xlink:href="#RelType_EKA:Is_UUID" xlink:actuate="user">
+   <string name="from">is</string>
+   <string name="to">subtype</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Is" xlink:href="#RelType_EKA:Is_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:Member_UUID" name="memberRelationship" title="Member" desc="Member relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="#RelType_EKA:Relationship_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="from">has member</string>
+   <string name="to">is member of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:Part_UUID" name="partRelationship" title="Part" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Part" xlink:href="#RelType_EKA:Part_UUID" xlink:actuate="user">
+   <string name="from">has part</string>
+   <string name="to">is part of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Part" xlink:href="#RelType_EKA:Part_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:InheritsPart_UUID" name="inheritsPartRelationship" title="Inherits part" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="#RelType_EKA:Member_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Inherits part" xlink:href="#RelType_EKA:InheritsPart_UUID" xlink:actuate="user">
+   <string name="from">has inherited part</string>
+   <string name="to">is inherited part of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Inherits part" xlink:href="#RelType_EKA:InheritsPart_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:IsConstrainedBy_UUID" name="IsConstrainedBy" title="Is constrained by" desc="Is constrained by relationship." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is constrained by" xlink:href="#RelType_EKA:IsConstrainedBy_UUID" xlink:actuate="user">
+   <string name="from">is constrained by</string>
+   <string name="to">constrains</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Is constrained by" xlink:href="#RelType_EKA:IsConstrainedBy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:Relationship_UUID" name="Relationship" title="Relationship" desc="Relationship used to model associations." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Abstract EKA relationship" xlink:href="eka_relationship.kmd#RelType_EKA:AbstractRelationship_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid102"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Relationship" xlink:href="#RelType_EKA:Relationship_UUID" xlink:actuate="user">
+   <string name="from">from</string>
+   <string name="to">to</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Relationship" xlink:href="#RelType_EKA:Relationship_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="fills" name="fills" desc="Relates a role to the object or type that fills it." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Is" xlink:href="#RelType_EKA:Is_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Role (EKA)" xlink:href="eka_role.kmd#ekaRole" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="fills" xlink:href="#fills" xlink:actuate="user">
+   <string name="from">is filled by</string>
+   <string name="to">fills role</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="fills" xlink:href="#fills" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="trigger" name="trigger" desc="Relates a task to the event thar triggers it." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Event (EKA)" xlink:href="eka_event.kmd#ekaEvent" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task (EKA)" xlink:href="eka_task.kmd#ekaTask" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="trigger" xlink:href="#trigger" xlink:actuate="user">
+   <string name="from">before</string>
+   <string name="to">after</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="trigger" xlink:href="#trigger" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="works_on" name="works_on" title="works on" desc="Relates a task to the object or set it works on." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="#RelType_EKA:Relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Task (EKA)" xlink:href="eka_task.kmd#ekaTask" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="works on" xlink:href="#works_on" xlink:actuate="user">
+   <string name="from">works on</string>
+   <string name="to">worked on by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="works on" xlink:href="#works_on" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid101" xlink:role="type" xlink:title="Is" xlink:href="#RelType_EKA:Is_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="connectionStrength" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Generalization" xlink:href="../views/association.svg#oid101" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../views/association.png"/>
+ </typeview>
+
+ <typeview id="oid102" xlink:role="type" xlink:href="#RelType_EKA:Relationship_UUID" tree-size="0.5" nested-size="0.125">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="connectionStrength" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="relationship" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/relships.svg#_002asv100vbuloq60cr9" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="ObjectviewOfRelHorizontalLabel" xlink:href="metis:stdsyms#oid111" xlink:actuate="user">
+   <replace tag="origin" property="value" macro="(expand (origin label))"/>
+   <replace tag="text"   property="value" macro="(expand (property from) (newline) (property to))"/>
+   <replace tag="target" property="value" macro="(expand (target label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ObjectviewOfRelHorizontal" xlink:href="metis:stdsyms#oid110" xlink:actuate="user">
+   <replace tag="origin" property="value" macro="(expand (origin label))"/>
+   <replace tag="target" property="value" macro="(expand (target label))"/>
+  </symbol-override>
+ </typeview>
+</metis>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: container_open.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Container Open</title>
+    <path d="M 0 368 C 0 374.102 9.89792 384 
+     16 384 C 144 384 368 384 496 384 
+     C 502.102 384 512 374.102 512 368 C 512 272 
+     512 112 512 16 C 512 9.89792 502.102 0 
+     496 0 C 373.237 0 30.9943 0 16 0 
+     C 15.3603 0 0 0 0 16 Z"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></path>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="39"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:32;"
+       class="TAG:text"></text>
+      <rect x="8" y="8" width="496" height="368"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <rect x="4" y="36" width="504" height="344"
+     style="stroke:none; fill:#ffffff; fill-opacity:0%"     class="TAG:LAYOUTAREA"></rect>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid1"/>
+</svg>

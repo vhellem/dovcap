@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="2"
+ nextoid="1">
+
+ <criteria id="oid1" name="getMeasures" title="getMeasures" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="type">
+      <complex-type-link xlink:role="type" xlink:title="measures/is measured by (Weight)" xlink:href="../relationshiptypes/measures-is_measured_by_weight.kmd#Reltype_measures-is_measured_by_weight_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="findStrategicValueChainMeasure" title="Find Strategic Value Chain" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Measure" xlink:href="../objecttypes/measure.kmd#CompType_MEAF:Measure_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Measure" xlink:href="../objecttypes/measure.kmd#CompType_MEAF:Measure_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Measure measures Success Factor" xlink:href="../relationshiptypes/measures-is_measured_by_weight.kmd#Reltype_measure_measures_is_measured_by_weight_success_factor_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Success Factor" xlink:href="../objecttypes/success_factor.kmd#CompType_MEAF:SuccessFactor_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Success Factor" xlink:href="../objecttypes/success_factor.kmd#CompType_MEAF:SuccessFactor_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Strategy depends on Success Factor" xlink:href="../relationshiptypes/depends_on-is_critical_to_weight.kmd#Reltype_strategy_depends_on_is_critical_to_weight_success_factor_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="origin">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="part">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Strategy" xlink:href="../objecttypes/strategy.kmd#CompType_MEAF:Strategy_UUID"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Strategy achieves Goal" xlink:href="../relationshiptypes/achieves-is_achieved_by_weight.kmd#Reltype_strategy_achieves_is_achieved_by_weight_goal_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../objecttypes/goal.kmd#CompType_TRM:Goal_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

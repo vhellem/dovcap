@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:SaaS_provides_Software_Product_Version_UUID" name="SaaS_provides_Software_Product_Version" title="SaaS provides Software Product Version" desc="Identifies the Software Product Version that is available through the associated SaaS." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="provides" xlink:href="../../meaf/relationshiptypes/provides-is_provided_by.kmd#Reltype_provides-is_provided_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Software as a Service" xlink:href="../object_types/software_as_a_service.kmd#CompType_Semantics:Software_as_a_Service_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Software Product Version" xlink:href="../../meaf/objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="SaaS provides Software Product Version" xlink:href="#RelType_Semantics:SaaS_provides_Software_Product_Version_UUID" xlink:actuate="user">
+   <string name="from">provides</string>
+   <string name="to">is provided by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="SaaS provides Software Product Version" xlink:href="#RelType_Semantics:SaaS_provides_Software_Product_Version_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

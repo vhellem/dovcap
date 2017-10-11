@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+
+
+ <type id="CompType_MEAF:Timeline_UUID" name="Timeline" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:href="metis:mer#MerModelingObject"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="timespanLowdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Start Date" desc="Start-date for the timeline." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Timeline_timespanLowdate_UUID&#34;;"/>
+  <property name="timespanHighdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="End Date" desc="End-date for the timeline." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Timeline_timespanHighdate_UUID&#34;;"/>
+  <property name="granularityQuantity" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Quantity" desc="Granularity defines the time between tickmarks on the timeline." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Timeline_granularityQuantity_UUID&#34;;"/>
+  <property name="granularityUnit" xlink:role="string-type" xlink:title="TimeUnit" xlink:href="../primitivetypes/timeline_types.kmd#Primtype_timeunit_UUID" label="Unit" desc="Granularity defines the time between tickmarks on the timeline." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Timeline_granularityUnit_UUID&#34;;"/>
+  <property name="tolerancePercentHigh" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="High (%)" desc="Allowed deviation AFTER current date - in percentage of the currently chosen granularity." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Process_tolerancePercentHigh_UUID&#34;;"/>
+  <property name="tolerancePercentLow" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Low (%)" desc="Allowed deviation BEFORE current date - in percentage of the currently chosen granularity." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:Process_tolerancePercentLow_UUID&#34;;"/>
+  <property name="title" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Title" desc="Generated timeline label, containing the current start and end date" method-flag="true" protected-flag="true" label-flag="true" visible-flag="false"/>
+  <property name="textstartdate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted start-date" desc="The start date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <property name="textenddate" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Text-formatted end-date" desc="The end date formatted in a required text-style" method-flag="true" visible-flag="false"/>
+  <property name="roundhighdate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Rounded High Date" desc="New end date to conpensate for rounding-off error due to chosen granularity v.s. given end date. Used for positioning calculations" method-flag="true" visible-flag="false"/>
+  <property name="tickmarks" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="TickmarkCnt" desc="Number of tickmarks calculated from start-date, end-date and the given granularity" method-flag="true" visible-flag="false"/>
+  <property name="highTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="High Tolerance (days)" desc="Allowed deviation AFTER current date in days." method-flag="true" visible-flag="false"/>
+  <property name="lowTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Low Tolerance (days)" desc="Allowunited deviation BEFORE current date in days." method-flag="true" visible-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Milestone" xlink:href="timeline_milestone.kmd#CompType_MEAF:TimelineMilestone_UUID"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Timeline Start" xlink:href="timeline_start.kmd#CompType_MEAF:TimelineStart_UUID"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Timeline End" xlink:href="timeline_end.kmd#CompType_MEAF:TimelineEnd_UUID"/>
+  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="TimelinePropertyDialog" xlink:href="../methods/timeline_methods.kmd#oid1"/>
+  <named-method-link name="View.includeInResize" xlink:role="cpp-method" xlink:title="extendMilestones" xlink:href="../methods/timeline_methods.kmd#oid1025"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="timelineCreation" xlink:href="../methods/timeline_methods.kmd#oid1027"/>
+  <named-method-link name="View.onViewCreatedBeforeChildren" xlink:role="cpp-method" xlink:title="timelineCreation" xlink:href="../methods/timeline_methods.kmd#oid1027"/>
+  <named-method-link name="View.onViewCreated" xlink:role="cpp-method" xlink:title="repositionMilestones" xlink:href="../methods/timeline_methods.kmd#oid1029"/>
+  <named-method-link name="highTolerance" xlink:role="cpp-method" xlink:title="calculateHighTolerance" xlink:href="../methods/timeline_methods.kmd#oid1018"/>
+  <named-method-link name="lowTolerance" xlink:role="cpp-method" xlink:title="calculateLowTolerance" xlink:href="../methods/timeline_methods.kmd#oid1019"/>
+  <named-method-link name="title" xlink:role="cpp-method" xlink:title="getTimelineLabel" xlink:href="../methods/timeline_methods.kmd#oid1032"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="timelineChange" xlink:href="../methods/timeline_methods.kmd#oid1028"/>
+  <named-method-link name="roundhighdate" xlink:role="cpp-method" xlink:title="calculateNewEndDate" xlink:href="../methods/timeline_methods.kmd#oid1003"/>
+  <named-method-link name="textenddate" xlink:role="cpp-method" xlink:title="getEndDateAsText" xlink:href="../methods/timeline_methods.kmd#oid1031"/>
+  <named-method-link name="textstartdate" xlink:role="cpp-method" xlink:title="getStartDateAsText" xlink:href="../methods/timeline_methods.kmd#oid1030"/>
+  <named-method-link name="tickmarks" xlink:role="cpp-method" xlink:title="calculateTickmarks" xlink:href="../methods/timeline_methods.kmd#oid1004"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="" xlink:href="#CompType_MEAF:Timeline_UUID">
+   <string name="troux_iconAlias">Icon_CompType_MEAF:Timeline_UUID</string>
+  </valueset>
+ </type>
+
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Timeline" xlink:href="#CompType_MEAF:Timeline_UUID" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutlocked fixedlayoutset fixedlayoutlocked ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Timeline" xlink:href="../symbols/diagrams/timeline.svg#oid1" xlink:actuate="auto">
+   <replace tag="repeat" property="repeathorizontally" macro="(expand (property tickmarks))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Timeline" xlink:href="../symbols/diagrams/timeline.svg#oid1" xlink:actuate="auto">
+   <replace tag="repeat" property="repeathorizontally" macro="(expand (property tickmarks))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/diagrams/timeline.png"/>
+ </typeview>
+
+</metis>

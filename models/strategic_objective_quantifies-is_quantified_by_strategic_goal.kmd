@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Strategic_Objective_quantifies-is_quantified_by_Strategic_Goal_UUID" name="Strategic_Objective_quantifies_is_quantified_by_Strategic_Goal" title="Strategic Objective quantifies-is quantified by Strategic Goal" desc="Used to associate Strategic Objectives with the Strategic Goals for which they provide the basis of measures to determine that progress is being made toward the related Strategic Goal." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/strategic_objective_quantifies-is_quantified_by_strategic_goal.kmd#UUID4_E56A72DC-5149-4B75-B2E6-F5E70A90A978"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Strategic Objective" xlink:href="../../eagov/object_types/strategic_objective.kmd#CompType_eaGov_SP:Strategic_Objective_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Strategic Goal" xlink:href="../../eagov/object_types/strategic_goal.kmd#CompType_eaGov_SP:Strategic_Goal_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Strategic Objective quantifies-is quantified by Strategic Goal" xlink:href="#RelType_Semantics:Strategic_Objective_quantifies-is_quantified_by_Strategic_Goal_UUID" xlink:actuate="user">
+   <string name="from">quantifies</string>
+   <string name="to">is quantified by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Strategic Objective quantifies-is quantified by Strategic Goal" xlink:href="#RelType_Semantics:Strategic_Objective_quantifies-is_quantified_by_Strategic_Goal_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

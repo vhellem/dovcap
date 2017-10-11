@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_MEAF:BPMText_UUID" name="BPM_Text" title="BPM Text" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="metis:stdtypes#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="text" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Text" method-flag="true" label-flag="true" default-visible="top"/>
+  <named-method-link name="BPM_Text" xlink:role="cpp-method" xlink:title="BPM_TextConstructor" xlink:href="../methods/bpm_methods.kmd#oid12"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="setTextPosition" xlink:href="../methods/bpm_methods.kmd#oid14"/>
+  <named-method-link name="View.onOpen" xlink:role="cpp-method" xlink:title="hideRelViewFromParent" xlink:href="../methods/bpm_methods.kmd#oid13"/>
+  <named-method-link name="text" xlink:role="cpp-method" xlink:title="Get Parent Name" xlink:href="../methods/bpm_methods.kmd#oid20"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="BPM Text" xlink:href="#CompType_MEAF:BPMText_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="text" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="BPM Text" xlink:href="#CompType_MEAF:BPMText_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm/bpm_text.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property text))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm/bpm_text.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property text))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/general_object.png"/>
+ </typeview>
+
+
+</metis>

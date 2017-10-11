@@ -1,0 +1,432 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ instances="8"
+ methods="3"
+ modelviews="0"
+ instanceviews="0"
+ criteria="1"
+ nextoid="2002">
+
+ <object id="oid1">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-show-title-left</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Show Left Title</string>
+   <string name="desc">Displays the Swimlane Title on the LEFT side of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">show-title-left</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1201" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Displays the Swimlane Title on the LEFT side of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid2">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-show-title-right</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Show Right Title</string>
+   <string name="desc">Displays the Swimlane Title on the RIGHT side of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">show-title-right</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1202" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Displays the Swimlane Title on the RIGHT side of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid3">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-show-title-top</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Show Top Title</string>
+   <string name="desc">Displays the Swimlane Title at the TOP of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">show-title-top</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1203" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Displays the Swimlane Title at the TOP of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid4">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-show-title-bottom</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Show Bottom Title</string>
+   <string name="desc">Displays the Swimlane Title at the BOTTOM of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">show-title-bottom</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1204" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Displays the Swimlane Title at the BOTTOM of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid5">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-hide-title-left</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Hide Left Title</string>
+   <string name="desc">Hides the Swimlane Title on the LEFT side of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">hide-title-left</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1205" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Hides the Swimlane Title on the LEFT side of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid6">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-hide-title-right</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Hide Right Title</string>
+   <string name="desc">Hides the Swimlane Title on the RIGHT side of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">hide-title-right</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1206" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Hides the Swimlane Title on the RIGHT side of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid7">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-hide-title-top</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Hide Top Title</string>
+   <string name="desc">Hides the Swimlane Title at the TOP of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">hide-title-top</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1207" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Hides the Swimlane Title at the TOP of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid8">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-hide-title-bottom</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Hide Bottom Title</string>
+   <string name="desc">Hides the Swimlane Title at the BOTTOM of all Swimlanes in the diagram</string>
+   <string name="dll"></string>
+   <string name="state">hide-title-bottom</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1208" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Hides the Swimlane Title at the BOTTOM of all Swimlanes in the diagram</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid9">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-set-rel-symbol</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Set Lightning Symbol</string>
+   <string name="desc">Set the Lightning symbol on current relationship (or selected relationships if current is part if a selection).</string>
+   <string name="dll"></string>
+   <string name="state">set-rel-symbol</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1209" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Set the Lightning symbol on current relationship (or selected relationships if current is part if a selection).</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid10">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-reset-rel-symbol</string>
+   <string name="category">SwimlaneDiagram</string>
+   <string name="title">Clear Lightning Symbol</string>
+   <string name="desc">Clear the Lightning symbol on current relationship (or selected relationships if current is part if a selection), resetting the relationship(s) to use the default symbol.</string>
+   <string name="dll"></string>
+   <string name="state">set-rel-symbol</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="#oid1210" 
+	    xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Clear the Lightning symbol on current relationship (or selected relationships if current is part if a selection), resetting the relationship(s) to use the default symbol.</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+
+ <object id="oid101">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">SwimlaneDiagram.Menu</string>
+   <string name="kind">Replace</string>
+   <string name="reference"></string>
+   <collection name="commands" structure="list" size="10" 
+	       xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>mtd-show-title-left</string>
+    <string>mtd-show-title-right</string>
+    <string>mtd-show-title-top</string>
+    <string>mtd-show-title-bottom</string>
+    <string>mtd-hide-title-left</string>
+    <string>mtd-hide-title-right</string>
+    <string>mtd-hide-title-top</string>
+    <string>mtd-hide-title-bottom</string>
+    <string>mtd-set-rel-symbol</string>
+    <string>mtd-reset-rel-symbol</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1001">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">SwimlaneDiagram.Menu</string>
+   <string name="category">Menus</string>
+   <string name="title">Swimlane Diagram &#38;Modeling</string>
+   <string name="desc">Special menu designed for the Swimlane Diagram.</string>
+   <string name="dll"></string>
+   <string name="state"></string>
+   <pointer name="method"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip"></string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid1002">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DeveloperEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" 
+	       xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>SwimlaneDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1003">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ModelEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>SwimlaneDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1004">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DesignerEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>SwimlaneDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <cpp-method id="oid1201" title="Show Left Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Left" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid22"
+     xlink:actuate="user"/>
+   <string name="State">Show</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1202" title="Show Right Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Right" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid23"
+     xlink:actuate="user"/>
+   <string name="State">Show</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1203" title="Show Top Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Top" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid24"
+     xlink:actuate="user"/>
+   <string name="State">Show</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1204" title="Show Bottom Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Bottom" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid25"
+     xlink:actuate="user"/>
+   <string name="State">Show</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1205" title="Hide Left Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Left" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid22"
+     xlink:actuate="user"/>
+   <string name="State">Hide</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1206" title="Hide Right Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Right" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid23"
+     xlink:actuate="user"/>
+   <string name="State">Hide</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1207" title="Hide Top Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Top" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid24"
+     xlink:actuate="user"/>
+   <string name="State">Hide</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1208" title="Hide Bottom Title" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.viewTitle" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="SwimlaneType" xlink:role="type" 
+     xlink:title="Swimlane" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid11"
+     xlink:actuate="user"/>
+   <pointer name="TitleType" xlink:role="type" 
+     xlink:title="Title Bottom" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid25"
+     xlink:actuate="user"/>
+   <string name="State">Hide</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1209" title="Set Lightning Symbol" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.setRelMacro" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="2">
+   <pointer name="DiagramType" xlink:role="type" 
+     xlink:title="Swimlane Diagram" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid1"
+     xlink:actuate="user"/>
+    <string name="SymbolTag">line</string>
+    <string name="SymbolProperty">linetype</string>
+    <string name="SymbolMacro">(expand &#34;zigzag&#34;)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1210" title="Clear Lightning Symbol" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.setRelMacro" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="2">
+   <pointer name="DiagramType" xlink:role="type" 
+     xlink:title="Swimlane Diagram" 
+     xlink:href="../object_types/swimlane_diagram.kmd#oid1"
+     xlink:actuate="user"/>
+    <string name="SymbolTag">line</string>
+    <string name="SymbolProperty">linetype</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

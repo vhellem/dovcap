@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="1"
+ nextoid="1">
+
+ <template id="_002as5401f3eepv6sti0" name="Task_Management" title="AKM" desc="Template for modeling, planning, coordinating, managing, monitoring, and performing tasks, with their interrelationships to the EA. ">
+  <metamodel-links size="5">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://metadata.troux.info/meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="ME Repository Queries" xlink:href="http://metadata.troux.info/meaf/metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Enterprise Modeling" xlink:href="../metamodels/metis_enterprise_modeling.kmd#_002as5l016ef44vdvso0" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="AKM" xlink:href="../metamodels/task_management.kmd#_002as5401al444lsi1uf" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Metis EA Framework Blank" xlink:href="initial.kmv#_002as5401d4bqcg5f0b3" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Metis Enterprise Repository" xlink:href="initial.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+
+
+</metis>

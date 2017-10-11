@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Task_resource" name="Task_resource" title="Task Resource" desc="A mechanism subtype that allows to differentiate between different types of roles." usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="Process Mechanism" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/task_resource.kmd#_002ascs00pisliuaf00c"/>
+  <property name="Responsible" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Responsible" desc="whether the role is the primary responsible for this task. &#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Task_resource_responsible&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="bottom"/>
+  <property name="Manager" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Manager" desc="whether the role is responsible for following up the progress of this task &#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Task_resource_manager&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="bottom"/>
+  <property name="Customer" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Customer" desc="whether the reol is customer of the task, the one that receives the result &#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Task_resource_customer&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="bottom"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Task Resource" xlink:href="#AKM_Task_resource" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias">Icon_CompType_MEAF:ProcessMechanism_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="15" xlink:role="type" xlink:title="Task Resource" xlink:href="#AKM_Task_resource" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="processModelChange">0</integer>
+   <string name="value" class="volatile"></string>
+   <string name="symbolLabel" class="volatile"></string>
+   <integer name="Responsible">0</integer>
+   <integer name="Manager">0</integer>
+   <integer name="Customer">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

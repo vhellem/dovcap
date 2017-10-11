@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="1">
+
+ <type id="RelType_CVW:specificationRel_UUID" name="specificationRel" title="Specification relationship" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="metis:stdtypes#oid111"/>
+ </type>
+
+ <type id="RelType_CVW:hasViewSpecification_UUID" name="hasViewSpecification" title="Has view specification" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+ </type>
+
+ <type id="RelType_CVW:hasViewSpecification1_UUID" name="hasSpecification1" title="Has view specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Button (CVW)" xlink:href="action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has view specification" xlink:href="#RelType_CVW:hasViewSpecification1_UUID" xlink:actuate="user">
+   <string name="from">has view specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has view specification" xlink:href="#RelType_CVW:hasViewSpecification1_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasViewSpecification2_UUID" name="hasSpecification2" title="Has view specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has view specification" xlink:href="#RelType_CVW:hasViewSpecification2_UUID" xlink:actuate="user">
+   <string name="from">has view specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has view specification" xlink:href="#RelType_CVW:hasViewSpecification2_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasSpecification_UUID" name="hasSpecification" title="Has specification" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+ </type>
+
+ <type id="RelType_CVW:hasSpecification1_UUID" name="hasSpecification1" title="Has specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Button (CVW)" xlink:href="action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has specification" xlink:href="#RelType_CVW:hasSpecification1_UUID" xlink:actuate="user">
+   <string name="from">has specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has specification" xlink:href="#RelType_CVW:hasSpecification1_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasSpecification2_UUID" name="hasSpecification2" title="Has specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has specification" xlink:href="#RelType_CVW:hasSpecification2_UUID" xlink:actuate="user">
+   <string name="from">has specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has specification" xlink:href="#RelType_CVW:hasSpecification2_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasContentSpecification_UUID" name="hasContentSpecification" title="Has content specification" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+ </type>
+
+ <type id="RelType_CVW:hasContentSpecification1_UUID" name="hasContentSpecification1" title="Has content specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasContentSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Button (CVW)" xlink:href="action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has content specification" xlink:href="#RelType_CVW:hasContentSpecification1_UUID" xlink:actuate="user">
+   <string name="from">has content specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has content specification" xlink:href="#RelType_CVW:hasContentSpecification1_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasSearchSpecification_UUID" name="hasSearchSpecification" title="Has search specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has search specification" xlink:href="#RelType_CVW:hasSearchSpecification_UUID" xlink:actuate="user">
+   <string name="from">has search specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has search specification" xlink:href="#RelType_CVW:hasSearchSpecification_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasLanguageSpecification_UUID" name="hasLanguageSpecification" title="Has language specification" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+ </type>
+
+ <type id="RelType_CVW:hasLanguageSpecification1_UUID" name="hasLanguageSpecification1" title="Has language specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasLanguageSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has language specification" xlink:href="#RelType_CVW:hasLanguageSpecification1_UUID" xlink:actuate="user">
+   <string name="from">has language specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has language specification" xlink:href="#RelType_CVW:hasLanguageSpecification1_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasLanguageSpecification2_UUID" name="hasLanguageSpecification2" title="Has language specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasLanguageSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has language specification" xlink:href="#RelType_CVW:hasLanguageSpecification2_UUID" xlink:actuate="user">
+   <string name="from">has language specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has language specification" xlink:href="#RelType_CVW:hasLanguageSpecification2_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasInstanceContext_UUID" name="hasInstanceContext" title="Has instance context" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has instance context" xlink:href="#RelType_CVW:hasInstanceContext_UUID" xlink:actuate="user">
+   <string name="from">has instance context</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has instance context" xlink:href="#RelType_CVW:hasInstanceContext_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasInstanceContext2_UUID" name="hasInstanceContext2" title="Has context" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Modeling object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has context" xlink:href="#RelType_CVW:hasInstanceContext2_UUID" xlink:actuate="user">
+   <string name="from">is instance</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has context" xlink:href="#RelType_CVW:hasInstanceContext2_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasModelContext_UUID" name="hasModelContext" title="Has model context" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has model context" xlink:href="#RelType_CVW:hasModelContext_UUID" xlink:actuate="user">
+   <string name="from">has model context</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has model context" xlink:href="#RelType_CVW:hasModelContext_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasModelContext2_UUID" name="hasModelContext2" title="Has model context" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Modeling object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has model context" xlink:href="#RelType_CVW:hasModelContext2_UUID" xlink:actuate="user">
+   <string name="from">has context model</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has model context" xlink:href="#RelType_CVW:hasModelContext2_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasLanguageConstraint_UUID" name="hasLanguageConstraint" title="Has constraint" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Modeling object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Language constraint" xlink:href="spec_objects.kmd#ObjType_CVW:LanguageConstraint_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has language constraint" xlink:href="#RelType_CVW:hasLanguageConstraint_UUID" xlink:actuate="user">
+   <string name="from">has constraint</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has language constraint" xlink:href="#RelType_CVW:hasLanguageConstraint_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasValueConstraint_UUID" name="hasValueConstraint" title="Has value constraint" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <property name="operator" xlink:role="integer-type" xlink:title="Operator" xlink:href="cvw_primitives.kmd#PrimType_CVW:Operator_UUID" label="Comparator" desc=""/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Modeling object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has value constraint" xlink:href="#RelType_CVW:hasValueConstraint_UUID" xlink:actuate="user">
+   <string name="from">has constraint</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has value constraint" xlink:href="#RelType_CVW:hasValueConstraint_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasViewstyleSpecification_UUID" name="hasViewstyleSpecification" title="Has viewstyle specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ViewSpecification" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ViewstyleSpecification" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has viewstyle specification" xlink:href="#RelType_CVW:hasViewstyleSpecification_UUID" xlink:actuate="user">
+   <string name="from">has viewstyle specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has viewstyle specification" xlink:href="#RelType_CVW:hasViewstyleSpecification_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasViewStrategy_UUID" name="hasViewStrategy1" title="Has view strategy" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ViewSpecification" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="ViewstrategySpecification" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has view strategy" xlink:href="#RelType_CVW:hasViewstrategy_UUID" xlink:actuate="user">
+   <string name="from">has view strategy</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has view strategy" xlink:href="#RelType_CVW:hasViewstrategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasViewStrategy2_UUID" name="hasViewStrategy2" title="Has view strategy" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has view strategy" xlink:href="#RelType_CVW:hasViewStrategy2_UUID" xlink:actuate="user">
+   <string name="from">has view strategy</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has view strategy" xlink:href="#RelType_CVW:hasViewStrategy2_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasLayoutStrategy_UUID" name="hasLayoutStrategy" title="Has layout strategy" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:specificationRel_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="ViewSpecification" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="LayoutStrategy" xlink:href="spec_objects.kmd#ObjType_CVW:LayoutStrategy_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has view strategy" xlink:href="#RelType_CVW:hasLayoutStrategy_UUID" xlink:actuate="user">
+   <string name="from">has layout strategy</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has view strategy" xlink:href="#RelType_CVW:hasLayoutStrategy_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:languageRelship_UUID" name="languageRelship" title="Language relationship" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="name" xlink:role="string-type" xlink:title="String" xlink:href="metis:std#oid3" label="Name" default-visible="top"/>
+  <property name="type" xlink:role="string-type" xlink:title="String" xlink:href="metis:std#oid3" label="Relationship type (URI)" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Language object" xlink:href="spec_objects.kmd#ObjType_CVW:LanguageObject_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Language object" xlink:href="spec_objects.kmd#ObjType_CVW:LanguageObject_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Language relationship" xlink:href="#RelType_CVW:languageRelship_UUID" xlink:actuate="user">
+   <string name="from"></string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Language relationship" xlink:href="#RelType_CVW:languageRelship_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasFilterSpecification_UUID" name="hasFilterSpecification" title="Has filter specification" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="" xlink:href="#RelType_CVW:hasSpecification_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (CVW)" xlink:href="view_objects.kmd#UiType_CVW:Workarea_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has filter specification" xlink:href="#RelType_CVW:hasFilterSpecification_UUID" xlink:actuate="user">
+   <string name="from">has filter specification</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has filter specification" xlink:href="#RelType_CVW:hasFilterSpecification_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:isTop_UUID" name="isTop" title="isTop relationship" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Language relationship" xlink:href="#RelType_CVW:languageRelship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Specification container" xlink:href="spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Modeling object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="isTop relationship" xlink:href="#RelType_CVW:isTop_UUID" xlink:actuate="user">
+   <string name="from"></string>
+   <string name="to">is top</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="isTop relationship" xlink:href="#RelType_CVW:isTop_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasRelationshipViewStyle_UUID" name="hasRelationshipViewStyle" title="Has viewstyle" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Relationship" xlink:href="metis:stdtypes#oid101" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Language specification" xlink:href="spec_objects.kmd#ObjType_CVW:RelshipViewstyle_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has relship viewstyle" xlink:href="#RelType_CVW:hasRelationshipViewStyle_UUID" xlink:actuate="user">
+   <string name="from">has viewstyle</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has relship viewstyle" xlink:href="#RelType_CVW:hasRelationshipViewStyle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="RelType_CVW:hasObjectViewStyle_UUID" name="hasObjectViewStyle" title="Has viewstyle" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Modeling object" xlink:href="metis:stdtypes#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Language specification" xlink:href="spec_objects.kmd#ObjType_CVW:ObjectViewstyle_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has object viewstyle" xlink:href="#RelType_CVW:hasObjectViewStyle_UUID" xlink:actuate="user">
+   <string name="from">has viewstyle</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has object viewstyle" xlink:href="#RelType_CVW:hasObjectViewStyle_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:href="#RelType_CVW:languageRelship_UUID" tree-size="0.5" nested-size="0.25">
+  <symbol-override state="relationship" xlink:href="metis:stdsyms#oid104" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="#RelType_CVW:startsOnObject_UUID" tree-size="0.5" nested-size="0.25">
+  <symbol-override state="relationship" xlink:href="metis:stdsyms#oid104" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="parameter_range" name="parameter_range" title="Parameter_range" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="min" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Min" desc="" default-visible="top"/>
+  <property name="max" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Max" desc="" default-visible="top"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Design_parameter_value" xlink:href="#design_parameter_value" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Parameter_range" xlink:href="#parameter_range" tree-size="1" nested-size="0.125" behavior="tree" layout-flags="autolayoutset autolayoutme">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="http://xml.chalmers.se/symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="http://xml.chalmers.se/symbols/tree_objects.svg#_002asge01ipf0ancfkjd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

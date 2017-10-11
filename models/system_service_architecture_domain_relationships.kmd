@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_E3C9996A-820E-41F7-A277-529098E060C9" name="System_Service_Architecture_Domain_Relationships" title="System Service Architecture Domain Relationships" desc="The metamodel for the relationship types used to connect system service architecture domain object types.">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="System Service provides-is provided by System Service Interface" xlink:href="../relationship_types/system_service_provides-is_provided_by_system_service_interface.kmd#System_Service_provides-is_provided_by_System_Service_Interface"/>
+   <complex-type-link xlink:role="type" xlink:title="System Service requires-is required by System Service Interface" xlink:href="../relationship_types/system_service_requires-is_required_by_system_service_interface.kmd#System_Service_requires-is_required_by_System_Service_Interface"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

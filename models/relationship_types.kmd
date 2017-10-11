@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_A333E186-1D3B-4035-9AC0-D17F13388468" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="Change Component applies-is applied by Design Pattern" xlink:href="../relationship_types/change_component_applies-is_applied_by_design_pattern.kmd#RelType_Semanics_Patterns:Change_Component_applies-is_applied_by_Design_Pattern_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Pattern consists of-is part of IT Product Version" xlink:href="../relationship_types/design_pattern_consists_of-is_part_of_it_product_version.kmd#RelType_Semantics_Patterns:Design_Pattern_consists_of-is_part_of_IT_Product_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Pattern prescribes use of-has use prescribed by Archetype" xlink:href="../relationship_types/design_pattern_prescribes_use_of-has_use_prescribed_by_archetype.kmd#RelType_Semantics_Patterns:Design_Pattern_prescribes_use_of-has_use_prescribed_by_Archetype_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Pattern references-is referenced by Industry Standard Version" xlink:href="../relationship_types/design_pattern_references-is_referenced_by_industry_standard_version.kmd#RelType_Semantics_Patterns:Design_Pattern_references-is_referenced_by_Industry_Standard_Version_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Parameter_Value" name="Value_for_parameter" title="Value for parameter" desc="Links a parameter to an object which the parameter gets its value from." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <property name="Property" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Property" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Parameter_value_property_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" label-flag="true" default-visible="bottom" mid-point-text-flag="true"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Parameter" xlink:href="../objecttypes/parameter.kmd#AKM_Parameter" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Value for parameter" xlink:href="#AKM_Parameter_Value" xlink:actuate="user">
+   <string name="from">Value</string>
+   <string name="to">Value for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Value for parameter" xlink:href="#AKM_Parameter_Value" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <string name="Property">name</string>
+  </valueset>
+ </type>
+
+
+</metis>

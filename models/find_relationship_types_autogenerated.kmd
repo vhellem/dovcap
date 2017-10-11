@@ -1,0 +1,1035 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+ <criteria id="Reltype_provides-is_provided_by_UUID" name="FindAllprovides-is_provided_by" title="Find all Provides relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/provides-is_provided_by.kmd#Reltype_provides-is_provided_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_addresses-is_addressed_by_UUID" name="FindAlladdresses-is_addressed_by" title="Find all Addresses relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/addresses-is_addressed_by.kmd#Reltype_addresses-is_addressed_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_supports-is_supported_by_UUID" name="FindAllsupports-is_supported_by" title="Find all Supports relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/supports-is_supported_by.kmd#Reltype_supports-is_supported_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_affects-is_affected_by_UUID" name="FindAllaffects-is_affected_by" title="Find all Affects relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/affects-is_affected_by.kmd#Reltype_affects-is_affected_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_control-is_control_for_UUID" name="FindAllhas_control-is_control_for" title="Find all Has control relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_control-is_control_for.kmd#Reltype_has_control-is_control_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_deploys-is_deployed_in_UUID" name="FindAlldeploys-is_deployed_in" title="Find all Deploys relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/deploys-is_deployed_in.kmd#Reltype_deploys-is_deployed_in_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_allocates-is_allocated_to_percentage_UUID" name="FindAllallocates-is_allocated_to_percentage" title="Find all Allocates/is allocated to (Percentage) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/allocates-is_allocated_to_percentage.kmd#Reltype_allocates-is_allocated_to_percentage_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_allows-is_allowed_as_UUID" name="FindAllallows-is_allowed_as" title="Find all Allows relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/allows-is_allowed_as.kmd#Reltype_allows-is_allowed_as_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_applies_to-has_UUID" name="FindAllapplies_to-has" title="Find all Applies to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/applies_to-has.kmd#Reltype_applies_to-has_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_governs-is_governed_by_UUID" name="FindAllgoverns-is_governed_by" title="Find all Governs relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/governs-is_governed_by.kmd#Reltype_governs-is_governed_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_delivers-is_delivered_by_UUID" name="FindAlldelivers-is_delivered_by" title="Find all Delivers relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/delivers-is_delivered_by.kmd#Reltype_delivers-is_delivered_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_controller-is_controller_for_UUID" name="FindAllhas_controller-is_controller_for" title="Find all Has controller relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_controller-is_controller_for.kmd#Reltype_has_controller-is_controller_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_data_for_UUID" name="FindAllrepresents-is_data_for" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_data_for.kmd#Reltype_represents-is_data_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_carries-is_carried_by_UUID" name="FindAllcarries-is_carried_by" title="Find all Carries relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/carries-is_carried_by.kmd#Reltype_carries-is_carried_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_implements-is_implemented_by_UUID" name="FindAllimplements-is_implemented_by" title="Find all Implements relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/implements-is_implemented_by.kmd#Reltype_implements-is_implemented_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_defines-is_defined_by_UUID" name="FindAlldefines-is_defined_by" title="Find all Defines relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/defines-is_defined_by.kmd#Reltype_defines-is_defined_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_output-is_output_for_UUID" name="FindAllhas_output-is_output_for" title="Find all Has output relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_output-is_output_for.kmd#Reltype_has_output-is_output_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_develops-is_developed_by_UUID" name="FindAlldevelops-is_developed_by" title="Find all Develops relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/develops-is_developed_by.kmd#Reltype_develops-is_developed_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_mechanism-is_mechanism_for_UUID" name="FindAllhas_mechanism-is_mechanism_for" title="Find all Has mechanism relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_mechanism-is_mechanism_for.kmd#Reltype_has_mechanism-is_mechanism_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_satisfies-is_satisfied_by_UUID" name="FindAllsatisfies-is_satisfied_by" title="Find all Satisfies relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/satisfies-is_satisfied_by.kmd#Reltype_satisfies-is_satisfied_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_implements-is_implemented_by_weight_UUID" name="FindAllimplements-is_implemented_by_weight" title="Find all Implements/is implemented by (Weight) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/implements-is_implemented_by_weight.kmd#Reltype_implements-is_implemented_by_weight_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_achieves-is_achieved_by_UUID" name="FindAllachieves-is_achieved_by" title="Find all Achieves relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/achieves-is_achieved_by.kmd#Reltype_achieves-is_achieved_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_holds-is_held_by_UUID" name="FindAllholds-is_held_by" title="Find all Holds relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/holds-is_held_by.kmd#Reltype_holds-is_held_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_customer-is_customer_of_UUID" name="FindAllhas_customer-is_customer_of" title="Find all Has customer relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_customer-is_customer_of.kmd#Reltype_has_customer-is_customer_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_manager-is_manager_of_UUID" name="FindAllhas_manager-is_manager_of" title="Find all Has manager relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_manager-is_manager_of.kmd#Reltype_has_manager-is_manager_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_participant-is_participant_in_UUID" name="FindAllhas_participant-is_participant_in" title="Find all Has participant relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_participant-is_participant_in.kmd#Reltype_has_participant-is_participant_in_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_stakeholder-is_stakeholder_of_UUID" name="FindAllhas_stakeholder-is_stakeholder_of" title="Find all Has stakeholder relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_stakeholder-is_stakeholder_of.kmd#Reltype_has_stakeholder-is_stakeholder_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_hinders-is_hindered_by_UUID" name="FindAllhinders-is_hindered_by" title="Find all Hinders relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/hinders-is_hindered_by.kmd#Reltype_hinders-is_hindered_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_uses-is_used_by_crud_UUID" name="FindAlluses-is_used_by_crud" title="Find all Uses/is used by (CRUD) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/uses-is_used_by_crud.kmd#Reltype_uses-is_used_by_crud_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_stores-is_stored_in_UUID" name="FindAllstores-is_stored_in" title="Find all Stores relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/stores-is_stored_in.kmd#Reltype_stores-is_stored_in_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_needs-is_needed_by_UUID" name="FindAllneeds-is_needed_by" title="Find all Needs relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/needs-is_needed_by.kmd#Reltype_needs-is_needed_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_initiator-is_initiator_of_UUID" name="FindAllhas_initiator-is_initiator_of" title="Find all Has initiator relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_initiator-is_initiator_of.kmd#Reltype_has_initiator-is_initiator_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_leads_to-follows_from_UUID" name="FindAllleads_to-follows_from" title="Find all Leads to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/leads_to-follows_from.kmd#Reltype_leads_to-follows_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_links-is_linked_by_UUID" name="FindAlllinks-is_linked_by" title="Find all Links relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/links-is_linked_by.kmd#Reltype_links-is_linked_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_is_located_in-is_location_of_UUID" name="FindAllis_located_in-is_location_of" title="Find all Is located in relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/is_located_in-is_location_of.kmd#Reltype_is_located_in-is_location_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_measures-is_measured_by_UUID" name="FindAllmeasures-is_measured_by" title="Find all Measures relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/measures-is_measured_by.kmd#Reltype_measures-is_measured_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_needs-is_needed_by_resources_UUID" name="FindAllneeds-is_needed_by_resources" title="Find all Needs/is needed by (Resources) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/needs-is_needed_by_resources.kmd#Reltype_needs-is_needed_by_resources_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_generates-is_generated_by_UUID" name="FindAllgenerates-is_generated_by" title="Find all Generates relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/generates-is_generated_by.kmd#Reltype_generates-is_generated_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_observer-is_observer_of_UUID" name="FindAllhas_observer-is_observer_of" title="Find all Has observer relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_observer-is_observer_of.kmd#Reltype_has_observer-is_observer_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_owner-is_owner_of_UUID" name="FindAllhas_owner-is_owner_of" title="Find all Has owner relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_owner-is_owner_of.kmd#Reltype_has_owner-is_owner_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_content_owner-is_content_owner_of_UUID" name="FindAllhas_content_owner-is_content_owner_of" title="Find all Has content owner relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_content_owner-is_content_owner_of.kmd#Reltype_has_content_owner-is_content_owner_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_receives-is_received_by_UUID" name="FindAllreceives-is_received_by" title="Find all Receives relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/receives-is_received_by.kmd#Reltype_receives-is_received_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_uses-is_used_by_UUID" name="FindAlluses-is_used_by" title="Find all Uses relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/uses-is_used_by.kmd#Reltype_uses-is_used_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_represented_by_UUID" name="FindAllrepresents-is_represented_by" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_represented_by.kmd#Reltype_represents-is_represented_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_sends-is_sent_by_UUID" name="FindAllsends-is_sent_by" title="Find all Sends relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sends-is_sent_by.kmd#Reltype_sends-is_sent_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_services-is_serviced_by_UUID" name="FindAllservices-is_serviced_by" title="Find all Services relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/services-is_serviced_by.kmd#Reltype_services-is_serviced_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_uses-is_used_by_criticality_UUID" name="FindAlluses-is_used_by_criticality" title="Find all Uses/is used by (Criticality) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/uses-is_used_by_criticality.kmd#Reltype_uses-is_used_by_criticality_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_provides-is_provided_by_criticality_UUID" name="FindAllprovides-is_provided_by_criticality" title="Find all Provides/is provided by (Criticality) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/provides-is_provided_by_criticality.kmd#Reltype_provides-is_provided_by_criticality_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_uses-is_used_by_weight-criticality_UUID" name="FindAlluses-is_used_by_weight-criticality" title="Find all Uses/is used by (Weight/Criticality) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/uses-is_used_by_weight-criticality.kmd#Reltype_uses-is_used_by_weight-criticality_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_user-is_user_of_UUID" name="FindAllhas_user-is_user_of" title="Find all Has user relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_user-is_user_of.kmd#Reltype_has_user-is_user_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_consists_of-is_part_of_UUID" name="FindAllconsists_of-is_part_of" title="Find all Consists of relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/consists_of-is_part_of.kmd#Reltype_consists_of-is_part_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_is_available_in-has_available_UUID" name="FindAllis_available_in-has_available" title="Find all Is available in relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/is_available_in-has_available.kmd#Reltype_is_available_in-has_available_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_corresponds_to-corresponds_to_UUID" name="FindAllcorresponds_to-corresponds_to" title="Find all Corresponds to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_corresponds_to-corresponds_to_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_mechanism_for_UUID" name="FindAllrepresents-is_mechanism_for" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_mechanism_for.kmd#Reltype_represents-is_mechanism_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_markets_to-is_marketed_to_by_UUID" name="FindAllmarkets_to-is_marketed_to_by" title="Find all Markets to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/markets_to-is_marketed_to_by.kmd#Reltype_markets_to-is_marketed_to_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_target_customer-is_target_customer_of_UUID" name="FindAllhas_target_customer-is_target_customer_of" title="Find all Has target customer relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_target_customer-is_target_customer_of.kmd#Reltype_has_target_customer-is_target_customer_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_target_user-is_target_user_of_UUID" name="FindAllhas_target_user-is_target_user_of" title="Find all Has target user relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_target_user-is_target_user_of.kmd#Reltype_has_target_user-is_target_user_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_sequence_flow_UUID" name="FindAllsequence_flow" title="Find all Sequence Flow relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_sequence_flow_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_message_flow_UUID" name="FindAllmessage_flow" title="Find all Message Flow relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_message_flow_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_association_UUID" name="FindAllassociation" title="Find all Association relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/association.kmd#Reltype_association_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_gateway_for_UUID" name="FindAllrepresents-is_gateway_for" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_gateway_for.kmd#Reltype_represents-is_gateway_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_event_for_UUID" name="FindAllrepresents-is_event_for" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_event_for.kmd#Reltype_represents-is_event_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_input_for_UUID" name="FindAllrepresents-is_input_for" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_input_for.kmd#Reltype_represents-is_input_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_control_for_UUID" name="FindAllrepresents-is_control_for" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_control_for.kmd#Reltype_represents-is_control_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_represents-is_output_for_UUID" name="FindAllrepresents-is_output_for" title="Find all Represents relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/represents-is_output_for.kmd#Reltype_represents-is_output_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_template-is_template_for_UUID" name="FindAllhas_template-is_template_for" title="Find all Has template relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_template-is_template_for.kmd#Reltype_has_template-is_template_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_fills-is_filled_by_UUID" name="FindAllfills-is_filled_by" title="Find all Fills relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/fills-is_filled_by.kmd#Reltype_fills-is_filled_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_general_relationship_UUID" name="FindAllgeneral_relationship" title="Find all General Relationship relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/general_relationship.kmd#Reltype_general_relationship_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_container_relationship_UUID" name="FindAllcontainer_relationship" title="Find all Container Relationship relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/container_relationship.kmd#Reltype_container_relationship_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_document-is_document_for_UUID" name="FindAllhas_document-is_document_for" title="Find all Has document relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_document-is_document_for.kmd#Reltype_has_document-is_document_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_class-is_class_for_UUID" name="FindAllhas_class-is_class_for" title="Find all Has class relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_class-is_class_for.kmd#Reltype_has_class-is_class_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_analyzes-is_analyzed_by_UUID" name="FindAllanalyzes-is_analyzed_by" title="Find all Analyzes relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/analyzes-is_analyzed_by.kmd#Reltype_analyzes-is_analyzed_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_evolved_to-evolved_from_UUID" name="FindAllevolved_to-evolved_from" title="Find all Evolved to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/evolved_to-evolved_from.kmd#Reltype_evolved_to-evolved_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_constrains-is_constrained_by_UUID" name="FindAllconstrains-is_constrained_by" title="Find all Constrains relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/constrains-is_constrained_by.kmd#Reltype_constrains-is_constrained_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_mitigates-is_mitigated_by_UUID" name="FindAllmitigates-is_mitigated_by" title="Find all Mitigates relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/mitigates-is_mitigated_by.kmd#Reltype_mitigates-is_mitigated_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_sends_data_to-receives_data_from_UUID" name="FindAllsends_data_to-receives_data_from" title="Find all Sends data to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sends_data_to-receives_data_from.kmd#Reltype_sends_data_to-receives_data_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_category-is_category_for_UUID" name="FindAllhas_category-is_category_for" title="Find all Has category relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_category-is_category_for.kmd#Reltype_has_category-is_category_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_consists_of-is_part_of_skill_level_UUID" name="FindAllconsists_of-is_part_of_skill_level" title="Find all Consists of/is part of (Skill Level) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/consists_of-is_part_of_skill_level.kmd#Reltype_consists_of-is_part_of_skill_level_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_relates_to-relates_from_UUID" name="FindAllrelates_to-relates_from" title="Find all Relates to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/relates_to-relates_from.kmd#Reltype_relates_to-relates_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_relates_to-relates_from-name_UUID" name="FindAllrelates_to-relates_from-name" title="Find all Relates to (Name) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/relates_to-relates_from-name.kmd#Reltype_relates_to-relates_from-name_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_structure-is_structure_for_UUID" name="FindAllhas_structure-is_structure_for" title="Find all Has structure relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_structure-is_structure_for.kmd#Reltype_has_structure-is_structure_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_connects_to-connects_from_name_UUID" name="FindAllconnects_to-connects_from_name" title="Find all Connects to/connects from (Name) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/connects_to-connects_from_name.kmd#Reltype_connects_to-connects_from_name_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_connects_to-connects_from_UUID" name="FindAllconnects_to-connects_from" title="Find all Connects to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/connects_to-connects_from.kmd#Reltype_connects_to-connects_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_logical_server-is_logical_server_of_UUID" name="FindAllhas_logical_server-is_logical_server_of" title="Find all Has logical server relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_logical_server-is_logical_server_of.kmd#Reltype_has_logical_server-is_logical_server_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_administrator-is_administrator_of_UUID" name="FindAllhas_administrator-is_administrator_of" title="Find all Has administrator relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_administrator-is_administrator_of.kmd#Reltype_has_administrator-is_administrator_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_cooperates_with-cooperates_with_UUID" name="FindAllcooperates_with-cooperates_with" title="Find all Cooperates with relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/cooperates_with-cooperates_with.kmd#Reltype_cooperates_with-cooperates_with_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_author-is_author_of_UUID" name="FindAllhas_author-is_author_of" title="Find all Has author relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_author-is_author_of.kmd#Reltype_has_author-is_author_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_employee-is_employee_in_UUID" name="FindAllhas_employee-is_employee_in" title="Find all Has employee relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_employee-is_employee_in.kmd#Reltype_has_employee-is_employee_in_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_responsible-is_responsible_for_UUID" name="FindAllhas_responsible-is_responsible_for" title="Find all Has responsible relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_responsible-is_responsible_for.kmd#Reltype_has_responsible-is_responsible_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_competitor-is_competitor_of_UUID" name="FindAllhas_competitor-is_competitor_of" title="Find all Has competitor relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_competitor-is_competitor_of.kmd#Reltype_has_competitor-is_competitor_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_partner-is_partner_of_UUID" name="FindAllhas_partner-is_partner_of" title="Find all Has partner relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_partner-is_partner_of.kmd#Reltype_has_partner-is_partner_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_supplier-is_supplier_of_UUID" name="FindAllhas_supplier-is_supplier_of" title="Find all Has supplier relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_supplier-is_supplier_of.kmd#Reltype_has_supplier-is_supplier_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_supervises-is_supervised_by_UUID" name="FindAllsupervises-is_supervised_by" title="Find all Supervises relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/supervises-is_supervised_by.kmd#Reltype_supervises-is_supervised_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_signs-is_signed_by_UUID" name="FindAllsigns-is_signed_by" title="Find all Signs relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/signs-is_signed_by.kmd#Reltype_signs-is_signed_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_before-after_UUID" name="FindAllbefore-after" title="Find all Before relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/before-after.kmd#Reltype_before-after_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_references-is_referenced_by_UUID" name="FindAllreferences-is_referenced_by" title="Find all References relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/references-is_referenced_by.kmd#Reltype_references-is_referenced_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_achieves-is_achieved_by_weight_UUID" name="FindAllachieves-is_achieved_by_weight" title="Find all Achieves/is achieved by (Weight) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/achieves-is_achieved_by_weight.kmd#Reltype_achieves-is_achieved_by_weight_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_conflicts_with-conflicts_with_UUID" name="FindAllconflicts_with-conflicts_with" title="Find all Conflicts with relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/conflicts_with-conflicts_with.kmd#Reltype_conflicts_with-conflicts_with_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_depends_on-is_critical_to_weight_UUID" name="FindAlldepends_on-is_critical_to_weight" title="Find all Depends on/is critical to (Weight) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/depends_on-is_critical_to_weight.kmd#Reltype_depends_on-is_critical_to_weight_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_leads_to-follows_from_weight_UUID" name="FindAllleads_to-follows_from_weight" title="Find all Leads to/follows from (Weight) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/leads_to-follows_from_weight.kmd#Reltype_leads_to-follows_from_weight_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_measures-is_measured_by_weight_UUID" name="FindAllmeasures-is_measured_by_weight" title="Find all Measures/is measured by (Weight) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/measures-is_measured_by_weight.kmd#Reltype_measures-is_measured_by_weight_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_accesses-is_accessed_by_UUID" name="FindAllaccesses-is_accessed_by" title="Find all Accesses relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/accesses-is_accessed_by.kmd#Reltype_accesses-is_accessed_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_describes-is_described_by_UUID" name="FindAlldescribes-is_described_by" title="Find all Describes relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/describes-is_described_by.kmd#Reltype_describes-is_described_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_reference-is_reference_for_UUID" name="FindAllhas_reference-is_reference_for" title="Find all Has reference relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_reference-is_reference_for.kmd#Reltype_has_reference-is_reference_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_connects_functionally_to-connects_functionally_from_UUID" name="FindAllconnects_functionally_to-connects_functionally_from" title="Find all Connects functionally to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/connects_functionally_to-connects_functionally_from.kmd#Reltype_connects_functionally_to-connects_functionally_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_connects_geometrically_to-connects_geometrically_from_UUID" name="FindAllconnects_geometrically_to-connects_geometrically_from" title="Find all Connects geometrically to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/connects_geometrically_to-connects_geometrically_from.kmd#Reltype_connects_geometrically_to-connects_geometrically_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_connects_technically_to-connects_technically_from_UUID" name="FindAllconnects_technically_to-connects_technically_from" title="Find all Connects technically to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/connects_technically_to-connects_technically_from.kmd#Reltype_connects_technically_to-connects_technically_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_sponsor-is_sponsor_of_UUID" name="FindAllhas_sponsor-is_sponsor_of" title="Find all Has sponsor relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_sponsor-is_sponsor_of.kmd#Reltype_has_sponsor-is_sponsor_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_is_in_remediation_with-is_in_remediation_with_UUID" name="FindAllis_in_remediation_with-is_in_remediation_with" title="Find all Is in remediation with relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/is_in_remediation_with-is_in_remediation_with.kmd#Reltype_is_in_remediation_with-is_in_remediation_with_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_approver-is_approver_of_approved_UUID" name="FindAllhas_approver-is_approver_of_approved" title="Find all Has approver/is approver of (Approved?) relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_approver-is_approver_of_approved.kmd#Reltype_has_approver-is_approver_of_approved_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_drives-is_driven_by_UUID" name="FindAlldrives-is_driven_by" title="Find all Drives relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/drives-is_driven_by.kmd#Reltype_drives-is_driven_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_measures_outage-has_outage_measure_UUID" name="FindAllmeasures_outage-has_outage_measure" title="Find all Measures outage relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/measures_outage-has_outage_measure.kmd#Reltype_measures_outage-has_outage_measure_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_transitions_from_using-is_from_transition_for_UUID" name="FindAlltransitions_from_using-is_from_transition_for" title="Find all Transitions from using relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/transitions_from_using-is_from_transition_for.kmd#Reltype_transitions_from_using-is_from_transition_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_transitions_to_using-is_to_transition_for_UUID" name="FindAlltransitions_to_using-is_to_transition_for" title="Find all Transitions to using relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/transitions_to_using-is_to_transition_for.kmd#Reltype_transitions_to_using-is_to_transition_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_classifies-is_classified_by_UUID" name="FindAllclassifies-is_classified_by" title="Find all Classifies relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/classifies-is_classified_by.kmd#Reltype_classifies-is_classified_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_inherits_to-inherits_from_UUID" name="FindAllinherits_to-inherits_from" title="Find all Inherits to relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/inherits_to-inherits_from.kmd#Reltype_inherits_to-inherits_from_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_patches-is_patched_by_UUID" name="FindAllpatches-is_patched_by" title="Find all Patches relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/patches-is_patched_by.kmd#Reltype_patches-is_patched_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_representative-is_representative_for_UUID" name="FindAllhas_representative-is_representative_for" title="Find all Has representative relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_representative-is_representative_for.kmd#Reltype_has_representative-is_representative_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_requires-is_required_by_UUID" name="FindAllrequires-is_required_by" title="Find all Requires relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/requires-is_required_by.kmd#Reltype_requires-is_required_by_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_version-is_version_of_UUID" name="FindAllhas_version-is_version_of" title="Find all Has version relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_version-is_version_of.kmd#Reltype_has_version-is_version_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_business_owner-is_business_owner_of_UUID" name="FindAllhas_business_owner-is_business_owner_of" title="Find all Has business owner relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_business_owner-is_business_owner_of.kmd#Reltype_has_business_owner-is_business_owner_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_input-is_input_for_UUID" name="FindAllhas_input-is_input_for" title="Find all Has input relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_input-is_input_for.kmd#Reltype_has_input-is_input_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_it_owner-is_it_owner_of_UUID" name="FindAllhas_it_owner-is_it_owner_of" title="Find all Has IT owner relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_it_owner-is_it_owner_of.kmd#Reltype_has_it_owner-is_it_owner_of_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_has_primary_key-is_primary_key_for_UUID" name="FindAllhas_primary_key-is_primary_key_for" title="Find all Has primary key relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/has_primary_key-is_primary_key_for.kmd#Reltype_has_primary_key-is_primary_key_for_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_targeting_generates-is_generated_by_targeting_UUID" name="FindAlltargeting_generates-is_generated_by_targeting" title="Find all Targeting generates relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/targeting_generates-is_generated_by_targeting.kmd#Reltype_targeting_generates-is_generated_by_targeting_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_not_targeting_generates-is_generated_by_not_targeting_UUID" name="FindAllnot_targeting_generates-is_generated_by_not_targeting" title="Find all Not targeting generates relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/not_targeting_generates-is_generated_by_not_targeting.kmd#Reltype_not_targeting_generates-is_generated_by_not_targeting_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_input_connection_UUID" name="FindAllinput_connection" title="Find all Input connection relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/input_connection.kmd#Reltype_input_connection_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="Reltype_output_connection_UUID" name="FindAlloutput_connection" title="Find all Output connection relationships" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="relshp">
+    <complex-type-link xlink:role="type" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/output_connection.kmd#Reltype_output_connection_UUID" xlink:actuate="user"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+</metis>
