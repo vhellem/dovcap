@@ -22,16 +22,10 @@ class Relationship extends React.Component {
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   componentDidMount() {
-    console.log('hdlfalskjdfklsdf');
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
 
     var emitter = ObjectEmitter;
-    console.log('lolol fromId: ', this.state.fromId);
-    console.log('lolol toId:', this.state.toId);
-    console.log('TEEEEEST:', this.props.data['type'].split(' ').slice(1,2));
-    console.log('halla:', this.state.text2);
-
     var num = this.props.data['type'].split(' ').length;
     var x = this.props.data['type']
       .split(' ')
@@ -42,16 +36,12 @@ class Relationship extends React.Component {
       text2: "is " + x + " of"
     });
 
-    emitter.addListener(this.state.fromId, (x, y, width, height) => {
-      console.log('theeee position of from: ', x, y, width, height);
-      this.setState({
+    emitter.addListener(this.state.fromId, (x, y, width, height) => {      this.setState({
         fromPos: { left: x, top: y, width: width, height }
       });
     });
 
-    emitter.addListener(this.state.toId, (x, y, width, height) => {
-      console.log('theeee position of to: ', x, y, width, height);
-      this.setState({
+    emitter.addListener(this.state.toId, (x, y, width, height) => {      this.setState({
         toPos: { left: x, top: y, width: width, height }
       });
     });
@@ -99,8 +89,6 @@ class Relationship extends React.Component {
       var a = Math.sqrt(distanceFromObject ** 2 / (2 * ((x2 - x1) ** 2 + (y2 - y1) ** 2)));
       var x = x1 + (x2 - x1) * a;
       var y = y1 + (y2 - y1) * a;
-      console.log("a", a);
-
       var a2 = Math.sqrt(
         perpendicularDistanceFromLine ** 2 / (2 * ((x2 - x1) ** 2 + (y2 - y1) ** 2))
       );
@@ -112,8 +100,6 @@ class Relationship extends React.Component {
         x += (y1 - y2) * a2;
         y += (x2 - x1) * a2;
       }
-
-      //console.log('a2:', a2);
 
       return [x, y];
     }
@@ -158,14 +144,10 @@ class Relationship extends React.Component {
     }
     possiblePositions = sortByKey(possiblePositions, "dist")
     possiblePositions = possiblePositions.slice(0, 3)
-    console.log("HEHHEHE her er positions:", possiblePositions);
-
     var bestPerpendiculatiry = 0;
 
     for (var i = 0; i < possiblePositions.length; i++) {
-      console.log("okey, her skjer det:", possiblePositions[i]["from"]);
       var fromP = getPerpendicularity(possiblePositions[i]["from"][0], possiblePositions[i]["from"][1], possiblePositions[i]["to"][0],possiblePositions[i]["to"][1], possiblePositions[i]["fromHori"]);
-      console.log("se her:", fromP);
       var toP = getPerpendicularity(possiblePositions[i]["to"][0], possiblePositions[i]["to"][1], possiblePositions[i]["from"][0],possiblePositions[i]["from"][1], possiblePositions[i]["toHori"]);
       var currentP = Math.min(fromP, toP)
       if (currentP > bestPerpendiculatiry) {
@@ -203,8 +185,6 @@ class Relationship extends React.Component {
       toDist,
       !rightPerpendicular
     );
-    console.log('textFrom', textFrom);
-    console.log("Perpencicularity from:", getPerpendicularity(minFrom[0], minFrom[1], minTo[0], minTo[1], true));
 
     return (
       <Group>

@@ -80,26 +80,28 @@ class ContainerObject extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     var containerJson = nextProps.container;
+    var width = containerJson.attributes.scaleWidth * nextProps.parentWidth
+    var height = containerJson.attributes.scaleHeight * nextProps.parentHeight
+    var x = nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth
+    var y = nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
 
     this.setState({
-      width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
-      height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
-      x: nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth,
-      y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
+      width: width,
+      height: height,
+      x: x,
+      y: y
     });
     // fix undefined
 
     if (this.state.image) {
       this.drawImage();
     }
+
+    var emitter = ObjectEmitter;
+    emitter.emit(this.state.id, x, y, width, height);
   }
 
   render() {
-    var emitter = ObjectEmitter;
-    console.log('yoyoyo: ', this.state.x);
-    console.log('tilsvarende ting: ', this.state.id, this.state.name);
-    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
-
     var children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
