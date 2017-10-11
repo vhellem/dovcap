@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics_AppDomain:Operating_System_UUID" name="Operating_System" title="Operating System" desc="The software component of a computer system that is responsible for the management and coordination of activities and the sharing of the resources of the computer. The operating system acts as a host for application programs that are run on the machine. [Source: http://en.wikipedia.org/wiki/Operating_system]" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Software Module" xlink:href="../../meaf/objecttypes/software_module.kmd#CompType_TRM:Module_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/operating_system.kmd#UUID4_0DC48496-63C8-4A6B-A9E0-023658DEEE2D"/>
+  <property name="licenseID" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="License ID" desc="The license identifier for an installed operating system instance, i.e., the license key." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:Operating_System_licenseID_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Operating System" xlink:href="#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#CCBBDD</string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="33" xlink:role="type" xlink:title="Operating System" xlink:href="#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <integer name="recurringCostInterval">-1</integer>
+   <string name="color" class="volatile"></string>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="developmentPlatform">-1</integer>
+   <integer name="customizationDegree">-1</integer>
+   <string name="productName"></string>
+   <string name="productVersion"></string>
+   <string name="productPatchLevel"></string>
+   <string name="productSerialNumber"></string>
+   <string name="vendorName"></string>
+   <string name="vendorSalesPhone"></string>
+   <string name="vendorSalesEmail"></string>
+   <string name="vendorSupportPhone"></string>
+   <string name="vendorSupportEmail"></string>
+   <date name="purchaseDate">00000000</date>
+   <string name="licenseID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

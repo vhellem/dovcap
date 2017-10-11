@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="has_interface_port" name="has_interface_port" title="Uses_interface" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <property name="ruleEvaluatedTo" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Rule evaluated to" default-visible="top" protected-flag="true"/>
+  <property name="ruleEngine" xlink:role="integer-type" xlink:title="Rule_Engine" xlink:href="primitive_types.kmd#Rule_Engine" label="Rule engine" default-visible="top"/>
+  <property name="ruleCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Code" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="design_solution" xlink:href="design_solution.kmd#design_solution" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Interface" xlink:href="interface.kmd#interface" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="design_solution" xlink:href="design_solution.kmd#design_solution" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Port" xlink:href="port.kmd#port" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has_interface" xlink:href="#has_interface_port" xlink:actuate="user">
+   <string name="from">has interface</string>
+   <string name="to">interface of</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has_interface" xlink:href="#has_interface_port" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>
+

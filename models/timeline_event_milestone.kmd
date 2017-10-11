@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="Reltype_timeline_event_milestone_UUID" name="TimelineEventMilestone" title="Timeline Event Milestone Relationship" desc="Connects Timeline Events to Timeline Milestone objects. The Date of the Timeline Event object is compared to the date of the Timeline Milestone object and the relationship changes colour and linestyle depending on this comparison. If the Timeline Event Date is later than the Timeline Milestone date, the line color is red and if the Timeline Event Date is earlier than the Timeline Milestone date, the color is blue. A black line indicates an exact match of the two dates" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="DateFeedbackRelship" xlink:href="../abstracttypes/timeline_datefeedback_basetype.kmd#Reltype_timeline_datefeedback_basetype_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Timeline Event" xlink:href="../objecttypes/timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Milestones" xlink:href="../abstracttypes/timeline_milestones.kmd#CompType_MEAF:TimelineMilestones_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Event-Milestone" xlink:href="#Reltype_timeline_event_milestone_UUID" xlink:actuate="user">
+   <string name="from">compared with</string>
+   <string name="to">compared with</string>
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="TimelineEventMilestone" xlink:href="#Reltype_timeline_event_milestone_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="no arrow" xlink:href="../symbols/diagrams/timeline_eventmilestone_rel.svg#oid1" xlink:actuate="user">
+   <replace tag="line" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="line" property="linestyle" macro="(expand (property style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/diagrams/timeline_eventmilestone_rel.png"/>
+ </typeview>
+
+
+</metis>

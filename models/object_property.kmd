@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ typeviews="3"
+ nextoid="7">
+
+ <type id="oid1" name="Atomic_Property" title="Atomic Property" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="General Metis Property" xlink:href="general_metis_property.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="displayedLabel" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Displayed Label" desc="This displayed label is a copy of propertyInformation.propertyLabel to let Metis pick this value up as the label" method-flag="true" label-flag="true" visible-flag="false"/>
+  <property name="displayedDescription" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Displayed Description" desc="This displayed description is a copy of propertyInformation.propertyDescription to let Metis pick this value up as the label" method-flag="true" description-flag="true" visible-flag="false"/>
+  <property name="sourceOverride" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Source Override" desc="If you wish to use a field that is not displayed on the data source, or if you wish to construct a value for the property with an expression, enter it here. &#60;BR&#62;&#10;Turn on &#60;em&#62;Evalute Source Value Override As Expression&#60;/em&#62; if you write an expression to be evaluated here.&#60;BR&#62;&#10;Default, the value of this field after any expression evaluation, is interpreted as a recordset field name, e.g. a database field or xpath query. If you wish to use the value of the field instead, set &#60;em&#62;Use Field Value To&#60;/em&#62; option to &#60;em&#62;determine field name&#60;/em&#62;.&#10;&#60;h3&#62;Note&#60;/h3&#62;&#10;As an alternative to entering an expression here, you may build your expression on the source side of the data instead. E.g. by adding a &#60;em&#62;Database Field&#60;/em&#62; or &#60;em&#62;Xpath Property Expression&#60;/em&#62; manually." default-visible="top"/>
+  <property name="evaluateSourceValueOverride" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Evalute Source Value Override As Expression" desc="Turn this on to specify that the &#60;em&#62;Source Value Override&#60;/em&#62; field below contains an expression that must be evaluated to produce the actual value to use." default-visible="top"/>
+  <property name="defaultValue" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Default Value" desc="If no value for the property is given in the source (database field is null or XML node does not exist) then this value is used instead." default-visible="top"/>
+  <property name="fieldValueRole" xlink:role="integer-type" xlink:title="Use Value Options" xlink:href="../primitive_types/use_value_options.kmd#oid1" label="Source Value Specifies" desc="Specifies whether to use the field value to look up the value in the data set, or to use the value directly." default-visible="top"/>
+  <property name="mapTo" xlink:role="integer-type" xlink:title="Property Mapping Value Target" xlink:href="../primitive_types/property_mapping_value_target.kmd#oid1" label="Range/Pair Mapping" desc="If the property is a pair, range or valueset, this specifies whether to use the value or label value for the object. For instance when mapping to gender, the value might be (0, 1) while the label values are (male, female). Choose the target that best fits your data and purposes." default-visible="top"/>
+  <named-method-link name="displayedDescription" xlink:role="cpp-method" xlink:title="Get Atomic Property Description" xlink:href="../methods/get_atomic_property_label.kmd#oid2"/>
+  <named-method-link name="displayedLabel" xlink:role="cpp-method" xlink:title="Get Atomic Property Label" xlink:href="../methods/get_atomic_property_label.kmd#oid1"/>
+  <valueset vset="default" size="32" xlink:role="type" xlink:title="Atomic Property" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">1</integer>
+   <string name="fieldPresenceColor" class="volatile"></string>
+   <string name="newFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="newFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="manualFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="manualFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <string name="propertyInformation.externalID"></string>
+   <string name="propertyInformation.propertyName"></string>
+   <integer name="propertyInformation.evaluatePropertyName">0</integer>
+   <string name="propertyInformation.propertyLabel"></string>
+   <string name="propertyInformation.propertyType"></string>
+   <string name="propertyInformation.propertyDataType"></string>
+   <integer name="propertyInformation.isKey">0</integer>
+   <integer name="propertyInformation.isVisible">1</integer>
+   <integer name="propertyInformation.isReadOnly">0</integer>
+   <string name="propertyInformation.propertyDescription"></string>
+   <string name="canvasFillColor" class="volatile"></string>
+   <string name="canvasFillPattern" class="volatile"></string>
+   <string name="canvasLineStyle" class="volatile"></string>
+   <integer name="sequenceNumber">0</integer>
+   <string name="displayedLabel" class="volatile"></string>
+   <string name="displayedDescription" class="volatile"></string>
+   <string name="sourceOverride"></string>
+   <integer name="evaluateSourceValueOverride">0</integer>
+   <string name="defaultValue"></string>
+   <integer name="fieldValueRole">0</integer>
+   <integer name="mapTo">0</integer>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Complex_Property" title="Complex Property" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="General Metis Property" xlink:href="general_metis_property.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="General Metis Property" xlink:href="general_metis_property.kmd#oid1"/>
+  <valueset vset="default" size="25" xlink:role="type" xlink:title="Complex Property" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">1</integer>
+   <string name="fieldPresenceColor" class="volatile"></string>
+   <string name="newFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="newFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="manualFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="manualFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <string name="propertyInformation.externalID"></string>
+   <string name="propertyInformation.propertyName"></string>
+   <integer name="propertyInformation.evaluatePropertyName">0</integer>
+   <string name="propertyInformation.propertyLabel"></string>
+   <string name="propertyInformation.propertyType"></string>
+   <string name="propertyInformation.propertyDataType"></string>
+   <integer name="propertyInformation.isKey">0</integer>
+   <integer name="propertyInformation.isVisible">1</integer>
+   <integer name="propertyInformation.isReadOnly">0</integer>
+   <string name="propertyInformation.propertyDescription" class="volatile"></string>
+   <string name="canvasFillColor" class="volatile"></string>
+   <string name="canvasFillPattern" class="volatile"></string>
+   <string name="canvasLineStyle" class="volatile"></string>
+   <integer name="sequenceNumber">99999</integer>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="Collection_Property" title="Collection Property" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="General Metis Property" xlink:href="general_metis_property.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Complex Property" xlink:href="#oid3"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Atomic Property" xlink:href="#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="General Action" xlink:href="action.kmd#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="General Condition" xlink:href="condition.kmd#oid1"/>
+  <valueset vset="default" size="25" xlink:role="type" xlink:title="Collection Property" xlink:href="#oid5" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">1</integer>
+   <string name="fieldPresenceColor" class="volatile"></string>
+   <string name="newFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="newFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="manualFieldMarkerFillVisibility">hollow</string>
+   <string name="manualFieldMarkerLineVisibility">none</string>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <string name="propertyInformation.externalID"></string>
+   <string name="propertyInformation.propertyName"></string>
+   <integer name="propertyInformation.evaluatePropertyName">0</integer>
+   <string name="propertyInformation.propertyLabel"></string>
+   <string name="propertyInformation.propertyType"></string>
+   <string name="propertyInformation.propertyDataType"></string>
+   <integer name="propertyInformation.isKey">0</integer>
+   <integer name="propertyInformation.isVisible">1</integer>
+   <integer name="propertyInformation.isReadOnly">0</integer>
+   <string name="propertyInformation.propertyDescription">0</string>
+   <string name="canvasFillColor" class="volatile"></string>
+   <string name="canvasFillPattern" class="volatile"></string>
+   <string name="canvasLineStyle" class="volatile"></string>
+   <integer name="sequenceNumber">99999</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Atomic Property" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="propertyInformation.externalID" visible-flag="false"/>
+   <propertyview name="propertyInformation.propertyName" visible-flag="true"/>
+   <propertyview name="propertyInformation.evaluatePropertyName" visible-flag="true"/>
+   <propertyview name="propertyInformation.propertyLabel" visible-flag="true"/>
+   <propertyview name="propertyInformation.propertyType" visible-flag="true"/>
+   <propertyview name="propertyInformation.propertyDataType" visible-flag="true"/>
+   <propertyview name="propertyInformation.isKey" visible-flag="true"/>
+   <propertyview name="propertyInformation.isVisible" visible-flag="true"/>
+   <propertyview name="propertyInformation.propertyDescription" label="Is Read Only (in property view)" visible-flag="true"/>
+   <propertyview name="propertyInformation.isReadOnly" visible-flag="true"/>
+   <propertyview name="mapTo" visible-flag="true"/>
+   <propertyview name="fieldValueRole" visible-flag="true"/>
+   <propertyview name="sourceOverride" visible-flag="true"/>
+   <propertyview name="evaluateSourceValueOverride" visible-flag="true"/>
+   <propertyview name="defaultValue" visible-flag="true"/>
+   <propertyview name="fieldPresenceStatus" visible-flag="true"/>
+   <propertyview name="sequenceNumber" visible-flag="true"/>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="keyLineVisibility" visible-flag="false"/>
+   <propertyview name="keyFillVisibility" visible-flag="false"/>
+   <propertyview name="newFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="newFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="deletedFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="deletedFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="manualFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="manualFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="canvasFillPattern" visible-flag="false"/>
+   <propertyview name="canvasLineStyle" visible-flag="false"/>
+   <propertyview name="fieldPresenceColor" visible-flag="false"/>
+   <propertyview name="canvasFillColor" label="Property Description" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Metis Attribute" xlink:href="../symbols/attribute.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property propertyInformation.propertyLabel))"/>
+   <replace tag="key" property="fillpattern" macro="(expand (property keyFillVisibility))"/>
+   <replace tag="key" property="linestyle" macro="(expand (property keyLineVisibility))"/>
+   <replace tag="Star" property="fillpattern" macro="(expand (property newFieldMarkerFillVisibility))"/>
+   <replace tag="Star" property="linestyle" macro="(expand (property newFieldMarkerLineVisibility))"/>
+   <replace tag="Star" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="Star" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="linestyle" macro="(expand (property deletedFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="fillpattern" macro="(expand (property deletedFieldMarkerFillVisibility))"/>
+   <replace tag="DeletedBanner" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="canvas" property="linestyle" macro="(expand (property canvasLineStyle))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property canvasFillPattern))"/>
+   <replace tag="ManualHand" property="fillpattern" macro="(expand (property manualFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="linestyle" macro="(expand (property manualFieldMarkerLineVisibility))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Metis Attribute" xlink:href="../symbols/attribute.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property propertyInformation.propertyLabel))"/>
+   <replace tag="key" property="fillpattern" macro="(expand (property keyFillVisibility))"/>
+   <replace tag="key" property="linestyle" macro="(expand (property keyLineVisibility))"/>
+   <replace tag="IDBox" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="IDBox" property="fillcolor" macro="(expand &#34;darkgray&#34;)"/>
+   <replace tag="Star" property="linestyle" macro="(expand (property newFieldMarkerLineVisibility))"/>
+   <replace tag="Star" property="fillpattern" macro="(expand (property newFieldMarkerFillVisibility))"/>
+   <replace tag="Star" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="Star" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="fillpattern" macro="(expand (property deletedFieldMarkerFillVisibility))"/>
+   <replace tag="DeletedBanner" property="linestyle" macro="(expand (property deletedFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="canvas" property="linestyle" macro="(expand (property canvasLineStyle))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property canvasFillPattern))"/>
+   <replace tag="ManualHand" property="fillpattern" macro="(expand (property manualFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="linestyle" macro="(expand (property manualFieldMarkerLineVisibility))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/object_property.png"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Complex Property" xlink:href="#oid3" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Metis Type Attribute Layout - Sort By Sequence Number" xlink:href="../layouts/attribute.kmd#oid3"/>
+  <propertyviews>
+   <propertyview name="propertyInformation.externalID" visible-flag="false"/>
+   <propertyview name="propertyInformation.propertyName" visible-flag="true"/>
+   <propertyview name="propertyInformation.evaluatePropertyName" visible-flag="true"/>
+   <propertyview name="propertyInformation.propertyLabel" visible-flag="true"/>
+   <propertyview name="propertyInformation.propertyType" visible-flag="true"/>
+   <propertyview name="propertyInformation.propertyDataType" visible-flag="true"/>
+   <propertyview name="propertyInformation.isKey" visible-flag="false"/>
+   <propertyview name="propertyInformation.propertyDescription" label="Is Read Only (in property view)" visible-flag="true"/>
+   <propertyview name="propertyInformation.isVisible" visible-flag="true"/>
+   <propertyview name="propertyInformation.isReadOnly" visible-flag="true"/>
+   <propertyview name="fieldPresenceStatus" visible-flag="true"/>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="keyLineVisibility" visible-flag="false"/>
+   <propertyview name="fieldPresenceColor" visible-flag="false"/>
+   <propertyview name="newFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="keyFillVisibility" visible-flag="false"/>
+   <propertyview name="newFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="deletedFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="deletedFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="manualFieldMarkerLineVisibility" visible-flag="false"/>
+   <propertyview name="manualFieldMarkerFillVisibility" visible-flag="false"/>
+   <propertyview name="canvasFillPattern" visible-flag="false"/>
+   <propertyview name="canvasLineStyle" visible-flag="false"/>
+   <propertyview name="sequenceNumber" visible-flag="false"/>
+   <propertyview name="canvasFillColor" label="Property Description" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Complex Property" xlink:href="../symbols/attribute.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="Star" property="fillpattern" macro="(expand (property newFieldMarkerFillVisibility))"/>
+   <replace tag="Star" property="linestyle" macro="(expand (property newFieldMarkerLineVisibility))"/>
+   <replace tag="Star" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="Star" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="linestyle" macro="(expand (property deletedFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="fillpattern" macro="(expand (property deletedFieldMarkerFillVisibility))"/>
+   <replace tag="DeletedBanner" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="ManualHand" property="fillpattern" macro="(expand (property manualFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="linestyle" macro="(expand (property manualFieldMarkerLineVisibility))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Complex Property" xlink:href="../symbols/attribute.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="IDBox" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+   <replace tag="IDBox" property="fillcolor" macro="(expand &#34;darkgray&#34;)"/>
+   <replace tag="Star" property="linestyle" macro="(expand (property newFieldMarkerLineVisibility))"/>
+   <replace tag="Star" property="fillpattern" macro="(expand (property newFieldMarkerFillVisibility))"/>
+   <replace tag="Star" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="Star" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="fillpattern" macro="(expand (property deletedFieldMarkerFillVisibility))"/>
+   <replace tag="DeletedBanner" property="linestyle" macro="(expand (property deletedFieldMarkerLineVisibility))"/>
+   <replace tag="DeletedBanner" property="linecolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="DeletedBanner" property="fillcolor" macro="(expand (property fieldPresenceColor))"/>
+   <replace tag="ManualHand" property="fillpattern" macro="(expand (property manualFieldMarkerFillVisibility))"/>
+   <replace tag="ManualHand" property="linestyle" macro="(expand (property manualFieldMarkerLineVisibility))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/complex_property.png"/>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:title="Collection Property" xlink:href="#oid5" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="propertyName" label="Property Name" desc="&#60;EM&#62;Required&#60;/EM&#62;&#10;Metis distinguishes between the name and label of a property. The name is always unique, and must conform to certain rules. The label is what you see in the property dialog box. To make sure we always get the correct value, all mappings are done to the name. To see the name of any Metis property, use the question mark &#60;/em&#62;(What&#39;s this)&#60;/em&#62; in the top right corner of the property dialogue and click on a property label." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="evaluatePropertyName" label="Evaluate property name" desc="If you wish to determine the property name to map to at runtime, enter a value expression in the &#60;em&#62;Property Name&#60;/em&#62; field and check this box." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="propertyLabel" label="Property Label" desc="&#60;EM&#62;Information&#60;/EM&#62;&#10;Metis distinguishes between the name and label of a property. The name is always unique, and must conform to certain rules. The label is what you see in the property dialog box. To make sure we always get the correct value, all mappings are done to the name. To see the name of any Metis property, use the question mark &#60;/em&#62;(What&#39;s this)&#60;/em&#62; in the top right corner of the property dialogue and click on a property label." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="propertyType" label="Property Type" desc="The type of the property. Notice that some property types, e.g. datetime require data to be formatted in a specific way." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="fieldPresenceStatus" label="Field Presence Status" desc="When the automatic method is used to generate the fields, this property will be set to one of three values upon generation:&#10;1. Existing - This field object was in the model before the script was run and was also found in the data.&#10;2. New - The field was not in the model before, but was found in the data.&#10;3. Deleted - The field was in the model before, but was not found in the data.&#10;&#10;The status of this property will determine the color of the field. Deleted fields are marked in red, new fields in green. This gives quick feedback on changes that might need to be handled." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="propertyDescription" label="Property Description" desc="The description given for the this property on the type it belongs to. This description usually goes further in explaining the meaning of the property." visible-flag="true" show="second" edit="first"/>
+   <propertyview name="description" label="Description" visible-flag="true" show="second" edit="first"/>
+   <propertyview name="keyLineVisibility" label="Key Line Visibility" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="keyFillVisibility" label="Key Fill Visibility" visible-flag="false" show="second" edit="first"/>
+   <propertyview name="isKey" label="Is Key" desc="Specifies that this property uniquely identifies the instance. Only one property on a each type may have the key property set." visible-flag="false" show="second" edit="first"/>
+   <propertyview name="fieldPresenceColor" label="Field Presence Color" desc="This color is set automatically from the &#60;em&#62;Field Presence Status&#60;/em&#62; property.&#10;&#10;Deleted fields are marked in red, new fields in green. This gives quick feedback on changes that might need to be handled." visible-flag="false" show="second" edit="first"/>
+   <propertyview name="newFieldMarkerFillVisibility" label="New Field Marker Fill Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;New&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." visible-flag="false" show="second" edit="first"/>
+   <propertyview name="newFieldMarkerLineVisibility" label="New Field Marker Line Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;New&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." visible-flag="false" show="second" edit="first"/>
+   <propertyview name="deletedFieldMarkerFillVisibility" label="Deleted Field Marker Fill Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Deleted/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." visible-flag="false" show="second" edit="first"/>
+   <propertyview name="deletedFieldMarkerLineVisibility" label="Deleted Field Marker Line Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Deleted/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." visible-flag="false" show="second" edit="first"/>
+   <propertyview name="name" label="Name" visible-flag="false" show="second" edit="first"/>
+  </propertyviews>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/collection_property.png"/>
+ </typeview>
+
+
+</metis>

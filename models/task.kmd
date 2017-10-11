@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_TRM:Task_UUID" name="task" title="Task" desc="A Task is an activity that has a beginning and an end." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="../abstracttypes/change_component.kmd#CompType_TRM:InitiativeDomain_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#CompType_TRM:Task_UUID"/>
+  <property name="taskId" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Task ID" desc="Unique number identifying the task." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_taskId_UUID&#34;;"/>
+  <property name="baselineStartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#date" label="Baseline Start Date" desc="Original planned start date." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_baselineStartDate_UUID&#34;;"/>
+  <property name="plannedStartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#date" label="Planned Start Date" desc="Current planned start date." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_StartDate_UUID&#34;;"/>
+  <property name="actualStartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#date" label="Actual Start Date" desc="The date this project/task actually started." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_ActualStartDate_UUID&#34;;"/>
+  <property name="baselineFinishDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#date" label="Baseline Finish Date" desc="Original planned completion date." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_baselineFinishDate_UUID&#34;;"/>
+  <property name="plannedFinishDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#date" label="Planned Finish Date" desc="Current planned completion date based on current project/task progress evaluation." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_FinishDate_UUID&#34;;"/>
+  <property name="actualFinishDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#date" label="Actual Finish Date" desc="The day this project/task actually finished." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_ActualFinishDate_UUID&#34;;"/>
+  <property name="baselineCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Baseline Cost" desc="Original planned (budgeted) cost." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_baselineCost_UUID&#34;;"/>
+  <property name="plannedCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Planned Cost" desc="Current planned cost based on current project/task cost consumption." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_plannedCost_UUID&#34;;"/>
+  <property name="actualCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Actual Cost" desc="The actual cost of the project/task." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_actualCost_UUID&#34;;"/>
+  <property name="milestone" xlink:role="integer-type" xlink:title="Milestone?" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_yesno_UUID" label="Milestone?" desc="Indicates whether the completion of this task marks a major milestone in the project." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_Milestone_UUID&#34;;position=4;"/>
+  <property name="completionPercentage" xlink:role="integer-type" xlink:title="Percentage" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_percentage0_UUID" label="Completion Percentage" desc="An estimation of how much of the project/task has been completed (%)." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_PctComplete_UUID&#34;;position=5;"/>
+  <property name="status" xlink:role="integer-type" xlink:title="Status" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_task_status_UUID" label="Status" desc="Indicates the status of the active object." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_Status_UUID&#34;;position=7;"/>
+  <property name="baselineResources" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Baseline Resources" desc="Original planned use of resources." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_baselineResources_UUID&#34;;"/>
+  <property name="plannedResources" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Planned Resources" desc="The total planned resource consumption." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_plannedResources_UUID&#34;;"/>
+  <property name="actualResources" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Actual Resources" desc="The actual (reported) resource consumption." mer-property-metadata="uuid=&#34;PropDef_TRM:Task_GenInfo_Resources_UUID&#34;;"/>
+  <property name="resourceUnit" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#string" label="Resource Unit" desc="A description of the type of resources used/consumed in the project/task. (Normally FTE&#39;s Full Time Equivalents.)" mer-property-metadata="uuid=&#34;PropDef_TRM:Task_resourceUnit_UUID&#34;;"/>
+  <property name="rolledUpBaselineCost" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Rolled up Baseline Cost" desc="This property is calculated as the sum of all Baseline Costs from this Tasks decomposed Tasks" method-flag="true"/>
+  <property name="rolledUpPlannedCost" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Rolled up Planned Cost" desc="This property is calculated as the sum of all Planned Costs from this Tasks decomposed Tasks" method-flag="true"/>
+  <property name="rolledUpActualCost" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Rolled Up Actual Cost" desc="This property is calculated as the sum of all Actual Costs from this Tasks decomposed Tasks" method-flag="true"/>
+  <property name="allocationDirect" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Allocation, direct" desc="The number of full-time equivalents allocated to this task directly" method-flag="true" default-visible="top"/>
+  <property name="allocationTotal" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Allocation, total" desc="The number of full-time equivalents allocated to this task and its subtasks" method-flag="true" default-visible="top"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="The colorvalue for the Task based on the status property" visible-flag="false" method-flag="true"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="Pick_Status_Color3" xlink:href="../methods/colormapping_methods.kmd#oid6"/>
+  <named-method-link name="MetisTrouxClient_--Get Person----QueryPersonOvertask_allocates_is_allocated_to_percentage_person" xlink:role="cpp-method" xlink:title="allocates Person" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryPersonOvertask_allocates_is_allocated_to_percentage_person"/>
+  <named-method-link name="MetisTrouxClient_--Get Manpower----QueryManpowerOvertask_allocates_is_allocated_to_percentage_manpower" xlink:role="cpp-method" xlink:title="allocates Manpower" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryManpowerOvertask_allocates_is_allocated_to_percentage_manpower"/>
+  <named-method-link name="MetisTrouxClient_--Get Project----QueryProjectOverproject_consists_of_is_part_of_task" xlink:role="cpp-method" xlink:title="is part of Project" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryProjectOverproject_consists_of_is_part_of_task"/>
+  <named-method-link name="MetisTrouxClient_--Get Timeline Diagram" xlink:role="cpp-method" xlink:title="Find Timeline Diagrams" xlink:href="../methods/timeline_queries.kmd#QueryTimeline"/>
+  <named-method-link name="allocationDirect" xlink:role="cpp-method" xlink:title="Allocation, direct" xlink:href="../methods/project_methods.kmd#oid1"/>
+  <named-method-link name="allocationTotal" xlink:role="cpp-method" xlink:title="Allocation, total" xlink:href="../methods/project_methods.kmd#oid2"/>
+  <named-method-link name="rolledUpActualCost" xlink:role="cpp-method" xlink:title="CalculateRolledUpActualCost" xlink:href="../methods/project_methods.kmd#oid7"/>
+  <named-method-link name="rolledUpBaselineCost" xlink:role="cpp-method" xlink:title="CalculateRolledUpBaselineCost" xlink:href="../methods/project_methods.kmd#oid5"/>
+  <named-method-link name="rolledUpPlannedCost" xlink:role="cpp-method" xlink:title="CalculateRolledUpPlannedCost" xlink:href="../methods/project_methods.kmd#oid6"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Task" xlink:href="#CompType_TRM:Task_UUID">
+   <string name="troux_color">#EEBBAA</string>
+   <string name="troux_iconAlias">04a1f2be-aff5-348c-affb-34ff09d1e7a8</string>
+   <string name="troux_shape">Rectangle</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Task" xlink:href="#CompType_TRM:Task_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="taskId"/>
+   <propertyview name="status"/>
+   <propertyview name="milestone"/>
+   <propertyview name="baselineStartDate"/>
+   <propertyview name="plannedStartDate"/>
+   <propertyview name="actualStartDate"/>
+   <propertyview name="baselineFinishDate"/>
+   <propertyview name="plannedFinishDate"/>
+   <propertyview name="actualFinishDate"/>
+   <propertyview name="baselineCost"/>
+   <propertyview name="plannedCost"/>
+   <propertyview name="actualCost"/>
+   <propertyview name="rolledUpBaselineCost"/> 
+   <propertyview name="rolledUpPlannedCost"/> 
+   <propertyview name="rolledUpActualCost"/> 
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="completionPercentage"/>
+   <propertyview name="strategicValue"/> 
+   <propertyview name="baselineResources"/>
+   <propertyview name="plannedResources"/>
+   <propertyview name="actualResources"/>
+   <propertyview name="resourceUnit"/>
+   <propertyview name="allocationDirect"/> 
+   <propertyview name="allocationTotal"/> 
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/task.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/task.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/task.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Task" xlink:href="#CompType_TRM:Task_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="taskId"/>
+   <propertyview name="status"/>
+   <propertyview name="milestone"/>
+   <propertyview name="baselineStartDate"/>
+   <propertyview name="plannedStartDate"/>
+   <propertyview name="actualStartDate"/>
+   <propertyview name="baselineFinishDate"/>
+   <propertyview name="plannedFinishDate"/>
+   <propertyview name="actualFinishDate"/>
+   <propertyview name="baselineCost"/>
+   <propertyview name="plannedCost"/>
+   <propertyview name="actualCost"/>
+   <propertyview name="rolledUpBaselineCost"/> 
+   <propertyview name="rolledUpPlannedCost"/> 
+   <propertyview name="rolledUpActualCost"/> 
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="completionPercentage"/>
+   <propertyview name="strategicValue"/> 
+   <propertyview name="baselineResources"/>
+   <propertyview name="plannedResources"/>
+   <propertyview name="actualResources"/>
+   <propertyview name="resourceUnit"/>
+   <propertyview name="allocationDirect"/> 
+   <propertyview name="allocationTotal"/> 
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/task.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#F4D276&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/task.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/task.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

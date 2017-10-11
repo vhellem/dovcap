@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="2"
+ nextoid="3">
+
+ <object id="oid1">
+  <valueset size="36" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Database Column Stacked Staggered Layout</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">50</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">0</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">1</integer>
+   <string name="StackedLevels"></string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">1</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">15</integer>
+  </valueset>
+ </object>
+
+ <object id="oid2">
+  <valueset size="36" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">Database Column</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">5</float>
+   <float name="VerticalObjectSpacing">5</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">50</float>
+   <integer name="BreakPointResolution">4</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">0</integer>
+   <integer name="DrawingDirection">0</integer>
+   <integer name="ChannelMerging">2</integer>
+   <integer name="OffsetTopObject">1</integer>
+   <string name="StackedLevels"></string>
+   <integer name="KeepLevelsAligned">0</integer>
+   <integer name="StaggeredLayout">0</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">15</integer>
+  </valueset>
+ </object>
+
+
+</metis>

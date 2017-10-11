@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9" 
+ instances="6" 
+ nextoid="7">
+ 
+ <object id="oid1">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">meaf-open-online-document</string>
+   <string name="category">External</string>
+   <string name="title">&#38;Open Document</string>
+   <string name="desc">Open the Online document using an assigned external browser</string>
+   <string name="dll"></string>
+   <string name="state">meaf-current-onlinedoc</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/online_document_methods.kmd#oid2" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip"></string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid2">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DeveloperEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">open</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>meaf-open-online-document</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid3">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ModelEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">open</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>meaf-open-online-document</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid4">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DesignerEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">open</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>meaf-open-online-document</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid5">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">AnnotatorEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">open</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>meaf-open-online-document</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid6">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">BrowseEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">open</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>meaf-open-online-document</string>
+   </collection>
+  </valueset>
+ </object>
+
+</metis>

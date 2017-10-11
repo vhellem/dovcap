@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+<type id="ObjType_AKM:VBScriptCode_UUID" name="vbsCode" title="VBScript Code (AKM)" descr="This type is used to store VBScript functions and subroutines that will be automatically loaded into the Microsoft ScriptControl when the model is loaded. Thus these subroutines will be allowed to be called from any script during a METIS session." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object (EKA)" xlink:href="../../eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="script" xlink:role="string-type" xlink:href="metis:std#oid4" label="Script"/>
+  <named-method-link name="vbsCode" xlink:role="cpp-method" xlink:href="#Method_AKM:AddScriptCode_UUID" xlink:actuate="auto"/>
+  <named-method-link name="addCode_" xlink:role="cpp-method" xlink:href="#Method_AKM:AddScriptCode_UUID"/>
+  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="ScriptCodePropertyDialog" xlink:href="#oid110"/>
+</type>
+
+ <type id="ObjType_AKM:VBScript_UUID" name="vbsScript" title="VB Script (AKM)" descr="This type is used to store VB scripts that may be executed by the user during a METIS session. The type is typically used in the process of script development and testing." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object (EKA)" xlink:href="../../eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+
+  <property name="script" xlink:role="string-type" xlink:href="metis:std#oid4" label="Script"/>
+
+  <named-method-link name="executeStatement_" xlink:role="cpp-method" xlink:href="#Method_AKM:ExecuteStatement_UUID"/>
+  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="ScriptCodePropertyDialog" xlink:href="#oid210"/>
+</type>
+
+ <cpp-method id="Method_AKM:AddScriptCode_UUID" name="addScriptCode" title="Add Code" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="2">
+   <string name="Mode">AddCode</string>
+   <string name="Script">(expand (property script))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:ExpandScript_UUID" title="expandScript" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Macro">(expand (property script1))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:ExecuteStatement_UUID" title="Execute Statement" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="2">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">(expand (property script))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:Evaluate_UUID" title="Evaluate" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="7">
+   <string name="Mode">Eval</string>
+   <string name="Script">(expand (property script))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid110" name="ScriptCodePropertyDialog" language="c++" bind="NO.METIS.UML.propertyDialog" required-dll="gem_uml">
+    <arg-list size="10">
+      <string name="TabName1">MetisModelTab</string>
+      <string name="Visibility1">Hide</string>
+      <string name="TabName2">MetisDataTab</string>
+      <pointer name="Widget2" xlink:role="method" xlink:title="ScriptCodeDataTab" xlink:href="#oid120" xlink:actuate="auto"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid120" name="ScriptCodeDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+    <arg-list size="6">
+      <string name="Row1">name</string>
+      <string name="Row2">script,,</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid210" name="ScriptPropertyDialog" language="c++" bind="NO.METIS.UML.propertyDialog" required-dll="gem_uml">
+    <arg-list size="10">
+      <string name="TabName1">MetisModelTab</string>
+      <string name="Visibility1">Hide</string>
+      <string name="TabName2">MetisDataTab</string>
+      <pointer name="Widget2" xlink:role="method" xlink:title="ScriptDataTab" xlink:href="#oid220" xlink:actuate="auto"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid220" name="ScriptDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+    <arg-list size="6">
+      <string name="Row1">name</string>
+      <string name="Row2">script</string>
+   </arg-list>
+ </cpp-method>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="VBScript Code (AKM)" xlink:href="#ObjType_AKM:VBScriptCode_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="script" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Method" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="VBScript (AKM)" xlink:href="#ObjType_AKM:VBScript_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="script" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Method" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

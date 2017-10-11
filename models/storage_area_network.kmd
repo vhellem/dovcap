@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_TRM:SAN_UUID" name="storage_area_network" title="Storage Area Network" desc="A Storage Area Network (SAN) is an architecture that enables attaching remote computer storage devices (such as disk arrays, tape libraries, and optical jukeboxes) to servers in such a way that, to the operating system, the devices appear to be locally attached. " usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Network" xlink:href="network.kmd#CompType_TRM:Network_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Storage Area Network" xlink:href="#CompType_TRM:SAN_UUID" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#CCCCCC</string>
+   <string name="troux_iconAlias">4751a95f-2b20-3892-a4af-baab88960d87</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="29" xlink:role="type" xlink:title="Storage Area Network" xlink:href="#CompType_TRM:SAN_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <integer name="businessImpactAnalysisScore">0</integer>
+   <decimal name="cost">0</decimal>
+   <string name="productName"></string>
+   <string name="productVersion"></string>
+   <string name="productSerialNumber"></string>
+   <string name="vendorName"></string>
+   <string name="vendorSalesPhone"></string>
+   <string name="vendorSalesEmail"></string>
+   <string name="vendorSupportPhone"></string>
+   <string name="vendorSupportEmail"></string>
+   <date name="purchaseDate">00000000</date>
+   <integer name="openIncidentCount">0</integer>
+   <integer name="serviceManHours">0</integer>
+   <integer name="recurringCostInterval">-1</integer>
+   <integer name="phase">-1</integer>
+   <decimal name="recurringCost">0</decimal>
+   <string name="monetaryUnit"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="color" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Storage Area Network" xlink:href="#CompType_TRM:SAN_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="purchaseDate" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="recurringCost" visible-flag="true"/>
+   <propertyview name="recurringCostInterval" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="openIncidentCount" visible-flag="true"/>
+   <propertyview name="serviceManHours" visible-flag="true"/>
+   <propertyview name="productName" visible-flag="true"/>
+   <propertyview name="productVersion" visible-flag="true"/>
+   <propertyview name="productSerialNumber" visible-flag="true"/>
+   <propertyview name="vendorName" visible-flag="true"/>
+   <propertyview name="vendorSalesPhone" visible-flag="true"/>
+   <propertyview name="vendorSalesEmail" visible-flag="true"/>
+   <propertyview name="vendorSupportPhone" visible-flag="true"/>
+   <propertyview name="vendorSupportEmail" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/storageareanetwork.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/storageareanetwork.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/storageareanetwork.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Storage Area Network" xlink:href="#CompType_TRM:SAN_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="purchaseDate" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="recurringCost" visible-flag="true"/>
+   <propertyview name="recurringCostInterval" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="openIncidentCount" visible-flag="true"/>
+   <propertyview name="serviceManHours" visible-flag="true"/>
+   <propertyview name="productName" visible-flag="true"/>
+   <propertyview name="productVersion" visible-flag="true"/>
+   <propertyview name="productSerialNumber" visible-flag="true"/>
+   <propertyview name="vendorName" visible-flag="true"/>
+   <propertyview name="vendorSalesPhone" visible-flag="true"/>
+   <propertyview name="vendorSalesEmail" visible-flag="true"/>
+   <propertyview name="vendorSupportPhone" visible-flag="true"/>
+   <propertyview name="vendorSupportEmail" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Nested Open" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/storageareanetwork.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/storageareanetwork.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/storageareanetwork.png"/>
+ </typeview>
+
+
+</metis>

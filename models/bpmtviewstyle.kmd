@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="2"
+ nextoid="1">
+
+ <typeview id="UUID4_7B029172-065D-479F-B3AE-06A8E67FB79D" xlink:role="type" xlink:title="Process" xlink:href="http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID" typelabel="Process" typedesc="In the Process BPM template, the &#34;traditional&#34; Process in Metis is also used for BPMN-style modeling. A process here corresponds to a BPMN activity; which may be both a sub-process (i.e. an activity that has a decomposition as a process) and a task (i.e. a leaf-node activity). In BPMN terminology, a process corresponds to a particular assembly of process elements in a graph; i.e. a set of activities, gateways and events connected with flows.&#10;&#10;Original description of logical process: A series of operations that transforms Input into Output by use of certain Mechanisms under the Control of some external system or higher-level Logical Processes. A Process takes up a certain interval in the information space, defined by a start action and close action. Actions are events or subprocesses. A Process may be regarded as a &#39;black box&#39;. The internals of a Process may be broken down in sub-processes in a recursive manner. A Process is named by a verb or verb phrase and the default symbol is a rectangle." tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="textFitFlag" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="prefix" visible-flag="true"/>
+   <propertyview name="punctuationMark" visible-flag="true"/>
+   <propertyview name="sequenceNumber" visible-flag="true"/>
+   <propertyview name="identification" visible-flag="true"/>
+   <propertyview name="versionId" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="itEffectivenessPercentage" visible-flag="true"/>
+   <propertyview name="businessCriticalityScore" visible-flag="true"/>
+   <propertyview name="duration" visible-flag="true"/>
+   <propertyview name="durationUnit" visible-flag="true"/>
+   <propertyview name="automation" visible-flag="true"/>
+   <propertyview name="processModelChange" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.propertyList" visible-flag="false"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="journalID" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+   <propertyview name="BPM_ClosedColor" visible-flag="false"/>
+   <propertyview name="BPM_OpenColor" visible-flag="false"/>
+   <propertyview name="BPM_FillPattern" visible-flag="false"/>
+   <propertyview name="BPM_Name" visible-flag="false"/>
+   <propertyview name="BPM_Description" visible-flag="false"/>
+   <propertyview name="Metis_CreateObjectClosed" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process2.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62; &#34; (property name) (property BPM_Name) &#34;&#60;/qt&#62;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_OpenColor))"/>
+   <replace tag="pmchange" property="value" macro="(expand (property processModelChange))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Closed" xlink:href="http://metadata.troux.info/meaf/symbols/bpm/process2.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62;&#34; (property name) (property BPM_Name) &#34;&#60;/qt&#62;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_ClosedColor))"/>
+   <replace tag="pmchange" property="value" macro="(expand (property processModelChange))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/bpm/process.png"/>
+ </typeview>
+
+
+</metis>

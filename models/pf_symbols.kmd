@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<?metis version="3.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ symbolpalettes="1"
+ nextoid="2">
+
+ <symbol-palette id="oid1" name="Pauls Symbols" title="CX Symbols">
+  <symbol-link xlink:role="symbol" xlink:href="bus_world_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_mmlfiles1_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_mmlfiles2_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_mmlfiles3_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_laptop_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_computer_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_info_set.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="application_oval.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="person.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="business2_closed.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_vertical_text_symb.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_it_application.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_it_application.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_info_object.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_info_object.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_info_set.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="business_open.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gb_model_symbol.svg#oid9" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gb_model_symbol.svg#oid7" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gb_model_symbol.svg#oid5" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gb_model_symbol.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gb_model_symbol.svg#oid10" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="gb_model_symbol.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="global_bank_view1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="global_bank_view1.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="global_bank_view1.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="global_bank_view1.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_goal.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_objective.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_objective.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_strategy.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_strategy.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_vision.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_business_req.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="cx_container.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="cx_container.svg#oid3" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="cx_container.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="container_oval.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="container_oval.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="org_unit_1.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="org_unit_2.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="product_oval.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="ncr_revenue.svg#oid7" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="ncr_revenue.svg#oid6" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="ncr_revenue.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="ncr_revenue.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="veap_user_object.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_rel4_sym.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_rel2_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="bus_rel_sym.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="com_brouter.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="csg_server_small.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="csg_laser_printer.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="csg_large_2.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="personal_image_proc.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="mainframe.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="front_end_proc.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="atm_switch.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="reader_sorter.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="high_speed_item_proc.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pbx.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="fin_atm.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="smart_card.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="ivr_vru.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="msr_pin.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="image_processing.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="group_people.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="container_closed_1.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="container_closed_1.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="tepm_symbols.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pptpictures.svg#oid19" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pptpictures.svg#oid6" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pptpictures.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pptpictures.svg#oid4" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pptpictures.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="captured_model.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pptpictures.svg#oid15" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="pptpictures.svg#oid13" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="action_button.svg#oid2" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="cont_closed.svg#oid0" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="org_role.svg#oid1" xlink:actuate="user"/>
+  <symbol-link xlink:role="symbol" xlink:href="deliverable_oval.svg#oid0" xlink:actuate="user"/>
+ </symbol-palette>
+
+
+</metis>

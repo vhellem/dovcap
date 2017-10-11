@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="3"
+ nextoid="4">
+
+ <metamodel id="oid1" name="Type_Mapping" title="Type Mapping">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Auto Types" xlink:href="#oid3"/>
+  </metamodel-links>
+  <complex-type-links size="5">
+   <complex-type-link xlink:role="type" xlink:title="Object Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Relationship Mapping" xlink:href="../object_types/object_type_mapping.kmd#oid4" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Object Type Update Options" xlink:href="../object_types/update_options.kmd#oid2" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Relationship Type Update Options" xlink:href="../object_types/update_options.kmd#oid3" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Waste Basket" xlink:href="../object_types/delete-discard.kmd#oid1" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="11">
+   <complex-type-link xlink:role="type" xlink:title="target is/is target of" xlink:href="../relationship_types/relationship_endpoint_mapping.kmd#oid2"/>
+   <complex-type-link xlink:role="type" xlink:title="is origin of/origin is" xlink:href="../relationship_types/relationship_endpoint_mapping.kmd#oid3"/>
+   <complex-type-link xlink:role="type" xlink:title="put new instances in/will be parent for new instances" xlink:href="../relationship_types/parent_assignment_relationship.kmd#oid4"/>
+   <complex-type-link xlink:role="type" xlink:title="move deleted instances to/will be parent for deleted instances" xlink:href="../relationship_types/parent_assignment_relationship.kmd#oid6"/>
+   <complex-type-link xlink:role="type" xlink:title="gets new instance symbols from/is symbol template for new symbols for" xlink:href="../relationship_types/symbol_template.kmd#oid2"/>
+   <complex-type-link xlink:role="type" xlink:title="gets deleted instance symbols from/is symbol template for deleted symbols" xlink:href="../relationship_types/symbol_template.kmd#oid3"/>
+   <complex-type-link xlink:role="type" xlink:title="gets broken relationship symbols from/is symbol template for broken relationships" xlink:href="../relationship_types/symbol_template.kmd#oid4"/>
+   <complex-type-link xlink:role="type" xlink:title="uses type update options in/has type update options for" xlink:href="../relationship_types/type_update_options_assignment.kmd#oid2"/>
+   <complex-type-link xlink:role="type" xlink:title="includes standalone type mapping_in/has standalone type mappings for" xlink:href="../relationship_types/type_update_options_assignment.kmd#oid3"/>
+   <complex-type-link xlink:role="type" xlink:title="uses default type mapping options from/has default type mapping options for" xlink:href="../relationship_types/type_update_options_assignment.kmd#oid4"/>
+   <complex-type-link xlink:role="type" xlink:title="is key property field for/uses key property field" xlink:href="../relationship_types/mapping.kmd#oid4"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid3" name="Auto_Types" title="Auto Types">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Atomic Property" xlink:href="../object_types/object_property.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Complex Property" xlink:href="../object_types/object_property.kmd#oid3" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

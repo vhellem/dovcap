@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<?metis version="3.4.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <viewstyle id="oid1" name="BPM_ICOM_viewstyle" title="Visible ICOMs Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="#oid1102" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1103" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1104" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1105" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1106" xlink:actuate="user"/>
+ </viewstyle>
+
+ <typeview id="oid1102" xlink:role="type" xlink:title="Internal Flow" xlink:href="../object_types/flowlogic.kmd#oid2" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Internal Flow" xlink:href="../symbols/gem/gem_internal_flow.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Internal Flow" xlink:href="../symbols/gem/gem_internal_flow.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_internal_flow.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid1103" xlink:role="type" xlink:title="Input" xlink:href="../object_types/flowlogic.kmd#oid3" tree-size="0.5" nested-size="0.125" behavior="tree" position="left" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Input" xlink:href="../symbols/gem/gem_input.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Input" xlink:href="../symbols/gem/gem_input.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_input.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid1104" xlink:role="type" xlink:title="Control" xlink:href="../object_types/flowlogic.kmd#oid4" tree-size="0.5" nested-size="0.125" behavior="tree" position="top" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Control" xlink:href="../symbols/gem/gem_control.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Control" xlink:href="../symbols/gem/gem_control.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_control.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid1105" xlink:role="type" xlink:title="Output" xlink:href="../object_types/flowlogic.kmd#oid5" tree-size="0.5" nested-size="0.125" behavior="tree" position="right" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Output" xlink:href="../symbols/gem/gem_output.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Output" xlink:href="../symbols/gem/gem_output.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_output.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid1106" xlink:role="type" xlink:title="Mechanism" xlink:href="../object_types/flowlogic.kmd#oid6" tree-size="0.5" nested-size="0.125" behavior="tree" position="bottom" placement="external">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Mechanism" xlink:href="../symbols/gem/gem_mechanism.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Mechanism" xlink:href="../symbols/gem/gem_mechanism.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label) (newline) (property value))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand &#34;orange&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_mechanism.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

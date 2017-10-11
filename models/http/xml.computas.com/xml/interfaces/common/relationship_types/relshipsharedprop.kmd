@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Relationship_with_shared_from_and_to_texts___IF_Configuration" title="Relationship with shared from and to texts - IF Configuration" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts - User" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Relationship with shared from and to texts - IF Configuration" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from"></string>
+   <string name="to"></string>
+  </valueset>
+ </type>
+
+
+</metis>

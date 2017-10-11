@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: GEM_PRODUCT_ITEM.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Product Item</title>
+    <rect x="4" y="4" width="121" height="96"
+     style=" stroke:#9b9b9b; stroke-width:1; fill:#9b9b9b; fill-opacity:100%" class="TAG:shadow"></rect>
+    <rect x="0" y="0" width="123" height="98"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%" class="TAG:border"></rect>
+    <rect x="4" y="4" width="115" height="90"
+     style="stroke:none; fill:#c8c8ff; fill-opacity:100%" class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="5" y="67.8"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center" class="TAG:text"
+>text</text>
+      <rect x="5" y="52" width="113" height="41"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <polygon points="54.1654 8 87.4381 8 73.4186 14.1685 
+       38.0898 14.1685 54.1654 8 "
+       style=" stroke:#000000; stroke-width:1; fill:#4b4bff; fill-opacity:100%" class="TAG:CubeTop"></polygon>
+      <polygon points="72.8699 13.8622 72.8579 47.2543 87.4381 39.4034 
+       87.4381 8 72.8699 13.8622 "
+       style=" stroke:#000000; stroke-width:1; fill:#0000a5; fill-opacity:100%" class="TAG:CubeSide"></polygon>
+      <rect x="38" y="14.1711" width="35.152" height="33.0429"
+       style=" stroke:#000000; stroke-width:1; fill:#96a5ff; fill-opacity:100%" class="TAG:CubeFront"></rect>
+    </g>
+    <rect x="4" y="4" width="115" height="45"
+     style="stroke:none; fill:#878787; fill-opacity:0%" class="TAG:grid"></rect>
+  </symbol>
+ </defs>
+</svg>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="configuration_rule" name="configuration_rule" title="Configuration rule" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="ruleEvaluatedTo" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Rule evaluated to" default-visible="top"/>
+  <property name="ruleEngine" xlink:role="integer-type" xlink:title="Rule_Engine" xlink:href="primitive_types.kmd#Rule_Engine" label="Rule engine" default-visible="top"/>
+  <property name="ruleCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Code" default-visible="top"/>
+  <named-method-link name="evaluate_" xlink:role="cpp-method" xlink:title="Evaluate rule" xlink:href="../methods/rule_methods.kmd#evaluateRule"/>
+  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="ViewStrategyPropertyDialog" xlink:href="#oid110"/>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Configuration_rule" xlink:href="#configuration_rule" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="ruleEvaluatedTo">0</integer>
+   <integer name="ruleEngine">1</integer>
+   <string name="ruleCode"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid110" name="ConfigurationRulePropertyDialog" language="c++" bind="NO.METIS.TOOLS.setupPropertyDialogTabs" required-dll="metis_ui">
+    <arg-list size="10">
+      <string name="TabName1">MetisModelTab</string>
+      <string name="Visibility1">Hide</string>
+      <string name="TabName2">MetisDataTab</string>
+      <pointer name="Widget2" xlink:role="method" xlink:title="ConfigurationRuleDataTab" xlink:href="#oid120" xlink:actuate="auto"/>
+      <string name="TabName3">Part of rules</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid120" name="ViewStrategyDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+    <arg-list size="6">
+      <string name="Row1">name</string>
+      <string name="Row2">ruleEngine</string>
+      <string name="Row3">ruleCode</string>
+   </arg-list>
+ </cpp-method>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Configuration_rule" xlink:href="#configuration_rule" tree-size="1" nested-size="0.0625" behavior="tree" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../layout/hierarchy_layout.kmd#_002asgf00sj14lu510jk"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Box2" xlink:href="../symbols/tree_objects.svg#_002ashi016u9vgssi8nh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property ruleCode))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Box2" xlink:href="../symbols/tree_objects.svg#_002ashi016u9vgssi8nh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property ruleCode))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Configuration_rule" xlink:href="#configuration_rule" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object open" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/object_tree_open.svg#_002ash401d1mk84cm13r" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;VCR: &#34; (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;VCR: &#34; (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Configuration_rule" xlink:href="#configuration_rule" tree-size="1" nested-size="0.0625" behavior="tree" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../layout/hierarchy_layout.kmd#_002asgf00sj14lu510jk"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Box2" xlink:href="../symbols/tree_objects.svg#_002ashi016u9vgssi8nh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property ruleCode))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Box2" xlink:href="../symbols/tree_objects.svg#_002ashi016u9vgssi8nh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property ruleCode))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Configuration_rule" xlink:href="#configuration_rule" tree-size="1" nested-size="0.0625" behavior="tree" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../layout/hierarchy_layout.kmd#_002asgf00sj14lu510jk"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Box2" xlink:href="../symbols/tree_objects.svg#_002ashi016u9vgssi8nh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property ruleCode))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Box2" xlink:href="../symbols/tree_objects.svg#_002ashi016u9vgssi8nh" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property ruleCode))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

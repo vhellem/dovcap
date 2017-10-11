@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="11"
+ methods="1"
+ typeviews="10"
+ nextoid="1">
+
+ <type id="UiType_AKM:Workplace_UUID" name="workplace" title="Workplace (AKM)" desc="Workplace." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Leftpane (AKM)" xlink:href="#UiType_AKM:Leftpane_UUID"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Rightpane (AKM)" xlink:href="#UiType_AKM:Rightpane_UUID"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Workplace (AKM)" xlink:href="#UiType_AKM:Workplace_UUID" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:Workarea_UUID" name="workarea" title="Workarea (AKM)" desc="Workarea." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Workarea (AKM)" xlink:href="#UiType_AKM:Workarea_UUID" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:LeftpaneWorkarea_UUID" name="leftpaneWorkarea" title="Leftpane workarea (AKM)" desc="Leftpane workarea." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid7"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Leftpane workarea (AKM)" xlink:href="#UiType_AKM:LeftpaneWorkarea_UUID" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:Leftpane_UUID" name="leftpane" title="Leftpane (AKM)" desc="Leftpane" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Leftpane workarea (AKM)" xlink:href="#UiType_AKM:LeftpaneWorkarea_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Leftpane (AKM)" xlink:href="#UiType_AKM:Leftpane_UUID"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Leftpane (AKM)" xlink:href="#UiType_AKM:Leftpane_UUID" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:Rightpane_UUID" name="rightpane" title="Rightpane (AKM)" desc="Rightpane" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Workarea (AKM)" xlink:href="#UiType_AKM:Workarea_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Rightpane (AKM)" xlink:href="#UiType_AKM:Rightpane_UUID"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Rightpane (AKM)" xlink:href="#UiType_AKM:Rightpane_UUID" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:MenuButton_UUID" name="menubutton" title="Menu button (AKM)" desc="Menu button" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="View object (AKM)" xlink:href="#UiType_AKM:ViewObject_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <property name="reference" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" label="Script file" default-visible="top"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Menu action (AKM)" xlink:href="#UiType_AKM:MenuAction_UUID"/>
+  <named-method-link name="View.DClickAction" xlink:role="cpp-method" xlink:title="ActionExecuteScriptFile" xlink:href="metis:stdmethods#oid125"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Menu button (AKM)" xlink:href="#UiType_AKM:MenuButton_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <url name="reference"/>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:MenuAction_UUID" name="MenuAction" title="Menu action (AKM)" desc="Menu action" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Menu button (AKM)" xlink:href="#UiType_AKM:MenuButton_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Menu action (AKM)" xlink:href="#UiType_AKM:MenuAction_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="script" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:ActionScript_UUID" name="ActionScript" title="Action script (AKM)" desc="Action script" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Menu action (AKM)" xlink:href="#UiType_AKM:MenuAction_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid6"/>
+  <property name="script" xlink:role="text-type" xlink:title="string" xlink:href="metis:std#oid4" label="Script" method-flag="true" default-visible="top"/>
+  <named-method-link name="script" xlink:role="cpp-method" xlink:title="getScript" xlink:href="../operations/view_methods.kmd#_002asi201t6mo4vk3jso"/>
+  <named-method-link name="View.DClickAction" xlink:role="cpp-method" xlink:title="Execute Statement" xlink:href="script_types.kmd#Method_AKM:ExecuteStatement_UUID"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Action script (AKM)" xlink:href="#UiType_AKM:ActionScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="script" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:ActionArgument_UUID" name="ActionArgument" title="Action argument (AKM)" desc="Action argument" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="View object (AKM)" xlink:href="#UiType_AKM:ViewObject_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid9"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value" default-visible="top"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Action argument (AKM)" xlink:href="#UiType_AKM:ActionArgument_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="value"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:StatusBar_UUID" name="StatusBar" title="Status bar (AKM)" desc="Status bar" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid8"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Status bar (AKM)" xlink:href="#UiType_AKM:StatusBar_UUID" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:ViewContext_UUID" name="ViewContext" title="View context (AKM)" desc="View context" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="View object (AKM)" xlink:href="#UiType_AKM:ViewObject_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid8"/>
+  <property name="currentModel" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Current content model" default-visible="top"/>
+  <property name="currentObject" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Current object" default-visible="top"/>
+  <property name="neighbourLevels" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Neighbour levels" default-visible="top"/>
+  <property name="option" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Option" default-visible="top"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="View context (AKM)" xlink:href="#UiType_AKM:ViewContext_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="currentModel"></string>
+   <string name="currentObject"></string>
+   <integer name="neighbourLevels">0</integer>
+   <integer name="option">0</integer>
+  </valueset>
+ </type>
+
+ <type id="UiType_AKM:ViewObject_UUID" name="viewobject" title="View object (AKM)" desc="View object" usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties" xlink:href="metis:stdtypes#oid19"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="View object (AKM)" xlink:href="#UiType_AKM:ViewObject_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="Method_AKM:setGlobalValues_UUID" name="ModelView.onLoaded" title="setGlobalValues" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/akm/operations/globalValues.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Workplace (AKM)" xlink:href="#UiType_AKM:Workplace_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Workarea Open (2)" xlink:href="../views/container_symbols.svg#_002asfs00upis6ktcqhg" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="http://metadata.troux.info/meaf/symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid14" xlink:role="type" xlink:title="Workarea (AKM)" xlink:href="#UiType_AKM:Workarea_UUID" tree-size="0.5" nested-size="0.25" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="../views/matrix_layouts.kmd#oid3"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Workarea Open (3)" xlink:href="../views/container_symbols.svg#_002asgr00oi7rrbvt3te" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="http://metadata.troux.info/meaf/symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Leftpane (AKM)" xlink:href="#UiType_AKM:Leftpane_UUID" tree-size="0.5" nested-size="0.25" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Workarea layout" xlink:href="../views/matrix_layouts.kmd#_002asha019tj4r051ddi"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Workarea Open (2)" xlink:href="../views/container_symbols.svg#_002asfs00upis6ktcqhg" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="http://metadata.troux.info/meaf/symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Rightpane (AKM)" xlink:href="#UiType_AKM:Rightpane_UUID" tree-size="0.5" nested-size="0.25" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Horizontal Swimlanes" xlink:href="http://xml.computas.com/xml/diagrams/layout_strategies/swimlane_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Workarea Open (2)" xlink:href="../views/container_symbols.svg#_002asfs00upis6ktcqhg" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="http://metadata.troux.info/meaf/symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Workarea (AKM)" xlink:href="#UiType_AKM:Workarea_UUID" tree-size="0.5" nested-size="0.25" behavior="nested" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="../views/matrix_layouts.kmd#oid3"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Workarea Open (3)" xlink:href="../views/container_symbols.svg#_002asgr00oi7rrbvt3te" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="http://metadata.troux.info/meaf/symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Menu button (AKM)" xlink:href="#UiType_AKM:MenuButton_UUID" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light" xlink:href="../../cvw/symbols/akm.svg#_002ash6027k7906qdnsd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light" xlink:href="../../cvw/symbols/akm.svg#_002ash6027k7906qdnsd" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:title="Menu action (AKM)" xlink:href="#UiType_AKM:MenuAction_UUID" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="script" visible-flag="true"/>
+   <propertyview name="reference" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Command_Light" xlink:href="../../cvw/symbols/akm.svg#_002ash6027ujid1advdm" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Command_Light" xlink:href="../../cvw/symbols/akm.svg#_002ash6027ujid1advdm" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:title="Leftpane workarea (AKM)" xlink:href="#UiType_AKM:LeftpaneWorkarea_UUID" tree-size="0.5" nested-size="0.25" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Horizontal Swimlanes" xlink:href="http://xml.computas.com/xml/diagrams/layout_strategies/swimlane_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Workarea Open (4)" xlink:href="../views/container_symbols.svg#_002asha0158c8863elt9" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Container Closed" xlink:href="http://metadata.troux.info/meaf/symbols/container_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid8" xlink:role="type" xlink:title="Status bar (AKM)" xlink:href="#UiType_AKM:StatusBar_UUID" tree-size="0.5" nested-size="0.25" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="metis:stdsyms#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="metis:stdsyms#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid9" xlink:role="type" xlink:title="Action argument (AKM)" xlink:href="#UiType_AKM:ActionArgument_UUID" tree-size="0.5" nested-size="0.25" behavior="nested">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

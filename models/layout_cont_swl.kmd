@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<?metis version="9.5"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="4"
+ nextoid="1">
+
+ <object id="UUID4_64448A9B-CE8D-4722-89E1-2A6B55FBDC95">
+  <valueset size="45" xlink:role="type" xlink:title="Matrix Layout Strategy" xlink:href="metis:layout#oid13" xlink:actuate="user">
+   <string name="IDENTIFIER">ContainerSwimlanes_scaling</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">10</float>
+   <float name="VerticalObjectSpacing">12</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">0</integer>
+   <float name="TopMargin">28</float>
+   <float name="BottomMargin">5</float>
+   <float name="LeftMargin">0</float>
+   <float name="RightMargin">1</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">1</integer>
+   <integer name="VerticalJustification">2</integer>
+   <integer name="HorizontalStrJustification">1</integer>
+   <integer name="VerticalStrJustification">1</integer>
+   <integer name="HorizontalDrawingDirection">1</integer>
+   <integer name="VerticalDrawingDirection">1</integer>
+   <integer name="ChannelMerging">0</integer>
+   <integer name="DrawingPriority">0</integer>
+   <integer name="RowColumnNumberingMethod">0</integer>
+   <integer name="ScaleNestedObjects">0</integer>
+   <integer name="UseTotalArea">0</integer>
+   <integer name="UseTotalOption">1</integer>
+   <integer name="UseSymbolLayoutArea">1</integer>
+   <integer name="AssociativeHierarchy">0</integer>
+   <integer name="AssociativeRelDirNormal">1</integer>
+   <pointer name="AssociativeType"/>
+   <integer name="RowColumnNumber">1</integer>
+   <string name="LayoutAreaTag">LAYOUTAREA</string>
+   <pointer name="LayoutObjectType"/>
+  </valueset>
+ </object>
+
+ <object id="UUID4_8D44297A-75F1-4C93-917D-19773E0DD329">
+  <valueset size="45" xlink:role="type" xlink:title="Matrix Layout Strategy" xlink:href="metis:layout#oid13" xlink:actuate="user">
+   <string name="IDENTIFIER">ContainerSvimlanes 1 row</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">10</float>
+   <float name="VerticalObjectSpacing">12</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">10</float>
+   <float name="BottomMargin">5</float>
+   <float name="LeftMargin">2</float>
+   <float name="RightMargin">1</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">1</integer>
+   <integer name="VerticalJustification">2</integer>
+   <integer name="HorizontalStrJustification">2</integer>
+   <integer name="VerticalStrJustification">1</integer>
+   <integer name="HorizontalDrawingDirection">1</integer>
+   <integer name="VerticalDrawingDirection">1</integer>
+   <integer name="ChannelMerging">0</integer>
+   <integer name="DrawingPriority">0</integer>
+   <integer name="RowColumnNumberingMethod">0</integer>
+   <integer name="ScaleNestedObjects">0</integer>
+   <integer name="UseTotalArea">0</integer>
+   <integer name="UseTotalOption">1</integer>
+   <integer name="UseSymbolLayoutArea">0</integer>
+   <integer name="AssociativeHierarchy">0</integer>
+   <integer name="AssociativeRelDirNormal">1</integer>
+   <pointer name="AssociativeType"/>
+   <integer name="RowColumnNumber">1</integer>
+   <string name="LayoutAreaTag">LAYOUTAREA</string>
+   <pointer name="LayoutObjectType"/>
+  </valueset>
+ </object>
+
+ <object id="UUID4_C9C6D656-B3B5-4236-A977-3C6873EC8E5A">
+  <valueset size="45" xlink:role="type" xlink:title="Matrix Layout Strategy" xlink:href="metis:layout#oid13" xlink:actuate="user">
+   <string name="IDENTIFIER">ContainerSwimlanes top</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">0</float>
+   <float name="VerticalObjectSpacing">0</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">7</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">5</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">1</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">0</integer>
+   <integer name="VerticalJustification">1</integer>
+   <integer name="HorizontalStrJustification">0</integer>
+   <integer name="VerticalStrJustification">1</integer>
+   <integer name="HorizontalDrawingDirection">1</integer>
+   <integer name="VerticalDrawingDirection">1</integer>
+   <integer name="ChannelMerging">0</integer>
+   <integer name="DrawingPriority">1</integer>
+   <integer name="RowColumnNumberingMethod">1</integer>
+   <integer name="ScaleNestedObjects">1</integer>
+   <integer name="UseTotalArea">0</integer>
+   <integer name="UseTotalOption">1</integer>
+   <integer name="UseSymbolLayoutArea">0</integer>
+   <integer name="AssociativeHierarchy">0</integer>
+   <integer name="AssociativeRelDirNormal">1</integer>
+   <pointer name="AssociativeType"/>
+   <integer name="RowColumnNumber">1</integer>
+   <string name="LayoutAreaTag">LAYOUTAREA</string>
+   <pointer name="LayoutObjectType"/>
+  </valueset>
+ </object>
+
+ <object id="UUID4_D8FB1C7F-C7F7-434F-8741-2C100738AD8F">
+  <valueset size="45" xlink:role="type" xlink:title="Matrix Layout Strategy" xlink:href="metis:layout#oid13" xlink:actuate="user">
+   <string name="IDENTIFIER">ContainerSwimlanes 2 row</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="IsSystemStrategy">0</integer>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">10</float>
+   <float name="VerticalObjectSpacing">12</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">1</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">1</integer>
+   <float name="TopMargin">10</float>
+   <float name="BottomMargin">5</float>
+   <float name="LeftMargin">2</float>
+   <float name="RightMargin">1</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="HorizontalJustification">1</integer>
+   <integer name="VerticalJustification">2</integer>
+   <integer name="HorizontalStrJustification">1</integer>
+   <integer name="VerticalStrJustification">1</integer>
+   <integer name="HorizontalDrawingDirection">1</integer>
+   <integer name="VerticalDrawingDirection">1</integer>
+   <integer name="ChannelMerging">0</integer>
+   <integer name="DrawingPriority">0</integer>
+   <integer name="RowColumnNumberingMethod">0</integer>
+   <integer name="ScaleNestedObjects">0</integer>
+   <integer name="UseTotalArea">0</integer>
+   <integer name="UseTotalOption">0</integer>
+   <integer name="UseSymbolLayoutArea">0</integer>
+   <integer name="AssociativeHierarchy">0</integer>
+   <integer name="AssociativeRelDirNormal">1</integer>
+   <pointer name="AssociativeType"/>
+   <integer name="RowColumnNumber">2</integer>
+   <string name="LayoutAreaTag">LAYOUTAREA</string>
+   <pointer name="LayoutObjectType"/>
+  </valueset>
+ </object>
+
+
+</metis>

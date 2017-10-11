@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<integer-type id="PrimType_EKA:Datatype_UUID" title="Data type" desc="Used to specify datatype of property." default="0">
+ <range name=" " min="0" max="0"/>
+ <range name="Boolean" min="5" max="5"/>
+ <range name="Integer" min="1" max="1"/>
+ <range name="Float" min="2" max="2"/>
+ <range name="String" min="3" max="3"/>
+ <range name="Text" min="4" max="4"/>
+ <range name="URI" min="6" max="6"/>
+</integer-type>
+
+<integer-type id="PrimType_EKA:ExpressionLanguage_UUID" title="Language" desc="Used to specify expression language." default="1">
+ <range name=" " min="1" max="1"/>
+ <range name="Code" min="2" max="2"/>
+ <range name="OCL" min="3" max="3"/>
+ <range name="Pseudocode" min="4" max="4"/>
+ <range name="Text" min="5" max="5"/>
+</integer-type>
+
+<integer-type id="PrimType_EKA:ViewState_UUID" title="Language" desc="Used to specify open or closed view state." default="1">
+ <range name="" min="1" max="1"/>
+ <range name="Open" min="2" max="2"/>
+ <range name="Closed" min="3" max="3"/>
+</integer-type>
+
+<integer-type id="PrimType_EKA:PropertyStatus_UUID" name="Property_status" default="-1">
+ <range name="Undefined" min="-1" max="-1"/>
+ <range name="Not valid" min="0" max="0"/>
+ <range name="Partly valid" min="1" max="1"/>
+ <range name="Valid" min="2" max="2"/>
+</integer-type>
+
+<integer-type id="PrimType_EKA:PropertyStatusColorMap" name="PropertyStatusColorMap" default="-1">
+ <range name="White" min="-1" max="-1"/>
+ <range name="Tomato" min="0" max="0"/>
+ <range name="Yellow" min="1" max="1"/>
+ <range name="Green" min="2" max="2"/>
+</integer-type>
+
+<pointer-type id="PrimType_EKA:EnumerationValues_UUID" name="EnumerationValues" referent="undefined">
+ <dynamic-range property="value">
+  <method-link xlink:role="method" xlink:title="findEnumValues" xlink:href="../operations/eka_methods.kmd#Method_EKA:findEnumValues_UUID"/>
+ </dynamic-range>
+</pointer-type>
+
+</metis>

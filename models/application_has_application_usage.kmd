@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_APM:Application_has_Application_Usage_UUID" name="Application_has_Application_Usage" title="Application has Application Usage" desc="Indicates that an application is or will be used in a way that is represented by the Application Usage." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <property name="costAllocationWeight" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Cost Allocation Weighting" desc="A relative weighting that indicates how much of the application cost is allocated to the application usage. " default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:ApplicationHasApplicationDeployment_costAllocationWeight_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../../meaf/objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application Usage" xlink:href="../object_types/application_usage.kmd#CompType_Semantics_APM:Application_Usage_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application has Application Usage" xlink:href="#RelType_Semantics_APM:Application_has_Application_Usage_UUID" xlink:actuate="user">
+   <string name="from">has usage</string>
+   <string name="to">is usage for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="7" xlink:role="type" xlink:title="Application has Application Usage" xlink:href="#RelType_Semantics_APM:Application_has_Application_Usage_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="costAllocationWeight">1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

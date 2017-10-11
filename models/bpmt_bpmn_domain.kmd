@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_A27C2C93-84D6-490C-B90F-E6D10C99F7BA" name="DeveloperEd.ModelEd.UriToolBar.BPMN_Domain" title="BPMN Domain">
+  <complex-type-links size="9">
+   <complex-type-link xlink:role="type" xlink:title="Process Data" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process End Event" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_end_event.kmd#CompType_MEAF:ProcessEndEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Intermediate Event" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_intermediate_event.kmd#CompType_MEAF:ProcessIntermediateEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Start Event" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_start_event.kmd#CompType_MEAF:ProcessStartEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process" xlink:href="http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Gateway" xlink:href="http://metadata.troux.info/meaf/objecttypes/process_gateway.kmd#CompType_TRM:ProcessDecision_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Association" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/association.kmd#Reltype_association_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Message Flow" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/message_flow.kmd#Reltype_message_flow_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Sequence Flow" xlink:href="http://metadata.troux.info/meaf/relationshiptypes/sequence_flow.kmd#Reltype_sequence_flow_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+  <viewstyle-links size="6">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1000"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 2 Viewstyle: Object ICOMs" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1001"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 3 Viewstyle: Line ICOMs, Autoline" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1002"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 4 Viewstyle: Line ICOMs" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1003"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 5 Viewstyle: Line ICOMs, Autoline, Fixed Font" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1004"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 6 Viewstyle: Hidden process idenfication" xlink:href="http://metadata.bpmt.info/viewstyles/bpmt-processid.kmd#UUID4_36F955F2-2009-42FF-A960-7332961227A3"/>
+  </viewstyle-links>
+ </metamodel>
+
+
+</metis>

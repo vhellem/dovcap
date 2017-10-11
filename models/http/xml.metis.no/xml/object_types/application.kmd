@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="4"
+ nextoid="21">
+
+ <type id="oid1" name="Application" title="Application" desc="An Application is an existing or planned named set of IT functions implemented to perform a specific set of services to one or more business processes.  &#10;Use decomposition of the object to describe functional breakdown of the application. An Application can use another Application.&#10;&#10;In ITM we recommend that you use the Application Building Block object type  technical breakdown of an application. In ITM, please note the distinction between Applications (the implemented solution, serving the business) and the Applicaton Product, or its base type IT Product, (the marketed, contracted, generic application package) used to implement the Application.&#10;" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="IT Entity" xlink:href="it_entity.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <property name="DateInstalled" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Installation Date" desc="The date the IT Entity was installed, or, if Planned, the date planned for installing it."/>
+  <property name="PhaseOutDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Phase-out Date" desc="The date planned for phasing out the IT Entity, or, if Unused, the date it was phased out."/>
+  <property name="DatePlanned" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Revision date next" desc="The date planned for the next revision of the application"/>
+  <property name="DatePrevious" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Revision date previous" desc="The date of the last previous revision of the application"/>
+  <property name="BusinessCriticality" xlink:role="integer-type" xlink:title="Business Criticality" xlink:href="../primitive_types/primitive_types.kmd#oid9" label="Business Criticality (0-7)" desc="A rating of how critical the application is to the business. Defined by business people."/>
+  <property name="FailureProbability" xlink:role="integer-type" xlink:title="Failure Probability" xlink:href="../primitive_types/primitive_types.kmd#oid12" label="Failure Probability (0-7)" desc="The probability of failure of the application during a major revision or other event (like 2000). Defined by the IT staff"/>
+  <property name="BusinessRisk" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Business Risk" desc="Business Criticality multiplied with Failure Probability." method-flag="true"/>
+  <property name="StrategicValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Strategic Value" desc="This property is calculated as the sum of all products of Strategic Value on Business Process and Weight on the &#39;supported by&#39; relationship from Business Process to Application." method-flag="true"/>
+  <property name="svCount" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="SV Count" desc="The number of steps used to calculate the strategic value." method-flag="true"/>
+  <property name="NumberOfUsers" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Number of Users" desc="The number of unique users that have access to this application."/>
+  <property name="DevelopmentLanguage" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Development Language" desc="The main development language used. Note also the possibility of using application type objects or enabling technology objects to classify by development language."/>
+  <property name="HardwarePlatform" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Hardware Platform" desc="The main hardware platform. Note also the possibility of using application type objects to classify by hardware platform or to link the application to Computer and from there to the hardware platform of the Computer."/>
+  <property name="DataAccessMethods" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Data Access Methods" desc="The main data access method used. Note also the possibility of using application type objects to classify by data access method."/>
+  <property name="Color" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Color" method-flag="true"/>
+  <property name="serviceLevel" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Service Level Agreement" desc="Verbal description of the service level negotiated between the IT support organization and the business it supports."/>
+  <property name="StartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="StartDate" method-flag="true" visible-flag="false"/>
+  <property name="StopDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="StopDate" method-flag="true" visible-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="#oid1"/>
+  <named-method-link name="BusinessRisk" xlink:role="cpp-method" xlink:title="getRiskValue1" xlink:href="risk_methods.kmd#oid1"/>
+  <named-method-link name="Color" xlink:role="cpp-method" xlink:title="getColorValue1" xlink:href="color_methods.kmd#oid11"/>
+  <named-method-link name="StartDate" xlink:role="cpp-method" xlink:title="Get Date Installed" xlink:href="methods.kmd#oid7"/>
+  <named-method-link name="StopDate" xlink:role="cpp-method" xlink:title="Get Phase Out Date" xlink:href="methods.kmd#oid9"/>
+  <named-method-link name="StrategicValue" xlink:role="cpp-method" xlink:title="getStrategicValue13" xlink:href="strategicvalue_methods.kmd#oid24"/>
+  <named-method-link name="svCount" xlink:role="cpp-method" xlink:title="getStrategicValueCount3" xlink:href="strategicvalue_methods.kmd#oid103"/>
+  <named-criteria-link name="ApplicationBusinessProcess" xlink:role="criteria" xlink:title="Application-&#62;Business Process" xlink:href="../criterias/application_connected_to_business_process.kmd#oid1"/>
+  <named-criteria-link name="ApplicationInitiative" xlink:role="criteria" xlink:title="Application-&#62;Initiative" xlink:href="../criterias/application_connected_to_initiative.kmd#oid1"/>
+  <valueset vset="default" size="25" xlink:role="type" xlink:title="Application" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="Status">1</integer>
+   <integer name="TotalCostPerYear">0</integer>
+   <string name="CostUnit"></string>
+   <date name=":ITEntity.StartDate">00000000</date>
+   <date name=":ITEntity.StopDate">00000000</date>
+   <date name="DateInstalled">00000000</date>
+   <date name="PhaseOutDate">00000000</date>
+   <date name="DatePlanned">00000000</date>
+   <date name="DatePrevious">00000000</date>
+   <integer name="BusinessCriticality">0</integer>
+   <integer name="FailureProbability">0</integer>
+   <integer name="BusinessRisk" class="volatile">0</integer>
+   <integer name="StrategicValue" class="volatile">0</integer>
+   <integer name="svCount" class="volatile">0</integer>
+   <integer name="NumberOfUsers">0</integer>
+   <string name="DevelopmentLanguage"></string>
+   <string name="HardwarePlatform"></string>
+   <string name="DataAccessMethods"></string>
+   <string name="Color" class="volatile"></string>
+   <string name="serviceLevel"></string>
+   <date name="StartDate" class="volatile">00000000</date>
+   <date name="StopDate" class="volatile">00000000</date>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Application" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="Status" label="Status" visible-flag="true"/>
+   <propertyview name="StartDate" visible-flag="false"/>
+   <propertyview name="StopDate" visible-flag="false"/>
+   <propertyview name="DateInstalled" visible-flag="true"/>
+   <propertyview name="DatePlanned" visible-flag="true"/>
+   <propertyview name="DatePrevious" visible-flag="true"/>
+   <propertyview name="PhaseOutDate" visible-flag="true"/>
+   <propertyview name="TotalCostPerYear" visible-flag="true"/>
+   <propertyview name="CostUnit" visible-flag="true"/>
+   <propertyview name="BusinessCriticality" visible-flag="true"/>
+   <propertyview name="FailureProbability" visible-flag="true"/>
+   <propertyview name="BusinessRisk" visible-flag="true"/>
+   <propertyview name="StrategicValue" visible-flag="true"/>
+   <propertyview name="svCount" visible-flag="true"/>
+   <propertyview name="NumberOfUsers" visible-flag="true"/>
+   <propertyview name="DevelopmentLanguage" visible-flag="true"/>
+   <propertyview name="HardwarePlatform" visible-flag="true"/>
+   <propertyview name="DataAccessMethods" visible-flag="true"/>
+   <propertyview name="Color" visible-flag="true"/>
+   <propertyview name="serviceLevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Application" xlink:href="../symbols/application.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property StrategicValue))"/>
+   <replace tag="bus_risk" property="value" macro="(expand (property BusinessRisk))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Application" xlink:href="../symbols/application.svg#oid1" xlink:actuate="user">
+   <replace tag="bus_risk" property="value" macro="(expand (property BusinessRisk))"/>
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property StrategicValue))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Application" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="Status" label="Status" visible-flag="true"/>
+   <propertyview name="StartDate" visible-flag="false"/>
+   <propertyview name="StopDate" visible-flag="false"/>
+   <propertyview name="DateInstalled" visible-flag="true"/>
+   <propertyview name="DatePlanned" visible-flag="true"/>
+   <propertyview name="DatePrevious" visible-flag="true"/>
+   <propertyview name="PhaseOutDate" visible-flag="true"/>
+   <propertyview name="TotalCostPerYear" visible-flag="true"/>
+   <propertyview name="CostUnit" visible-flag="true"/>
+   <propertyview name="BusinessCriticality" visible-flag="true"/>
+   <propertyview name="FailureProbability" visible-flag="true"/>
+   <propertyview name="BusinessRisk" visible-flag="true"/>
+   <propertyview name="StrategicValue" visible-flag="true"/>
+   <propertyview name="svCount" visible-flag="true"/>
+   <propertyview name="NumberOfUsers" visible-flag="true"/>
+   <propertyview name="DevelopmentLanguage" visible-flag="true"/>
+   <propertyview name="HardwarePlatform" visible-flag="true"/>
+   <propertyview name="DataAccessMethods" visible-flag="true"/>
+   <propertyview name="Color" visible-flag="true"/>
+   <propertyview name="serviceLevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/gem/gem_system.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/gem/gem_system.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_system.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Application" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="Status" label="Status" visible-flag="true"/>
+   <propertyview name="StartDate" visible-flag="false"/>
+   <propertyview name="StopDate" visible-flag="false"/>
+   <propertyview name="DateInstalled" visible-flag="true"/>
+   <propertyview name="DatePlanned" visible-flag="true"/>
+   <propertyview name="DatePrevious" visible-flag="true"/>
+   <propertyview name="PhaseOutDate" visible-flag="true"/>
+   <propertyview name="TotalCostPerYear" visible-flag="true"/>
+   <propertyview name="CostUnit" visible-flag="true"/>
+   <propertyview name="BusinessCriticality" visible-flag="true"/>
+   <propertyview name="FailureProbability" visible-flag="true"/>
+   <propertyview name="BusinessRisk" visible-flag="true"/>
+   <propertyview name="StrategicValue" visible-flag="true"/>
+   <propertyview name="svCount" visible-flag="true"/>
+   <propertyview name="NumberOfUsers" visible-flag="true"/>
+   <propertyview name="DevelopmentLanguage" visible-flag="true"/>
+   <propertyview name="HardwarePlatform" visible-flag="true"/>
+   <propertyview name="DataAccessMethods" visible-flag="true"/>
+   <propertyview name="Color" visible-flag="true"/>
+   <propertyview name="serviceLevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Application" xlink:href="../symbols/application.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property StrategicValue))"/>
+   <replace tag="bus_risk" property="value" macro="(expand &#34;BR: &#34; (property BusinessRisk))"/>
+   <replace tag="PictureBackground" property="fillcolor" macro="(expand (property Color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Application" xlink:href="../symbols/application.svg#oid1" xlink:actuate="user">
+   <replace tag="bus_risk" property="value" macro="(expand &#34;BR: &#34; (property BusinessRisk))"/>
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property StrategicValue))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillcolor" macro="(expand (property Color))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/application.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Application" xlink:href="#oid1" typelabel="Application" typedesc="An Application is an existing or planned named set of IT functions implemented to perform a specific set of services to one or more business processes.  " tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="Status" label="Status" visible-flag="false"/>
+   <propertyview name="StartDate" visible-flag="false"/>
+   <propertyview name="StopDate" visible-flag="false"/>
+   <propertyview name="DateInstalled" visible-flag="false"/>
+   <propertyview name="DatePlanned" visible-flag="false"/>
+   <propertyview name="DatePrevious" visible-flag="false"/>
+   <propertyview name="PhaseOutDate" visible-flag="false"/>
+   <propertyview name="TotalCostPerYear" visible-flag="false"/>
+   <propertyview name="CostUnit" visible-flag="false"/>
+   <propertyview name="BusinessCriticality" visible-flag="false"/>
+   <propertyview name="FailureProbability" visible-flag="false"/>
+   <propertyview name="BusinessRisk" visible-flag="false"/>
+   <propertyview name="StrategicValue" visible-flag="false"/>
+   <propertyview name="svCount" visible-flag="false"/>
+   <propertyview name="NumberOfUsers" visible-flag="false"/>
+   <propertyview name="DevelopmentLanguage" visible-flag="false"/>
+   <propertyview name="HardwarePlatform" visible-flag="false"/>
+   <propertyview name="DataAccessMethods" visible-flag="false"/>
+   <propertyview name="Color" visible-flag="false"/>
+   <propertyview name="serviceLevel" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Application basic" xlink:href="../symbols/application.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Application basic" xlink:href="../symbols/application.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/application.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

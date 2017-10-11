@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ typeviews="6"
+ nextoid="19">
+
+ <type id="oid1" name="Person" title="Person" desc="A Person is an individual human being, male or female." usage="object" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" desc="Enter a short name for the object" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" desc="Enter a description of the object" description-flag="true"/>
+  <property name="gender" xlink:role="integer-type" xlink:title="Gender" xlink:href="../primitive_types/primitive_types.kmd#oid40" label="Gender" desc="If needed, the gender of the person"/>
+  <property name="initials" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Initials"/>
+  <property name="dateOfBirth" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date of birth" desc="If needed, the date when the person was born"/>
+  <property name="street" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Street"/>
+  <property name="postBox" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Post Office Box" desc="Post Office Box address"/>
+  <property name="city" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="City" desc="City, town, or equivalent"/>
+  <property name="state" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="State/Province" desc="State, province, or equivalent"/>
+  <property name="postCode" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Zip Code" desc="Zip code or equivalent"/>
+  <property name="country" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Country" desc="Country, nation or equivalent"/>
+  <property name="officePhoneNo" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Office phone no." desc="The person's office phone number"/>
+  <property name="privatePhoneNo" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Private phone no." desc="The person's private phone number"/>
+  <property name="phonemobile" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Mobile phone no." desc="The person's cellphone number"/>
+  <property name="extension" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Extension"/>
+  <property name="faxNo" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Fax no." desc="Fax number where the person can be reached"/>
+  <property name="email" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="E-mail" desc="The person's e-mail address"/>
+  <property name="username" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="User Name"/>
+  <property name="homepage" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Homepage"/>
+  <property name="image" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Image"/>
+  <property name="password" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Password"/>
+  <property name="allocation" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Allocation (%)" desc="Total allocation to projects and tasks. A value computed by adding allocation properties on allocation relationships between the person and projects and tasks. May exceed 100%" method-flag="true"/>
+  <named-method-link name="allocation" xlink:role="cpp-method" xlink:title="Allocation" xlink:href="allocation_methods.kmd#oid1"/>
+  <valueset vset="default" size="22" xlink:role="type" xlink:title="Person" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="gender">2</integer>
+   <string name="initials"></string>
+   <date name="dateOfBirth">00000000</date>
+   <string name="street"></string>
+   <string name="postBox"></string>
+   <string name="city"></string>
+   <string name="state"></string>
+   <string name="postCode"></string>
+   <string name="country"></string>
+   <string name="officePhoneNo"></string>
+   <string name="privatePhoneNo"></string>
+   <string name="phonemobile"></string>
+   <string name="extension"></string>
+   <string name="faxNo"></string>
+   <string name="email"></string>
+   <string name="username"></string>
+   <string name="homepage"></string>
+   <string name="image"></string>
+   <string name="password"></string>
+   <integer name="allocation" class="volatile">0</integer>
+  </valueset>
+ </type>
+
+ <forward-reference id="oid4" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Person" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid5" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Person" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <forward-reference id="oid10" stamp="20001129 195900000" 
+     xlink:role="type" xlink:title="Person" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Person" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/gem/gem_male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_person.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Person" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="gender" label="Gender" visible-flag="true"/>
+   <propertyview name="initials" label="Initials" visible-flag="false"/>
+   <propertyview name="dateOfBirth" label="Date of birth" visible-flag="true"/>
+   <propertyview name="street" label="Street" visible-flag="true"/>
+   <propertyview name="postBox" label="Post Office Box" visible-flag="true"/>
+   <propertyview name="city" label="City" visible-flag="true"/>
+   <propertyview name="state" label="State/Province" visible-flag="true"/>
+   <propertyview name="postCode" label="Zip Code" visible-flag="true"/>
+   <propertyview name="country" label="Country" visible-flag="true"/>
+   <propertyview name="officePhoneNo" label="Office phone no." visible-flag="true"/>
+   <propertyview name="privatePhoneNo" label="Private phone no." visible-flag="true"/>
+   <propertyview name="phonemobile" label="Mobile phone no." visible-flag="true"/>
+   <propertyview name="extension" label="Extension" visible-flag="false"/>
+   <propertyview name="faxNo" label="Fax no." visible-flag="true"/>
+   <propertyview name="email" label="E-mail" visible-flag="true"/>
+   <propertyview name="username" label="User Name" visible-flag="false"/>
+   <propertyview name="homepage" label="Homepage" visible-flag="false"/>
+   <propertyview name="image" label="Image" visible-flag="false"/>
+   <propertyview name="password" label="Password" visible-flag="false"/>
+   <propertyview name="allocation" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Person" xlink:href="../symbols/person2.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Person" xlink:href="../symbols/person2.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/person.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:title="Person" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/person3.svg#oid1" xlink:actuate="user">
+   <replace tag="e-mail" property="value" macro="(expand (property email))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/person3.svg#oid1" xlink:actuate="user">
+   <replace tag="e-mail" property="value" macro="(expand (property email))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid7" xlink:role="type" xlink:title="Person" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/female.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/female.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_person.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid8" xlink:role="type" xlink:title="Person" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/male.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_person.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid9" xlink:role="type" xlink:title="Person" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="gender" label="Gender" visible-flag="true"/>
+   <propertyview name="initials" label="Initials" visible-flag="true"/>
+   <propertyview name="dateOfBirth" label="Date of birth" visible-flag="true"/>
+   <propertyview name="street" label="Street" visible-flag="true"/>
+   <propertyview name="postBox" label="Post Office Box" visible-flag="true"/>
+   <propertyview name="city" label="City" visible-flag="true"/>
+   <propertyview name="state" label="State/Province" visible-flag="true"/>
+   <propertyview name="postCode" label="Zip Code" visible-flag="true"/>
+   <propertyview name="country" label="Country" visible-flag="true"/>
+   <propertyview name="officePhoneNo" label="Office phone no." visible-flag="true"/>
+   <propertyview name="privatePhoneNo" label="Private phone no." visible-flag="true"/>
+   <propertyview name="phonemobile" label="Mobile phone no." visible-flag="true"/>
+   <propertyview name="extension" label="Extension" visible-flag="true"/>
+   <propertyview name="faxNo" label="Fax no." visible-flag="true"/>
+   <propertyview name="email" label="E-mail" visible-flag="true"/>
+   <propertyview name="username" label="User Name" visible-flag="false"/>
+   <propertyview name="homepage" label="Homepage" visible-flag="false"/>
+   <propertyview name="image" label="Image" visible-flag="false"/>
+   <propertyview name="password" label="Password" visible-flag="false"/>
+   <propertyview name="allocation" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Person" xlink:href="../symbols/person2.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Person" xlink:href="../symbols/person2.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/person.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ methods="1" 
+ nextoid="2">
+
+ <cpp-method id="oid1" name="Pick_Priority_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="priorityColorMap" xlink:href="../primitivetypes/priority_colormap_primitive_types.kmd#Primtype_process_model_change_UUID"/>
+   <string name="Property">priority</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

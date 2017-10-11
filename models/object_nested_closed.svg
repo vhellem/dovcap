@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: object_nested_closed.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Object Nested Closed</title>
+    <path d="M 0 368 C 0 374.102 9.89792 384 
+     16 384 C 144 384 368 384 496 384 
+     C 502.102 384 512 374.102 512 368 C 512 272 
+     512 112 512 16 C 512 9.89792 502.102 0 
+     496 0 C 373.237 0 30.9943 0 16 0 
+     C 15.3603 0 0 0 0 16 Z"
+     style=" stroke:#000000; stroke-width:2; fill:#000000; fill-opacity:100%"     class="TAG:canvas"></path>
+    <path d="M 330.222 192 C 325.111 192 320 197.111 
+     320 202.222 C 320 202.222 320 365.778 320 365.778 
+     C 320 370.889 325.111 376 330.222 376 C 330.222 376 
+     493.778 376 493.778 376 C 498.889 376 504 370.889 
+     504 365.778 C 504 365.778 504 202.222 504 202.222 
+     C 504 197.111 498.889 192 493.778 192 Z"
+     style="stroke:none; fill:#888888; fill-opacity:100%"     class="TAG:iconbackground"></path>
+    <path d="M 25.1034 8 C 16.5517 8 8 12.8889 
+     8 17.7778 C 8 17.7778 8 174.222 8 174.222 
+     C 8 179.111 16.5517 184 25.1034 184 C 25.1034 184 
+     486.897 184 486.897 184 C 495.448 184 504 179.111 
+     504 174.222 C 504 174.222 504 17.7778 504 17.7778 
+     C 504 12.8889 495.448 8 486.897 8 Z"
+     style="stroke:none; fill:#ffffff; fill-opacity:100%"     class="TAG:textbackground"></path>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="78"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:64;"
+       class="TAG:text"></text>
+      <rect x="16" y="16" width="480" height="160"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <image x="328" y="200" width="168" height="168" xlink:role="symbol" xlink:title="Text" xlink:href="metis:stdsyms#oid40"     class="TAG:icon"></image>
+    <path d="M 18.4828 192 C 13.2414 192 8 197.111 
+     8 202.222 C 8 202.222 8 365.778 8 365.778 
+     C 8 370.889 13.2414 376 18.4828 376 C 18.4828 376 
+     301.517 376 301.517 376 C 306.759 376 312 370.889 
+     312 365.778 C 312 365.778 312 202.222 312 202.222 
+     C 312 197.111 306.759 192 301.517 192 Z"
+     style="stroke:none; fill:#ffffff; fill-opacity:100%"     class="TAG:textbackground"></path>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="231"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:32;"
+       class="TAG:description"></text>
+      <rect x="16" y="200" width="288" height="168"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="363"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:28; text-align:right"
+       class="TAG:extratext"></text>
+      <rect x="16" y="336" width="288" height="40"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+ <use xlink:href="#oid1"/>
+</svg>

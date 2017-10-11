@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="3">
+
+ <criteria id="oid1" name="showArchitecture" title="Show Architecture" object-flag="true">
+  <c-op kind="or">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="contains/contained by" xlink:href="../relationship_types/contains-contained_by.kmd#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Interface" xlink:href="../object_types/interface.kmd#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="endof">
+     <c-op kind="or">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="sends/sent by" xlink:href="../relationship_types/sends-sent_by.kmd#oid1"/>
+      </c-op>
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="received by/receives" xlink:href="../relationship_types/received_by-receives.kmd#oid1"/>
+      </c-op>
+     </c-op>
+    </c-op>
+   </c-op>
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof"/>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Application, Physical" xlink:href="../object_types/application.kmd#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

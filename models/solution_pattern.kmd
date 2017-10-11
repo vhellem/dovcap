@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:Solution_Pattern_UUID" name="solution_pattern" title="Solution Pattern" desc="Represents the template or pattern describing all that is encompassed by a version of an Application. A Solution Pattern represents a deployable pattern, not deployed software. " usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="../../meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="#UUID4_E9F3F4B1-127B-45A8-AA93-9B5EC836594E"/>
+  <property name="estimatedTime" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Estimated Time" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:Solution_Pattern_estimatedTime_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="estimatedCost" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Estimated Cost" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:Solution_Pattern_estimatedCost_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="monetaryUnits" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Monetary Units" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:Solution_Pattern_monetaryUnits_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="estimatedTimeVariationPercentage" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Estimated Time Variation Percentage" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:Solution_Pattern_estimatedTimeVariationPercentage_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="timeUnits" xlink:role="integer-type" xlink:title="Duration Unit" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_duration_unit_UUID" label="Time Units" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:Solution_Pattern_timeUnits_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="estimatedCostVariationPercentage" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Estimated Cost Variation Percentage" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:Solution_Pattern_estimatedCostVariationPercentage_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="architectureModel" xlink:role="integer-type" xlink:title="Application Architecture Model" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#PropType_ITG:ApplicationArchitectureModel_UUID" label="Architecture Model" desc="The architectural design pattern on which the Application is based. One of a fixed number of values, such as, &#39;Client/Server&#39;, &#39;N-tier&#39; and &#39;Centralized&#39;." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_architectureModel_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="businessCriticalityScore" xlink:role="integer-type" xlink:title="Business Criticality Score" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_business_criticality_score_UUID" label="Business Criticality Score" desc="A rating (score) of how critical the application is to the business. Defined by business people." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_businessCriticalityScore_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="businessImpactAnalysisScore" xlink:role="string-type" xlink:title="numeric" xlink:href="metis:std#numeric" label="Business Impact Analysis Score" desc="A rating (score) based on a performed Business Impact Analysis." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_Prop_BIAScore_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="customizationDegree" xlink:role="integer-type" xlink:title="Customization Level" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#PropType_ITG:CustomizationLevel_UUID" label="Customization Degree" desc="The estimated need for customization before deployment." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_customizationDegree_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="developmentPlatform" xlink:role="integer-type" xlink:title="Development Platform" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_development_platform_UUID" label="Development Platform" desc="The primary development platform of the software." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_GenInfo_DevPlatform_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="lastReviewDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Last Review Date" desc="The date on which the most recent review was completed." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_LastReviewDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="nextRevisionDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Next Revision Date" desc="The date planned for the next revision of the application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_nextRevisionDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="previousRevisionDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Previous Revision Date" desc="The date of the last previous revision of the application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_previousRevisionDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="recommendation" xlink:role="integer-type" xlink:title="Application Recommendation" xlink:href="../../meaf/primitivetypes/primitive_types.kmd#Primtype_application_recommendation_UUID" label="Recommendation" desc="A recommendation for present and future strategy for the application." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_recommendation_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="recommendationComments" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Recommendation Comments" desc="Any pertinent elaboration to the recommended disposition." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_recommendationComments_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="recommendationDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Recommendation Date" desc="The date on which an application recommendation was made." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_recommendationDate_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="relatedArtifacts" xlink:role="collection-type" xlink:title="urls" xlink:href="metis:std#urls" label="Related Artifacts" desc="A list of links to externally stored related artifacts (e.g. word processing documents, spreadsheets, design documents, etc.)" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_Semantics:SolutionPattern_relatedArtifacts_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Solution Pattern" xlink:href="#CompType_Semantics:Solution_Pattern_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="28" xlink:role="type" xlink:title="Solution Pattern" xlink:href="#CompType_Semantics:Solution_Pattern_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="estimatedTime">0</decimal>
+   <decimal name="estimatedCost">0</decimal>
+   <string name="monetaryUnits"></string>
+   <integer name="estimatedTimeVariationPercentage">0</integer>
+   <integer name="timeUnits">-1</integer>
+   <integer name="estimatedCostVariationPercentage">0</integer>
+   <integer name="architectureModel">-1</integer>
+   <integer name="businessCriticalityScore">-1</integer>
+   <string name="businessImpactAnalysisScore"></string>
+   <integer name="customizationDegree">-1</integer>
+   <integer name="developmentPlatform">-1</integer>
+   <date name="lastReviewDate">00000000</date>
+   <date name="nextRevisionDate">00000000</date>
+   <date name="previousRevisionDate">00000000</date>
+   <integer name="recommendation">-1</integer>
+   <string name="recommendationComments"></string>
+   <date name="recommendationDate">00000000</date>
+   <collection name="relatedArtifacts" structure="list" size="0" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" xlink:actuate="user">
+   </collection>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_E9F3F4B1-127B-45A8-AA93-9B5EC836594E" xlink:role="type" xlink:title="Solution Pattern" xlink:href="#CompType_Semantics:Solution_Pattern_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/solution_pattern.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/solution_pattern.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/solution_pattern.png"/>
+ </typeview>
+
+
+</metis>

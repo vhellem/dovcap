@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="metisreportformattype" title="MetisReportFormatType" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="MetisReportingBaseActionObject" xlink:href="base.kmd#oid1"/>
+  <property name="generateVia" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Generate Via:" desc="Generate Via" visible-flag="false"/>
+  <property name="formatpropertygroup" xlink:role="type" xlink:title="FormatPropertyGroup" xlink:href="../abstract_types/format_propertygroup.kmd#oid1" label="Format Properties" desc="Format Properties"/>
+ </type>
+
+</metis>

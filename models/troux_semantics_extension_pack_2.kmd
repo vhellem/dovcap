@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="UUID4_649060A0-9E03-451B-94FB-D37E906AB628" name="Troux_Semantics_Extension_Pack_2" title="Troux Semantics Extension Pack 2">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="IT Pattern Domain" xlink:href="#UUID4_83D47194-6E10-4FE6-8A19-D5B0017C2034"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="relationship_types.kmd#UUID4_A333E186-1D3B-4035-9AC0-D17F13388468"/>
+  </metamodel-links>
+ </metamodel>
+
+ <metamodel id="UUID4_83D47194-6E10-4FE6-8A19-D5B0017C2034" name="IT_Pattern_Domain" title="IT Pattern Domain" desc="The IT Pattern domain includes the objects used to represent and categorize Design Patterns and Solution Patterns. Design Patterns represent a roll-up of deployment time and cost estimates for commonly implemented projects, installations, and designs. A Design Pattern can be connected to the various elements required by or affected by the implementation. For example, the Design Pattern can be connected to the Software Product Versions or Hardware Product Models that are used within it. Solution Patterns represent the template or pattern describing all that is encompassed by a version of an Application. A Solution Pattern can be connected to a Business Application. It can also be connected to components that provide business context, including Projects, Locations, Business Processes, and Business Functions. Categories are used to classify and organize the Design Patterns and Solution Patterns used across your enterprise. You can also specify the Person or Organizations who own Design Patterns and Solution Patterns.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="IT Pattern Domain Relationships" xlink:href="it_pattern_domain_relationships.kmd#UUID4_17BB60B3-8945-4153-90BE-FB16CCAA6E56"/>
+  </metamodel-links>
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="Solution Pattern Category" xlink:href="../object_types/solution_pattern_category.kmd#CompType_Semantics:Solution_Pattern_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Solution Pattern" xlink:href="../object_types/solution_pattern.kmd#CompType_Semantics:Solution_Pattern_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Pattern Category" xlink:href="../object_types/design_pattern_category.kmd#CompType_Semantics_Patterns:Design_Pattern_Category_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Design Pattern" xlink:href="../object_types/design_pattern.kmd#CompType_Semantics_Patterns:Design_Pattern_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

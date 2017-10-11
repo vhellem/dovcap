@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: compact_container.svg</title>
+ <defs>
+  <symbol id="_002asll01p866qdguc7p" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Compact container</title>
+    <rect x="0" y="0" width="320" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="38"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:36; text-align:center"
+       class="TAG:text">text</text>
+      <rect x="8" y="4" width="304" height="48"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <rect x="4" y="32" width="312" height="220"
+     style="stroke:none; fill:#ffffdc; fill-opacity:0%"     class="TAG:LAYOUTAREA"></rect>
+  </symbol>
+  <symbol id="_002asvv019847s0oc2g8" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Compact container with icon</title>
+    <rect x="0" y="0" width="320" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="8" y="38"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:36; text-align:center"
+       class="TAG:text">text</text>
+      <rect x="8" y="4" width="304" height="48"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <rect x="4" y="48" width="312" height="204"
+     style="stroke:none; fill:#ffffdc; fill-opacity:0%"     class="TAG:LAYOUTAREA"></rect>
+    <image x="4.02147" y="3.5" width="55.9785" height="44.5" xlink:role="symbol" xlink:title="Generic" xlink:href="metis:stdsyms#oid6"     class="TAG:icon"></image>
+  </symbol>
+ </defs>
+ <use xlink:href="#_002asll01p866qdguc7p"/>
+</svg>

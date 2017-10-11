@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+
+ <type id="Reltype_timeline_datefeedback_basetype_UUID" name="DateFeedbackBasetype" title="Date Difference Relationship" desc="Abstract relationship used to give visual feedback on the difference of a date-value in either end" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="metis:trm#TrmRelationship"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Line color" desc="Color of the line" method-flag="true" visible-flag="false"/>
+  <property name="style" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Line style" desc="Style of the line" method-flag="true" visible-flag="false"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="getInternalLineColor" xlink:href="../methods/timeline_methods.kmd#oid2007"/>
+  <named-method-link name="style" xlink:role="cpp-method" xlink:title="getInternalLinePattern" xlink:href="../methods/timeline_methods.kmd#oid2008"/>
+  <named-method-link name="View.onOriginConnect" xlink:role="cpp-method" xlink:title="updateRelMacro" xlink:href="../methods/timeline_methods.kmd#oid2005"/>
+  <named-method-link name="View.onTargetConnect" xlink:role="cpp-method" xlink:title="updateRelMacro" xlink:href="../methods/timeline_methods.kmd#oid2005"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="DateFeedbackRelship" xlink:href="#Reltype_timeline_datefeedback_basetype_UUID">
+   <string name="from">compared with</string>
+   <string name="to">compared with</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="DateFeedbackBasetype" xlink:href="#Reltype_timeline_datefeedback_basetype_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Shared Properties" xlink:href="metis:stdsyms#oid33" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+   <replace tag="line" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="line" property="linestyle" macro="(expand (property style))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

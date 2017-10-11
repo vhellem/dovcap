@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="interacts_with" name="interacts_with" title="interacts_with" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Interaction" xlink:href="interaction.kmd#interaction" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="CC object" xlink:href="cc_object.kmd#CC_object" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="interacts_with" xlink:href="#interacts_with" xlink:actuate="user">
+   <string name="from">interacts with</string>
+   <string name="to">interacts with</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="interacts_with" xlink:href="#interacts_with" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

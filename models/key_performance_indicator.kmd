@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="CompType_MEAF:KeyPerformanceIndicator_UUID" name="key_performance_indicator" title="Key Performance Indicator" desc="A Key Performance Indicator is an object type used to store target values and measured values for Key Performance items measured. The object type is a derived type of the Measure object type.&#60;p&#62;It is used by the Balanced Scorecard methodology." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Measure" xlink:href="measure.kmd#CompType_MEAF:Measure_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="furtherDetail" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" label="Further Detail" desc="An external link for further information." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_furtherDetail_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="floorValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Floor Value" desc="The worst possible value for a KPI. It can be low or high.  Actuals that are &#34;beyond&#34; the Floor Value can graphically assume the Floor Value." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_floorValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="badFairThreshold" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Bad/Fair Threshold" desc="A KPI threshold. KPI values between here and the Floor Value are considered Bad. Values from here to the Fair/Good Threshold are considered Fair." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_badFairThreshold_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="fairGoodThreshold" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Fair/Good Threshold" desc="A KPI threshold. Values between here and the Ceiling Value are considered Good. Values from here to the Bad/Fair Threshold are considered Fair." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_fairGoodThreshold_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="ceilingValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Ceiling Value" desc="The best possible value for a KPI. It can be low or high. Actuals that are &#34;beyond&#34; the Ceiling Value can graphically assume the Ceiling Value." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_ceilingValue_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="collectionPeriod" xlink:role="integer-type" xlink:title="KPI Collection Period" xlink:href="../../semantics/primitive_types/kpi_collection_period.kmd#PrimType_Semantics:KPI_Collection_Period_UUID" label="Collection Period" desc="Specifies how often the KPI should be collected." default-visible="bottom" mer-property-metadata="uuid=&#34;PropType_Semantics:KPI_collectionPeriod_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="#CompType_MEAF:KeyPerformanceIndicator_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="KPI History" xlink:href="../../semantics/object_types/kpi_history.kmd#CompType_Semantics:KPI_History_UUID"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="Measure" xlink:href="measure.kmd#CompType_MEAF:Measure_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="#CompType_MEAF:KeyPerformanceIndicator_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias">Icon_CompType_MEAF:KeyPerformanceIndicator_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="27" xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="#CompType_MEAF:KeyPerformanceIndicator_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+   <decimal name="baselineValue">0</decimal>
+   <decimal name="plannedValue">0</decimal>
+   <decimal name="actualValue">0</decimal>
+   <string name="measureUnit"></string>
+   <string name="calculationMethod"></string>
+   <integer name="leadinglagging">-1</integer>
+   <integer name="investingharvesting">-1</integer>
+   <string name="reportingMethod"></string>
+   <string name="collectionMethod"></string>
+   <integer name="strategicValue" class="volatile">0</integer>
+   <date-time name="asOfDate">00000000 000000000</date-time>
+   <url name="furtherDetail"/>
+   <integer name="floorValue">0</integer>
+   <integer name="badFairThreshold">0</integer>
+   <integer name="fairGoodThreshold">0</integer>
+   <integer name="ceilingValue">0</integer>
+   <integer name="collectionPeriod">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="#CompType_MEAF:KeyPerformanceIndicator_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="baselineValue" visible-flag="true"/>
+   <propertyview name="plannedValue" visible-flag="true"/>
+   <propertyview name="actualValue" visible-flag="true"/>
+   <propertyview name="measureUnit" visible-flag="true"/>
+   <propertyview name="calculationMethod" visible-flag="true"/>
+   <propertyview name="leadinglagging" visible-flag="true"/>
+   <propertyview name="investingharvesting" visible-flag="true"/>
+   <propertyview name="reportingMethod" visible-flag="true"/>
+   <propertyview name="collectionMethod" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/keyperformanceindicator.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/keyperformanceindicator.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/keyperformanceindicator.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Key Performance Indicator" xlink:href="#CompType_MEAF:KeyPerformanceIndicator_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Compact Matrix Layout, No Relationships" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+   <propertyview name="baselineValue" visible-flag="true"/>
+   <propertyview name="plannedValue" visible-flag="true"/>
+   <propertyview name="actualValue" visible-flag="true"/>
+   <propertyview name="measureUnit" visible-flag="true"/>
+   <propertyview name="calculationMethod" visible-flag="true"/>
+   <propertyview name="leadinglagging" visible-flag="true"/>
+   <propertyview name="investingharvesting" visible-flag="true"/>
+   <propertyview name="reportingMethod" visible-flag="true"/>
+   <propertyview name="collectionMethod" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/keyperformanceindicator.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#E5C0D9&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/keyperformanceindicator.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/keyperformanceindicator.png"/>
+ </typeview>
+
+
+</metis>

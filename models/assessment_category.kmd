@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_Semantics:Assessment_Category_UUID" name="Assessment_Category" title="Assessment Category" desc="A category used to group or organize Assessments. Assessment Categories can be decomposed into various hierarchies, including Capability Assessments or Plan Assessments. Typically, categories are used to define the type of Assessment (e.g. Capability Assessments &#62; Capability Maturity)." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Category" xlink:href="../../meaf/objecttypes/category.kmd#CompType_MEAF:Category_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/assessment_category.kmd#UUID4_FEA15CCC-CB60-47C0-92F4-8920E3F612A2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Assessment Category" xlink:href="#CompType_Semantics:Assessment_Category_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Assessment Category" xlink:href="#CompType_Semantics:Assessment_Category_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias">Icon_CompType_MEAF:Category_UUID</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Assessment Category" xlink:href="#CompType_Semantics:Assessment_Category_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+
+</metis>

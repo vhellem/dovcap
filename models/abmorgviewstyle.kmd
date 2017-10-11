@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ viewstyles="1"
+ nextoid="3">
+
+<typeview id="oid2" xlink:role="type" xlink:href="../object_types/organization.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/org_unit_1.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/org_unit_2.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="text1" property="value" macro="(expand (property manager))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/organization2.png" xlink:actuate="user"/>
+</typeview>
+
+<viewstyle id="oid1" name="ABMOrgViewStyle" title="Organization with Manager View Style">
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+</metis>
+

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="4"
+ nextoid="5">
+
+ <criteria id="oid3" name="getImplements_is_implemented_by_relationship">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="type">
+      <complex-type-link xlink:role="type" xlink:title="implements/is implemented by (Weight)" xlink:href="../relationshiptypes/implements-is_implemented_by_weight.kmd#Reltype_implements-is_implemented_by_weight_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid1" name="getPropertyWeightTarget" title="getPropertyWeightTarget" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="target"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="getPropertyWeightOrigin" title="getPropertyWeightOrigin" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="origin"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid4" name="getParts">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+</metis>

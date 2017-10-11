@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ typeviews="2"
+ nextoid="6">
+
+ <type id="oid1" name="General_Action" title="General Action" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with name and description properties - IF Configuration" xlink:href="objectprop.kmd#oid1"/>
+  <property name="sequenceNumber" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence Number" desc="Calculated. Used for layout." method-flag="true" visible-flag="false"/>
+  <property name="actionExpression" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Action Expression" desc="Use Metis Object Expression scripting code to write the action." default-visible="top"/>
+  <named-method-link name="sequenceNumber" xlink:role="cpp-method" xlink:title="Action Sequence Number" xlink:href="../methods/action_sequence_number.kmd#oid1"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="General Action" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="sequenceNumber" class="volatile">1</integer>
+   <string name="actionExpression"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="Pre_Action" title="Pre Action" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="General Action" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Pre Action" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="sequenceNumber" class="volatile">0</integer>
+   <string name="actionExpression"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Post_Action" title="Post Action" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="General Action" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="Post Action" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="sequenceNumber" class="volatile">0</integer>
+   <string name="actionExpression"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Pre Action" xlink:href="#oid2" tree-size="0.2" nested-size="0.2" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="actionExpression" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="sequenceNumber" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Pre Action" xlink:href="../symbols/action.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="expression" property="value" macro="(expand (property actionExpression))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Pre Action" xlink:href="../symbols/action.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="expression" property="value" macro="(expand (property actionExpression))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/pre_action.png"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Post Action" xlink:href="#oid3" tree-size="0.2" nested-size="0.2" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="actionExpression" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="sequenceNumber" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Post Action" xlink:href="../symbols/action.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="expression" property="value" macro="(expand (property actionExpression))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Post Action" xlink:href="../symbols/action.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="expression" property="value" macro="(expand (property actionExpression))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/post_action.png"/>
+ </typeview>
+
+
+</metis>

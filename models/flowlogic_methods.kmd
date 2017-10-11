@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="37"
+ criteria="9"
+ nextoid="1315">
+
+ <cpp-method id="oid1231" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_gives_takes.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_gives_takes.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1233" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_synchronize.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_synchronize.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1234" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_alternative.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_alternative.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1235" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_condition.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_condition.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1301" title="Connect Input to Process via Output" desc="Connect to Process via Output and Input." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="5">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeFrom" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid13" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1302" title="Connect Control to Process via Output" desc="Connect Control to Process via Output and Control." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="5">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeFrom" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid4" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid12" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1303" title="Connect Output to Process" desc="Connect Output from Process to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="5">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeFrom" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid13" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1304" title="Connect Mechanism to Process" desc="Connect Mechanism to Process via Output." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="5">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeFrom" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid6" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid14" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1305" title="Connect Input to Process" desc="Connect Input to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid11" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1306" title="Connect Control to Process" desc="Connect Control from Internal Flow to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid4" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid12" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1307" title="Connect Output to Process" desc="Connect Output to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">outof</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid13" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1308" title="Connect Mechanism to Process" desc="Connect Mechanism to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid6" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid14" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1309" title="Connect Selected ICOMs Top Down" desc="Connect ICOMs top down to Process." language="c++" bind="NO.METIS.GEM.connectFromSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="16">
+   <string name="Direction">into</string>
+   <string name="Direction1">into</string>
+   <string name="Direction2">outof</string>
+   <string name="Direction3">into</string>
+   <pointer name="FromType" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="FromType1" xlink:role="type" xlink:href="flowlogic.kmd#oid4" xlink:actuate="user"/>
+   <pointer name="FromType2" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="FromType3" xlink:role="type" xlink:href="flowlogic.kmd#oid6" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo1" xlink:role="type" xlink:href="flowlogic.kmd#oid4" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo2" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo3" xlink:role="type" xlink:href="flowlogic.kmd#oid6" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid11" xlink:actuate="user"/>
+   <pointer name="RelType1" xlink:role="type" xlink:href="flowlogic.kmd#oid12" xlink:actuate="user"/>
+   <pointer name="RelType2" xlink:role="type" xlink:href="flowlogic.kmd#oid13" xlink:actuate="user"/>
+   <pointer name="RelType3" xlink:role="type" xlink:href="flowlogic.kmd#oid14" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1310" title="Connect Selected ICOMs Bottom Up" desc="Connect ICOMs bottom up to Process." language="c++" bind="NO.METIS.GEM.connectFromSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="16">
+   <string name="Direction">outof</string>
+   <string name="Direction1">outof</string>
+   <string name="Direction2">into</string>
+   <string name="Direction3">outof</string>
+   <pointer name="FromType" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="FromType1" xlink:role="type" xlink:href="flowlogic.kmd#oid4" xlink:actuate="user"/>
+   <pointer name="FromType2" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="FromType3" xlink:role="type" xlink:href="flowlogic.kmd#oid6" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo1" xlink:role="type" xlink:href="flowlogic.kmd#oid4" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo2" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="InterfaceTypeTo3" xlink:role="type" xlink:href="flowlogic.kmd#oid6" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid11" xlink:actuate="user"/>
+   <pointer name="RelType1" xlink:role="type" xlink:href="flowlogic.kmd#oid12" xlink:actuate="user"/>
+   <pointer name="RelType2" xlink:role="type" xlink:href="flowlogic.kmd#oid13" xlink:actuate="user"/>
+   <pointer name="RelType3" xlink:role="type" xlink:href="flowlogic.kmd#oid14" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1311" title="Connect Alternative to Process" desc="Connect Alternative to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid35" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1312" title="Connect Condition to Process" desc="Connect Condition to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">outof</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid34" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1313" title="Connect Start Portal to Process" desc="Connect Start Portal to Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">into</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid31" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1314" title="Connect End Portal from Process" desc="Connect End Portal from Process." language="c++" bind="NO.METIS.GEM.connectToSelected" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="4">
+   <string name="Direction">outof</string>
+   <pointer name="InterfaceTypeTo" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="RelType" xlink:role="type" xlink:href="flowlogic.kmd#oid32" xlink:actuate="user"/>
+   <pointer name="ToType" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid301" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Criterias" xlink:role="criteria" xlink:title="getName" xlink:href="#oid401" xlink:actuate="user"/>
+   <string name="Property">name</string>
+   <string name="Default"> </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid302" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getName" xlink:href="#oid401" xlink:actuate="user"/>
+   <string name="Property">value</string>
+   <string name="Default"> </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid303" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="7">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="getRepresents" xlink:href="#oid402" xlink:actuate="user"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="getNameForInput" xlink:href="#oid403" xlink:actuate="user"/>
+   <string name="Property1">name</string>
+   <string name="Property2">value</string>
+   <string name="Separator">
+</string>
+   <string name="Default"> </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid304" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="7">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="getRepresents" xlink:href="#oid402" xlink:actuate="user"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="getNameForControl" xlink:href="#oid404" xlink:actuate="user"/>
+   <string name="Property1">name</string>
+   <string name="Property2">value</string>
+   <string name="Separator">
+   <string name="Default"> </string>
+</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid305" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="7">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="getRepresents" xlink:href="#oid402" xlink:actuate="user"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="getNameForOutput" xlink:href="#oid405" xlink:actuate="user"/>
+   <string name="Property1">name</string>
+   <string name="Property2">value</string>
+   <string name="Separator">
+   <string name="Default"> </string>
+</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid306" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="7">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="getRepresents" xlink:href="#oid402" xlink:actuate="user"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="getNameForMechanism" xlink:href="#oid406" xlink:actuate="user"/>
+   <string name="Property1">name</string>
+   <string name="Property2">value</string>
+   <string name="Separator">
+   <string name="Default"> </string>
+</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid307" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="7">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="getRepresents" xlink:href="#oid402" xlink:actuate="user"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="getNameForInternalFlow" xlink:href="#oid407" xlink:actuate="user"/>
+   <string name="Property1">name</string>
+   <string name="Property2">value</string>
+   <string name="Separator">
+</string>
+   <string name="Default"> </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid311" language="c++" bind="NO.METIS.GEM.getIdentificationValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <string name="PrefixProperty">prefix</string>
+   <string name="PunctuationProperty">punctuationMark</string>
+   <string name="SequenceProperty">sequenceNumber</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1201" title="Set Viewstyle" desc="Drag this method, and drop it on the modeling area.&#10;From the popup menu that appears, select the viewstyle you want the process to be visualized by." language="c++" bind="NO.METIS.GEM.setViewStyle" required-dll="gem_qt_utilities" background-flag="true">
+  <arg-list size="2">
+   <string name="ViewStyle1">IPM</string>
+   <string name="ViewStyle2">FlowLogic</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1205" title="Create Sub-Processes" desc="Create sub-processes, flows and icoms, using a dialog to specify the numbers of each" language="c++" bind="NO.METIS.GEM.createSubObjects" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="9">
+   <pointer name="ObjectType1" xlink:role="type" xlink:href="flowlogic.kmd#oid1" xlink:actuate="user"/>
+   <pointer name="ObjectType2" xlink:role="type" xlink:href="flowlogic.kmd#oid2" xlink:actuate="user"/>
+   <pointer name="ObjectType3" xlink:role="type" xlink:href="flowlogic.kmd#oid23" xlink:actuate="user"/>
+   <pointer name="InterfaceType1" xlink:role="type" xlink:href="flowlogic.kmd#oid3" xlink:actuate="user"/>
+   <pointer name="InterfaceType2" xlink:role="type" xlink:href="flowlogic.kmd#oid4" xlink:actuate="user"/>
+   <pointer name="InterfaceType3" xlink:role="type" xlink:href="flowlogic.kmd#oid5" xlink:actuate="user"/>
+   <pointer name="InterfaceType4" xlink:role="type" xlink:href="flowlogic.kmd#oid6" xlink:actuate="user"/>
+   <pointer name="Strategy" xlink:role="object" xlink:href="metis:layout#oid61" xlink:actuate="user"/>
+   <pointer name="AutoLayoutMethod" xlink:role="cpp-method" xlink:href="metis:layout#oid201" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1206" title="Toggle Direction" desc="Toggles direction of relationship." language="c++" bind="NO.METIS.GEM.toggleDirection" required-dll="gem_qt_utilities" object-flag="true">
+ </cpp-method>
+
+ <cpp-method id="oid1207" title="Toggle Feedback" desc="Toggles Feedback." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">ToggleHorConnection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_internal_flow.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_internal_flow.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1211" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_input.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_input.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1212" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_control.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_control.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1213" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_output.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_output.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1214" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_mechanism.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_mechanism.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1215" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_alternative.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_alternative.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1216" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_condition.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_condition.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1217" title="Toggle Autolayout" desc="Toggles Autolayout." language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseSelection</string>
+   <string name="Symbol1">http://xml.metis.no/xml/symbols/gem/gem_rel_synchronize.svg#oid0</string>
+   <string name="Symbol2">http://xml.metis.no/xml/symbols/gem/gem_rel_synchronize.svg#oid1</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid401" name="getName" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="partof">
+    <c-op kind="not">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="metis:std#oid20"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid402" name="getRepresents" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="originof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="../relationship_types/represents-has_representation.kmd#oid1"/>
+    </c-op>
+   </c-op>
+   <c-op kind="target"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid403" name="getNameForInput" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="or">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid11"/>
+     </c-op>
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid13"/>
+     </c-op>
+    </c-op>
+   </c-op>
+   <c-op kind="origin"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid404" name="getNameForControl" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid12"/>
+    </c-op>
+   </c-op>
+   <c-op kind="origin"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid405" name="getNameForOutput" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="originof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid13"/>
+    </c-op>
+   </c-op>
+   <c-op kind="target">
+    <c-op kind="or">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid2"/>
+     </c-op>
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid5"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid406" name="getNameForMechanism" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid14"/>
+    </c-op>
+   </c-op>
+   <c-op kind="origin"/>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid407" name="getNameForInternalFlow" object-flag="true">
+  <c-op kind="or">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:href="#oid408"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:href="#oid405"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid408" name="getIngredients" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="targetof">
+    <c-op kind="or">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid11"/>
+     </c-op>
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid12"/>
+     </c-op>
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:href="flowlogic.kmd#oid14"/>
+     </c-op>
+    </c-op>
+   </c-op>
+   <c-op kind="origin"/>
+  </c-op>
+ </criteria>
+
+
+ <criteria id="oid421" name="parent" title="ParentObject" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="partof">
+    <c-op kind="not">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="metis:std#oid20"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+
+</metis>

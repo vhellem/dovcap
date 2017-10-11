@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Infrastructure_and_Hardware_Domain" title="Infrastructure and Hardware Domain" desc="Use the Infrastructure and Hardware domain to decribe the computing systems and networks that host the applications and datastores used to support the business.&#10;The object types within this domain allow you to model the actual physical IT technology architectures or individual physical technology elements in detail, both existing elements and planned.&#10;For logical architecture modeling, use the types and methods found in the IT Architecture domain.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="23">
+   <complex-type-link xlink:role="type" xlink:title="Hardware" xlink:href="../objecttypes/hardware.kmd#CompType_TRM:Hardware_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Computer" xlink:href="../objecttypes/computer.kmd#CompType_TRM:Computer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Disk Array" xlink:href="../objecttypes/disk_array.kmd#CompType_TRM:DiskArray_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Mainframe" xlink:href="../objecttypes/mainframe.kmd#CompType_TRM:Mainframe_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Network" xlink:href="../objecttypes/network.kmd#CompType_TRM:Network_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Router" xlink:href="../objecttypes/router.kmd#CompType_TRM:Router_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Server" xlink:href="../objecttypes/server.kmd#CompType_TRM:Server_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Function" xlink:href="../objecttypes/infrastructure_function.kmd#CompType_MEAF:InfrastructureFunction_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Desktop" xlink:href="../objecttypes/desktop.kmd#CompType_TRM:Desktop_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Backup Device" xlink:href="../objecttypes/backup_device.kmd#CompType_TRM:BackupDevice_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Cabinet" xlink:href="../objecttypes/cabinet.kmd#CompType_TRM:Cabinet_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Computing Hardware" xlink:href="../objecttypes/computing_hardware.kmd#CompType_TRM:ComputingHardware_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Firewall" xlink:href="../objecttypes/firewall.kmd#CompType_TRM:Firewall_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Laptop" xlink:href="../objecttypes/laptop.kmd#CompType_TRM:Laptop_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Load Balancer" xlink:href="../objecttypes/load_balancer.kmd#CompType_TRM:LoadBalancer_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Network Device" xlink:href="../objecttypes/network_device.kmd#CompType_TRM:NetworkDevice_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Network Interface" xlink:href="../objecttypes/network_interface.kmd#CompType_TRM:NetworkInterface_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Storage Area Network" xlink:href="../objecttypes/storage_area_network.kmd#CompType_TRM:SAN_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Storage Area Network Switch" xlink:href="../objecttypes/storage_area_network_switch.kmd#CompType_TRM:SANSwitch_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Storage Device" xlink:href="../objecttypes/storage_device.kmd#CompType_TRM:StorageDevice_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Switch" xlink:href="../objecttypes/switch.kmd#CompType_TRM:Switch_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Tape Backup" xlink:href="../objecttypes/tape_backup.kmd#CompType_TRM:TapeBackup_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Virtual Server" xlink:href="../../semantics/object_types/virtual_server.kmd#CompType_Semantics:Virtual_Server_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="19">
+   <complex-type-link xlink:role="type" xlink:title="Hardware connects to Hardware" xlink:href="../relationshiptypes/connects_to-connects_from.kmd#Reltype_hardware_connects_to_connects_from_hardware_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware connects to Network" xlink:href="../relationshiptypes/connects_to-connects_from.kmd#Reltype_hardware_connects_to_connects_from_network_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Hardware consists of Hardware" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_ConsistsOfHardware_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Network consists of Network" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_NetConsistsOfNetDev_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Component corresponds to Process Component" xlink:href="../relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_process_component_corresponds_to_corresponds_to_process_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Server has logical server Server" xlink:href="../relationshiptypes/has_logical_server-is_logical_server_of.kmd#Reltype_server_has_logical_server_is_logical_server_of_server_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Component has template Infrastructure Component" xlink:href="../relationshiptypes/has_template-is_template_for.kmd#Reltype_infrastructure_component_has_template_is_template_for_infrastructure_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Function leads to Function" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_function_leads_to_follows_from_function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Component provides Function" xlink:href="../relationshiptypes/provides-is_provided_by_criticality.kmd#Reltype_infrastructure_component_provides_is_provided_by_criticality_function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Cabinet stores Computing Hardware" xlink:href="../relationshiptypes/stores-is_stored_in.kmd#RelType_StoresHardware_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

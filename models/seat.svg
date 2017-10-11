@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?metis version="5.2.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG 1.0//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg>
+ <title>Symbol library: seat.svg</title>
+ <defs>
+  <symbol id="_002as8p0167adb6vjs8l" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Top view</title>
+    <rect x="0" y="64" width="256" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:seat"></rect>
+    <rect x="0" y="64" width="256" height="64"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:back"></rect>
+    <rect x="0" y="0" width="256" height="64"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:top"></rect>
+  </symbol>
+  <symbol id="_002as8p0167t1nibvs81" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Front view</title>
+    <rect x="0" y="256" width="256" height="64"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:seat"></rect>
+    <rect x="0" y="0" width="256" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:back"></rect>
+  </symbol>
+  <symbol id="_002as8p0167vqivtcfe3" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Side view</title>
+    <rect x="0" y="256" width="256" height="64"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:seat"></rect>
+    <polygon points="192 256 256 0 320 0 
+     256 256 192 256"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:back"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="271"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16; text-align:center vertical-align:middle;"
+       class="TAG:text">text</text>
+      <rect x="0" y="256" width="256" height="64"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="0" y="15"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+></text>
+      <rect x="0" y="0" width="192" height="256"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="_002as8p016td4f6184hf" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Isometric view</title>
+    <polygon points="0 348 256 412 256 476 
+     0 412 0 348"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:seat"></polygon>
+    <polygon points="0 348 192 220 448 284 
+     256 412 0 348"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:seat"></polygon>
+    <polygon points="256 476 448 348 448 284 
+     256 412 256 476"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:seat"></polygon>
+    <polygon points="144 252 192 28 448 76 
+     400 316 144 252"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:back"></polygon>
+    <polygon points="192 28 240 0 496 44 
+     448 76 192 28"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:top"></polygon>
+    <polygon points="496 44 448 284 400 316 
+     448 76 496 44"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:back"></polygon>
+  </symbol>
+ </defs>
+ <use xlink:href="#_002as8p0167adb6vjs8l"/>
+</svg>

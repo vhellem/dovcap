@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="1"
+ nextoid="2">
+
+ <criteria id="oid1" name="findOnlyAggregated" title="findOnlyAggregated" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="part"/>
+  </c-op>
+ </criteria>
+
+
+</metis>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ methods="2"
+ criteria="1"
+ typeviews="1"
+ nextoid="7">
+
+ <type id="oid1" name="HasSkillCompetence" title="has competence/of competence profile" usage="relationship" decomposition-flag="true" container-flag="true" desc="Allows you to connect Competence/Skill Profiles to Competence/Skill objects.">
+  <complex-type-link xlink:role="type" xlink:title="ModelingRelship" xlink:href="http://xml.computas.com/xml/user/relship.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="from" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="From text" desc="This text is associated with the &#39;from&#39; end of the relationship" shared-flag="true"/>
+  <property name="to" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="To text" desc="This text is associated with the &#39;to&#39; end of the relationship" shared-flag="true" target-text-flag="true"/>
+  <property name="skill" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Skill Value" desc="Each competence of a competence profile can be of a specific skill level represented by a Skill Value. The value domain for the skill value is not predefined, and any integer value is accepted. It is however recommended to use a value domain where 0 (i.e. zero) means no competence and 5 means high (i.e. &#34;the best&#34;) competence." origin-text-flag="true"/>
+  <property name="competence" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Competence" desc="The value of this property is tranferred from the Competence" method-flag="true"/>
+  <property name="competenceText" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Competence Text" desc="This is the aggregate of the Skill Value and the Competence" method-flag="true"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Competenceprofile" xlink:href="../object_types/competenceprofile.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Competence" xlink:href="../object_types/competence.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="skill" xlink:role="cpp-method" xlink:href="#oid5"/>
+  <named-method-link name="competence" xlink:role="cpp-method" xlink:href="#oid3"/>
+  <named-method-link name="competenceText" xlink:role="cpp-method" xlink:href="#oid5"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="HasSkillCompetence" xlink:href="#oid1">
+   <string name="from"></string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="HasSkillCompetence" xlink:href="#oid1">
+   <integer name="skill">0</integer>
+   <string name="competence" class="volatile"></string>
+   <string name="competenceText" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid3" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getName" xlink:href="#oid4" xlink:actuate="user"/>
+   <string name="Property">name</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="1">
+   <string name="Macro">(expand (property competence) &#34; : &#34; (property skill))</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid4" name="getName" relationship-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="target"/>
+  </c-op>
+ </criteria>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="HasSkillCompetence" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/gem/gem_rel_skill.svg#oid0" xlink:actuate="user">
+   <replace tag="targettext" property="value" macro="(expand &#34;Skill &#34; (property skill))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

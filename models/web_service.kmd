@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Web_Service" name="Web_Service" title="Web Service" desc="A web service will contain a set of WS operations that can be invoked. WS operations should be reflected as task templates." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Service" xlink:href="service.kmd#AKM_Service"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Web Service Port" xlink:href="web_service_port.kmd#AKM_Web_Service_Port"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Web Service Operation" xlink:href="web_service_operation.kmd#AKM_Web_Service_Operation"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Parameter" xlink:href="parameter.kmd#AKM_Parameter"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Namespace (XML)" xlink:href="namespace_xml.kmd#AKM_Namespace_XML"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Web Service" xlink:href="#AKM_Web_Service" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#DDCC99</string>
+   <string name="troux_iconAlias">9051e3ff-5809-3b87-9540-c75afe63ead5</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">0</integer>
+  </valueset>
+  <valueset vset="default" size="18" xlink:role="type" xlink:title="Web Service" xlink:href="#AKM_Web_Service" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="price"></string>
+   <string name="pricedUnit"></string>
+   <string name="recurringCost"></string>
+   <string name="recurringPrice"></string>
+   <integer name="recurringCostInterval">0</integer>
+   <integer name="recurringPriceInterval">0</integer>
+   <string name="monetaryUnit">0</string>
+  </valueset>
+ </type>
+
+
+</metis>

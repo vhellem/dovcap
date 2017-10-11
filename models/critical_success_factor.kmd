@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ typeviews="3"
+ nextoid="8">
+
+ <type id="oid1" name="CriticalSuccessFactor" title="Critical Success Factor" desc="A Critical Success Factor (CSF) is one of a set of elements of the business strategy synthesis that must exist (are produced or are made available by the business) for the business strategy to be successful.&#10;These have a specified Weight (1-7) that is used to apply a specific prioritized value to a given CSF. This weight and weights on the relationships to Business Processes are used to show the current and target level of IT support of the CSFs for each of the connected Business Processes.&#10;Additionally, a CSF contains a calculated strategic value that is based upon the Business Strategies that a CSF supports and the strengths of these support relationships.&#10;A CSF can be decomposed into Success Factors. Normally the Success Factors are identified first and then they are aggregated into Critical Success Factors (backwards decomposition)." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="SuccessFactor" xlink:href="success_factor.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <property name="rationalCode" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Rationale Code" desc="A code to identify the rationale behind this CSF. The code should begin with CS followed by a number."/>
+  <property name="weight" xlink:role="integer-type" xlink:title="Weight" xlink:href="../primitive_types/primitive_types.kmd#oid8" label="Weight" desc="Relative weight of the CSF compared to the other CSFs"/>
+  <property name="stratValue" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Strategic Value" method-flag="true" desc="This property is calculated as the sum of the products of the straetgic value of the connected Strategies and the weight on the relationships from these Strategies"/>
+  <property name="svCount" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="SV Count" desc="The number of steps used to calculate the strategic value." method-flag="true"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="CriticalSuccessFactor" xlink:href="#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="SuccessFactor" xlink:href="success_factor.kmd#oid1"/>
+  <named-method-link name="stratValue" xlink:role="cpp-method" xlink:href="strategicvalue_methods.kmd#oid5"/>
+  <named-method-link name="svCount" xlink:role="cpp-method" xlink:href="strategicvalue_methods.kmd#oid102"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="CriticalSuccessFactor" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="rationalCode"></string>
+   <integer name="weight">0</integer>
+   <integer name="stratValue" class="volatile">0</integer>
+   <integer name="svCount" class="volatile">0</integer>
+  </valueset>
+ </type>
+
+ <forward-reference id="oid2" stamp="20000308 195900000" xlink:role="type" xlink:title="CriticalSuccessFactor" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="CriticalSuccessFactor" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/sf.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/sf.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="CriticalSuccessFactor" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/bus_csf.svg#oid1" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/bus_csf.svg#oid2" xlink:actuate="user">
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property stratValue))"/>
+   <replace tag="name" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/critical_success_factor.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="CriticalSuccessFactor" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" label="Name" visible-flag="true"/>
+   <propertyview name="description" label="Description" visible-flag="true"/>
+   <propertyview name="rationalCode" label="Rationale Code" desc="A code to identify the rationale behind this CSF. The code should begin with CS followed by a number." visible-flag="false"/>
+   <propertyview name="weight" label="Weight" visible-flag="true"/>
+   <propertyview name="stratValue" label="Strategic Value" visible-flag="true"/>
+   <propertyview name="svCount" label="SV Count" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/ssf.svg#oid1" xlink:actuate="user">
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property stratValue))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="weight" property="value" macro="(expand &#34;W: &#34; (property weight))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/ssf.svg#oid1" xlink:actuate="user">
+   <replace tag="strat_value" property="value" macro="(expand &#34;SV: &#34; (property stratValue))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="weight" property="value" macro="(expand &#34;W: &#34; (property weight))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/strategic_success_factor.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>
+

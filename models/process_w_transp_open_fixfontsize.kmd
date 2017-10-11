@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?metis version="3.4.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ typeviews="1"
+ nextoid="3">
+
+ <viewstyle id="oid1" name="Process_w_tranparent_open_Viewstyle" title="Process w/tranparent open Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Logical Process" xlink:href="http://xml.metis.no/xml/object_types/flowlogic.kmd#oid1" typelabel="Logical Process" typedesc="Process w/transparent open" tree-size="0.5" nested-size="0.5" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process Open" xlink:href="../symbols/process.svg#oid19" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:7.0pt&#62;&#60;qt&#62;&#34; (property identification) &#34;&#60;b&#62; &#34; (label) &#34;&#60;/b&#62;&#38;shy; &#34; (description) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Closed" xlink:href="../symbols/process.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:7.0pt&#62;&#60;qt&#62;&#34; (property identification) &#34;&#60;b&#62; &#34; (label) &#34;&#60;/b&#62;&#38;shy; &#34; (description) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.metis.no/xml/smallicons/gem/gem_logical_process.png"/>
+ </typeview>
+
+</metis>

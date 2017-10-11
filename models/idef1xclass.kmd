@@ -1,0 +1,751 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="48"
+ instances="2"
+ methods="4"
+ typeviews="16"
+ nextoid="121">
+ 
+ <type id="oid1" name="idef1xclass" title="IDEF1X Base Object Class" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+ 
+ <type id="oid17" name="attributedefinition" desc="Attribute Definition" usage="abstract">
+  <property name="attributename" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Attribute Name"/>
+  <property name="foreignkey" xlink:role="string-type" xlink:title="foreignkey" xlink:href="#oid56" label="Foreign Key?"/>
+  <property name="alternatekey" xlink:role="string-type" xlink:title="alternatekey" xlink:href="#oid110" label="Alternate Key?"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="attributedefinition" xlink:href="#oid17">
+   <string name="attributename"></string>
+   <string name="foreignkey">No</string>
+   <string name="alternatekey"> </string>
+  </valueset>
+ </type>
+ 
+ <type id="oid20" name="methoddefinition" desc="Method Definition" usage="abstract">
+  <property name="method" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Method"/>
+  <property name="parameters" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Parameters"/>
+  <property name="returntype" xlink:role="string-type" xlink:title="datatype" xlink:href="#oid25" label="Return Type"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="methoddefinition" xlink:href="#oid20">
+   <string name="method"></string>
+   <string name="parameters"></string>
+   <string name="returntype"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid24" name="roledefinition" desc="Role Definition" usage="abstract">
+  <property name="role" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Role Name"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24">
+   <string name="role"></string>
+  </valueset>
+ </type> 
+
+ <type id="oid43" name="keyattributedefinition" desc="Key Attribute Definition" usage="abstract">
+  <property name="attributename" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Key Attribute Name"/>
+  <property name="foreignkey" xlink:role="string-type" xlink:title="foreignkey" xlink:href="#oid56" label="Foreign Key?"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="keyattributedefinition" xlink:href="#oid43">
+   <string name="attributename"></string>
+   <string name="foreignkey">No</string>
+  </valueset>
+ </type>
+
+ <type id="oid61" name="cardinalitydefinition" desc="Cardinality Definition" usage="abstract">
+  <property name="cardinality" xlink:role="string-type" xlink:title="cardinality" xlink:href="#oid23" label="Cardinality"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="cardinalitydefinition" xlink:href="#oid61">
+   <string name="cardinality"> </string>
+  </valueset>
+ </type>
+
+ <type id="oid70" name="abstractdomainentity" title="Abstract Domain Entity" desc="A Domain represents a named and defined set of values that have one or more &#60;Entity&#62; attributes draw their values from. Domains are considered immutable classes whose values do not change over time.  In IDEF1X, Domains are defined to permit their reuse and standardization across the enterprise. Domains can be one of the following:  &#60;ul&#62;&#60;li&#62;&#60;b&#62;Base&#60;/b&#62;&#60;li&#62;&#60;b&#62;Typed&#60;/b&#62;&#60;/ul&#62;" usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid84"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="abstractdomainentity" xlink:href="#oid70">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid83" name="abstractbasedomain" title="Abstract Base Domain" usage="abstract" decomposition-flag="true" submodel-ok="false">
+  <complex-type-link xlink:role="type" xlink:title="abstractdomainentity" xlink:href="#oid70"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid84"/>
+  <property name="DomainType" xlink:role="string-type" xlink:title="domainbasetypevalues" xlink:href="#oid81" label="Domain holds the type of: " desc="Indicate the base type of this Domain (e.g. Boolean, etc)."/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="abstractbasedomain" xlink:href="#oid83">
+  <string name="name"></string>
+   <string name="description"></string>
+   <string name="DomainType">Character</string>
+  </valueset>
+ </type>
+
+ <type id="oid85" name="valuedomainruledefinition" desc="Domain Rule Value List Definition" usage="abstract">
+  <property name="valuename" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="valuedomainruledefinition" xlink:href="#oid85">
+   <string name="valuename"></string>
+  </valueset>
+ </type>
+
+ <type id="oid88" name="rangedomainruledefinition" desc="Domain Rule Range List Definition" usage="abstract">
+  <property name="firstrangevalue" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Beginning of Range"/>
+  <property name="secondrangevalue" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="End of Range"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="rangedomainruledefinition" xlink:href="#oid88">
+   <string name="firstrangevalue"></string>
+   <string name="secondrangevalue"></string>
+  </valueset>
+ </type> 
+
+ <type id="oid91" name="abstracttypeddomain" title="Abstract Typed Domain" usage="abstract" decomposition-flag="true" submodel-ok="false">
+  <complex-type-link xlink:role="type" xlink:title="abstractdomainentity" xlink:href="#oid70"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="abstracttypeddomain" xlink:href="#oid91">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+ 
+ <type id="oid2" name="independantentity" title="Independent Entity" desc="An Independent Entity is  an entity that can be idenfitied without relationship to another entity. (IDEF1X specification para. 3.1.1)" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid11"/>
+  <property name="keyattributes" xlink:role="collection-type" xlink:title="keyattributes" label="Key Attributes" xlink:href="#oid44"/>
+  <property name="attributes" xlink:role="collection-type" xlink:title="attributes" label="Attributes" xlink:href="#oid19"/>
+  <property name="attrtext" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Attribute Text" method-flag="true"/>
+  <property name="pktext" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Key Attribute Text" method-flag="true"/>
+  <named-method-link name="attrtext" xlink:role="cpp-method" xlink:href="#oid27"/>  
+  <named-method-link name="pktext" xlink:role="cpp-method" xlink:href="#oid57"/> 
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="independantentity" xlink:href="#oid2">
+   <string name="name"></string>
+    <string name="description"></string>
+   <collection name="keyattributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="keyattribute" xlink:href="#oid55">
+   </collection>
+   <collection name="attributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="attribute" xlink:href="#oid18">
+   </collection>
+    <string name="attrtext"></string>
+    <string name="pktext"></string>
+  </valueset>
+ </type>
+
+ <type id="oid26" name="datatypevalue" title="Datatype Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1015"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description" description-flag="true"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="datatypevalue" xlink:href="#oid26">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid40" name="dependantentity" title="Dependent Entity" desc="A Dependent Entity is an entity that requires its unique identification be dependant on another entity. (IDEF1X specification para. 3.1.1)" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid41"/>
+  <property name="keyattributes" xlink:role="collection-type" xlink:title="keyattributes" label="Key Attributes" xlink:href="#oid44"/>
+  <property name="attributes" xlink:role="collection-type" xlink:title="attributes" label="Attributes" xlink:href="#oid19"/>
+  <property name="attrtext" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Attribute Text" method-flag="true"/>
+  <property name="pktext" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Key Attribute Text" method-flag="true"/>
+  <named-method-link name="attrtext" xlink:role="cpp-method" xlink:href="#oid27"/>  
+  <named-method-link name="pktext" xlink:role="cpp-method" xlink:href="#oid57"/>   
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40">
+   <string name="name"></string>
+   <string name="description"></string>
+   <collection name="keyattributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="keyattribute" xlink:href="#oid55">
+   </collection>
+   <collection name="attributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="attribute" xlink:href="#oid18">
+   </collection>
+   <string name="attrtext"></string>
+   <string name="pktext"></string>
+  </valueset>
+ </type>
+
+ <type id="oid42" name="catentity" title="Categorization Cluster" desc="A Categorization Cluster ins a entity used to aggregate the possible types of  a generic entity. (IDEF1X specification 3.6).  A Category Discriminator attribute is used to establish uniqueness among the types." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid58"/>
+  <property name="discriminator" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Discriminator" label-flag="true"/>
+  <property name="catcomplete" xlink:role="integer-type" xlink:title="categorizationcomplete" xlink:href="#oid66" label="Category Complete" label-flag="true"/>
+  <property name="CategorizationCompleteColor" xlink:role="string-type" xlink:title="name" xlink:href="metis:std#oid42" label="Line Style" method-flag="true"/>
+  <named-method-link name="CategorizationCompleteColor" xlink:role="cpp-method" xlink:href="#oid108"/>
+  <valueset vset="default" size="5" xlink:role="type" xlink:title="catentity" xlink:href="#oid42">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="discriminator"></string>
+   <integer name="catcomplete">0</integer>
+   <string name="CategorizationCompleteColor" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid46" name="keytypevalue" title="Key Type Value" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="metis:stdtypes#oid1015"/>
+  <property name="name" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" label-flag="true"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description" description-flag="true"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="keytypevalue" xlink:href="#oid46">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid94" name="typedvaluedomain" title="Typed Domain (Value List)" desc="A Domain represents a named and defined set ot values that one or more (entity) attributes draw their values from.  A TYPED domain is a sub-type of a BASE domain or another TYPED domain." usage="object" decomposition-flag="true" submodel-ok="false">
+  <complex-type-link xlink:role="type" xlink:title="abstracttypeddomain" xlink:href="#oid91"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid102"/>
+  <property name="domainrulevalueattributes" xlink:role="collection-type" xlink:title="domainrulevalueattributes" xlink:href="#oid86" label="Domain Value List" list-flag="true"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="typedvaluedomain" xlink:href="#oid94">
+   <string name="name"></string>
+   <string name="description"></string>
+   <collection name="domainrulevalueattributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="domainrulevalueattribute" xlink:href="#oid87">
+   </collection>
+  </valueset>
+ </type>
+
+ <type id="oid96" name="typedrangedomain" title="Typed Domain (Range List)" desc="A Domain represents a named and defined set ot values that one or more (entity) attributes draw their values from.  A TYPED domain is a sub-type of a BASE domain or another TYPED domain." usage="object" decomposition-flag="true" submodel-ok="false">
+ <complex-type-link xlink:role="type" xlink:title="abstracttypeddomain" xlink:href="#oid91"/>
+ <typeview-link xlink:role="typeview" xlink:href="#oid97"/>
+ <property name="domainrulerangeattributes" xlink:role="collection-type" xlink:title="domainrulerangeattributes" xlink:href="#oid89" label="Domain Range List" list-flag="true"/>
+ <valueset vset="default" size="3" xlink:role="type" xlink:title="typedrangedomain" xlink:href="#oid96">
+  <string name="name"></string>
+  <string name="description"></string>
+  <collection name="domainrulerangeattributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="domainrulerangeattribute" xlink:href="#oid90">
+  </collection>
+ </valueset>
+ </type>
+
+ <type id="oid99" name="basevaluedomain" title="Base Domain (Value List)" desc="A Domain represents a named and defined set ot values that one or more (entity) attributes draw their values from.  A BASE Domain is one  that may be assigned a data type which may be one of the following:  Character, Numeric or Boolean.  In addition, a BASE domain begins the domain tree, to which TYPED domains further refine the domain ranges and values." usage="object" decomposition-flag="true" submodel-ok="false">
+  <complex-type-link xlink:role="type" xlink:title="abstractbasedomain" xlink:href="#oid83"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid95"/>
+  <property name="domainrulevalueattributes" xlink:role="collection-type" xlink:title="domainrulevalueattributes" label="Domain Rule Value Attributes" xlink:href="#oid86"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="basevaluedomain" xlink:href="#oid99">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="DomainType">Character</string>
+   <collection name="domainrulevalueattributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="domainrulevalueattribute" xlink:href="#oid87">
+   </collection>
+  </valueset>
+ </type>
+
+ <type id="oid100" name="baserangedomain" title="Base Domain (Range List)" desc="A Domain represents a named and defined set ot values that one or more (entity) attributes draw their values from.  A BASE Domain is one  that may be assigned a data type which may be one of the following:  Character, Numeric or Boolean.  In addition, a BASE domain begins the domain tree, to which TYPED domains further refine the domain ranges and values." usage="object" decomposition-flag="true" submodel-ok="false">
+  <complex-type-link xlink:role="type" xlink:title="abstractbasedomain" xlink:href="#oid83"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid101"/>
+  <property name="domainrulerangeattributes" xlink:role="collection-type" xlink:title="domainrulerangeattributes" label="Domain Rule Range Attributes" xlink:href="#oid89"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="baserangedomain" xlink:href="#oid100">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="DomainType">Character</string>
+   <collection name="domainrulerangeattributes" structure="list" size="0" xlink:role="valueset-type" xlink:title="domainrulerangeattribute" xlink:href="#oid90">
+   </collection>
+  </valueset>
+ </type> 
+   
+ <collection-type id="oid19" name="attributes" title="Attributes" desc="A list of attributes" xlink:role="valueset-type" xlink:title="attribute" xlink:href="#oid18"/>
+
+ <collection-type id="oid22" name="methods" title="Methods" desc="A list of methods" xlink:role="valueset-type" xlink:href="#oid21"/>
+ 
+ <collection-type id="oid44" name="keyattributes" title="Key Attributes" desc="A list of Primary Key attributes" xlink:role="valueset-type" xlink:title="keyattribute" xlink:href="#oid55"/> 
+ 
+ <collection-type id="oid89" name="domainrulerangeattributes" title="Value" desc="A list of Domain Rule Values" xlink:role="valueset-type" xlink:title="domainrulerangeattribute" xlink:href="#oid90"/> 
+ 
+ <collection-type id="oid86" name="domainrulevalueattributes" title="Value" desc="A list of Domain Rule Values" xlink:role="valueset-type" xlink:title="domainrulevalueattribute" xlink:href="#oid87"/> 
+  
+ <string-type id="oid23" name="cardinality" title="Cardinality" default=" ">
+  <string class="shared"> </string>
+  <string class="shared">P</string>
+  <string class="shared">Z</string>
+  <string class="shared">n</string>
+  <string class="shared">n-m</string>
+ </string-type>
+
+ <string-type id="oid25" name="datatype" title="Datatype">
+  <dynamic-range property="name">
+   <complex-type-link xlink:role="type" xlink:title="datatypevalue" xlink:href="#oid26"/>
+  </dynamic-range>
+ </string-type>
+
+
+ <string-type id="oid56" name="foreignkey" title="Foreign Key" default="No">
+  <string class="shared">Yes</string>
+  <string class="shared">No</string>
+ </string-type>
+
+ <string-type id="oid59" name="relationshipoptional" title="Relationship Optional" default="No">
+  <string class="shared">Yes</string>
+  <string class="shared">No</string>
+ </string-type>
+
+ <string-type id="oid60" name="relationshipmandatory" title="Relationship Mandatory" default="No">
+  <string class="shared">Yes</string>
+  <string class="shared">No</string>
+ </string-type>
+
+ <integer-type id="oid66" name="categorizationcomplete" title="Categorization Complete">
+  <range name="Yes" min="1" max="1"/>
+  <range name="No" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid81" name="domainbasetypevalues" title="DomainBaseTypeValues" desc="A Base Domain may be assigned a data type which is one of  the following, per the IDEF1X specification.&#10;&#10;&#60;ul&#62;&#10;&#60;li&#62;Character&#10;&#60;li&#62;Numeric&#10;&#60;li&#62;Boolean&#10;&#60;/ul&#62;" default="Character">
+  <string class="shared">Character</string>
+  <string class="shared">Numeric</string>
+  <string class="shared">Boolean</string>
+ </string-type>
+
+ <integer-type id="oid107" name="ColorMapping" desc="Color Mapping">
+  <range name="solid" min="1" max="1"/>
+  <range name="none" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid110" name="alternatekey" title="Alternate Key" default=" ">
+  <string class="shared"> </string>
+  <string class="shared">AK1</string>
+  <string class="shared">AK2</string>
+  <string class="shared">AK3</string>
+  <string class="shared">AK4</string>
+  <string class="shared">AK5</string>
+  <string class="shared">AK6</string>
+  <string class="shared">AK7</string>
+  <string class="shared">AK8</string>
+  <string class="shared">AK9</string>
+  <string class="shared">AK10</string>
+  <string class="shared">AK11</string>
+  <string class="shared">AK12</string>
+  <string class="shared">AK13</string>
+  <string class="shared">AK14</string>
+  <string class="shared">AK15</string>
+ </string-type>
+
+ <valueset-type id="oid18" name="attribute" desc="Attribute" xlink:role="type" xlink:title="attributedefinition" xlink:href="#oid17">
+  <complex-type-link xlink:role="type" xlink:title="attributedefinition" xlink:href="#oid17"/>
+ </valueset-type>
+
+ <valueset-type id="oid21" desc="Attribute" xlink:role="type" xlink:title="methoddefinition" xlink:href="#oid20">
+  <complex-type-link xlink:role="type" xlink:title="methoddefinition" xlink:href="#oid20"/>
+ </valueset-type> 
+
+ <valueset-type id="oid55" name="keyattribute" desc="Primary Key Attribute" xlink:role="type" xlink:title="keyattributedefinition" xlink:href="#oid43">
+  <complex-type-link xlink:role="type" xlink:title="keyattributedefinition" xlink:href="#oid43"/>
+ </valueset-type>
+
+ <valueset-type id="oid87" name="domainrulevalueattribute" desc="Domain Rule Value Attribute" xlink:role="type" xlink:title="valuedomainruledefinition" xlink:href="#oid85">
+  <complex-type-link xlink:role="type" xlink:title="valuedomainruledefinition" xlink:href="#oid85"/>
+ </valueset-type>
+
+ <valueset-type id="oid90" name="domainrulerangeattribute" desc="Domain Rule Range Attribute" xlink:role="type" xlink:title="rangedomainruledefinition" xlink:href="#oid88">
+  <complex-type-link xlink:role="type" xlink:title="rangedomainruledefinition" xlink:href="#oid88"/>
+ </valueset-type>  
+ 
+ <type id="oid47" name="identifyingrelationship" title="Identifying Relationship" usage="relationship" desc="Associated a parent entity to a child entity, where the child entity derives part of all of its unique identification from it's parent.">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid51"/>
+  <property name="constraint" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Constraint"/>
+  <property name="cardinality" xlink:role="type" xlink:title="cardinalitydefinition" xlink:href="#oid61" label="Cardinality"/>
+  <property name="from" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role A Detail (&#39;Origin&#39;)"/>
+  <property name="to" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role B Detail (&#39;Target&#39;)"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="identifyingrelationship" xlink:href="#oid47">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="constraint"></string>
+   <string name="cardinality.cardinality"> </string>
+   <string name="from.role"></string>
+   <string name="to.role"></string>
+  </valueset>
+ </type>
+
+ <type id="oid48" name="nonidentoptrelationship" title="Non - Identifying (Optional)" usage="relationship" desc="Associates a parent and child entity, where the child does not derive part of all of it's unique identification from its parent.  In addition, as instance of the child entity is not required to have an instance of the parent attribute value.">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid52"/>
+  <property name="constraint" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Constraint"/>
+  <property name="cardinality" xlink:role="type" xlink:title="cardinalitydefinition" xlink:href="#oid61" label="Cardinality"/>
+  <property name="from" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role A Detail (&#39;Origin&#39;)"/>
+  <property name="to" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role B Detail (&#39;Target&#39;)"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="nonidentoptrelationship" xlink:href="#oid48">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="constraint"></string>
+   <string name="cardinality.cardinality"> </string>
+   <string name="from.role"></string>
+   <string name="to.role"></string>
+  </valueset>
+ </type>
+
+ <type id="oid49" name="nonidentmandrelationship" title="Non - Identifying (Mandatory)" usage="relationship" desc="Associates a parent and child entity, where the child does not derive part of all of it's unique identification from its parent.  However, as instance of the child entity is required to have an instance of the parent attribute value.">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid53"/>
+  <property name="constraint" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Constraint"/>
+  <property name="cardinality" xlink:role="type" xlink:title="cardinalitydefinition" xlink:href="#oid61" label="Cardinality"/>
+  <property name="from" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role A Detail (&#39;Origin&#39;)"/>
+  <property name="to" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role B Detail (&#39;Target&#39;)"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="nonidentmandrelationship" xlink:href="#oid49">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="constraint"></string>
+   <string name="cardinality.cardinality"> </string>
+   <string name="from.role"></string>
+   <string name="to.role"></string>
+   </valueset>
+ </type>
+
+ <type id="oid62" name="nonspecificrelationship" title="Non - Specific" usage="relationship" desc="Non-specific relationships are used in high-level Entity-Relationship views to represent many-many associations between entities.">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid63"/>
+  <property name="from" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role A Detail (&#39;Origin&#39;)"/>
+  <property name="to" xlink:role="type" xlink:title="roledefinition" xlink:href="#oid24" label="Role B Detail (&#39;Target&#39;)"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="nonspecificrelationship" xlink:href="#oid62">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="from.role"></string>
+   <string name="to.role"></string>
+  </valueset>
+ </type>
+
+ <type id="oid64" name="categorizationrelationship" title="Categorization" usage="relationship" desc="Categorization relationships are used to represent structures in which an entity is a 'type' (category) of another entity (IDEF1X specification 3.6))">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid65"/>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="catentity" xlink:href="#oid42" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="catentity" xlink:href="#oid42" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="catentity" xlink:href="#oid42" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="categorizationrelationship" xlink:href="#oid64">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid103" name="furtherdefinesrange" title="Further Defines (Range)" usage="relationship" decomposition-flag="true" submodel-ok="false" desc="Defines the relationship between a BASE or TYPED domain and its child TYPED domain, to further refine the values that the domain may hold.">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="baserangedomain" xlink:href="#oid100" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="typedrangedomain" xlink:href="#oid96" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="typedrangedomain" xlink:href="#oid96" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="typedrangedomain" xlink:href="#oid96" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="furtherdefinesrange" xlink:href="#oid103">
+   <string name="name"></string>
+   <string name="description"></string>
+   </valueset>
+ </type>
+
+ <type id="oid105" name="furtherdefinesvalue" title="Further Defines (Value)" usage="relationship" decomposition-flag="true" submodel-ok="false" desc="Defines the relationship between a BASE or TYPED domain and its child TYPED domain, to further refine the values that the domain may hold.">
+  <complex-type-link xlink:role="type" xlink:title="idef1xclass" xlink:href="#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid106"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="basevaluedomain" xlink:href="#oid99" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="typedvaluedomain" xlink:href="#oid94" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="typedvaluedomain" xlink:href="#oid94" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="typedvaluedomain" xlink:href="#oid94" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="furtherdefinesvalue" xlink:href="#oid105">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type> 
+ 
+ <cpp-method id="oid27" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Column">attributename</string>
+   <string name="Property">attributes</string>
+   <string name="Separator">&#60;br&#62;</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid28" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Column">method</string>
+   <string name="Property">methods</string>
+   <string name="Separator">&#60;br&#62;</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid57" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Column">attributename</string>
+   <string name="Property">keyattributes</string>
+   <string name="Separator">&#60;br&#62;</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid108" title="getColorValue1" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="ColorMapping" xlink:href="#oid107" xlink:actuate="user"/>
+   <string name="Property">catcomplete</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid11" xlink:role="type" xlink:title="independantentity" xlink:href="#oid2" tree-size="0.35" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property pktext) &#34;&#60;hr&#62;&#34; (property attrtext))"/>
+   <replace tag="entityname" property="value" macro="(expand &#34;&#60;h3&#62;&#34; (property name) &#34;&#60;/h3&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property pktext) &#34;&#60;hr&#62;&#34; (property attrtext))"/>
+   <replace tag="entityname" property="value" macro="(expand &#34;&#60;h3&#62;&#34; (property name) &#34;&#60;/h3&#62;&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid41" xlink:role="type" xlink:title="dependantentity" xlink:href="#oid40" tree-size="0.35" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property pktext) &#34;&#60;hr&#62;&#34; (property attrtext))"/>
+   <replace tag="entityname" property="value" macro="(expand &#34;&#60;h3&#62;&#34; (property name) &#34;&#60;/h3&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property pktext) &#34;&#60;hr&#62;&#34; (property attrtext))"/>
+   <replace tag="entityname" property="value" macro="(expand &#34;&#60;h3&#62;&#34; (property name) &#34;&#60;/h3&#62;&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid51" xlink:role="type" xlink:title="identifyingrelationship" xlink:href="#oid47" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/idef1xrelationships.svg#oid2" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from.role))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to.role) (newline) (property cardinality.cardinality))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid52" xlink:role="type" xlink:title="nonidentoptrelationship" xlink:href="#oid48" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/idef1xrelationships.svg#oid3" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from.role))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to.role) (newline) (property cardinality.cardinality))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid53" xlink:role="type" xlink:title="nonidentmandrelationship" xlink:href="#oid49" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/idef1xrelationships.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from.role))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to.role) (newline) (property cardinality.cardinality))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid58" xlink:role="type" xlink:title="catentity" xlink:href="#oid42" tree-size="0.35" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid5" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property discriminator))"/>
+   <replace tag="line2" property="linestyle" macro="(expand (property CategorizationCompleteColor))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid5" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="line2" property="linestyle" macro="(expand (property CategorizationCompleteColor))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid63" xlink:role="type" xlink:title="nonspecificrelationship" xlink:href="#oid62" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/idef1xrelationships.svg#oid4" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from.role))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to.role))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid65" xlink:role="type" xlink:title="categorizationrelationship" xlink:href="#oid64" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/idef1xrelationships.svg#oid5" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid84" xlink:role="type" xlink:title="abstractbasedomain" xlink:href="#oid83" typelabel="basedomainview" typedesc="Base Domain TypeView" tree-size="0.5" nested-size="0.125" behavior="nested" position="top" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid95" xlink:role="type" xlink:title="basevaluedomain" xlink:href="#oid99" typelabel="Base Domain (Value List)" typedesc="Base Domain (Value List)" tree-size="0.5" nested-size="0.125" behavior="nested" position="top" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid97" xlink:role="type" xlink:title="typedrangedomain" xlink:href="#oid96" typelabel="Typed Domain (Range List)" typedesc="Typed Domain (Range List)" tree-size="0.5" nested-size="0.125" behavior="nested" position="top" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid101" xlink:role="type" xlink:title="baserangedomain" xlink:href="#oid100" typelabel="Base Domain (Range List)" typedesc="Base Domain (Range List)" tree-size="0.5" nested-size="0.125" behavior="nested" position="top" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid102" xlink:role="type" xlink:title="typedvaluedomain" xlink:href="#oid94" typelabel="Typed Domain (Value List)" typedesc="Typed Domain (Value List)" tree-size="0.5" nested-size="0.125" behavior="nested" position="top" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/idef1x.svg#oid4" xlink:actuate="user">
+   <replace tag="DomainName" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid106" xlink:role="type" xlink:title="furtherdefinesvalue" xlink:href="#oid105" typelabel="Further defines" tree-size="0.5" nested-size="0.125" behavior="tree">
+  </typeview>
+
+ <object id="oid117">
+  <valueset size="45" xlink:role="type" xlink:title="Matrix Layout Strategy" xlink:href="metis:layout#oid13" xlink:actuate="user">
+   <string name="IDENTIFIER">IDEF1X Matrix layout (Default)</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">25</float>
+   <float name="VerticalObjectSpacing">25</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">2</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">0</integer>
+   <integer name="MergeInputPorts">0</integer>
+   <integer name="MergeOutputPorts">0</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">0</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">1</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="IsSystemStrategy">1</integer>
+   <integer name="HorizontalJustification">1</integer>
+   <integer name="VerticalJustification">1</integer>
+   <integer name="HorizontalStrJustification">1</integer>
+   <integer name="VerticalStrJustification">1</integer>
+   <integer name="HorizontalDrawingDirection">1</integer>
+   <integer name="VerticalDrawingDirection">1</integer>
+   <integer name="ChannelMerging">0</integer>
+   <integer name="DrawingPriority">0</integer>
+   <integer name="RowColumnNumberingMethod">2</integer>
+   <integer name="ScaleNestedObjects">1</integer>
+   <integer name="UseTotalArea">0</integer>
+   <integer name="UseTotalOption">0</integer>
+   <integer name="UseSymbolLayoutArea">1</integer>
+   <integer name="AssociativeHierarchy">0</integer>
+   <integer name="AssociativeRelDirNormal">1</integer>
+   <pointer name="AssociativeType"/>
+   <integer name="RowColumnNumber">2</integer>
+   <string name="LayoutAreaTag">LAYOUTAREA</string>
+   <pointer name="LayoutObjectType"/>
+  </valueset>
+ </object>
+
+ <object id="oid120">
+  <valueset size="37" xlink:role="type" xlink:title="Hierarchical Layout Strategy" xlink:href="metis:layout#oid19" xlink:actuate="user">
+   <string name="IDENTIFIER">IDEF1X Hiearchical layout (Default)</string>
+   <string name="DESCRIPTION"></string>
+   <integer name="ObjectSpacing">10</integer>
+   <float name="HorizontalObjectSpacing">10</float>
+   <float name="VerticalObjectSpacing">10</float>
+   <integer name="FixedSpacing">0</integer>
+   <integer name="ReductionMethod">0</integer>
+   <integer name="ClearPath">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">0</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">0</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">8</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">1</integer>
+   <pointer name="SortingType"/>
+   <string name="SortPropertyName"></string>
+   <integer name="IsSystemStrategy">1</integer>
+   <integer name="HorizontalJustification">1</integer>
+   <integer name="VerticalJustification">1</integer>
+   <integer name="DrawingDirection">2</integer>
+   <integer name="ChannelMerging">1</integer>
+   <integer name="OffsetTopObject">0</integer>
+   <string name="StackedLevels"></string>
+   <integer name="KeepLevelsAligned">1</integer>
+   <integer name="StaggeredLayout">0</integer>
+   <integer name="InputPortPosition">50</integer>
+   <integer name="OutputPortPosition">50</integer>
+   <integer name="OffsetPortPosition">50</integer>
+  </valueset>
+ </object>
+
+</metis>

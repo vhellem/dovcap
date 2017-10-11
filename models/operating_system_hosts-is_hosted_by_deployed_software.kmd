@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="7.1.2008.0401"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_AppDomain:Operating_System_hosts-is_hosted_by_Deployed_Software_UUID" name="Operating_System_hosts_is_hosted_by_Deployed_Software" title="Operating System hosts-is hosted by Deployed Software" desc="Used to associate instances of Deployed Software with the Operating System instance upon which they are hosted." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/operating_system_hosts-is_hosted_by_deployed_software.kmd#UUID4_9F45C68A-4AF5-4F68-BAA0-0B1ECFC04F36"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Operating System" xlink:href="../object_types/operating_system.kmd#CompType_Semantics_AppDomain:Operating_System_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Deployed Software" xlink:href="../../meaf/objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Operating System hosts-is hosted by Deployed Software" xlink:href="#RelType_Semantics_AppDomain:Operating_System_hosts-is_hosted_by_Deployed_Software_UUID" xlink:actuate="user">
+   <string name="from">hosts</string>
+   <string name="to">is hosted by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Operating System hosts-is hosted by Deployed Software" xlink:href="#RelType_Semantics_AppDomain:Operating_System_hosts-is_hosted_by_Deployed_Software_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

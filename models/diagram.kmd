@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Metis_Diagram" title="Metis Diagram" desc="Common basetype for all the Metis diagrams (top-objects)" usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Diagram Property Base" xlink:href="../user/diagrampropertybase.kmd#oid1"/>
+ </type>
+ 
+ <criteria id="oid2001" name="fromObject" title="fromObject" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="origin"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2002" name="toObject" title="toObject" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="target"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2003" name="diagramFromDiagramElement" title="diagramFromDiagramElement" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="partof" use-off-flag="true">
+      <c-op kind="not">
+       <c-op kind="object">
+        <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="#oid1"/>
+       </c-op>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="partof">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2004" name="diagramFromRelOrigin" title="diagramFromRelOrigin" 
+  desc="Find the diagram which owns the diagram-element this relationship is connected to in origin-end" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="origin" use-off-flag="true"/>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="partof" use-off-flag="true">
+      <c-op kind="not">
+       <c-op kind="object">
+        <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="../object_types/diagram.kmd#oid1"/>
+       </c-op>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="partof">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="../object_types/diagram.kmd#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2005" name="diagramFromRelTarget" title="diagramFromRelTarget" 
+  desc="Find the diagram which owns the diagram-element this relationship is connected to in target-end" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="target" use-off-flag="true"/>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="partof" use-off-flag="true">
+      <c-op kind="not">
+       <c-op kind="object">
+        <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="../object_types/diagram.kmd#oid1"/>
+       </c-op>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="partof">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="../object_types/diagram.kmd#oid1"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+</metis>

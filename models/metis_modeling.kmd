@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="3"
+ nextoid="4">
+
+ <metamodel id="oid1" name="MEAFModelingMetamodel" title="Modeling" desc="The built-in Modeling metamodel">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:href="#oid2"/>
+  </metamodel-links>
+  <symbol-palette-links size="1">
+   <symbol-palette-link xlink:role="symbol-palette" xlink:href="http://xml.metis.no/xml/symbols/library/index.kmd#oid1" xlink:actuate="user"/>
+  </symbol-palette-links>
+  <viewstyle-links size="1">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Relationship Midpoint Text View Style" xlink:href="http://xml.metis.no/xml/viewstyles/relship_midpoint_text_viewstyle.kmd#oid1"/>
+  </viewstyle-links>
+ </metamodel>
+
+  <metamodel id="oid2" name="DeveloperEd.ModelEd.UriToolBar.MEAFModeling" title="Modeling Domain" desc="Contains common modeling constructs, criteria and layout strategies.&#10;These can be used for any metamodel and any metamodel in the metamodel.">
+    <metamodel-links size="5">
+      <metamodel-link xlink:role="metamodel" xlink:href="metis:layout#oid152"/>
+      <metamodel-link xlink:role="metamodel" xlink:href="metis:stddomains#oid20"/>
+      <metamodel-link xlink:role="metamodel" xlink:href="metis:stddomains#oid10"/>
+      <metamodel-link xlink:role="metamodel" xlink:href="metis:stddomains#oid9"/>
+<!--
+      <metamodel-link xlink:role="metamodel" xlink:href="#oid3"/>
+-->
+    </metamodel-links>
+    <complex-type-links size="14">
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#PushPin"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#Comment"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#ActionButton"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#RelationshipMatrixButton"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#PrintSettingsButton"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#Label"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#Label2"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdshortcut#Shortcut"/>
+      <complex-type-link xlink:role="type" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_general_relationship_UUID"/>
+      <complex-type-link xlink:role="type" xlink:href="../objecttypes/general_object.kmd#CompType_MEAF:GeneralObject_UUID"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#ContainerRelship"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#oid3"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#Picture"/>
+      <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#Image"/>
+    </complex-type-links>
+  </metamodel>
+
+<!-- Available as separate domain
+  <metamodel id="oid3" name="DeveloperEd.ModelEd.UriToolBar.DocumentModeling" title="Document Modeling" desc="Enables creation of Documents, Online Documents and Document Classes.">
+    <complex-type-links size="5">
+      <complex-type-link xlink:role="type" xlink:href="../relationshiptypes/has_class-is_class_for.kmd#Reltype_has_class-is_class_for_UUID"/>
+      <complex-type-link xlink:role="type" xlink:href="../relationshiptypes/has_document-is_document_for.kmd#Reltype_has_document-is_document_for_UUID"/>
+      <complex-type-link xlink:role="type" xlink:href="../objecttypes/document_class.kmd#CompType_MEAF:DocumentClass_UUID"/>
+      <complex-type-link xlink:role="type" xlink:href="../objecttypes/online_document.kmd#CompType_MEAF:OnlineDocument_UUID"/>
+      <complex-type-link xlink:role="type" xlink:href="../objecttypes/document.kmd#CompType_MEAF:Document_UUID"/>
+    </complex-type-links>
+  </metamodel>
+-->
+
+</metis>

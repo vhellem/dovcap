@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="7.1.2008.0401"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics_System:Deployed_Software_requires-is_required_by_Interface_UUID" name="Deployed_Software_requires_is_required_by_Interface" title="Deployed Software requires-is required by Interface" desc="Used to associate a Deployed Software instances with an Interface to another Deployed Software item that it requires for its correct operation, i.e., has a dependency on a capability of the providing Deployed Software item." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../../meaf/abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/deployed_software_requires-is_required_by_interface.kmd#UUID4_DD8E6CDF-2C81-4B32-A657-F4080134EC80"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../../meaf/objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Interface" xlink:href="../object_types/interface.kmd#CompType_Semantics_System:Interface_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software requires-is required by Interface" xlink:href="#RelType_Semantics_System:Deployed_Software_requires-is_required_by_Interface_UUID" xlink:actuate="user">
+   <string name="from">requires</string>
+   <string name="to">is required by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deployed Software requires-is required by Interface" xlink:href="#RelType_Semantics_System:Deployed_Software_requires-is_required_by_Interface_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

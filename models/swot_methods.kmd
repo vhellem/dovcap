@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ methods="1" 
+ nextoid="2">
+
+ <cpp-method id="oid1" name="Pick_SWOT_Value" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute SWOT Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="SWOT" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_swot_UUID"/>
+   <string name="Property">swotClassification</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

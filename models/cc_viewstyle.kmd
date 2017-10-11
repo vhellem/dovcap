@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="2"
+ nextoid="1">
+
+ <viewstyle id="CC_Neighbours_Viewstyle" name="CC_Neighbours_Viewstyle" title="Neighbours Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_element.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_request.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_set.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configurable_component.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configuration_rule.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_allocation.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter_value.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter_value.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_solution.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter_value.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interaction.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interface.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter_value.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/port.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter_value.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/cc_product.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/akm/languages/view_objects.kmd#oid14" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="CC_Viewstyle" name="CC_Viewstyle" title="CC Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_element.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_request.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_set.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configurable_component.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configuration_rule.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_allocation.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter_value.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter_value.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_solution.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter_value.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interface.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interaction.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter_value.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/port.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter_value.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/cc_product.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/akm/languages/view_objects.kmd#oid4" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="Nested_Viewstyle" name="Nested_Viewstyle" title="Nested Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_element.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_request.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_set.kmd#oid3" xink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configurable_component.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configuration_rule.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_allocation.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter.kmd#oid13" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter_value.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter_value.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_solution.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter_value.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interface.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interaction.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter_value.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/port.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter_value.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/cc_product.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/akm/languages/view_objects.kmd#oid14" xlink:actuate="user"/>
+
+ </viewstyle>
+
+ <viewstyle id="Nested_Tree_Viewstyle" name="Nested_Tree_Viewstyle" title="Nested_Tree Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_element.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_request.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/composition_set.kmd#oid4" xink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configurable_component.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/configuration_rule.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_allocation.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/constraint_parameter_value.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_parameter_value.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/design_solution.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/functional_requirement_parameter_value.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interface.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/interaction.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/performance_parameter_value.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/port.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/variant_parameter_value.kmd#oid4" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../class/cc_product.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="http://xml.activeknowledgemodeling.com/akm/languages/view_objects.kmd#oid14" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="CC_instance_Viewstyle_2" name="CC_instance_Viewstyle_2" title="CC_instance_Viewstyle_2">
+  <typeview-link xlink:role="typeview" xlink:href="../class/cc_instance.kmd#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="CC_instance_Viewstyle_3" name="CC_instance_Viewstyle_3" title="CC_instance_Viewstyle_3">
+  <typeview-link xlink:role="typeview" xlink:href="../class/cc_instance.kmd#oid3" xlink:actuate="user"/>
+ </viewstyle>
+
+</metis>

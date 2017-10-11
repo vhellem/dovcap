@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<MetisImport>
+    <DataSource>
+        <Resultset id="/service">
+            <ProviderType>MSXML</ProviderType>
+            <ConnectionString evaluate="false">http://xml.activeknowledgemodeling.com/system/methods/wsdl-example.xml</ConnectionString>
+            <Transform evaluate="false">file:///C|/programfiler/metis/metis5.2/bin/wsdl.xsl</Transform>
+            <Query evaluate="false">/service</Query>
+        </Resultset>
+        <Resultset id="/service/operation">
+            <ProviderType>MSXML</ProviderType>
+            <ConnectionString evaluate="false">http://xml.activeknowledgemodeling.com/system/methods/wsdl-example.xml</ConnectionString>
+            <Transform evaluate="false">file:///C|/programfiler/metis/metis5.2/bin/wsdl.xsl</Transform>
+            <Query evaluate="false">/service/operation</Query>
+        </Resultset>
+        <Resultset id="/service/operation/input">
+            <ProviderType>MSXML</ProviderType>
+            <ConnectionString evaluate="false">http://xml.activeknowledgemodeling.com/system/methods/wsdl-example.xml</ConnectionString>
+            <Transform evaluate="false">file:///C|/programfiler/metis/metis5.2/bin/wsdl.xsl</Transform>
+            <Query evaluate="false">/service/operation/input</Query>
+        </Resultset>
+        <Resultset id="/service/operation/output">
+            <ProviderType>MSXML</ProviderType>
+            <ConnectionString evaluate="false">http://xml.activeknowledgemodeling.com/system/methods/wsdl-example.xml</ConnectionString>
+            <Transform evaluate="false">file:///C|/programfiler/metis/metis5.2/bin/wsdl.xsl</Transform>
+            <Query evaluate="false">/service/operation/output</Query>
+        </Resultset>
+        <Resultset id="/service/data">
+            <ProviderType>MSXML</ProviderType>
+            <ConnectionString evaluate="false">http://xml.activeknowledgemodeling.com/system/methods/wsdl-example.xml</ConnectionString>
+            <Transform evaluate="false">file:///C|/programfiler/metis/metis5.2/bin/wsdl.xsl</Transform>
+            <Query evaluate="false">/service/data</Query>
+        </Resultset>
+        <Resultset id="/service/namespace">
+            <ProviderType>MSXML</ProviderType>
+            <ConnectionString evaluate="false">http://xml.activeknowledgemodeling.com/system/methods/wsdl-example.xml</ConnectionString>
+            <Transform evaluate="false">file:///C|/programfiler/metis/metis5.2/bin/wsdl.xsl</Transform>
+            <Query evaluate="false">/service/namespace</Query>
+        </Resultset>
+        <Resultset id="/service/port">
+            <ProviderType>MSXML</ProviderType>
+            <ConnectionString evaluate="false">http://xml.activeknowledgemodeling.com/system/methods/wsdl-example.xml</ConnectionString>
+            <Transform evaluate="false">file:///C|/programfiler/metis/metis5.2/bin/wsdl.xsl</Transform>
+            <Query evaluate="false">/service/port</Query>
+        </Resultset>
+    </DataSource>
+    <DataTarget>
+        <InputFileName evaluate="false">
+        </InputFileName>
+        <OutputFileName evaluate="false">
+        </OutputFileName>
+        <Autolayout>partial</Autolayout>
+        <Types>
+            <ObjectType id="port">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/system/objecttypes/web_service_port.kmd#AKM_Web_Service_Port</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Services</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="defnspsdfsdf">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/system/objecttypes/namespace_xml.kmd#AKM_Namespace_XML</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Data</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="nsp">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/system/objecttypes/namespace_xml.kmd#AKM_Namespace_XML</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Data</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="data">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/system/objecttypes/parameter.kmd#AKM_Parameter</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Data</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="output">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/task/objecttypes/task_output.kmd#AKM_Task_Output</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Services</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="input">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/task/objecttypes/task_input.kmd#AKM_Task_Input</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Services</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="operation">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/system/objecttypes/web_service_operation.kmd#AKM_Web_Service_Operation</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Services</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="defnsp">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/system/objecttypes/namespace_xml.kmd#AKM_Namespace_XML</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Data</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <ObjectType id="service">
+                <ObjectTypeURI>http://xml.activeknowledgemodeling.com/system/objecttypes/web_service.kmd#AKM_Web_Service</ObjectTypeURI>
+                <UniqueModelProperty>externalID</UniqueModelProperty>
+                <UpdateOptions>
+                    <NewObjects>
+                        <Action evaluate="false">Container=Services</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </NewObjects>
+                    <DeletedObjects>
+                        <Action evaluate="false">Keep</Action>
+                        <OpenSymbol evaluate="false">
+                        </OpenSymbol>
+                        <ClosedSymbol evaluate="false">
+                        </ClosedSymbol>
+                    </DeletedObjects>
+                </UpdateOptions>
+            </ObjectType>
+            <RelationshipType id="defaulsservicenamespace">
+                <RelationshipTypeURI>http://xml.activeknowledgemodeling.com/system/relationshiptypes/default_namespace.kmd#AKM_Default_namespace_for_parameter</RelationshipTypeURI>
+                <UpdateOptions>
+                    <NewRelationships>
+                        <Action evaluate="false">Insert</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </NewRelationships>
+                    <DeletedRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </DeletedRelationships>
+                    <BrokenRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </BrokenRelationships>
+                </UpdateOptions>
+            </RelationshipType>
+            <RelationshipType id="port-op">
+                <RelationshipTypeURI>http://xml.activeknowledgemodeling.com/system/relationshiptypes/part.kmd#AKM_ParameterPart</RelationshipTypeURI>
+                <UpdateOptions>
+                    <NewRelationships>
+                        <Action evaluate="false">Insert</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </NewRelationships>
+                    <DeletedRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </DeletedRelationships>
+                    <BrokenRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </BrokenRelationships>
+                </UpdateOptions>
+            </RelationshipType>
+            <RelationshipType id="din">
+                <RelationshipTypeURI>http://xml.activeknowledgemodeling.com/system/relationshiptypes/template.kmd#AKM_Template</RelationshipTypeURI>
+                <UpdateOptions>
+                    <NewRelationships>
+                        <Action evaluate="false">Insert</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </NewRelationships>
+                    <DeletedRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </DeletedRelationships>
+                    <BrokenRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </BrokenRelationships>
+                </UpdateOptions>
+            </RelationshipType>
+            <RelationshipType id="dout">
+                <RelationshipTypeURI>http://xml.activeknowledgemodeling.com/system/relationshiptypes/template.kmd#AKM_Template</RelationshipTypeURI>
+                <UpdateOptions>
+                    <NewRelationships>
+                        <Action evaluate="false">Insert</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </NewRelationships>
+                    <DeletedRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </DeletedRelationships>
+                    <BrokenRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </BrokenRelationships>
+                </UpdateOptions>
+            </RelationshipType>
+            <RelationshipType id="Mapping_5">
+                <RelationshipTypeURI>http://xml.activeknowledgemodeling.com/system/relationshiptypes/part.kmd#AKM_ParameterPart</RelationshipTypeURI>
+                <UpdateOptions>
+                    <NewRelationships>
+                        <Action evaluate="false">Insert</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </NewRelationships>
+                    <DeletedRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </DeletedRelationships>
+                    <BrokenRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </BrokenRelationships>
+                </UpdateOptions>
+            </RelationshipType>
+            <RelationshipType id="fatdtad">
+                <RelationshipTypeURI>http://xml.activeknowledgemodeling.com/system/relationshiptypes/default_namespace.kmd#AKM_Default_namespace_for_parameter</RelationshipTypeURI>
+                <UpdateOptions>
+                    <NewRelationships>
+                        <Action evaluate="false">Insert</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </NewRelationships>
+                    <DeletedRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </DeletedRelationships>
+                    <BrokenRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </BrokenRelationships>
+                </UpdateOptions>
+            </RelationshipType>
+            <RelationshipType id="fshghg">
+                <RelationshipTypeURI>http://xml.activeknowledgemodeling.com/system/relationshiptypes/template.kmd#AKM_Template</RelationshipTypeURI>
+                <UpdateOptions>
+                    <NewRelationships>
+                        <Action evaluate="false">Insert</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </NewRelationships>
+                    <DeletedRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </DeletedRelationships>
+                    <BrokenRelationships>
+                        <Action evaluate="false">Keep</Action>
+                        <Symbol evaluate="false">
+                        </Symbol>
+                    </BrokenRelationships>
+                </UpdateOptions>
+            </RelationshipType>
+        </Types>
+        <Mappings>
+            <Mapping id="port">
+                <Resultset>/service/port</Resultset>
+                <ObjectType>port</ObjectType>
+                <Container evaluate="false">Services</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@url</QueryProperty>
+                    <ModelProperty evaluate="false">description</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="defnspsdfsdf">
+                <Resultset>/service/namespace</Resultset>
+                <ObjectType>defnspsdfsdf</ObjectType>
+                <Container evaluate="false">Data</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">URL</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="nsp">
+                <Resultset>/service/data</Resultset>
+                <ObjectType>nsp</ObjectType>
+                <Container evaluate="false">Data</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">URL</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="data">
+                <Resultset>/service/data</Resultset>
+                <ObjectType>data</ObjectType>
+                <Container evaluate="false">Data</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@parent</QueryProperty>
+                    <ModelProperty evaluate="false">description</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@type</QueryProperty>
+                    <ModelProperty evaluate="false">dataType</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseAllUpdateOne</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="output">
+                <Resultset>/service/operation/output</Resultset>
+                <ObjectType>output</ObjectType>
+                <Container evaluate="false">Services</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@type</QueryProperty>
+                    <ModelProperty evaluate="false">description</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="input">
+                <Resultset>/service/operation/input</Resultset>
+                <ObjectType>input</ObjectType>
+                <Container evaluate="false">Services</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@type</QueryProperty>
+                    <ModelProperty evaluate="false">description</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="operation">
+                <Resultset>/service/operation</Resultset>
+                <ObjectType>operation</ObjectType>
+                <Container evaluate="false">Services</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">../@url</QueryProperty>
+                    <ModelProperty evaluate="false">serviceURL</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="defnsp">
+                <Resultset>/service</Resultset>
+                <ObjectType>defnsp</ObjectType>
+                <Container evaluate="false">Data</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">URL</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="service">
+                <Resultset>/service</Resultset>
+                <ObjectType>service</ObjectType>
+                <Container evaluate="false">Services</Container>
+                <OpenSymbol evaluate="false">
+                </OpenSymbol>
+                <ClosedSymbol evaluate="false">
+                </ClosedSymbol>
+                <UniqueId>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </UniqueId>
+                <Property>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">name</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@description</QueryProperty>
+                    <ModelProperty evaluate="false">description</ModelProperty>
+                </Property>
+                <Property>
+                    <QueryProperty evaluate="false">./@url</QueryProperty>
+                    <ModelProperty evaluate="false">serviceURL</ModelProperty>
+                </Property>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="defaulsservicenamespace">
+                <Resultset>/service</Resultset>
+                <RelationshipType>defaulsservicenamespace</RelationshipType>
+                <OriginId>
+                    <ObjectType>service</ObjectType>
+                    <QueryProperty evaluate="false">./@name</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>defnsp</ObjectType>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="Mapping_2">
+                <Resultset>/service/operation</Resultset>
+                <RelationshipType>partlink</RelationshipType>
+                <OriginId>
+                    <ObjectType>operation</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>service</ObjectType>
+                    <QueryProperty evaluate="false">../@name</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="port-op">
+                <Resultset>/service/operation</Resultset>
+                <RelationshipType>port-op</RelationshipType>
+                <OriginId>
+                    <ObjectType>operation</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>port</ObjectType>
+                    <QueryProperty evaluate="false">./@port</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="Mapping_3">
+                <Resultset>/service/operation/input</Resultset>
+                <RelationshipType>partlink</RelationshipType>
+                <OriginId>
+                    <ObjectType>input</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>operation</ObjectType>
+                    <QueryProperty evaluate="false">../@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="din">
+                <Resultset>/service/operation/input</Resultset>
+                <RelationshipType>din</RelationshipType>
+                <OriginId>
+                    <ObjectType>input</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>data</ObjectType>
+                    <QueryProperty evaluate="false">./@type</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="Mapping_4">
+                <Resultset>/service/operation/output</Resultset>
+                <RelationshipType>partlink</RelationshipType>
+                <OriginId>
+                    <ObjectType>output</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>operation</ObjectType>
+                    <QueryProperty evaluate="false">../@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="dout">
+                <Resultset>/service/operation/output</Resultset>
+                <RelationshipType>dout</RelationshipType>
+                <OriginId>
+                    <ObjectType>output</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>data</ObjectType>
+                    <QueryProperty evaluate="false">./@type</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="Mapping_5">
+                <Resultset>/service/data</Resultset>
+                <RelationshipType>Mapping_5</RelationshipType>
+                <OriginId>
+                    <ObjectType>data</ObjectType>
+                    <QueryProperty evaluate="false">./@parent</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>data</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseAllUpdateOne</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="fatdtad">
+                <Resultset>/service/data</Resultset>
+                <RelationshipType>fatdtad</RelationshipType>
+                <OriginId>
+                    <ObjectType>data</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>nsp</ObjectType>
+                    <QueryProperty evaluate="false">./@namespace</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseAllUpdateOne</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="fshghg">
+                <Resultset>/service/data</Resultset>
+                <RelationshipType>fshghg</RelationshipType>
+                <OriginId>
+                    <ObjectType>data</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>data</ObjectType>
+                    <QueryProperty evaluate="false">./@type</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseAllUpdateOne</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+            <Mapping id="Mapping_1">
+                <Resultset>/service/port</Resultset>
+                <RelationshipType>partlink</RelationshipType>
+                <OriginId>
+                    <ObjectType>port</ObjectType>
+                    <QueryProperty evaluate="false">./@id</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </OriginId>
+                <TargetId>
+                    <ObjectType>service</ObjectType>
+                    <QueryProperty evaluate="false">../@name</QueryProperty>
+                    <ModelProperty evaluate="false">externalID</ModelProperty>
+                </TargetId>
+                <Exceptions>
+                    <DuplicateInDataSet>
+                        <Action>UseFirstSkipRest</Action>
+                    </DuplicateInDataSet>
+                </Exceptions>
+            </Mapping>
+        </Mappings>
+    </DataTarget>
+</MetisImport>

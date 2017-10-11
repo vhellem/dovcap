@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Service" name="Service_AKM" title="Service (AKM)" desc="A service is any unit of functionality offered by some system. A service can task input and output parameters." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="IT Service" xlink:href="http://metadata.troux.info/meaf/objecttypes/it_service.kmd#CompType_TRM:ServiceOffering_UUID"/>
+  <property name="serviceURL" xlink:role="url-type" xlink:title="url" xlink:href="metis:std#oid36" label="Service URL" desc="The complete URL of the server that runs this service. &#10;&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:WEbService_url_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="bottom"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Parameter" xlink:href="parameter.kmd#AKM_Parameter"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Online Document" xlink:href="http://metadata.troux.info/meaf/objecttypes/online_document.kmd#CompType_MEAF:OnlineDocument_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Document" xlink:href="metis:stdtypes#oid31"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Task Output" xlink:href="../../task/objecttypes/task_output.kmd#AKM_Task_Output"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Task Input" xlink:href="../../task/objecttypes/task_input.kmd#AKM_Task_Input"/>
+  <named-method-link name="Execute_" xlink:role="cpp-method" xlink:title="Execute" xlink:href="../../task/methods/execution_methods.kmd#_002asmt00ul6hpgnifce"/>
+  <named-method-link name="Execute_service_" xlink:role="cpp-method" xlink:title="Execute service" xlink:href="../../task/methods/execution_methods.kmd#_002asmt00s2lautl6uql"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service (AKM)" xlink:href="#AKM_Service" xlink:actuate="user">
+   <string name="troux_shape">Rectangle</string>
+   <string name="troux_color">#DDCC99</string>
+   <string name="troux_iconAlias">9051e3ff-5809-3b87-9540-c75afe63ead5</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">0</integer>
+  </valueset>
+  <valueset vset="default" size="20" xlink:role="type" xlink:title="Service (AKM)" xlink:href="#AKM_Service" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="shortName"></string>
+   <date name="startDate">00000000</date>
+   <date name="stopDate">00000000</date>
+   <string name="price"></string>
+   <string name="pricedUnit"></string>
+   <string name="recurringCost"></string>
+   <string name="recurringPrice"></string>
+   <integer name="recurringCostInterval">0</integer>
+   <integer name="recurringPriceInterval">0</integer>
+   <string name="monetaryUnit">0</string>
+   <url name="serviceURL"/>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="Reltype_has_functionality_to_support-can_be_supported_by_UUID" name="has_functionality_to_support-can_be_supported_by" title="has functionality to support" desc="" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="has class" xlink:href="#Reltype_has_class-is_class_for_UUID">
+   <string name="from">has functionality to support</string>
+   <string name="to">can be supported by</string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_ITG:IT_Product_Version_has_functionality_to_support_Business_Function_UUID" name="IT_Product_Version_has_functionality_to_support_Business_Function" title="IT Prod Ver has functionality to support Bus Func" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_has_functionality_to_support-can_be_supported_by_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type"
+ xlink:href="../objecttypes/it_product_version.kmd#CompType_MEAF:ITProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type"
+ xlink:href="../objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="IT Prod Ver has functionality to support Bus Func" xlink:href="#Reltype_ITG:IT_Product_Version_has_functionality_to_support_Business_Function_UUID">
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_ITG:HW_Product_Model_has_functionality_to_support_Business_Function_UUID" name="HW_Product_Model_has_functionality_to_support_Business_Function" title="HW Prod Mdl has functionality to support Bus Func" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_ITG:IT_Product_Version_has_functionality_to_support_Business_Function_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type"
+ xlink:href="../objecttypes/hardware_product_version.kmd#CompType_MEAF:HardwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type"
+ xlink:href="../objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="HW Prod Mdl has functionality to support Bus Func" xlink:href="#Reltype_ITG:HW_Product_Model_has_functionality_to_support_Business_Function_UUID">
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+ 
+ <type id="Reltype_ITG:SW_Product_Version_has_functionality_to_support_Business_Function_UUID" name="SW_Product_Version_has_functionality_to_support_Business_Function" title="SW Prod Ver has functionality to support Bus Func" desc="" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#Reltype_ITG:IT_Product_Version_has_functionality_to_support_Business_Function_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type"
+ xlink:href="../objecttypes/software_product_version.kmd#CompType_TRM:SoftwareProductVersion_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type"
+ xlink:href="../objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="SW Prod Ver has functionality to support Bus Func" xlink:href="#Reltype_ITG:SW_Product_Version_has_functionality_to_support_Business_Function_UUID">
+   <integer name="troux_component2EndType">1</integer>
+  </valueset>
+ </type>
+ 
+</metis>

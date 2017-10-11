@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="3.5"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="2">
+
+ <cpp-method id="oid1" name="Generate_Coordinates" title="Generate Coordinates" desc="Generates a set of coordinate fields based on the choices in the view mapping. The method is invoked on an Object View Mapping object." language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <complex-type-link xlink:role="type" xlink:title="Execute Script File" xlink:href="metis:stdmethods#oid602"/>
+  <arg-list size="5">
+   <string name="Encoded">false</string>
+   <string name="Language">VBScript</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile"></string>
+   <integer name="Timeout">-1</integer>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

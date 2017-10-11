@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="3.3?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ types="3"
+ nextoid="4">
+
+ <string-type id="oid1" name="reportsource" title="ReportSource" desc="Report Source" default="Criteria">
+  <string class="shared">Criteria</string>
+ </string-type>
+
+ <string-type id="oid2" name="generationoptions" title="Generation Options" desc="Generation Options" default="Format">
+  <string class="shared">Template</string>
+  <string class="shared">Format</string>
+ </string-type>
+
+ <string-type id="oid3" name="embeddedCriteria" title="EmbeddedCriteria" desc="List of embedded criteria" default="All Modeling Objects: metis:stdcriteria#oid3006">
+  <string class="shared">All Instances except Containers: metis:stdcriteria#oid3000</string>
+  <string class="shared">All Objects including Containers: metis:stdcriteria#oid1008</string>
+  <string class="shared">All Relationships: metis:stdcriteria#oid1009</string>
+  <string class="shared">All Modeling Objects: metis:stdcriteria#oid3006</string>
+  <string class="shared">Use Current Selection</string>
+  <string class="shared">Custom. Enter criteria URI in the field below</string>
+ </string-type>
+
+ <string-type id="oid4" name="quality" title="Quality" desc="Image Quality" default="Standard">
+  <string class="shared">High</string>
+  <string class="shared">Standard</string>
+  <string class="shared">Draft</string>
+ </string-type>
+
+</metis>

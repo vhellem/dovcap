@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ metamodels="3"
+ nextoid="1">
+
+ <metamodel id="_002asfk0198du71kp83p" name="CC" desc="Configurable Component">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Rule modeling" xlink:href="#rule_modeling"/>
+  </metamodel-links>
+  <complex-type-links size="60">
+   <!-- CC objects -->
+   <complex-type-link xlink:role="type" xlink:title="Action" xlink:href="../class/rule_action.kmd#action" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="CC family" xlink:href="../class/cc_family.kmd#CC_family" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="CC object" xlink:href="../class/cc_object.kmd#CC_object" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="CC instance" xlink:href="../class/cc_instance.kmd#CC_instance" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="CC product" xlink:href="../class/cc_product.kmd#CC_product" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="CC requirement" xlink:href="../class/cc_requirement.kmd#CC_requirement" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="CC specification" xlink:href="../class/cc_specification.kmd#CC_specification" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="CC document" xlink:href="../class/cc_document.kmd#CC_document" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Carries_interaction" xlink:href="../class/carries_interaction.kmd#carries_interaction"/>
+   <complex-type-link xlink:role="type" xlink:title="Composition element" xlink:href="../class/composition_element.kmd#composition_element" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Composition request" xlink:href="../class/composition_request.kmd#composition_request" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Condition" xlink:href="../class/rule_condition.kmd#condition" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Composition set" xlink:href="../class/composition_set.kmd#composition_set" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Configurable_component" xlink:href="../class/configurable_component.kmd#configurable_component" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Configuration rule" xlink:href="../class/configuration_rule.kmd#configuration_rule" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint" xlink:href="../class/constraint.kmd#constraint" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint allocation" xlink:href="../class/constraint_allocation.kmd#constraint_allocation" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint parameter" xlink:href="../class/constraint_parameter.kmd#constraint_parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint parameter range" xlink:href="../class/constraint_parameter.kmd#constraint_parameter_range" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint parameter value" xlink:href="../class/constraint_parameter_value.kmd#constraint_parameter_value" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Design parameter" xlink:href="../class/design_parameter.kmd#design_parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Design parameter value" xlink:href="../class/design_parameter_value.kmd#design_parameter_value" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Design solution" xlink:href="../class/design_solution.kmd#design_solution" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Functional requirement" xlink:href="../class/functional_requirement.kmd#functional_requirement" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Functional requirement parameter" xlink:href="../class/functional_requirement_parameter.kmd#functional_requirement_parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Functional requirement parameter_value" xlink:href="../class/functional_requirement_parameter_value.kmd#functional_requirement_parameter_value" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Interaction" xlink:href="../class/interaction.kmd#interaction" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Interface" xlink:href="../class/interface.kmd#interface" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Performance parameter" xlink:href="../class/performance_parameter.kmd#performance_parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Performance parameter value" xlink:href="../class/performance_parameter_value.kmd#performance_parameter_value" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Port" xlink:href="../class/port.kmd#port" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Variant" xlink:href="../class/variant_value.kmd#variant_value" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Variant_configuration_request" xlink:href="../class/variant_configuration_request.kmd#variant_configuration_request" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Variant parameter" xlink:href="../class/variant_parameter.kmd#variant_parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Variant parameter value" xlink:href="../class/variant_parameter_value.kmd#variant_parameter_value" xlink:actuate="user"/>
+   <!-- EKA objects -->
+   <complex-type-link xlink:role="type" xlink:title="Symbol (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_symbol.kmd#ObjType_EKA:Symbol_UUID" xlink:actuate="user"/>
+   <!-- EKA relships -->
+   <complex-type-link xlink:role="type" xlink:title="Has symbol (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/symbol_relships.kmd#RelType_EKA:HasSymbol_UUID" xlink:actuate="user"/>
+   <!-- CC relships -->
+   <complex-type-link xlink:role="type" xlink:title="Allocates" xlink:href="../class/allocates.kmd#allocates"/>
+   <complex-type-link xlink:role="type" xlink:title="Constrains_parameter" xlink:href="../class/constrains_parameter.kmd#constrains_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_composition_element" xlink:href="../class/has_composition_element.kmd#has_composition_element"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_composition_request" xlink:href="../class/has_composition_request.kmd#has_composition_request"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_configuration_rule" xlink:href="../class/has_configuration_rule.kmd#has_configuration_rule"/>
+   <complex-type-link xlink:role="type" xlink:title="has_constraint_parameter" xlink:href="../class/has_constraint_parameter.kmd#has_constraint_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="has_constraint_parameter_range" xlink:href="../class/has_constraint_parameter.kmd#has_constraint_parameter_range"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_constraint_parameter_value" xlink:href="../class/has_constraint_parameter_value.kmd#has_constraint_parameter_value"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_definition" xlink:href="../class/has_definition.kmd#has_definition"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_design_solution" xlink:href="../class/has_design_solution.kmd#has_design_solution"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_design_parameter" xlink:href="../class/has_design_parameter.kmd#has_design_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_design_parameter_value" xlink:href="../class/has_design_parameter_value.kmd#has_design_parameter_value"/>
+   <complex-type-link xlink:role="type" xlink:title="has_document" xlink:href="../class/has_document.kmd#has_document"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_functional_requirement_parameter" xlink:href="../class/has_functional_requirement_parameter.kmd#has_functional_requirement_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_functional_requirement_parameter_value" xlink:href="../class/has_functional_requirement_parameter_value.kmd#has_functional_requirement_parameter_value"/>
+   <complex-type-link xlink:role="type" xlink:title="has_interaction" xlink:href="../class/has_interaction.kmd#has_interaction"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_interface" xlink:href="../class/has_interface.kmd#has_interface"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_performance_parameter" xlink:href="../class/has_performance_parameter.kmd#has_performance_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_performance_parameter_value" xlink:href="../class/has_performance_parameter_value.kmd#has_performance_parameter_value"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_port" xlink:href="../class/has_port.kmd#has_port"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_variant_configuration_request" xlink:href="../class/has_variant_configuration_request.kmd#has_variant_configuration_request"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_variant_parameter" xlink:href="../class/has_variant_parameter.kmd#has_variant_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_variant_parameter_value" xlink:href="../class/has_variant_parameter_value.kmd#has_variant_parameter_value"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_variant_value" xlink:href="../class/has_variant_value.kmd#has_variant_value"/>
+   <complex-type-link xlink:role="type" xlink:title="Includes_parameter_value" xlink:href="../class/includes_parameter_value.kmd#includes_parameter_value"/>
+   <complex-type-link xlink:role="type" xlink:title="interacts_with" xlink:href="../class/interacts_with.kmd#interacts_with"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_an_implementation_of" xlink:href="../class/is_an_implementation_of.kmd#is_an_implementation_of"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_composed_using" xlink:href="../class/is_composed_using.kmd#is_composed_using"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_constrained_by" xlink:href="../class/is_constrained_by.kmd#Is_constrained_by"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_explained_by" xlink:href="../class/is_explained_by.kmd#Is_explained_by"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_influenced_by" xlink:href="../class/is_influenced_by.kmd#is_influenced_by"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_partly_met_by" xlink:href="../class/is_partly_met_by.kmd#is_partly_met_by"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_restated_by" xlink:href="../class/is_restated_by.kmd#is_restated_by"/>
+   <complex-type-link xlink:role="type" xlink:title="Is_solved_by" xlink:href="../class/is_solved_by.kmd#is_solved_by"/>
+   <complex-type-link xlink:role="type" xlink:title="Requires_function" xlink:href="../class/requires_function.kmd#requires_function"/>
+   <complex-type-link xlink:role="type" xlink:title="Uses_configurable_component" xlink:href="../class/uses_configurable_component.kmd#uses_configurable_component"/>
+   <complex-type-link xlink:role="type" xlink:title="Uses_variant" xlink:href="../class/uses_variant.kmd#uses_variant"/>
+   <complex-type-link xlink:role="type" xlink:title="Uses_variant2" xlink:href="../class/uses_variant.kmd#uses_variant2"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="rule_modeling" name="rule_modeling" title="Rule modeling" desc="Rule modeling.">
+  <complex-type-links size="20">
+   <complex-type-link xlink:role="type" xlink:title="Action" xlink:href="../class/rule_action.kmd#action" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Expression" xlink:href="../class/rule_expression.kmd#expression" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Parameter" xlink:href="../class/cc_parameter.kmd#parameter" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="input_to" xlink:href="../class/rule_expression.kmd#input_to"/>
+   <complex-type-link xlink:role="type" xlink:title="input_to_2" xlink:href="../class/rule_expression.kmd#input_to_2"/>
+   <complex-type-link xlink:role="type" xlink:title="output_to" xlink:href="../class/rule_expression.kmd#output_to"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_output" xlink:href="../class/rule_action.kmd#has_output"/>
+   <complex-type-link xlink:role="type" xlink:title="Condition" xlink:href="../class/rule_condition.kmd#condition" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Input_to_1" xlink:href="../class/rule_condition.kmd#input_to"/>
+   <complex-type-link xlink:role="type" xlink:title="Input_to_2" xlink:href="../class/rule_condition.kmd#input_to_2"/>
+   <complex-type-link xlink:role="type" xlink:title="Input_to_3" xlink:href="../class/rule_condition.kmd#input_to_3"/>
+   <complex-type-link xlink:role="type" xlink:title="Rule" xlink:href="../class/rule.kmd#rule" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_action" xlink:href="../class/rule.kmd#has_action"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_condition" xlink:href="../class/rule.kmd#has_condition"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_expression" xlink:href="../class/rule.kmd#has_expression"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_rule" xlink:href="../class/rule.kmd#has_rule"/>
+   <complex-type-link xlink:role="type" xlink:title="has_parameter" xlink:href="../class/rule.kmd#has_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="If_then" xlink:href="../class/rule.kmd#if_then"/>
+   <complex-type-link xlink:role="type" xlink:title="Invokes_rule" xlink:href="../class/rule.kmd#invokes_rule"/>
+   <complex-type-link xlink:role="type" xlink:title="Has_rule_context" xlink:href="../class/rule.kmd#has_rule_context"/>
+  </complex-type-links>
+ </metamodel>
+
+ <!-- Script library model -->
+  <forward-reference id="oid1" stamp="20070101 103000000"
+    xlink:role="type" xlink:title="CVW Script Library" xlink:href="http://xml.activeknowledgemodeling.com/cvw/operations/cvw_script_library.kmv#_002asj60272bqgti3c9a"
+    />
+  <forward-reference id="oid2" stamp="20070401 103000000"
+    xlink:role="type" xlink:title="CC Script Library" xlink:href="http://xml.chalmers.se/metamodels/cc_script_library.kmv#_002aslb01sme0q6niekc"
+    />
+
+
+</metis>

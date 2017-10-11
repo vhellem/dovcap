@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="ImplementedBy8" title="implemented by/implements" desc="Allows you to connect an Interface to the Middleware used to implement it." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts - User" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Interface" xlink:href="../object_types/interface.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Middleware" xlink:href="../object_types/middleware.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="implemented by/implements" xlink:href="#oid1" xlink:actuate="user">
+   <string name="from">implemented by</string>
+   <string name="to">implements</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="implemented by/implements" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

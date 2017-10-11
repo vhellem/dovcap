@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002asmg01795lcgoljtj" name="PSTS" title="Design Rationale" desc="Project Specific Technology Strategy">
+  <complex-type-links size="14">
+   <complex-type-link xlink:role="type" xlink:title="Alternative solution for" xlink:href="../languages/alternative_solution_for.kmd#Alternative_solution"/>
+   <complex-type-link xlink:role="type" xlink:title="Argument" xlink:href="../languages/argument.kmd#Argument" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Contra" xlink:href="../languages/contra.kmd#Contra"/>
+   <complex-type-link xlink:role="type" xlink:title="Decision" xlink:href="../languages/decision.kmd#Decision" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Discussion element" xlink:href="../languages/discussion.kmd#Discussion_element" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Issue" xlink:href="../languages/issue.kmd#Issue" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Objective" xlink:href="../languages/objective.kmd#Objective" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Position" xlink:href="../languages/position.kmd#Position" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Pro" xlink:href="../languages/pro.kmd#Pro"/>
+   <complex-type-link xlink:role="type" xlink:title="Proposed by" xlink:href="../languages/proposed_by.kmd#Proposed_by"/>
+   <complex-type-link xlink:role="type" xlink:title="Resolves" xlink:href="../languages/resolves.kmd#Resolves"/>
+   <complex-type-link xlink:role="type" xlink:title="Role (Actor)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/role_actor.kmd#Role_Actor" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Selects" xlink:href="../languages/selects.kmd#Selects"/>
+   <complex-type-link xlink:role="type" xlink:title="Is based on" xlink:href="../languages/is_based_on.kmd#is_based_on"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

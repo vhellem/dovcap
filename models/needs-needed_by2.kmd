@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Needs2" title="needs/needed by" usage="relationship" decomposition-flag="true" container-flag="true" desc="Allows you to model that an Application needs another Application to perform properly. You may also use the more general relationship uses/used by to show that an application is exactly using another application.">
+  <complex-type-link xlink:role="type" xlink:title="OriginTargetRelship" xlink:href="http://xml.computas.com/xml/user/relshipsharedprop.kmd#oid1"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../object_types/application.kmd#oid1" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Needs2" xlink:href="#oid1">
+   <string name="from">needs</string>
+   <string name="to">needed by</string>
+  </valueset>
+ </type>
+
+
+</metis>

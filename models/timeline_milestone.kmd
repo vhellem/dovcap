@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_MEAF:TimelineMilestone_UUID" name="TimelineMilestone" title="Timeline Milestone" desc="A specific date on a timeline to be compared with planned dates, either related directly to other objects or via Timeline Event objects." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Timeline Milestones" xlink:href="../abstracttypes/timeline_milestones.kmd#CompType_MEAF:TimelineMilestones_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="date" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Date" desc="The date represented by the position of the milestone on the timeline calculated from position or explicitly set." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_MEAF:TimelineMilestone_date_UUID&#34;;"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status color" desc="Color of the status" method-flag="true" visible-flag="false"/>
+  <property name="style" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Status style" desc="Style of the status" method-flag="true" visible-flag="false"/>
+  <named-method-link name="TimelineMilestone" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="../methods/timeline_methods.kmd#oid1012"/>
+  <named-method-link name="View" xlink:role="cpp-method" xlink:title="setPositionAsDate" xlink:href="../methods/timeline_methods.kmd#oid1012"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="milestonePositioning" xlink:href="../methods/timeline_methods.kmd#oid1023"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="milestonePositioning" xlink:href="../methods/timeline_methods.kmd#oid1023"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="getMilestoneColor" xlink:href="../methods/timeline_methods.kmd#oid1020"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="milestoneChange" xlink:href="../methods/timeline_methods.kmd#oid1013"/>
+  <named-method-link name="style" xlink:role="cpp-method" xlink:title="getMilestonePattern" xlink:href="../methods/timeline_methods.kmd#oid1021"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Timeline Milestone" xlink:href="#CompType_MEAF:TimelineMilestone_UUID">
+   <string name="troux_iconAlias">Icon_CompType_MEAF:TimelineMilestone_UUID</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Timeline Milestone" xlink:href="#CompType_MEAF:TimelineMilestone_UUID" tree-size="0.5" nested-size="1" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Milestone" xlink:href="../symbols/diagrams/timeline_milestone.svg#oid4" xlink:actuate="auto">
+   <replace tag="bottomtext" property="value" macro="(expand (property name))"/>
+   <replace tag="toptext" property="value" macro="(expand (property textdate))"/>
+   <replace tag="status" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="status" property="linewidth" macro="(expand (property style))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Milestone" xlink:href="../symbols/diagrams/timeline_milestone.svg#oid4" xlink:actuate="auto">
+   <replace tag="bottomtext" property="value" macro="(expand (property name))"/>
+   <replace tag="toptext" property="value" macro="(expand (property textdate))"/>
+   <replace tag="status" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="status" property="linewidth" macro="(expand (property style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/diagrams/timeline_milestone.png"/>
+ </typeview>
+
+</metis>

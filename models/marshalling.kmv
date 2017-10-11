@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instanceviews="6"
+ nextoid="1">
+
+ <relationshipview id="_002as0b01f853paqpehv" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+  <target-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+ </relationshipview>
+
+ <objectview id="_002as0b01f853po9srvf" xlink:role="object" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="marshalling.kmd#_002as0b01f853fuoui7g" state="open" behavior="tree" text-scale="1.29827" decomp-scale="0.125" left="352.538" top="-343.581" width="501.592" height="563.398">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="gray box with text" xlink:href="http://xml.metis.no/xml/symbols/library/object/color_box/gray_box_text.svg#oid0" xlink:actuate="user">
+  </symbol-override>
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0b01f853paqpehv"/>
+ </objectview>
+
+ <modelview id="_002as0b01f99768ufljt" name="Data" title="Data" primary-flag="true" standalone-flag="true" zoom-level="1" x="0.841755" y="-0.985169" seq="1" xlink:role="model" xlink:title="Semantics model" xlink:href="marshalling.kmd#oid1" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <viewstyle-links size="2">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Default Viewstyle" xlink:href="../viewstyles/meaf_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1000"/>
+  </viewstyle-links>
+ </modelview>
+
+ <relationshipview id="_002as0h01f8ibv4sh1dg" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <target-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+ </relationshipview>
+
+ <objectview id="_002as0h01f8ibvgmutui" xlink:role="object" xlink:title="servername" xlink:href="marshalling.kmd#_002as0h01f8ibvh7kt5k" state="open" behavior="nested" text-scale="0.751315" decomp-scale="0.125" left="-260.131" top="-387.571" width="505.705" height="651.378">
+  <child-link xlink:role="relationshipview" xlink:href="#_002as0h01f8ibv4sh1dg"/>
+ </objectview>
+
+ <modelview id="oid1" name="Main" title="TrouxSource Repository" standalone-flag="true" zoom-level="0.822095" x="322.495" y="70.4634" seq="2" xlink:role="model" xlink:title="Semantics model" xlink:href="marshalling.kmd#oid1" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="servername" xlink:href="#_002as0h01f8ibvgmutui"/>
+  <child-link xlink:role="objectview" xlink:title="&#60;h2&#62;Marshalling Object&#60;/h2&#62;" xlink:href="#_002as0b01f853po9srvf"/>
+  <viewstyle-links size="2">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Default Viewstyle" xlink:href="../viewstyles/meaf_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1000"/>
+  </viewstyle-links>
+ </modelview>
+
+
+</metis>

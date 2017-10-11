@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<?metis version="3.0.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: tepm_symbols.svg</title>
+ <defs>
+  <symbol id="oid1" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Closed use process</title>
+    <polygon points="32 160 0 320 512 320 
+     544 160 512 0 0 0 32 160 "
+     style=" stroke:#0067ce; stroke-width:1; fill:#b4b4ff; fill-opacity:100%"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="32" y="15.8"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text">text</text>
+      <rect x="32" y="0" width="480" height="320"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid2" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Untitled</title>
+    <image x="0" y="0" width="543" height="426" id="oid3" xlink:role="owned" xlink:href="tepm_symbols_3.png"></image>
+  </symbol>
+  <symbol id="oid4" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Rounded shadow</title>
+    <rect x="19" y="18" width="592" height="338" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#5050ff; fill-opacity:100%"></rect>
+    <rect x="0" y="0" width="598" height="338" rx="10" ry="10"
+     style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:body"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="18" y="47.8"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text"></text>
+      <rect x="18" y="32" width="566" height="283"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Open use process</title>
+    <polygon points="32 160 0 320 512 320 
+     544 160 512 0 0 0 32 160 "
+     style=" stroke:#0067ce; stroke-width:1; fill:#ffffff; fill-opacity:100%"     class="TAG:fish"></polygon>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="31.352" y="15.8"
+       style=" stroke:#000000; stroke-width:1; font-family:sans-serif; font-size:16;"
+       class="TAG:text"></text>
+      <rect x="31.352" y="0" width="480.648" height="320"
+       style=" stroke:#000000; stroke-width:1; fill:#ffffff; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

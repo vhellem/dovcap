@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?metis version="3.0.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="1"
+ nextoid="2">
+
+ <domain id="oid1" name="model_tag_domain" title="Model Tag Domain">
+  <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#oid42" xlink:actuate="user"/>
+ </domain>
+
+</metis>

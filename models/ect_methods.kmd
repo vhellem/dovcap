@@ -1,0 +1,564 @@
+<?xml version="1.0"?>
+<?metis version="3.2.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="46"
+ criteria="7"
+ nextoid="64">
+
+ <cpp-method id="oid3" name="saveTask" title="Save Task" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="10">
+   <string name="Geometry">geometry</string>
+   <string name="HasPart1">hasinputport,inputport</string>
+   <string name="HasPart2">hasoutputport,outputport</string>
+   <string name="HasPart3">hasresourcerole,role</string>
+   <string name="HasPart4">haspart,-inputport,-outputport,-role</string>
+   <string name="PostElements">starttime,finishtime,duration</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">duration-unit,delayed,action,simvision.effort,simvision.effort-unit,simvision.type,simvision.priority,simvision.fixed-cost,simvision.requirement-complexity,simvision.solution-complexity,simvision.uncertainty</string>
+   <string name="Type">task</string>
+   <string name="TypeAttr">id,state</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid4" name="saveMilestone" title="Save Milestone" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="6">
+   <string name="Geometry">geometry</string>
+   <string name="PostElements">starttime</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">simvision.target-lag,simvision.target-lag-unit</string>
+   <string name="Type">milestone</string>
+   <string name="TypeAttr">id,logicalrelation,transitioncondition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" name="saveStart" title="Save Start" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="6">
+   <string name="Geometry">geometry</string>
+   <string name="PostElements">starttime</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">type,simvision.target-lag,simvision.target-lag-unit</string>
+   <string name="Type">start</string>
+   <string name="TypeAttr">id,logicalrelation,transitioncondition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid6" name="saveFinish" title="Save Finish" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="6">
+   <string name="Geometry">geometry</string>
+   <string name="PostElements">starttime</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">simvision.target-lag,simvision.target-lag-unit</string>
+   <string name="Type">finish</string>
+   <string name="TypeAttr">id,logicalrelation,transitioncondition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="saveDecisionPoint" title="Save Decision Point" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">decisionpoint</string>
+   <string name="TypeAttr">id,logicalrelation,transitioncondition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid8" name="saveInputPort" title="Save Input Port" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">inputport</string>
+   <string name="TypeAttr">id,logicalrelation,transitioncondition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid9" name="saveOutputPort" title="Save Output Port" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">outputport</string>
+   <string name="TypeAttr">id,logicalrelation,transitioncondition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid10" name="savePersonRole" title="Save Person Role" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="6">
+   <string name="Geometry">geometry</string>
+   <string name="Pointers">isfilledbyptr,isfilledby,in</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">roletype,simvision.role,simvision.app-experience,simvision.fte,simvision.salary</string>
+   <string name="Type">personrole</string>
+   <string name="TypeAttr">id</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid11" name="saveObjectRole" title="Save Object Role" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="5">
+   <string name="Geometry">geometry</string>
+   <string name="Pointers">isfilledbyptr,isfilledby,in</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">objectrole</string>
+   <string name="TypeAttr">id</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid12" name="saveOrgunitRole" title="Save Orgunit Role" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="5">
+   <string name="Geometry">geometry</string>
+   <string name="Pointers">isfilledbyptr,isfilledby,in</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">orgunitrole</string>
+   <string name="TypeAttr">id</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid13" name="saveToolRole" title="Save Tool Role" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="5">
+   <string name="Geometry">geometry</string>
+   <string name="Pointers">isfilledbyptr,isfilledby,in</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">toolrole</string>
+   <string name="TypeAttr">id</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid14" name="savePerson" title="Save Person" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="6">
+   <string name="Geometry">geometry</string>
+   <string name="PostElements">email,homepage,phonework,phonemobile,phoneprivate,fax,image,password</string>
+   <string name="PreElements">username,name,description</string>
+   <string name="Properties">simvision.role,simvision.app-experience,simvision.fte,simvision.salary</string>
+   <string name="Type">person</string>
+   <string name="TypeAttr">id</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid15" name="executeDocument" title="Open Document" language="c++" bind="NO.METIS.GEM.executeDoc" required-dll="gem_dochandling">
+  <arg-list size="1">
+   <string name="DocumentProperty">reference</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid16" name="saveManualTool" title="Save Manual Tool" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">ect_object,ManualTool</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid17" name="saveSoftwareTool" title="Save Software Tool" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="5">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">url</string>
+   <string name="Type">ect_object,SoftwareTool</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid18" name="saveMaterialObject" title="Save Material Object" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">ect_object,MaterialObject</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid19" name="saveOrganization" title="Save Organization" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="5">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">phoneNr,faxNr,homepage,image,simvision.team-experience,simvision.centralization,simvision.formalization,simvision.matrix-strength</string>
+   <string name="Type">ect_object,organization</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid20" name="saveSkillType" title="Save SkillType" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Type">ect_object,skilltype</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid21" name="saveMeeting" title="Save Meeting" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="5">
+   <string name="Geometry">geometry</string>
+   <string name="PreElements">name,description</string>
+   <string name="Properties">logicalname,state,starttime,duration,duration-unit,action,delayed,simvision.priority,simvision.interval,simvision.interval-unit,simvision.repeating,simvision.calendar-start-lag,simvision.calendar-start-lag-unit,simvision.calendar-end-lag,simvision.calendar-end-lag-unit,simvision.first-lag,simvision.first-lag-unit,simvision.last-lag,simvision.last-lag-unit</string>
+   <string name="Type">ect_object,meeting</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid24" name="saveFlow" title="Save Flow" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.precedence,simvision.time-lag,simvision.time-lag-unit</string>
+   <string name="Type">flow</string>
+   <string name="TypeAttr">id,transitioncondition,iscontrolflow,id1,id2</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid27" name="saveInfoExchange" title="Save InfoExchange" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">strength</string>
+   <string name="Type">ect_relship,infoexchange</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid28" name="saveSupervises" title="Save Supervises" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="3">
+   <string name="Connections">origin,target</string>
+   <string name="Type">ect_relship,supervises</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid29" name="saveParticipatesIn" title="Save ParticipatesIn" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.allocation</string>
+   <string name="Type">ect_relship,participatesin</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid30" name="saveHasSkillLevel" title="Save HasSkillLevel" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.actor,simvision.skill,simvision.rating</string>
+   <string name="Type">ect_relship,hasskilllevel</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid31" name="saveRequiresSkill" title="Save RequiresSkill" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="3">
+   <string name="Connections">origin,target</string>
+   <string name="Type">ect_relship,requiresskill</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid32" name="saveFailureDependancy" title="Save Failure Dependency" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.strength</string>
+   <string name="Type">ect_relship,failuredependency</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid33" name="saveIsFilledBy" title="Save IsFilledBy" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.allocation,simvision.allocation-unit,simvision.team-lead</string>
+   <string name="Type">isfilledby</string>
+   <string name="TypeAttr">id</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid35" name="saveFlowObject" title="Save FlowObject" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="5">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">name,description</string>
+   <string name="Relationships">carriesresource,isfilledby</string>
+   <string name="Type">flowrole</string>
+   <string name="TypeAttr">id,transitioncondition,iscontrolflow,id1,id2</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid36" name="saveNothing" title="Save Nothing" language="c++" bind="NO.METIS.ECT.saveNothing" required-dll="ect_parser" object-flag="true">
+ </cpp-method>
+
+ <cpp-method id="oid37" name="xmlInit" title="Save Ect Header" language="c++" bind="NO.METIS.ECT.initSave" required-dll="ect_parser" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">UseGeometry</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid39" language="c++" bind="NO.METIS.GEM.findInstance" required-dll="gem_analyse">
+  <arg-list size="5">
+   <string name="FindProperty">username</string>
+   <pointer name="FindType" xlink:role="type" xlink:title="User" xlink:href="ect_admin.kmd#oid1" xlink:actuate="user"/>
+   <string name="FindValue">(expand (property username))</string>
+   <string name="GetProperty">name</string>
+   <string name="Mode">GetPropertyValue</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid40" language="c++" bind="NO.METIS.GEM.findInstance" required-dll="gem_analyse">
+  <arg-list size="5">
+   <string name="FindProperty">username</string>
+   <pointer name="FindType" xlink:role="type" xlink:title="User" xlink:href="ect_admin.kmd#oid1" xlink:actuate="user"/>
+   <string name="FindValue">(expand (property username))</string>
+   <string name="GetProperty">email</string>
+   <string name="Mode">GetPropertyValue</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid41" name="createUserView" title="Create View of Users" language="c++" bind="NO.METIS.GEM.criteriaView" required-dll="gem_qt_criteria">
+  <arg-list size="5">
+   <pointer name="AutoLayoutMethod" xlink:role="cpp-method" xlink:title="Perform Layout" xlink:href="metis:layout#oid201" xlink:actuate="user"/>
+   <pointer name="ContainerType" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findAllUsers" xlink:href="#oid38" xlink:actuate="user"/>
+   <string name="ModelViewName">Users</string>
+   <string name="VirtualFile">virtual:users</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid42" name="saveModel" title="Save Model file" desc="Save model file." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="3">
+   <string name="PreElements">modelfile</string>
+   <string name="Type">model</string>
+   <string name="TypeAttr">id,name</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid43" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Find Model" xlink:href="#oid44" xlink:actuate="user"/>
+   <string name="Property">modelfile</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid45" name="loadIntoXCHIPS" title="Load task into XCHIPS" language="c++" bind="NO.METIS.GEM.executeDoc" required-dll="gem_dochandling">
+  <arg-list size="1">
+   <string name="Document">(expand &#34;http://&#34; (property xchipsserver) &#34;/perform?task=browse&#38;oid=&#34; (property modelfile) &#34;%23oid&#34; (oid) &#34;&#38;import=true&#34;)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid46" name="openInXCHIPS" title="Open task in XCHIPS" language="c++" bind="NO.METIS.GEM.executeDoc" required-dll="gem_dochandling">
+  <arg-list size="1">
+   <string name="Document">(expand &#34;http://&#34; (property xchipsserver) &#34;/perform?task=browse&#38;oid=&#34; (property modelfile) &#34;%23oid&#34; (oid))</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid47" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Find XCHIPS" xlink:href="#oid48" xlink:actuate="user"/>
+   <string name="Property">server</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid49" name="setdelaysym" title="Set Delayed Symbol" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Test Delayed" xlink:href="#oid50" xlink:actuate="user"/>
+   <string name="Default"> </string>
+   <string name="Macro">(expand &#34;!&#34;)</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid51" name="repairPartLinks" title="Repair Broken Part-links" language="c++" bind="NO.METIS.GEM.repairBrokenParts" required-dll="gem_qt_utilities" object-flag="true" container-flag="true">
+ </cpp-method>
+
+ <cpp-method id="oid54" name="getTransitionCondition" title="Get Transition Condition" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findInputFlow" xlink:href="#oid53" xlink:actuate="user"/>
+   <string name="Property">transitioncondition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid55" name="getIsControlFlow" title="Get Is ControlFlow" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findInputFlow" xlink:href="#oid53" xlink:actuate="user"/>
+   <string name="Property">iscontrolflow</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid58" name="getSWToolUrl" title="Get Software Tool URL" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="Find Software Tool from Task" xlink:href="#oid57" xlink:actuate="user"/>
+   <string name="Property">url</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid59" name="saveRework" title="Save Rework" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.strength</string>
+   <string name="Type">ect_relship,rework</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid60" name="saveHasSkillRating" title="Save Has skill rating" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.rating</string>
+   <string name="Type">ect_relship,hasskillrating</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid61" name="saveMeetingAssignment" title="Save Meeting assignment" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.allocation</string>
+   <string name="Type">ect_relship,meetingassignment</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid63" name="getConnectObject" title="Get Connected Object" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findObjectFromFlowRole" xlink:href="#oid62" xlink:actuate="user"/>
+   <string name="Property">name</string>
+   <string name="BreakAfter">...</string>
+   <string name="Separator">
+</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid65" name="saveTargetLagReference" title="Save Target Lag Reference" desc="Save instances according to the ect format." language="c++" bind="NO.METIS.ECT.saveInstance" required-dll="ect_parser" object-flag="true">
+  <arg-list size="4">
+   <string name="Connections">origin,target</string>
+   <string name="Properties">simvision.lag-type</string>
+   <string name="Type">ect_relship,targetlagreference</string>
+   <string name="TypeAttr">id,typename,typeuri</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid38" name="findAllUsers">
+  <c-op kind="and">
+   <c-op kind="object">
+    <complex-type-link xlink:role="type" xlink:title="User" xlink:href="ect_admin.kmd#oid1"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid44" name="findModel" title="Find Model" background-flag="true" container-flag="true">
+  <c-op kind="and">
+   <c-op kind="object">
+    <complex-type-link xlink:role="type" xlink:title="Model" xlink:href="ect.kmd#oid2"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid48" name="findXchips" title="Find XCHIPS" background-flag="true" container-flag="true">
+  <c-op kind="and">
+   <c-op kind="object">
+    <complex-type-link xlink:role="type" xlink:title="XCHIPS installation" xlink:href="ect.kmd#oid3"/>
+   </c-op>
+   <c-op kind="property-values">
+    <c-id>iscurrent</c-id>
+    <c-string>1</c-string>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid50" name="testDelayed" title="Test Delayed" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="property-values">
+    <c-id>delayed</c-id>
+    <c-string>1</c-string>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid53" name="findInputFlow" title="findInputFlow" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="targetof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Flow" xlink:href="ect.kmd#oid83"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid57" name="findSWToolFromTask" title="Find Software Tool from Task" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Tool Role" xlink:href="ect.kmd#oid64"/>
+     </c-op>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="originof">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="Is Filled By" xlink:href="ect.kmd#oid84"/>
+      </c-op>
+     </c-op>
+     <c-op kind="end">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Tool Role" xlink:href="ect.kmd#oid64"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Is Filled By" xlink:href="ect.kmd#oid84"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Software Tool" xlink:href="ect.kmd#oid56"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid62" name="findObjectFromFlowRole" title="findObjectFromFlowRole" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>...</c-number>
+     <c-op kind="originof">
+      <c-op kind="relshp">
+       <complex-type-link xlink:role="type" xlink:title="Is Filled By" xlink:href="ect.kmd#oid84"/>
+      </c-op>
+     </c-op>
+     <c-op kind="target">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Object Role" xlink:href="ect.kmd#oid63"/>
+      </c-op>
+     </c-op>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="Is Filled By" xlink:href="ect.kmd#oid84"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="or">
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Information Object" xlink:href="ect.kmd#oid51"/>
+      </c-op>
+      <c-op kind="object">
+       <complex-type-link xlink:role="type" xlink:title="Material Object" xlink:href="ect.kmd#oid59"/>
+      </c-op>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

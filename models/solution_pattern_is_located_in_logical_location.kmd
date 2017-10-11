@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="RelType_Semantics:Solution_Pattern_is_located_in_Logical_Location_UUID" name="solution_pattern_is_located_in_logical_location" title="Solution Pattern is located in Logical Location" desc="Indicates that a Solution Pattern is located in a Logical Location." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="is located in" xlink:href="../../meaf/relationshiptypes/is_located_in-is_location_of.kmd#Reltype_is_located_in-is_location_of_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Solution Pattern" xlink:href="../object_types/solution_pattern.kmd#CompType_Semantics:Solution_Pattern_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Logical Location" xlink:href="../../meaf/objecttypes/logical_location.kmd#CompType_MEAF:LogicalLocation_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Solution Pattern is located in Logical Location" xlink:href="#RelType_Semantics:Solution_Pattern_is_located_in_Logical_Location_UUID" xlink:actuate="user">
+   <string name="from">is located in</string>
+   <string name="to">is location of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Solution Pattern is located in Logical Location" xlink:href="#RelType_Semantics:Solution_Pattern_is_located_in_Logical_Location_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

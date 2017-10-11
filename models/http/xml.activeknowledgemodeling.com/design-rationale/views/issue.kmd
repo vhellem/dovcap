@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="2"
+ nextoid="1">
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Issue" xlink:href="../languages/issue.kmd#Issue" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+   <propertyview name="Priority" visible-flag="true"/>
+   <propertyview name="status" visible-flag="true"/>
+   <propertyview name="delayed" visible-flag="true"/>
+   <propertyview name="repetitive" visible-flag="true"/>
+   <propertyview name="start" visible-flag="true"/>
+   <propertyview name="end" visible-flag="true"/>
+   <propertyview name="icon_Status" visible-flag="false"/>
+   <propertyview name="color_Status" visible-flag="false"/>
+   <propertyview name="delayed_Color" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BFD4F5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/businessquestion.svg#oid1&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand (property Priority))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BFD4F5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/businessquestion.svg#oid1&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand (property Priority))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/businessquestion.png"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Issue" xlink:href="../languages/issue.kmd#Issue" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="strategicValue" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://metadata.troux.info/meaf/symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BFD4F5&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#BFD4F5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/businessquestion.svg#oid1&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;SV: &#34; (property strategicValue))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://metadata.troux.info/meaf/symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BFD4F5&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#BFD4F5&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/businessquestion.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/businessquestion.png"/>
+ </typeview>
+
+
+</metis>

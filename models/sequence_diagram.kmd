@@ -1,0 +1,638 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ methods="6"
+ criteria="1"
+ typeviews="6"
+ nextoid="2008">
+
+ <type id="oid1" name="Sequence_Diagram" title="Sequence Diagram" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="diagram.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram" xlink:href="#oid1001"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4"/>
+  <property name="mode" xlink:role="type" xlink:title="Mode" xlink:href="#oid501" label="Mode" visible-flag="false"/>
+  <property name="feedback" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Sub-symbol" desc="OID of sub-symbol to use for the current mode" method-flag="true" visible-flag="false"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="synchronizeDiagram" xlink:href="#oid2035"/>
+  <named-method-link name="Sequence_Diagram" xlink:role="cpp-method" xlink:title="SequenceDiagramConstructor" xlink:href="#oid2001"/>
+  <named-method-link name="feedback" xlink:role="cpp-method" xlink:title="setInsertFeedback" xlink:href="#oid2012"/>
+  <named-criteria-link name="sequenceRelationships" xlink:role="criteria" xlink:title="Find Sequence Relationships" xlink:href="#oid3001"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Sequence Diagram" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="Sequence_Diagram_Line" title="Sequence Diagram Line" usage="object" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Sequence Line/Node Property Base" xlink:href="../user/sequencepropertybase.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram Line" xlink:href="#oid1002"/>
+  <member-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4"/>
+  <property name="sequence" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence" desc="Sequence relative to the other lines in the diagram" visible-flag="false" protected-flag="true"/>
+  <named-method-link name="View.includeInDrag" xlink:role="cpp-method" xlink:title="extendMembers" xlink:href="#oid2002"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="lineGeometryChanged" xlink:href="#oid2021"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="lineCreated" xlink:href="#oid2023"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="linePasted" xlink:href="#oid2013"/>
+  <named-method-link name="includeOnDelete" xlink:role="cpp-method" xlink:title="extendMembers" xlink:href="#oid2002"/>
+  <named-criteria-link name="sequenceRelationships" xlink:role="criteria" xlink:title="Find Sequence Relationships" xlink:href="#oid3001"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Sequence_Diagram_Node" title="Sequence Diagram Node" usage="object" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Sequence Line/Node Property Base" xlink:href="../user/sequencepropertybase.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram Node" xlink:href="#oid1003"/>
+  <member-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4"/>
+  <property name="sequence" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence" desc="Sequence relative to the other nodes in the diagram" visible-flag="false" protected-flag="true"/>
+  <named-method-link name="View.includeInDrag" xlink:role="cpp-method" xlink:title="extendMembers" xlink:href="#oid2002"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="nodeGeometryChanged" xlink:href="#oid2014"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="nodeCreated" xlink:href="#oid2029"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="nodePasted" xlink:href="#oid2015"/>
+  <named-method-link name="includeOnDelete" xlink:role="cpp-method" xlink:title="extendMembers" xlink:href="#oid2002"/>
+  <named-criteria-link name="sequenceRelationships" xlink:role="criteria" xlink:title="Find Sequence Relationships" xlink:href="#oid3001"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid4" name="Sequence_Diagram_Coordinate" title="Sequence Diagram Coordinate" usage="ghost">
+  <complex-type-link xlink:role="type" xlink:title="Sequence Coordinate Property Base" xlink:href="../user/sequencepropertybase.kmd#oid2"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid1004"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="refreshNodeMembers" xlink:href="#oid2019"/>
+  <property name="sequence" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence" desc="Sequence relative to the other lines in the diagram" method-flag="true" visible-flag="true"/>
+  <property name="flag" xlink:role="type" xlink:title="Flag" xlink:href="#oid502" label="Flag" visible-flag="false"/>
+  <property name="state" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="State, as deducted according to current position and flags" method-flag="true" visible-flag="false"/>
+  <property name="symbol" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Sub-symbol" desc="OID of sub-symbol to use for the current state" method-flag="true" visible-flag="false"/>
+  <property name="error" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Error feedback" desc="Feedback on symbol items related to some modeling error" method-flag="true" visible-flag="false"/>
+  <named-method-link name="sequence" xlink:role="cpp-method" xlink:title="getSequence" xlink:href="#oid2010"/>
+  <named-method-link name="state" xlink:role="cpp-method" xlink:title="evaluateConnectionState" xlink:href="#oid2017"/>
+  <named-method-link name="symbol" xlink:role="cpp-method" xlink:title="setSymbolFeedback" xlink:href="#oid2011"/>
+  <named-method-link name="error" xlink:role="cpp-method" xlink:title="setErrorFeedback" xlink:href="#oid2016"/>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4">
+   <string name="name" class="volatile"></string>
+   <string name="state" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="oid5" name="Sequence_Relationship" title="Sequence Relationship" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Sequence Relationship Property Base" xlink:href="../user/sequencepropertybase.kmd#oid3"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1005"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Line color" desc="Color of the line" method-flag="true" visible-flag="false"/>
+  <property name="style" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Line style" desc="Style of the line" method-flag="true" visible-flag="false"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="getLineColor" xlink:href="#oid2008"/>
+  <named-method-link name="style" xlink:role="cpp-method" xlink:title="getLinePattern" xlink:href="#oid2009"/>
+  <named-method-link name="View.onOriginConnect" xlink:role="cpp-method" xlink:title="onConnect" xlink:href="#oid2005"/>
+  <named-method-link name="View.onTargetConnect" xlink:role="cpp-method" xlink:title="onConnect" xlink:href="#oid2005"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5">
+   <string name="name"></string>
+   <string name="color" class="volatile">blue</string>
+   <string name="style" class="volatile">solid</string>
+  </valueset>
+ </type>
+
+  <type id="oid6" name="Sequence_Represents" title="Sequence Represents" desc="Basetype of relationship to the representaion objects in the sequence diagram" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship with shared from and to texts" xlink:href="metis:stdtypes#oid111"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1006"/>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Sequence_Represents" xlink:href="#oid6">
+   <string name="from">represents</string>
+   <string name="to">represented in</string>
+  </valueset>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="metis:stdtypes#oid1"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:href="metis:stdtypes#oid1"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="1" xlink:role="type" xlink:href="metis:stdtypes#oid101"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:href="metis:stdtypes#oid101"/>
+  </connect-rule>
+ </type>
+
+ <string-type id="oid501" name="Mode" default="Insert">
+  <string class="shared">Insert</string>
+  <string class="shared">Compress</string>
+ </string-type>
+
+ <string-type id="oid502" name="Flag" default="None">
+  <string class="shared">None</string>
+  <string class="shared">Stop</string>
+  <string class="shared">Break</string>
+ </string-type>
+
+ <cpp-method id="oid2001" name="SequenceDiagramConstructor" language="c++" bind="NO.METIS.GEM.DIAGRAM.enableSequenceDiagram" required-dll="gem_diagram">
+  <arg-list size="3">
+   <url name="CommandObjectUrl" xlink:href="../commands/diagram_commands.kmd" xlink:role="url" xlink:title="Command Object Url" xlink:actuate="user"/>
+   <pointer name="DiagramUri" xlink:role="type" xlink:title="Sequence Diagram" xlink:href="#oid1" xlink:actuate="user"/>
+   <pointer name="NodeType" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3" xlink:actuate="user"/>
+   <pointer name="LineType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid4" xlink:actuate="user"/>
+   <pointer name="SequenceRelationship" xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2002" name="extendMembers" language="c++" bind="NO.METIS.GEM.extendSelection" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="Kind">Members</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2003" name="createConnections" language="c++" bind="NO.METIS.GEM.DIAGRAM.createConnections" required-dll="gem_diagram">
+  <arg-list size="5">
+   <pointer name="ConnectionType" xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4" xlink:actuate="user"/>
+   <integer name="LayoutLineFlags">1</integer>
+   <integer name="LayoutNodeFlags">2</integer>
+   <pointer name="LineType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" xlink:actuate="user"/>
+   <pointer name="NodeType" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2004" name="alignConnections" language="c++" bind="NO.METIS.GEM.DIAGRAM.alignConnections" required-dll="gem_diagram">
+  <arg-list size="5">
+   <pointer name="ConnectionType" xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4" xlink:actuate="user"/>
+   <integer name="LayoutLineFlags">1</integer>
+   <integer name="LayoutNodeFlags">2</integer>
+   <pointer name="LineType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" xlink:actuate="user"/>
+   <pointer name="NodeType" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2005" name="onConnect" language="c++" bind="NO.METIS.GEM.DIAGRAM.onConnect" required-dll="gem_diagram">
+  <arg-list size="2">
+   <pointer name="ObjectMethod1" xlink:role="method" xlink:title="refreshNodeMembers" xlink:href="#oid2019" xlink:actuate="auto"/>
+   <pointer name="ObjectMethod2" xlink:role="method" xlink:title="insertLines" xlink:href="#oid2024" xlink:actuate="auto"/>
+   <pointer name="ObjectMethod3" xlink:role="method"  xlink:title="setLineSequence" xlink:href="#oid2032" xlink:actuate="user"/>
+   <pointer name="ObjectMethod4" xlink:role="method"  xlink:title="setNodeSequence" xlink:href="#oid2031" xlink:actuate="user"/>
+   <pointer name="ObjectMethod5" xlink:role="method" xlink:title="refreshMacroNow" xlink:href="#oid2030" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2007" name="getLineNodeLabel" language="c++" bind="NO.METIS.GEM.DIAGRAM.getLineNodeLabel" required-dll="gem_diagram">
+  <arg-list size="4">
+   <pointer name="Type" xlink:role="type" 
+	    xlink:title="Sequence Diagram Coordinate" 
+	    xlink:href="#oid4"
+	    xlink:actuate="user"/>
+   <pointer name="ParentType1" xlink:role="type" 
+	    xlink:title="Sequence Diagram Node" 
+	    xlink:href="#oid3"
+	    xlink:actuate="user"/>
+<!--
+   <pointer name="ParentType2" xlink:role="type" 
+	    xlink:title="Sequence Diagram Line" 
+	    xlink:href="#oid2"
+	    xlink:actuate="user"/>
+-->
+   <string name="Delimiter"> - </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2008" name="getLineColor" language="c++" bind="NO.METIS.GEM.compareEndValues" required-dll="gem_analyse">
+   <arg-list size="5">
+    <string name="OriginProperty">sequence</string>
+    <string name="TargetProperty">sequence</string>
+    <string name="LessThan">blue</string>
+    <string name="Equal">blue</string>
+    <string name="GreaterThan">red</string>
+   </arg-list>
+ </cpp-method>
+  
+ <cpp-method id="oid2009" name="getLineColor" language="c++" bind="NO.METIS.GEM.compareEndValues" required-dll="gem_analyse">
+   <arg-list size="5">
+    <string name="OriginProperty">sequence</string>
+    <string name="TargetProperty">sequence</string>
+    <string name="LessThan">solid</string>
+    <string name="Equal">solid</string>
+    <string name="GreaterThan">dot</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2010" name="getSequence" language="c++" bind="NO.METIS.GEM.propagateSequenceProperty" required-dll="gem_diagram">
+   <arg-list size="2">
+    <pointer name="SequenceInstanceType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" xlink:actuate="user"/>
+    <string name="SequenceProperty">sequence</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2011" name="setSymbolFeedback" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="ErrorMarker">!</string>
+    <string name="Property">state</string>
+    <string name="Value1">Alive</string>
+    <string name="Return1">#oid3</string>
+    <string name="Value2">Dead</string>
+    <string name="Return2">#oid4</string>
+    <string name="Value3">Active</string>
+    <string name="Return3">#oid5</string>
+    <string name="Value4">ActiveFirst</string>
+    <string name="Return4">#oid6</string>
+    <string name="Value5">ActiveLast</string>
+    <string name="Return5">#oid7</string>
+    <string name="Value6">ActiveSingle</string>
+    <string name="Return6">#oid8</string>
+    <string name="Value7">Stop</string>
+    <string name="Return7">#oid9</string>
+    <string name="Default">from-symbol</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2012" name="setInsertFeedback" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="Property">mode</string>
+    <string name="Value">Insert</string>
+    <string name="Return">#oid9</string>
+    <string name="Default"></string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2013" name="linePasted" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="createConnections" xlink:href="#oid2003" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="setLineSequence" xlink:href="#oid2032" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2014" name="nodeGeometryChanged" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="alignConnections" xlink:href="#oid2004" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="setNodeSequence" xlink:href="#oid2031" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2015" name="nodePasted" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="createConnections" xlink:href="#oid2003" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="setNodeSequence" xlink:href="#oid2031" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2016" name="setErrorFeedback" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="ErrorMarker">!</string>
+    <string name="Property">state</string>
+    <string name="Default">from-symbol</string>
+    <string name="Error">red</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2017" name="evaluateConnectionState" language="c++" bind="NO.METIS.GEM.DIAGRAM.evaluateConnectionState" required-dll="gem_diagram">
+   <arg-list size="14">
+    <string name="SequenceProperty">sequence</string>
+   <pointer name="SequenceRelationship" xlink:role="type" 
+	    xlink:title="Sequence Relationship" 
+	    xlink:href="#oid5"
+	    xlink:actuate="user"/>
+   <pointer name="NodeType" xlink:role="type" 
+	    xlink:title="Sequence Diagram Node" 
+	    xlink:href="#oid3"
+	    xlink:actuate="user"/>
+    <string name="FlagProperty">flag</string>
+    <string name="StopFlag">Stop</string>
+    <string name="BreakFlag">Break</string>
+    <string name="AliveState">Alive</string>
+    <string name="ActiveState">Active</string>
+    <string name="ActiveFirstState">ActiveFirst</string>
+    <string name="ActiveLastState">ActiveLast</string>
+    <string name="ActiveSingleState">ActiveSingle</string>
+    <string name="StopState">Stop</string>
+    <string name="DeadState">Dead</string>
+    <string name="ErrorMarker">!</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2018" name="setActiveSingleFeedback" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="ErrorMarker">!</string>
+    <string name="Property">state</string>
+    <string name="Value">ActiveSingle</string>
+    <string name="True">from-symbol</string>
+    <string name="False">none</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2019" name="refreshNodeMembers" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+   <arg-list size="1">
+     <pointer name="CoMembersOf" xlink:role="type" 
+	      xlink:title="Sequence Diagram Node" 
+	      xlink:href="#oid3"
+	      xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2020" name="refreshMembers" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+   <arg-list size="1">
+     <pointer name="MembersOf" xlink:role="type" 
+	      xlink:title="Sequence Diagram Coordinate" 
+	      xlink:href="#oid4"
+	      xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2021" name="lineGeometryChanged" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="alignConnections" xlink:href="#oid2004" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="setLineSequence" xlink:href="#oid2032" xlink:actuate="user"/>
+    <pointer name="Method3" xlink:role="method"  xlink:title="refreshMembers" xlink:href="#oid2020" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2022" name="layoutNow" language="c++" bind="NO.METIS.GEM.layoutNow" required-dll="gem_modeling">
+ </cpp-method>
+
+ <cpp-method id="oid2023" name="lineCreated" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="createConnections" xlink:href="#oid2003" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="setLineSequence" xlink:href="#oid2032" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2024" name="insertLines" language="c++" bind="NO.METIS.GEM.DIAGRAM.maintainExtraLines" required-dll="gem_diagram">
+   <arg-list size="8">
+    <pointer name="DiagramCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003" xlink:actuate="user"/>
+    <pointer name="LineCriteria" xlink:role="criteria" xlink:title="Line From Connection" xlink:href="#oid2025" xlink:actuate="user"/>
+    <pointer name="AllLinesCriteria" xlink:role="criteria" xlink:title="All Lines From Diagram Element" xlink:href="#oid2026" xlink:actuate="user"/>
+    <pointer name="DiagramType" xlink:role="type" xlink:title="Sequence Diagram" xlink:href="#oid1" xlink:actuate="user"/>
+    <pointer name="LineType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" xlink:actuate="user"/>
+    <pointer name="SequenceRelationship" xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5" xlink:actuate="user"/>
+    <string name="Action">Insert</string>
+    <string name="ActionProp">mode</string>
+   </arg-list>
+ </cpp-method>
+
+ <criteria id="oid2025" name="LineFromConnection" title="Line From Connection" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="memberof" use-on-flag="true">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2026" name="AllLinesFromElement" title="All Lines From Diagram Element" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="partof">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Sequence Diagram" xlink:href="#oid1"/>
+     </c-op>
+    </c-op>
+    <c-op kind="part" use-on-flag="true">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2027" name="AllLinesFromDiagram" title="All Lines From Diagram" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part" use-on-flag="true">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="oid2028" name="insertFirstLine" language="c++" bind="NO.METIS.GEM.DIAGRAM.maintainExtraLines" required-dll="gem_diagram">
+   <arg-list size="8">
+    <pointer name="DiagramCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003" xlink:actuate="user"/>
+    <pointer name="AllLinesCriteria" xlink:role="criteria" xlink:title="All Lines From Diagram Element" xlink:href="#oid2026" xlink:actuate="user"/>
+    <pointer name="DiagramType" xlink:role="type" xlink:title="Sequence Diagram" xlink:href="#oid1" xlink:actuate="user"/>
+    <pointer name="LineType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" xlink:actuate="user"/>
+    <string name="Action">Insert</string>
+    <string name="ActionProp">mode</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2029" name="nodeCreated" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="createConnections" xlink:href="#oid2003" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="setNodeSequence" xlink:href="#oid2031" xlink:actuate="user"/>
+    <pointer name="Method3" xlink:role="method"  xlink:title="insertFirstLine" xlink:href="#oid2028" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2030" name="refreshMacroNow" language="c++" bind="NO.METIS.GEM.refreshMacroNow" required-dll="gem_modeling">
+ </cpp-method>
+
+ <cpp-method id="oid2031" name="setNodeSequence" language="c++" bind="NO.METIS.GEM.maintainSequenceProperty" required-dll="gem_diagram">
+   <arg-list size="5">
+    <string name="UpdateSequence">true</string>
+    <pointer name="SequenceInstanceType" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3" xlink:actuate="user"/>
+    <string name="SequenceProperty">sequence</string>
+    <string name="Direction">Horizontal</string>
+    <string name="SynchronizeMode">None</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2032" name="setLineSequence" language="c++" bind="NO.METIS.GEM.maintainSequenceProperty" required-dll="gem_diagram">
+   <arg-list size="4">
+    <string name="UpdateSequence">true</string>
+    <pointer name="SequenceInstanceType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" xlink:actuate="user"/>
+    <string name="SequenceProperty">sequence</string>
+    <string name="Direction">Vertical</string>
+    <string name="SynchronizeMode">None</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2033" name="synchronizeNodes" language="c++" bind="NO.METIS.GEM.maintainSequenceProperty" required-dll="gem_diagram">
+   <arg-list size="5">
+    <pointer name="SequenceInstanceType" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3" xlink:actuate="user"/>
+    <pointer name="SequenceCoordinateType" xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4" xlink:actuate="user"/>
+    <pointer name="SequenceRelationshipType" xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5" xlink:actuate="user"/>
+    <string name="SequenceProperty">sequence</string>
+    <string name="Direction">Horizontal</string>
+    <string name="SynchronizeMode">Current</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2034" name="synchronizeLines" language="c++" bind="NO.METIS.GEM.maintainSequenceProperty" required-dll="gem_diagram">
+   <arg-list size="5">
+    <pointer name="SequenceInstanceType" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" xlink:actuate="user"/>
+    <pointer name="SequenceCoordinateType" xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4" xlink:actuate="user"/>
+    <pointer name="SequenceRelationshipType" xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5" xlink:actuate="user"/>
+    <string name="SequenceProperty">sequence</string>
+    <string name="Direction">Vertical</string>
+    <string name="SynchronizeMode">Current</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2035" name="synchronizeDiagram" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="synchronizeNodes" xlink:href="#oid2033" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="synchronizeLines" xlink:href="#oid2034" xlink:actuate="user"/>
+    <pointer name="Method3" xlink:role="method"  xlink:title="layoutNow" xlink:href="#oid2022" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2036" name="setSequence" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="setLineSequence" xlink:href="#oid2032" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="setNodeSequence" xlink:href="#oid2031" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <criteria id="oid3001" name="sequenceRelationships" title="Find Sequence Relationships" desc="Applied to a sequence diagram this criteira will find all sequence relationships in the diagram.&#10;&#60;br&#62;&#10;Applied to lines or nodes it will find all relationships starting in the line or node.&#10;If applied to a selection of diagrams or lines/nodes all relationships related to the selection will be found." model-flag="true" object-flag="true" nested-flag="true" tree-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="path-or">
+     <c-op kind="repeat">
+      <c-number>1</c-number>
+      <c-number>1</c-number>
+      <c-op kind="part">
+       <c-op kind="object">
+        <complex-type-link xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4"/>
+       </c-op>
+      </c-op>
+      <c-op kind="originof">
+       <c-op kind="relshp">
+        <complex-type-link xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5"/>
+       </c-op>
+      </c-op>
+     </c-op>
+     <c-op kind="repeat">
+      <c-number>1</c-number>
+      <c-number>1</c-number>
+      <c-op kind="member"/>
+      <c-op kind="originof">
+       <c-op kind="relshp">
+        <complex-type-link xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5"/>
+       </c-op>
+      </c-op>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+ <typeview id="oid1001" xlink:role="type" xlink:title="Sequence Diagram" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutlocked autolayoutme fixedlayoutset fixedlayoutlocked ">
+  <layout-link xlink:role="object" xlink:title="Sequence state collection" xlink:href="../layout_strategies/sequence_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Diagram" xlink:href="../symbols/diagram.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Sequence Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid2&#34;)"/>
+   <replace tag="mode" property="value" macro="(expand &#34;../symbols/diagram.svg&#34; (property feedback))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Diagram" xlink:href="../symbols/diagram.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Sequence Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid2&#34;)"/>
+   <replace tag="mode" property="value" macro="(expand &#34;../symbols/diagram.svg&#34; (property feedback))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/sequence_diagram.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1002" xlink:role="type" xlink:title="Sequence Diagram Line" xlink:href="#oid2" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Line Open" xlink:href="../symbols/sequence_object.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;b&#62;&#34; (label) &#34;&#60;/b&#62; &#34; (description))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Line Open" xlink:href="../symbols/sequence_object.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;b&#62;&#34; (label) &#34;&#60;/b&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/line.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1003" xlink:role="type" xlink:title="Sequence Diagram Node" xlink:href="#oid3" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Node Open" xlink:href="../symbols/sequence_object.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;u&#62;&#34; (label) &#34;&#60;/u&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Node Open" xlink:href="../symbols/sequence_object.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;u&#62;&#34; (label) &#34;&#60;/u&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/node.png" xlink:actuate="auto"/>
+ </typeview>
+
+
+ <typeview id="oid1004" xlink:role="type" xlink:title="Sequence Diagram Coordinate" xlink:href="#oid4" tree-size="0.5" nested-size="0.125" behavior="nested" gui-behavior="guibehaviorset guicreaterelationship">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Connection" xlink:href="../symbols/connection.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/connection.svg&#34; (property symbol))"/>
+   <replace tag="active" property="fillcolor" macro="(expand (property error))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Connection" xlink:href="../symbols/connection.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/connection.svg&#34; (property symbol))"/>
+   <replace tag="active" property="fillcolor" macro="(expand (property error))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/conn.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1005" xlink:role="type" xlink:title="Sequence Relationship" xlink:href="#oid5" typelabel="Sequence Relationship" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="ObjectviewOfRelHorizontalLabel" xlink:href="metis:stdsyms#oid111" xlink:actuate="user">
+   <replace tag="origin" property="value" macro="(expand (origin label))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="target" property="value" macro="(expand (target label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ObjectviewOfRelHorizontal" xlink:href="metis:stdsyms#oid110" xlink:actuate="user">
+   <replace tag="origin" property="value" macro="(expand (origin label))"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="target" property="value" macro="(expand (target label))"/>
+  </symbol-override>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Sequence Relationship" xlink:href="../symbols/sequence_relationship.svg#oid1" xlink:actuate="user">
+   <replace tag="midpointtext" property="value" macro="(expand (label))"/>
+   <replace tag="line" property="linecolor" macro="(expand (property color))"/>
+   <replace tag="line" property="linestyle" macro="(expand (property style))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/connconn.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1006" xlink:role="type" xlink:title="Sequence Represents" xlink:href="#oid6" typelabel="Sequence Represents Relationship" tree-size="0.5" nested-size="0.125" behavior="tree">
+<!--
+  <symbol-override state="open" xlink:role="symbol" xlink:title="ObjectviewOfRelHorizontalLabel" xlink:href="metis:stdsyms#oid111" xlink:actuate="user">
+   <replace tag="origin" property="value" macro="(expand (origin label))"/>
+   <replace tag="text"   property="value" macro="(expand (label))"/>
+   <replace tag="target" property="value" macro="(expand (target label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ObjectviewOfRelHorizontal" xlink:href="metis:stdsyms#oid110" xlink:actuate="user">
+   <replace tag="origin" property="value" macro="(expand (origin label))"/>
+   <replace tag="text"   property="value" macro="(expand (label))"/>
+   <replace tag="target" property="value" macro="(expand (target label))"/>
+  </symbol-override>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Transition Relationship" xlink:href="../symbols/transition.svg#oid1" xlink:actuate="user">
+   <replace tag="midpointtext" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/state_transition.png" xlink:actuate="user"/>
+-->
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Shared Properties" xlink:href="metis:stdsyms#oid33" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+   <replace tag="line" property="linestyle" macro="(expand &#34;dot&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

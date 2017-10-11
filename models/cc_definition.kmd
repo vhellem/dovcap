@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="MetaModel_CPPD:CcDefinition_UUID" name="DeveloperEd.ModelEd.UriToolBar.ProductDefinition" title="Configurable Component Definition" desc="Metamodel for doing configurable component definitions.">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Configurable component (CPPD)" xlink:href="../languages/cc_objects.kmd#ObjType_CPPD:ConfigurableComponent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Composition element (CPPD)" xlink:href="../languages/cc_objects.kmd#ObjType_CPPD:CompositionElement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Component variant (CPPD)" xlink:href="../languages/cc_objects.kmd#ObjType_CPPD:ComponentVariant_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IsComposedUsing" xlink:href="../languages/cc_relships.kmd#RelType_CPPD:IsComposedUsing_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Uses configurable component" xlink:href="../languages/cc_relships.kmd#RelType_CPPD:UsesConfigurableComponent_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Has alternative solution" xlink:href="../languages/cc_relships.kmd#RelType_CPPD:HasAlternativeSolution_UUID"/>
+  </complex-type-links>
+  <typeview-links size="1">
+  </typeview-links>
+ </metamodel>
+
+</metis>

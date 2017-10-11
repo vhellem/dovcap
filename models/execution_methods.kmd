@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ nextoid="1">
+
+ <cpp-method id="_002asmt00s2lautl6uql" name="Execute_service" title="Execute service" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <complex-type-link xlink:role="type" xlink:title="Execute Script" xlink:href="metis:stdmethods#oid601"/>
+  <arg-list size="8">
+   <string name="Encoded">false</string>
+   <integer name="ExecuteOnParent">0</integer>
+   <string name="Language">VBScript</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Reset">false</string>
+   <string name="Script">&#39;msgbox metis.currentModel.currentInstance.getNamedValue(&#34;serviceURL&#34;).getUrl()
+Set shel = createObject(&#34;Shell.Application&#34;)
+shel.ShellExecute metis.currentModel.currentInstance.getNamedValue(&#34;serviceURL&#34;).getUrl()
+
+&#39;metis:stdmethods#oid7</string>
+   <string name="SynchronousExecution">false</string>
+   <integer name="Timeout">-1</integer>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="_002asmt00ul6hpgnifce" name="Execute" title="Execute" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <complex-type-link xlink:role="type" xlink:title="Execute Script File" xlink:href="metis:stdmethods#oid602"/>
+  <arg-list size="8">
+   <string name="Encoded">false</string>
+   <integer name="ExecuteOnParent">0</integer>
+   <string name="Language">VBScript</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Reset">false</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/task/methods/executeTask.vbs</string>
+   <string name="SynchronousExecution">false</string>
+   <integer name="Timeout">-1</integer>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

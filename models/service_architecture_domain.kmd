@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_C4DC1D17-8B67-4308-BE85-2E28936E1EDE" name="Service_Architecture_Domain" title="Service Architecture Domain" desc="The parent metamodel for all service architecture modeling subdomain-specific metamodels.">
+  <metamodel-links size="5">
+   <metamodel-link xlink:role="metamodel" xlink:title="Application Service Architecture Domain" xlink:href="application_service_architecture_domain.kmd#UUID4_6712BD41-9CD9-4BE7-B664-1CFABF2FF856"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Business Service Architecture Domain" xlink:href="business_service_architecture_domain.kmd#UUID4_A81BE2D4-477B-4A11-9197-7A45847C417F"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Infrastructure Service Architecture Domain" xlink:href="infrastructure_service_architecture_domain.kmd#UUID4_6F6006A8-7B5F-4F3E-A6D0-80CF3B9B8F40"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Service Architecture Intra-Domain Relationships" xlink:href="service_architecture_intra-domain_relationships.kmd#UUID4_59B476E6-801B-4C1F-9C3E-20C768257CAF"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="System Service Architecture Domain" xlink:href="system_service_architecture_domain.kmd#UUID4_033AF0EB-4635-412A-A262-36FDFD0A7DA3"/>
+  </metamodel-links>
+  <complex-type-links size="1">
+   <complex-type-link xlink:role="type" xlink:title="Service Architecture" xlink:href="../object_types/service_architecture.kmd#CompType_Semantics:Service_Architecture_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

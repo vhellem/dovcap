@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ criteria="0"
+ nextoid="2">
+
+
+ <cpp-method id="oid1" title="getRiskValue1" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Expression">multiply (property BusinessCriticality) (property FailureProbability)</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

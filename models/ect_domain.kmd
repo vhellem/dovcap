@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="8"
+ nextoid="13">
+
+ <metamodel id="oid1" name="ect_domain" title="EEML Domains">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="EE Process Elements" xlink:href="#oid2"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EE Resources" xlink:href="#oid3"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EE Simulation" xlink:href="#oid4"/>
+  </metamodel-links>
+  <complex-type-links size="1">
+   <complex-type-link xlink:role="type" xlink:title="Folder" xlink:href="../object_types/ect.kmd#oid21" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="process_domain" title="EE Process Elements">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="EE Process Relationships" xlink:href="#oid5"/>
+  </metamodel-links>
+  <complex-type-links size="9">
+   <complex-type-link xlink:role="type" xlink:title="Flow Role" xlink:href="../object_types/ect.kmd#oid62" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization Unit Role" xlink:href="../object_types/ect.kmd#oid67" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Person Role" xlink:href="../object_types/ect.kmd#oid66" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Tool Role" xlink:href="../object_types/ect.kmd#oid64" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Object Role" xlink:href="../object_types/ect.kmd#oid63" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Task" xlink:href="../object_types/ect.kmd#oid76" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Milestone" xlink:href="../object_types/ect.kmd#oid78" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Meeting" xlink:href="../object_types/ect.kmd#oid72" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Decision Point" xlink:href="../object_types/ect.kmd#oid77" xlink:actuate="user"/>
+  </complex-type-links>
+  <method-links>
+    <method-link xlink:role="cpp-method" xlink:href="../object_types/ect_methods.kmd#oid51" xlink:actuate="user"/>
+  </method-links>
+ </metamodel>
+
+ <metamodel id="oid3" name="ect_resource_domain" title="EE Resources">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="EE Resources Relationships" xlink:href="#oid6"/>
+  </metamodel-links>
+  <complex-type-links size="7">
+   <complex-type-link xlink:role="type" xlink:title="Organization" xlink:href="../object_types/ect.kmd#oid41" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Person" xlink:href="../object_types/ect.kmd#oid42" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Information Object" xlink:href="../object_types/ect.kmd#oid51" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Skill Type" xlink:href="../object_types/ect.kmd#oid73" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Software Tool" xlink:href="../object_types/ect.kmd#oid56" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Manual Tool" xlink:href="../object_types/ect.kmd#oid57" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Material Object" xlink:href="../object_types/ect.kmd#oid59" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid4" name="simulation_domain" title="EE Simulation">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="EE Simulation Relationships" xlink:href="#oid7"/>
+  </metamodel-links>
+  <complex-type-links size="3">
+   <complex-type-link xlink:role="type" xlink:title="SimVision Case" xlink:href="../object_types/ect.kmd#oid31" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="start" xlink:href="../object_types/ect.kmd#oid79" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="finish" xlink:href="../object_types/ect.kmd#oid80" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid7" name="simulationrelationships" title="EE Simulation Relationships">
+  <complex-type-links size="3">
+   <complex-type-link xlink:role="type" xlink:title="Communication" xlink:href="../object_types/ect.kmd#oid85"/>
+   <complex-type-link xlink:role="type" xlink:title="Rework" xlink:href="../object_types/ect.kmd#oid90"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Simulation Values" xlink:href="../object_types/ect.kmd#oid141"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Target Lag Reference" xlink:href="../object_types/ect.kmd#oid162"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid5" name="processrelationships" title="EE Process Relationships">
+  <complex-type-links size="10">
+   <complex-type-link xlink:role="type" xlink:title="Flow" xlink:href="../object_types/ect.kmd#oid83"/>
+   <complex-type-link xlink:role="type" xlink:title="Is Filled By" xlink:href="../object_types/ect.kmd#oid84"/>
+   <complex-type-link xlink:role="type" xlink:title="Meeting Assignment" xlink:href="../object_types/ect.kmd#oid87"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Skill Rating" xlink:href="../object_types/ect.kmd#oid88"/>
+   <complex-type-link xlink:role="type" xlink:title="Requires Skill" xlink:href="../object_types/ect.kmd#oid89"/>
+   <complex-type-link xlink:role="type" xlink:title="Primary Skill Required" xlink:href="../object_types/ect.kmd#oid137"/>
+   <complex-type-link xlink:role="type" xlink:title="Has First Milestone" xlink:href="../object_types/ect.kmd#oid138"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Last Milestone" xlink:href="../object_types/ect.kmd#oid139"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Target Milestone" xlink:href="../object_types/ect.kmd#oid140"/>
+   <complex-type-link xlink:role="type" xlink:title="Candidate" xlink:href="../object_types/ect.kmd#oid143"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid6" name="resourcerelationships" title="Resource Relationships">
+  <complex-type-links size="3">
+   <complex-type-link xlink:role="type" xlink:title="Supervision" xlink:href="../object_types/ect.kmd#oid86"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Skill Rating" xlink:href="../object_types/ect.kmd#oid88"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Member" xlink:href="../object_types/ect.kmd#oid134"/>
+   <complex-type-link xlink:role="type" xlink:title="Support" xlink:href="../object_types/ect.kmd#oid161"/>
+   <complex-type-link xlink:role="type" xlink:title="Communicated" xlink:href="../object_types/ect.kmd#oid158"/>
+   <complex-type-link xlink:role="type" xlink:title="Access" xlink:href="../object_types/ect.kmd#oid159"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid8" name="eegoals" title="EE Goals">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationships" xlink:href="#oid9"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../object_types/ect.kmd#oid144" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal" xlink:href="../object_types/ect.kmd#oid149" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid9" name="goalrelationships" title="Goal Relationships">
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Goal to Goal" xlink:href="../object_types/ect.kmd#oid145"/>
+   <complex-type-link xlink:role="type" xlink:title="Applies to" xlink:href="../object_types/ect.kmd#oid146"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal to Goal Set" xlink:href="../object_types/ect.kmd#oid155"/>
+   <complex-type-link xlink:role="type" xlink:title="Goal Set to Goal" xlink:href="../object_types/ect.kmd#oid156"/>
+   <complex-type-link xlink:role="type" xlink:title="Decisision Rule" xlink:href="../object_types/ect.kmd#oid151"/>
+   <complex-type-link xlink:role="type" xlink:title="Action Rule" xlink:href="../object_types/ect.kmd#oid152"/>
+   <complex-type-link xlink:role="type" xlink:title="Precondition" xlink:href="../object_types/ect.kmd#oid153"/>
+   <complex-type-link xlink:role="type" xlink:title="Postcondition" xlink:href="../object_types/ect.kmd#oid154"/>
+   <complex-type-link xlink:role="type" xlink:title="Source" xlink:href="../object_types/ect.kmd#oid157"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

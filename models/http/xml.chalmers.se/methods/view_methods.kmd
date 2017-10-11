@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="openCCobject1" name="openCCobject1" title="is composed using" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/openCCobject1.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="openCCobject2" name="openCCobject2" title="is an implementation of" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/openCCobject2.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>
+

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="4"
+ instanceviews="5"
+ nextoid="1">
+
+ <model id="_002asoi010so4tnn6v7p" name="CC Project model" title="CC Project model" submodel-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Project model" xlink:href="#_002asoi010ubmpqg0sbb"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="CC Project model" xlink:href="#_002asoi010so4tnn6v7p" xlink:actuate="user"/>
+   </bundle-rule>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="CC Project model" xlink:href="#_002asoi010so4tnn6v7p" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="CC Project model" xlink:href="#_002asoi010so4tnn6v7p" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="_002asoi010ubmpqg0sbb">
+  <valueset size="9" xlink:role="type" xlink:title="Space (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_space.kmd#ObjType_EKA:Space_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Project model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070708 093558829</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="_002asoi011011usqnngr">
+  <valueset size="9" xlink:role="type" xlink:title="Connector" xlink:href="metis:stdtypes#oid125" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name" class="volatile">CC Project model</string>
+   <string name="description" class="volatile"></string>
+   <pointer name="model" xlink:role="model" xlink:title="CC Project model" xlink:href="#_002asoi010so4tnn6v7p" xlink:actuate="user"/>
+   <collection name="metamodels" structure="list" size="3" xlink:role="pointer-type" xlink:title="Metamodel Pointer" xlink:href="metis:std#oid55" xlink:actuate="user">
+    <pointer xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   </collection>
+   <integer name="viewState">1</integer>
+   <pointer name="type" class="volatile" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+   <integer name="lazyLoad">1</integer>
+   <integer name="bundleWeight">0</integer>
+  </valueset>
+  <part-link xlink:role="model" xlink:title="CC Project model" xlink:href="#_002asoi010so4tnn6v7p"/>
+ </object>
+
+ <model id="_002asoi011011uuknhj2" name="CC Project model" title="CC Project model" submodel-ok="false" standalone-flag="true" reusable-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="CC Project model" xlink:href="#_002asoi011011usqnngr"/>
+ </model>
+
+ <objectview id="_002asoi010ubn3rlk7db" xlink:role="object" xlink:title="Project model" xlink:href="#_002asoi010ubmpqg0sbb" state="open" behavior="nested" text-scale="1" decomp-scale="0.125" left="250" top="200" width="682.667" height="512">
+ </objectview>
+
+ <relationshipview id="_002asoi010ubobdvto2l" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+  <target-link xlink:role="objectview" xlink:title="Project model" xlink:href="#_002asoi010ubn3rlk7db"/>
+ </relationshipview>
+
+ <modelview id="_002asoi011011ubrdp49" title="Main" primary-flag="true" standalone-flag="true" reusable-flag="true" zoom-level="0.915052" x="594.219" y="472.078" seq="1" xlink:role="model" xlink:title="CC Project model" xlink:href="#_002asoi011011uuknhj2" behavior="nested" text-scale="1" decomp-scale="1" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="CC Project model" xlink:href="#_002asoi0110128s1b6en"/>
+ </modelview>
+
+ <objectview id="_002asoi0110128s1b6en" xlink:role="object" xlink:title="CC Project model" xlink:href="#_002asoi011011usqnngr" state="open" behavior="connector" text-scale="1" decomp-scale="1" left="0" top="0" width="1214.67" height="944">
+  <child-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+ </objectview>
+
+ <modelview id="oid1" name="Main" title="Main" submodel-flag="true" zoom-level="1" x="-147.661" y="-157.227" xlink:role="model" xlink:title="CC Project model" xlink:href="#_002asoi010so4tnn6v7p" state="open" behavior="nested" text-scale="1" decomp-scale="1" left="16" top="16" width="1182.67" height="912" visible-in="browser">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Nested Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Container, Default" xlink:href="metis:stdsyms#oid22" xlink:actuate="user">
+  </symbol-override>
+  <child-link xlink:role="objectview" xlink:title="Project model" xlink:href="#_002asoi010ubn3rlk7db"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asoi010ubobdvto2l"/>
+ </modelview>
+
+
+</metis>

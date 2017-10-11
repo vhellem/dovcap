@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="has_configuration_rule" name="has_configuration_rule" title="Has_configuration_rule" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="CC_relship" xlink:href="cc_relship.kmd#CC_relship"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Configurable_component" xlink:href="configurable_component.kmd#configurable_component" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Configuration_rule" xlink:href="configuration_rule.kmd#configuration_rule" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="Has_configuration_rule" xlink:href="#has_configuration_rule" xlink:actuate="user">
+   <string name="from">has rule</string>
+   <string name="to"></string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Has_configuration_rule" xlink:href="#has_configuration_rule" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_A7B29DC5-DA40-494D-AF92-065984402269" name="Relationship_Types" title="Relationship Types">
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="Computing Hardware hosts-is hosted by Virtual Host" xlink:href="../relationship_types/computing_hardware_hosts-is_hosted_by_virtual_host.kmd#RelType_Semantics_AppDomain:Computing_Hardware_hosts-is_hosted_by_Virtual_Host_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Operating System hosts-is hosted by Deployed Software" xlink:href="../relationship_types/operating_system_hosts-is_hosted_by_deployed_software.kmd#RelType_Semantics_AppDomain:Operating_System_hosts-is_hosted_by_Deployed_Software_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Virtual Host manages execution of-has execution managed by Virtual Machine Image" xlink:href="../relationship_types/virtual_host_manages_execution_of-has_execution_managed_by_virtual_machine_image.kmd#RelType_Semantics_AppDomain:Virtual_Host_manages_execution_of-has_execution_managed_by_Virtual_Machine_Image_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Virtual Machine Image incorporates-is incorporated in Deployed Software" xlink:href="../relationship_types/virtual_machine_image_incorporates-is_incorporated_in_deployed_software.kmd#RelType_Semantics_AppDomain:Virtual_Machine_Image_incorporates-is_incorporated_in_Deployed_Software_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_TRM:ComputingHardware_UUID" name="computing_hardware" title="Computing Hardware" desc="The Computing Hardware type is the abstract type for object types that describe hardware that have computing capabilities." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="hardware.kmd#CompType_TRM:Hardware_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="network_interface.kmd#CompType_TRM:NetworkInterface_UUID"/>
+  <property name="memoryRamAmount" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Memory (RAM) Amount" desc="The amount of memory in this component." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_GenInfo_RAM_UUID&#34;;"/>
+  <property name="processorCpuCount" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Processor (CPU) Count" desc="The number of CPUs in this component." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_GenInfo_CPUCount_UUID&#34;;"/>
+  <property name="processorCpuClockSpeed" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Processor (CPU) Clock Speed" desc="The clock speed of the CPUs" mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_GenInfo_CPUClockSpeed_UUID&#34;;"/>
+  <property name="processorCpuClockSpeedUnit" xlink:role="integer-type" xlink:title="Processor (CPU) Clock Speed Unit" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_processor_cpu_clock_speed_unit_UUID" label="Processor (CPU) Clock Speed Unit" desc="The unit that clock speed is listed in." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_GenInfo_CPUClockSpeedUnit_UUID&#34;;"/>
+  <property name="diskCount" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Disk Count" desc="The number of internal disks in this component." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_GenInfo_DiskCount_UUID&#34;;"/>
+  <property name="diskCapacity" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Disk Capacity" desc="The total capacity of all internal disk drives in this component (metric)." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_GenInfo_DiskCapacity_UUID&#34;;"/>
+  <property name="diskCapacityUnit" xlink:role="integer-type" xlink:title="Disk Capacity Free Unit" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_disk_capacity_free_unit_UUID" label="Disk Capacity Unit" desc="The units that disk capacity is stated in." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_GenInfo_DiskCapacityUnits_UUID&#34;;"/>
+  <property name="processorPercentageUsedTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#datetime" label="Processor Percentage Used Timestamp" desc="The last date and time this metric was gathered." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_PerfMetrics_CPUPct_Timestamp_UUID&#34;;"/>
+  <property name="processorPercentageUsed" xlink:role="integer-type" xlink:title="Percentage" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_percentage0_UUID" label="Processor Percentage Used" desc="The latest value of this metric (%)." mer-property-metadata="uuid=&#34;PropDef_TRM:Computer_PerfMetrics_CPUPct_Value_UUID&#34;;"/>
+  <property name="diskCapacityFreeTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#datetime" label="Disk Capacity Free Timestamp" desc="The date and time this metric was last gathered." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskCapFreeUnit_Timestamp_UUID&#34;;"/>
+  <property name="diskCapacityFree" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Disk Capacity Free" desc="The latest value of this metric." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskCapFreeUnit_Value_UUID&#34;;"/>
+  <property name="diskCapacityFreeUnit" xlink:role="integer-type" xlink:title="Disk Capacity Free Unit" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_disk_capacity_free_unit_UUID" label="Disk Capacity Free Unit" desc="The units this metric is measured in." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskCapFreeUnit_Units_UUID&#34;;"/>
+  <property name="diskCapacityUsedTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#datetime" label="Disk Capacity Used Timestamp" desc="The last date and time this metric was gathered." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskCapUseUnit_Timestamp_UUID&#34;;"/>
+  <property name="diskCapacityUsed" xlink:role="decimal-type" xlink:title="decimal" xlink:href="metis:std#decimal" label="Disk Capacity Used" desc="The latest value of the metric." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskCapUseUnit_Value_UUID&#34;;"/>
+  <property name="diskCapacityUsedUnit" xlink:role="integer-type" xlink:title="Disk Capacity Free Unit" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_disk_capacity_free_unit_UUID" label="Disk Capacity Used Unit" desc="The units the metric is measured in." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskCapUseUnit_Units_UUID&#34;;"/>
+  <property name="diskPercentageUsedTimestamp" xlink:role="date-time-type" xlink:title="datetime" xlink:href="metis:std#datetime" label="Disk Percentage Used Timestamp" desc="The last date and time this metric was gathered." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskUsePct_Timestamp_UUID&#34;;"/>
+  <property name="diskPercentageUsed" xlink:role="integer-type" xlink:title="Percentage" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_percentage0_UUID" label="Disk Percentage Used" desc="The latest value of this metric." mer-property-metadata="uuid=&#34;PropDef_TRM:DiskArray_PerfMetrics_DiskUsePct_Value_UUID&#34;;"/>
+  <property name="memoryRamUnit" xlink:role="integer-type" xlink:title="integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_memory_ram_unit_UUID" label="Memory (RAM) Unit" desc="The unit in which the memory (RAM) is expressed." mer-property-metadata="uuid=&#34;PropDef_TRM:ComputingHardware_memoryRamUnit_UUID&#34;;"/>
+  <named-method-link name="MetisTrouxClient_--Get Cabinet----QueryCabinetOvercabinet_stores_is_stored_in_computing_hardware" xlink:role="cpp-method" xlink:title="is stored in Cabinet" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryCabinetOvercabinet_stores_is_stored_in_computing_hardware"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Computing Hardware" xlink:href="#CompType_TRM:ComputingHardware_UUID">
+   <string name="troux_color">#CCCCCC</string>
+   <string name="troux_iconAlias">c1816fef-5e0a-3d4d-95a3-df0fb1b9ec3f</string>
+   <string name="troux_shape">Rectangle</string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Computing Hardware" xlink:href="#CompType_TRM:ComputingHardware_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="purchaseDate"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="productName"/>
+   <propertyview name="productVersion"/>
+   <propertyview name="productSerialNumber"/>
+   <propertyview name="vendorName"/>
+   <propertyview name="vendorSalesPhone"/>
+   <propertyview name="vendorSalesEmail"/>
+   <propertyview name="vendorSupportPhone"/>
+   <propertyview name="vendorSupportEmail"/>
+   <propertyview name="diskCount"/>
+   <propertyview name="diskCapacity"/>
+   <propertyview name="diskCapacityUnit"/>
+   <propertyview name="diskCapacityFreeTimestamp"/>
+   <propertyview name="diskCapacityFree"/>
+   <propertyview name="diskCapacityFreeUnit"/>
+   <propertyview name="diskCapacityUsedTimestamp"/>
+   <propertyview name="diskCapacityUsed"/>
+   <propertyview name="diskCapacityUsedUnit"/>
+   <propertyview name="diskPercentageUsedTimestamp"/>
+   <propertyview name="diskPercentageUsed"/>
+   <propertyview name="processorCpuCount"/>
+   <propertyview name="processorCpuClockSpeed"/>
+   <propertyview name="processorCpuClockSpeedUnit"/>
+   <propertyview name="processorPercentageUsedTimestamp"/>
+   <propertyview name="processorPercentageUsed"/>
+   <propertyview name="memoryRamUnit"/>
+   <propertyview name="memoryRamAmount"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/computinghardware.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/computinghardware.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/computinghardware.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Computing Hardware" xlink:href="#CompType_TRM:ComputingHardware_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="purchaseDate"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="productName"/>
+   <propertyview name="productVersion"/>
+   <propertyview name="productSerialNumber"/>
+   <propertyview name="vendorName"/>
+   <propertyview name="vendorSalesPhone"/>
+   <propertyview name="vendorSalesEmail"/>
+   <propertyview name="vendorSupportPhone"/>
+   <propertyview name="vendorSupportEmail"/>
+   <propertyview name="diskCount"/>
+   <propertyview name="diskCapacity"/>
+   <propertyview name="diskCapacityUnit"/>
+   <propertyview name="diskCapacityFreeTimestamp"/>
+   <propertyview name="diskCapacityFree"/>
+   <propertyview name="diskCapacityFreeUnit"/>
+   <propertyview name="diskCapacityUsedTimestamp"/>
+   <propertyview name="diskCapacityUsed"/>
+   <propertyview name="diskCapacityUsedUnit"/>
+   <propertyview name="diskPercentageUsedTimestamp"/>
+   <propertyview name="diskPercentageUsed"/>
+   <propertyview name="processorCpuCount"/>
+   <propertyview name="processorCpuClockSpeed"/>
+   <propertyview name="processorCpuClockSpeedUnit"/>
+   <propertyview name="processorPercentageUsedTimestamp"/>
+   <propertyview name="processorPercentageUsed"/>
+   <propertyview name="memoryRamUnit"/>
+   <propertyview name="memoryRamAmount"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/computinghardware.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/computinghardware.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/computinghardware.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

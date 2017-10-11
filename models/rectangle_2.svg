@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?metis version="3.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE svg  PUBLIC "-//W3C//DTD SVG August 1999//EN"
+ "http://www.w3.org/Graphics/SVG/svg-19990812.dtd">
+
+<svg width="200" height="200">
+ <title>Symbol library: rectangle_2.svg</title>
+ <defs>
+  <symbol id="oid0" xml:space="preserve" class="METIS_SYMBOL">
+   <title>Rectangle 2</title>
+    <rect x="0" y="0" width="320" height="256"
+     style=" stroke:#000000; stroke-width:1; fill:#67b3ff; fill-opacity:100%"     class="TAG:canvas"></rect>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="17"
+       style=" stroke:#0000a5; stroke-width:1; font-family:sans-serif; font-weight:bold; font-size:18; text-align:center"
+       class="TAG:text">name</text>
+      <rect x="16" y="0" width="288" height="96"
+       style=" stroke:#000000; stroke-width:1; fill:#0067ce; fill-opacity:0%"></rect>
+    </g>
+    <g>
+      <desc>METIS_TEXT_GROUP</desc>
+      <text  x="16" y="109"
+       style=" stroke:#0000a5; stroke-width:1; font-family:serif;  font-size:14;"
+       class="TAG:description">description</text>
+      <rect x="16" y="96" width="288" height="160"
+       style=" stroke:#000000; stroke-width:1; fill:#dc0000; fill-opacity:0%"></rect>
+    </g>
+  </symbol>
+ </defs>
+</svg>

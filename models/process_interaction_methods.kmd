@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="getNameForProcessInteraction" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 2" xlink:href="metis:stdmethods#oid562"/>
+  <arg-list size="14">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="GetNameForProcessInteraction" xlink:href="../criteria/process_interaction_criteria.kmd#oid1"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="getCorrespondsValue" xlink:href="../criteria/corresponds_criteria.kmd#oid1"/>
+   <string name="Default"> </string>
+   <string name="Property1">name</string>
+   <string name="Property2">value</string>
+   <string name="Property3"></string>
+   <string name="Property4"></string>
+   <string name="Property5"></string>
+   <string name="RemoveDuplicates">true</string>
+   <string name="Separator">, </string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="getValueForSymbolLabel" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 2" xlink:href="metis:stdmethods#oid542"/>
+  <arg-list size="10">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="Find Name And Value" xlink:href="../criteria/process_interaction_criteria.kmd#oid5"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="Find Name and No Value" xlink:href="../criteria/process_interaction_criteria.kmd#oid2"/>
+   <pointer name="Criteria3" xlink:role="criteria" xlink:title="Find Value And No Name" xlink:href="../criteria/process_interaction_criteria.kmd#oid6"/>
+   <string name="Macro1">(expand (property name) (nl) (property value) )</string>
+   <string name="Macro2">(expand (property name))</string>
+   <string name="Macro3">(expand (property value))</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="General_Metis_Property" title="General Metis Property" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Target Attribute" xlink:href="attribute.kmd#oid3"/>
+  <property name="propertyInformation" xlink:role="type" xlink:title="Metis Property Information" xlink:href="metis_property_information.kmd#oid1" label="Property Information" default-visible="top"/>
+  <property name="canvasFillColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Canvas Fill Color" method-flag="true" visible-flag="false"/>
+  <property name="canvasFillPattern" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Canvas Fill Pattern" method-flag="true" visible-flag="false"/>
+  <property name="canvasLineStyle" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Canvas Line Style" method-flag="true" visible-flag="false"/>
+  <property name="sequenceNumber" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence Number" default-visible="bottom"/>
+  <named-method-link name="canvasFillColor" xlink:role="cpp-method" xlink:title="Property Visibility Fill Color" xlink:href="../methods/property_visibility.kmd#oid2"/>
+  <named-method-link name="canvasFillPattern" xlink:role="cpp-method" xlink:title="Property Visibility Fill Pattern" xlink:href="../methods/property_visibility.kmd#oid3"/>
+  <named-method-link name="canvasLineStyle" xlink:role="cpp-method" xlink:title="Property Visibility Line Style" xlink:href="../methods/property_visibility.kmd#oid1"/>
+  <valueset vset="default" size="25" xlink:role="type" xlink:title="General Metis Property" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">1</integer>
+   <string name="fieldPresenceColor" class="volatile"></string>
+   <string name="newFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="newFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="manualFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="manualFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <string name="propertyInformation.externalID"></string>
+   <string name="propertyInformation.propertyName"></string>
+   <integer name="propertyInformation.evaluatePropertyName">0</integer>
+   <string name="propertyInformation.propertyLabel"></string>
+   <string name="propertyInformation.propertyType"></string>
+   <string name="propertyInformation.propertyDataType"></string>
+   <integer name="propertyInformation.isKey">0</integer>
+   <integer name="propertyInformation.isVisible">1</integer>
+   <integer name="propertyInformation.isReadOnly">0</integer>
+   <string name="propertyInformation.propertyDescription"></string>
+   <string name="canvasFillColor" class="volatile"></string>
+   <string name="canvasFillPattern" class="volatile"></string>
+   <string name="canvasLineStyle" class="volatile"></string>
+   <integer name="sequenceNumber">99999</integer>
+  </valueset>
+ </type>
+
+
+</metis>

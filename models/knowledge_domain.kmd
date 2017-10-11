@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="1"
+ nextoid="2">
+
+ <domain id="oid1" name="KnowledgeDomain" title="Knowledge Domain">
+  <domain-link xlink:role="domain" xlink:href="#oid2"/>
+  <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/knowledge_category.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/knowledge_element.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/knowledge_access.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="http://xml.metis.no/xml/object_types/knowledge_source.kmd#oid1" xlink:actuate="user"/>
+ </domain>
+
+ <domain id="oid2" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_knowledge-of_competence_profile.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/requires-required_by.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/of-has_category.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/gives_access_to-has.kmd#oid1" xlink:actuate="auto"/>  <complex-type-link xlink:role="type" xlink:href="../relationship_types/stored_in-contains.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/accessed_by-has.kmd#oid1" xlink:actuate="auto"/>  
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_source-represent.kmd#oid1" xlink:actuate="auto"/>
+
+ </domain>
+</metis>

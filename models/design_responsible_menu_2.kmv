@@ -1,0 +1,3676 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="82"
+ instanceviews="99"
+ nextoid="1">
+
+ <object id="_002asqr01ei3rn0j9rj1">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Select component / variant</string>
+   <string name="description">1</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071017 103633050</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+dim cvwAction, cvwWorkspace
+dim ekaInst
+dim workspaceWindow
+dim layoutStrategy
+dim inst, value
+dim model
+dim applyFilter
+
+&#39;stop
+
+set model = metis.currentModel
+set ekaInst = new EKA_Instance
+set inst = ekaInst.findObject(model, &#34;WorkspaceContext&#34;)
+
+applyFilter = false
+if isEnabled(inst) then
+    value = ekaInst.getPropertyValue(inst, &#34;ApplyConfiguration&#34;)
+    if value = &#34;1&#34; then
+        applyFilter = true
+    end if
+end if
+&#39;stop
+set cvwAction = new CVW_MenuAction
+call cvwAction.build
+cvwAction.applyFilter = applyFilter
+set cvwWorkspace = cvwAction.execute
+
+set ekaInst = Nothing
+set cvwAction = Nothing</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01ei3rn21cflg">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Select customer project</string>
+   <string name="description">2</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071101 145002541</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Select project</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01ei3rn2e6q8u">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Component specifications</string>
+   <string name="description">2</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071017 103622715</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+dim cvwMenu
+
+set cvwMenu = new CVW_MenuTree
+&#39;stop
+call cvwMenu.build(&#34;MenuNode&#34;, 0.04, 1.3)
+
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01ei3rn3d3k7n">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">New specification</string>
+   <string name="description">3b</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 101624971</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">New component specification</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01ei3rnnslp1b">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Delete specification</string>
+   <string name="description">8</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071113 090402509</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Delete requirement</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01ei3rnpraa0k">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Component Responsible</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071018 123601452</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+dim model, modelView, objView
+dim cvwMenu, cvwStatusBar 
+
+set model = metis.currentModel
+set modelView = model.currentModelView
+set objView = modelView.currentInstanceView
+&#39;stop
+set cvwMenu = new CVW_MenuTree
+call cvwMenu.build(&#34;MenuTree&#34;, 1.3, 1.0)
+
+set cvwStatusBar = new CVW_StatusBar
+cvwStatusBar.topMenuStatus(objView)
+cvwStatusBar.populateStatusBars(objView)
+
+
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asqr01ei3rnrtlfls">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Search specification</string>
+   <string name="description">7</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071113 090434284</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Search component specifications</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <model id="_002asqr01ei3rnvfh3nd" name="Design responsible menu" title="Design responsible menu" submodel-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="9" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Design responsible menu</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071120 133515028</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rnpraa0k"/>
+  <part-link xlink:role="object" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rn0j9rj1"/>
+  <part-link xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <part-link xlink:role="object" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rn21cflg"/>
+  <part-link xlink:role="object" xlink:title="New specification" xlink:href="#_002asqr01ei3rn3d3k7n"/>
+  <part-link xlink:role="object" xlink:title="Search specification" xlink:href="#_002asqr01ei3rnrtlfls"/>
+  <part-link xlink:role="object" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnnslp1b"/>
+  <part-link xlink:role="object" xlink:title="Copy specification" xlink:href="#_002asr7029dk37st2i1c"/>
+  <part-link xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asri01fonc3fd8pvn"/>
+  <part-link xlink:role="object" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgaqut3lv"/>
+  <part-link xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <part-link xlink:role="object" xlink:title="New specification" xlink:href="#_002asrl01v6r4hn39p7p"/>
+  <part-link xlink:role="object" xlink:title="Search specification" xlink:href="#_002asrl01v7nufn8ppdl"/>
+  <part-link xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl23c6f9r"/>
+  <part-link xlink:role="object" xlink:title="Select component family" xlink:href="#_002ass601hfv9k1735sg"/>
+  <part-link xlink:role="object" xlink:title="Customer Responsible" xlink:href="#_002ass700pgln3qh49hm"/>
+  <part-link xlink:role="object" xlink:title="Save" xlink:href="#_002assa016ftq9vke2h7"/>
+  <part-link xlink:role="object" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjqbqm92"/>
+  <part-link xlink:role="object" xlink:title="Notify supplier" xlink:href="#_002assc013fncmc4l819"/>
+  <part-link xlink:role="object" xlink:title="Notify customer" xlink:href="#_002assc013gkkn921ur1"/>
+  <part-link xlink:role="object" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstaol1132o"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnvfh3nd" xlink:actuate="user"/>
+   </bundle-rule>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnvfh3nd" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnvfh3nd" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+  <bundle>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01ei3u7fjet8m"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01ei3u7hdngvk"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01ei3uhjofmdt"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01ei3uhfb8c1m"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01ei3uhgsddli"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01ei3uhh3gmd3"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01gcaeuhkfji3"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01gcaf80868fd"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asqr01gcafiv9o5l9"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asr001cm46fg3p4jr"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asr7029dk37veaarc"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asri01foncdug3q77"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrk013n92gvs4lsn"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01ujptuav5779"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v06e6ts4nfc"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v0ta5134lhj"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v1urjkft5kg"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v29mvmc0r87"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v2g3uqtmm0o"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v6r4hdo04fl"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v7nufl4aodu"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01v8jl2k5jbdp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01vedrauvapdo"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01vedru8acv51"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01veds8a36i0l"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01vf9m9ul792s"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01vf9n75m1mnb"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl01vid2fg11dsp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl0202bon06agdt"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl0202vv9158p2s"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002asrl0203npann8cp3"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ass601hfv9ua5pdt2"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ass601hfvaifuh19u"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ass700pglo1m9h0do"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ass700pglo1vta4lh"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002ass700pvrvtloap1p"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assa016ftq9b1vr82"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assa016h248u6f31c"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assa016nf66vb7voj"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assc013cj8p0lrl8o"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assc013d1gdldagj4"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assc013fncmmo32p9"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assc013fnd0b5l8sp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assc013gkknpr6bcp"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assc013gkkneatmbs"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assd00vstbmoa5v2u"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assi01010uicnttf3"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assi0102b9lussqn2"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assi0103b5856qisa"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assi0103tc8kmt9hv"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assi010720r9mgtqh"/>
+   <relationship-link xlink:role="relationship" xlink:href="#_002assp01ekoiaggb3vs"/>
+  </bundle>
+ </model>
+
+ <relationship id="_002asqr01ei3u7fjet8m">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 133348359</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rnpraa0k"/>
+  <target seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+ </relationship>
+
+ <relationship id="_002asqr01ei3u7hdngvk">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 133348359</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rn0j9rj1"/>
+ </relationship>
+
+ <relationship id="_002asqr01ei3uhfb8c1m">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 133348369</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Search specification" xlink:href="#_002asqr01ei3rnrtlfls"/>
+ </relationship>
+
+ <relationship id="_002asqr01ei3uhgsddli">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 133348369</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="New specification" xlink:href="#_002asqr01ei3rn3d3k7n"/>
+ </relationship>
+
+ <relationship id="_002asqr01ei3uhh3gmd3">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 133348369</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnnslp1b"/>
+ </relationship>
+
+ <relationship id="_002asqr01ei3uhjofmdt">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 133348369</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rn21cflg"/>
+ </relationship>
+
+ <object id="_002asqr01ei3v5t8hi3m">
+  <valueset size="9" xlink:role="type" xlink:title="Connector" xlink:href="metis:stdtypes#oid125" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name" class="volatile">Design responsible menu</string>
+   <string name="description" class="volatile"></string>
+   <pointer name="model" xlink:role="model" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnvfh3nd" xlink:actuate="user"/>
+   <collection name="metamodels" structure="list" size="3" xlink:role="pointer-type" xlink:title="Metamodel Pointer" xlink:href="metis:std#oid55" xlink:actuate="user">
+    <pointer xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+    <pointer xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+   </collection>
+   <integer name="viewState">0</integer>
+   <pointer name="type" class="volatile" xlink:role="type" xlink:title="Specification container (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_objects.kmd#ObjType_CVW:Specification_Container_UUID" xlink:actuate="user"/>
+   <integer name="lazyLoad">1</integer>
+   <integer name="bundleWeight">0</integer>
+  </valueset>
+  <part-link xlink:role="model" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnvfh3nd" xlink:actuate="user"/>
+ </object>
+
+ <model id="_002asqr01ei3v5tahqen" title="Design responsible menu" submodel-ok="false" standalone-flag="true" reusable-flag="true">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="CC" xlink:href="../metamodels/cc.kmd#_002asfk0198du71kp83p" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Workplace" xlink:href="http://xml.activeknowledgemodeling.com/cvw/templates/workplace_definition.kmd#MetaModel_CVW:Workplace_UUID" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="EKA core types" xlink:href="http://xml.activeknowledgemodeling.com/eka/templates/eka_core_modeling.kmd#MetaModel_EKA:CoreTypes_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Design responsible menu</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3v5t8hi3m"/>
+ </model>
+
+ <relationship id="_002asqr01gcaeuhkfji3">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 140535582</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rnpraa0k"/>
+  <target seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobd5825m" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asqr01gcaf80868fd">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 140535592</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobd5825m" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asqr01gcafiv9o5l9">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20070919 140535612</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rn0j9rj1"/>
+  <target seq="0" xlink:role="object" xlink:title="Customer Specifications" xlink:href="../metamodels/cvw_cc_actions_3.kmv#_002asqc01l50v7psrac9" xlink:actuate="user"/>
+ </relationship>
+
+ <forward-reference id="_002asr0016jhkt8nkkhu" stamp="20070924 111446557" 
+     xlink:role="relationship" xlink:href="file:///D|/dag/metismodels/customers/ka/activity1/cvw_activity1-4.kmv#_002asr0016jhlhass15j" xlink:actuate="user"/>
+
+ <forward-reference id="_002asr0016jhl78jibc5" stamp="20070924 111446557" 
+     xlink:role="relationship" xlink:href="file:///D|/dag/metismodels/customers/ka/activity1/cvw_activity1-4.kmv#_002asr0016jhlho0h9jh" xlink:actuate="user"/>
+
+ <forward-reference id="_002asr0016jhl7pnpbrc" stamp="20070924 111446557" 
+     xlink:role="relationship" xlink:href="file:///D|/dag/metismodels/customers/ka/activity1/cvw_activity1-4.kmv#_002asr0016jhl7rn7hdj" xlink:actuate="user"/>
+
+ <forward-reference id="_002asr0016jhl7qbm0gq" stamp="20070924 111446557" 
+     xlink:role="relationship" xlink:href="file:///D|/dag/metismodels/customers/ka/activity1/cvw_activity1-4.kmv#_002asr0016jhlhkp2bec" xlink:actuate="user"/>
+
+ <forward-reference id="_002asr0016jhl7uqit1g" stamp="20070924 111446557" 
+     xlink:role="relationship" xlink:href="file:///D|/dag/metismodels/customers/ka/activity1/cvw_activity1-4.kmv#_002asr0016jhlhjgejsd" xlink:actuate="user"/>
+
+ <forward-reference id="_002asr0016ropj9lnjvv" stamp="20070924 111916019" 
+     xlink:role="relationship" xlink:href="file:///D|/dag/metismodels/customers/ka/activity1/cvw_activity1-4.kmv#_002asr0016ropjkasceu" xlink:actuate="user"/>
+
+ <relationship id="_002asr001cm46fg3p4jr">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rn0j9rj1"/>
+  <target seq="0" xlink:role="object" xlink:title="DoMenuAction" xlink:href="cvw_code.kmv#_002asr001bo51v7oumgo" xlink:actuate="user"/>
+ </relationship>
+
+ <object id="_002asr7029dk37st2i1c">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Copy specification</string>
+   <string name="description">5</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071113 090424801</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Copy instance</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asr7029dk37veaarc">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071001 212312625</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Copy specification" xlink:href="#_002asr7029dk37st2i1c"/>
+ </relationship>
+
+ <object id="_002asri01fonc3fd8pvn">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Edit specification</string>
+   <string name="description">4</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 101634284</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Edit component specification</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asri01foncdug3q77">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asri01fonc3fd8pvn"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrk013n92gvs4lsn">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071014 102425573</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asri01fonc3fd8pvn"/>
+ </relationship>
+
+ <object id="_002asrl01uelgaqut3lv">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Product Responsible</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071018 123620009</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+dim model, modelView, objView
+dim cvwMenu, cvwStatusBar 
+
+set model = metis.currentModel
+set modelView = model.currentModelView
+set objView = modelView.currentInstanceView
+
+set cvwMenu = new CVW_MenuTree
+call cvwMenu.build(&#34;MenuTree&#34;, 1.3, 1.3)
+
+set cvwStatusBar = new CVW_StatusBar
+cvwStatusBar.topMenuStatus(objView)
+cvwStatusBar.populateStatusBars(objView)
+
+
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asrl01ujptuav5779">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 181420862</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgaqut3lv"/>
+  <target seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobd5825m" xlink:actuate="user"/>
+ </relationship>
+
+ <object id="_002asrl01uvtm3eenpcb">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Product specifications</string>
+   <string name="description">2</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071018 123640839</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+dim cvwMenu
+
+set cvwMenu = new CVW_MenuTree
+&#39;stop
+call cvwMenu.build(&#34;MenuNode&#34;, 0.052, 1.3)
+
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asrl01v06e6ts4nfc">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182109730</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rn0j9rj1"/>
+ </relationship>
+
+ <relationship id="_002asrl01v0ta5134lhj">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182130309</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgaqut3lv"/>
+  <target seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+ </relationship>
+
+ <relationship id="_002asrl01v1urjkft5kg">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182206912</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rn21cflg"/>
+ </relationship>
+
+ <relationship id="_002asrl01v29mvmc0r87">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182218779</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Copy specification" xlink:href="#_002asr7029dk37st2i1c"/>
+ </relationship>
+
+ <relationship id="_002asrl01v2g3uqtmm0o">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182225709</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnnslp1b"/>
+ </relationship>
+
+ <relationship id="_002asrl01v6r4hdo04fl">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182456295</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="New specification" xlink:href="#_002asrl01v6r4hn39p7p"/>
+ </relationship>
+
+ <object id="_002asrl01v6r4hn39p7p">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">New specification</string>
+   <string name="description">3b</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 101615818</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">New product specification</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asrl01v7nufl4aodu">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182533499</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Search specification" xlink:href="#_002asrl01v7nufn8ppdl"/>
+ </relationship>
+
+ <object id="_002asrl01v7nufn8ppdl">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Search specification</string>
+   <string name="description">7</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071113 090443067</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Search product specifications</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <object id="_002asrl01v8jl23c6f9r">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Edit specification</string>
+   <string name="description">4</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 101644859</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Edit product specification</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002asrl01v8jl2k5jbdp">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 182558245</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl23c6f9r"/>
+ </relationship>
+
+ <relationship id="_002asrl01vedrauvapdo">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl23c6f9r"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl01vedru8acv51">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Search specification" xlink:href="#_002asrl01v7nufn8ppdl"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl01veds8a36i0l">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New specification" xlink:href="#_002asrl01v6r4hn39p7p"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl01vf9m9ul792s">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Search specification" xlink:href="#_002asqr01ei3rnrtlfls"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl01vf9n75m1mnb">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="New specification" xlink:href="#_002asqr01ei3rn3d3k7n"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl01vid2fg11dsp">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071015 183103503</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobd5825m" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl0202bon06agdt">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rn21cflg"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl0202vv9158p2s">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Copy specification" xlink:href="#_002asr7029dk37st2i1c"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002asrl0203npann8cp3">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnnslp1b"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <object id="_002ass601hfv9k1735sg">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Select component family</string>
+   <string name="description">3a</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071101 142622599</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Select component family</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ass601hfv9ua5pdt2">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071101 142503826</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Select component family" xlink:href="#_002ass601hfv9k1735sg"/>
+ </relationship>
+
+ <relationship id="_002ass601hfvaifuh19u">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Select component family" xlink:href="#_002ass601hfv9k1735sg"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <object id="_002ass700pgln3qh49hm">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Customer Responsible</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071102 072612818</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+dim model, modelView, objView
+dim cvwMenu, cvwStatusBar 
+
+set model = metis.currentModel
+set modelView = model.currentModelView
+set objView = modelView.currentInstanceView
+
+set cvwMenu = new CVW_MenuTree
+call cvwMenu.build(&#34;MenuTree&#34;, 1.3, 1.3)
+
+set cvwStatusBar = new CVW_StatusBar
+cvwStatusBar.topMenuStatus(objView)
+cvwStatusBar.populateStatusBars(objView)
+
+
+&#39; End
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002ass700pglo1m9h0do">
+  <valueset size="6" xlink:role="type" xlink:title="Has property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071102 072600961</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Customer Responsible" xlink:href="#_002ass700pgln3qh49hm"/>
+  <target seq="0" xlink:role="object" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobd5825m" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002ass700pglo1vta4lh">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071102 072600961</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Customer Responsible" xlink:href="#_002ass700pgln3qh49hm"/>
+  <target seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+ </relationship>
+
+ <relationship id="_002ass700pvrvtloap1p">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071102 073423174</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Select component family" xlink:href="#_002ass601hfv9k1735sg"/>
+ </relationship>
+
+ <relationship id="_002assa016ftq9b1vr82">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071105 111247945</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Save" xlink:href="#_002assa016ftq9vke2h7"/>
+ </relationship>
+
+ <object id="_002assa016ftq9vke2h7">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Save</string>
+   <string name="description">9</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071105 111430452</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Save model</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002assa016h248u6f31c">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071105 111327662</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Save" xlink:href="#_002assa016ftq9vke2h7"/>
+ </relationship>
+
+ <relationship id="_002assa016nf66vb7voj">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Save" xlink:href="#_002assa016ftq9vke2h7"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <object id="_002assc013c6sjqbqm92">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Calculate ...</string>
+   <string name="description">4b</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 101820435</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Calculate requirement properties</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002assc013cj8p0lrl8o">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 101836978</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjqbqm92"/>
+ </relationship>
+
+ <relationship id="_002assc013d1gdldagj4">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjqbqm92"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <object id="_002assc013fncmc4l819">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Notify supplier</string>
+   <string name="description">a</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071108 113602768</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Notify component supplier</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002assc013fncmmo32p9">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 102015638</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Notify supplier" xlink:href="#_002assc013fncmc4l819"/>
+ </relationship>
+
+ <relationship id="_002assc013fnd0b5l8sp">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Notify supplier" xlink:href="#_002assc013fncmc4l819"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <object id="_002assc013gkkn921ur1">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Notify customer</string>
+   <string name="description">a</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071108 113645800</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Notify product customer</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002assc013gkkneatmbs">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Notify customer" xlink:href="#_002assc013gkkn921ur1"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002assc013gkknpr6bcp">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071107 102117596</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="Notify customer" xlink:href="#_002assc013gkkn921ur1"/>
+ </relationship>
+
+ <object id="_002assd00vstaol1132o">
+  <valueset size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_objects.kmd#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Edit calculation rules</string>
+   <string name="description">4c</string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071108 092039437</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments">Select Excel file</string>
+   <integer name="kind">1</integer>
+   <string name="script" class="volatile">option explicit
+
+    dim ccGlobals
+    dim currentModel, currentModelView
+    dim currentInstance, currentInstanceView
+    dim workarea, workWindow
+    dim ccType, isType
+    dim hasInstanceContext2Type, hasContentModelType
+    dim service, services, serviceName
+    dim contextRels, context
+    dim cvwSelectDialog, ccRuleEngine
+    dim subject, ccObject
+    dim selected
+    dim i, removed
+
+    &#39;Initialization
+    set currentModel        = metis.currentModel
+    set currentModelView    = currentModel.currentModelView
+    set currentInstance     = currentModel.currentInstance
+    set currentInstanceView = currentModelView.currentInstanceView
+
+    set hasContentModelType = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasModelContext2_UUID&#34;)
+    set hasInstanceContext2Type = metis.findType(&#34;http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:hasInstanceContext2_UUID&#34;)
+    
+    set ccGlobals = new CC_Globals
+    set ccObject = getCcObject(currentInstance, currentInstanceView)
+    if isEnabled(ccObject) then
+        serviceName = currentInstance.getNamedStringValue(&#34;comments&#34;)
+        if Len(serviceName) = 0 then
+            set workWindow = getWorkWindowView(currentInstance, currentInstanceView)
+            set selected = metis.selectedObjectViews
+            if selected.count = 1 then
+                &#39; Find the services
+                set subject = selected(1).instance
+                set services = getServices(subject)
+                &#39; Select one
+                if isValid(services) then
+                    set cvwSelectDialog = new CVW_SelectDialog
+                    cvwSelectDialog.singleSelect = true
+                    cvwSelectDialog.title = &#34;Select service&#34;
+                    cvwSelectDialog.heading = &#34;Select service&#34;
+                    set services = cvwSelectDialog.show(services)
+                end if
+            end if
+        else
+            set subject = ccObject
+            set services = getServices(subject)
+            i = 1
+            for each service in services
+                removed = false
+                if not service.title = serviceName then
+                    services.removeAt(i)
+                    removed = true
+                else
+                    i = i + 1
+                end if
+            next
+        end if
+&#39;stop
+        if isValid(services) then
+            for each service in services
+                &#39; Check if the rule context is different than the invoking object
+                set contextRels = service.getNeighbourRelationships(0, GLOBAL_Type_hasRuleContext)
+                if contextRels.count &#62; 0 then
+                    set context = contextRels(1).target
+                else
+                    set context = subject
+                end if
+                set ccRuleEngine = new CC_RuleEngine
+&#39;stop
+                call ccRuleEngine.executeRule(context, service, 2)
+            next
+        end if
+    end if
+    set ccGlobals = Nothing
+
+    &#39; End
+
+    Function getServices(subject)
+        dim service, services, inheritedServices
+        dim component, components
+        dim i, removed
+        dim ruleKind
+
+        set getServices = Nothing
+        set services = subject.getNeighbourObjects(0, GLOBAL_Type_invokes, GLOBAL_Type_Rule)
+        i = 1
+        removed = false
+        for each service in services
+            ruleKind = service.getNamedStringValue(&#34;ruleKind&#34;)
+            if not ruleKind = &#34;Service&#34; then
+                services.removeAt(i)
+                removed = true
+            end if
+            if not removed then
+                i = i + 1
+            end if
+        next
+
+        if subject.type.inherits(GLOBAL_Type_CC) then
+            set components = subject.getNeighbourObjects(0, GLOBAL_Type_EkaIs, GLOBAL_Type_CC)
+            for each component in components
+                set inheritedServices = getServices(component)
+            next
+        end if
+        if isValid(inheritedServices) then
+            for each service in inheritedServices
+                services.addLast service
+            next
+        end if
+        set getServices = services
+    End Function
+
+</string>
+  </valueset>
+ </object>
+
+ <relationship id="_002assd00vstbmoa5v2u">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstaol1132o"/>
+  <target seq="0" xlink:role="object" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asr001bo76gi1pitg" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002assi01010uicnttf3">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rnpraa0k"/>
+  <target seq="0" xlink:role="object" xlink:title="DoLoadMenuTree" xlink:href="cvw_code.kmv#_002asr001bo4ttopa5t9" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002assi0102b9lussqn2">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="DoLoadMenuNode" xlink:href="cvw_code.kmv#_002asr001bmf77c1in2k" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002assi0103b5856qisa">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Customer Responsible" xlink:href="#_002ass700pgln3qh49hm"/>
+  <target seq="0" xlink:role="object" xlink:title="DoLoadMenuTree" xlink:href="cvw_code.kmv#_002asr001bo4ttopa5t9" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002assi0103tc8kmt9hv">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgaqut3lv"/>
+  <target seq="0" xlink:role="object" xlink:title="DoLoadMenuTree" xlink:href="cvw_code.kmv#_002asr001bo4ttopa5t9" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002assi010720r9mgtqh">
+  <valueset size="1" xlink:role="type" xlink:title="usesScript" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/action_relships.kmd#RelType_CVW:usesScript_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb"/>
+  <target seq="0" xlink:role="object" xlink:title="DoLoadMenuNode" xlink:href="cvw_code.kmv#_002asr001bmf77c1in2k" xlink:actuate="user"/>
+ </relationship>
+
+ <relationship id="_002assp01ekoiaggb3vs">
+  <valueset size="6" xlink:role="type" xlink:title="Member" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20071120 133518173</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+  <origin seq="0" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u"/>
+  <target seq="0" xlink:role="object" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstaol1132o"/>
+ </relationship>
+
+ <objectview id="_002asqr01ei3rn2v477t" xlink:role="object" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rnpraa0k" state="open" behavior="tree" text-scale="0.057885" decomp-scale="6.44" left="326.125" top="160.289" width="4096" height="1280">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_Light_Round" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ash6026vj80lls6ub" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Header_Light_Round_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk02aneurklfbkk" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </objectview>
+
+ <modelview id="_002asqr01ei3rnbhmo92" name="Design responsible menu" submodel-flag="true" zoom-level="1" x="0" y="0" xlink:role="model" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnvfh3nd" state="open" behavior="nested" text-scale="80" decomp-scale="0.03125" left="9.80859" top="18.991" width="294.258" height="303.855" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rn2v477t"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3uhhaqjva"/>
+  <child-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnoe9pke"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3uhs2hta8"/>
+  <child-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3uh04hqgs"/>
+  <child-link xlink:role="objectview" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rnnjn98g"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3uhfbmf75"/>
+  <child-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asqr01ei3rnudujnb"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3uro1348m"/>
+  <child-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asqr01ei3rndqb2n7"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3urgerp4v"/>
+  <child-link xlink:role="objectview" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnn4cqh0"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3ur7ab3uc"/>
+  <child-link xlink:role="objectview" xlink:title="Copy specification" xlink:href="#_002asr7029dk37hsbcr5"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asr7029dk3hksajuh"/>
+  <child-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asri01foncdrf6gdu"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asri01foncdu6epkj"/>
+  <child-link xlink:role="objectview" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgae418bv"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asrl01uelga1fuuul"/>
+  <child-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asrl01uvtm3mcecoh"/>
+  <child-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asrl01v6r4h4b85u9"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asrl01v6r4ha6g265"/>
+  <child-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asrl01v7nuf4fl2o9"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asrl01v7nup5o95b3"/>
+  <child-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl24mdpud"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asrl01v8jl221p9p4"/>
+  <child-link xlink:role="objectview" xlink:title="Select component family" xlink:href="#_002ass601hfv9uvb3t78"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ass601hfvair0c4ao"/>
+  <child-link xlink:role="objectview" xlink:title="Customer Responsible" xlink:href="#_002ass700pglnd8r5md4"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ass700pglo165km2l"/>
+  <child-link xlink:role="objectview" xlink:title="Save" xlink:href="#_002assa016ftq95470tq"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002assa016ftq9s3qfvd"/>
+  <child-link xlink:role="objectview" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjee060j"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002assc013c6sj3u7tog"/>
+  <child-link xlink:role="objectview" xlink:title="Notify supplier" xlink:href="#_002assc013fncmk163gs"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002assc013fnd03m7a8p"/>
+  <child-link xlink:role="objectview" xlink:title="Notify customer" xlink:href="#_002assc013gkkn7hi7b9"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002assc013gkknnk7ll0"/>
+  <child-link xlink:role="objectview" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstb2folvvu"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002assd00vstc03fa27d"/>
+  <viewbundle>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3ur93d78j"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3urnlhqci"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3urhlmtgl"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3ure3kg6j"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3v5djfsf3"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3v5kar2bd"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01gcaf8sv2oa6"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01gcafilngq1j"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asqr01gcafsq07pad"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asr001cm46fp158a6"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asr7029dk37d9a44e"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asri01foncde2up5i"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrk013n92gifbn9n"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01ujptufhpi53"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v06e6mqsba2"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v0ta5ogmpd8"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v1urj7k1j75"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v29mvh2u3m6"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v2g3u8id2mc"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v6r4h5b7jbu"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v7nuf3oljub"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01v8jl2cg5df0"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01vedrafi2qfn"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01vedru54o17s"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01veds8l1h4sn"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01vf9m9njvjjt"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01vf9n7hjprmt"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl01vid2ftb997s"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl0202bonnd25r8"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl0202vv9aamnmp"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002asrl0203npallasp2"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ass601hfv9ucsdi3g"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ass601hfv9u5g6j3i"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ass700pglndrnk3uc"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ass700pglndc0r5oj"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002ass700pvrvtgilk9m"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assa016ftq9mqa8ej"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assa016h248f7nep0"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assa016nf66liof2v"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assc013cj8p40lkij"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assc013d1gdm99uje"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assc013fncm6ajoii"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assc013fncmrd4g9g"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assc013gkknrgsvfe"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assc013gkkngf3s1l"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assd00vstb275rthe"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assi01010ui6j0qab"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assi0102b9v00iljb"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assi0103b58rhc713"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assi0103tcim8mfkb"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assi010720r1u4cnp"/>
+   <relationshipview-link xlink:role="relationshipview" xlink:href="#_002assp01ekoiakfe7hl"/>
+  </viewbundle>
+  <viewstyle-links size="1">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="CVW specification" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/cvw_viewstyle.kmd#Viewstyle_CVW:Specification"/>
+  </viewstyle-links>
+ </modelview>
+
+ <objectview id="_002asqr01ei3rndqb2n7" xlink:role="object" xlink:title="Search specification" xlink:href="#_002asqr01ei3rnrtlfls" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="1788.06" top="6998.33" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01ei3rnhu366c" xlink:role="object" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rn0j9rj1" state="closed" behavior="tree" text-scale="0.052" decomp-scale="0.5" left="-3053.57" top="3072" width="2835.46" height="665.6">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01ei3rnn4cqh0" xlink:role="object" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnnslp1b" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="2812.06" top="7510.33" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01ei3rnnjn98g" xlink:role="object" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rn21cflg" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.25" left="2758.13" top="2976.29" width="2181.12" height="512">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01ei3rnoe9pke" xlink:role="object" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rn0j9rj1" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.25" left="2758.13" top="2464.29" width="2181.12" height="512">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <objectview id="_002asqr01ei3rnr3nd81" xlink:role="object" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rn2e6q8u" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.25" left="454.125" top="1824.29" width="2181.12" height="512">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+  <child-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnhu366c"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asqr01ei3ur8jhka2"/>
+ </objectview>
+
+ <objectview id="_002asqr01ei3rnudujnb" xlink:role="object" xlink:title="New specification" xlink:href="#_002asqr01ei3rn3d3k7n" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="1734.13" top="4000.29" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asqr01ei3uh04hqgs" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3uhfbmf75" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rnnjn98g"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3uhhaqjva" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rn2v477t"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3uhs2hta8" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnoe9pke"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3ur7ab3uc" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnn4cqh0"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3ur8jhka2" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnhu366c"/>
+  <path>
+   <origin-point type="fixed" x="0" y="0"/>
+   <target-point type="fixed" x="0" y="0"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3ur93d78j" xlink:role="relationship" xlink:href="#_002asqr01ei3u7fjet8m">
+  <origin-link xlink:role="objectview" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rn2v477t"/>
+  <target-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="top"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3ure3kg6j" xlink:role="relationship" xlink:href="#_002asqr01ei3uhfb8c1m">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asqr01ei3rndqb2n7"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3urgerp4v" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asqr01ei3rndqb2n7"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3urhlmtgl" xlink:role="relationship" xlink:href="#_002asqr01ei3uhjofmdt">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rnnjn98g"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3urnlhqci" xlink:role="relationship" xlink:href="#_002asqr01ei3u7hdngvk">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnoe9pke"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3uro1348m" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asqr01ei3rnudujnb"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01ei3v5djfsf3" xlink:role="relationship" xlink:href="#_002asqr01ei3uhgsddli">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asqr01ei3rnudujnb"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002asqr01ei3v5fdsmt5" xlink:role="object" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3v5t8hi3m" state="open" behavior="connector" text-scale="80" decomp-scale="0.916667" left="0" top="0" width="299.07" height="264">
+  <child-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+ </objectview>
+
+ <relationshipview id="_002asqr01ei3v5kar2bd" xlink:role="relationship" xlink:href="#_002asqr01ei3uhh3gmd3">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnn4cqh0"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <modelview id="_002asqr01ei3v5n0pr1a" title="Design responsible menu" primary-flag="true" standalone-flag="true" reusable-flag="true" zoom-level="3.68101" x="143.726" y="131.982" seq="0" xlink:role="model" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3v5tahqen" behavior="nested" text-scale="1" decomp-scale="1" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3v5fdsmt5"/>
+ </modelview>
+
+ <relationshipview id="_002asqr01gcaf8sv2oa6" xlink:role="relationship" xlink:href="#_002asqr01gcaeuhkfji3">
+  <origin-link xlink:role="objectview" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rn2v477t"/>
+  <target-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobirlpld" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01gcafilngq1j" xlink:role="relationship" xlink:href="#_002asqr01gcaf80868fd">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobirlpld" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asqr01gcafsq07pad" xlink:role="relationship" xlink:href="#_002asqr01gcafiv9o5l9">
+  <origin-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnoe9pke"/>
+  <target-link xlink:role="objectview" xlink:title="Customer Specifications" xlink:href="../metamodels/cvw_cc_actions_3.kmv#_002asqc01l50vhgvs0ra" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asr001cm46fp158a6" xlink:role="relationship" xlink:href="#_002asr001cm46fg3p4jr">
+  <origin-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnoe9pke"/>
+  <target-link xlink:role="objectview" xlink:title="DoMenuAction" xlink:href="cvw_code.kmv#_002asqr01cpfibq5gkrb" xlink:actuate="user"/>
+  <path>
+   <origin-point type="fixed" x="0.00446836" y="1815.28"/>
+   <target-point type="floating"/>
+  </path>
+ </relationshipview>
+
+ <relationshipview id="_002asr7029dk37d9a44e" xlink:role="relationship" xlink:href="#_002asr7029dk37veaarc">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Copy specification" xlink:href="#_002asr7029dk37hsbcr5"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002asr7029dk37hsbcr5" xlink:role="object" xlink:title="Copy specification" xlink:href="#_002asr7029dk37st2i1c" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="2812.06" top="6486.33" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asr7029dk3hksajuh" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Copy specification" xlink:href="#_002asr7029dk37hsbcr5"/>
+ </relationshipview>
+
+ <relationshipview id="_002asri01foncde2up5i" xlink:role="relationship" xlink:href="#_002asri01foncdug3q77">
+  <origin-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asri01foncdrf6gdu"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <objectview id="_002asri01foncdrf6gdu" xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asri01fonc3fd8pvn" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="1734.13" top="4512.29" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asri01foncdu6epkj" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asri01foncdrf6gdu"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrk013n92gifbn9n" xlink:role="relationship" xlink:href="#_002asrk013n92gvs4lsn">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asri01foncdrf6gdu"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <path-point x="175.88" y="157.2"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01uelga1fuuul" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgae418bv"/>
+ </relationshipview>
+
+ <objectview id="_002asrl01uelgae418bv" xlink:role="object" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgaqut3lv" state="closed" behavior="tree" text-scale="0.057885" decomp-scale="6.44" left="4934.13" top="32.289" width="4096" height="1280">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_Light_Round" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ash6026vj80lls6ub" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Header_Light_Round_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk02aneurklfbkk" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asrl01ujptufhpi53" xlink:role="relationship" xlink:href="#_002asrl01ujptuav5779">
+  <origin-link xlink:role="objectview" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgae418bv"/>
+  <target-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobirlpld" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01uvtm3mcecoh" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+ </relationshipview>
+
+ <objectview id="_002asrl01uvtm3nuqe2n" xlink:role="object" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3eenpcb" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.25" left="5958.13" top="1952.29" width="2181.12" height="512">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asrl01v06e6mqsba2" xlink:role="relationship" xlink:href="#_002asrl01v06e6ts4nfc">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Select component / variant" xlink:href="#_002asqr01ei3rnoe9pke"/>
+  <path>
+   <origin-point type="bottom"/>
+   <path-point x="92.04" y="105.933"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01v0ta5ogmpd8" xlink:role="relationship" xlink:href="#_002asrl01v0ta5134lhj">
+  <origin-link xlink:role="objectview" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgae418bv"/>
+  <target-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01v1urj7k1j75" xlink:role="relationship" xlink:href="#_002asrl01v1urjkft5kg">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rnnjn98g"/>
+  <path>
+   <origin-point type="bottom"/>
+   <path-point x="40.7522" y="486.353"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01v29mvh2u3m6" xlink:role="relationship" xlink:href="#_002asrl01v29mvmc0r87">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Copy specification" xlink:href="#_002asr7029dk37hsbcr5"/>
+  <path>
+   <origin-point type="bottom"/>
+   <path-point x="-10.5357" y="866.773"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01v2g3u8id2mc" xlink:role="relationship" xlink:href="#_002asrl01v2g3uqtmm0o">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnn4cqh0"/>
+  <path>
+   <origin-point type="bottom"/>
+   <path-point x="-61.8236" y="1247.19"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002asrl01v6r4h4b85u9" xlink:role="object" xlink:title="New specification" xlink:href="#_002asrl01v6r4hn39p7p" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="3910.13" top="4000.29" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asrl01v6r4h5b7jbu" xlink:role="relationship" xlink:href="#_002asrl01v6r4hdo04fl">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asrl01v6r4h4b85u9"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01v6r4ha6g265" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asrl01v6r4h4b85u9"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01v7nuf3oljub" xlink:role="relationship" xlink:href="#_002asrl01v7nufl4aodu">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asrl01v7nuf4fl2o9"/>
+  <path>
+   <origin-point type="floating"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002asrl01v7nuf4fl2o9" xlink:role="object" xlink:title="Search specification" xlink:href="#_002asrl01v7nufn8ppdl" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="4092.06" top="6998.33" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asrl01v7nup5o95b3" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asrl01v7nuf4fl2o9"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01v8jl221p9p4" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl24mdpud"/>
+ </relationshipview>
+
+ <objectview id="_002asrl01v8jl24mdpud" xlink:role="object" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl23c6f9r" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="3910.13" top="4512.29" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asrl01v8jl2cg5df0" xlink:role="relationship" xlink:href="#_002asrl01v8jl2k5jbdp">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl24mdpud"/>
+  <path>
+   <origin-point type="floating"/>
+   <path-point x="175.88" y="157.2"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01vedrafi2qfn" xlink:role="relationship" xlink:href="#_002asrl01vedrauvapdo">
+  <origin-link xlink:role="objectview" xlink:title="Edit specification" xlink:href="#_002asrl01v8jl24mdpud"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01vedru54o17s" xlink:role="relationship" xlink:href="#_002asrl01vedru8acv51">
+  <origin-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asrl01v7nuf4fl2o9"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01veds8l1h4sn" xlink:role="relationship" xlink:href="#_002asrl01veds8a36i0l">
+  <origin-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asrl01v6r4h4b85u9"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01vf9m9njvjjt" xlink:role="relationship" xlink:href="#_002asrl01vf9m9ul792s">
+  <origin-link xlink:role="objectview" xlink:title="Search specification" xlink:href="#_002asqr01ei3rndqb2n7"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01vf9n7hjprmt" xlink:role="relationship" xlink:href="#_002asrl01vf9n75m1mnb">
+  <origin-link xlink:role="objectview" xlink:title="New specification" xlink:href="#_002asqr01ei3rnudujnb"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl01vid2ftb997s" xlink:role="relationship" xlink:href="#_002asrl01vid2fg11dsp">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobirlpld" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl0202bonnd25r8" xlink:role="relationship" xlink:href="#_002asrl0202bon06agdt">
+  <origin-link xlink:role="objectview" xlink:title="Select customer project" xlink:href="#_002asqr01ei3rnnjn98g"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl0202vv9aamnmp" xlink:role="relationship" xlink:href="#_002asrl0202vv9158p2s">
+  <origin-link xlink:role="objectview" xlink:title="Copy specification" xlink:href="#_002asr7029dk37hsbcr5"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002asrl0203npallasp2" xlink:role="relationship" xlink:href="#_002asrl0203npann8cp3">
+  <origin-link xlink:role="objectview" xlink:title="Delete specification" xlink:href="#_002asqr01ei3rnn4cqh0"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002ass601hfv9u5g6j3i" xlink:role="relationship" xlink:href="#_002ass601hfvaifuh19u">
+  <origin-link xlink:role="objectview" xlink:title="Select component family" xlink:href="#_002ass601hfv9uvb3t78"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002ass601hfv9ucsdi3g" xlink:role="relationship" xlink:href="#_002ass601hfv9ua5pdt2">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Select component family" xlink:href="#_002ass601hfv9uvb3t78"/>
+  <path>
+   <origin-point type="bottom"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002ass601hfv9uvb3t78" xlink:role="object" xlink:title="Select component family" xlink:href="#_002ass601hfv9k1735sg" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="2758.13" top="3488.29" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002ass601hfvair0c4ao" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Select component family" xlink:href="#_002ass601hfv9uvb3t78"/>
+ </relationshipview>
+
+ <objectview id="_002ass700pglnd8r5md4" xlink:role="object" xlink:title="Customer Responsible" xlink:href="#_002ass700pgln3qh49hm" state="closed" behavior="tree" text-scale="0.057885" decomp-scale="6.44" left="5190.13" top="416.289" width="4096" height="1280">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Header_Light_Round" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ash6026vj80lls6ub" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Header_Light_Round_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk02aneurklfbkk" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002ass700pglndc0r5oj" xlink:role="relationship" xlink:href="#_002ass700pglo1vta4lh">
+  <origin-link xlink:role="objectview" xlink:title="Customer Responsible" xlink:href="#_002ass700pglnd8r5md4"/>
+  <target-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002ass700pglndrnk3uc" xlink:role="relationship" xlink:href="#_002ass700pglo1m9h0do">
+  <origin-link xlink:role="objectview" xlink:title="Customer Responsible" xlink:href="#_002ass700pglnd8r5md4"/>
+  <target-link xlink:role="objectview" xlink:title="Menu Arguments" xlink:href="menu_arguments.kmv#_002asqr01cnbobirlpld" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002ass700pglo165km2l" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Customer Responsible" xlink:href="#_002ass700pglnd8r5md4"/>
+ </relationshipview>
+
+ <relationshipview id="_002ass700pvrvtgilk9m" xlink:role="relationship" xlink:href="#_002ass700pvrvtloap1p">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Select component family" xlink:href="#_002ass601hfv9uvb3t78"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <path-point x="1291.05" y="935.993"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002assa016ftq95470tq" xlink:role="object" xlink:title="Save" xlink:href="#_002assa016ftq9vke2h7" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="2812.06" top="8022.33" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002assa016ftq9mqa8ej" xlink:role="relationship" xlink:href="#_002assa016ftq9b1vr82">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Save" xlink:href="#_002assa016ftq95470tq"/>
+  <path>
+   <origin-point type="floating"/>
+   <path-point x="175.88" y="157.2"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002assa016ftq9s3qfvd" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Save" xlink:href="#_002assa016ftq95470tq"/>
+ </relationshipview>
+
+ <relationshipview id="_002assa016h248f7nep0" xlink:role="relationship" xlink:href="#_002assa016h248u6f31c">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Save" xlink:href="#_002assa016ftq95470tq"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <path-point x="293.925" y="50.567"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002assa016nf66liof2v" xlink:role="relationship" xlink:href="#_002assa016nf66vb7voj">
+  <origin-link xlink:role="objectview" xlink:title="Save" xlink:href="#_002assa016ftq95470tq"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assc013c6sj3u7tog" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjee060j"/>
+ </relationshipview>
+
+ <objectview id="_002assc013c6sjee060j" xlink:role="object" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjqbqm92" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="2758.13" top="5024.29" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002assc013cj8p40lkij" xlink:role="relationship" xlink:href="#_002assc013cj8p0lrl8o">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjee060j"/>
+  <path>
+   <origin-point type="bottom"/>
+   <path-point x="1931.01" y="519.776"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002assc013d1gdm99uje" xlink:role="relationship" xlink:href="#_002assc013d1gdldagj4">
+  <origin-link xlink:role="objectview" xlink:title="Calculate ..." xlink:href="#_002assc013c6sjee060j"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assc013fncm6ajoii" xlink:role="relationship" xlink:href="#_002assc013fncmmo32p9">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Notify supplier" xlink:href="#_002assc013fncmk163gs"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <path-point x="293.925" y="50.567"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <objectview id="_002assc013fncmk163gs" xlink:role="object" xlink:title="Notify supplier" xlink:href="#_002assc013fncmc4l819" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="1788.06" top="8662.33" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002assc013fncmrd4g9g" xlink:role="relationship" xlink:href="#_002assc013fnd0b5l8sp">
+  <origin-link xlink:role="objectview" xlink:title="Notify supplier" xlink:href="#_002assc013fncmk163gs"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assc013fnd03m7a8p" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Notify supplier" xlink:href="#_002assc013fncmk163gs"/>
+ </relationshipview>
+
+ <objectview id="_002assc013gkkn7hi7b9" xlink:role="object" xlink:title="Notify customer" xlink:href="#_002assc013gkkn921ur1" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="4092.06" top="8662.33" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002assc013gkkngf3s1l" xlink:role="relationship" xlink:href="#_002assc013gkkneatmbs">
+  <origin-link xlink:role="objectview" xlink:title="Notify customer" xlink:href="#_002assc013gkkn7hi7b9"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assc013gkknnk7ll0" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Notify customer" xlink:href="#_002assc013gkkn7hi7b9"/>
+ </relationshipview>
+
+ <relationshipview id="_002assc013gkknrgsvfe" xlink:role="relationship" xlink:href="#_002assc013gkknpr6bcp">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="Notify customer" xlink:href="#_002assc013gkkn7hi7b9"/>
+  <path>
+   <origin-point type="bottom"/>
+   <path-point x="293.925" y="50.567"/>
+   <target-point type="right"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+ <relationshipview id="_002assd00vstb275rthe" xlink:role="relationship" xlink:href="#_002assd00vstbmoa5v2u">
+  <origin-link xlink:role="objectview" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstb2folvvu"/>
+  <target-link xlink:role="objectview" xlink:title="Execute service" xlink:href="cvw_code.kmv#_002asqr01crkb08s35om" xlink:actuate="user"/>
+ </relationshipview>
+
+ <objectview id="_002assd00vstb2folvvu" xlink:role="object" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstaol1132o" state="closed" behavior="tree" text-scale="0.156256" decomp-scale="0.250005" left="2839.03" top="5566.73" width="2181.16" height="512.01">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_open" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk023vs0h1bv5fg" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Button_Folder_Light_flat_close" xlink:href="http://xml.activeknowledgemodeling.com/cvw/symbols/ka.svg#_002ashk024bbkkc9r1jf" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002assd00vstc03fa27d" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Design responsible menu" xlink:href="#_002asqr01ei3rnbhmo92"/>
+  <target-link xlink:role="objectview" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstb2folvvu"/>
+ </relationshipview>
+
+ <relationshipview id="_002assi01010ui6j0qab" xlink:role="relationship" xlink:href="#_002assi01010uicnttf3">
+  <origin-link xlink:role="objectview" xlink:title="Component Responsible" xlink:href="#_002asqr01ei3rn2v477t"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadMenuTree" xlink:href="cvw_code.kmv#_002asqr01cpfibdgcgel" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assi0102b9v00iljb" xlink:role="relationship" xlink:href="#_002assi0102b9lussqn2">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadMenuNode" xlink:href="cvw_code.kmv#_002asqr01cpfibhq4cvc" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assi0103b58rhc713" xlink:role="relationship" xlink:href="#_002assi0103b5856qisa">
+  <origin-link xlink:role="objectview" xlink:title="Customer Responsible" xlink:href="#_002ass700pglnd8r5md4"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadMenuTree" xlink:href="cvw_code.kmv#_002asqr01cpfibdgcgel" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assi0103tcim8mfkb" xlink:role="relationship" xlink:href="#_002assi0103tc8kmt9hv">
+  <origin-link xlink:role="objectview" xlink:title="Product Responsible" xlink:href="#_002asrl01uelgae418bv"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadMenuTree" xlink:href="cvw_code.kmv#_002asqr01cpfibdgcgel" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assi010720r1u4cnp" xlink:role="relationship" xlink:href="#_002assi010720r9mgtqh">
+  <origin-link xlink:role="objectview" xlink:title="Product specifications" xlink:href="#_002asrl01uvtm3nuqe2n"/>
+  <target-link xlink:role="objectview" xlink:title="DoLoadMenuNode" xlink:href="cvw_code.kmv#_002asqr01cpfibhq4cvc" xlink:actuate="user"/>
+ </relationshipview>
+
+ <relationshipview id="_002assp01ekoiakfe7hl" xlink:role="relationship" xlink:href="#_002assp01ekoiaggb3vs">
+  <origin-link xlink:role="objectview" xlink:title="Component specifications" xlink:href="#_002asqr01ei3rnr3nd81"/>
+  <target-link xlink:role="objectview" xlink:title="Edit calculation rules" xlink:href="#_002assd00vstb2folvvu"/>
+  <path>
+   <origin-point type="fixed" x="2234.18" y="2234.18"/>
+   <path-point x="295.038" y="50.3923"/>
+   <target-point type="left"/>
+  </path>
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="AutoRelation" xlink:href="metis:stdsyms#oid85" xlink:actuate="user">
+  </symbol-override>
+ </relationshipview>
+
+
+</metis>

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="4"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Process_Domain" title="Process Domain" desc="Use the Process domain to capture and describe the business processes and the flows between them.&#10;The process domain (BPM) is a hybrid process modeling language, combining elements from BPMN with the proven existing &#34;Process Logic&#34; approach to business process modeling based on IDEF0.&#10;The Metis BPM modeling language offers the visual appearance and expressibility of BPMN combined with means for integrating your process models with the rest of the enterprise model. While BPMN as such is for &#34;processes in a vacuum&#34;, Metis BPM is for &#34;processes in a context&#34; - a context that often is expressed by the rest of the enterprise model.&#10;Processes can be described as multiple level hierarchies. The flow between the processes can either be drawn as simple relationships or via deliverable objects, called Process Data.&#10;The domain also contains a Business Function object type, a concept sometimes thought of as an organizational item, and sometimes as a high-level business process.&#10;You can also model events, for example to describe what &#34;triggers&#34; a process, i.e. a Start Event.&#10;Note that if your model also contains processes modeled at the logical process level (i.e. using the Logical Process type), it is recommend that you use the &#34;equals&#34; relationship type to connect a business process at the lowest level of decomposition to the logical process object used to define the details of that process.&#10;The logical process modeling technique has symbols directly attached to process objects to model connections of the type input, control, output and mechanism, collectively referred to as &#34;ICOMs&#34;. You can attach labels to ICOMs to display text.&#10;The process domain can be used to perform both bottom-up and top-down process modeling. ICOMs within the process model can be associated with other aspects of an Enterprise Model, to show the entities that are represented by ICOMs. Decomposition of a process hierarchy can be done to any level of detail.&#10;You can choose how to represent objects from the process domain on the screen by applying different view styles (i.e. the IDEF0 viewstyle, swimlane viewstyle or BPMN viewstyle).">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="BPM Modeling Domain" xlink:href="#oid2"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Methods" xlink:href="#oid4"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid3"/>
+  </metamodel-links>
+  <complex-type-links size="14">
+   <complex-type-link xlink:role="type" xlink:title="Business Function" xlink:href="../objecttypes/business_function.kmd#CompType_TRM:Function_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process" xlink:href="../objecttypes/business_process.kmd#CompType_TRM:ProcessStep_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Control" xlink:href="../objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process End Event" xlink:href="../objecttypes/process_end_event.kmd#CompType_MEAF:ProcessEndEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Gateway" xlink:href="../objecttypes/process_gateway.kmd#CompType_TRM:ProcessDecision_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Input" xlink:href="../objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Intermediate Event" xlink:href="../objecttypes/process_intermediate_event.kmd#CompType_MEAF:ProcessIntermediateEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process" xlink:href="../objecttypes/process.kmd#CompType_MEAF:Process_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Mechanism" xlink:href="../objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Output" xlink:href="../objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Start Event" xlink:href="../objecttypes/process_start_event.kmd#CompType_MEAF:ProcessStartEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Function" xlink:href="../objecttypes/function.kmd#CompType_TRM:Action_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Function" xlink:href="../objecttypes/it_function.kmd#CompType_MEAF:ITFunction_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+  <viewstyle-links size="5">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1000"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 2 Viewstyle: Object ICOMs" xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1001"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 3 Viewstyle: Line ICOMs, Autoline" xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1002"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 4 Viewstyle: Line ICOMs" xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1003"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 5 Viewstyle: Line ICOMs, Autoline, Fixed Font" xlink:href="../viewstyles/bpm_viewstyle.kmd#oid1004"/>
+  </viewstyle-links>
+ </metamodel>
+
+<!-- HSO removed
+ <metamodel id="oid2" name="DeveloperEd.ModelEd.UriToolBar.BPM_Modeling" title="BPM Modeling Domain" desc="The main object and relationship types used for making a BPM process model.">
+ -->
+<!-- HSO added -->
+  <metamodel id="oid2" name="BPM_Modeling" title="BPM Modeling Domain" desc="The main object and relationship types used for making a BPM process model.">
+<!-- -->
+  <complex-type-links size="14">
+   <complex-type-link xlink:role="type" xlink:title="Process" xlink:href="../objecttypes/process.kmd#CompType_MEAF:Process_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Input" xlink:href="../objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Control" xlink:href="../objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Output" xlink:href="../objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Mechanism" xlink:href="../objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Start Event" xlink:href="../objecttypes/process_start_event.kmd#CompType_MEAF:ProcessStartEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Intermediate Event" xlink:href="../objecttypes/process_intermediate_event.kmd#CompType_MEAF:ProcessIntermediateEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process End Event" xlink:href="../objecttypes/process_end_event.kmd#CompType_MEAF:ProcessEndEvent_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Gateway" xlink:href="../objecttypes/process_gateway.kmd#CompType_TRM:ProcessDecision_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Sequence Flow" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_sequence_flow_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Message Flow" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_message_flow_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="represents is object for" xlink:href="../relationshiptypes/represents-is_object_for.kmd#Reltype_represents-is_object_for_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Association" xlink:href="../relationshiptypes/association.kmd#Reltype_association_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid3" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="59">
+   <complex-type-link xlink:role="type" xlink:title="Business Process supports-is supported by Business Function" xlink:href="../../semantics/relationship_types/business_process_supports-is_supported_by_business_function.kmd#ReType_Semantics_Process:Business_Process_supports-is_supported_by_Business_Function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process uses Function" xlink:href="../relationshiptypes/uses-is_used_by_criticality.kmd#RelType_PerformsAction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process has mechanism Basic Component" xlink:href="../relationshiptypes/has_mechanism-is_mechanism_for.kmd#RelType_PerformsRoleFunction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process Sequence Flow Business Process" xlink:href="../relationshiptypes/sequence_flow.kmd#RelType_PrecedesProcessStep_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process consists of Business Process" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_ProcessConsistsOfProcessStep_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process has control Basic Component" xlink:href="../relationshiptypes/has_control-is_control_for.kmd#Reltype_business_process_has_control_is_control_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process has input Basic Component" xlink:href="../relationshiptypes/has_input-is_input_for.kmd#Reltype_business_process_has_input_is_input_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process has output Basic Component" xlink:href="../relationshiptypes/has_output-is_output_for.kmd#Reltype_business_process_has_output_is_output_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process has template Business Process" xlink:href="../relationshiptypes/has_template-is_template_for.kmd#Reltype_business_process_has_template_is_template_for_business_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process provides Function" xlink:href="../relationshiptypes/provides-is_provided_by_criticality.kmd#Reltype_business_process_provides_is_provided_by_criticality_function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process receives Process Data" xlink:href="../relationshiptypes/receives-is_received_by.kmd#Reltype_business_process_receives_is_received_by_process_data_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process sends Process Data" xlink:href="../relationshiptypes/sends-is_sent_by.kmd#Reltype_business_process_sends_is_sent_by_process_data_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Process Sequence Flow Process Start Event" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_business_process_sequence_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Function leads to Function" xlink:href="../relationshiptypes/leads_to-follows_from.kmd#Reltype_function_leads_to_follows_from_function_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Association Process Data" xlink:href="../relationshiptypes/association.kmd#Reltype_process_association_process_data_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Component corresponds to Process Component" xlink:href="../relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_process_component_corresponds_to_corresponds_to_process_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Connection Sequence Flow Process" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_connection_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Control corresponds to Process Control" xlink:href="../relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_process_control_corresponds_to_corresponds_to_process_control_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Control represents Basic Component" xlink:href="../relationshiptypes/represents-is_control_for.kmd#Reltype_process_control_represents_is_control_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Data Association Process" xlink:href="../relationshiptypes/association.kmd#Reltype_process_data_association_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Data represents Basic Component" xlink:href="../relationshiptypes/represents-is_data_for.kmd#Reltype_process_data_represents_is_data_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Data Sequence Flow Process" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_data_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Process" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Input" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Intermediate Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="End Event Message Flow Start Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_end_event_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process End Event Sequence Flow Business Process" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_end_event_sequence_flow_business_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Event Association Process Event" xlink:href="../relationshiptypes/association.kmd#Reltype_process_event_association_process_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Event represents Basic Component" xlink:href="../relationshiptypes/represents-is_event_for.kmd#Reltype_process_event_represents_is_event_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Gateway represents Basic Component" xlink:href="../relationshiptypes/represents-is_gateway_for.kmd#Reltype_process_gateway_represents_is_gateway_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Gateway Sequence Flow Process" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_gateway_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Input represents Basic Component" xlink:href="../relationshiptypes/represents-is_input_for.kmd#Reltype_process_input_represents_is_input_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Interaction Sequence Flow Process Interaction" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_interaction_sequence_flow_process_interaction_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Process" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Input" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Intermediate Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Intermediate Event Message Flow Start Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_intermediate_event_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Intermediate Event Sequence Flow Process" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_intermediate_event_sequence_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Mechanism corresponds to Process Mechanism" xlink:href="../relationshiptypes/corresponds_to-corresponds_to.kmd#Reltype_process_mechanism_corresponds_to_corresponds_to_process_mechanism_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Mechanism represents Basic Component" xlink:href="../relationshiptypes/represents-is_mechanism_for.kmd#Reltype_process_mechanism_represents_is_mechanism_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Process" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Input" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Intermediate Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Message Flow Start Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Process" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Input" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_input_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Intermediate Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Output Message Flow Start Event" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_process_output_message_flow_process_start_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Output represents Basic Component" xlink:href="../relationshiptypes/represents-is_output_for.kmd#Reltype_process_output_represents_is_output_for_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Connection" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_connection_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Data" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_data_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process End Event" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_end_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Gateway" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_gateway_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Sequence Flow Process Intermediate Event" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_sequence_flow_process_intermediate_event_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Process Start Event Sequence Flow Process" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_process_start_event_sequence_flow_process_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid4" title="Methods" desc="Process-modeling specific methods, applying to the entire modelview.">
+  <method-links size="1">
+   <method-link xlink:role="cpp-method" xlink:title="Repair all Process-modelling texts" xlink:href="../methods/bpm_methods.kmd#oid22"/>
+  </method-links>
+ </metamodel>
+
+
+</metis>

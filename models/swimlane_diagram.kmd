@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+<?metis version="3.4"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="3">
+
+ <type id="oid1" name="Swimlane_Diagram" title="Swimlane Diagram" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="diagram.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:title="Swimlane Diagram" xlink:href="#oid1001"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Swimlane" xlink:href="#oid11"/>
+  <named-method-link name="Swimlane_Diagram" xlink:role="cpp-method" xlink:title="SwimlaneDiagramConstructor" xlink:href="#oid2001"/>
+  <named-method-link name="View.layoutTag" xlink:role="cpp-method" xlink:title="swimlaneLayoutTag" xlink:href="#oid2002"/>
+  <named-method-link name="View.onInitialResizeDone" xlink:role="cpp-method" xlink:title="layoutPool" xlink:href="#oid2025"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="adjustAllTitlesInPool" xlink:href="#oid2030"/>
+  <named-method-link name="acceptsParts" xlink:role="cpp-method" xlink:title="uniqueSwimlaneType" xlink:href="#oid2023"/>
+  <property name="titleStretch" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Size of Titles (%)" desc="The amount of space the title should occupy in the swimlanes, in percentage of the length of the swimlane." />
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="Swimlane Diagram" xlink:href="#oid1">
+   <integer name="titleStretch">10</integer>
+  </valueset>
+ </type>
+
+ <type id="oid11" name="Swimlane" title="Swimlane" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:title="Swimlane" xlink:href="#oid11"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="swimlaneCreation" xlink:href="#oid2006"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="swimlaneViewPasted" xlink:href="#oid2022"/>
+  <named-method-link name="View.onTextFactorChanged" xlink:role="cpp-method" xlink:title="changeTitleTextScale" xlink:href="#oid2018"/>
+  <named-method-link name="HtmlReport.imageFixedState" xlink:role="cpp-method" xlink:title="alwaysOpen" xlink:href="#oid2024"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="refreshTitleMacro" xlink:href="#oid2019"/>
+ </type>
+
+ <type id="oid12" name="Horizontal Swimlane" title="Horizontal Swimlane" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Swimlane" xlink:href="#oid11"/>
+  <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="#oid1012"/>
+  <property name="Metis_NestedDecompositionFactor" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Extra Nested Decomposition Factor" desc="Extra type-specific factor, dictating the default scale of nested children within instances of this type. 1 = no change, 2 = double size, 0.5 = half size etc." shared-flag="true" visible-flag="true"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Title Left" xlink:href="#oid22"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Title Right" xlink:href="#oid23"/>
+  <named-method-link name="onMinimumPartRulesEnforced" xlink:role="cpp-method" xlink:title="adjustHorizontalTitles" xlink:href="#oid2008"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="horizontalLanePositioning" xlink:href="#oid2028"/>
+  <named-method-link name="View.onInitialResizeDone" xlink:role="cpp-method" xlink:title="horizontalLanePositioning" xlink:href="#oid2028"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="#oid12">
+   <float name="Metis_NestedDecompositionFactor">4</float>
+  </valueset>
+ </type>
+
+ <type id="oid13" name="Vertical Swimlane" title="Vertical Swimlane" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Swimlane" xlink:href="#oid11"/>
+  <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="#oid1013"/>
+  <property name="Metis_NestedDecompositionFactor" xlink:role="float-type" xlink:title="float" xlink:href="metis:std#oid2" label="Extra Nested Decomposition Factor" desc="Extra type-specific factor, dictating the default scale of nested children within instances of this type. 1 = no change, 2 = double size, 0.5 = half size etc." shared-flag="true" visible-flag="true"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Title Top" xlink:href="#oid24"/>
+  <part-rule min="1" max="1" xlink:role="type" xlink:title="Title Bottom" xlink:href="#oid25"/>
+  <named-method-link name="View.onGeometry" xlink:role="cpp-method" xlink:title="adjustVerticalTitles" xlink:href="#oid2009"/>
+  <named-method-link name="onMinimumPartRulesEnforced" xlink:role="cpp-method" xlink:title="adjustVerticalTitles" xlink:href="#oid2009"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Vertical Swimlane" xlink:href="#oid13">
+   <float name="Metis_NestedDecompositionFactor">3</float>
+  </valueset>
+ </type>
+
+ <type id="oid21" name="Title" title="Title" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Title Property Base" xlink:href="../user/swimlanepropertybase.kmd#oid2"/>
+  <property name="title" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Title" desc="Swimlane Title, as defined on the swimlane" method-flag="true" visible-flag="true" label-flag="true"/>
+  <named-method-link name="title" xlink:role="cpp-method" xlink:title="getTitle" xlink:href="#oid2003"/>
+ </type>
+
+ <type id="oid22" name="Title_Left" title="Title Left" usage="ghost">
+  <complex-type-link xlink:role="type" xlink:title="Title" xlink:href="#oid21"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Left" xlink:href="#oid1022"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="visibleTitleCreation" xlink:href="#oid2015"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="visibleTitleCreation" xlink:href="#oid2015"/>
+ </type>
+
+ <type id="oid23" name="Title_Right" title="Title Right" usage="ghost">
+  <complex-type-link xlink:role="type" xlink:title="Title" xlink:href="#oid21"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Right" xlink:href="#oid1023"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="hiddenTitleCreation" xlink:href="#oid2016"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="hiddenTitleCreation" xlink:href="#oid2016"/>
+ </type>
+
+ <type id="oid24" name="Title_Top" title="Title Top" usage="ghost">
+  <complex-type-link xlink:role="type" xlink:title="Title" xlink:href="#oid21"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Top" xlink:href="#oid1024"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="visibleTitleCreation" xlink:href="#oid2015"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="visibleTitleCreation" xlink:href="#oid2015"/>
+ </type>
+
+ <type id="oid25" name="Title_Bottom" title="Title Bottom" usage="ghost">
+  <complex-type-link xlink:role="type" xlink:title="Title" xlink:href="#oid21"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Bottom" xlink:href="#oid1025"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="hiddenTitleCreation" xlink:href="#oid2016"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="hiddenTitleCreation" xlink:href="#oid2016"/>
+ </type>
+
+
+ <typeview id="oid1001" xlink:role="type" xlink:title="Swimlane Diagram" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="nested" 
+layout-flags="fixedlayoutset fixedlayoutlocked">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="titleStretch" visible-flag="false"/>
+   <propertyview name="titleStretch" visible-flag="true"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Swimlane layout collection" xlink:href="../layout_strategies/swimlane_layout.kmd#oid3"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Opened Diagram" xlink:href="../symbols/diagram.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Swimlane Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid6&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ClosedDiagram" xlink:href="../symbols/diagram.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Swimlane Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagram.svg#oid6&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/swimlane_diagram.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1012" xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="#oid12" tree-size="0.5" nested-size="0.25" behavior="nested" layout-flags="fixedlayoutset fixedlayoutnext">
+  <layout-link xlink:role="object" xlink:title="Horizontal Swimlane Contents" xlink:href="../layout_strategies/swimlane_layout.kmd#oid4"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Horizontal Swimlane" xlink:href="../symbols/swimlane.svg#oid1" xlink:actuate="user">
+   <replace tag="border" property="linestyle" macro="(expand &#34;dash&#34;)"/>
+   <replace tag="border" property="linecolor" macro="(expand &#34;blue&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Horizontal Swimlane" xlink:href="../symbols/swimlane.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/horizontal_swimlane.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1013" xlink:role="type" xlink:title="Vertical Swimlane" xlink:href="#oid13" tree-size="0.5" nested-size="0.25" behavior="nested" layout-flags="fixedlayoutset fixedlayoutnext">
+  <layout-link xlink:role="object" xlink:title="Vertical Swimlane Contents" xlink:href="../layout_strategies/swimlane_layout.kmd#oid5"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Vertical Swimlane" xlink:href="../symbols/swimlane.svg#oid8" xlink:actuate="user">
+   <replace tag="border" property="linestyle" macro="(expand &#34;dash&#34;)"/>
+   <replace tag="border" property="linecolor" macro="(expand &#34;blue&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Horizontal Swimlane" xlink:href="../symbols/swimlane.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/vertical_swimlane.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid1022" xlink:role="type" xlink:title="Title Left" xlink:href="#oid22" tree-size="0.25" nested-size="0.25" behavior="nested" layout-flags="fixedlayoutset fixedlayoutme " position="left" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleLeft" xlink:href="../symbols/swimlane.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+   <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="../symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1023" xlink:role="type" xlink:title="Title Right" xlink:href="#oid23" tree-size="0.25" nested-size="0.25" behavior="nested" layout-flags="fixedlayoutset fixedlayoutme" position="right" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleRight" xlink:href="../symbols/swimlane.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+   <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="../symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1024" xlink:role="type" xlink:title="Title Top" xlink:href="#oid24" tree-size="0.25" nested-size="0.25" behavior="nested" layout-flags="fixedlayoutset fixedlayoutme " position="top" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleTop" xlink:href="../symbols/swimlane.svg#oid4" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+   <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="../symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid1025" xlink:role="type" xlink:title="Title Bottom" xlink:href="#oid25" tree-size="0.25" nested-size="0.25" behavior="nested" layout-flags="fixedlayoutset fixedlayoutme " position="bottom" placement="internal">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="TitleBottom" xlink:href="../symbols/swimlane.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+   <symbol-override state="closed" xlink:role="symbol" xlink:title="TitleNeutral" xlink:href="../symbols/swimlane.svg#oid6" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+
+ <cpp-method id="oid2001" name="SwimlaneDiagramConstructor" language="c++" bind="NO.METIS.GEM.DIAGRAM.enableSwimlaneDiagram" required-dll="gem_diagram">
+  <arg-list size="4">
+   <url name="CommandObjectUrl" 
+	xlink:role="url" 
+	xlink:title="Command Object Url" 
+	xlink:href="../commands/swimlane_commands.kmd" 
+	xlink:actuate="user"/>
+   <pointer name="DiagramUri" xlink:role="type" 
+	    xlink:title="Swimlane Diagram" 
+	    xlink:href="#oid1"
+	    xlink:actuate="user"/>
+   <pointer name="SwimlaneUri" xlink:role="type" 
+	    xlink:title="Swimlane" 
+	    xlink:href="#oid11"
+	    xlink:actuate="user"/>
+   <pointer name="TitleLeftUri" xlink:role="type" 
+	    xlink:title="Swimlane" 
+	    xlink:href="#oid22"
+	    xlink:actuate="user"/>
+   <pointer name="TitleRightUri" xlink:role="type" 
+	    xlink:title="Swimlane" 
+	    xlink:href="#oid23"
+	    xlink:actuate="user"/>
+   <pointer name="TitleTopUri" xlink:role="type" 
+	    xlink:title="Swimlane" 
+	    xlink:href="#oid24"
+	    xlink:actuate="user"/>
+   <pointer name="TitleBottomUri" xlink:role="type" 
+	    xlink:title="Swimlane" 
+	    xlink:href="#oid25"
+	    xlink:actuate="user"/>
+   <pointer name="TypeFilterAtCreate1" xlink:role="type" 
+	    xlink:title="Title" 
+	    xlink:href="#oid21"
+	    xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2002" name="swimlaneLayoutTag" language="c++" bind="NO.METIS.GEM.LAYOUT.layoutTag" required-dll="gem_layout">
+  <arg-list size="3">
+   <string name="Kind">PartOfType</string>
+   <string name="LayoutTag">Vertical</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Vertical Swimlane" xlink:href="#oid13" xlink:actuate="user"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2003" name="getTitle" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="2">
+   <string name="Property">name</string>
+   <string name="Structure">Parent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2004" name="setSwimlaneTextscale" language="c++" bind="NO.METIS.GEM.setTextScale" required-dll="gem_modeling">
+  <arg-list size="1">
+   <float name="TextScaleFactor">2</float>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2005" name="setTitleTextscale" language="c++" bind="NO.METIS.GEM.setTextScale" required-dll="gem_modeling">
+  <arg-list size="1">
+   <float name="TextScaleFactor">3</float>
+   <string name="ActionFilter">Ensure</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2006" name="swimlaneCreation" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="constraintSwimlanes" xlink:href="#oid2007" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="pushBack" xlink:href="#oid2017" xlink:actuate="user"/>
+    <pointer name="Method3" xlink:role="method"  xlink:title="horizontalLanePositioning" xlink:href="#oid2028" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2007" name="constraintSwimlanes" language="c++" bind="NO.METIS.GEM.DIAGRAM.constraintParts" required-dll="gem_diagram">
+   <arg-list size="3">
+    <pointer name="Type1" xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="#oid12" xlink:actuate="user"/>
+    <pointer name="Type2" xlink:role="type" xlink:title="Vertical Swimlane" xlink:href="#oid13" xlink:actuate="user"/>
+    <integer name="Options">8</integer>
+    <string  name="Warning">Horizontal and Vertical Swimlanes cannot be used in the same diagram.</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2008" name="adjustHorizontalTitles" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="Mode">UseCriteria</string>
+    <string name="ReferenceView">Current</string>
+    <pointer name="Criteria1" xlink:role="criteria" xlink:title="titleLeft" xlink:href="#oid3001" xlink:actuate="user"/>
+    <pointer name="Method1" xlink:role="method"  xlink:title="alignFullLeft" xlink:href="#oid2010" xlink:actuate="user"/>
+    <pointer name="Criteria2" xlink:role="criteria" xlink:title="titleRight" xlink:href="#oid3002" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="alignFullRight" xlink:href="#oid2011" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2009" name="adjustVerticalTitles" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="4">
+    <string name="Mode">UseCriteria</string>
+    <string name="ReferenceView">Current</string>
+    <pointer name="Criteria1" xlink:role="criteria" xlink:title="titleTop" xlink:href="#oid3003" xlink:actuate="user"/>
+    <pointer name="Method1" xlink:role="method"  xlink:title="alignFullTop" xlink:href="#oid2012" xlink:actuate="user"/>
+    <pointer name="Criteria2" xlink:role="criteria" xlink:title="titleBottom" xlink:href="#oid3004" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="alignFullBottom" xlink:href="#oid2013" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2010" name="alignFullLeft" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+   <arg-list size="5">
+    <string name="HorizontalAlignment">Left</string>
+    <string name="VerticalAlignment">Center</string>
+    <integer name="VerticalStretch">100</integer>
+    <pointer name="HorizontalStretchCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003" xlink:actuate="user"/>
+    <string name="HorizontalStretchProp">titleStretch</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2011" name="alignFullRight" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+   <arg-list size="5">
+    <string name="HorizontalAlignment">Right</string>
+    <string name="VerticalAlignment">Center</string>
+    <integer name="VerticalStretch">100</integer>
+    <pointer name="HorizontalStretchCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003" xlink:actuate="user"/>
+    <string name="HorizontalStretchProp">titleStretch</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2012" name="alignFullTop" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+   <arg-list size="5">
+    <string name="VerticalAlignment">Top</string>
+    <string name="HorizontalAlignment">Center</string>
+    <integer name="HorizontalStretch">100</integer>
+    <pointer name="VerticalStretchCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003" xlink:actuate="user"/>
+    <string name="VerticalStretchProp">titleStretch</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2013" name="alignFullBottom" language="c++" bind="NO.METIS.GEM.alignObject" required-dll="gem_modeling">
+   <arg-list size="5">
+    <string name="VerticalAlignment">Bottom</string>
+    <string name="HorizontalAlignment">Center</string>
+    <integer name="HorizontalStretch">100</integer>
+    <pointer name="VerticalStretchCriteria" xlink:role="criteria" xlink:title="diagramFromDiagramElement" xlink:href="diagram.kmd#oid2003" xlink:actuate="user"/>
+    <string name="VerticalStretchProp">titleStretch</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2014" name="closeObject" language="c++" bind="NO.METIS.GEM.setViewState" required-dll="gem_modeling">
+   <arg-list size="1">
+    <string name="ViewState">Closed</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2015" name="visibleTitleCreation" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="setTitleTextscale" xlink:href="#oid2005" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2016" name="hiddenTitleCreation" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="setTitleTextscale" xlink:href="#oid2005" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="closeObject" xlink:href="#oid2014" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2017" name="pushBack" language="c++" bind="NO.METIS.GEM.setPushPopOrder" required-dll="gem_modeling">
+   <arg-list size="1">
+    <string name="Order">Back</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2018" name="changeTitleTextScale" language="c++" bind="NO.METIS.GEM.setTextScale" required-dll="gem_modeling">
+  <arg-list size="2">
+   <float name="TextScaleFactor">3</float>
+   <string name="Target">GhostChildren</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2019" name="refreshTitleMacro" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+   <arg-list size="1">
+     <pointer name="ChildrenOf" xlink:role="type" 
+	      xlink:title="Title" 
+	      xlink:href="#oid21"
+	      xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2020" name="layoutAllViews" language="c++" bind="NO.METIS.GEM.initMethodEnvironment" required-dll="gem_analyse">
+   <arg-list size="2">
+    <string name="InstanceViews">All</string>
+    <pointer name="Method" xlink:role="method"  xlink:title="Perform Layout" xlink:href="metis:layout#oid201" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2021" name="ensureTitles" language="c++" bind="NO.METIS.GEM.ensureObjectViews" required-dll="gem_modeling">
+   <arg-list size="1">
+     <pointer name="Type" xlink:role="type" 
+	      xlink:title="Title" 
+	      xlink:href="#oid21"
+	      xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2022" name="swimlaneViewPasted" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="3">
+    <string name="Mode">UseCurrent</string>
+    <pointer name="Method1" xlink:role="method"  xlink:title="constraintSwimlanes" xlink:href="#oid2007" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="pushBack" xlink:href="#oid2017" xlink:actuate="user"/>
+    <pointer name="Method3" xlink:role="method"  xlink:title="ensureTitles" xlink:href="#oid2021" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2023" name="uniqueSwimlaneType" language="c++" bind="NO.METIS.GEM.limitParts" required-dll="gem_modeling">
+   <arg-list size="2">
+    <pointer name="Type1" xlink:role="type" xlink:title="Horizontal Swimlane" xlink:href="#oid12" xlink:actuate="user"/>
+    <pointer name="Type2" xlink:role="type" xlink:title="Vertical Swimlane" xlink:href="#oid13" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2024" title="alwaysOpen" language="c++" bind="NO.METIS.GEM.getConstant" required-dll="gem_util" object-flag="true">
+  <arg-list size="1">
+   <string name="StringConstant">open</string>
+  </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2025" name="poolPositioning" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="4">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="layoutPool" xlink:href="#oid2026" xlink:actuate="auto"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="#oid2027" xlink:actuate="auto"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2026" title="layoutPool" language="c++" bind="NO.METIS.GEM.layoutLanesInPool" required-dll="gem_diagram">
+  <arg-list size="1">
+   <string name="Orientation">Horizontal</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2027" name="updateMacro" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+  <arg-list size="1">
+   <string name="AllViews">true</string>
+  </arg-list>
+ </cpp-method>
+ 
+  <cpp-method id="oid2028" name="horizontalLanePositioning" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+  <arg-list size="4">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="adjustHorizontalTitles" xlink:href="#oid2008" xlink:actuate="auto"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="layoutHorizontalParentPool" xlink:href="#oid2029" xlink:actuate="auto"/>
+   <pointer name="Method3" xlink:role="cpp-method" xlink:title="updateMacro" xlink:href="#oid2027" xlink:actuate="auto"/>
+   <string name="Mode">UseCurrent</string>
+  </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid2029" title="layoutHorizontalParentPool" language="c++" bind="NO.METIS.GEM.layoutLanesInPool" required-dll="gem_diagram">
+  <arg-list size="1">
+   <string name="Orientation">Horizontal</string>
+   <string name="Adjust Parent">True</string>
+  </arg-list>
+ </cpp-method>
+ 
+  <cpp-method id="oid2030" name="adjustAllTitlesInPool" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse">
+   <arg-list size="10">
+    <string name="Mode">UseCriteria</string>
+    <string name="ReferenceView">All</string>
+    <pointer name="Criteria1" xlink:role="criteria" xlink:title="titleLeftFromPool" xlink:href="#oid3011" xlink:actuate="user"/>
+    <pointer name="Method1" xlink:role="method"  xlink:title="alignFullLeft" xlink:href="#oid2010" xlink:actuate="user"/>
+    <pointer name="Criteria2" xlink:role="criteria" xlink:title="titleRightFromPool" xlink:href="#oid3012" xlink:actuate="user"/>
+    <pointer name="Method2" xlink:role="method"  xlink:title="alignFullRight" xlink:href="#oid2011" xlink:actuate="user"/>
+    <pointer name="Criteria3" xlink:role="criteria" xlink:title="titleTopFromPool" xlink:href="#oid3013" xlink:actuate="user"/>
+    <pointer name="Method3" xlink:role="method"  xlink:title="alignFullTop" xlink:href="#oid2012" xlink:actuate="user"/>
+    <pointer name="Criteria4" xlink:role="criteria" xlink:title="titleBottomFromPool" xlink:href="#oid3014" xlink:actuate="user"/>
+    <pointer name="Method4" xlink:role="method"  xlink:title="alignFullBottom" xlink:href="#oid2013" xlink:actuate="user"/>
+   </arg-list>
+ </cpp-method>
+
+ <criteria id="oid3001" name="titleLeft" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid22"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3002" name="titleRight" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid23"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3003" name="titleTop" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid24"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3004" name="titleBottom" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid25"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+ 
+ <criteria id="oid3011" name="titleLeftFromPool" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid11"/>
+     </c-op>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid22"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3012" name="titleRightFromPool" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid11"/>
+     </c-op>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid23"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+ 
+ <criteria id="oid3013" name="titleTopFromPool" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid11"/>
+     </c-op>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid24"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+ 
+ <criteria id="oid3014" name="titleBottomFromPool" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid11"/>
+     </c-op>
+    </c-op>
+    <c-op kind="part">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:href="#oid25"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+</metis>

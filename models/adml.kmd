@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="3.0.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="1"
+ nextoid="2">
+
+ <domain id="oid1" name="admldomain" title="ADML Domain">
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid18" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid16" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid17" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid12" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid14" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid15" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid13" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid21" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid19" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/adml.kmd#oid20" xlink:actuate="user"/>
+ </domain>
+
+
+</metis>

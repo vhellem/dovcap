@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_17104EDD-DC5B-4971-BD90-FA9935EBAAEA" name="Troux_Information_Domain" title="Troux Information Domain" desc="This domain includes types specifically required for the Troux Information Solution.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="troux_information_relationship_types.kmd#UUID4_37AE31BA-BB93-4A2C-92F1-6555E75C61FA"/>
+  </metamodel-links>
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="DRM: Taxonomy" xlink:href="../../eagov/object_types/taxonomy.kmd#CompType_FEA_DRM:Taxonomy_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="DRM: Topic" xlink:href="../../eagov/object_types/topic.kmd#CompType_FEA_DRM:Topic_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="DRM: Data Asset" xlink:href="../../eagov/object_types/data_asset.kmd#CompType_FEA_DRM:data_asset_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Report" xlink:href="../object_types/report.kmd#CompType_Semantics_Troux Information:Report_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

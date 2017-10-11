@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="1"
+ nextoid="2">
+
+ <template id="oid1" name="Interface_Configuration_DIF_GEM_Blank" title="Interface Configuration (DIF, GEM) Blank">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="Generic Enterprise Modeling" xlink:href="http://xml.computas.com/xml/metamodels/gem_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Interface Configuration" xlink:href="../metamodels/interface_configuration.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Interface Configuration (DIF, GEM) Blank" xlink:href="interface_configuration_dif_gem_blank.kmd#oid1" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Main" xlink:href="interface_configuration_dif_gem_blank.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="difrefguide.chm" xlink:role="chm" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+ 
+<!-- Replaced with Metis EA Framework
+
+ <template id="oid2" name="Interface_Configuration_DIF_ITM_Blank" title="Interface Configuration (DIF, ITM) Blank">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="IT Management" xlink:href="http://xml.computas.com/xml/metamodels/itm_platform.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Interface Configuration" xlink:href="../metamodels/interface_configuration.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Interface Configuration (ITM, GEM) Blank" xlink:href="interface_configuration_dif_itm_blank.kmd#oid1" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Main" xlink:href="interface_configuration_dif_itm_blank.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="difrefguide.chm" xlink:role="chm" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+
+-->
+
+ <template id="oid2" name="Interface_Configuration_DIF_MEAF_Blank" title="Interface Configuration (DIF, Semantics) Blank">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="Troux Semantics" xlink:href="http://metadata.troux.info/meaf/metamodels/meaf_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Interface Configuration" xlink:href="../metamodels/interface_configuration.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Interface Configuration (DIF, Semantics) Blank" xlink:href="interface_configuration_dif_eaf_blank.kmd#oid1" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Main" xlink:href="interface_configuration_dif_eaf_blank.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="difrefguide.chm" xlink:role="chm" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+
+</metis>

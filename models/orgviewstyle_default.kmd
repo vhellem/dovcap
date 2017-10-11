@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ viewstyles="1"
+ nextoid="3">
+
+<viewstyle id="oid1" name="OrgViewStyle" title="Organization Viewstyle (default)">
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/organization.kmd#oid3" xlink:actuate="user"/>
+ </viewstyle>
+
+</metis>
+

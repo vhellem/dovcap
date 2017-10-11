@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ nextoid="3">
+
+ <integer-type id="oid1" name="Relationship_Mapping_Type_Symbol" title="Relationship Mapping Type Symbol" default="1">
+  <range name="a" min="1" max="1"/>
+  <range name="b" min="2" max="2"/>
+  <range name="c" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid2" name="Relationship_PartOf_Member_Option_Symbols" title="Relationship-PartOf-Member Option Symbols">
+  <range name="http://xml.computas.com/xml/interfaces/common/symbols/common_symbol_components.svg#oid12" min="0" max="0"/>
+  <range name="http://xml.computas.com/xml/interfaces/common/symbols/common_symbol_components.svg#oid20" min="1" max="1"/>
+ </integer-type>
+
+
+</metis>

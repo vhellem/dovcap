@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="2"
+ nextoid="3">
+
+ <viewstyle id="oid1" name="important_property_and_color_tree_viewstyle" title="Important Property and Color Tree Viewstyle" desc="Important properties and color on objects">
+  <typeview-link xlink:role="typeview" xlink:title="Goal" xlink:href="../typeviews/goal.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy" xlink:href="../typeviews/strategy.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Business Process" xlink:href="../typeviews/business_process.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Application" xlink:href="../typeviews/application.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Program" xlink:href="../typeviews/program.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Initiative" xlink:href="../typeviews/initiative.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Project" xlink:href="../typeviews/project.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Task" xlink:href="../typeviews/task.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Success Factor" xlink:href="../typeviews/success_factor.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Measure" xlink:href="../typeviews/measure.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Enterprise Policy" xlink:href="../typeviews/enterprise_policy.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Information Need" xlink:href="../typeviews/information_need.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Business Question" xlink:href="../typeviews/business_question.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy achieves Goal" xlink:href="../typeviews/achieves-is_achieved_by_weight.kmd#oid1" xlink:actuate="user"/>	
+  <typeview-link xlink:role="typeview" xlink:title="Business Process implements Strategy" xlink:href="../typeviews/implements-is_implemented_by_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Change Component implements Strategy" xlink:href="../typeviews/implements-is_implemented_by_weight.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Enterprise Policy implements Strategy" xlink:href="../typeviews/implements-is_implemented_by_weight.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Business Process uses Application" xlink:href="../typeviews/uses-is_used_by_weight-criticality.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy leads to Information Need" xlink:href="../typeviews/leads_to-follows_from_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy depends on Success Factor" xlink:href="../typeviews/depends_on-is_critical_to_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Measure measures Success Factor" xlink:href="../typeviews/measures-is_measured_by_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Project allocates Manpower" xlink:href="../typeviews/allocates-is_allocated_to_percentage.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="needs/is needed by (Resources)" xlink:href="../typeviews/needs-is_needed_by_resources.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="consists of/is part of (Skill Level)" xlink:href="../typeviews/consists_of-is_part_of_skill_level.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="uses/is used by (Criticality)" xlink:href="../typeviews/uses-is_used_by_criticality.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="provides/is provided by (Criticality)" xlink:href="../typeviews/provides-is_provided_by_criticality.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Factor" xlink:href="../typeviews/factor.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Risk" xlink:href="../typeviews/risk.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Trend" xlink:href="../typeviews/trend.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Requirement" xlink:href="../typeviews/requirement.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Scenario" xlink:href="../typeviews/scenario.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Application Component" xlink:href="../typeviews/application_component.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Software" xlink:href="../typeviews/software.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Deployed software" xlink:href="../typeviews/deployed_software.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Software Module" xlink:href="../typeviews/software_module.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Software Server" xlink:href="../typeviews/software_server.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Application Server" xlink:href="../typeviews/application_server.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Database Server" xlink:href="../typeviews/database_server.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="File Server" xlink:href="../typeviews/file_server.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Web Server" xlink:href="../typeviews/web_server.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Infrastructure Component" xlink:href="../typeviews/infrastructure_component.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Hardware" xlink:href="../typeviews/hardware.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Cabinet" xlink:href="../typeviews/cabinet.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Computing Hardware" xlink:href="../typeviews/computing_hardware.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Computer" xlink:href="../typeviews/computer.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Desktop" xlink:href="../typeviews/desktop.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Laptop" xlink:href="../typeviews/laptop.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Server" xlink:href="../typeviews/server.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Mainframe" xlink:href="../typeviews/mainframe.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Network Device" xlink:href="../typeviews/network_device.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Firewall" xlink:href="../typeviews/firewall.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Load Balancer" xlink:href="../typeviews/load_balancer.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Router" xlink:href="../typeviews/router.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Storage Device" xlink:href="../typeviews/storage_device.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Backup Device" xlink:href="../typeviews/backup_device.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Tape Backup" xlink:href="../typeviews/tape_backup.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Disk Array" xlink:href="../typeviews/disk_array.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Switch" xlink:href="../typeviews/switch.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Storage Area Network Switch" xlink:href="../typeviews/storage_area_network_switch.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Network" xlink:href="../typeviews/network.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Network Interface" xlink:href="../typeviews/network_interface.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Storage Area Network"  xlink:href="../typeviews/storage_area_network.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Action"  xlink:href="../typeviews/action.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Analysis"  xlink:href="../typeviews/analysis.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Capability"  xlink:href="../typeviews/capability.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Plan"  xlink:href="../typeviews/plan.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Disaster Recovery Plan"  xlink:href="../typeviews/disaster_recovery_plan.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Security Policy"  xlink:href="../typeviews/security_policy.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="External Factor"  xlink:href="../typeviews/external_factor.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Issue"  xlink:href="../typeviews/issue.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Cause"  xlink:href="../typeviews/cause.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Implication"  xlink:href="../typeviews/implication.kmd#oid5" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="oid2" name="omportant_property_and_color_nested_viewstyle" title="Important Property and Color Nested Viewstyle" desc="Important properties and color on objects">
+  <typeview-link xlink:role="typeview" xlink:title="Goal" xlink:href="../typeviews/goal.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy" xlink:href="../typeviews/strategy.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Business Process" xlink:href="../typeviews/business_process.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Application" xlink:href="../typeviews/application.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Program" xlink:href="../typeviews/program.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Initiative" xlink:href="../typeviews/initiative.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Project" xlink:href="../typeviews/project.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Task" xlink:href="../typeviews/task.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Success Factor" xlink:href="../typeviews/success_factor.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Measure" xlink:href="../typeviews/measure.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Enterprise Policy" xlink:href="../typeviews/enterprise_policy.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Information Need" xlink:href="../typeviews/information_need.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Business Question" xlink:href="../typeviews/business_question.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy achieves Goal" xlink:href="../typeviews/achieves-is_achieved_by_weight.kmd#oid1" xlink:actuate="user"/>	
+  <typeview-link xlink:role="typeview" xlink:title="Business Process implements Strategy" xlink:href="../typeviews/implements-is_implemented_by_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Change Component implements Strategy" xlink:href="../typeviews/implements-is_implemented_by_weight.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Enterprise Policy implements Strategy" xlink:href="../typeviews/implements-is_implemented_by_weight.kmd#oid3" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Business Process uses Application" xlink:href="../typeviews/uses-is_used_by_weight-criticality.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy leads to Information Need" xlink:href="../typeviews/leads_to-follows_from_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Strategy depends on Success Factor" xlink:href="../typeviews/depends_on-is_critical_to_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Measure measures Success Factor" xlink:href="../typeviews/measures-is_measured_by_weight.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Project allocates Manpower" xlink:href="../typeviews/allocates-is_allocated_to_percentage.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="needs/is needed by (Resources)" xlink:href="../typeviews/needs-is_needed_by_resources.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="consists of/is part of (Skill Level)" xlink:href="../typeviews/consists_of-is_part_of_skill_level.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="uses/is used by (Criticality)" xlink:href="../typeviews/uses-is_used_by_criticality.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="provides/is provided by (Criticality)" xlink:href="../typeviews/provides-is_provided_by_criticality.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Factor" xlink:href="../typeviews/factor.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Risk" xlink:href="../typeviews/risk.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Trend" xlink:href="../typeviews/trend.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Requirement" xlink:href="../typeviews/requirement.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Scenario" xlink:href="../typeviews/scenario.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Application Component" xlink:href="../typeviews/application_component.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Software" xlink:href="../typeviews/software.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Deployed software" xlink:href="../typeviews/deployed_software.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Software Module" xlink:href="../typeviews/software_module.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Software Server" xlink:href="../typeviews/software_server.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Application Server" xlink:href="../typeviews/application_server.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Database Server" xlink:href="../typeviews/database_server.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="File Server" xlink:href="../typeviews/file_server.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Web Server" xlink:href="../typeviews/web_server.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Infrastructure Component" xlink:href="../typeviews/infrastructure_component.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Hardware" xlink:href="../typeviews/hardware.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Cabinet" xlink:href="../typeviews/cabinet.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Computing Hardware" xlink:href="../typeviews/computing_hardware.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Computer" xlink:href="../typeviews/computer.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Desktop" xlink:href="../typeviews/desktop.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Laptop" xlink:href="../typeviews/laptop.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Server" xlink:href="../typeviews/server.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Mainframe" xlink:href="../typeviews/mainframe.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Network Device" xlink:href="../typeviews/network_device.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Firewall" xlink:href="../typeviews/firewall.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Load Balancer" xlink:href="../typeviews/load_balancer.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Router" xlink:href="../typeviews/router.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Storage Device" xlink:href="../typeviews/storage_device.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Backup Device" xlink:href="../typeviews/backup_device.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Tape Backup" xlink:href="../typeviews/tape_backup.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Disk Array" xlink:href="../typeviews/disk_array.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Switch" xlink:href="../typeviews/switch.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Storage Area Network Switch" xlink:href="../typeviews/storage_area_network_switch.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Network" xlink:href="../typeviews/network.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Network Interface" xlink:href="../typeviews/network_interface.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Storage Area Network"  xlink:href="../typeviews/storage_area_network.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Action"  xlink:href="../typeviews/action.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Analysis"  xlink:href="../typeviews/analysis.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Capability"  xlink:href="../typeviews/capability.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Plan"  xlink:href="../typeviews/plan.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Disaster Recovery Plan"  xlink:href="../typeviews/disaster_recovery_plan.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Security Policy"  xlink:href="../typeviews/security_policy.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="External Factor"  xlink:href="../typeviews/external_factor.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Issue"  xlink:href="../typeviews/issue.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Cause"  xlink:href="../typeviews/cause.kmd#oid6" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Implication"  xlink:href="../typeviews/implication.kmd#oid6" xlink:actuate="user"/>
+ </viewstyle>
+
+</metis>

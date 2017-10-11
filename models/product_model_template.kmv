@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="3"
+ instanceviews="6"
+ nextoid="1">
+
+ <model id="_002ashm00rbb9rrrqvi3" name="CPPD model" title="CPPD model" standalone-flag="true">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="CPPD Metamodel" xlink:href="product_metamodel.kmd#MetaModel_CPPD:CPPDMetamodel_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">CPPD model</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:title="The Model" xlink:href="#_002ashm00rcjijjmc3hf"/>
+  <part-link xlink:role="object" xlink:title="Product structure" xlink:href="#_002ashm00rj4f6oid42m"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="CPPD model" xlink:href="#_002ashm00rbb9rrrqvi3" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="CPPD model" xlink:href="#_002ashm00rbb9rrrqvi3" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+  <bundle>
+  </bundle>
+ </model>
+
+ <object id="_002ashm00rcjijjmc3hf">
+  <valueset size="9" xlink:role="type" xlink:title="Space (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_space.kmd#ObjType_EKA:Space_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">The Model</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">20061130 200022238</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </object>
+
+ <object id="_002ashm00rj4f6oid42m">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name">Product structure</string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </object>
+
+ <objectview id="_002ashm00rcjij1ftoes" xlink:role="object" xlink:title="The Model" xlink:href="#_002ashm00rcjijjmc3hf" state="open" behavior="nested" text-scale="1" decomp-scale="0.125" left="-488.348" top="-420.621" width="680.659" height="512">
+ </objectview>
+
+ <relationshipview id="_002ashm00rcjjr56kdn2" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="The Model" xlink:href="#oid1"/>
+  <target-link xlink:role="objectview" xlink:title="The Model" xlink:href="#_002ashm00rcjij1ftoes"/>
+ </relationshipview>
+
+ <relationshipview id="_002ashm00rj4f63vsadl" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Product structure" xlink:href="#_002ashm00rj4f6lqhfae"/>
+  <target-link xlink:role="objectview" xlink:title="Product structure" xlink:href="#_002ashm00rj4f6lqhfae"/>
+ </relationshipview>
+
+ <objectview id="_002ashm00rj4f6lqhfae" xlink:role="object" xlink:title="Product structure" xlink:href="#_002ashm00rj4f6oid42m" state="open" behavior="nested" text-scale="1" decomp-scale="0.125" left="-494.228" top="-296.811" width="715.767" height="512">
+  <child-link xlink:role="relationshipview" xlink:href="#_002ashm00rj4f63vsadl"/>
+ </objectview>
+
+ <modelview id="_002ashm00rmgbvqs21c3" name="Untitled" title="Product Structure" primary-flag="true" standalone-flag="true" zoom-level="1.68713" x="-136.166" y="-41.4233" seq="2" xlink:role="model" xlink:title="CPPD model" xlink:href="#_002ashm00rbb9rrrqvi3" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="Product structure" xlink:href="#_002ashm00rj4f6lqhfae"/>
+ </modelview>
+
+ <modelview id="oid1" name="Main" title="The Model" standalone-flag="true" zoom-level="1.68713" x="-148.199" y="-164.69" seq="1" xlink:role="model" xlink:title="CPPD model" xlink:href="#_002ashm00rbb9rrrqvi3" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:title="The Model" xlink:href="#_002ashm00rcjij1ftoes"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002ashm00rcjjr56kdn2"/>
+  <viewbundle>
+  </viewbundle>
+ </modelview>
+
+
+</metis>
