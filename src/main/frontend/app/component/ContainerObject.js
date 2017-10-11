@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
-
+import ActionButton from './ActionButton.js';
+import Container from '../Container.js';
 function importAll(r) {
   let images = {};
   r.keys().map((item, index) => {
@@ -28,14 +29,19 @@ class ContainerObject extends React.Component {
       name: containerJson.name,
       type: containerJson.type
     };
-
+    if (containerJson.objectReference.valueset.iconProp) {
+      var img = containerJson.objectReference.valueset.iconProp;
+      img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
+      console.log(img);
+      // TODO: Has to set a generic icon value
+    }
     if (containerJson.objectReference.valueset.icon) {
       const image = new window.Image();
 
       image.src = images[containerJson.objectReference.valueset.icon];
       image.onload = () => {
         this.setState({
-          image: image
+          image
         });
         this.drawImage();
       };
@@ -68,7 +74,7 @@ class ContainerObject extends React.Component {
       x: nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth,
       y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
     });
-    //fix undefined
+    // fix undefined
 
     if (this.state.image) {
       this.drawImage();
@@ -76,6 +82,45 @@ class ContainerObject extends React.Component {
   }
 
   render() {
+    var children =
+      this.props.container.children.length > 0
+        ? this.props.container.children.map(child => {
+            if (child.type !== 'Action Button') {
+              return (
+                <Container
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                />
+              );
+            } else if (child.type !== 'Action Button') {
+              return (
+                <ContainerObject
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                />
+              );
+            } else {
+              return (
+                <ActionButton
+                  container={child}
+                  parentWidth={this.state.width}
+                  parentHeight={this.state.height}
+                  parentX={this.state.x}
+                  parentY={this.state.y}
+                  key={child.id}
+                />
+              );
+            }
+          })
+        : null;
     return (
       <Group>
         <Rect
@@ -102,8 +147,10 @@ class ContainerObject extends React.Component {
           y={this.state.y + this.state.height / 2 - 7}
           text={this.state.name}
           witdth={14}
+          fontSize={7}
           fontFamily="Arial"
         />
+        {children}
       </Group>
     );
   }

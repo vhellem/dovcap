@@ -84,15 +84,17 @@ public class Model {
                 curr.addModelChild(child);
                 queue.add(child);
 
-                if(!child.name.equals("Top-Container")){
-                  double childScaleX = Double.parseDouble(child.attributes.get("left"))*decomp/width;
-                  double childScaleY = Double.parseDouble(child.attributes.get("top"))*decomp/height;
-                  double childScaleHeight = Double.parseDouble(child.attributes.get("height"))*decomp/height;
-                  double childScaleWidth = Double.parseDouble(child.attributes.get("width"))*decomp/width;
-                  newScales.put(childRef, Arrays.asList(childScaleX, childScaleY, childScaleHeight, childScaleWidth));
-              }
-              else{
-                  newScales.put(childRef, Arrays.asList(0.0, 0.0, 1.0, 1.0));
+                if(child.name != null){
+                  if(!child.name.equals("Workplace")){
+                    double childScaleX = Double.parseDouble(child.attributes.get("left"))*decomp/width;
+                    double childScaleY = Double.parseDouble(child.attributes.get("top"))*decomp/height;
+                    double childScaleHeight = Double.parseDouble(child.attributes.get("height"))*decomp/height;
+                    double childScaleWidth = Double.parseDouble(child.attributes.get("width"))*decomp/width;
+                    newScales.put(childRef, Arrays.asList(childScaleX, childScaleY, childScaleHeight, childScaleWidth));
+                  }
+                  else{
+                    newScales.put(childRef, Arrays.asList(0.0, 0.0, 1.0, 1.0));
+                  }
                 }
             }
           }
