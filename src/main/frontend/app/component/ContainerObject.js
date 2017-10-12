@@ -113,7 +113,7 @@ class ContainerObject extends React.Component {
     var children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
-            if (child.type !== 'Action Button') {
+            if (child.type === 'Container') {
             return (
                 <Container
                   container={child}
