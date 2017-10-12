@@ -60,8 +60,8 @@ class Relationship extends React.Component {
     });
   }
   render() {
-    var minFrom = {pos:[0,0], node:0};
-    var minTo = {pos:[0,0], node:0};
+    var minFrom = { pos: [0, 0], node: 0 };
+    var minTo = { pos: [0, 0], node: 0 };
 
     var textFrom = [0, 0];
     var textTo = [0, 0];
@@ -87,10 +87,17 @@ class Relationship extends React.Component {
       }
     }
 
-    function getTextPosition(x1, y1, x2, y2, distanceFromObject, rightPerpendicular) {
+    function getTextPosition(
+      x1,
+      y1,
+      x2,
+      y2,
+      distanceFromObject,
+      rightPerpendicular,
+    ) {
       var perpendicularDistanceFromLine = 30;
-      if(rightPerpendicular) {
-        perpendicularDistanceFromLine += 20
+      if (rightPerpendicular) {
+        perpendicularDistanceFromLine += 20;
       }
 
       var a = Math.sqrt(
@@ -122,30 +129,22 @@ class Relationship extends React.Component {
     }
 
     function rightOrLeft(x1, y1, x2, y2, fromNode) {
-      var angle = 0
+      var angle = 0;
       if (fromNode == 0) {
-        angle = Math.atan2(y1-y2, x2-x1)
-      }
-      else if (fromNode == 1) {
-        angle = Math.atan2(x2-x1,y2-y1)
-      }
-      else if (fromNode == 2) {
-        angle = Math.PI - Math.atan2(y2-y1,x2-x1)
-      }
-      else if (fromNode == 3) {
-        angle = Math.atan2(x1-x2,y1-y2)
+        angle = Math.atan2(y1 - y2, x2 - x1);
+      } else if (fromNode == 1) {
+        angle = Math.atan2(x2 - x1, y2 - y1);
+      } else if (fromNode == 2) {
+        angle = Math.PI - Math.atan2(y2 - y1, x2 - x1);
+      } else if (fromNode == 3) {
+        angle = Math.atan2(x1 - x2, y1 - y2);
       }
 
-      console.log(fromNode, angle);
-      if(angle < Math.PI / 2) {
-        console.log("LEFT");
-        return false
+      if (angle < Math.PI / 2) {
+        return false;
+      } else {
+        return true;
       }
-      else {
-        console.log("RIGHT");
-        return true
-      }
-
     }
 
     var fromNodes = getRectangleNodes(
@@ -167,8 +166,19 @@ class Relationship extends React.Component {
 
     for (var i = 0; i < fromNodes.length; i++) {
       for (var j = 0; j < toNodes.length; j++) {
-        var d = squareDistance(fromNodes[i][0], fromNodes[i][1], toNodes[j][0], toNodes[j][1]);
-        possiblePositions.push({dist: d, from:fromNodes[i], to:toNodes[j], fromNode:i, toNode:j})
+        var d = squareDistance(
+          fromNodes[i][0],
+          fromNodes[i][1],
+          toNodes[j][0],
+          toNodes[j][1],
+        );
+        possiblePositions.push({
+          dist: d,
+          from: fromNodes[i],
+          to: toNodes[j],
+          fromNode: i,
+          toNode: j,
+        });
       }
     }
     possiblePositions = sortByKey(possiblePositions, 'dist');
@@ -176,52 +186,69 @@ class Relationship extends React.Component {
     var bestPerpendiculatiry = 0;
 
     for (var i = 0; i < possiblePositions.length; i++) {
-      var fromHori = possiblePositions[i]["fromNode"] % 2 != 0
-      var toHori = possiblePositions[i]["toNode"] % 2 != 0
-      var fromP = getPerpendicularity(possiblePositions[i]["from"][0], possiblePositions[i]["from"][1], possiblePositions[i]["to"][0],possiblePositions[i]["to"][1], fromHori);
-      var toP = getPerpendicularity(possiblePositions[i]["to"][0], possiblePositions[i]["to"][1], possiblePositions[i]["from"][0],possiblePositions[i]["from"][1], toHori);
-      var currentP = Math.min(fromP, toP)
+      var fromHori = possiblePositions[i]['fromNode'] % 2 != 0;
+      var toHori = possiblePositions[i]['toNode'] % 2 != 0;
+      var fromP = getPerpendicularity(
+        possiblePositions[i]['from'][0],
+        possiblePositions[i]['from'][1],
+        possiblePositions[i]['to'][0],
+        possiblePositions[i]['to'][1],
+        fromHori,
+      );
+      var toP = getPerpendicularity(
+        possiblePositions[i]['to'][0],
+        possiblePositions[i]['to'][1],
+        possiblePositions[i]['from'][0],
+        possiblePositions[i]['from'][1],
+        toHori,
+      );
+      var currentP = Math.min(fromP, toP);
       if (currentP > bestPerpendiculatiry) {
         bestPerpendiculatiry = currentP;
-        minFrom["pos"] = possiblePositions[i]["from"];
-        minTo["pos"] = possiblePositions[i]["to"];
-        minFrom["node"] = possiblePositions[i]["fromNode"]
-        minTo["node"] = possiblePositions[i]["toNode"]
+        minFrom['pos'] = possiblePositions[i]['from'];
+        minTo['pos'] = possiblePositions[i]['to'];
+        minFrom['node'] = possiblePositions[i]['fromNode'];
+        minTo['node'] = possiblePositions[i]['toNode'];
       }
     }
-    //todo: make more general
+    // todo: make more general
     var rightPerpendicular = true;
-    if (minTo["pos"][1] < minFrom["pos"][1]) {
+    if (minTo['pos'][1] < minFrom['pos'][1]) {
       rightPerpendicular = false;
     }
 
     var toDist = 100;
-    if (minTo["pos"][0] < minFrom["pos"][1]) {
+    if (minTo['pos'][0] < minFrom['pos'][1]) {
       toDist = 20;
     }
-    toDist = 50
+    toDist = 50;
 
-    var right = rightOrLeft(minFrom["pos"][0], minFrom["pos"][1], minTo["pos"][0], minTo["pos"][1], minFrom["node"])
-    if(right) {
-      rightPerpendicular = false
-    }
-    else {
-      rightPerpendicular = true
+    var right = rightOrLeft(
+      minFrom['pos'][0],
+      minFrom['pos'][1],
+      minTo['pos'][0],
+      minTo['pos'][1],
+      minFrom['node'],
+    );
+    if (right) {
+      rightPerpendicular = false;
+    } else {
+      rightPerpendicular = true;
     }
 
     textFrom = getTextPosition(
-      minFrom["pos"][0],
-      minFrom["pos"][1],
-      minTo["pos"][0],
-      minTo["pos"][1],
+      minFrom['pos'][0],
+      minFrom['pos'][1],
+      minTo['pos'][0],
+      minTo['pos'][1],
       toDist,
       rightPerpendicular,
     );
     textTo = getTextPosition(
-      minTo["pos"][0],
-      minTo["pos"][1],
-      minFrom["pos"][0],
-      minFrom["pos"][1],
+      minTo['pos'][0],
+      minTo['pos'][1],
+      minFrom['pos'][0],
+      minFrom['pos'][1],
       toDist,
       !rightPerpendicular,
     );
@@ -229,13 +256,13 @@ class Relationship extends React.Component {
     return (
       <Group>
         <Arrow
-          x={minFrom["pos"][0]}
-          y={minFrom["pos"][1]}
+          x={minFrom['pos'][0]}
+          y={minFrom['pos'][1]}
           points={[
             0,
             0,
-            minTo["pos"][0] - minFrom["pos"][0],
-            minTo["pos"][1] - minFrom["pos"][1]
+            minTo['pos'][0] - minFrom['pos'][0],
+            minTo['pos'][1] - minFrom['pos'][1],
           ]}
           pointerLength={5}
           pointerWidth={5}

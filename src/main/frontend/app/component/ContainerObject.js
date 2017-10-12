@@ -149,6 +149,18 @@ class ContainerObject extends React.Component {
               }
           })
         : null;
+    let imageHeight = this.state.height;
+    let imageWidth =
+      this.state.imageHeight / this.state.imageWidth * this.state.height;
+
+    let ratio = imageWidth / (this.state.width / 2);
+    if (ratio > 1) {
+      imageHeight = imageHeight / ratio;
+      imageWidth = imageWidth / ratio;
+    } else {
+      imageHeight = imageHeight / 1.3;
+      imageWidth = imageWidth / 1.3;
+    }
     return (
       <Group>
         <Rect
@@ -163,19 +175,17 @@ class ContainerObject extends React.Component {
           onDragMove={this.handleDragMove}
         />
         <Image
-          x={this.state.x}
-          y={this.state.y}
-          height={this.state.height}
-          width={
-            this.state.imageHeight / this.state.imageWidth * this.state.height
-          }
+          x={this.state.x + (this.state.width / 2 - imageWidth) / 2}
+          y={this.state.y + (this.state.height - imageHeight) / 2}
+          height={imageHeight}
+          width={imageWidth}
           image={this.state.image}
         />
         <Text
-          width={this.state.width * (2 / 3)}
+          width={this.state.width * (1 / 2)}
           height={this.state.height}
           align="center"
-          x={this.state.x + this.state.width * (1 / 3)}
+          x={this.state.x + this.state.width * (1 / 2)}
           y={this.state.y + this.state.height / 2 - 7}
           text={this.state.name}
           witdth={14}
