@@ -169,7 +169,6 @@ class ContainerObject extends React.Component {
           width={this.state.width}
           height={this.state.height}
           stroke={1}
-          dash={[10, 10]}
           cornerRadius={0}
           draggable
           onDragMove={this.handleDragMove}
