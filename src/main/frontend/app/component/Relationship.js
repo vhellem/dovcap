@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Container from '../Container.js';
-import { Layer, Arrow, Stage, Group, Text } from 'react-konva';
+import { Arrow, Group, Text } from 'react-konva';
 import ObjectEmitter from './ObjectEmitter';
 
 class Relationship extends React.Component {
@@ -12,8 +10,8 @@ class Relationship extends React.Component {
       name: '',
       children: null,
       data: props.data,
-      fromId: props.data['valueset']['origin_href'].substring(1),
-      toId: props.data['valueset']['target_href'].substring(1),
+      fromId: props.data.valueset.origin_href.substring(1),
+      toId: props.data.valueset.target_href.substring(1),
       text1: ' ',
       text2: ' ',
       fromPos: { left: 30, top: 30, width: 100, height: 100 },
@@ -21,19 +19,19 @@ class Relationship extends React.Component {
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
-  componentDidMount() {
+  componentWillMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
 
-    var emitter = ObjectEmitter;
-    var num = this.props.data['type'].split(' ').length;
-    var x = this.props.data['type']
+    const emitter = ObjectEmitter;
+    const num = this.props.data.type.split(' ').length;
+    const name = this.props.data.type
       .split(' ')
       .slice(2, num - 1)
       .join(' ');
     this.setState({
-      text1: 'has ' + x,
-      text2: 'is ' + x + ' of',
+      text1: `has ${name}`,
+      text2: `is ${name} of`,
     });
 
     emitter.addListener(this.state.fromId, (x, y, width, height) => {
@@ -60,11 +58,10 @@ class Relationship extends React.Component {
     });
   }
   render() {
-    var minFrom = { pos: [0, 0], node: 0 };
-    var minTo = { pos: [0, 0], node: 0 };
-
-    var textFrom = [0, 0];
-    var textTo = [0, 0];
+    const minFrom = { pos: [0, 0], node: 0 };
+    const minTo = { pos: [0, 0], node: 0 };
+    let textFrom = [0, 0];
+    let textTo = [0, 0];
 
     function getRectangleNodes(left, top, width, height) {
       return [
@@ -95,17 +92,17 @@ class Relationship extends React.Component {
       distanceFromObject,
       rightPerpendicular,
     ) {
-      var perpendicularDistanceFromLine = 30;
+      let perpendicularDistanceFromLine = 30;
       if (rightPerpendicular) {
         perpendicularDistanceFromLine += 20;
       }
 
-      var a = Math.sqrt(
+      const a = Math.sqrt(
         distanceFromObject ** 2 / (2 * ((x2 - x1) ** 2 + (y2 - y1) ** 2)),
       );
-      var x = x1 + (x2 - x1) * a;
-      var y = y1 + (y2 - y1) * a;
-      var a2 = Math.sqrt(
+      let x = x1 + (x2 - x1) * a;
+      let y = y1 + (y2 - y1) * a;
+      const a2 = Math.sqrt(
         perpendicularDistanceFromLine ** 2 /
           (2 * ((x2 - x1) ** 2 + (y2 - y1) ** 2)),
       );
@@ -121,22 +118,28 @@ class Relationship extends React.Component {
     }
 
     function sortByKey(array, key) {
-      return array.sort(function(a, b) {
-        var x = a[key];
-        var y = b[key];
-        return x < y ? -1 : x > y ? 1 : 0;
+      return array.sort((a, b) => {
+        const x = a[key];
+        const y = b[key];
+        if (x < y) {
+          return -1;
+        } else if (y > x) {
+          return 1;
+        } else {
+          return 0;
+        }
       });
     }
 
     function rightOrLeft(x1, y1, x2, y2, fromNode) {
-      var angle = 0;
-      if (fromNode == 0) {
+      let angle = 0;
+      if (fromNode === 0) {
         angle = Math.atan2(y1 - y2, x2 - x1);
-      } else if (fromNode == 1) {
+      } else if (fromNode === 1) {
         angle = Math.atan2(x2 - x1, y2 - y1);
-      } else if (fromNode == 2) {
+      } else if (fromNode === 2) {
         angle = Math.PI - Math.atan2(y2 - y1, x2 - x1);
-      } else if (fromNode == 3) {
+      } else if (fromNode === 3) {
         angle = Math.atan2(x1 - x2, y1 - y2);
       }
 
@@ -147,26 +150,25 @@ class Relationship extends React.Component {
       }
     }
 
-    var fromNodes = getRectangleNodes(
+    const fromNodes = getRectangleNodes(
       this.state.fromPos.left,
       this.state.fromPos.top,
       this.state.fromPos.width,
       this.state.fromPos.height,
     );
 
-    var toNodes = getRectangleNodes(
+    const toNodes = getRectangleNodes(
       this.state.toPos.left,
       this.state.toPos.top,
       this.state.toPos.width,
       this.state.toPos.height,
     );
 
-    var possiblePositions = [];
-    var minDistance = 999999999;
+    let possiblePositions = [];
 
-    for (var i = 0; i < fromNodes.length; i++) {
-      for (var j = 0; j < toNodes.length; j++) {
-        var d = squareDistance(
+    for (let i = 0; i < fromNodes.length; i++) {
+      for (let j = 0; j < toNodes.length; j++) {
+        const d = squareDistance(
           fromNodes[i][0],
           fromNodes[i][1],
           toNodes[j][0],
@@ -183,52 +185,52 @@ class Relationship extends React.Component {
     }
     possiblePositions = sortByKey(possiblePositions, 'dist');
     possiblePositions = possiblePositions.slice(0, 3);
-    var bestPerpendiculatiry = 0;
+    let bestPerpendiculatiry = 0;
 
-    for (var i = 0; i < possiblePositions.length; i++) {
-      var fromHori = possiblePositions[i]['fromNode'] % 2 != 0;
-      var toHori = possiblePositions[i]['toNode'] % 2 != 0;
-      var fromP = getPerpendicularity(
-        possiblePositions[i]['from'][0],
-        possiblePositions[i]['from'][1],
-        possiblePositions[i]['to'][0],
-        possiblePositions[i]['to'][1],
+    for (let i = 0; i < possiblePositions.length; i++) {
+      const fromHori = possiblePositions[i].fromNode % 2 !== 0;
+      const toHori = possiblePositions[i].toNode % 2 !== 0;
+      const fromP = getPerpendicularity(
+        possiblePositions[i].from[0],
+        possiblePositions[i].from[1],
+        possiblePositions[i].to[0],
+        possiblePositions[i].to[1],
         fromHori,
       );
-      var toP = getPerpendicularity(
-        possiblePositions[i]['to'][0],
-        possiblePositions[i]['to'][1],
-        possiblePositions[i]['from'][0],
-        possiblePositions[i]['from'][1],
+      const toP = getPerpendicularity(
+        possiblePositions[i].to[0],
+        possiblePositions[i].to[1],
+        possiblePositions[i].from[0],
+        possiblePositions[i].from[1],
         toHori,
       );
-      var currentP = Math.min(fromP, toP);
+      const currentP = Math.min(fromP, toP);
       if (currentP > bestPerpendiculatiry) {
         bestPerpendiculatiry = currentP;
-        minFrom['pos'] = possiblePositions[i]['from'];
-        minTo['pos'] = possiblePositions[i]['to'];
-        minFrom['node'] = possiblePositions[i]['fromNode'];
-        minTo['node'] = possiblePositions[i]['toNode'];
+        minFrom.pos = possiblePositions[i].from;
+        minTo.pos = possiblePositions[i].to;
+        minFrom.node = possiblePositions[i].fromNode;
+        minTo.node = possiblePositions[i].toNode;
       }
     }
     // todo: make more general
-    var rightPerpendicular = true;
-    if (minTo['pos'][1] < minFrom['pos'][1]) {
+    let rightPerpendicular = true;
+    if (minTo.pos[1] < minFrom.pos[1]) {
       rightPerpendicular = false;
     }
 
-    var toDist = 100;
-    if (minTo['pos'][0] < minFrom['pos'][1]) {
+    let toDist = 100;
+    if (minTo.pos[0] < minFrom.pos[1]) {
       toDist = 20;
     }
     toDist = 50;
 
-    var right = rightOrLeft(
-      minFrom['pos'][0],
-      minFrom['pos'][1],
-      minTo['pos'][0],
-      minTo['pos'][1],
-      minFrom['node'],
+    const right = rightOrLeft(
+      minFrom.pos[0],
+      minFrom.pos[1],
+      minTo.pos[0],
+      minTo.pos[1],
+      minFrom.node,
     );
     if (right) {
       rightPerpendicular = false;
@@ -237,18 +239,18 @@ class Relationship extends React.Component {
     }
 
     textFrom = getTextPosition(
-      minFrom['pos'][0],
-      minFrom['pos'][1],
-      minTo['pos'][0],
-      minTo['pos'][1],
+      minFrom.pos[0],
+      minFrom.pos[1],
+      minTo.pos[0],
+      minTo.pos[1],
       toDist,
       rightPerpendicular,
     );
     textTo = getTextPosition(
-      minTo['pos'][0],
-      minTo['pos'][1],
-      minFrom['pos'][0],
-      minFrom['pos'][1],
+      minTo.pos[0],
+      minTo.pos[1],
+      minFrom.pos[0],
+      minFrom.pos[1],
       toDist,
       !rightPerpendicular,
     );
@@ -256,13 +258,13 @@ class Relationship extends React.Component {
     return (
       <Group>
         <Arrow
-          x={minFrom['pos'][0]}
-          y={minFrom['pos'][1]}
+          x={minFrom.pos[0]}
+          y={minFrom.pos[1]}
           points={[
             0,
             0,
-            minTo['pos'][0] - minFrom['pos'][0],
-            minTo['pos'][1] - minFrom['pos'][1],
+            minTo.pos[0] - minFrom.pos[0],
+            minTo.pos[1] - minFrom.pos[1],
           ]}
           pointerLength={5}
           pointerWidth={5}
