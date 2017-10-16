@@ -39,24 +39,34 @@ class App extends React.Component {
       this.zoom(-0.1);
     });
   }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
   onChange = activeKey => {
     this.setState({
-      selectedModel: parseInt(activeKey),
+      selectedModel: parseInt(activeKey, 10),
     });
   };
 
   zoom(num) {
-    let xDiffZoom =
+    const xDiffZoom =
       this.state.modelViewWidth * this.state.zoom -
       this.state.modelViewWidth * (this.state.zoom + num);
 
-    let xDiffMove = this.state.movedX * num;
+    const xDiffMove = this.state.movedX * num;
 
-    let yDiffZoom =
+    const yDiffZoom =
       this.state.modelViewHeight * this.state.zoom -
       this.state.modelViewHeight * (this.state.zoom + num);
 
-    let yDiffMove = this.state.movedY * num;
+    const yDiffMove = this.state.movedY * num;
 
     if (num > 0 || this.state.zoom + num > 0) {
       this.setState({
@@ -79,15 +89,6 @@ class App extends React.Component {
       movedY: (this.state.movedY += num / this.state.zoom),
       yOffset: (this.state.yOffset += num),
     });
-  }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
   updateWindowDimensions() {
@@ -119,9 +120,9 @@ class App extends React.Component {
             activeKey={this.state.selectedModel.toString()}
             onChange={this.onChange}
           >
-            {this.state.modelViews.map((modelView, index) => {
-              return <TabPane tab={modelView.attributes.title} key={index} />;
-            })}
+            {this.state.modelViews.map((modelView, index) => (
+              <TabPane tab={modelView.attributes.title} key={index} />
+            ))}
           </Tabs>
           <button className="" onClick={() => this.zoom(0.25)}>
             Zoom in

@@ -1,16 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
-
+import { Rect, Group, Text, Image } from 'react-konva';
 import ObjectEmitter from './ObjectEmitter';
-
 import ActionButton from './ActionButton.js';
 import Container from '../Container.js';
 
 function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
+  const images = {};
+  r.keys().map(item => {
     images[item.replace('./', '')] = r(item);
+    return null;
   });
   return images;
 }
@@ -19,13 +17,11 @@ const images = importAll(
   require.context('../image/', false, /\.(png|jpe?g|svg)$/),
 );
 
-import org from '../image/networkdevice.svg';
-
 class ContainerObject extends React.Component {
   constructor(props) {
     super(props);
 
-    var containerJson = props.container;
+    const containerJson = props.container;
 
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
@@ -39,7 +35,7 @@ class ContainerObject extends React.Component {
       id: containerJson.objectReference.id,
     };
     if (containerJson.objectReference.valueset.iconProp) {
-      var img = containerJson.objectReference.valueset.iconProp;
+      let img = containerJson.objectReference.valueset.iconProp;
       img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
       // TODO: Has to set a generic icon value
     }
@@ -58,38 +54,15 @@ class ContainerObject extends React.Component {
     this.drawImage = this.drawImage.bind(this);
   }
 
-  handleDragMove = e => {
-    this.state.x = e.target.position()['x'];
-    this.state.y = e.target.position()['y'];
-
-    var emitter = ObjectEmitter;
-    emitter.emit(
-      this.state.id,
-      this.state.x,
-      this.state.y,
-      this.state.width,
-      this.state.height,
-    );
-  };
-
-  drawImage() {
-    var x = this.state.x;
-    var y = this.state.y;
-
-    this.setState({
-      imageWidth: this.state.image.naturalHeight,
-      imageHeight: this.state.image.naturalWidth,
-    });
-  }
-
   componentWillReceiveProps(nextProps) {
-    var containerJson = nextProps.container;
-    var width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
-    var height = containerJson.attributes.scaleHeight * nextProps.parentHeight;
-    var x =
+    const containerJson = nextProps.container;
+    const width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
+    const height =
+      containerJson.attributes.scaleHeight * nextProps.parentHeight;
+    const x =
       nextProps.parentX +
       containerJson.attributes.scaleX * nextProps.parentWidth;
-    var y =
+    const y =
       nextProps.parentY +
       containerJson.attributes.scaleY * nextProps.parentHeight;
 
@@ -105,12 +78,35 @@ class ContainerObject extends React.Component {
       this.drawImage();
     }
 
-    var emitter = ObjectEmitter;
+    const emitter = ObjectEmitter;
     emitter.emit(this.state.id, x, y, width, height);
   }
 
+  handleDragMove = e => {
+    this.setState({
+      x: e.target.position().x,
+      y: e.target.position().y,
+    });
+
+    const emitter = ObjectEmitter;
+    emitter.emit(
+      this.state.id,
+      this.state.x,
+      this.state.y,
+      this.state.width,
+      this.state.height,
+    );
+  };
+
+  drawImage() {
+    this.setState({
+      imageWidth: this.state.image.naturalHeight,
+      imageHeight: this.state.image.naturalWidth,
+    });
+  }
+
   render() {
-    var children =
+    const children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
             if (child.type === 'Container') {
@@ -153,7 +149,7 @@ class ContainerObject extends React.Component {
     let imageWidth =
       this.state.imageHeight / this.state.imageWidth * this.state.height;
 
-    let ratio = imageWidth / (this.state.width / 2);
+    const ratio = imageWidth / (this.state.width / 2);
     if (ratio > 1) {
       imageHeight = imageHeight / ratio;
       imageWidth = imageWidth / ratio;
