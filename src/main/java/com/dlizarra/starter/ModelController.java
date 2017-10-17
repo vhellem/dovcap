@@ -44,7 +44,7 @@ public class ModelController {
 
           for(File file : files) {
             if (file.isFile()) {
-              if (file.getName().split(".")[1].equals("kmv")) {
+              if (getFileExt(file).equals("kmv")) {
                 fileNames.add(file.getName());
               }
             }
@@ -83,5 +83,10 @@ public class ModelController {
             }
           }
           return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body("Couldn't find " + fileName + " in model folders!");
+        }
+        private static String getFileExt(File file) {
+          String fileName = file.getName();
+          int dotIndex = fileName.lastIndexOf('.');
+          return (dotIndex == -1) ? "" : fileName.substring(dotIndex + 1);
         }
     }

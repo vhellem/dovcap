@@ -1,9 +1,9 @@
 #spring:
     #profiles.active: staging
 
-spring:
-  http:
-    multipart:
-      maxFileSize: 10MB
-      maxRequestSize: 10MB
+#spring:
+#  http:
+#    multipart:
+#      maxFileSize: 10MB
+#      maxRequestSize: 10MB
 
