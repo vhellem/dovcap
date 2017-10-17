@@ -6,7 +6,7 @@ class ActionButton extends React.Component {
   constructor(props) {
     super(props);
 
-    var containerJson = props.container;
+    const containerJson = props.container;
 
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,

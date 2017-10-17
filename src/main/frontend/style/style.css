@@ -1,3 +1,28 @@
 .testblue {
      color: blue;
  }
+.upload-container {
+ max-width: 1080px;
+ margin: 0 auto;
+ padding: 1rem;
+}
+.upload-container h3 {
+ margin: 1rem 0;
+ border-bottom: 1px solid rgb(182, 182, 182);
+}
+.model-table {
+   min-width: 50%;
+}
+.theader {
+   border-bottom: 1px solid rgb(42, 123, 242);
+}
+.dropzone-container {
+  background-color: rgb(233, 233, 233);
+  border: 1px dashed rgb(22, 68, 163);
+  display: block;
+  padding: 1rem;
+  max-width: 15rem;
+}
+.dropzone-container:hover {
+  background-color: rgb(240, 240, 240);
+}
