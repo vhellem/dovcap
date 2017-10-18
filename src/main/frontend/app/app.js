@@ -19,11 +19,14 @@ class App extends React.Component {
       yOffset: 0,
       modelViewWidth: 0,
       modelViewHeight: 0,
+      direction: '',
+      lastScrollPos: 0,
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
     this.offsetDown = this.offsetDown.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   componentWillMount() {
     getModelsFromBackend().then(res => {
@@ -43,10 +46,12 @@ class App extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+    document.addEventListener('keydown', this.handleKeyDown, false);
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
+    document.removeEventListener('keydown', this.handleKeyDown, false);
   }
 
   onChange = activeKey => {
@@ -98,11 +103,24 @@ class App extends React.Component {
     });
   }
 
+  handleKeyDown(event) {
+    if (event.keyCode === 87) {
+      this.offsetDown(50);
+    } else if (event.keyCode === 83) {
+      this.offsetDown(-50);
+    } else if (event.keyCode === 65) {
+      this.offsetRight(50);
+    } else if (event.keyCode === 68) {
+      this.offsetRight(-50);
+    } else if (event.keyCode === 90) {
+      this.zoom(0.25);
+    } else if (event.keyCode === 88) {
+      this.zoom(-0.25);
+    }
+  }
+
   render() {
-    if (
-      (this.state.selectedModel || this.state.selectedModel === 0) &&
-      this.state.modelViews
-    ) {
+    if ((this.state.selectedModel || this.state.selectedModel === 0) && this.state.modelViews) {
       return (
         <div>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -116,10 +134,7 @@ class App extends React.Component {
               height={this.state.modelViewHeight}
             />
           </div>
-          <Tabs
-            activeKey={this.state.selectedModel.toString()}
-            onChange={this.onChange}
-          >
+          <Tabs activeKey={this.state.selectedModel.toString()} onChange={this.onChange}>
             {this.state.modelViews.map((modelView, index) => (
               <TabPane tab={modelView.attributes.title} key={index} />
             ))}
