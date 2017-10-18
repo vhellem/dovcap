@@ -246,6 +246,17 @@ public class Parser extends DefaultHandler {
                 }
             }
         }
+        if (elementName.equals("url")) {
+            if (attributes.getValue("name").equals("filename")) {
+                String iconLink = attributes.getValue("xlink:href");
+                int dotIndex = iconLink.lastIndexOf(".");
+                int startIndex = iconLink.lastIndexOf("/");
+                if(iconLink.substring(dotIndex+1, dotIndex+4).equals("png")) {
+                    String icon = iconLink.substring(startIndex+1, dotIndex+4);
+                    objectTmp.addValueset("icon", icon);
+                }
+            }
+        }
     }
 
     private void addOrUpdateElement(List<myObject> list, String name, Attributes attributes) {
