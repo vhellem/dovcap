@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Layer, Rect, Stage, Group, Text } from 'react-konva';
+import { Rect, Group, Text } from 'react-konva';
 import ContainerObject from './component/ContainerObject.js';
 import ActionButton from './component/ActionButton.js';
 
@@ -8,32 +7,32 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
 
-    var containerJson = props.container;
+    const containerJson = props.container;
 
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
       height: containerJson.attributes.scaleHeight * props.parentHeight,
       x: props.parentX + containerJson.attributes.scaleX * props.parentWidth,
       y: props.parentY + containerJson.attributes.scaleY * props.parentHeight,
-      name: containerJson.name
+      name: containerJson.name,
     };
   }
   componentWillReceiveProps(nextProps) {
-    var containerJson = nextProps.container;
+    const containerJson = nextProps.container;
 
     this.setState({
       width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
       height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
       x: nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth,
-      y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight
+      y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight,
     });
   }
 
   render() {
-    var children =
+    const children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
-            if (child.type == 'View') {
+            if (child.type === 'View') {
               return (
                 <Container
                   container={child}
@@ -69,6 +68,7 @@ class Container extends React.Component {
             }
           })
         : null;
+
     var col = "white"
     var fontSize = 7
     var textColor = "black"
@@ -93,12 +93,10 @@ class Container extends React.Component {
       align = "center"
       padding = -6
     }
-    if (this.props.container.name == "Workplace") {
-      col = "#9cc7ce"
+    if (this.props.container.name === 'Workplace') {
+      col = '#9cc7ce';
     }
 
-
-    //console.log(this.props.container.name);
     return (
       <Group>
         <Rect
