@@ -34,6 +34,9 @@ class ContainerObject extends React.Component {
       imageHeight: 1,
       id: containerJson.objectReference.id,
     };
+
+    //console.log(this.props.container.name);
+
     if (containerJson.objectReference.valueset.iconProp) {
       let img = containerJson.objectReference.valueset.iconProp;
       img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
@@ -157,6 +160,35 @@ class ContainerObject extends React.Component {
       imageHeight = imageHeight / 1.3;
       imageWidth = imageWidth / 1.3;
     }
+
+    var col = "#FFFFFF";
+    if(this.props.container.type == "Role (Actor)") {
+      col = "#FFEEAA"
+    }
+    else if(this.props.container.type == "Property (EKA)") {
+      col = "#bed08c"
+    }
+    else if(this.props.container.type == "Button (CVW)") {
+      col = "lightblue"
+    }
+
+
+    if (this.props.container.name == "CVW_LeftPane") {
+      col = "FF0000"
+    }
+    if (this.props.container.name == "CVW_MenuLevel1") {
+      col = "PowderBlue"
+    }
+    if (this.props.container.name == "CVW_Workspace") {
+      col = "PowderBlue"
+    }
+
+
+/*
+    if (this.props.container.name != null && this.props.container.name.charAt(0) > "C") {
+      col = "yellow"
+    }
+*/
     return (
       <Group>
         <Rect
@@ -166,8 +198,9 @@ class ContainerObject extends React.Component {
           height={this.state.height}
           stroke={1}
           cornerRadius={0}
-          draggable
+          draggable={true}
           onDragMove={this.handleDragMove}
+          fill={col}
         />
         <Image
           x={this.state.x + (this.state.width / 2 - imageWidth) / 2}

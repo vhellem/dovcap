@@ -23,12 +23,8 @@ class Container extends React.Component {
     this.setState({
       width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
       height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
-      x:
-        nextProps.parentX +
-        containerJson.attributes.scaleX * nextProps.parentWidth,
-      y:
-        nextProps.parentY +
-        containerJson.attributes.scaleY * nextProps.parentHeight,
+      x: nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth,
+      y: nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight,
     });
   }
 
@@ -37,7 +33,7 @@ class Container extends React.Component {
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
             if (child.type === 'View') {
-            return (
+              return (
                 <Container
                   container={child}
                   parentWidth={this.state.width}
@@ -47,7 +43,7 @@ class Container extends React.Component {
                   key={child.id}
                 />
               );
-        } else if (child.type !== 'Action Button') {
+            } else if (child.type !== 'Action Button') {
               return (
                 <ContainerObject
                   container={child}
@@ -58,8 +54,8 @@ class Container extends React.Component {
                   key={child.id}
                 />
               );
-              } else {
-                  return (
+            } else {
+              return (
                 <ActionButton
                   container={child}
                   parentWidth={this.state.width}
@@ -69,9 +65,28 @@ class Container extends React.Component {
                   key={child.id}
                 />
               );
-              }
+            }
           })
         : null;
+    var col = 'white';
+
+    if (this.props.container.name == 'AKM Solution Developer Workplace') {
+      col = '#bfd4d9';
+    }
+    if (this.props.container.name == 'DOVCAP Project : Buttons / Close workarea ') {
+      col = '#9cc7ce';
+    }
+    if (
+      this.props.container.name ==
+      'Copyright (c) 2008 Active Knowledge Modeling. All Rights Reserved.'
+    ) {
+      col = '#9cc7ce';
+    }
+    if (this.props.container.name == 'Workplace') {
+      col = '#9cc7ce';
+    }
+
+    console.log(this.props.container.name);
     return (
       <Group>
         <Rect
@@ -82,6 +97,7 @@ class Container extends React.Component {
           stroke={1}
           cornerRadius={10}
           draggable
+          fill={col}
         />
         <Text
           x={this.state.x + 10}
