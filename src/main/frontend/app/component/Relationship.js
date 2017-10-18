@@ -203,7 +203,7 @@ class Relationship extends React.Component {
         toHori,
       );
       var currentP = Math.min(fromP, toP);
-      if (currentP > bestPerpendiculatiry) {
+      if (currentP / bestPerpendiculatiry > 1.2) {
         bestPerpendiculatiry = currentP;
         minFrom['pos'] = possiblePositions[i]['from'];
         minTo['pos'] = possiblePositions[i]['to'];
