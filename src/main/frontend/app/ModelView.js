@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Container from './Container.js';
 import Relationship from './component/Relationship.js';
-import { Layer, Rect, Stage, Group } from 'react-konva';
+import { Layer, Stage } from 'react-konva';
 
 class ModelView extends React.Component {
   constructor(props) {
@@ -11,8 +10,6 @@ class ModelView extends React.Component {
       name: '',
       children: props.modelView.children,
       relationships: props.relationships,
-      width: 0,
-      height: 0,
       x: 5, // Some space in between stage and top-container is needed
       y: 5,
       zoom: props.zoom,
@@ -41,7 +38,7 @@ class ModelView extends React.Component {
           <Layer>
             <Container
               container={this.state.children[0]}
-              parentWidth={this.state.width * this.state.zoom} // Some space in between stage and top-container is needed
+              parentWidth={this.state.width * this.state.zoom}
               parentHeight={this.state.height * this.state.zoom}
               parentX={this.state.x + this.state.xOffset}
               parentY={this.state.y + this.state.yOffset}
