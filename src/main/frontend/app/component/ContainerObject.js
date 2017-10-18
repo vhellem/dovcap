@@ -162,6 +162,9 @@ class ContainerObject extends React.Component {
     }
 
     var col = "#FFFFFF";
+    var fontSize = 7
+    var offSetX = 0
+
     if(this.props.container.type == "Role (Actor)") {
       col = "#FFEEAA"
     }
@@ -178,17 +181,21 @@ class ContainerObject extends React.Component {
     }
     if (this.props.container.name == "CVW_MenuLevel1") {
       col = "PowderBlue"
+      fontSize = 0
     }
     if (this.props.container.name == "CVW_Workspace") {
       col = "PowderBlue"
     }
 
 
-/*
-    if (this.props.container.name != null && this.props.container.name.charAt(0) > "C") {
-      col = "yellow"
+    if (this.props.container.name == "Cost Estimator" || this.props.container.name == "Dicipline Lead" || this.props.container.name == "Concept Designer" || this.props.container.name == "Project Leader") {
+      offSetX = 15
     }
-*/
+
+    if (this.props.container.name == "Type" || this.props.container.name == "TypeId" || this.props.container.name == "TypeName" || this.props.container.name == "Description" || this.props.container.name == "Name") {
+      offSetX = 7
+    }
+
     return (
       <Group>
         <Rect
@@ -196,7 +203,7 @@ class ContainerObject extends React.Component {
           y={this.state.y}
           width={this.state.width}
           height={this.state.height}
-          stroke={1}
+          stroke={"DimGray"}
           cornerRadius={0}
           draggable={true}
           onDragMove={this.handleDragMove}
@@ -208,6 +215,7 @@ class ContainerObject extends React.Component {
           height={imageHeight}
           width={imageWidth}
           image={this.state.image}
+          offsetX={offSetX}
         />
         <Text
           width={this.state.width * (1 / 2)}
@@ -217,7 +225,7 @@ class ContainerObject extends React.Component {
           y={this.state.y + this.state.height / 2 - 7}
           text={this.state.name}
           witdth={14}
-          fontSize={7}
+          fontSize={fontSize}
           fontFamily="Arial"
         />
         {children}

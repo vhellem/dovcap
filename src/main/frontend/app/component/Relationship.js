@@ -34,6 +34,12 @@ class Relationship extends React.Component {
       text2: `is ${name} of`,
     });
 
+    //REMOVE THIS LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and fix correct relationship text
+    this.setState({
+      text1: "",
+      text2: "",
+    });
+
     emitter.addListener(this.state.fromId, (x, y, width, height) => {
       this.setState({
         fromPos: { left: x, top: y, width, height },

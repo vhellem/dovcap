@@ -68,19 +68,30 @@ class Container extends React.Component {
             }
           })
         : null;
-    let col = 'white';
 
-    if (this.props.container.name === 'AKM Solution Developer Workplace') {
-      col = '#bfd4d9';
+    var col = "white"
+    var fontSize = 7
+    var textColor = "black"
+    var fontStyle = "normal"
+    var align = "left"
+    var padding = 0
+
+    if (this.props.container.name == "AKM Solution Developer Workplace") {
+      col = "#bfd4d9"
+      fontSize = 20
+      textColor = "#666666"
     }
-    if (this.props.container.name === 'DOVCAP Project : Buttons / Close workarea ') {
-      col = '#9cc7ce';
+    if (this.props.container.name == "DOVCAP Project : Buttons / Close workarea ") {
+      col = "#9cc7ce"
+      fontStyle="bold"
+      padding = -3
     }
-    if (
-      this.props.container.name ===
-      'Copyright (c) 2008 Active Knowledge Modeling. All Rights Reserved.'
-    ) {
-      col = '#9cc7ce';
+    if (this.props.container.name == "Copyright (c) 2008 Active Knowledge Modeling. All Rights Reserved.") {
+      col = "#9cc7ce"
+      fontStyle="bold"
+      fontSize = 10
+      align = "center"
+      padding = -6
     }
     if (this.props.container.name === 'Workplace') {
       col = '#9cc7ce';
@@ -93,9 +104,9 @@ class Container extends React.Component {
           y={this.state.y}
           width={this.state.width}
           height={this.state.height}
-          stroke={1}
-          cornerRadius={10}
-          draggable
+          cornerRadius={5}
+          stroke={"DimGray"}
+          draggable={true}
           fill={col}
         />
         <Text
@@ -103,8 +114,12 @@ class Container extends React.Component {
           y={this.state.y + 10}
           width={this.state.width - 10}
           text={this.state.name}
-          fontSize={7}
+          fontSize={fontSize}
           fontFamily="Arial"
+          fill={textColor}
+          fontStyle={fontStyle}
+          align = {align}
+          padding ={padding}
         />
         {children}
       </Group>
