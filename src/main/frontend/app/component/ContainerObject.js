@@ -200,11 +200,6 @@ class ContainerObject extends React.Component {
       offSetX = 7
     }
 
-
-if (this.state.image) {
-  console.log(this.props.container.name);
-}
-
     return (
       <Group>
         <Rect
