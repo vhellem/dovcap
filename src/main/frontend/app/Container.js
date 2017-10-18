@@ -69,6 +69,23 @@ class Container extends React.Component {
             }
           })
         : null;
+    var col = "white"
+
+    if (this.props.container.name == "AKM Solution Developer Workplace") {
+      col = "#bfd4d9"
+    }
+    if (this.props.container.name == "DOVCAP Project : Buttons / Close workarea ") {
+      col = "#9cc7ce"
+    }
+    if (this.props.container.name == "Copyright (c) 2008 Active Knowledge Modeling. All Rights Reserved.") {
+      col = "#9cc7ce"
+    }
+    if (this.props.container.name == "Workplace") {
+      col = "#9cc7ce"
+    }
+
+
+    console.log(this.props.container.name);
     return (
       <Group>
         <Rect
@@ -79,6 +96,7 @@ class Container extends React.Component {
           stroke={1}
           cornerRadius={10}
           draggable={true}
+          fill={col}
         />
         <Text
           x={this.state.x + 10}
