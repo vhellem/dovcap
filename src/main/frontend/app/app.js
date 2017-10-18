@@ -32,7 +32,6 @@ class App extends React.Component {
     getModelsFromBackend().then(res => {
       const json = JSON.parse(res.text);
 
-      console.log(json);
       this.setState({
         selectedModel: 0,
         modelViews: json.modelViewL,

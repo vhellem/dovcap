@@ -68,25 +68,24 @@ class Container extends React.Component {
             }
           })
         : null;
-    var col = 'white';
+    let col = 'white';
 
-    if (this.props.container.name == 'AKM Solution Developer Workplace') {
+    if (this.props.container.name === 'AKM Solution Developer Workplace') {
       col = '#bfd4d9';
     }
-    if (this.props.container.name == 'DOVCAP Project : Buttons / Close workarea ') {
+    if (this.props.container.name === 'DOVCAP Project : Buttons / Close workarea ') {
       col = '#9cc7ce';
     }
     if (
-      this.props.container.name ==
+      this.props.container.name ===
       'Copyright (c) 2008 Active Knowledge Modeling. All Rights Reserved.'
     ) {
       col = '#9cc7ce';
     }
-    if (this.props.container.name == 'Workplace') {
+    if (this.props.container.name === 'Workplace') {
       col = '#9cc7ce';
     }
 
-    console.log(this.props.container.name);
     return (
       <Group>
         <Rect
