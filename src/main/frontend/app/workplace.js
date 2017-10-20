@@ -1,8 +1,9 @@
 import React from 'react';
-import { getModelsFromBackend } from './utlities.js';
+import { getModelsFromBackend, selectModelFromBackend } from './utlities.js';
 import ModelView from './ModelView.js';
 import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
+import Navigation from './component/navigation';
 const TabPane = Tabs.TabPane;
 
 class Workplace extends React.Component {
@@ -26,7 +27,7 @@ class Workplace extends React.Component {
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
   componentWillMount() {
-    getModelsFromBackend().then(res => {
+    selectModelFromBackend(this.props.model).then(res => {
       const json = JSON.parse(res.text);
 
       console.log(json);
@@ -44,9 +45,6 @@ class Workplace extends React.Component {
       selectedModel: parseInt(activeKey, 10),
     });
   };
-  selectModel = (model) => {
-    this.setState({ model });
-  }
 
   zoom(num) {
     let xDiffZoom =
@@ -91,6 +89,10 @@ class Workplace extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  selectModel = (model) => {
+    this.setState({ model });
   }
 
   updateWindowDimensions() {

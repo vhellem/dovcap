@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { selectModelFromBackend } from './utlities';
+import Navigation from './component/navigation'
 const Dropzone = require('react-dropzone');
 const request = require('superagent');
 
@@ -36,27 +37,28 @@ class Uploader extends Component {
   }
   dropHandler(files) {
     const file = files[0];
-    const allowedFileExt = ['kmv', 'kmd'];
-    const valid = (allowedFileExt.indexOf(file.name.split('.')[1]) > -1);
-    if (valid) {
-      const fileRequest = new FormData();
-      fileRequest.append('file', file);
-      fileRequest.append('name', file.name);
-      request.post('/api/uploadModel')
-        .send(fileRequest)
-        .end((err, res) => {
-          if (err) {
-            console.log(err);
-          }
-          console.log(res);
-          this.updateModels();
-          return res;
+    // const allowedFileExt = ['kmv', 'kmd'];
+    // const valid = (allowedFileExt.indexOf(file.name.split('.')[1]) > -1);
+    // if (valid) {
+    const fileRequest = new FormData();
+    fileRequest.append('file', file);
+    fileRequest.append('name', file.name);
+    request.post('/api/uploadModel')
+      .send(fileRequest)
+      .end((err, res) => {
+        if (err) {
+          console.log(err);
         }
-      );
-    } else {
+        console.log(res);
+        this.updateModels();
+        return res;
+      }
+    );
+  }
+    /* else {
       console.log('File type illegal!');
     }
-  }
+  }*/
   handleSelect(model) {
     const req = new FormData();
     req.append('name', model);
@@ -88,7 +90,18 @@ class Uploader extends Component {
   render() {
     return (
       <div className="upload-container">
+
         <h1>Model Upload</h1>
+
+        <h3>Select model to be uploaded: </h3>
+        <Dropzone
+          className="dropzone-container"
+          multiple={false}
+          onDrop={() => this.dropHandler}
+        >
+          <div>Drop a file, or click to add!</div>
+        </Dropzone>
+
         <h3>Current models</h3>
         <table className="model-table table">
           <thead>
@@ -107,14 +120,6 @@ class Uploader extends Component {
             })}
           </tbody>
         </table>
-        <h3>Select model to be uploaded: </h3>
-        <Dropzone
-          className="dropzone-container"
-          multiple={false}
-          onDrop={this.dropHandler.bind(this)}
-        >
-          <div>Drop a file, or click to add!</div>
-        </Dropzone>
       </div>
     );
   }

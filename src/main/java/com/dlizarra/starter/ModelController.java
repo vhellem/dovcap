@@ -27,11 +27,10 @@ public class ModelController {
         }
 
         @CrossOrigin(origins = "http://localhost:9090")
-        @RequestMapping(value = "/api/selectModel", method=RequestMethod.POST)
+        @RequestMapping(value = "/api/selectModel", method=RequestMethod.GET)
         public String selectModel(@RequestParam("name") String fileName) {
           Parser parser = new Parser("models/"+fileName);
           String json = parser.getJson();
-          System.out.println(json);
           return json;
         }
 
