@@ -91,7 +91,7 @@ public class Model {
                 }
                 this.findObjectReference(curr);
                 for (String childReference: curr.viewChildren){
-                    String childRef = childReference.substring(1);
+                    String childRef = childReference.replace("#", "");
                     for (myObject child: this.viewL){
                         if (child.id.equals(childRef)){
 

@@ -75,7 +75,9 @@ public class Parser extends DefaultHandler {
             doc = lookupFileName(doc);
             if(!loadedDocsL.contains(doc)) {
                 loadedDocsL.add(doc);
-                parseFile(doc);
+                if (doc.matches(".*\\.(kmv|kmd)")) {
+                    parseFile(doc);
+                }
             }
         }
     }
@@ -138,12 +140,28 @@ public class Parser extends DefaultHandler {
     }
 
     public String lookupFileName(String filename) {
-        int dotIndex = filename.lastIndexOf(".");
-        int startIndex = filename.lastIndexOf("/");
-        if (dotIndex == -1 | startIndex == -1) {
+        try{
+            return "models/" + removeDirectory(filename);
+        } catch (Exception e){
             return filename;
         }
-        return "models" + filename.substring(startIndex, dotIndex+4);
+    }
+
+    private String removeDirectory(String filePath) {
+        int dotIndex = filePath.lastIndexOf(".");
+        int startIndex = filePath.lastIndexOf("/");
+        return filePath.substring(startIndex+1, dotIndex+4);
+    }
+
+    private void addIcon(String iconReference) {
+        try {
+            String iconString = removeDirectory(iconReference);
+            if (iconString.matches(".*\\.(png|svg|gif)")) {
+                objectTmp.addValueset("icon", iconString);
+            }
+        } catch (Exception e) {
+            // Not a valid icon.
+        }
     }
 
     @Override
@@ -186,6 +204,15 @@ public class Parser extends DefaultHandler {
             linkedDocsL.add(attributes.getValue("xlink:href"));
             objectTmp.setAttributes(modelAtt);
         }
+        // If this is uncommented, the ITRV submodels will be loaded.
+        // They get their own panes though, and are not displayed properly.
+        // if (elementName.equals("part-link")) {
+        //   if(attributes.getValue("xlink:title") != null){
+        //     if(attributes.getValue("xlink:title").equals("IRTV Core")){
+        //         linkedDocsL.add(attributes.getValue("xlink:href"));
+        //     }
+        //   }
+        // }
         if (elementName.equals("relationship")) {
             addOrUpdateElement(relationshipL, attributes.getValue("id"), attributes);
             readingRelationship = true;
@@ -229,13 +256,7 @@ public class Parser extends DefaultHandler {
         }
         if (elementName.equals("replace")) {
             if (attributes.getValue("tag").equals("icon")) {
-                String iconLink = attributes.getValue("macro");
-                int dotIndex = iconLink.lastIndexOf(".");
-                int startIndex = iconLink.lastIndexOf("/");
-                if(iconLink.substring(dotIndex+1, dotIndex+4).equals("svg")) {
-                    String icon = iconLink.substring(startIndex+1, dotIndex+4);
-                    objectTmp.addValueset("icon", icon);
-                }
+                addIcon(attributes.getValue("macro"));
             }
         }
         if (elementName.equals("string")) {
@@ -248,13 +269,7 @@ public class Parser extends DefaultHandler {
         }
         if (elementName.equals("url")) {
             if (attributes.getValue("name").equals("filename")) {
-                String iconLink = attributes.getValue("xlink:href");
-                int dotIndex = iconLink.lastIndexOf(".");
-                int startIndex = iconLink.lastIndexOf("/");
-                if(iconLink.substring(dotIndex+1, dotIndex+4).equals("png")) {
-                    String icon = iconLink.substring(startIndex+1, dotIndex+4);
-                    objectTmp.addValueset("icon", icon);
-                }
+                addIcon(attributes.getValue("xlink:href"));
             }
         }
     }
@@ -302,18 +317,8 @@ public class Parser extends DefaultHandler {
             readingRelationship = false;
         }
         if (element.equals("string")) {
-            if(readingIcon & tmpValue != null) {
-                String iconLink = tmpValue;
-                int dotIndex = iconLink.lastIndexOf(".");
-                int startIndex = iconLink.lastIndexOf("/");
-                try {
-                    if(iconLink.substring(dotIndex+1, dotIndex+4).equals("svg")) {
-                        String icon = iconLink.substring(startIndex+1, dotIndex+4);
-                        objectTmp.addValueset("icon", icon);
-                    }
-                } catch (StringIndexOutOfBoundsException e) {
-                    // Not a valid icon.
-                }
+            if (readingIcon & tmpValue != null) {
+                addIcon(tmpValue);
             }
         }
     }
