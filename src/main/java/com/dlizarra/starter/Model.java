@@ -22,18 +22,18 @@ public class Model {
         typeviewL           = new ArrayList<myObject>();
     }
 
-    public void setLists(   List<myObject> objectL,
-                            List<myObject> viewL,
-                            List<myObject> modelViewL,
-                            List<myObject> relationshipL,
-                            List<myObject> relationshipViewL,
-                            List<myObject> typeviewL) {
-        this.objectL = objectL;
-        this.viewL = viewL;
-        this.modelViewL = modelViewL;
-        this.relationshipL = relationshipL;
-        this.relationshipViewL = relationshipViewL;
-        this.typeviewL = typeviewL;
+    public void setLists(   Collection<myObject> objectL,
+                            Collection<myObject> viewL,
+                            Collection<myObject> modelViewL,
+                            Collection<myObject> relationshipL,
+                            Collection<myObject> relationshipViewL,
+                            Collection<myObject> typeviewL) {
+        this.objectL = new ArrayList<myObject>(objectL);
+        this.viewL = new ArrayList<myObject>(viewL);
+        this.modelViewL = new ArrayList<myObject>(modelViewL);
+        this.relationshipL = new ArrayList<myObject>(relationshipL);
+        this.relationshipViewL = new ArrayList<myObject>(relationshipViewL);
+        this.typeviewL = new ArrayList<myObject>(typeviewL);
     }
 
     public void setObjectL(List<myObject> list){

@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.StringReader;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -25,12 +26,12 @@ import org.xml.sax.InputSource;
 import com.google.gson.*;
 
 public class Parser extends DefaultHandler {
-    List<myObject> objectL;
-    List<myObject> viewL;
-    List<myObject> modelViewL;
-    List<myObject> relationshipL;
-    List<myObject> relationshipViewL;
-    List<myObject> typeviewL;
+    Map<String, myObject> objectM;
+    Map<String, myObject> viewM;
+    Map<String, myObject> modelViewM;
+    Map<String, myObject> relationshipM;
+    Map<String, myObject> relationshipViewM;
+    Map<String, myObject> typeviewM;
     List<String> linkedDocsL;
     List<String> loadedDocsL;
 
@@ -45,12 +46,12 @@ public class Parser extends DefaultHandler {
 
     public Parser(String objectXmlFileName) {
         this.objectXmlFileName  = objectXmlFileName;
-        objectL                 = new ArrayList<myObject>();
-        viewL                   = new ArrayList<myObject>();
-        modelViewL              = new ArrayList<myObject>();
-        relationshipL           = new ArrayList<myObject>();
-        relationshipViewL       = new ArrayList<myObject>();
-        typeviewL               = new ArrayList<myObject>();
+        objectM                 = new HashMap<String, myObject>();
+        viewM                   = new HashMap<String, myObject>();
+        modelViewM              = new HashMap<String, myObject>();
+        relationshipM           = new HashMap<String, myObject>();
+        relationshipViewM       = new HashMap<String, myObject>();
+        typeviewM               = new HashMap<String, myObject>();
         linkedDocsL             = new ArrayList<String>();
         loadedDocsL             = new ArrayList<String>();
 
@@ -128,8 +129,8 @@ public class Parser extends DefaultHandler {
             .create();
 
         Model model = new Model();
-        model.setLists(objectL, viewL, modelViewL, relationshipL, relationshipViewL,
-                typeviewL);
+        model.setLists(objectM.values(), viewM.values(), modelViewM.values(),
+            relationshipM.values(), relationshipViewM.values(), typeviewM.values());
         model.setParser(this);
         model.preprocess();
         return gson.toJson(model);
@@ -171,16 +172,17 @@ public class Parser extends DefaultHandler {
     }
 
     @Override
-    public void startElement(String s, String s1, String elementName, Attributes attributes) throws SAXException {
+    public void startElement(String s, String s1, String elementName,
+                            Attributes attributes) throws SAXException {
 
         if (elementName.equals("metis")) {
             // Maybe we will need this info later
         }
         if (elementName.equals("object")) {
-            addOrUpdateElement(objectL, attributes.getValue("id"), attributes);
+            addOrUpdateElement(objectM, attributes.getValue("id"), attributes);
         }
         if (elementName.equals("objectview")) {
-            addOrUpdateElement(viewL, attributes.getValue("id"), attributes);
+            addOrUpdateElement(viewM, attributes.getValue("id"), attributes);
         }
         if (elementName.equals("child-link")) {
             objectTmp.addChild(attributes.getValue("xlink:href"));
@@ -189,7 +191,7 @@ public class Parser extends DefaultHandler {
             tmpName = attributes.getValue("name");
         }
         if(elementName.equals("modelview")) {
-            addOrUpdateElement(modelViewL, attributes.getValue("id"), attributes);
+            addOrUpdateElement(modelViewM, attributes.getValue("id"), attributes);
         }
         if (elementName.equals("valueset")) {
             HashMap<String, String> modelAtt = new HashMap();
@@ -214,11 +216,11 @@ public class Parser extends DefaultHandler {
         //   }
         // }
         if (elementName.equals("relationship")) {
-            addOrUpdateElement(relationshipL, attributes.getValue("id"), attributes);
+            addOrUpdateElement(relationshipM, attributes.getValue("id"), attributes);
             readingRelationship = true;
         }
         if (elementName.equals("relationshipview")) {
-            addOrUpdateElement(relationshipViewL, attributes.getValue("id"), attributes);
+            addOrUpdateElement(relationshipViewM, attributes.getValue("id"), attributes);
             readingRelationshipView = true;
         }
         if (elementName.equals("origin-link")) {
@@ -252,7 +254,9 @@ public class Parser extends DefaultHandler {
             }
         }
         if (elementName.equals("typeview")) {
-            addOrUpdateElement(typeviewL, objectXmlFileName+":"+attributes.getValue("id"), attributes);
+            addOrUpdateElement(typeviewM,
+                              objectXmlFileName+":"+attributes.getValue("id"),
+                              attributes);
         }
         if (elementName.equals("replace")) {
             if (attributes.getValue("tag").equals("icon")) {
@@ -274,13 +278,12 @@ public class Parser extends DefaultHandler {
         }
     }
 
-    private void addOrUpdateElement(List<myObject> list, String name, Attributes attributes) {
-        int index = list.indexOf(name);
-        if (index != -1) {
-            objectTmp = list.get(index);
-        } else {
+    private void addOrUpdateElement(Map<String, myObject> map, String name,
+                                    Attributes attributes) {
+        objectTmp = map.get(name);
+        if (objectTmp == null) {
             objectTmp = new myObject();
-            list.add(objectTmp);
+            map.put(name, objectTmp);
         }
         objectTmp.setId(name);
 
@@ -305,10 +308,6 @@ public class Parser extends DefaultHandler {
                     objectTmp.addValueset(tmpName, tmpValue);
                 }
             }
-        }
-        if (element.equals("object")) {
-            // End editing of the current object
-            objectTmp = new myObject();
         }
         if (element.equals("relationshipview")) {
             readingRelationshipView = false;
