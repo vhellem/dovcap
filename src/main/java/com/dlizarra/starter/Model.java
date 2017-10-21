@@ -99,7 +99,7 @@ public class Model {
                             queue.add(child);
 
                             if(child.name != null){
-                                if(!(child.name.equals("Workplace") | child.name.equals("Top-Container"))){
+                                if(!modelViewL.contains(curr)){
                                     double childScaleX = Double.parseDouble(child.attributes.get("left"))*decomp/width;
                                     double childScaleY = Double.parseDouble(child.attributes.get("top"))*decomp/height;
                                     double childScaleHeight = Double.parseDouble(child.attributes.get("height"))*decomp/height;
@@ -112,7 +112,6 @@ public class Model {
                             }
                         }
                     }
-
                 }
             }
             this.putNewScalesOnObjects(newScales);
