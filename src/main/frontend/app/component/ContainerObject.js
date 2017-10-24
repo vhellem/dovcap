@@ -1,16 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Layer, Rect, Stage, Group, Text, Image } from 'react-konva';
-
+import { Rect, Group, Text, Image } from 'react-konva';
 import ObjectEmitter from './ObjectEmitter';
-
 import ActionButton from './ActionButton.js';
 import Container from '../Container.js';
 
 function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
+  const images = {};
+  r.keys().map(item => {
     images[item.replace('./', '')] = r(item);
+    return null;
   });
   return images;
 }
@@ -19,13 +17,11 @@ const images = importAll(
   require.context('../image/', false, /\.(png|jpe?g|svg)$/),
 );
 
-import org from '../image/networkdevice.svg';
-
 class ContainerObject extends React.Component {
   constructor(props) {
     super(props);
 
-    var containerJson = props.container;
+    const containerJson = props.container;
 
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
@@ -38,8 +34,11 @@ class ContainerObject extends React.Component {
       imageHeight: 1,
       id: containerJson.objectReference.id,
     };
+
+    //console.log(this.props.container.name);
+
     if (containerJson.objectReference.valueset.iconProp) {
-      var img = containerJson.objectReference.valueset.iconProp;
+      let img = containerJson.objectReference.valueset.iconProp;
       img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
       // TODO: Has to set a generic icon value
     }
@@ -58,38 +57,15 @@ class ContainerObject extends React.Component {
     this.drawImage = this.drawImage.bind(this);
   }
 
-  handleDragMove = e => {
-    this.state.x = e.target.position()['x'];
-    this.state.y = e.target.position()['y'];
-
-    var emitter = ObjectEmitter;
-    emitter.emit(
-      this.state.id,
-      this.state.x,
-      this.state.y,
-      this.state.width,
-      this.state.height,
-    );
-  };
-
-  drawImage() {
-    var x = this.state.x;
-    var y = this.state.y;
-
-    this.setState({
-      imageWidth: this.state.image.naturalHeight,
-      imageHeight: this.state.image.naturalWidth,
-    });
-  }
-
   componentWillReceiveProps(nextProps) {
-    var containerJson = nextProps.container;
-    var width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
-    var height = containerJson.attributes.scaleHeight * nextProps.parentHeight;
-    var x =
+    const containerJson = nextProps.container;
+    const width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
+    const height =
+      containerJson.attributes.scaleHeight * nextProps.parentHeight;
+    const x =
       nextProps.parentX +
       containerJson.attributes.scaleX * nextProps.parentWidth;
-    var y =
+    const y =
       nextProps.parentY +
       containerJson.attributes.scaleY * nextProps.parentHeight;
 
@@ -105,15 +81,38 @@ class ContainerObject extends React.Component {
       this.drawImage();
     }
 
-    var emitter = ObjectEmitter;
+    const emitter = ObjectEmitter;
     emitter.emit(this.state.id, x, y, width, height);
   }
 
+  handleDragMove = e => {
+    this.setState({
+      x: e.target.position().x,
+      y: e.target.position().y,
+    });
+
+    const emitter = ObjectEmitter;
+    emitter.emit(
+      this.state.id,
+      this.state.x,
+      this.state.y,
+      this.state.width,
+      this.state.height,
+    );
+  };
+
+  drawImage() {
+    this.setState({
+      imageWidth: this.state.image.naturalHeight,
+      imageHeight: this.state.image.naturalWidth,
+    });
+  }
+
   render() {
-    var children =
+    const children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
-            if (child.type !== 'Action Button') {
+            if (child.type === 'Container') {
             return (
                 <Container
                   container={child}
@@ -149,6 +148,54 @@ class ContainerObject extends React.Component {
               }
           })
         : null;
+    let imageHeight = this.state.height;
+    let imageWidth =
+      this.state.imageHeight / this.state.imageWidth * this.state.height;
+
+    const ratio = imageWidth / (this.state.width / 2);
+    if (ratio > 1) {
+      imageHeight = imageHeight / ratio;
+      imageWidth = imageWidth / ratio;
+    } else {
+      imageHeight = imageHeight / 1.3;
+      imageWidth = imageWidth / 1.3;
+    }
+
+    var col = "#FFFFFF";
+    var fontSize = 7
+    var offSetX = 0
+
+    if(this.props.container.type == "Role (Actor)") {
+      col = "#FFEEAA"
+    }
+    else if(this.props.container.type == "Property (EKA)") {
+      col = "#bed08c"
+    }
+    else if(this.props.container.type == "Button (CVW)") {
+      col = "lightblue"
+    }
+
+
+    if (this.props.container.name == "CVW_LeftPane") {
+      col = "FF0000"
+    }
+    if (this.props.container.name == "CVW_MenuLevel1") {
+      col = "PowderBlue"
+      fontSize = 0
+    }
+    if (this.props.container.name == "CVW_Workspace") {
+      col = "PowderBlue"
+    }
+
+
+    if (this.props.container.name == "Cost Estimator" || this.props.container.name == "Dicipline Lead" || this.props.container.name == "Concept Designer" || this.props.container.name == "Project Leader") {
+      offSetX = 15
+    }
+
+    if (this.props.container.name == "Type" || this.props.container.name == "TypeId" || this.props.container.name == "TypeName" || this.props.container.name == "Description" || this.props.container.name == "Name") {
+      offSetX = 7
+    }
+
     return (
       <Group>
         <Rect
@@ -156,30 +203,29 @@ class ContainerObject extends React.Component {
           y={this.state.y}
           width={this.state.width}
           height={this.state.height}
-          stroke={1}
-          dash={[10, 10]}
+          stroke={"DimGray"}
           cornerRadius={0}
-          draggable
+          draggable={true}
           onDragMove={this.handleDragMove}
+          fill={col}
         />
         <Image
-          x={this.state.x}
-          y={this.state.y}
-          height={this.state.height}
-          width={
-            this.state.imageHeight / this.state.imageWidth * this.state.height
-          }
+          x={this.state.x + (this.state.width / 2 - imageWidth) / 2}
+          y={this.state.y + (this.state.height - imageHeight) / 2}
+          height={imageHeight}
+          width={imageWidth}
           image={this.state.image}
+          offsetX={offSetX}
         />
         <Text
-          width={this.state.width * (2 / 3)}
+          width={this.state.width * (1 / 2)}
           height={this.state.height}
           align="center"
-          x={this.state.x + this.state.width * (1 / 3)}
+          x={this.state.x + this.state.width * (1 / 2)}
           y={this.state.y + this.state.height / 2 - 7}
           text={this.state.name}
           witdth={14}
-          fontSize={7}
+          fontSize={fontSize}
           fontFamily="Arial"
         />
         {children}

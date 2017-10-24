@@ -1,7 +1,6 @@
-import React from 'react';
-var { EventEmitter } = require('fbemitter');
+const { EventEmitter } = require('fbemitter');
 
-var emitter = new EventEmitter();
+const emitter = new EventEmitter();
 
 function getEmitter() {
   return emitter;
