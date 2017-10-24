@@ -180,21 +180,21 @@ class ContainerObject extends React.Component {
     var color1;
     var color2;
     if (this.props.container.type === "Container") {
-      color1 = "#dddddd";
-      color2 = "#f0efed";
-      stroke = "#989898";
+      color1 = "#ffffff";
+      color2 = "#e5e5e5";
+      stroke = "#7b7d81";
       strokeWidth = 0.7;
     }
     else if (this.props.container.type === "Organization") {
-      color1 = "#0082f0";
-      color2 = "#47abff";
-      stroke = "black";
+      color1 = "#d7e4fc";
+      color2 = "#91ace5";
+      stroke = "#5f7ca5";
       strokeWidth = 1;
     }
     else if (this.props.container.type === "Person") {
-      color1 = "#0aa940";
-      color2 = "#1ec857";
-      stroke = "black";
+      color1 = "#d3e6d3";
+      color2 = "#a7d082";
+      stroke = "#7aab5e";
       strokeWidth = 1;
     }
     else {
