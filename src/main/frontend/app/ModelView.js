@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from './Container.js';
+import ContainerObject from './component/ContainerObject.js';
 import Relationship from './component/Relationship.js';
 import { Layer, Stage } from 'react-konva';
 
@@ -36,12 +36,15 @@ class ModelView extends React.Component {
       <div>
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
-            <Container
+            <ContainerObject
               container={this.state.children[0]}
               parentWidth={this.state.width * this.state.zoom}
               parentHeight={this.state.height * this.state.zoom}
               parentX={this.state.x + this.state.xOffset}
               parentY={this.state.y + this.state.yOffset}
+              fullData={this.props.fullData}
+              renderEnvironment={this.props.renderEnvironment}
+              propertiesView={this.props.propertiesView}
             />
             {this.state.relationships.map(a => <Relationship data={a} />)}
           </Layer>

@@ -36,7 +36,7 @@ class ActionButton extends React.Component {
 
   handleClick = () => {
     const x = String(this.state.action).trim();
-    debugger;
+    //debugger;
     eval(x);
   };
 
@@ -48,10 +48,13 @@ class ActionButton extends React.Component {
           y={this.state.y}
           width={this.state.width}
           height={this.state.height}
-          stroke={1}
+          stroke="black"
+          strokeWidth={1}
           cornerRadius={0}
           onClick={this.handleClick}
-          fill="green"
+          fillLinearGradientStartPoint= {{ x : 0, y : 0}}
+          fillLinearGradientEndPoint= {{ x : 0, y : 50}}
+          fillLinearGradientColorStops= {[0, "#bb680c", 1, "#d67e1d"]}
         />
         <Text
           width={this.state.width}

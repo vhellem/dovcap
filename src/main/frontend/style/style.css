@@ -1,3 +1,91 @@
-.testblue {
-     color: blue;
- }
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d2ebf9+1,feffff+99 */
+  background: #d2ebf9;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #d2ebf9 1%, #feffff 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #d2ebf9 1%, #feffff 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #d2ebf9 1%, #feffff 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d2ebf9', endColorstr='#feffff', GradientType=0);
+  /* IE6-9 */
+}
+body .header {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-top: 0px;
+}
+body .header .row {
+  padding-bottom: 10px;
+}
+body .header .button {
+  float: left;
+  border: 1px solid #989898;
+  border-radius: 0;
+  margin: 10px 10px 0 0;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #efefef;
+}
+body .header .button:hover {
+  background-color: #dcdcdc;
+}
+body .header .icons .zoom,
+body .header .icons .move {
+  float: left;
+  margin: 15px 10px 0 0;
+}
+body .header .icons i {
+  color: #b4b4b4;
+  font-size: 28px;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+}
+body .header .icons i:hover {
+  color: #898989;
+}
+body .dialog {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background-color: #f8f8f8;
+  border: 1px solid lightgrey;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.29);
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.29);
+}
+body .dialog .close {
+  width: 100%;
+  text-align: right;
+}
+body .dialog .close i {
+  color: #b4b4b4;
+  font-size: 28px;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+}
+body .dialog .close i:hover {
+  color: #898989;
+}
+body .dialog .content {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+body .dialog .content label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  width: 100%;
+  margin: 0;
+  font-size: 11px;
+  padding: 0 0 5px 15px;
+}
+body .dialog .content input {
+  overflow: visible;
+  width: 90%;
+  margin: 0 0 0 15px;
+  font-size: 12px;
+}

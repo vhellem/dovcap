@@ -2,7 +2,6 @@ import React from 'react';
 import { Rect, Group, Text, Image } from 'react-konva';
 import ObjectEmitter from './ObjectEmitter';
 import ActionButton from './ActionButton.js';
-import Container from '../Container.js';
 
 function importAll(r) {
   const images = {};
@@ -67,6 +66,10 @@ class ContainerObject extends React.Component {
       containerJson.attributes.scaleY * nextProps.parentHeight;
 
     this.setState({
+      name: containerJson.name
+    })
+
+    this.setState({
       width,
       height,
       x,
@@ -105,45 +108,58 @@ class ContainerObject extends React.Component {
     });
   }
 
+  handleClick() {
+    console.log("click", this, this.state);
+    console.log("data", this.props.fullData);
+    // this.setState({
+    //   name: "Pes"
+    // })
+    var newJson = this.props.fullData;
+    var properties = null;
+    //find properties
+    for (let prop of this.props.fullData.viewL) {
+      if (prop.objectReference.id === this.state.id) {
+        properties = prop.objectReference;
+      }
+    }
+
+    //newJson.modelViewL[0].children[0].children[1].children[1].children[0].name="kk"
+
+    this.props.propertiesView(properties);
+
+  }
+
   render() {
     const children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
-            if (child.type === 'Container') {
+          if (child.type !== 'Action Button') {
             return (
-                <Container
-                  container={child}
-                  parentWidth={this.state.width}
-                  parentHeight={this.state.height}
-                  parentX={this.state.x}
-                  parentY={this.state.y}
-                  key={child.id}
-                />
-              );
-        } else if (child.type !== 'Action Button') {
-              return (
-                <ContainerObject
-                  container={child}
-                  parentWidth={this.state.width}
-                  parentHeight={this.state.height}
-                  parentX={this.state.x}
-                  parentY={this.state.y}
-                  key={child.id}
-                />
-              );
-              } else {
-                  return (
-                <ActionButton
-                  container={child}
-                  parentWidth={this.state.width}
-                  parentHeight={this.state.height}
-                  parentX={this.state.x}
-                  parentY={this.state.y}
-                  key={child.id}
-                />
-              );
-              }
-          })
+              <ContainerObject
+                container={child}
+                parentWidth={this.state.width}
+                parentHeight={this.state.height}
+                parentX={this.state.x}
+                parentY={this.state.y}
+                key={child.id}
+                fullData={this.props.fullData}
+                renderEnvironment={this.props.renderEnvironment}
+                propertiesView={this.props.propertiesView}
+              />
+            );
+          } else {
+            return (
+              <ActionButton
+                container={child}
+                parentWidth={this.state.width}
+                parentHeight={this.state.height}
+                parentX={this.state.x}
+                parentY={this.state.y}
+                key={child.id}
+              />
+            );
+          }
+        })
         : null;
     let imageHeight = this.state.height;
     let imageWidth =
@@ -157,6 +173,35 @@ class ContainerObject extends React.Component {
       imageHeight = imageHeight / 1.3;
       imageWidth = imageWidth / 1.3;
     }
+
+    //distinguisher
+    var strokeWidth = 0.3;
+    var stroke = "black";
+    var color1;
+    var color2;
+    if (this.props.container.type === "Container") {
+      color1 = "#dddddd";
+      color2 = "#f0efed";
+      stroke = "#989898";
+      strokeWidth = 0.7;
+    }
+    else if (this.props.container.type === "Organization") {
+      color1 = "#0082f0";
+      color2 = "#47abff";
+      stroke = "black";
+      strokeWidth = 1;
+    }
+    else if (this.props.container.type === "Person") {
+      color1 = "#0aa940";
+      color2 = "#1ec857";
+      stroke = "black";
+      strokeWidth = 1;
+    }
+    else {
+      color1 = "black";
+      color2 = "black";
+    }
+
     return (
       <Group>
         <Rect
@@ -164,10 +209,16 @@ class ContainerObject extends React.Component {
           y={this.state.y}
           width={this.state.width}
           height={this.state.height}
-          stroke={1}
+          strokeWidth={strokeWidth}
+          stroke={stroke}
           cornerRadius={0}
           draggable
           onDragMove={this.handleDragMove}
+          onClick={this.handleClick.bind(this)}
+
+          fillLinearGradientStartPoint= {{ x : 0, y : 0}}
+          fillLinearGradientEndPoint= {{ x : 0, y : 50}}
+          fillLinearGradientColorStops= {[0, color1, 1, color2]}
         />
         <Image
           x={this.state.x + (this.state.width / 2 - imageWidth) / 2}
@@ -184,7 +235,7 @@ class ContainerObject extends React.Component {
           y={this.state.y + this.state.height / 2 - 7}
           text={this.state.name}
           witdth={14}
-          fontSize={7}
+          fontSize={12}
           fontFamily="Arial"
         />
         {children}

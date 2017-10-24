@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <?metis version="9.5"?>
 <?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
 <metis
  xmlns="http://www.metis.no/metis"
  xmlns:xlink="http://www.w3.org/1999/xlink"
- instances="14"
+ instances="15"
  instanceviews="25"
  nextoid="1">
 
@@ -15,6 +16,7 @@
    <string name="externalID"></string>
   </valueset>
   <part-link xlink:role="object" xlink:title="Per Person" xlink:href="#UUID4_EB538DC1-8556-438F-A0EE-6B4F8CC6DE3C"/>
+  <part-link xlink:role="object" xlink:title="Organization small" xlink:href="#UUID4_52308B32-4514-448F-9242-DEB3D32BD21C"/>
  </object>
 
  <object id="UUID4_14943052-D7B5-4A27-AD4E-7260974A78A7">
@@ -43,6 +45,32 @@
   <part-link xlink:role="object" xlink:title="Subsub-Container 2" xlink:href="#UUID4_023D52AC-70A7-4F5D-B01C-158C380C585D"/>
  </object>
 
+ <object id="UUID4_52308B32-4514-448F-9242-DEB3D32BD21C">
+  <valueset size="22" xlink:role="type" xlink:title="Organization" xlink:href="http://metadata.troux.info/meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Organization small</string>
+   <string name="description">Description of organization</string>
+   <integer name="textFitFlag">0</integer>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="journalID"></string>
+   <string name="comments">Some comments</string>
+   <integer name="internalexternal">-1</integer>
+   <string name="phoneNumber">725727632</string>
+   <string name="faxNumber"></string>
+   <string name="country">Czechia</string>
+   <string name="emailAddress">123456</string>
+   <string name="city">Ostrava</string>
+   <string name="addressPOBox"></string>
+   <url name="webAddress"/>
+   <string name="postalCodeZip">70800</string>
+   <string name="addressStreet">fsefesfesfes</string>
+   <string name="stateregion"></string>
+   <string name="manager" class="volatile"> </string>
+  </valueset>
+ </object>
+
  <object id="UUID4_58429F60-E355-4DC7-837A-753A4C861102">
   <valueset size="14" xlink:role="type" xlink:title="Action Button" xlink:href="metis:stdtypes#oid23" xlink:actuate="user">
    <string name="name">ActionButton</string>
@@ -66,7 +94,7 @@
  <object id="UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65">
   <valueset size="22" xlink:role="type" xlink:title="Organization" xlink:href="http://metadata.troux.info/meaf/objecttypes/organization.kmd#CompType_TRM:Organization_UUID" xlink:actuate="user">
    <string name="externalID"></string>
-   <string name="name">Organization 1</string>
+   <string name="name">Organization Ab</string>
    <string name="description"></string>
    <integer name="textFitFlag">0</integer>
    <integer name="dbms-admin.commitFlag">1</integer>
@@ -140,7 +168,7 @@
    <string name="description"></string>
    <string name="externalID"></string>
   </valueset>
-  <part-link xlink:role="object" xlink:title="Organization 1" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65"/>
+  <part-link xlink:role="object" xlink:title="Organization Ab" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65"/>
   <part-link xlink:role="object" xlink:title="Organization 2" xlink:href="#UUID4_7CB86AA9-D712-46DB-BAE3-251C37647F6F"/>
  </object>
 
@@ -152,7 +180,7 @@
    <string name="journalID"></string>
    <integer name="connectionStrength">100</integer>
   </valueset>
-  <origin seq="0" xlink:role="object" xlink:title="Organization 1" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65"/>
+  <origin seq="0" xlink:role="object" xlink:title="Organization Ab" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65"/>
   <target seq="0" xlink:role="object" xlink:title="Per Person" xlink:href="#UUID4_EB538DC1-8556-438F-A0EE-6B4F8CC6DE3C"/>
  </relationship>
 
@@ -165,7 +193,7 @@
    <integer name="connectionStrength">100</integer>
   </valueset>
   <origin seq="0" xlink:role="object" xlink:title="Organization 2" xlink:href="#UUID4_7CB86AA9-D712-46DB-BAE3-251C37647F6F"/>
-  <target seq="0" xlink:role="object" xlink:title="Organization 1" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65"/>
+  <target seq="0" xlink:role="object" xlink:title="Organization Ab" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65"/>
  </relationship>
 
  <model id="UUID4_E9239A45-01A9-47C4-8DB4-A5DACEA11378" name="MEAF model" title="Semantics model" desc="Blank Semantics model" standalone-flag="true">
@@ -251,25 +279,30 @@
   <child-link xlink:role="relationshipview" xlink:href="#UUID4_5A43160C-47AC-48AE-BD5E-AFF3DD7F1D6E"/>
  </objectview>
 
- <objectview id="UUID4_1525C8F5-9385-4948-ABD3-E683B3666292" xlink:role="object" xlink:title="Organization 1" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65" state="open" behavior="tree" text-scale="0.053665" decomp-scale="1.59091" left="384.16" top="751.117" width="4887.27" height="1629.09">
- </objectview>
+ <relationshipview id="UUID4_1FC85F8D-A018-4614-AA82-CEC81F55D4BC" decomposition-flag="true">
+  <origin-link xlink:role="objectview" xlink:title="Subsub-Container 2" xlink:href="#UUID4_3E0308A0-CA10-4201-95FC-C53B290194EF"/>
+  <target-link xlink:role="objectview" xlink:title="Organization small" xlink:href="#UUID4_4E4E1746-2B39-4B03-9B67-AC013D83D2DE"/>
+ </relationshipview>
 
- <objectview id="UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36" xlink:role="object" xlink:title="Organization 1" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65" state="open" behavior="tree" text-scale="0.053665" decomp-scale="1.59091" left="194.914" top="1126.68" width="4887.27" height="1629.09">
+ <objectview id="UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36" xlink:role="object" xlink:title="Organization Ab" xlink:href="#UUID4_627C960C-F793-403D-8543-AE5BAC6F3F65" state="open" behavior="tree" text-scale="0.053665" decomp-scale="1.59091" left="194.914" top="1126.68" width="4887.27" height="1629.09">
  </objectview>
 
  <objectview id="UUID4_34B448D9-4DA5-4887-AB59-9F0A1CF3D5C8" xlink:role="object" xlink:title="ActionButton" xlink:href="#UUID4_6CFC1C84-0770-45A3-9FEA-6B61288DBA2D" state="open" behavior="tree" text-scale="0.137983" decomp-scale="0.5625" left="6826.67" top="682.667" width="1152" height="1152">
  </objectview>
 
- <objectview id="UUID4_3E0308A0-CA10-4201-95FC-C53B290194EF" xlink:role="object" xlink:title="Subsub-Container 2" xlink:href="#UUID4_023D52AC-70A7-4F5D-B01C-158C380C585D" state="open" behavior="nested" text-scale="0.068766" decomp-scale="1.81774" left="11589.7" top="1706.67" width="9927.27" height="12970.7">
+ <objectview id="UUID4_3E0308A0-CA10-4201-95FC-C53B290194EF" xlink:role="object" xlink:title="Subsub-Container 2" xlink:href="#UUID4_023D52AC-70A7-4F5D-B01C-158C380C585D" state="open" behavior="nested" text-scale="0.068766" decomp-scale="1.81774" left="11497.7" top="2197.31" width="9927.27" height="12970.7">
   <child-link xlink:role="objectview" xlink:title="Per Person" xlink:href="#UUID4_B8CD803D-518B-477D-8B4D-FF4F17EC1561"/>
   <child-link xlink:role="relationshipview" xlink:href="#UUID4_730FD5F8-8DCB-4FDD-9A64-A9536F9DFBDC"/>
-  <child-link xlink:role="objectview" xlink:title="Organization 1" xlink:href="#UUID4_1525C8F5-9385-4948-ABD3-E683B3666292"/>
-  <child-link xlink:role="relationshipview" xlink:href="#UUID4_9867C03F-8E06-4ECA-9E3B-0A03B8DEC68B"/>
+  <child-link xlink:role="objectview" xlink:title="Organization small" xlink:href="#UUID4_4E4E1746-2B39-4B03-9B67-AC013D83D2DE"/>
+  <child-link xlink:role="relationshipview" xlink:href="#UUID4_1FC85F8D-A018-4614-AA82-CEC81F55D4BC"/>
+ </objectview>
+
+ <objectview id="UUID4_4E4E1746-2B39-4B03-9B67-AC013D83D2DE" xlink:role="object" xlink:title="Organization small" xlink:href="#UUID4_52308B32-4514-448F-9242-DEB3D32BD21C" state="open" behavior="tree" text-scale="0.249997" decomp-scale="0.5" left="983.215" top="952.849" width="3908.73" height="1491.01">
  </objectview>
 
  <relationshipview id="UUID4_510E1D28-3788-45EA-B1AB-9E5D864C17A2" decomposition-flag="true">
   <origin-link xlink:role="objectview" xlink:title="Subsub-Container 1" xlink:href="#UUID4_F1443E8F-0FD6-4832-97EB-342B636321FA"/>
-  <target-link xlink:role="objectview" xlink:title="Organization 1" xlink:href="#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36"/>
+  <target-link xlink:role="objectview" xlink:title="Organization Ab" xlink:href="#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36"/>
  </relationshipview>
 
  <relationshipview id="UUID4_5A43160C-47AC-48AE-BD5E-AFF3DD7F1D6E" decomposition-flag="true">
@@ -310,17 +343,12 @@
 
  <relationshipview id="UUID4_8FEF168C-B88B-41EB-B70A-B1BBC8EF28A6" xlink:role="relationship" xlink:href="#UUID4_CFFFE85A-3CFD-465C-9FA3-528513D042B9">
   <origin-link xlink:role="objectview" xlink:title="Organization 2" xlink:href="#UUID4_7A4E3F61-4116-4E44-95A9-8CC411DFA0DD"/>
-  <target-link xlink:role="objectview" xlink:title="Organization 1" xlink:href="#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36"/>
+  <target-link xlink:role="objectview" xlink:title="Organization Ab" xlink:href="#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36"/>
  </relationshipview>
 
  <relationshipview id="UUID4_92654CBE-DAA1-4C9D-AD4A-C088C9B7EB16" xlink:role="relationship" xlink:href="#UUID4_A3B44F00-96BD-4F3A-BF9E-12F9EFDCB1D2">
-  <origin-link xlink:role="objectview" xlink:title="Organization 1" xlink:href="#UUID4_1525C8F5-9385-4948-ABD3-E683B3666292"/>
+  <origin-link xlink:role="objectview" xlink:title="Organization Ab" xlink:href="#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36"/>
   <target-link xlink:role="objectview" xlink:title="Per Person" xlink:href="#UUID4_B8CD803D-518B-477D-8B4D-FF4F17EC1561"/>
- </relationshipview>
-
- <relationshipview id="UUID4_9867C03F-8E06-4ECA-9E3B-0A03B8DEC68B" decomposition-flag="true">
-  <origin-link xlink:role="objectview" xlink:title="Subsub-Container 2" xlink:href="#UUID4_3E0308A0-CA10-4201-95FC-C53B290194EF"/>
-  <target-link xlink:role="objectview" xlink:title="Organization 1" xlink:href="#UUID4_1525C8F5-9385-4948-ABD3-E683B3666292"/>
  </relationshipview>
 
  <objectview id="UUID4_9B7264E1-595B-47D7-B29B-A0593E3772E2" xlink:role="object" xlink:title="ActionButton" xlink:href="#UUID4_58429F60-E355-4DC7-837A-753A4C861102" state="open" behavior="tree" text-scale="0.137983" decomp-scale="0.5625" left="9216" top="682.667" width="1152" height="1152">
@@ -345,7 +373,7 @@
  </relationshipview>
 
  <objectview id="UUID4_F1443E8F-0FD6-4832-97EB-342B636321FA" xlink:role="object" xlink:title="Subsub-Container 1" xlink:href="#UUID4_99C00679-D416-4755-98DB-1505D8272BAD" state="open" behavior="nested" text-scale="0.068766" decomp-scale="1.81774" left="669.697" top="1706.67" width="9927.27" height="12970.7">
-  <child-link xlink:role="objectview" xlink:title="Organization 1" xlink:href="#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36"/>
+  <child-link xlink:role="objectview" xlink:title="Organization Ab" xlink:href="#UUID4_3044211C-EEED-41DC-85D9-11A82BCB7A36"/>
   <child-link xlink:role="relationshipview" xlink:href="#UUID4_510E1D28-3788-45EA-B1AB-9E5D864C17A2"/>
   <child-link xlink:role="objectview" xlink:title="Organization 2" xlink:href="#UUID4_7A4E3F61-4116-4E44-95A9-8CC411DFA0DD"/>
   <child-link xlink:role="relationshipview" xlink:href="#UUID4_C291F08C-97DA-4836-8FA1-2E9A3765BCB9"/>
@@ -358,7 +386,7 @@
   <child-link xlink:role="relationshipview" xlink:href="#UUID4_D7D7F93A-3DD0-4876-AC0A-A67D72C8F161"/>
  </objectview>
 
- <modelview id="oid1" name="Main" title="Main" primary-flag="true" standalone-flag="true" zoom-level="1.39137" x="-373.25" y="-198" seq="1" xlink:role="model" xlink:title="Semantics model" xlink:href="#UUID4_E9239A45-01A9-47C4-8DB4-A5DACEA11378" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+ <modelview id="oid1" name="Main" title="Main" primary-flag="true" standalone-flag="true" zoom-level="1.66295" x="-378.797" y="-198.239" seq="1" xlink:role="model" xlink:title="Semantics model" xlink:href="#UUID4_E9239A45-01A9-47C4-8DB4-A5DACEA11378" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
   <child-link xlink:role="objectview" xlink:title="Top-Container" xlink:href="#UUID4_0BF10BB2-6501-4766-A6B5-65B0E93E6CD7"/>
   <child-link xlink:role="relationshipview" xlink:href="#UUID4_7C3BA07D-F2BA-4766-AB45-498DE7EA8544"/>
   <viewbundle>

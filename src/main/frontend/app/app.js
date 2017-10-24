@@ -3,7 +3,9 @@ import { getModelsFromBackend } from './utlities.js';
 import ModelView from './ModelView.js';
 import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
-const TabPane = Tabs.TabPane;
+import '../style/bootstrap.css';
+import Panel from './site/panel.js'
+import PropertiesView from './site/propertiesview.js'
 
 class App extends React.Component {
   constructor() {
@@ -19,24 +21,33 @@ class App extends React.Component {
       yOffset: 0,
       modelViewWidth: 0,
       modelViewHeight: 0,
+      propertiesView: false
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
     this.offsetDown = this.offsetDown.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.renderEnvironment = this.renderEnvironment.bind(this);
+    this.propertiesView = this.propertiesView.bind(this);
   }
   componentWillMount() {
     getModelsFromBackend().then(res => {
       const json = JSON.parse(res.text);
-
-      console.log(json);
-      this.setState({
-        selectedModel: 0,
-        modelViews: json.modelViewL,
-        relationships: json.relationshipL,
-      });
+      this.renderEnvironment(json);
       this.updateWindowDimensions();
       this.zoom(-0.1);
+    });
+  }
+
+  renderEnvironment(json) {
+    console.log("Whole model render", json);
+
+    this.setState({
+      selectedModel: 0,
+      fullData: json,
+      modelViews: json.modelViewL,
+      relationships: json.relationshipL,
+
     });
   }
 
@@ -98,6 +109,24 @@ class App extends React.Component {
     });
   }
 
+  propertiesView(json, part?) {
+    console.log("called", json, part);
+    //called from properties
+    if (part) {
+      for (let prop of this.state.fullData.viewL) {
+        if (prop.objectReference.id === this.state.properties.id) {
+          prop.objectReference.valueset = json;
+          this.renderEnvironment(this.state.fullData);
+        }
+      }
+    }
+
+    this.setState({
+      propertiesView: !this.state.propertiesView,
+      properties: json
+    });
+  }
+
   render() {
     if (
       (this.state.selectedModel || this.state.selectedModel === 0) &&
@@ -105,6 +134,17 @@ class App extends React.Component {
     ) {
       return (
         <div>
+          <Panel
+            selectedModel={this.state.selectedModel}
+            onChange={this.onChange}
+            modelViews={this.state.modelViews}
+            zoom={this.zoom}
+            offsetRight={this.offsetRight}
+            offsetDown={this.offsetDown}
+          ></Panel>
+          {this.state.propertiesView ?
+            <PropertiesView width={300} height={400} toggle={this.propertiesView} properties={this.state.properties.valueset}></PropertiesView>
+            : null}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <ModelView
               modelView={this.state.modelViews[this.state.selectedModel]}
@@ -114,36 +154,11 @@ class App extends React.Component {
               yOffset={this.state.yOffset}
               width={this.state.modelViewWidth}
               height={this.state.modelViewHeight}
+              fullData={this.state.fullData}
+              renderEnvironment={this.renderEnvironment}
+              propertiesView={this.propertiesView}
             />
           </div>
-          <Tabs
-            activeKey={this.state.selectedModel.toString()}
-            onChange={this.onChange}
-          >
-            {this.state.modelViews.map((modelView, index) => (
-              <TabPane tab={modelView.attributes.title} key={index} />
-            ))}
-          </Tabs>
-          <button className="" onClick={() => this.zoom(0.25)}>
-            Zoom in
-          </button>
-          <button className="" onClick={() => this.zoom(-0.25)}>
-            Zoom out
-          </button>
-
-          <button className="" onClick={() => this.offsetRight(50)}>
-            Left
-          </button>
-          <button className="" onClick={() => this.offsetRight(-50)}>
-            Right
-          </button>
-
-          <button className="" onClick={() => this.offsetDown(50)}>
-            Up
-          </button>
-          <button className="" onClick={() => this.offsetDown(-50)}>
-            Down
-          </button>
         </div>
       );
     }

@@ -268,9 +268,8 @@ class Relationship extends React.Component {
           ]}
           pointerLength={5}
           pointerWidth={5}
-          fil="black"
-          stroke="black"
-          strokeWidth={2}
+          stroke="#616161"
+          strokeWidth={1.5}
         />
         <Text
           x={textFrom[0]}
