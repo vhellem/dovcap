@@ -6,11 +6,12 @@ import App from './app.js';
 import Landingpage from './landingpage';
 import Workplace from './workplace';
 import Uploader from './upload';
+import Parent from './parent';
 
 ReactDOM.render(
   <Router history={hashHistory}>
-    <Route path="/" component={App}/>
-    <Route path="/workplace" component={Workplace}/>
+    <Route path="/" component={App} />
+    <Route path="/workplace" component={Workplace} />
     <Route path="/upload" component={Uploader} />
   </Router>
   , document.querySelector('.container')

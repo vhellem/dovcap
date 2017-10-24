@@ -16,7 +16,7 @@ export function findModelByReference(reference, list) {
 }
 
 export function selectModelFromBackend(model) {
-  const res = request.get('/api/selectModel2').query({ name: model });
+  const res = request.get('/api/selectModel').query({ name: model });
   return res;
 }
 

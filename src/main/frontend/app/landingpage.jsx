@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Navigation from './component/navigation';
-import { selectModelFromBackend } from './utlities';
-const request = require('superagent');
+// import { selectModelFromBackend } from './utlities';
 
 class Landingpage extends Component {
   constructor(props) {
@@ -18,7 +16,7 @@ class Landingpage extends Component {
         this.setState({ fileNames });
       }).catch(err => console.error(err.toString()));
   }
-  handleSelect(model) {
+  handleModelSelect(model) {
     this.setState({ selectedModel: model });
   }
   createGroupedArray = (arr, chunkSize) => {
@@ -34,7 +32,7 @@ class Landingpage extends Component {
     const groupLists = groups.map(ls =>
         <ul key={ls[0]} className="landing-page-list">
           {ls.map(val =>
-              <li key={val} onClick={() => this.handleSelect(val)}>
+              <li key={val} onClick={() => this.handleModelSelect(val)}>
               {val}
               </li>
           )}
@@ -51,7 +49,9 @@ class Landingpage extends Component {
           { this.state.selectedModel ? (
             <div>
               <h4><strong>{this.state.selectedModel}</strong></h4>
-              <button className="button" onClick={() => this.props.handleSelect(this.state.selectedModel)}> Load model in workplace</button>
+              <button className="button"
+                onClick={() => this.props.handleButtonSelect(this.state.selectedModel)}
+              > Load model in workplace</button>
             </div>
           ) : (
             'No model selected'

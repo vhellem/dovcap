@@ -14,6 +14,12 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.mapping;
+import static java.util.stream.Collectors.toList;
 
 @RestController
 public class ModelController {
@@ -22,7 +28,6 @@ public class ModelController {
         @RequestMapping(value = "/api/getModel", method = RequestMethod.GET)
         public String getModels() {
             Parser parser = new Parser("models/simple.kmv");
-
             return parser.getJson();
         }
 
@@ -49,6 +54,17 @@ public class ModelController {
             }
           }
           String json = new Gson().toJson(fileNames);
+          return json;
+        }
+
+        @CrossOrigin(origins="http://localhost:9090")
+        @RequestMapping(value="/api/getAllFileNames", method=RequestMethod.GET)
+        public String getAllFileNames() {
+          File folder = new File("models");
+          Stream<File> files = Arrays.stream(folder.listFiles());
+          Map<String, List<String>> fileGroups = files
+            .collect(groupingBy(f -> getFileExt(f), mapping((File f) -> f.getName(), toList())));
+          String json = new Gson().toJson(fileGroups);
           return json;
         }
 
