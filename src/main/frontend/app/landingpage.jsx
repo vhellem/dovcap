@@ -10,7 +10,7 @@ class Landingpage extends Component {
     };
   }
   componentWillMount() {
-    fetch('http://localhost:8080/api/getModelNames')
+    fetch('/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
         this.setState({ fileNames });
