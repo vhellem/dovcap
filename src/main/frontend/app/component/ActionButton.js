@@ -1,7 +1,8 @@
+/* eslint no-debugger: 0 */
+/* eslint no-eval: 0 */
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Layer, Rect, Stage, Group, Text } from 'react-konva';
-import image from '../image/actionbutton.svg';
+import { Rect, Group, Text } from 'react-konva';
+
 class ActionButton extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +20,7 @@ class ActionButton extends React.Component {
     };
   }
   componentWillReceiveProps(nextProps) {
-    var containerJson = nextProps.container;
+    const containerJson = nextProps.container;
     this.setState({
       width: containerJson.attributes.scaleWidth * nextProps.parentWidth,
       height: containerJson.attributes.scaleHeight * nextProps.parentHeight,
@@ -34,7 +35,7 @@ class ActionButton extends React.Component {
   }
 
   handleClick = () => {
-    var x = String(this.state.action).trim();
+    const x = String(this.state.action).trim();
     debugger;
     eval(x);
   };
