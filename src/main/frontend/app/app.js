@@ -37,6 +37,8 @@ class App extends React.Component {
         modelViews: json.modelViewL,
         relationships: json.relationshipL,
       });
+
+      console.log(json);
       this.updateWindowDimensions();
       this.zoom(-0.1);
     });
