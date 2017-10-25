@@ -35,10 +35,8 @@ class Uploader extends Component {
       }).catch(err => console.error(err.toString()));
   }
   dropHandler(files) {
+    console.log("HELLO");
     const file = files[0];
-    // const allowedFileExt = ['kmv', 'kmd'];
-    // const valid = (allowedFileExt.indexOf(file.name.split('.')[1]) > -1);
-    // if (valid) {
     const fileRequest = new FormData();
     fileRequest.append('file', file);
     fileRequest.append('name', file.name);
@@ -53,24 +51,6 @@ class Uploader extends Component {
         return res;
       }
     );
-  }
-    /* else {
-      console.log('File type illegal!');
-    }
-  }*/
-  handleSelect(model) {
-    const req = new FormData();
-    req.append('name', model);
-    console.log(selectModelFromBackend(model));
-    /* request.post('/api/selectModel')
-      .send(req)
-      .end((err, res) => {
-        if (err) {
-          console.log(err);
-        }
-        console.log(res.text);
-      }); */
-    this.props.onModelSelect(model);
   }
   handleDelete(fileName) {
     const req = new FormData();
@@ -96,7 +76,7 @@ class Uploader extends Component {
         <Dropzone
           className="dropzone-container"
           multiple={false}
-          onDrop={() => this.dropHandler}
+          onDrop={this.dropHandler.bind(this)}
         >
           <div>Drop a file, or click to add!</div>
         </Dropzone>
@@ -113,7 +93,6 @@ class Uploader extends Component {
             {this.state.fileNames.map(file =>
               (<tr key={file}>
                 <td>{file}</td>
-                <td><button onClick={() => this.handleSelect(file)}>Select</button></td>
                 <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
               </tr>)
             )}
