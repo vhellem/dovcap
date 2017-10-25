@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { selectModelFromBackend } from './utlities';
-import Navigation from './component/navigation'
 const Dropzone = require('react-dropzone');
 const request = require('superagent');
 
@@ -111,13 +110,13 @@ class Uploader extends Component {
             </tr>
           </thead>
           <tbody id="upload-table-body">
-            {this.state.fileNames.map(file => {
-              return (<tr key={file}>
-                      <td>{file}</td>
-                      <td><button onClick={() => this.handleSelect(file)}>Select</button></td>
-                      <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
-                    </tr>);
-            })}
+            {this.state.fileNames.map(file =>
+              (<tr key={file}>
+                <td>{file}</td>
+                <td><button onClick={() => this.handleSelect(file)}>Select</button></td>
+                <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
+              </tr>)
+            )}
           </tbody>
         </table>
       </div>

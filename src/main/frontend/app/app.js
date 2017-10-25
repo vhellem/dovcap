@@ -1,66 +1,156 @@
 import React from 'react';
-import Icon from 'antd/lib/icon';
+import { selectModelFromBackend } from './utlities.js';
+import ModelView from './ModelView.js';
+import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
-import Workplace from './workplace';
-import Uploader from './upload';
-import Landingpage from './landingpage';
+const TabPane = Tabs.TabPane;
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      selectedTab: '0',
-      model: 'simple.kmv',
-      activeComponent: <Landingpage handleButtonSelect={(model) => this.handleSelect(model)} />,
+      selectedModel: false,
+      modelViews: null,
+      relationships: null,
+      zoom: 1,
+      movedX: 0,
+      movedY: 0,
+      xOffset: 0,
+      yOffset: 0,
+      modelViewWidth: 0,
+      modelViewHeight: 0,
     };
+    this.zoom = this.zoom.bind(this);
+    this.offsetRight = this.offsetRight.bind(this);
+    this.offsetDown = this.offsetDown.bind(this);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+  }
+  componentWillMount() {
+    selectModelFromBackend(this.props.model).then(res => {
+      const json = JSON.parse(res.text);
+
+      console.log(json);
+      this.setState({
+        selectedModel: 0,
+        modelViews: json.modelViewL,
+        relationships: json.relationshipL,
+      });
+      this.updateWindowDimensions();
+      this.zoom(-0.1);
+    });
   }
   onChange = activeKey => {
     this.setState({
-      selectedTab: activeKey,
+      selectedModel: parseInt(activeKey, 10),
     });
   };
-  handleSelect(model) {
-    console.log('Selecting model! ', model);
-    this.setState({ model, activeComponent: <Workplace model={model} /> });
+
+  zoom(num) {
+    const xDiffZoom =
+      this.state.modelViewWidth * this.state.zoom -
+      this.state.modelViewWidth * (this.state.zoom + num);
+
+    const xDiffMove = this.state.movedX * num;
+
+    let yDiffZoom =
+      this.state.modelViewHeight * this.state.zoom -
+      this.state.modelViewHeight * (this.state.zoom + num);
+
+    let yDiffMove = this.state.movedY * num;
+
+    if (num > 0 || this.state.zoom + num > 0) {
+      this.setState({
+        zoom: (this.state.zoom += num),
+        xOffset: this.state.xOffset + xDiffMove + xDiffZoom / 2,
+        yOffset: this.state.yOffset + yDiffMove + yDiffZoom / 2,
+      });
+    }
   }
-  renderWorkspace() {
-    console.log('Load workspace!');
-    this.setState({ activeComponent:
-      <Workplace model={this.state.model} /> });
+
+  offsetRight(num) {
+    this.setState({
+      movedX: (this.state.movedX += num / this.state.zoom),
+      xOffset: (this.state.xOffset += num),
+    });
   }
-  renderLandingpage() {
-    this.setState({ activeComponent:
-      <Landingpage handleButtonSelect={(model) => this.handleSelect(model)} /> });
+
+  offsetDown(num) {
+    this.setState({
+      movedY: (this.state.movedY += num / this.state.zoom),
+      yOffset: (this.state.yOffset += num),
+    });
   }
-  renderUploader() {
-    this.setState({ activeComponent:
-      <Uploader /> });
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  selectModel = (model) => {
+    this.setState({ model });
+  }
+
+  updateWindowDimensions() {
+    this.setState({
+      modelViewWidth: window.innerWidth * 1,
+      modelViewHeight: window.innerHeight * 0.9,
+    });
+  }
+
   render() {
-    const comp = this.state.activeComponent;
-    return (
-      <div>
-        <ul className="landing-page-navigation">
-          <div className="nav-inner">
-            <li className="nav-item nav-brand">
-              <a className="nav-link"
-                onClick={() => this.setState({ activeComponent:
-                  <Landingpage handleButtonSelect={(model) => this.handleSelect(model)} /> })}
-              >
-                DOVCAP
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link"
-                onClick={() => this.setState({ activeComponent:
-                  <Uploader /> })}
-              ><Icon type="file-add" />Upload</a>
-            </li>
+    if (
+      (this.state.selectedModel || this.state.selectedModel === 0) &&
+      this.state.modelViews
+    ) {
+      return (
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <ModelView
+              modelView={this.state.modelViews[this.state.selectedModel]}
+              relationships={this.state.relationships}
+              zoom={this.state.zoom}
+              xOffset={this.state.xOffset}
+              yOffset={this.state.yOffset}
+              width={this.state.modelViewWidth}
+              height={this.state.modelViewHeight}
+            />
           </div>
-        </ul>
-          { comp }
-      </div>
-    );
+          <Tabs
+            activeKey={this.state.selectedModel.toString()}
+            onChange={this.onChange}
+          >
+            {this.state.modelViews.map((modelView, index) => {
+              return <TabPane tab={modelView.attributes.title} key={index} />;
+            })}
+          </Tabs>
+          <button className="" onClick={() => this.zoom(0.25)}>
+            Zoom in
+          </button>
+          <button className="" onClick={() => this.zoom(-0.25)}>
+            Zoom out
+          </button>
+
+          <button className="" onClick={() => this.offsetRight(50)}>
+            Left
+          </button>
+          <button className="" onClick={() => this.offsetRight(-50)}>
+            Right
+          </button>
+
+          <button className="" onClick={() => this.offsetDown(50)}>
+            Up
+          </button>
+          <button className="" onClick={() => this.offsetDown(-50)}>
+            Down
+          </button>
+        </div>
+      );
+    }
+    return <h1>loading</h1>;
   }
 }
 export default App;
