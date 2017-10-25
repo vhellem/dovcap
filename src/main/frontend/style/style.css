@@ -1,3 +1,96 @@
 .testblue {
      color: blue;
  }
+ .button {
+   border: 1px solid rgb(196, 196, 196);
+   border-radius: 2px;
+   background-color: rgb(249, 249, 249);
+   padding: 0.2rem;
+ }
+ .button:hover {
+   border-bottom: 2px solid rgb(117, 117, 117);
+ }
+.upload-container {
+ max-width: 1080px;
+ margin: 0 auto;
+ padding: 1rem;
+}
+.upload-container h3 {
+ margin: 1rem 0;
+ border-bottom: 1px solid rgb(182, 182, 182);
+}
+.model-table {
+   min-width: 50%;
+}
+.theader {
+   border-bottom: 1px solid rgb(42, 123, 242);
+}
+.dropzone-container {
+  background-color: rgb(233, 233, 233);
+  border: 1px dashed rgb(22, 68, 163);
+  display: block;
+  padding: 1rem;
+  max-width: 15rem;
+}
+.dropzone-container:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.landing-page-container {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0.5rem;
+}
+.landing-page-list-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.landing-page-list-container .landing-page-list {
+  flex: 1;
+  min-width: 33%;
+}
+.landing-page-list {
+  padding: 0.5rem;
+}
+.landing-page-list li {
+  padding-left: 0.1rem;
+}
+.landing-page-list li:hover {
+  background-color: rgba(139, 215, 204, 0.41);
+}
+.landing-page-navigation {
+  height:1.8rem;
+  list-style: none;
+  margin: 0; padding-right: 10px;
+  overflow: auto;
+  background-color: rgb(236, 235, 235);
+  border-bottom: 1px solid rgb(198, 198, 198);
+}
+.landing-page-selected h4 {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: rgba(139, 215, 204, 0.13);
+}
+.nav-inner {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+.nav-link {
+  border-bottom: none;
+  display: block;
+  float: left;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  padding: 0 0.2rem;
+  color: inherit;
+}
+.nav-link:hover {
+  color: rgb(69, 35, 35);
+  border-bottom: 1px solid rgb(69, 35, 35);
+}
+.nav-link .active {
+  border-bottom: 1px solid rgb(249, 249, 249);
+}
+.nav-brand {
+  font-weight: bold;
+}
