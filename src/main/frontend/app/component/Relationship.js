@@ -6,7 +6,7 @@ class Relationship extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: '',
+      id: props.data.id,
       name: '',
       children: null,
       data: props.data,
@@ -14,8 +14,8 @@ class Relationship extends React.Component {
       toId: props.data.valueset.target_href.substring(1),
       text1: ' ',
       text2: ' ',
-      fromPos: { left: 30, top: 30, width: 100, height: 100 },
-      toPos: { left: 200, top: 200, width: 100, height: 100 },
+      fromPos: { left: -1, top: -1, width: -1, height: -1 },
+      toPos: { left: -1, top: -1, width: -1, height: -1 },
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
@@ -34,10 +34,10 @@ class Relationship extends React.Component {
       text2: `is ${name} of`,
     });
 
-    //REMOVE THIS LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and fix correct relationship text
+    // REMOVE THIS LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! and fix correct relationship text
     this.setState({
-      text1: "",
-      text2: "",
+      text1: '',
+      text2: '',
     });
 
     emitter.addListener(this.state.fromId, (x, y, width, height) => {
@@ -64,6 +64,9 @@ class Relationship extends React.Component {
     });
   }
   render() {
+    if (this.state.id.startsWith('_')) {
+      return <Group />;
+    }
     const minFrom = { pos: [0, 0], node: 0 };
     const minTo = { pos: [0, 0], node: 0 };
     let textFrom = [0, 0];
@@ -245,7 +248,14 @@ class Relationship extends React.Component {
       toDist,
       !rightPerpendicular
     );
-
+    if (
+      minFrom.pos[0] === -1 ||
+      minFrom.pos[1] === -1 ||
+      minTo.pos[0] === -1 ||
+      minTo.pos[1] === -1
+    ) {
+      return <Group />;
+    }
     return (
       <Group>
         <Arrow
