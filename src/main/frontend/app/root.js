@@ -34,7 +34,7 @@ class Root extends React.Component {
   }
   renderUploader() {
     this.setState({ activeComponent:
-      <Uploader /> });
+      <Uploader handleButtonSelect={(model) => this.handleSelect(model)} /> });
   }
   render() {
     const comp = this.state.activeComponent;

@@ -22,6 +22,9 @@
 .model-table {
    min-width: 50%;
 }
+.model-table tr:hover td:first-child {
+  background-color: rgba(139, 215, 204, 0.41);
+}
 .theader {
    border-bottom: 1px solid rgb(42, 123, 242);
 }

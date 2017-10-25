@@ -13,7 +13,7 @@ class Uploader extends Component {
     };
   }
   componentWillMount() {
-    fetch('http://localhost:8080/api/getModelNames')
+    fetch('/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
         this.setState({ fileNames });
@@ -28,7 +28,7 @@ class Uploader extends Component {
     return fileNames;
   }
   updateModels() {
-    fetch('http://localhost:8080/api/getModelNames')
+    fetch('/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
         this.setState({ fileNames });
@@ -93,7 +93,13 @@ class Uploader extends Component {
             {this.state.fileNames.map(file =>
               (<tr key={file}>
                 <td>{file}</td>
-                <td><button onClick={() => this.handleDelete(file)}>Delete</button></td>
+                {/* <td><button className="button"
+                  onClick={() => this.props.handleButtonSelect(file)}
+                >Select</button></td>*/}
+                <td>
+                  <button className="button"
+                    onClick={() => this.handleDelete(file)}
+                  >Delete</button></td>
               </tr>)
             )}
           </tbody>
