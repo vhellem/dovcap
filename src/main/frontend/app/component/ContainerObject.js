@@ -21,6 +21,9 @@ class ContainerObject extends React.Component {
 
     const containerJson = props.container;
 
+    if (containerJson.name == 'Tasks') {
+      console.log(containerJson);
+    }
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
       height: containerJson.attributes.scaleHeight * props.parentHeight,
@@ -30,7 +33,7 @@ class ContainerObject extends React.Component {
       type: containerJson.type,
       imageWidth: 1,
       imageHeight: 1,
-      id: containerJson.objectReference.id,
+      id: containerJson.objectReference.id
     };
 
     // console.log(this.props.container.name);
@@ -46,7 +49,7 @@ class ContainerObject extends React.Component {
       image.src = images[containerJson.objectReference.valueset.icon];
       image.onload = () => {
         this.setState({
-          image,
+          image
         });
         this.drawImage();
       };
@@ -66,7 +69,7 @@ class ContainerObject extends React.Component {
       width,
       height,
       x,
-      y,
+      y
     });
     // fix undefined
 
@@ -78,10 +81,16 @@ class ContainerObject extends React.Component {
     emitter.emit(this.state.id, x, y, width, height);
   }
 
+  handleClick = () => {
+    if (this.state.name == 'Tasks') {
+      console.log('clicked task action');
+    }
+  };
+
   handleDragMove = e => {
     this.setState({
       x: e.target.position().x,
-      y: e.target.position().y,
+      y: e.target.position().y
     });
 
     const emitter = ObjectEmitter;
@@ -91,7 +100,7 @@ class ContainerObject extends React.Component {
   drawImage() {
     this.setState({
       imageWidth: this.state.image.naturalHeight,
-      imageHeight: this.state.image.naturalWidth,
+      imageHeight: this.state.image.naturalWidth
     });
   }
 
@@ -201,6 +210,7 @@ class ContainerObject extends React.Component {
           draggable
           onDragMove={this.handleDragMove}
           fill={col}
+          onClick={this.handleClick}
         />
         <Image
           x={this.state.x + (this.state.width / 2 - imageWidth) / 2}
