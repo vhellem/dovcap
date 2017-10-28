@@ -21,9 +21,6 @@ class ContainerObject extends React.Component {
 
     const containerJson = props.container;
 
-    if (containerJson.name == 'Tasks') {
-      console.log(containerJson);
-    }
     this.state = {
       width: containerJson.attributes.scaleWidth * props.parentWidth,
       height: containerJson.attributes.scaleHeight * props.parentHeight,
@@ -82,8 +79,12 @@ class ContainerObject extends React.Component {
   }
 
   handleClick = () => {
-    if (this.state.name == 'Tasks') {
-      console.log('clicked task action');
+    const emitter = ObjectEmitter;
+    if (this.state.name === 'Tasks') {
+      emitter.emit('tasks');
+    }
+    if (this.state.name === 'Users') {
+      emitter.emit('Users');
     }
   };
 
@@ -108,7 +109,7 @@ class ContainerObject extends React.Component {
     const children =
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
-            if (child.type === 'Container') {
+            if (child.type === 'test') {
               return (
                 <Container
                   container={child}
@@ -219,6 +220,7 @@ class ContainerObject extends React.Component {
           width={imageWidth}
           image={this.state.image}
           offsetX={offSetX}
+          onClick={this.handleClick}
         />
         <Text
           width={this.state.width * (1 / 2)}

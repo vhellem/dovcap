@@ -4,6 +4,7 @@ import ModelView from './ModelView.js';
 import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
+import ObjectEmitter from './component/ObjectEmitter';
 
 class App extends React.Component {
   constructor() {
@@ -20,7 +21,7 @@ class App extends React.Component {
       modelViewWidth: 0,
       modelViewHeight: 0,
       direction: '',
-      lastScrollPos: 0,
+      lastScrollPos: 0
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
@@ -36,11 +37,51 @@ class App extends React.Component {
         selectedModel: 0,
         modelViews: json.modelViewL,
         relationships: json.relationshipL,
+        objectViews: json.viewL
       });
 
       console.log(json);
       this.updateWindowDimensions();
       this.zoom(-0.1);
+    });
+    const emitter = ObjectEmitter;
+
+    emitter.addListener('tasks', () => {
+      const newView = this.state.objectViews.find(
+        object => object.id === 'UUID4_8193025B-8CA4-4DC4-A444-1F190A41B85B'
+      );
+
+      const newModelViews = this.state.modelViews;
+
+      newView.attributes.scaleHeight = 0.5;
+      newView.attributes.scaleWidth = 0.5;
+      newView.attributes.scaleX = 0;
+      newView.attributes.scaleY = 0.51;
+
+      console.log(newModelViews[2].children);
+      newModelViews[2].children[0].children[2].children.push(newView);
+
+      this.setState({
+        modelViews: newModelViews
+      });
+    });
+
+    emitter.addListener('Users', () => {
+      const newView = this.state.objectViews.find(object => object.id === '_002astd01rqf6b84i23l');
+
+      const newModelViews = this.state.modelViews;
+
+      newView.attributes.scaleHeight = 0.5;
+      newView.attributes.scaleWidth = 0.5;
+      newView.attributes.scaleX = 0.5;
+      newView.attributes.scaleY = 0.51;
+
+      console.log(newModelViews[2].children);
+      newModelViews[2].children[0].children[2].children.push(newView);
+
+      this.setState({
+        modelViews: newModelViews
+      });
     });
   }
 
@@ -57,7 +98,7 @@ class App extends React.Component {
 
   onChange = activeKey => {
     this.setState({
-      selectedModel: parseInt(activeKey, 10),
+      selectedModel: parseInt(activeKey, 10)
     });
   };
 
@@ -78,7 +119,7 @@ class App extends React.Component {
       this.setState({
         zoom: (this.state.zoom += num),
         xOffset: this.state.xOffset + xDiffMove + xDiffZoom / 2,
-        yOffset: this.state.yOffset + yDiffMove + yDiffZoom / 2,
+        yOffset: this.state.yOffset + yDiffMove + yDiffZoom / 2
       });
     }
   }
@@ -86,14 +127,14 @@ class App extends React.Component {
   offsetRight(num) {
     this.setState({
       movedX: (this.state.movedX += num / this.state.zoom),
-      xOffset: (this.state.xOffset += num),
+      xOffset: (this.state.xOffset += num)
     });
   }
 
   offsetDown(num) {
     this.setState({
       movedY: (this.state.movedY += num / this.state.zoom),
-      yOffset: (this.state.yOffset += num),
+      yOffset: (this.state.yOffset += num)
     });
   }
 
@@ -106,16 +147,36 @@ class App extends React.Component {
     window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
-  selectModel = (model) => {
+  selectModel = model => {
     this.setState({ model });
-  }
+  };
 
   updateWindowDimensions() {
     this.setState({
       modelViewWidth: window.innerWidth * 1,
-      modelViewHeight: window.innerHeight * 0.9,
+      modelViewHeight: window.innerHeight * 0.9
     });
   }
+
+  mockFunctionalityClick = () => {
+    const newView = this.state.objectViews.find(
+      object => object.id === 'UUID4_8193025B-8CA4-4DC4-A444-1F190A41B85B'
+    );
+
+    const newModelViews = this.state.modelViews;
+
+    newView.attributes.scaleHeight = 0.5;
+    newView.attributes.scaleWidth = 0.5;
+    newView.attributes.scaleX = 0;
+    newView.attributes.scaleY = 0.52;
+
+    console.log(newModelViews[2].children);
+    newModelViews[2].children[0].children[2].children.push(newView);
+
+    this.setState({
+      modelViews: newModelViews
+    });
+  };
 
   handleKeyDown(event) {
     if (event.keyCode === 87) {
