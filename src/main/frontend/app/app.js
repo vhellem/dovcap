@@ -58,7 +58,6 @@ class App extends React.Component {
       newView.attributes.scaleX = 0;
       newView.attributes.scaleY = 0.51;
 
-      console.log(newModelViews[2].children);
       newModelViews[2].children[0].children[2].children.push(newView);
 
       this.setState({
@@ -76,7 +75,6 @@ class App extends React.Component {
       newView.attributes.scaleX = 0.5;
       newView.attributes.scaleY = 0.51;
 
-      console.log(newModelViews[2].children);
       newModelViews[2].children[0].children[2].children.push(newView);
 
       this.setState({
@@ -170,7 +168,6 @@ class App extends React.Component {
     newView.attributes.scaleX = 0;
     newView.attributes.scaleY = 0.52;
 
-    console.log(newModelViews[2].children);
     newModelViews[2].children[0].children[2].children.push(newView);
 
     this.setState({

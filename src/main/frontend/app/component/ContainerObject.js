@@ -78,6 +78,12 @@ class ContainerObject extends React.Component {
     emitter.emit(this.state.id, x, y, width, height);
   }
 
+  componentWillUnMount = () => {
+    // This does not work, but should be fixed in relationships?
+    const emitter = ObjectEmitter;
+    emitter.emit(this.state.id, -1, -1, -1, -1);
+  };
+
   handleClick = () => {
     const emitter = ObjectEmitter;
     if (this.state.name === 'Tasks') {
