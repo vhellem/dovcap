@@ -44,6 +44,11 @@ class App extends React.Component {
       this.updateWindowDimensions();
       this.zoom(-0.1);
     });
+
+    this.addListeningToEvents();
+  }
+
+  addListeningToEvents = () => {
     const emitter = ObjectEmitter;
 
     emitter.addListener('tasks', () => {
@@ -81,7 +86,7 @@ class App extends React.Component {
         modelViews: newModelViews
       });
     });
-  }
+  };
 
   componentDidMount() {
     this.updateWindowDimensions();
@@ -155,25 +160,6 @@ class App extends React.Component {
       modelViewHeight: window.innerHeight * 0.9
     });
   }
-
-  mockFunctionalityClick = () => {
-    const newView = this.state.objectViews.find(
-      object => object.id === 'UUID4_8193025B-8CA4-4DC4-A444-1F190A41B85B'
-    );
-
-    const newModelViews = this.state.modelViews;
-
-    newView.attributes.scaleHeight = 0.5;
-    newView.attributes.scaleWidth = 0.5;
-    newView.attributes.scaleX = 0;
-    newView.attributes.scaleY = 0.52;
-
-    newModelViews[2].children[0].children[2].children.push(newView);
-
-    this.setState({
-      modelViews: newModelViews
-    });
-  };
 
   handleKeyDown(event) {
     if (event.keyCode === 87) {
