@@ -13,9 +13,7 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(
-  require.context('../image/', false, /\.(png|jpe?g|svg)$/),
-);
+const images = importAll(require.context('../image/', false, /\.(png|jpe?g|svg)$/));
 
 class ContainerObject extends React.Component {
   constructor(props) {
@@ -35,7 +33,7 @@ class ContainerObject extends React.Component {
       id: containerJson.objectReference.id,
     };
 
-    //console.log(this.props.container.name);
+    // console.log(this.props.container.name);
 
     if (containerJson.objectReference.valueset.iconProp) {
       let img = containerJson.objectReference.valueset.iconProp;
@@ -60,14 +58,9 @@ class ContainerObject extends React.Component {
   componentWillReceiveProps(nextProps) {
     const containerJson = nextProps.container;
     const width = containerJson.attributes.scaleWidth * nextProps.parentWidth;
-    const height =
-      containerJson.attributes.scaleHeight * nextProps.parentHeight;
-    const x =
-      nextProps.parentX +
-      containerJson.attributes.scaleX * nextProps.parentWidth;
-    const y =
-      nextProps.parentY +
-      containerJson.attributes.scaleY * nextProps.parentHeight;
+    const height = containerJson.attributes.scaleHeight * nextProps.parentHeight;
+    const x = nextProps.parentX + containerJson.attributes.scaleX * nextProps.parentWidth;
+    const y = nextProps.parentY + containerJson.attributes.scaleY * nextProps.parentHeight;
 
     this.setState({
       width,
@@ -92,13 +85,7 @@ class ContainerObject extends React.Component {
     });
 
     const emitter = ObjectEmitter;
-    emitter.emit(
-      this.state.id,
-      this.state.x,
-      this.state.y,
-      this.state.width,
-      this.state.height,
-    );
+    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
   };
 
   drawImage() {
@@ -113,7 +100,7 @@ class ContainerObject extends React.Component {
       this.props.container.children.length > 0
         ? this.props.container.children.map(child => {
             if (child.type === 'Container') {
-            return (
+              return (
                 <Container
                   container={child}
                   parentWidth={this.state.width}
@@ -123,7 +110,7 @@ class ContainerObject extends React.Component {
                   key={child.id}
                 />
               );
-        } else if (child.type !== 'Action Button') {
+            } else if (child.type !== 'Action Button') {
               return (
                 <ContainerObject
                   container={child}
@@ -134,8 +121,8 @@ class ContainerObject extends React.Component {
                   key={child.id}
                 />
               );
-              } else {
-                  return (
+            } else {
+              return (
                 <ActionButton
                   container={child}
                   parentWidth={this.state.width}
@@ -145,12 +132,11 @@ class ContainerObject extends React.Component {
                   key={child.id}
                 />
               );
-              }
+            }
           })
         : null;
     let imageHeight = this.state.height;
-    let imageWidth =
-      this.state.imageHeight / this.state.imageWidth * this.state.height;
+    let imageWidth = this.state.imageHeight / this.state.imageWidth * this.state.height;
 
     const ratio = imageWidth / (this.state.width / 2);
     if (ratio > 1) {
@@ -161,39 +147,46 @@ class ContainerObject extends React.Component {
       imageWidth = imageWidth / 1.3;
     }
 
-    var col = "#FFFFFF";
-    var fontSize = 7
-    var offSetX = 0
+    let col = '#FFFFFF';
+    let fontSize = 7;
+    let offSetX = 0;
 
-    if(this.props.container.type == "Role (Actor)") {
-      col = "#FFEEAA"
-    }
-    else if(this.props.container.type == "Property (EKA)") {
-      col = "#bed08c"
-    }
-    else if(this.props.container.type == "Button (CVW)") {
-      col = "lightblue"
+    if (this.props.container.type === 'Role (Actor)') {
+      col = '#FFEEAA';
+    } else if (this.props.container.type === 'Property (EKA)') {
+      col = '#bed08c';
+    } else if (this.props.container.type === 'Button (CVW)') {
+      col = 'lightblue';
     }
 
-
-    if (this.props.container.name == "CVW_LeftPane") {
-      col = "FF0000"
+    if (this.props.container.name === 'CVW_LeftPane') {
+      col = 'FF0000';
     }
-    if (this.props.container.name == "CVW_MenuLevel1") {
-      col = "PowderBlue"
-      fontSize = 0
+    if (this.props.container.name === 'CVW_MenuLevel1') {
+      col = 'PowderBlue';
+      fontSize = 0;
     }
-    if (this.props.container.name == "CVW_Workspace") {
-      col = "PowderBlue"
-    }
-
-
-    if (this.props.container.name == "Cost Estimator" || this.props.container.name == "Dicipline Lead" || this.props.container.name == "Concept Designer" || this.props.container.name == "Project Leader") {
-      offSetX = 15
+    if (this.props.container.name === 'CVW_Workspace') {
+      col = 'PowderBlue';
     }
 
-    if (this.props.container.name == "Type" || this.props.container.name == "TypeId" || this.props.container.name == "TypeName" || this.props.container.name == "Description" || this.props.container.name == "Name") {
-      offSetX = 7
+    if (
+      this.props.container.name === 'Cost Estimator' ||
+      this.props.container.name === 'Dicipline Lead' ||
+      this.props.container.name === 'Concept Designer' ||
+      this.props.container.name === 'Project Leader'
+    ) {
+      offSetX = 15;
+    }
+
+    if (
+      this.props.container.name === 'Type' ||
+      this.props.container.name === 'TypeId' ||
+      this.props.container.name === 'TypeName' ||
+      this.props.container.name === 'Description' ||
+      this.props.container.name === 'Name'
+    ) {
+      offSetX = 7;
     }
 
     return (
@@ -203,9 +196,9 @@ class ContainerObject extends React.Component {
           y={this.state.y}
           width={this.state.width}
           height={this.state.height}
-          stroke={"DimGray"}
+          stroke={'DimGray'}
           cornerRadius={0}
-          draggable={true}
+          draggable
           onDragMove={this.handleDragMove}
           fill={col}
         />

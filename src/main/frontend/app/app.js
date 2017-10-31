@@ -1,5 +1,5 @@
 import React from 'react';
-import { getModelsFromBackend } from './utlities.js';
+import { selectModelFromBackend } from './utlities.js';
 import ModelView from './ModelView.js';
 import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
@@ -29,7 +29,7 @@ class App extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   componentWillMount() {
-    getModelsFromBackend().then(res => {
+    selectModelFromBackend(this.props.model).then(res => {
       const json = JSON.parse(res.text);
 
       this.setState({
@@ -37,6 +37,8 @@ class App extends React.Component {
         modelViews: json.modelViewL,
         relationships: json.relationshipL,
       });
+
+      console.log(json);
       this.updateWindowDimensions();
       this.zoom(-0.1);
     });
@@ -93,6 +95,19 @@ class App extends React.Component {
       movedY: (this.state.movedY += num / this.state.zoom),
       yOffset: (this.state.yOffset += num),
     });
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  selectModel = (model) => {
+    this.setState({ model });
   }
 
   updateWindowDimensions() {
