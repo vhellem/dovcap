@@ -85,12 +85,28 @@ class Relationship extends React.Component {
       return Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2);
     }
 
-    function getPerpendicularity(x1, y1, x2, y2, horizontal) {
-      if (!horizontal) {
+    function getPerpendicularity(x1, y1, x2, y2, node) {
+      if (node == 0 && y2 > y1) {
+        return 0
+      }
+      if (node == 1 && x1 > x2) {
+        return 0
+      }
+      if (node == 2 && y1 > y1) {
+        return 0
+      }
+      if (node == 3 && x2 > x1) {
+        return 0
+      }
+
+      if (node % 2 == 0) {
         return Math.abs(y2 - y1) / (Math.abs(x2 - x1) + Math.abs(y2 - y1));
       } else {
         return Math.abs(x2 - x1) / (Math.abs(x2 - x1) + Math.abs(y2 - y1));
       }
+
+
+
     }
 
     function getTextPosition(x1, y1, x2, y2, distanceFromObject, rightPerpendicular) {
@@ -175,24 +191,24 @@ class Relationship extends React.Component {
     let bestPerpendiculatiry = 0;
 
     for (let i = 0; i < possiblePositions.length; i++) {
-      const fromHori = possiblePositions[i].fromNode % 2 !== 0;
-      const toHori = possiblePositions[i].toNode % 2 !== 0;
+      const fromNode = possiblePositions[i].fromNode;
+      const toNode = possiblePositions[i].toNode;
       const fromP = getPerpendicularity(
         possiblePositions[i].from[0],
         possiblePositions[i].from[1],
         possiblePositions[i].to[0],
         possiblePositions[i].to[1],
-        fromHori
+        fromNode
       );
       const toP = getPerpendicularity(
         possiblePositions[i].to[0],
         possiblePositions[i].to[1],
         possiblePositions[i].from[0],
         possiblePositions[i].from[1],
-        toHori
+        toNode
       );
       const currentP = Math.min(fromP, toP);
-      if (currentP / bestPerpendiculatiry > 1.2) {
+      if (currentP / bestPerpendiculatiry > 1.2 && currentP > bestPerpendiculatiry) {
         bestPerpendiculatiry = currentP;
         minFrom.pos = possiblePositions[i].from;
         minTo.pos = possiblePositions[i].to;
