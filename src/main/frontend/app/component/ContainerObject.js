@@ -194,6 +194,12 @@ class ContainerObject extends React.Component {
       offSetX = 7;
     }
 
+    if (
+      isNaN(this.state.x)
+    ) {
+      return <Group />;
+    }
+
     return (
       <Group>
         <Rect
