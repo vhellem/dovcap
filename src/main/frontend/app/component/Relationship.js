@@ -117,17 +117,10 @@ class Relationship extends React.Component {
     }
 
     function sortByKey(array, key) {
-      return array.sort((a, b) => {
-        const x = a[key];
-        const y = b[key];
-        if (x < y) {
-          return -1;
-        } else if (y > x) {
-          return 1;
-        } else {
-          return 0;
-        }
-      });
+        return array.sort(function(a, b) {
+            var x = a[key]; var y = b[key];
+            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+        });
     }
 
     function rightOrLeft(x1, y1, x2, y2, fromNode) {
