@@ -193,6 +193,11 @@ class Relationship extends React.Component {
     for (let i = 0; i < possiblePositions.length; i++) {
       const fromNode = possiblePositions[i].fromNode;
       const toNode = possiblePositions[i].toNode;
+
+      if (possiblePositions[i].fromNode == possiblePositions[i].toNode) {
+        continue
+      }
+
       const fromP = getPerpendicularity(
         possiblePositions[i].from[0],
         possiblePositions[i].from[1],
