@@ -242,10 +242,10 @@ class Relationship extends React.Component {
       !rightPerpendicular
     );
     if (
-      minFrom.pos[0] === -1 ||
-      minFrom.pos[1] === -1 ||
-      minTo.pos[0] === -1 ||
-      minTo.pos[1] === -1
+      minFrom.pos[0] <= 0 ||
+      minFrom.pos[1] <= 0 ||
+      minTo.pos[0] <= 0 ||
+      minTo.pos[1] <= 0
     ) {
       return <Group />;
     }

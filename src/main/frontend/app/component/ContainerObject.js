@@ -78,6 +78,11 @@ class ContainerObject extends React.Component {
     emitter.emit(this.state.id, x, y, width, height);
   }
 
+  componentWillMount() {
+    const emitter = ObjectEmitter;
+    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
+  }
+
   handleDragMove = e => {
     this.setState({
       x: e.target.position().x,
