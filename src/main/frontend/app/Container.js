@@ -75,6 +75,8 @@ class Container extends React.Component {
     let fontStyle = 'normal';
     let align = 'left';
     let padding = 0;
+    let strokeColor = 'DimGray';
+    let rectangleYPadding = 0;
 
     if (this.props.container.name === 'AKM Solution Developer Workplace') {
       col = '#bfd4d9';
@@ -99,16 +101,25 @@ class Container extends React.Component {
     if (this.props.container.name === 'Workplace') {
       col = '#9cc7ce';
     }
+    if (this.props.container.name === 'CVW_ShortCutBar') {
+      //return <Group />;
+      col = '#bfd4d9';
+      strokeColor = 0
+      fontSize = 0;
+      rectangleYPadding = 10
+
+    }
 
     return (
       <Group>
         <Rect
           x={this.state.x}
-          y={this.state.y}
+          y={this.state.y + rectangleYPadding}
           width={this.state.width}
           height={this.state.height}
           cornerRadius={5}
-          stroke={'DimGray'}
+          stroke={strokeColor}
+          draggable
           fill={col}
         />
         <Text
