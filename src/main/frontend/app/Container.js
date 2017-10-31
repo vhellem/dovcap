@@ -109,7 +109,6 @@ class Container extends React.Component {
           height={this.state.height}
           cornerRadius={5}
           stroke={'DimGray'}
-          draggable
           fill={col}
         />
         <Text
