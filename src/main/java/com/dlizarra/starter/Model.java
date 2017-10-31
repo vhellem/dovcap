@@ -184,6 +184,22 @@ public class Model {
                 }
             }
         }
+
+        //Sorts the modelviews based on their "seq" attribute.
+        ArrayList<Integer> seqs = new ArrayList();
+        for(myObject modelView: this.modelViewL){
+            seqs.add(Integer.parseInt(modelView.attributes.get("seq")));
+        }
+        Collections.sort(seqs);
+        ArrayList<myObject> sorted = new ArrayList();
+        for(Integer curr: seqs){
+            for(myObject modelView: this.modelViewL){
+                if(Integer.parseInt(modelView.attributes.get("seq")) == curr){
+                    sorted.add(modelView);
+                }
+            }
+        }
+        this.modelViewL = sorted;
     }
 
 
