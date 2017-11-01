@@ -11,7 +11,7 @@ class Root extends React.Component {
     this.state = {
       selectedTab: '0',
       model: 'simple.kmv',
-      activeComponent: <Landingpage handleButtonSelect={(model) => this.handleSelect(model)} />,
+      activeComponent: <Landingpage handleButtonSelect={model => this.handleSelect(model)} />,
     };
   }
   onChange = activeKey => {
@@ -25,16 +25,19 @@ class Root extends React.Component {
   }
   renderWorkspace() {
     console.log('Load workspace!');
-    this.setState({ activeComponent:
-      <Workplace model={this.state.model} /> });
+    this.setState({
+      activeComponent: <Workplace model={this.state.model} />,
+    });
   }
   renderLandingpage() {
-    this.setState({ activeComponent:
-      <Landingpage handleButtonSelect={(model) => this.handleSelect(model)} /> });
+    this.setState({
+      activeComponent: <Landingpage handleButtonSelect={model => this.handleSelect(model)} />,
+    });
   }
   renderUploader() {
-    this.setState({ activeComponent:
-      <Uploader handleButtonSelect={(model) => this.handleSelect(model)} /> });
+    this.setState({
+      activeComponent: <Uploader handleButtonSelect={model => this.handleSelect(model)} />,
+    });
   }
   render() {
     const comp = this.state.activeComponent;
@@ -43,22 +46,32 @@ class Root extends React.Component {
         <ul className="landing-page-navigation">
           <div className="nav-inner">
             <li className="nav-item nav-brand">
-              <a className="nav-link"
-                onClick={() => this.setState({ activeComponent:
-                  <Landingpage handleButtonSelect={(model) => this.handleSelect(model)} /> })}
+              <a
+                className="nav-link"
+                onClick={() =>
+                  this.setState({
+                    activeComponent: (
+                      <Landingpage handleButtonSelect={model => this.handleSelect(model)} />
+                    ),
+                  })}
               >
                 DOVCAP
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link"
-                onClick={() => this.setState({ activeComponent:
-                  <Uploader /> })}
-              ><Icon type="file-add" />Upload</a>
+              <a
+                className="nav-link"
+                onClick={() =>
+                  this.setState({
+                    activeComponent: <Uploader />,
+                  })}
+              >
+                <Icon type="file-add" />Upload
+              </a>
             </li>
           </div>
         </ul>
-          { comp }
+        {comp}
       </div>
     );
   }

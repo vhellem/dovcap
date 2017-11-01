@@ -5,14 +5,8 @@ import { Layer, Stage } from 'react-konva';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
-var options = [
-  { value: 'Relationship', label: 'Relationship' },
-  { value: 'works on', label: 'works on' },
-  { value: 'Is', label: 'Is' },
-  { value: 'Member', label: 'Member' },
-  { value: 'Has property', label: 'Has property' },
-  { value: 'Depends on', label: 'Depends on' },
-];
+let options = []; // those we initialy want 2 see
+const alreadyAppendedOptions = [];
 
 class ModelView extends React.Component {
   constructor(props) {
@@ -28,10 +22,12 @@ class ModelView extends React.Component {
       yOffset: props.yOffset,
       width: props.width,
       height: props.height,
-      relTypesSelected: ["Has property"],
-
+      relTypesSelected: [
+        { value: 'Relationship', label: 'Relationship' }, // those we initialy want 2 see
+        { value: 'Has property', label: 'Has property' },
+      ],
     };
-        this.handleSelectChange = this.handleSelectChange.bind(this);
+    this.handleSelectChange = this.handleSelectChange.bind(this);
   }
 
   componentWillReceiveProps(newProps) {
@@ -42,27 +38,41 @@ class ModelView extends React.Component {
       xOffset: newProps.xOffset,
       yOffset: newProps.yOffset,
       width: newProps.width,
-      height: newProps.height
+      height: newProps.height,
     });
+
+    for (let i = 0; i < this.state.relationships.length; i++) {
+      const opt = {
+        value: this.state.relationships[i].type,
+        label: this.state.relationships[i].type,
+      };
+      if (!alreadyAppendedOptions.includes(opt.value)) {
+        options.push(opt);
+        alreadyAppendedOptions.push(opt.value);
+      }
+    }
   }
 
-  handleSelectChange (val) {
-		this.setState({ relTypesSelected: val});
-	}
+  handleSelectChange(val) {
+    this.setState({ relTypesSelected: val });
+  }
 
   render() {
+    const visible = this.state.relTypesSelected.map(o => o.value);
     return (
       <div>
-        <div style={{marginRight: "700", marginLeft: "60"}}>
-          <h3>  Relationship types:</h3>
+        <center>
+          <div style={{ width: 500 }}>
+            <h3> Show relationship types:</h3>
             <Select
               name="form-field-name"
               value={this.state.relTypesSelected}
               options={options}
               onChange={this.handleSelectChange}
-              multi={true}
+              multi
             />
-        </div>
+          </div>
+        </center>
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
             <ContainerObject
@@ -72,7 +82,7 @@ class ModelView extends React.Component {
               parentX={this.state.x + this.state.xOffset}
               parentY={this.state.y + this.state.yOffset}
             />
-            {this.state.relationships.map(a => <Relationship data={a} />)}
+            {this.state.relationships.map(a => <Relationship data={a} visible={visible} />)}
           </Layer>
         </Stage>
       </div>

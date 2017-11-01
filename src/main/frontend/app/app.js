@@ -10,7 +10,7 @@ var options = [
   { value: 'one', label: 'One' },
   { value: 'two', label: 'Two' },
   { value: 'three', label: 'Three' },
-  { value: 'four', label: 'Four' }
+  { value: 'four', label: 'Four' },
 ];
 
 class App extends React.Component {
@@ -29,7 +29,7 @@ class App extends React.Component {
       modelViewHeight: 0,
       direction: '',
       lastScrollPos: 0,
-      relTypesSelected: []
+      relTypesSelected: [],
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
@@ -45,7 +45,7 @@ class App extends React.Component {
         selectedModel: 0,
         modelViews: json.modelViewL,
         relationships: json.relationshipL,
-        objectViews: json.viewL
+        objectViews: json.viewL,
       });
 
       console.log(json);
@@ -55,6 +55,25 @@ class App extends React.Component {
 
     this.addListeningToEvents();
   }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+    document.addEventListener('keydown', this.handleKeyDown, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+    document.removeEventListener('keydown', this.handleKeyDown, false);
+  }
+
+  onChange = activeKey => {
+    this.setState({
+      selectedModel: parseInt(activeKey, 10),
+    });
+    const emitter = ObjectEmitter;
+    emitter.emit('forceUpdate', true);
+  };
 
   addListeningToEvents = () => {
     const emitter = ObjectEmitter;
@@ -74,7 +93,7 @@ class App extends React.Component {
       newModelViews[2].children[0].children[2].children.push(newView);
 
       this.setState({
-        modelViews: newModelViews
+        modelViews: newModelViews,
       });
     });
 
@@ -91,25 +110,8 @@ class App extends React.Component {
       newModelViews[2].children[0].children[2].children.push(newView);
 
       this.setState({
-        modelViews: newModelViews
+        modelViews: newModelViews,
       });
-    });
-  };
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-    document.addEventListener('keydown', this.handleKeyDown, false);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-    document.removeEventListener('keydown', this.handleKeyDown, false);
-  }
-
-  onChange = activeKey => {
-    this.setState({
-      selectedModel: parseInt(activeKey, 10)
     });
   };
 
@@ -130,7 +132,7 @@ class App extends React.Component {
       this.setState({
         zoom: (this.state.zoom += num),
         xOffset: this.state.xOffset + xDiffMove + xDiffZoom / 2,
-        yOffset: this.state.yOffset + yDiffMove + yDiffZoom / 2
+        yOffset: this.state.yOffset + yDiffMove + yDiffZoom / 2,
       });
     }
   }
@@ -138,14 +140,14 @@ class App extends React.Component {
   offsetRight(num) {
     this.setState({
       movedX: (this.state.movedX += num / this.state.zoom),
-      xOffset: (this.state.xOffset += num)
+      xOffset: (this.state.xOffset += num),
     });
   }
 
   offsetDown(num) {
     this.setState({
       movedY: (this.state.movedY += num / this.state.zoom),
-      yOffset: (this.state.yOffset += num)
+      yOffset: (this.state.yOffset += num),
     });
   }
 
@@ -156,7 +158,7 @@ class App extends React.Component {
   updateWindowDimensions() {
     this.setState({
       modelViewWidth: window.innerWidth * 1,
-      modelViewHeight: window.innerHeight * 0.9
+      modelViewHeight: window.innerHeight * 0.85,
     });
   }
 
@@ -196,26 +198,6 @@ class App extends React.Component {
               <TabPane tab={modelView.attributes.title} key={index} />
             ))}
           </Tabs>
-          <button className="" onClick={() => this.zoom(0.25)}>
-            Zoom in
-          </button>
-          <button className="" onClick={() => this.zoom(-0.25)}>
-            Zoom out
-          </button>
-
-          <button className="" onClick={() => this.offsetRight(50)}>
-            Left
-          </button>
-          <button className="" onClick={() => this.offsetRight(-50)}>
-            Right
-          </button>
-
-          <button className="" onClick={() => this.offsetDown(50)}>
-            Up
-          </button>
-          <button className="" onClick={() => this.offsetDown(-50)}>
-            Down
-          </button>
         </div>
       );
     }

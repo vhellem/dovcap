@@ -16,13 +16,11 @@ class Relationship extends React.Component {
       text2: ' ',
       fromPos: { left: -1, top: -1, width: -1, height: -1 },
       toPos: { left: -1, top: -1, width: -1, height: -1 },
+      visible: props.visible,
     };
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
-  componentWillMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
 
+  componentWillMount() {
     const emitter = ObjectEmitter;
     const num = this.props.data.type.split(' ').length;
     const name = this.props.data.type
@@ -51,22 +49,32 @@ class Relationship extends React.Component {
         toPos: { left: x, top: y, width, height },
       });
     });
-  }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
-  updateWindowDimensions() {
-    this.setState({
-      width: window.innerWidth * 0.9,
-      height: window.innerHeight * 0.9,
+    emitter.addListener('forceUpdate', bol => {
+      if (bol) {
+        this.setState({
+          fromPos: { left: -1, top: -1, width: -1, height: -1 },
+          toPos: { left: -1, top: -1, width: -1, height: -1 },
+        });
+      }
     });
   }
+
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      id: newProps.data.id,
+      data: newProps.data,
+      fromId: newProps.data.valueset.origin_href.substring(1),
+      toId: newProps.data.valueset.target_href.substring(1),
+      visible: newProps.visible,
+    });
+  }
+
   render() {
-    if (this.state.id.startsWith('_')) {
+    if (!this.state.visible.includes(this.state.data.type)) {
       return <Group />;
     }
+
     const minFrom = { pos: [0, 0], node: 0 };
     const minTo = { pos: [0, 0], node: 0 };
     let textFrom = [0, 0];
@@ -86,20 +94,20 @@ class Relationship extends React.Component {
     }
 
     function getPerpendicularity(x1, y1, x2, y2, node) {
-      if (node == 0 && y2 > y1) {
-        return 0
+      if (node === 0 && y2 > y1) {
+        return 0;
       }
-      if (node == 1 && x1 > x2) {
-        return 0
+      if (node === 1 && x1 > x2) {
+        return 0;
       }
-      if (node == 2 && y1 > y1) {
-        return 0
+      if (node === 2 && y1 > y2) {
+        return 0;
       }
-      if (node == 3 && x2 > x1) {
-        return 0
+      if (node === 3 && x2 > x1) {
+        return 0;
       }
 
-      if (node % 2 == 0) {
+      if (node % 2 === 0) {
         return Math.abs(y2 - y1) / (Math.abs(x2 - x1) + Math.abs(y2 - y1));
       } else {
         return Math.abs(x2 - x1) / (Math.abs(x2 - x1) + Math.abs(y2 - y1));
@@ -130,10 +138,11 @@ class Relationship extends React.Component {
     }
 
     function sortByKey(array, key) {
-        return array.sort(function(a, b) {
-            var x = a[key]; var y = b[key];
-            return ((x < y) ? -1 : ((x > y) ? 1 : 0));
-        });
+      return array.sort((a, b) => {
+        const x = a[key];
+        const y = b[key];
+        return x < y ? -1 : x > y ? 1 : 0;
+      });
     }
 
     function rightOrLeft(x1, y1, x2, y2, fromNode) {
@@ -191,9 +200,9 @@ class Relationship extends React.Component {
       const fromNode = possiblePositions[i].fromNode;
       const toNode = possiblePositions[i].toNode;
 
-      if (possiblePositions[i].fromNode == possiblePositions[i].toNode) {
-        if (this.state.width != -1) {
-            continue
+      if (possiblePositions[i].fromNode === possiblePositions[i].toNode) {
+        if (this.state.width !== -1) {
+          continue;
         }
       }
 
@@ -261,16 +270,12 @@ class Relationship extends React.Component {
       toDist,
       !rightPerpendicular
     );
-    if (
-      minFrom.pos[0] <= 0 ||
-      minFrom.pos[1] <= 0 ||
-      minTo.pos[0] <= 0 ||
-      minTo.pos[1] <= 0
-    ) {
+
+    if (minFrom.pos[0] <= 0 || minFrom.pos[1] <= 0 || minTo.pos[0] <= 0 || minTo.pos[1] <= 0) {
       return <Group />;
     }
 
-  //console.log(this.state.data.type);
+    // console.log(this.state.data.type);
 
     return (
       <Group>
