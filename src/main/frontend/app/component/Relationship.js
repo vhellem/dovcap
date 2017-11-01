@@ -192,7 +192,7 @@ class Relationship extends React.Component {
       const toNode = possiblePositions[i].toNode;
 
       if (possiblePositions[i].fromNode == possiblePositions[i].toNode) {
-        if (this.state.fromPos.width == -1) {
+        if (this.state.width != -1) {
             continue
         }
       }
@@ -269,6 +269,9 @@ class Relationship extends React.Component {
     ) {
       return <Group />;
     }
+
+  //console.log(this.state.data.type);
+
     return (
       <Group>
         <Arrow
