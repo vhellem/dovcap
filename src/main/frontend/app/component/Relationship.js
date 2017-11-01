@@ -104,9 +104,6 @@ class Relationship extends React.Component {
       } else {
         return Math.abs(x2 - x1) / (Math.abs(x2 - x1) + Math.abs(y2 - y1));
       }
-
-
-
     }
 
     function getTextPosition(x1, y1, x2, y2, distanceFromObject, rightPerpendicular) {
@@ -193,6 +190,13 @@ class Relationship extends React.Component {
     for (let i = 0; i < possiblePositions.length; i++) {
       const fromNode = possiblePositions[i].fromNode;
       const toNode = possiblePositions[i].toNode;
+
+      if (possiblePositions[i].fromNode == possiblePositions[i].toNode) {
+        if (this.state.width != -1) {
+            continue
+        }
+      }
+
       const fromP = getPerpendicularity(
         possiblePositions[i].from[0],
         possiblePositions[i].from[1],
@@ -258,13 +262,16 @@ class Relationship extends React.Component {
       !rightPerpendicular
     );
     if (
-      minFrom.pos[0] === -1 ||
-      minFrom.pos[1] === -1 ||
-      minTo.pos[0] === -1 ||
-      minTo.pos[1] === -1
+      minFrom.pos[0] <= 0 ||
+      minFrom.pos[1] <= 0 ||
+      minTo.pos[0] <= 0 ||
+      minTo.pos[1] <= 0
     ) {
       return <Group />;
     }
+
+  //console.log(this.state.data.type);
+
     return (
       <Group>
         <Arrow
