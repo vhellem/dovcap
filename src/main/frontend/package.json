@@ -6,11 +6,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --hot --inline ",
-    "eslint": "eslint app"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dlizarra/spring-boot-react-webpack-starter.git"
+    "eslint": "eslint app",
+    "test": "jest app/tests/"
   },
   "license": "ISC",
   "devDependencies": {
