@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ criteria="1"
+ nextoid="1">
+
+ <cpp-method id="Method_CVW:OnContextLoad_UUID" name="onContextLoad" title="On context load" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/cvw/operations/cvwContextOnLoad.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CVW:getLabelText_UUID" name="getLabelText" title="getLabelText" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">Eval</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="Script">getWorkareaLabelText</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CVW:showLabelText_UUID" name="showLabelText" title="showLabelText" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/cvw/operations/showLabelText.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CVW:openClose_UUID" name="openClose" title="openClose" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">openClose</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CVW:setHourGlassOn_UUID" name="setHourGlassOn" title="setHourGlassOn" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">setHourGlassOn</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_CVW:setHourGlassOff_UUID" name="setHourGlassOff" title="setHourGlassOff" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">setHourGlassOff</string>
+  </arg-list>
+ </cpp-method>
+ <cpp-method id="ModelView_onLoaded" name="ModelView_onLoaded" title="loadContentModelView" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="Script">
+set model = metis.currentModel
+set modelView = model.modelView("ContentModel")
+if isValid(modelView) then set model.currentModelView = modelView
+   </string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

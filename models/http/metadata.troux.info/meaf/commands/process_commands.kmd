@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9" 
+ instances="24" 
+ modelviews="0" 
+ instanceviews="0" 
+ nextoid="1003">
+
+<!-- ALWAYS REPLACE ENTIRE GENERATED CONTENTS WITH HANDCODED -->
+
+ <object id="oid1">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Input to Process</string>
+   <string name="desc">Connects a Process object to another Process object by two ICOMs, for example,  
+by an Input and an Output.</string>
+   <string name="dll"></string>
+   <string name="state">current-process-process-or-input-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1301" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Input to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid4">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">create-sub-processes</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Create Sub-Processes and ICOMs</string>
+   <string name="desc">Opens a dialog box allowing you to specify how many sub-processes, Internal Flows and ICOMs the current process should have.</string>
+   <string name="dll"></string>
+   <string name="state">current-process</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1205" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Create Sub-Processes and ICOMs</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid13">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-event-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Event to Process</string>
+   <string name="desc">Connects an Event object to a Process object by an Input.</string>
+   <string name="dll"></string>
+   <string name="state">current-event-process-or-input-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1311" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Event to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid14">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-event-from-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect event from Process</string>
+   <string name="desc">Connects an Event object from a Process object by an Output.</string>
+   <string name="dll"></string>
+   <string name="state">current-event-process-or-output-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1312" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Event from Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid15">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-input-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Input to Process</string>
+   <string name="desc">Connects a Flow object to a Process object by an Input.</string>
+   <string name="dll"></string>
+   <string name="state">current-flow-process-or-input-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1305" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Input to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid16">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-control-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Control to Process</string>
+   <string name="desc">Connects a Flow object to a Process object by a Control.</string>
+   <string name="dll"></string>
+   <string name="state">current-flow-process-or-control-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1306" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Control to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid17">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-output-from-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Output from Process</string>
+   <string name="desc">Connects a Flow object from a Process object by an Output.</string>
+   <string name="dll"></string>
+   <string name="state">current-flow-process-or-output-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1307" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Output from Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid18">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-mechanism-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Mechanism to Process</string>
+   <string name="desc">Connects a Flow object to a Process object by a Mechanism.</string>
+   <string name="dll"></string>
+   <string name="state">current-flow-process-or-mechanism-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1308" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Mechanism to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid20">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-input-to-input</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Input to Process</string>
+   <string name="desc">Connects an Input object to a Process object by an Input.</string>
+   <string name="dll"></string>
+   <string name="state">current-input-process-or-input-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1305" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Input to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid21">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-control-to-control</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Control to Process</string>
+   <string name="desc">Connects a Control object to a Process object by a Control.</string>
+   <string name="dll"></string>
+   <string name="state">current-control-process-or-control-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1306" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Control to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid22">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-output-from-output</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Output from Process</string>
+   <string name="desc">Connects an Output object to a Process object by an Output.</string>
+   <string name="dll"></string>
+   <string name="state">current-output-process-or-output-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1307" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Output from Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid23">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-mechanism-to-mechanism</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Mechanism to Process</string>
+   <string name="desc">Connects a Mechanism object to a Process object by a Mechanism.</string>
+   <string name="dll"></string>
+   <string name="state">current-mechanism-process-or-mechanism-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1308" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Mechanism to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid24">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-inp-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Input to Process</string>
+   <string name="desc">Connects a Process object to a Process object by two ICOMs, for example, by an Input and an Output.</string>
+   <string name="dll"></string>
+   <string name="state">current-output-process-or-input-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1301" xlink:actuate="auto"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Input to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid25">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-alternative-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Alternative to Process</string>
+   <string name="desc">Connects an Alternative object to a Process object by an Input.</string>
+   <string name="dll"></string>
+   <string name="state">current-alternative-process-or-input-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1311" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Alternative to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid26">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-condition-from-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Condition from Process</string>
+   <string name="desc">Connects an Alternative object from a Process object by an Output.</string>
+   <string name="dll"></string>
+   <string name="state">current-alternative-process-or-output-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1312" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Condition from Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid27">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-start-to-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect Start Portal to Process</string>
+   <string name="desc">Connects a Start Portal object to a Process object by an Input.</string>
+   <string name="dll"></string>
+   <string name="state">current-startportal-process-or-input-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1313" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect Start Portal to Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid28">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">connect-end-from-process</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Connect End Portal from Process</string>
+   <string name="desc">Connects an End Portal object from a Process object by an Output.</string>
+   <string name="dll"></string>
+   <string name="state">current-endportal-process-or-output-selected</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1314" xlink:actuate="user"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connect End Portal from Process</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid29">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-generate-process-tree</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Generate Process Tree</string>
+   <string name="desc">Activate this command to generate a tree structure of the process hierarchy</string>
+   <string name="dll"></string>
+   <string name="state">current-process</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/process_commands.kmd#oid1315" xlink:actuate="auto"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Generate Process Tree</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid101">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ProcessModeling.Menu</string>
+   <string name="kind">Replace</string>
+   <string name="reference"></string>
+   <collection name="commands" structure="list" size="27" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>mtd-generate-process-tree</string>
+    <string>create-sub-processes</string>
+    <string>separator</string>
+    <string>connect-to-process</string>
+    <string>connect-input-to-process</string>
+    <string>connect-control-to-process</string>
+    <string>connect-output-from-process</string>
+    <string>connect-mechanism-to-process</string>
+    <string>connect-input-to-input</string>
+    <string>connect-control-to-control</string>
+    <string>connect-output-from-output</string>
+    <string>connect-mechanism-to-mechanism</string>
+    <string>connect-inp-to-process</string>
+    <string>connect-alternative-to-process</string>
+    <string>connect-condition-from-process</string>
+    <string>connect-event-to-process</string>
+    <string>connect-event-from-process</string>
+    <string>connect-start-to-process</string>
+    <string>connect-end-from-process</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1001">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">ProcessModeling.Menu</string>
+   <string name="category">Menus</string>
+   <string name="title">Process &#38;Modeling</string>
+   <string name="desc">Special menu designed for this project.</string>
+   <string name="dll"></string>
+   <string name="state"></string>
+   <pointer name="method"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip"></string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid1002">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DeveloperEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>ProcessModeling.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1003">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ModelEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>ProcessModeling.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1004">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DesignerEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>ProcessModeling.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+
+</metis>

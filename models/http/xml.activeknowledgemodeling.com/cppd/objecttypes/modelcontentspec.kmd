@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_AKM:ModelContentSpecification_UUID" name="modelContentSpecification" title="Model content specification (AKM)" desc="Model content specification." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="AKM Object" xlink:href="object.kmd#CompType_AKM:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="modelContentSpecification" xlink:href="#CompType_AKM:ModelContentSpecification_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+     <propertyview name="name" visible-flag="true"/>
+     <propertyview name="description" visible-flag="true"/>
+     <propertyview name="comments" visible-flag="true"/>
+     <propertyview name="viewArea.mdlView" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.topleft.xCoord" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.topleft.yCoord" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.bottomright.xCoord" protected-flag="true" visible-flag="false"/>
+     <propertyview name="viewArea.bottomright.yCoord" protected-flag="true" visible-flag="false"/>
+  </propertyviews>  
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="http://metadata.troux.info/meaf/layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/productmethod.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/productmethod.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/productmethod.png" xlink:actuate="user"/>
+ </typeview>
+
+
+
+</metis>

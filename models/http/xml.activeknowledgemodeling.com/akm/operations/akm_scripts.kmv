@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="2"
+ instanceviews="3"
+ nextoid="1">
+
+ <model id="_002asj6026nb2n691esa" name="Standard Blank" title="Standard Blank" desc="Blank Metis Modeling model" standalone-flag="true">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://xml.metis.no/xml/templates/blank/blank_metamodel.kmd#oid2" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <part-link xlink:role="object" xlink:href="#_002asj6026ni7pv6jl6k"/>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Standard Blank" xlink:href="#_002asj6026nb2n691esa" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Standard Blank" xlink:href="#_002asj6026nb2n691esa" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+ <object id="_002asj6026ni7pv6jl6k">
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+ </object>
+
+ <objectview id="_002asj6026ni7pu7dia1" xlink:role="object" xlink:href="#_002asj6026ni7pv6jl6k" state="open" behavior="nested" text-scale="1" decomp-scale="0.125" left="-628.045" top="-457.415" width="715.767" height="512">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Nested Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Nested Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+  </symbol-override>
+ </objectview>
+
+ <relationshipview id="_002asj6026ni917st3nj" decomposition-flag="true">
+  <origin-link xlink:role="modelview" xlink:title="Main" xlink:href="#oid1"/>
+  <target-link xlink:role="objectview" xlink:href="#_002asj6026ni7pu7dia1"/>
+ </relationshipview>
+
+ <modelview id="oid1" name="Main" title="Main" primary-flag="true" standalone-flag="true" zoom-level="1.68713" x="-270.161" y="-201.415" seq="1" xlink:role="model" xlink:title="Standard Blank" xlink:href="#_002asj6026nb2n691esa" behavior="nested" text-scale="1" decomp-scale="0" visible-in="browser">
+  <child-link xlink:role="objectview" xlink:href="#_002asj6026ni7pu7dia1"/>
+  <child-link xlink:role="relationshipview" xlink:href="#_002asj6026ni917st3nj"/>
+ </modelview>
+
+
+</metis>

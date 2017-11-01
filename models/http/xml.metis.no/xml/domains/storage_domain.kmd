@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="2"
+ nextoid="4">
+
+ <domain id="oid1" name="StorageDomain" title="Storage Domain" desc="Contains Storage and Directory.&#10;This domain was designed to enable modelling of storage for documents, information flow, physical flow and substance.&#10;It is also used to represent directories on mounted disks which are used to hold information on where information is stored. ">
+  <domain-link xlink:role="domain" xlink:href="#oid3" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/storage.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#oid34" xlink:actuate="user"/>
+ </domain>
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/crud_to-crud_from.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/located_in-location_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/placed_in-storage_for.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/stored_in-contains.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/has_structure-structure_of.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="metis:stdtypes#oid122" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/contain-located_in_storage.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+
+</metis>

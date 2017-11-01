@@ -1,0 +1,709 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="105"
+ nextoid="108">
+
+ <string-type id="oid1" name="YESNO" default="Y">
+  <string class="shared">Y</string>
+  <string class="shared">N</string>
+ </string-type>
+
+ <integer-type id="oid2" name="YESNO_ENUM">
+  <range name="NO" min="0" max="0"/>
+  <range name="YES" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid3" name="NOYES_ENUM">
+  <range name="YES" min="0" max="0"/>
+  <range name="NO" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid4" name="ONOFF_ENUM">
+  <range name="OFF" min="0" max="0"/>
+  <range name="ON" min="1" max="1"/>
+ </integer-type>
+
+ <string-type id="oid5" name="CRUD_OPTION" default="Create">
+  <string class="shared">Create</string>
+  <string class="shared">Read</string>
+  <string class="shared">Update</string>
+  <string class="shared">Delete</string>
+ </string-type>
+
+ <integer-type id="oid6" name="GENDER">
+  <range name="Male" min="0" max="0"/>
+  <range name="Female" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid7" name="Priority4" title="Priority">
+  <range name="P3" min="3" max="3"/>
+  <range name="P1" min="1" max="1"/>
+  <range name="P0" min="0" max="0"/>
+  <range name="P2" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid8" name="Weight" title="Weight">
+  <range name="ValidWeight" min="0" max="7"/>
+ </integer-type>
+
+ <integer-type id="oid9" name="BusinessCriticality" title="Business Criticality">
+  <range name="ValidBusinessCriticality" min="0" max="7"/>
+ </integer-type>
+
+ <integer-type id="oid10" name="StrategicValue" title="Strategic Value">
+ </integer-type>
+
+ <integer-type id="oid11" name="CurrentSupportWeight" title="Current Support Weight">
+  <range name="ValidCurrentSupportWeight" min="0" max="7"/>
+ </integer-type>
+
+ <integer-type id="oid12" name="FailureProbability" title="Failure Probability">
+  <range name="ValidFailureProbability" min="0" max="7"/>
+ </integer-type>
+
+ <integer-type id="oid13" name="Status2" title="Status">
+  <range name="Operational" min="1" max="1"/>
+  <range name="Planned" min="0" max="0"/>
+  <range name="Unused" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid14" name="Priority3" title="Priority">
+  <range name="No priority" min="0" max="0"/>
+  <range name="High" min="1" max="1"/>
+  <range name="Low" min="2" max="2"/>
+  <range name="Medium" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid15" name="FutureSupportWeight" title="Future Support Weight">
+  <range name="ValidFutureSupportWeight" min="0" max="7"/>
+ </integer-type>
+
+ <integer-type id="oid16" name="DcgValue" title="Dcg Value">
+  <range name="CR_Distributed_Computing_Rule" min="0" max="0"/>
+  <range name="DCB_Distributed_Computing_Business_Consideration" min="2" max="2"/>
+  <range name="DCC_Distributed_Computing_Characteristic" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid17" name="ConnChar" title="Conn Char">
+  <range name="External_Location" min="3" max="3"/>
+  <range name="Mobile" min="1" max="1"/>
+  <range name="Virtual" min="0" max="0"/>
+  <range name="Fixed" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid18" name="ApplStatus" title="Appl Status">
+  <range name="New" min="3" max="3"/>
+  <range name="Commercial" min="0" max="0"/>
+  <range name="Active_Maintenance" min="2" max="2"/>
+  <range name="Frozen" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid19" name="ImpactScaleRating" title="Impact Scale Rating" default="1">
+  <range name="High" min="1" max="1"/>
+  <range name="Low" min="3" max="3"/>
+  <range name="Medium" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid20" name="ElementTypeCte" title="Element Type Cte">
+  <range name="Processing" min="0" max="0"/>
+  <range name="System_Management" min="4" max="4"/>
+  <range name="Data_Management" min="2" max="2"/>
+  <range name="Staffing" min="6" max="6"/>
+  <range name="Communications" min="1" max="1"/>
+  <range name="Application_Development" min="3" max="3"/>
+  <range name="Human_Interface" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="oid21" name="WorkClass" title="Work Class">
+  <range name="Clerical" min="1" max="1"/>
+  <range name="Operational" min="5" max="5"/>
+  <range name="Executive" min="3" max="3"/>
+  <range name="Administration" min="0" max="0"/>
+  <range name="Professional" min="2" max="2"/>
+  <range name="Executive_Support" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="oid22" name="PossibleResponse" title="Possible Response" default="1">
+  <range name="Transferred" min="4" max="4"/>
+  <range name="Assume" min="3" max="3"/>
+  <range name="Avoid" min="1" max="1"/>
+  <range name="Shared" min="5" max="5"/>
+  <range name="Control" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid23" name="RiskOccurrence" title="Risk Occurrence" default="1">
+  <range name="High" min="1" max="1"/>
+  <range name="Low" min="3" max="3"/>
+  <range name="Medium" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid24" name="ActionStatus" title="Action Status" default="1">
+  <range name="CLOSED" min="2" max="2"/>
+  <range name="OPEN" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid25" name="Status" title="Status" default="1">
+  <range name="Accepted_IDB" min="3" max="3"/>
+  <range name="Accepted_CCB" min="4" max="4"/>
+  <range name="Rejected" min="2" max="2"/>
+  <range name="Pending" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid26" name="ChangeType" title="Change Type" default="1">
+  <range name="AP" min="1" max="1"/>
+  <range name="OP" min="3" max="3"/>
+  <range name="IT" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid27" name="Priority" title="Priority" default="1">
+  <range name="Low" min="4" max="4"/>
+  <range name="High" min="2" max="2"/>
+  <range name="Immediate" min="1" max="1"/>
+  <range name="Medium" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid28" name="Priority2" title="Priority" default="1">
+  <range name="P8" min="8" max="8"/>
+  <range name="P4" min="4" max="4"/>
+  <range name="P2" min="2" max="2"/>
+  <range name="P6" min="6" max="6"/>
+  <range name="P5" min="5" max="5"/>
+  <range name="P3" min="3" max="3"/>
+  <range name="P1" min="1" max="1"/>
+  <range name="P7" min="7" max="7"/>
+  <range name="P9" min="9" max="9"/>
+ </integer-type>
+
+ <integer-type id="oid29" name="PmWeight" title="Pm Weight" default="1">
+  <range name="P8" min="8" max="8"/>
+  <range name="P4" min="4" max="4"/>
+  <range name="P2" min="2" max="2"/>
+  <range name="P6" min="6" max="6"/>
+  <range name="P5" min="5" max="5"/>
+  <range name="P3" min="3" max="3"/>
+  <range name="P1" min="1" max="1"/>
+  <range name="P7" min="7" max="7"/>
+  <range name="P9" min="9" max="9"/>
+ </integer-type>
+
+ <integer-type id="oid30" name="CsfValueType" title="Csf Value Type">
+  <range name="LOW_CSF_VALUE" min="1" max="1"/>
+  <range name="HIGH_CSF_VALUE" min="0" max="0"/>
+ </integer-type>
+
+ <integer-type id="oid31" name="FlowMethod" title="Flow Method" default="1">
+  <range name="Event_Driven" min="2" max="2"/>
+  <range name="Synchronous" min="6" max="6"/>
+  <range name="Night_Batch" min="4" max="4"/>
+  <range name="Asynchronous" min="1" max="1"/>
+  <range name="PushPull" min="3" max="3"/>
+  <range name="Weekend_Batch" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="oid32" name="PartitionType" title="Partition Type" default="1">
+  <range name="Horizontal_and_vertical_fragment_partition" min="4" max="4"/>
+  <range name="Horizontal_fragment_partition" min="2" max="2"/>
+  <range name="Full_table_partition" min="1" max="1"/>
+  <range name="Vertical_fragment_partition" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="oid33" name="BvmType" title="Bvm Type">
+  <range name="IT_EFFECTIVENESS" min="1" max="1"/>
+  <range name="IT_SUPPORT" min="0" max="0"/>
+ </integer-type>
+
+ <integer-type id="oid34" name="ItValueType" title="It Value Type">
+  <range name="HIGH" min="0" max="0"/>
+  <range name="NOT_APPLICABLE" min="2" max="2"/>
+  <range name="LOW" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid35" name="DataState" title="Data State" default="1">
+  <range name="LIVE" min="1" max="1"/>
+  <range name="HIST" min="3" max="3"/>
+  <range name="COPY" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid36" name="DdgValue" title="Ddg Value">
+  <range name="DR_Data_Rule" min="0" max="0"/>
+  <range name="DB_Data_Business_Consideration" min="2" max="2"/>
+  <range name="DC_Data_Characteristic" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid37" name="ProcessingMode" title="Processing Mode" default="1">
+  <range name="Batch" min="1" max="1"/>
+  <range name="SQL" min="3" max="3"/>
+  <range name="OLTP" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid38" name="Phase" title="Phase" desc="phase value" default="1">
+  <range name="Phase_1" min="1" max="1"/>
+  <range name="Phase_5" min="5" max="5"/>
+  <range name="Phase_3" min="3" max="3"/>
+  <range name="Phase_7" min="7" max="7"/>
+  <range name="Phase_2" min="2" max="2"/>
+  <range name="Phase_4" min="4" max="4"/>
+  <range name="Phase_6" min="6" max="6"/>
+ </integer-type>
+
+ <integer-type id="oid39" name="Weight2" title="Weight" desc="weight value" default="1">
+  <range name="W4" min="4" max="4"/>
+  <range name="W2" min="2" max="2"/>
+  <range name="W6" min="6" max="6"/>
+  <range name="W3" min="3" max="3"/>
+  <range name="W5" min="5" max="5"/>
+  <range name="W1" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid40" name="Gender" title="Gender" default="2">
+  <range name="Male" min="0" max="0"/>
+  <range name="Female" min="1" max="1"/>
+  <range name="Unknown" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid41" name="OnOffEnum" title="On Off Enum">
+  <range name="ON" min="1" max="1"/>
+  <range name="OFF" min="0" max="0"/>
+ </integer-type>
+
+ <integer-type id="oid42" name="NoYesEnum" title="No Yes Enum">
+  <range name="Yes" min="0" max="0"/>
+  <range name="No" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid43" name="YesNoEnum" title="Yes No Enum">
+  <range name="Yes" min="0" max="0"/>
+  <range name="No" min="1" max="1"/>
+ </integer-type>
+
+ <float-type id="oid44" name="OWeight">
+  <range name="P7"  min="0.7" max="0.7"/>
+  <range name="P3"  min="0.3" max="0.3"/>
+  <range name="P1"  min="0.1" max="0.1"/>
+  <range name="P5"  min="0.5" max="0.5"/>
+  <range name="P4"  min="0.4" max="0.4"/>
+  <range name="P2"  min="0.2" max="0.2"/>
+  <range name="P0"  min="0" max="0"/>
+  <range name="P6"  min="0.6" max="0.6"/>
+  <range name="P8"  min="0.8" max="0.8"/>
+  <range name="P9"  min="0.9" max="..."/>
+  <range name="P10"  min="1" max="1"/>
+ </float-type>
+
+ <string-type id="oid45" name="MaintenanceContractType" title="Maintenance Contract Type" desc="Type of contract for vendor support of the operation of the product. Unsupported means that the vendor no longer supports the product or product version" default="None">
+  <string class="shared">None</string>
+  <string class="shared">Guarantee</string>
+  <string class="shared">Fixed</string>
+  <string class="shared">Hourly</string>
+  <string class="shared">Unsupported</string>
+ </string-type>
+
+ <string-type id="oid46" name="FlowMode" title="Flow Mode" desc="Description of how the information flows between the processes." default="Electronic Transfer">
+  <string class="shared">Electronic Transfer</string>
+  <string class="shared">Common Storage</string>
+  <string class="shared">Personal Contact</string>
+  <string class="shared">Undefined</string>
+ </string-type>
+
+ <string-type id="oid47" name="SWOTClassification" title="SWOT Classification" default=" ">
+  <string class="shared">S</string>
+  <string class="shared">W</string>
+  <string class="shared">O</string>
+  <string class="shared">T</string>
+  <string class="shared"> </string>
+ </string-type>
+
+ <string-type id="oid48" name="TransferType" title="Transfer Type" desc="The application-oriented type of data transfer" default="Undefined">
+  <string class="shared">Periodic</string>
+  <string class="shared">Immediate</string>
+  <string class="shared">Trigger Message</string>
+  <string class="shared">Undefined</string>
+ </string-type>
+
+ <string-type id="oid49" name="BusinessAspect" title="Business Aspect" desc="The business aspect of the requirement" default="IT">
+  <string class="shared">IT</string>
+  <string class="shared">Process</string>
+  <string class="shared">Product</string>
+  <string class="shared">People</string>
+  <string class="shared">Finance</string>
+ </string-type>
+
+ <string-type id="oid50" name="IntExtClassification" title="Int Ext Classification" default="I">
+  <string class="shared">I</string>
+  <string class="shared">E</string>
+ </string-type>
+
+ <string-type id="oid51" name="Sex" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <string-type id="oid52" name="TransferMedium" title="Transfer Medium" desc="The technical type of data transfer" default="Undefined">
+  <string class="shared">EDI</string>
+  <string class="shared">Batch</string>
+  <string class="shared">Oltp</string>
+  <string class="shared">E-mail</string>
+  <string class="shared">Manual</string>
+  <string class="shared">Flat File</string>
+  <string class="shared">Disk File</string>
+  <string class="shared">Report</string>
+  <string class="shared">Electronic Transfer</string>
+  <string class="shared">OLAP Cube</string>
+  <string class="shared">XML</string>
+  <string class="shared">Undefined</string>
+ </string-type>
+
+ <string-type id="oid53" name="StatusCode" title="Status Code" default="C">
+  <string class="shared">C</string>
+  <string class="shared">P</string>
+  <string class="shared">F</string>
+ </string-type>
+
+ <string-type id="oid54" name="Category" title="Category" default="o">
+  <string class="shared">o</string>
+  <string class="shared">p</string>
+  <string class="shared">t</string>
+  <string class="shared">h</string>
+  <string class="shared">b</string>
+ </string-type>
+
+ <string-type id="oid55" name="IntExtClass" title="Int Ext Class" default="I">
+  <string class="shared">I</string>
+  <string class="shared">E</string>
+ </string-type>
+
+ <string-type id="oid56" name="LayerTypeName" title="Layer Type Name" default="Human Interface">
+  <string class="shared">Human Interface</string>
+  <string class="shared">ADE</string>
+  <string class="shared">Applications</string>
+  <string class="shared">System Management</string>
+  <string class="shared">Co-operative Services</string>
+  <string class="shared">Network</string>
+  <string class="shared">Base Platform</string>
+ </string-type>
+
+ <string-type id="oid57" name="NetworkType" title="NetworkType" default="LAN">
+  <string class="shared">LAN</string>
+  <string class="shared">WAN</string>
+ </string-type>
+
+ <string-type id="oid58" name="FactorType" title="Factor Type" default="Org">
+  <string class="shared">Org</string>
+  <string class="shared">Fincl</string>
+  <string class="shared">Mrkt</string>
+  <string class="shared">Prod</string>
+  <string class="shared">Indstry</string>
+  <string class="shared">Cultr</string>
+  <string class="shared">Tchnlgy</string>
+  <string class="shared">Regulatory</string>
+  <string class="shared">Contractual</string>
+  <string class="shared">Statutory</string>
+ </string-type>
+
+ <string-type id="oid59" name="DceType" title="Dce Type" default="Presentation">
+  <string class="shared">Presentation</string>
+  <string class="shared">Function</string>
+  <string class="shared">Data Management</string>
+ </string-type>
+
+ <string-type id="oid60" name="SWOT" title="SWOT" default="S">
+  <string class="shared">S</string>
+  <string class="shared">W</string>
+  <string class="shared">O</string>
+  <string class="shared">T</string>
+ </string-type>
+
+ <string-type id="oid61" name="AbbType" title="Abb Type" default="App Env">
+  <string class="shared">App Env</string>
+  <string class="shared">S/W Service</string>
+  <string class="shared">DBMS</string>
+  <string class="shared">Operating Sys</string>
+  <string class="shared">H/W Platform</string>
+ </string-type>
+
+ <string-type id="oid62" name="AbbImplemented" title="Abb Implemented" default="Planned">
+  <string class="shared">Future</string>
+  <string class="shared">Planned</string>
+  <string class="shared">Implemented</string>
+ </string-type>
+
+ <string-type id="oid63" name="Nature" title="Nature" default="Report">
+  <string class="shared">Report</string>
+  <string class="shared">Prototype</string>
+  <string class="shared">Demonstrator</string>
+  <string class="shared">Report/Prototype</string>
+  <string class="shared">Report/Demonstrator</string>
+  <string class="shared">Other</string>
+ </string-type>
+
+ <string-type id="oid64" name="Level" title="Level" default="PU">
+  <string class="shared">PU</string>
+  <string class="shared">PP</string>
+  <string class="shared">RE</string>
+  <string class="shared">CO</string>
+ </string-type>
+
+ <string-type id="oid65" name="EndOptKey" title="End Opt Key" default="O">
+  <string class="shared">O</string>
+  <string class="shared">M</string>
+ </string-type>
+
+ <string-type id="oid66" name="AhpType" title="Ahp Type" desc="Analytic Hierarchy Process types" default="1   - This obj is EQUALLY important to selected obj">
+  <string class="shared">1   - This obj is EQUALLY important to selected obj</string>
+  <string class="shared">3   - This obj is A LITTLE MORE imp than selected obj</string>
+  <string class="shared">1/3 - This obj is A LITTLE LESS imp than selected obj</string>
+  <string class="shared">5   - This obj is STRONGLY MORE imp than selected obj</string>
+  <string class="shared">1/5 - This obj is STRONGLY LESS imp than selected obj</string>
+  <string class="shared">7   - This obj is VERY STR MORE imp than selected obj</string>
+  <string class="shared">1/7 - This obj is VERY STR LESS imp than selected obj</string>
+  <string class="shared">9   - This obj is EXTREMLY MORE imp than selected obj</string>
+  <string class="shared">1/9 - This obj is EXTREMLY LESS imp than selected obj</string>
+  <string class="shared">2   - This obj importance falls between 1 and 3</string>
+  <string class="shared">1/2 - This obj importance falls between 1 and 1/3</string>
+  <string class="shared">4   - This obj importance falls between 3 and 5</string>
+  <string class="shared">1/4 - This obj importance falls between 1/3 and 1/5</string>
+  <string class="shared">6   - This obj importance falls between 5 and 7</string>
+  <string class="shared">1/6 - This obj importance falls between 1/5 and 1/7</string>
+  <string class="shared">8   - This obj importance falls between 7 and 9</string>
+  <string class="shared">1/8 - This obj importance falls between 1/7 and 1/9</string>
+ </string-type>
+
+ <string-type id="oid67" name="YesNo" title="Yes No" default="Y">
+  <string class="shared">Y</string>
+  <string class="shared">N</string>
+ </string-type>
+
+ <string-type id="oid68" name="AreaClassification" title="Area Classification" default="Contractual Factor">
+  <string class="shared">Contractual Factor</string>
+  <string class="shared">Cultural Factor</string>
+  <string class="shared">Financial Factor</string>
+  <string class="shared">Industry Factor</string>
+  <string class="shared">Legislation Factor</string>
+  <string class="shared">Organizational Factor</string>
+  <string class="shared">Product Factor</string>
+  <string class="shared">Market Factor</string>
+  <string class="shared">Technology Factor</string>
+ </string-type>
+
+ <integer-type id="oid69">
+  <range name="ValidWeight" min="0" max="7"/>
+ </integer-type>
+
+ <string-type id="oid70" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <string-type id="oid71" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <string-type id="oid72" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <string-type id="oid73" name="condition" title="Condition" default="None">
+  <string class="shared">None</string>
+  <string class="shared">Milestone Condition</string>
+  <string class="shared">Exception Condition</string>
+ </string-type>
+
+ <integer-type id="oid74" name="Condition" title="Condition">
+  <range name="None" min="0" max="0"/>
+  <range name="Milestone" min="1" max="1"/>
+  <range name="Exception" min="2" max="2"/>
+  <range name="Pre" min="3" max="3"/>
+  <range name="Post" min="4" max="4"/>
+  <range name="Action Choice" min="5" max="5"/>
+  <range name="Decision" min="6" max="6"/>
+  <range name="AND" min="7" max="7"/>
+  <range name="Repeatable" min="8" max="8"/>
+  <range name="Mandatory" min="9" max="9"/>
+ </integer-type>
+
+ <string-type id="oid75" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid76" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <integer-type id="oid77" name="DurationMonths" title="Duration (month)">
+  <range name="September" min="8" max="8"/>
+  <range name="October" min="9" max="9"/>
+  <range name="November" min="10" max="10"/>
+  <range name="May" min="4" max="4"/>
+  <range name="March" min="2" max="2"/>
+  <range name="June" min="5" max="5"/>
+  <range name="July" min="6" max="6"/>
+  <range name="January" min="0" max="0"/>
+  <range name="February" min="1" max="1"/>
+  <range name="December" min="11" max="11"/>
+  <range name="August" min="7" max="7"/>
+  <range name="April" min="3" max="3"/>
+ </integer-type>
+
+ <string-type id="oid78" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid79" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid80" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid81" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid82" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <string-type id="oid83" name="CRUD" title="CRUD" default="No">
+  <string class="shared">No</string>
+  <string class="shared">Yes</string>
+ </string-type>
+
+ <integer-type id="oid84" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid85" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid86" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid87" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid89" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <integer-type id="oid90" name="Creates" title="Creates">
+  <range min="0" max="0"/>
+  <range name="C" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid91" name="Reads" title="Reads">
+  <range min="0" max="0"/>
+  <range name="R" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid92" name="Updates" title="Updates">
+  <range min="0" max="0"/>
+  <range name="U" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid93" name="Deletes" title="Deletes">
+  <range min="0" max="0"/>
+  <range name="D" min="1" max="1"/>
+ </integer-type>
+
+ <string-type id="oid94" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid95" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid96" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid97" title="Condition">
+  <range name="Exception Condition" min="2" max="2"/>
+  <range name="Milestone Condition" min="1" max="1"/>
+  <range name="None" min="0" max="0"/>
+ </integer-type>
+
+ <string-type id="oid98" title="Gender" default="Male">
+  <string class="shared">Male</string>
+  <string class="shared">Female</string>
+ </string-type>
+
+ <integer-type id="oid99" title="Status">
+  <range name="Pending" min="0" max="0"/>
+  <range name="Started" min="1" max="1"/>
+  <range name="Completed" min="2" max="2"/>
+ </integer-type>
+
+ <string-type id="oid100" name="TransferMethod" title="Transfer Method" default="Undefined">
+  <string class="shared">FTP</string>
+  <string class="shared">Printout</string>
+  <string class="shared">Magnetic Tape</string>
+  <string class="shared">Magnetic Cartridge</string>
+  <string class="shared">Express Delivery</string>
+  <string class="shared">Electronic Exchange Protocol</string>
+  <string class="shared">Undefined</string>
+ </string-type>
+
+ <integer-type id="oid101" name="Leading" title="Leading">
+  <range name="Leading" min="0" max="0"/>
+  <range name="Lagging" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid102" name="Investing" title="Investing">
+  <range name="Investing" min="0" max="0"/>
+  <range name="Harvesting" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="oid103" name="Status3" title="Status">
+  <range name="Undefined" min="0" max="0"/>
+  <range name="Planned" min="1" max="1"/>
+  <range name="Existing" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="oid105" name="Percentage" desc="A Percentage integer range (valid values from 0 to 100)">
+  <range name="percentage" min="0" max="100"/>
+ </integer-type>
+
+ <integer-type id="oid106" name="Percentage (not zero)" desc="A Percentage integer range (valid values from 1 to 100)" default="1">
+  <range name="percentage" min="1" max="100"/>
+ </integer-type>
+
+ <integer-type id="oid107" name="Percentage (unlimited)" desc="A Percentage integer range (valid values from 1 to ulimited)">
+  <range name="percentage" min="1" max="..." />
+ </integer-type>
+
+
+</metis>

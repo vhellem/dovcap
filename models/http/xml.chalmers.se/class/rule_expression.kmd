@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ methods="2"
+ typeviews="3"
+ nextoid="1">
+
+ <type id="expression" name="expression" title="Expression" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="templateKind" xlink:role="integer-type" xlink:title="Template_Kind" xlink:href="primitive_types.kmd#Template_Kind" label="Template kind" default-visible="top"/>
+  <property name="templateArgument" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Template argument" default-visible="top"/>
+  <property name="expressionEvaluatedTo" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Expression evaluated to" default-visible="top"/>
+  <property name="ruleInitCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="InitCode" visible-flag="false" protected-flag="true"/>
+  <property name="ruleInitCode2" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="InitCode" visible-flag="false" protected-flag="true"/>
+  <property name="rulePreCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Input and output parameters" default-visible="top" protected-flag="true"/>
+  <property name="ruleCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Code" default-visible="top" protected-flag="false"/>
+  <property name="rulePostCode" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="PostCode" visible-flag="false" protected-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="output" xlink:href="#output"/>
+  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="FunctionalRequirementPropertyDialog" xlink:href="#oid110"/>
+  <named-method-link name="evaluateExpression_" xlink:role="cpp-method" xlink:title="evaluateExpression" xlink:href="../methods/rule_methods.kmd#evaluateExpression"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Expression" xlink:href="#expression" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="13" xlink:role="type" xlink:title="Expression" xlink:href="#expression" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name">Expression</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="input" name="input" title="Input" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Input" xlink:href="#input" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="Input" xlink:href="#input" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="input_to" name="input_to" title="input_to" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="EKA relship" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <property name="paramId" xlink:role="string-type" xlink:title="text" xlink:href="metis:std#oid3" label="Parameter ID" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="CC parameter" xlink:href="cc_parameter.kmd#CC_parameter" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Expression" xlink:href="#expression" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Parameter" xlink:href="cc_parameter.kmd#parameter" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Expression" xlink:href="#expression" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="input_to" xlink:href="#input_to" xlink:actuate="user">
+   <string name="from">input to</string>
+   <string name="to">has input</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="input_to" xlink:href="#input_to" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="input_to_2" name="input_to_2" title="input_to_2" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="EKA relship" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <property name="paramId" xlink:role="string-type" xlink:title="text" xlink:href="metis:std#oid3" label="Parameter ID" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="CC value" xlink:href="cc_value.kmd#CC_value" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Expression" xlink:href="#expression" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="input_to_2" xlink:href="#input_to_2" xlink:actuate="user">
+   <string name="from">input to</string>
+   <string name="to">has input</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="input_to_2" xlink:href="#input_to_2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="output" name="output" title="Output" usage="interface">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Output" xlink:href="#output" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="12" xlink:role="type" xlink:title="Output" xlink:href="#output" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="output_to" name="output_to" title="output_to" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="EKA relship" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <property name="paramId" xlink:role="string-type" xlink:title="text" xlink:href="metis:std#oid3" label="Parameter ID" default-visible="top"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Expression" xlink:href="#expression" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="CC parameter" xlink:href="cc_parameter.kmd#CC_parameter" xlink:actuate="user"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Expression" xlink:href="#expression" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="parameter" xlink:href="cc_parameter.kmd#parameter" xlink:actuate="user"/>
+  </connect-rule>
+  <named-method-link name="View.onRelationshipAndViewCreated" xlink:role="cpp-method" xlink:title="relocateRelshipToFile" xlink:href="../methods/cc_methods.kmd#relocateRelshipToFile"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="output_to" xlink:href="#output_to" xlink:actuate="user">
+   <string name="from">has output</string>
+   <string name="to">output of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="output_to" xlink:href="#output_to" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid110" name="ExpressionPropertyDialog" language="c++" bind="NO.METIS.TOOLS.setupPropertyDialogTabs" required-dll="metis_ui">
+  <arg-list size="4">
+   <string name="TabName1">MetisModelTab</string>
+   <string name="TabName2">MetisDataTab</string>
+   <string name="Visibility1">Hide</string>
+   <pointer name="Widget2" xlink:role="cpp-method" xlink:title="ExpressionDataTab" xlink:href="#oid120"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid120" name="ExpressionDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+  <arg-list size="2">
+   <string name="Row1">name</string>
+   <string name="Row2">templateKind</string>
+   <string name="Row3">templateArgument</string>
+   <string name="Row4">rulePreCode</string>
+   <string name="Row5">ruleCode</string>
+   <string name="Row6">expressionEvaluatedTo</string>
+<!--
+   <string name="Row5">ruleInitCode</string>
+   <string name="Row6">rulePostCode</string>
+-->
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Expression" xlink:href="#expression" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Compact container" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/symbols/compact_container.svg#_002asll01p866qdguc7p" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Nested Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Expression" xlink:href="#expression" tree-size="0.5" nested-size="0.125" behavior="tree" position="left" placement="external" layout-flags="autolayoutset autolayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Nested Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Nested Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Expression" xlink:href="#expression" tree-size="0.5" nested-size="0.125" behavior="tree" position="right" placement="external" layout-flags="autolayoutset autolayoutme ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Nested Object" xlink:href="metis:stdsyms#oid67" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Nested Object" xlink:href="metis:stdsyms#oid68" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

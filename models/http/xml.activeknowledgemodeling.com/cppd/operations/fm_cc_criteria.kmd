@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="2"
+ nextoid="1">
+
+ <criteria id="_002asgs01oo642djooot" name="findParts" title="findParts" background-flag="true">
+  <c-op kind="and">
+   <c-op kind="object">
+    <complex-type-link xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="http://xml.activeknowledgemodeling.com/cppd/languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="_002asgs01p57r37h592i" name="FindDesignSolutionsFromParts" title="FindDesignSolutionsFromParts" background-flag="true" container-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="criteria">
+      <criteria-link xlink:role="criteria" xlink:title="findParts" xlink:href="#_002asgs01oo642djooot"/>
+     </c-op>
+    </c-op>
+    <c-op kind="originof"/>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="Design solution (CPPD)" xlink:href="http://xml.activeknowledgemodeling.com/cppd/languages/fm_objects.kmd#ObjType_CPPD:DesignSolution_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

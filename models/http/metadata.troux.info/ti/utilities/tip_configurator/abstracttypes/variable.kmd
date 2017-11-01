@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?metis version="3.6.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="oid1" name="Variable" usage="abstract">
+  <property name="variableName" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Name" default-visible="top"/>
+  <property name="variableValue" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value" default-visible="top"/>
+  <property name="variableDescription" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Description" default-visible="top"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:title="Variable" xlink:href="#oid1" xlink:actuate="user">
+   <string name="variableName"></string>
+   <string name="variableValue"></string>
+   <string name="variableDescription"></string>
+  </valueset>
+ </type>
+
+
+</metis>

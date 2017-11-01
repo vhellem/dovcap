@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ nextoid="4">
+
+ <type id="oid1" name="Attribute" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - IF Configuration" xlink:href="object.kmd#oid1"/>
+  <property name="fieldPresenceStatus" xlink:role="integer-type" xlink:title="Field Presence Status" xlink:href="../primitive_types/field_presence_status.kmd#oid1" label="Field Presence Status" desc="When the automatic method is used to generate the fields, this property will be set to one of three values upon generation:&#10;1. Existing - This field object was in the model before the script was run and was also found in the data.&#10;2. New - The field was not in the model before, but was found in the data.&#10;3. Deleted - The field was in the model before, but was not found in the data.&#10;&#10;The status of this property will determine the color of the field. Deleted fields are marked in red, new fields in green. This gives quick feedback on changes that might need to be handled." default-visible="top"/>
+  <property name="fieldPresenceColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Field Presence Color" desc="This color is set automatically from the &#60;em&#62;Field Presence Status&#60;/em&#62; property.&#10;&#10;Deleted fields are marked in red, new fields in green. This gives quick feedback on changes that might need to be handled." method-flag="true" visible-flag="false"/>
+  <property name="newFieldMarkerFillVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="New Field Marker Fill Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;New&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." method-flag="true" visible-flag="false"/>
+  <property name="newFieldMarkerLineVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="New Field Marker Line Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;New&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." method-flag="true" visible-flag="false"/>
+  <property name="deletedFieldMarkerFillVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Deleted Field Marker Fill Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Deleted&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." method-flag="true" visible-flag="false"/>
+  <property name="deletedFieldMarkerLineVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Deleted Field Marker Line Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Deleted&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." method-flag="true" visible-flag="false"/>
+  <property name="manualFieldMarkerFillVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Manual Field Marker Fill Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Manual&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." method-flag="true" visible-flag="false"/>
+  <property name="manualFieldMarkerLineVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Manual Field Marker Line Visibility" desc="On the symbol there is an element that only appears if the symbol has &#60;em&#62;Field Presence Status&#60;/em&#62; equal &#60;em&#62;Manual&#60;/em&#62;. This property is automatically calculated from Field Presence Status and controls the appearance of this element." method-flag="true" visible-flag="false"/>
+  <named-method-link name="deletedFieldMarkerFillVisibility" xlink:role="cpp-method" xlink:title="Deleted Field Marker Fill Visibility" xlink:href="../methods/deleted_field_marker_visibility.kmd#oid1"/>
+  <named-method-link name="deletedFieldMarkerLineVisibility" xlink:role="cpp-method" xlink:title="Deleted Field Marker Line Visibility" xlink:href="../methods/deleted_field_marker_visibility.kmd#oid2"/>
+  <named-method-link name="fieldPresenceColor" xlink:role="cpp-method" xlink:title="Field Presence Color Method" xlink:href="../methods/field_presence_color.kmd#oid1"/>
+  <named-method-link name="manualFieldMarkerFillVisibility" xlink:role="cpp-method" xlink:title="Manual Field Marker Fill Visibility" xlink:href="../methods/manual_field_marker_visibility.kmd#oid1"/>
+  <named-method-link name="manualFieldMarkerLineVisibility" xlink:role="cpp-method" xlink:title="Manual Field Marker Line Visibility" xlink:href="../methods/manual_field_marker_visibility.kmd#oid2"/>
+  <named-method-link name="newFieldMarkerFillVisibility" xlink:role="cpp-method" xlink:title="New Field Marker Fill Visibility" xlink:href="../methods/new_field_marker_visibility.kmd#oid1"/>
+  <named-method-link name="newFieldMarkerLineVisibility" xlink:role="cpp-method" xlink:title="New Field Marker Line Visibility" xlink:href="../methods/new_field_marker_visibility.kmd#oid2"/>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Attribute" xlink:href="#oid1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">1</integer>
+   <string name="fieldPresenceColor" class="volatile">white</string>
+   <string name="newFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="newFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="manualFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="manualFieldMarkerLineVisibility" class="volatile">none</string>
+  </valueset>
+ </type>
+
+ <type id="oid2" name="Origin_Attribute" title="Origin Attribute" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Attribute" xlink:href="#oid1"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" label-flag="true" default-visible="top"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" description-flag="true" default-visible="top"/>
+  <property name="keyLineVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Key Line Visibility" method-flag="true" default-visible="top"/>
+  <property name="keyFillVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Key Fill Visibility" method-flag="true" default-visible="top"/>
+  <property name="isKey" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Is Key" desc="Specifies that this attribute is considered to be either the key of the origin data set, or part of a composite key. This information is not used directly when generating the mapping file, but is meant as information to the user." default-visible="top"/>
+  <property name="sequenceNumber" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence Number" default-visible="bottom"/>
+  <named-method-link name="keyFillVisibility" xlink:role="cpp-method" xlink:title="Key Fill Visibility - Origin Attribute" xlink:href="../methods/key_visibility_method.kmd#oid2"/>
+  <named-method-link name="keyLineVisibility" xlink:role="cpp-method" xlink:title="Key Line Visibility - Origin Attribute" xlink:href="../methods/key_visibility_method.kmd#oid1"/>
+  <valueset vset="default" size="15" xlink:role="type" xlink:title="Origin Attribute" xlink:href="#oid2" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">1</integer>
+   <string name="fieldPresenceColor" class="volatile"></string>
+   <string name="newFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="newFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="manualFieldMarkerFillVisibility" class="volatile">hollow</string>
+   <string name="manualFieldMarkerLineVisibility" class="volatile">none</string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+   <integer name="isKey">0</integer>
+   <integer name="sequenceNumber">99999</integer>
+  </valueset>
+ </type>
+
+ <type id="oid3" name="Target_Attribute" title="Target Attribute" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Attribute" xlink:href="#oid1"/>
+  <property name="keyLineVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Key Line Visibility" method-flag="true" default-visible="top"/>
+  <property name="keyFillVisibility" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Key Fill Visibility" method-flag="true" default-visible="top"/>
+  <named-method-link name="keyFillVisibility" xlink:role="cpp-method" xlink:title="Key Fill Visibility - Target Attribute" xlink:href="../methods/key_visibility_method.kmd#oid4"/>
+  <named-method-link name="keyLineVisibility" xlink:role="cpp-method" xlink:title="Key Line Visibility - Target Attribute" xlink:href="../methods/key_visibility_method.kmd#oid3"/>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Target Attribute" xlink:href="#oid3" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="fieldPresenceStatus">1</integer>
+   <string name="fieldPresenceColor" class="volatile"></string>
+   <string name="newFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="newFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerFillVisibility" class="volatile"></string>
+   <string name="deletedFieldMarkerLineVisibility" class="volatile"></string>
+   <string name="manualFieldMarkerFillVisibility">hollow</string>
+   <string name="manualFieldMarkerLineVisibility">none</string>
+   <string name="keyLineVisibility" class="volatile"></string>
+   <string name="keyFillVisibility" class="volatile"></string>
+  </valueset>
+ </type>
+
+
+</metis>

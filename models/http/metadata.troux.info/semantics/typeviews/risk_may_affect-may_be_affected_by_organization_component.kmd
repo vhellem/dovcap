@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="UUID4_8C4459E5-9846-49AA-9A00-B210977BC71C" xlink:role="type" xlink:title="Risk may affect-may be affected by Organization Component" xlink:href="../relationship_types/risk_may_affect-may_be_affected_by_organization_component.kmd#RelType_Semantics:Risk_may_affect-may_be_affected_by_Organization_Component_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="eaGov Relationship" xlink:href="../symbols/relationship_with_from-to_text.svg#UUID4_66101DCC-6AF1-4B88-8B91-F5A2B9F9F2BD" xlink:actuate="user">
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/relationship.png"/>
+ </typeview>
+
+
+</metis>

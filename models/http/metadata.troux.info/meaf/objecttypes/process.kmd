@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+ <type id="CompType_MEAF:Process_UUID" name="process" title="Process" desc="A Process is a series of operations that transforms Input into Output by use of certain Mechanisms under the Control of some external system or higher-level Processes.&#60;p&#62;A Process takes up a certain interval in the information space, defined by a start action and close action. Actions are events or subprocesses. The internals of a Process may be broken down into subprocesses in a recursive manner. A Process is named by a verb or verb phrase." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="business_process.kmd#CompType_TRM:ProcessStep_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <part-rule min="0" max="0" xlink:role="type" xlink:href="business_process.kmd#CompType_TRM:ProcessStep_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#CompType_MEAF:Process_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="../abstracttypes/process_interaction.kmd#CompType_MEAF:ProcessInteraction_UUID"/>
+  <property name="prefix" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Prefix" desc="The first part of the Identification, e.g. Node A3.2.1, here &#39;Node A&#39; is the prefix. This property will automatically propagate to parts.&#60;p&#62;If you enter a Prefix on a part, a new numbering scheme will start there." mer-property-metadata="uuid=&#34;PropDef_MEAF:Process_prefix_UUID&#34;;"/>
+  <property name="punctuationMark" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#string" label="Punctuation Mark" desc="The character(s) separating the numbers in the Identification, e.g. Node A3.2.1, here &#39;.&#39; is the punctuation mark. This property will automatically propagate to parts." mer-property-metadata="uuid=&#34;PropDef_MEAF:Process_punctuationMark_UUID&#34;;"/>
+  <property name="sequenceNumber" xlink:role="integer-type" xlink:title="Positive Integer" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_positive_integer_UUID" label="Sequence Number" desc="The sequence number of a subprocess relative to its parent, e.g. Node A3.2.1, here &#39;1&#39; is the sequence number of the current process." mer-property-metadata="uuid=&#34;PropDef_MEAF:Process_sequenceNumber_UUID&#34;;"/>
+  <property name="processModelChange" xlink:role="integer-type" xlink:title="Process Model Change" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_process_model_change_UUID" label="Process Model Change" desc="Used to indicate process model change (baseline, added, removed, updated)." default-visible="false" visible-flag="false" mer-property-metadata="uuid=&#34;PropDef_MEAF:Process_processModelChange_UUID&#34;;"/>
+  <property name="identification" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Identification" desc="The generated identification according to the IDEF0 methodology. The top level is always referred to as &#39;0&#39; (e.g. Node A0), the second level is referred to by numbers starting on 1 and upwards (e.g. Node A1, Node A2, Node A3, etc.), the third level is referred to by adding a punctuation mark to the identification on the parent, and a sequence number (e.g. Node A2.1). For an identification on the fourth level generated as &#39;Node A3.2.1&#39;, &#39;Node A&#39; is the prefix of any ancestor, &#39;3.2&#39; is the accumulated identification of the parent, &#39;.&#39; is the punctuation mark of any ancestor, and &#39;1&#39; is the sequence number of the current object." method-flag="true" default-visible="top"/>
+  <property name="BPM_ClosedColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Closed Color" desc="The color value for the process object in a closed state " visible-flag="false" method-flag="true"/>
+  <property name="BPM_OpenColor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Open Color" desc="The color value for the process object in an open state " visible-flag="false" method-flag="true"/>
+  <property name="BPM_FillPattern" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Fill Pattern" desc="The fill pattern for the process object according to value of process model change" visible-flag="false" method-flag="true"/>
+  <property name="BPM_Name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="BPM Name" desc="The name of the stereotype of the process, if any. Will be wrapped into a &#60;&#60;format&#62;&#62; with a break character before." visible-flag="false" method-flag="true"/>
+  <property name="BPM_Description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="BPM Description" desc="The description of the stereotype of the process, if any. " visible-flag="false" method-flag="true"/>
+  <property name="Metis_CreateObjectClosed" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:std#oid30" label="Create Objects Closed" desc="Tag to indicated that all objects of this type should be created closed." shared-flag="true" visible-flag="true"/>
+  <named-method-link name="BPM_ClosedColor" xlink:role="cpp-method" xlink:title="Pick_BPM_Process_Model_Change_Closed_Color" xlink:href="../methods/bpm_methods.kmd#oid1"/>
+  <named-method-link name="BPM_Description" xlink:role="cpp-method" xlink:title="BPM_Get_Stereotype_Description" xlink:href="../methods/bpm_methods.kmd#oid7"/>
+  <named-method-link name="BPM_FillPattern" xlink:role="cpp-method" xlink:title="Pick_BPM_Process_Model_Change_FillPattern" xlink:href="../methods/bpm_methods.kmd#oid5"/>
+  <named-method-link name="BPM_Name" xlink:role="cpp-method" xlink:title="BPM_Get_Stereotype_Name" xlink:href="../methods/bpm_methods.kmd#oid6"/>
+  <named-method-link name="BPM_OpenColor" xlink:role="cpp-method" xlink:title="Pick_BPM_Process_Model_Change_Open_Color" xlink:href="../methods/bpm_methods.kmd#oid2"/>
+  <named-method-link name="process" xlink:role="cpp-method" xlink:title="Enable Process Modeling Commands" xlink:href="../methods/flowlogic.kmd#oid1202"/>
+  <named-method-link name="identification" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/flowlogic.kmd#oid311"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Data----QueryBPM_Data_ObjectOverprocess_sequence_flow_process_data" xlink:role="cpp-method" xlink:title="before Process Data" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_Data_ObjectOverprocess_sequence_flow_process_data"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Data----QueryBPM_Data_ObjectOverprocess_data_sequence_flow_process" xlink:role="cpp-method" xlink:title="after Process Data" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_Data_ObjectOverprocess_data_sequence_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Connection----Queryprocess_connectionOverprocess_connection_sequence_flow_process" xlink:role="cpp-method" xlink:title="after Process Connection" xlink:href="../methods/repository_queries_autogenerated.kmd#Queryprocess_connectionOverprocess_connection_sequence_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Connection----Queryprocess_connectionOverprocess_sequence_flow_process_connection" xlink:role="cpp-method" xlink:title="before Process Connection" xlink:href="../methods/repository_queries_autogenerated.kmd#Queryprocess_connectionOverprocess_sequence_flow_process_connection"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Start_Event----QueryBPM_StartEventOverprocess_start_event_sequence_flow_process" xlink:role="cpp-method" xlink:title="after Process Start Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_StartEventOverprocess_start_event_sequence_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Intermediate_Event----QueryBPM_IntermediateEventOverprocess_sequence_flow_process_intermediate_event" xlink:role="cpp-method" xlink:title="before Process Intermediate Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_IntermediateEventOverprocess_sequence_flow_process_intermediate_event"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_End_Event----QueryBPM_EndEventOverprocess_sequence_flow_process_end_event" xlink:role="cpp-method" xlink:title="before Process End Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_EndEventOverprocess_sequence_flow_process_end_event"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Gateway----QueryBPM_GatewayOverprocess_sequence_flow_process_gateway" xlink:role="cpp-method" xlink:title="before Process Gateway" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_GatewayOverprocess_sequence_flow_process_gateway"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Gateway----QueryBPM_GatewayOverprocess_gateway_sequence_flow_process" xlink:role="cpp-method" xlink:title="after Process Gateway" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_GatewayOverprocess_gateway_sequence_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Intermediate_Event----QueryBPM_IntermediateEventOverprocess_intermediate_event_sequence_flow_process" xlink:role="cpp-method" xlink:title="after Process Intermediate Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_IntermediateEventOverprocess_intermediate_event_sequence_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process----QueryLogicalProcessOverprocess_message_flow_process" xlink:role="cpp-method" xlink:title="message to Process" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryLogicalProcessOverprocess_message_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_End_Event----QueryBPM_EndEventOverprocess_end_event_message_flow_process" xlink:role="cpp-method" xlink:title="message from Process End Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_EndEventOverprocess_end_event_message_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Intermediate_Event----QueryBPM_IntermediateEventOverprocess_message_flow_process_intermediate_event" xlink:role="cpp-method" xlink:title="message to Process Intermediate Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_IntermediateEventOverprocess_message_flow_process_intermediate_event"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Output----QueryOutputOverprocess_output_message_flow_process" xlink:role="cpp-method" xlink:title="message from Process Output" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryOutputOverprocess_output_message_flow_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Data----QueryBPM_Data_ObjectOverprocess_data_association_process" xlink:role="cpp-method" xlink:title="association from Process Data" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_Data_ObjectOverprocess_data_association_process"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Data----QueryBPM_Data_ObjectOverprocess_association_process_data" xlink:role="cpp-method" xlink:title="association to Process Data" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_Data_ObjectOverprocess_association_process_data"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Start_Event----QueryBPM_StartEventOverprocess_message_flow_process_start_event" xlink:role="cpp-method" xlink:title="message to Process Start Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_StartEventOverprocess_message_flow_process_start_event"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Input----QueryInputOverprocess_message_flow_process_input" xlink:role="cpp-method" xlink:title="message to Process Input" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryInputOverprocess_message_flow_process_input"/>
+  <named-method-link name="MetisTrouxClient_--Get Process_Intermediate_Event----QueryBPM_IntermediateEventOverprocess_intermediate_event_message_flow_process" xlink:role="cpp-method" xlink:title="message from Process Intermediate Event" xlink:href="../methods/repository_queries_autogenerated.kmd#QueryBPM_IntermediateEventOverprocess_intermediate_event_message_flow_process"/>
+  <named-criteria-link name="BPM_Find_Process_Stereotype" xlink:role="criteria" xlink:title="BPM_Find_Process_Stereotype" xlink:href="../criteria/bpm_find_process_stereotype.kmd#oid1"/>
+  <named-criteria-link name="ProcessICOMDocument" xlink:role="criteria" xlink:title="Process-&#62;ICOM&#39;s-&#62;Document" xlink:href="../criteria/process_icom_document.kmd#oid1"/>
+  <named-criteria-link name="ProcessICOMInformationGroupInformationObjectAttribute" xlink:role="criteria" xlink:title="Process-&#62;Input/Output&#39;s-&#62;InformationGroup-&#62;InformationObject-&#62;Attribute" xlink:href="../criteria/process_connected_to_info_chain.kmd#oid1"/>
+  <named-criteria-link name="ProcessInformationObjectInformationGroup" xlink:role="criteria" xlink:title="Process-&#62;Information Object/Information Group" xlink:href="../criteria/process_connected_to_information.kmd#oid1"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Process" xlink:href="#CompType_MEAF:Process_UUID">
+   <integer name="Metis_CreateObjectClosed">1</integer>
+  </valueset>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Process" xlink:href="#CompType_MEAF:Process_UUID">
+   <string name="troux_iconAlias">Icon_CompType_MEAF:Process_UUID</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Process" xlink:href="#CompType_MEAF:Process_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="strategicValue"/> 
+   <propertyview name="prefix"/>
+   <propertyview name="punctuationMark"/>
+   <propertyview name="sequenceNumber"/>
+   <propertyview name="identification"/> 
+   <propertyview name="versionId"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="itEffectivenessPercentage"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="duration"/>
+   <propertyview name="durationUnit"/>
+   <propertyview name="automation"/>
+   <propertyview name="processModelChange"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="../layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#FBF492&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/process.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#FBF492&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/process.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/process.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Process" xlink:href="#CompType_MEAF:Process_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="strategicValue"/> 
+   <propertyview name="prefix"/>
+   <propertyview name="punctuationMark"/>
+   <propertyview name="sequenceNumber"/>
+   <propertyview name="identification"/> 
+   <propertyview name="versionId"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="itEffectivenessPercentage"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="duration"/>
+   <propertyview name="durationUnit"/>
+   <propertyview name="automation"/>
+   <propertyview name="processModelChange"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Matrix Layout Strategy" xlink:href="../layoutstrategies/nested_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#FBF492&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#FBF492&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/process.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#FBF492&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#FBF492&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/process.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/process.png" xlink:actuate="auto"/>
+ </typeview>
+
+</metis>

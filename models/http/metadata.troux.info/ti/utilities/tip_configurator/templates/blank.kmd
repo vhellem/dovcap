@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="9.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="1"
+ nextoid="1">
+
+ <template id="oid1" name="Tip_Configurator" title="Tip Configurator" desc="Tip Configurator">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Tip Configurator" xlink:href="../metamodels/tip_config.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  <model-link xlink:role="model" xlink:href="tip_configurator_template.kmv#oid1" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:href="tip_configurator_template.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+  <help-file-url>
+   <url-link xlink:href="http://metadata.troux.info/TI/utilities/tip_configurator/metamodels/tip_reference_guide.chm" xlink:role="Role" xlink:actuate="user"/>
+  </help-file-url>
+ </template>
+
+
+</metis>

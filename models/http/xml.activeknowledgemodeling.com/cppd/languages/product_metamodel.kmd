@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="MetaModel_CPPD:CPPDMetamodel_UUID" name="DeveloperEd.ModelEd.UriToolBar.CPPDMetamodel" title="CPPD" desc="CPPD Metamodel.">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Product Requirements" xlink:href="function_means.kmd#MetaModel_CPPD:FunctionMeans_UUID"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Product Structures" xlink:href="product_definition.kmd#MetaModel_CPPD:ProductDefinition_UUID"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Design Rationale" xlink:href="../../design-rationale/templates/rationale.kmd#_002asmg01795lcgoljtj"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Product Parameterization" xlink:href="product_parameterization.kmd#_002ass501lvnmhnj38v3"/>
+  </metamodel-links>
+ </metamodel>
+
+
+</metis>

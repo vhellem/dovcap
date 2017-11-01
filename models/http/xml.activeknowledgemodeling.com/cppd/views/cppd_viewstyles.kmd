@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ nextoid="1">
+
+ <viewstyle id="oid1" name="CPPD_viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="../../cppd/languages/productelement.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../../eka/languages/eka_property.kmd#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

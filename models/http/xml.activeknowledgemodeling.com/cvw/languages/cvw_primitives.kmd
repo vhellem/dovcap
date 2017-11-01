@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+ <integer-type id="PrimType_CVW:NodeKind_UUID" name="nodeKind" title="Node kind" default="1">
+  <range name="Menu" min="1" max="1"/>
+  <range name="Button" min="2" max="2"/>
+  <range name="Action" min="3" max="3"/>
+  <range name="Abstract" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="PrimType_CVW:RelDir_UUID" name="relDir" title="Relationship direction" default="0">
+  <range name="Parent-to-child" min="0" max="0"/>
+  <range name="Child-to-parent" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="PrimType_CVW:Operator_UUID" name="operator" title="Operator" default="3">
+  <range name="lt" min="1" max="1"/>
+  <range name="le" min="2" max="2"/>
+  <range name="eq" min="3" max="3"/>
+  <range name="ne" min="4" max="4"/>
+  <range name="ge" min="5" max="5"/>
+  <range name="gt" min="6" max="6"/>
+ </integer-type>
+
+ <integer-type id="PrimType_CVW:Linestyle_UUID" name="lineStyle" title="Line style" default="0">
+  <range name="none" min="0" max="0"/>
+  <range name="solid" min="1" max="1"/>
+  <range name="dot" min="2" max="2"/>
+  <range name="dash" min="3" max="3"/>
+  <range name="dashdot" min="4" max="4"/>
+  <range name="dashdotdot" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="PrimType_CVW:Linewidth_UUID" name="lineWidth" title="Line width" default="1">
+  <range name="1" min="1" max="1"/>
+  <range name="2" min="2" max="2"/>
+  <range name="3" min="3" max="3"/>
+  <range name="4" min="4" max="4"/>
+  <range name="5" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="PrimType_CVW:FillPattern_UUID" name="fillPattern" title="Fill pattern" default="0">
+  <range name="none" min="0" max="0"/>
+  <range name="solid" min="1" max="1"/>
+  <range name="hor" min="2" max="2"/>
+  <range name="ver" min="3" max="3"/>
+  <range name="cross" min="4" max="4"/>
+  <range name="bdiag" min="5" max="5"/>
+  <range name="fdiag" min="6" max="6"/>
+  <range name="diagcross" min="7" max="7"/>
+  <range name="dense1" min="8" max="8"/>
+  <range name="dense2" min="9" max="9"/>
+  <range name="dense3" min="10" max="10"/>
+  <range name="dense4" min="11" max="11"/>
+  <range name="dense5" min="12" max="12"/>
+  <range name="dense6" min="13" max="13"/>
+  <range name="dense7" min="14" max="14"/>
+ </integer-type>
+
+</metis>

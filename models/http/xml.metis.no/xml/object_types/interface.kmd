@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="4">
+
+ <type id="oid1" name="Interface" title="Interface" desc="An Interface is used to model the transfer of data from one application to another.&#10;Normally the interface shows temporary storage flow or direct flow of data, as compared to a datastore or database which is used to store data on a more permanent basis. Also note that several interfaces will often use common datastores as storage." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="ITEntity" xlink:href="it_entity.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="TransferType" xlink:role="string-type" xlink:title="TransferType" xlink:href="../primitive_types/primitive_types.kmd#oid48" label="Transfer Type" desc="Business-oriented definition of the type of transfer."/>
+  <property name="TransferMedium" xlink:role="string-type" xlink:title="TransferMedium" xlink:href="../primitive_types/primitive_types.kmd#oid52" label="Transfer Medium" desc="Medium used to implement the transfer."/>
+  <property name="TransferMethod" xlink:role="string-type" xlink:title="TransferMethod" xlink:href="../primitive_types/primitive_types.kmd#oid100" label="Transfer Method" desc="Method used to implement the transfer"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Interface" xlink:href="#oid1"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Interface" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="TransferType">Undefined</string>
+   <string name="TransferMedium">Undefined</string>
+   <string name="TransferMethod">Undefined</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Interface" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/interface.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/interface.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/interface.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>
+

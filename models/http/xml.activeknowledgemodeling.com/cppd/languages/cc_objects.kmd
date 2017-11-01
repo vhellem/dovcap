@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="10"
+ typeviews="5"
+ nextoid="1">
+
+ <type id="ObjType_CPPD:ConfigurableComponent_UUID" name="Configurable_Component" title="Configurable Component (CPPD)" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Configurable Component (CPPD)" xlink:href="#ObjType_CPPD:ConfigurableComponent_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Configurable Component (CPPD)" xlink:href="#ObjType_CPPD:ConfigurableComponent_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CPPD:CompositionElement_UUID" name="CompositionElement" title="Composition element (CPPD)" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Object (EKA)" xlink:href="../../eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Composition request (CPPD)" xlink:href="#ObjType_CPPD:CompositionRequest_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Composition element (CPPD)" xlink:href="#ObjType_CPPD:CompositionElement_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Composition element (CPPD)" xlink:href="#ObjType_CPPD:CompositionElement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CPPD:ComponentVariant_UUID" name="ComponentVariant" title="Component variant (CPPD)" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="productelement.kmd#ObjType_CPPD:ProductElement_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Component variant (CPPD)" xlink:href="#ObjType_CPPD:ComponentVariant_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Component variant (CPPD)" xlink:href="#ObjType_CPPD:ComponentVariant_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Configurable Component (CPPD)" xlink:href="#ObjType_CPPD:ConfigurableComponent_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../../eka/views/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../../eka/views/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../../eka/views/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;&#34;)"/>
+  <replace tag="icon" property="value" macro="(expand &#34;../../eka/views/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Composition element (CPPD)" xlink:href="#ObjType_CPPD:CompositionElement_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../../eka/views/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../../eka/views/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../../eka/views/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  <replace tag="icon" property="value" macro="(expand &#34;../../eka/views/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Component variant (CPPD)" xlink:href="#ObjType_CPPD:ComponentVariant_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../../eka/views/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../../eka/views/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../../eka/views/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="iconbackground" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  <replace tag="icon" property="value" macro="(expand &#34;../../eka/views/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

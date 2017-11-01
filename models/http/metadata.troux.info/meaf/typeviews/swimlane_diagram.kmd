@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Swimlane Diagram" xlink:href="http://xml.computas.com/xml/diagrams/object_types/swimlane_diagram.kmd#oid1" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme fixedlayoutset fixedlayoutlocked ">
+  <layout-link xlink:role="object" xlink:title="Swimlane layout collection" xlink:href="http://xml.computas.com/xml/diagrams/layout_strategies/swimlane_layout.kmd#oid3"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Diagram" xlink:href="http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid5" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:10pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Swimlane Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid6&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Diagram" xlink:href="http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:10pt&#62;&#34; (label) &#34;&#60;/span&#62;&#34;)"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Swimlane Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.computas.com/xml/diagrams/symbols/diagram.svg#oid6&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.computas.com/xml/diagrams/small_icons/swimlane_diagram.png"/>
+ </typeview>
+
+
+
+</metis>

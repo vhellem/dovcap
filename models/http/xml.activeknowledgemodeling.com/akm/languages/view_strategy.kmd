@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ 
+ <type id="ObjType_AKM:ViewStrategy_UUID" name="viewStrategy" title="View strategy (AKM)" desc="View strategy." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Object (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Part of rule" xlink:href="#ObjType_AKM:PartOfRule_UUID"/>
+  <named-method-link name="PropertyDialog.Customization" xlink:role="cpp-method" xlink:title="ViewStrategyPropertyDialog" xlink:href="#oid110"/>
+ </type>
+
+ <type id="ObjType_AKM:PartOfRule_UUID" name="partOfRule" title="Part of rule (AKM)" desc="Part of rule." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Object (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID"/>
+  <property name="RelDir" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Relationship direction (0 = out/ 1 = in)" desc="Relationship direction (0 = out/ 1 = in)" visible-flag="true"/>
+  <property name="RelType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Relationship type" desc="Relationship type that defines hierarchy." visible-flag="true"/>
+  <property name="PartType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Part type" desc="Child type in hierarchy." visible-flag="true"/>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="ViewStrategy" xlink:href="#ObjType_AKM:ViewStrategy_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (method getIcon))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand (method getIcon))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/product.png"/>
+ </typeview>
+
+ <cpp-method id="oid110" name="ViewStrategyPropertyDialog" language="c++" bind="NO.METIS.UML.propertyDialog" required-dll="gem_uml">
+    <arg-list size="10">
+      <string name="TabName1">MetisModelTab</string>
+      <string name="Visibility1">Hide</string>
+      <string name="TabName2">MetisDataTab</string>
+      <pointer name="Widget2" xlink:role="method" xlink:title="ViewStrategyDataTab" xlink:href="#oid120" xlink:actuate="auto"/>
+      <string name="TabName3">Part of rules</string>
+      <pointer name="Widget3" xlink:role="method" xlink:title="PartOfTab" xlink:href="#oid121" xlink:actuate="auto"/>
+      <string name="InsertPosition3">MetisLinksTab</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid120" name="ViewStrategyDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+    <arg-list size="6">
+      <string name="Row1">name</string>
+      <string name="Row2">description,,</string>
+   </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid121" name="PartOfTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+    <arg-list size="7">
+      <string name="Row1">name</string>
+      <string name="Row2">Subform</string>
+      <string name="Subform.Caption">Part of rules:</string>
+      <string name="Subform.Columns">name,RelDir,RelType,PartType</string>
+      <string name="Subform.Link">parts</string>
+      <string name="Subform.Link.Type">http://xml.activeknowledgemodeling.com/akm/languages/view_strategy.kmd#ObjType_AKM:PartOfRule_UUID</string>
+      <string name="ReadOnly">name</string>
+   </arg-list>
+ </cpp-method>
+  
+</metis>

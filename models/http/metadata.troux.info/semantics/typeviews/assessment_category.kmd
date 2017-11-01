@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="UUID4_FEA15CCC-CB60-47C0-92F4-8920E3F612A2" xlink:role="type" xlink:title="Assessment Category" xlink:href="../object_types/assessment_category.kmd#CompType_Semantics:Assessment_Category_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/assessment_category.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#EBD5D5&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/assessment_category.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/assessment_category.png"/>
+ </typeview>
+
+
+</metis>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="IRTV:Operator" name="Operator" desc="Used when the role uses the view for performing a set of task. This role is the &#34;end user&#34; of the view." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Applies view" xlink:href="applies_view.kmd#IRTV:Applies"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Operator" xlink:href="#IRTV:Operator" xlink:actuate="user">
+   <string name="from">operates</string>
+   <string name="to">is operated by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Operator" xlink:href="#IRTV:Operator" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ nextoid="1">
+
+ <type id="Has_input" name="Has_input" title="Has input" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Has parameter" xlink:href="#Has_parameter"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has input" xlink:href="#Has_input" xlink:actuate="user">
+   <string name="from">has input</string>
+   <string name="to">input to</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Has input" xlink:href="#Has_input" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="input">1</integer>
+   <integer name="output">0</integer>
+   <integer name="multiple_values">0</integer>
+   <integer name="mandatory">0</integer>
+   <integer name="sequence_number">0</integer>
+  </valueset>
+ </type>
+
+ <type id="Has_output" name="Has_output" title="Has output" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Has parameter" xlink:href="#Has_parameter"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has output" xlink:href="#Has_output" xlink:actuate="user">
+   <string name="from">has output</string>
+   <string name="to">output from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Has output" xlink:href="#Has_output" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="input">0</integer>
+   <integer name="output">1</integer>
+   <integer name="multiple_values">0</integer>
+   <integer name="mandatory">0</integer>
+   <integer name="sequence_number">0</integer>
+  </valueset>
+ </type>
+
+ <type id="Has_parameter" name="Has_parameter" title="Has parameter" desc="The element is input parameter for the task, or a place to keep outputs." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+  <property name="input" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Input" desc="If this is an input parameter" default-visible="bottom"/>
+  <property name="output" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Output" desc="If this is an output parameter" default-visible="bottom"/>
+  <property name="multiple_values" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Multiple values" desc="If this parameter can take mulitple values" default-visible="top"/>
+  <property name="mandatory" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Mandatory" desc="If this input parameter is mandatory for the task to be performed" default-visible="bottom"/>
+  <property name="sequence_number" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequence number" desc="Used for ordering multiple parameters, e.g. in a method or web service call." default-visible="bottom"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Task (EKA)" xlink:href="eka_task.kmd#ekaTask" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has parameter" xlink:href="#Has_parameter" xlink:actuate="user">
+   <string name="from">has parameter</string>
+   <string name="to">parameter for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Has parameter" xlink:href="#Has_parameter" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="input">1</integer>
+   <integer name="output">0</integer>
+   <integer name="multiple_values">0</integer>
+   <integer name="mandatory">0</integer>
+   <integer name="sequence_number">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

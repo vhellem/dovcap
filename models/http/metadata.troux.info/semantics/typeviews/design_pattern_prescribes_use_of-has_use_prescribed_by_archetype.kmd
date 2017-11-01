@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="UUID4_DFD9B62C-AD30-4538-BF99-36D3B2508423" xlink:role="type" xlink:title="Design Pattern prescribes use of-has use prescribed by Archetype" xlink:href="../relationship_types/design_pattern_prescribes_use_of-has_use_prescribed_by_archetype.kmd#RelType_Semantics_Patterns:Design_Pattern_prescribes_use_of-has_use_prescribed_by_Archetype_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="eaGov Relationship" xlink:href="../symbols/relationship_with_from-to_text.svg#UUID4_66101DCC-6AF1-4B88-8B91-F5A2B9F9F2BD" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/relationship.png"/>
+ </typeview>
+
+
+</metis>

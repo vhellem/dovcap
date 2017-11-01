@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Location_Domain" title="Location Domain" desc="Use the Location domain to capture information about location types and actual geographical locations where the business operates. Location types may be sales offices, assembly plants, and so on, that have identical or similar tasks and IT architectures.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Location" xlink:href="../objecttypes/location.kmd#CompType_TRM:Location_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Location" xlink:href="../objecttypes/logical_location.kmd#CompType_MEAF:LogicalLocation_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="11">
+   <complex-type-link xlink:role="type" xlink:title="Location consists of Location" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#RelType_ConsistsOfRegion_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Location consists of Location" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_logical_location_consists_of_is_part_of_location_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

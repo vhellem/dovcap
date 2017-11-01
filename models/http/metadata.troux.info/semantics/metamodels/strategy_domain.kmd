@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_151BF96A-F584-4A76-8456-521A44354EC5" name="Strategy_Domain" title="Strategy Domain" desc="Mirrors the metamodel of the same name in Troux Semantics. ">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="strategy_domain_relationship_types.kmd#UUID4_19ACC6FB-9B83-43FF-A7A4-0212479C19C9"/>
+  </metamodel-links>
+  <complex-type-links size="2">
+   <complex-type-link xlink:role="type" xlink:title="Value Chain" xlink:href="../object_types/value_chain.kmd#CompType_Semantics_EBA:Value_Chain_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Mission" xlink:href="../object_types/mission.kmd#CompType_eaGov_SP:Mission_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

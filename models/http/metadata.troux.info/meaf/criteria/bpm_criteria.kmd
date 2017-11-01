@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ criteria="2"
+ nextoid="1">
+
+ <criteria id="oid1" name="getParent" title="getParent" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="partof"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid2" name="findAllBpmTextCandidates" title="Find All Bpm-Text Candidates" desc="Traverse the entire modelview, and return all objects that may contain a BPM text object." background-flag="true">
+  <c-op kind="and">
+   <c-op kind="or">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Process Gateway" xlink:href="../objecttypes/process_gateway.kmd#CompType_TRM:ProcessDecision_UUID"/>
+    </c-op>
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID"/>
+    </c-op>
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="Process Event" xlink:href="../abstracttypes/process_event.kmd#CompType_MEAF:ProcessEvent_UUID"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid3" name="allConnectedTextObjects" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from" use-off-flag="true">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="part">
+    <c-op kind="object">
+     <complex-type-link xlink:role="type" xlink:title="BPM Text" xlink:href="../objecttypes/bpm_text.kmd#CompType_MEAF:BPMText_UUID"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

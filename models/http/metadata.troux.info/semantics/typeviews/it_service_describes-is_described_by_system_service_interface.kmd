@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="UUID4_217FB48C-1ADB-42DC-A215-8BD85CAF2120" xlink:role="type" xlink:title="IT Service describes-is described by System Service Interface" xlink:href="../relationship_types/it_service_describes-is_described_by_system_service_interface.kmd#RelType_Semantics:IT_Service_describes-is_described_by_System_Service_Interface_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="eaGov Relationship" xlink:href="../symbols/relationship_with_from-to_text.svg#UUID4_66101DCC-6AF1-4B88-8B91-F5A2B9F9F2BD" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/relationship.png"/>
+ </typeview>
+
+
+</metis>

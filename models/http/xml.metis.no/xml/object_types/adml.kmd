@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="19"
+ typeviews="15"
+ nextoid="45">
+
+ <string-type id="oid11" name="datatype" title="Datatype" default="any">
+  <string class="shared">int</string>
+  <string class="shared">float</string>
+  <string class="shared">string</string>
+  <string class="shared">boolean</string>
+  <string class="shared">any</string>
+  <string class="shared">identifier</string>
+  <string class="shared">uri</string>
+  <string class="shared">char</string>
+ </string-type>
+
+ <type id="oid12" name="Component" title="Component" desc="The &#39;Component&#39; is used to represent functional/processing units or data stores." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid35"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid22"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid16"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid17"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid12">
+   <string name="name" class="shared"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid13" name="Connector" title="Connector" desc="The &#39;Connector&#39; intermediates and manages interactions between two or more component ports.  Bypass roles and directly connect two ports a simple Connector(bi or uni-directional) when the Connector does not need architectural representation." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid36"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid15"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid22"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid17"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid16"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid13">
+   <string name="name" class="shared"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid14" name="Port" title="Port" desc="The &#39;Port&#39; is used to describe a Component&#39;s interface." usage="object">
+  <typeview-link xlink:role="typeview" xlink:href="#oid37"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid22"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid16"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid17"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid14">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid15" name="Role" title="Role" desc="The &#39;Role&#39; is used to describe an interface to a Connector.  Thus the &#39;Role&#39; describes the role played by the indicated Component within the context of the Connector." usage="object">
+  <typeview-link xlink:role="typeview" xlink:href="#oid38"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid16"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid17"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid15">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid16" name="Representation" title="Representation" desc="Every Component, Connector, Port, and Role may have one or more Representations.  As implemented in Metis, each has a default &#39;Representation&#39; which is its contents.  Additional Representations are included via the explicit use of thie &#39;Representation&#39; element." usage="object">
+  <typeview-link xlink:role="typeview" xlink:href="#oid34"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:href="#oid18"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid12"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid13"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid15"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid17"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid16">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid17" name="Property" title="Property" desc="&#39;Property&#39; is used to document additional properties of the element not predefined in the metamodel." usage="object">
+  <typeview-link xlink:role="typeview" xlink:href="#oid39"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <property name="value" xlink:role="string-type" xlink:href="metis:std#oid42" label="Value" desc=""/>
+  <property name="propertytype" xlink:role="string-type" xlink:href="#oid11" label="Property Type"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid22"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid27"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid25"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:href="#oid17">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="value"></string>
+   <string name="propertytype">any</string>
+  </valueset>
+ </type>
+
+ <type id="oid18" name="System" title="System" desc="The &#39;System&#39; is used to document the relationships between two or more components/connectors." usage="object">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid40"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid12"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid13"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid15"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid17"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid16"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid44"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid18">
+   <string name="name" class="shared"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid19" name="UniConnector" title="Simple Connector (uni)" desc="Simple Connectors can be used whenever the connector does not require detailed documentation.  This simple connector is unidirectional and reflects either a client/server relationship or data flow direction." usage="relationship">
+  <typeview-link xlink:role="typeview" xlink:href="#oid43"/>
+  <property name="from" xlink:role="string-type" xlink:href="metis:std#oid42" label="From role" desc="initiator&#39;s role" origin-text-flag="true"/>
+  <property name="to" xlink:role="string-type" xlink:href="metis:std#oid42" label="To role" desc="recipient&#39;s role" target-text-flag="true"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+  </connect-rule>
+  <valueset vset="default" size="4" xlink:role="type" xlink:href="#oid19">
+   <string name="from"></string>
+   <string name="to"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid20" name="BiConnector" title="Simple Connector (bi)" desc="Simple Connectors can be used between two ports whenever the connector does not require detailed documentation.  This simple connector is bidirectional and reflects either a peer/peer relationship or bi-directional data flow.&#34;" usage="relationship">
+  <typeview-link xlink:role="typeview" xlink:href="#oid42"/>
+  <property name="from" xlink:role="string-type" xlink:href="metis:std#oid42" label="From role" desc="initiator&#39;s role"/>
+  <property name="to" xlink:role="string-type" xlink:href="metis:std#oid42" label="To role" desc="recipient&#39;s role" target-text-flag="true"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+  </connect-rule>
+  <valueset vset="default" size="4" xlink:role="type" xlink:href="#oid20">
+   <string name="from"></string>
+   <string name="to"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid21" name="Attach " title="Attach" desc="&#39;Attach&#39; is used to link a component&#39;s port to a connector&#39;s role." usage="relationship">
+  <typeview-link xlink:role="typeview" xlink:href="#oid41"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="#oid15"/>
+  </connect-rule>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="#oid15"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+  </connect-rule>
+ </type>
+
+ <type id="oid22" name="MetaProperty" title="MetaProperty" desc="&#39;MetaProperty&#39; is used to document properties on the meta level." usage="object">
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <property name="value" xlink:role="string-type" xlink:href="metis:std#oid42" label="Value" desc=""/>
+  <property name="propertytype" xlink:role="string-type" xlink:href="#oid11" label="Property Type"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid25"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid27"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:href="#oid22">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="value"></string>
+   <string name="propertytype">any</string>
+  </valueset>
+ </type>
+
+ <type id="oid23" name="Design" title="Design" usage="object">
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid18"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid24"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid23">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid24" name="Family" title="Family" usage="object">
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid22"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid12"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid13"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid14"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid15"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid17"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid16"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid44"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid24">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid25" name="PropertyType" title="Property Type" usage="object">
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:href="#oid26"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid25">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid26" name="PropertyLiteralType" title="Property LiteralType" usage="object">
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <property name="type" xlink:role="string-type" xlink:href="#oid11" label="Property Type"/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:href="#oid26">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="type">any</string>
+  </valueset>
+ </type>
+
+ <type id="oid27" name="PropertyValue" title="Property Value" usage="object">
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:href="#oid28"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid27">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="oid28" name="PropertyLiteralValue" title="Property Literal Value" usage="object">
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <property name="value" xlink:role="string-type" xlink:href="metis:std#oid42" label="Value" desc=""/>
+  <valueset vset="default" size="3" xlink:role="type" xlink:href="#oid28">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="value"></string>
+  </valueset>
+ </type>
+
+ <type id="oid44" name="Attachments" title="Attachments" usage="object">
+ </type>
+
+ <typeview id="oid29" xlink:role="type" xlink:href="#oid16" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/property_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/property_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/property_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid34" xlink:role="type" xlink:href="#oid16" tree-size="0.5" nested-size="0.5" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/representation_open.svg#oid0" xlink:actuate="user">
+   <replace tag="border" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="shadow" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="border" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="shadow" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/representation_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="border" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="shadow" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="shadow" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="border" property="linestyle" macro="(expand &#34;none&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/representation_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid35" xlink:role="type" xlink:href="#oid12" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/component_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/component_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/component_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid36" xlink:role="type" xlink:href="#oid13" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/connector_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/connector_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/connector_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid37" xlink:role="type" xlink:href="#oid14" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/port_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/port_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/port_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid38" xlink:role="type" xlink:href="#oid15" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/role_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/role_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/role_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid39" xlink:role="type" xlink:href="#oid17" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/property_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/property_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/property_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid40" xlink:role="type" xlink:href="#oid18" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/representation_open.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/representation_closed.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/representation_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid41" xlink:role="type" xlink:href="#oid21" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/attach.svg#oid0" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/attach_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid42" xlink:role="type" xlink:href="#oid20" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/biconnector.svg#oid0" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/biconnector_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid43" xlink:role="type" xlink:href="#oid19" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/uniconnector.svg#oid0" xlink:actuate="user">
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../symbols/uniconnector_icon_1.png" xlink:actuate="user"/>
+ </typeview>
+
+
+</metis>
+

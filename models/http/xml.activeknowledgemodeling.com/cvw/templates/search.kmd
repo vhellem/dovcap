@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="search" name="Search" desc="Types fro specifying queries, e.g. criteria.">
+  <complex-type-links size="4">
+   <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Member_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Condition" xlink:href="../../rule/languages/rule_condition.kmd#condition" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Query" xlink:href="../languages/query.kmd#ekaQuery" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="has Criteria" xlink:href="../languages/has_criteria.kmd#has_Criteria"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

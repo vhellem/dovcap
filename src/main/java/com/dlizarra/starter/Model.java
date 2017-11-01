@@ -143,9 +143,22 @@ public class Model {
             }
         }
 
+        // Hardcoded to get the built-in icons from TA.
+        objectIterator = objectL.iterator();
+        while(objectIterator.hasNext()){
+            myObject currObject = objectIterator.next();
+            if(currObject.type.equals("Button (CVW)")){
+                currObject.addValueset("icon", "button_plus.png");
+            }
+            else if (currObject.type.equals("Role (Actor)")){
+                currObject.addValueset("icon", "role.svg");
+            }
+        }
+
         // Attempts to find and add icons for the files that does not have any icons yet.
         // Will probably add more icons than wanted, so uncomment with caution.
-        File folder = new File("models/");
+        /*
+        File folder = new File("src/main/frontend/app/image/");
         File[] listOfFiles = folder.listFiles();
         objectIterator = objectL.iterator();
         while(objectIterator.hasNext()){
@@ -184,6 +197,7 @@ public class Model {
                 }
             }
         }
+        */
 
         //Sorts the modelviews based on their "seq" attribute.
         ArrayList<Integer> seqs = new ArrayList();

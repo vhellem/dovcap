@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="2"
+ nextoid="1">
+
+ <metamodel id="oid1" name="IT_Architecture_Domain" title="IT Architecture Domain" desc="Use the IT Architecture domain to model:&#10;1. Architecture templates, i.e. rule based generic architectures used to define how various parts of the business can define architectures to be implemented. &#10;2. Logical architectures, i.e. architectures defined by project, business area, application sector, and so on.&#10;3. Library of logical architecture components (applications, datastores, and technology items).&#10;Each element within an architecture (both generic or logical) represents the use of one of the logical components in the library. This therefore implies that each of the elements within an architecture should be connected to one, and only one, of the logical architecture components (Logical Application, Logical Datastore, or Logical Technology Item). This connection is established using the &#34;implemented by&#34; relationship type. Note that when you create a relationship of this type the name and description of the library component is transferred to the architecture element, and the name is displayed on the object together with any name you may have assigned to the architecture element itself. &#10;You can use the Category type found in the General domain to build a high-level category/classification structure of the components in the library&#10;Use the &#34;connects to/from&#34; relationship type to define different types of connections between the elements of an architecture template or of a logical architecture.&#10;Use the Design Principle object type found in the Policy domain to define design rules for both types of architectures. &#10;Rules for the design of an Architecture Template are also expressed by relating Architecture Template Elements to IT products (HW and SW) (Approved Product List) modeled with the types in the IT Product domain, and company databases (datastores or databases) that define the IT products and data files that the rule, defined by the relationship, allows you to use to implement the elements.&#10;You can describe how the elements of a Logical Architecture are implemented by relating them to physical, deployed Applications, Datastores, and Technology Items.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid2"/>
+  </metamodel-links>
+  <complex-type-links size="10">
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard" xlink:href="../objecttypes/industry_standard.kmd#CompType_ITG:IndustryStandard_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard Version" xlink:href="../objecttypes/industry_standard_version.kmd#CompType_ITG:Industry_Standard_Version_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture Element" xlink:href="../objecttypes/it_architecture_element.kmd#CompType_MEAF:ITArchitectureElement_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture" xlink:href="../objecttypes/it_architecture.kmd#CompType_MEAF:ITArchitecture_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Application" xlink:href="../objecttypes/logical_application.kmd#CompType_MEAF:LogicalApplication_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Datastore" xlink:href="../objecttypes/logical_datastore.kmd#CompType_MEAF:LogicalDatastore_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Technology Item" xlink:href="../objecttypes/logical_technology_item.kmd#CompType_MEAF:LogicalTechnologyItem_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Technology" xlink:href="../objecttypes/technology.kmd#CompType_MEAF:Technology_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Business Application" xlink:href="../../semantics/object_types/business_application.kmd#CompType_Semantics:Business_Application_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Infrastructure Application" xlink:href="../../semantics/object_types/infrastructure_application.kmd#CompType_Semantics:Infrastructure_Application_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+ <metamodel id="oid2" name="RelshipshipTypes" title="Relationship Types">
+  <complex-type-links size="22">
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture Element allows Technology" xlink:href="../relationshiptypes/allows-is_allowed_as.kmd#Reltype_it_architecture_element_allows_is_allowed_as_technology_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture Component connects to IT Architecture Component" xlink:href="../relationshiptypes/connects_to-connects_from_name.kmd#Reltype_it_architecture_component_connects_to_connects_from_name_it_architecture_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture consists of IT Architecture Element" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_it_architecture_consists_of_is_part_of_it_architecture_element_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture consists of IT Architecture" xlink:href="../relationshiptypes/consists_of-is_part_of.kmd#Reltype_it_architecture_consists_of_is_part_of_it_architecture_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Basic Component evolved to Basic Component" xlink:href="../relationshiptypes/evolved_to-evolved_from.kmd#Reltype_generic_component_evolved_to_evolved_from_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_generic_component_general_relationship_container_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="../relationshiptypes/general_relationship.kmd#Reltype_container_general_relationship_generic_component_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="has scope" xlink:href="../relationshiptypes/has_scope-is_scoped_by.kmd#RelType_ITG:has_scope-is_scoped_by_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture has template IT Architecture" xlink:href="../relationshiptypes/has_template-is_template_for.kmd#Reltype_it_architecture_has_template_is_template_for_it_architecture_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Standard has version Industry Standard Version" xlink:href="../relationshiptypes/has_version-is_version_of.kmd#RelType_ITG:Industry_Standard_has_Industry_Standard_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Application implements IT Architecture Element" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_logical_application_implements_is_implemented_by_it_architecture_element_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Datastore implements IT Architecture Element" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_logical_datastore_implements_is_implemented_by_it_architecture_element_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Logical Technology Item implements IT Architecture Element" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_logical_technology_item_implements_is_implemented_by_it_architecture_element_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Technology implements IT Architecture Element" xlink:href="../relationshiptypes/implements-is_implemented_by.kmd#Reltype_technology_implements_is_implemented_by_it_architecture_element_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="installs" xlink:href="../relationshiptypes/installs-is_installed_by.kmd#RelType_ITG:installs-is_installed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IS Version relates to IS Version" xlink:href="../relationshiptypes/relates_to-relates_from.kmd#RelType_ITG:IS_Version_relates_to_IS_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="replaces" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:replaces-is_replaced_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Industry Std Version replaces Industry Std Version" xlink:href="../relationshiptypes/replaces-is_replaced_by.kmd#RelType_ITG:Industry_Standard_Version_replaces_Industry_Standard_Version_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="reviews" xlink:href="../relationshiptypes/reviews-is_reviewed_by.kmd#RelType_ITG:reviews-is_reviewed_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="sells" xlink:href="../relationshiptypes/sells-is_sold_by.kmd#RelType_ITG:sells-is_sold_by_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="IT Architecture Component sends data to IT Architecture Component" xlink:href="../relationshiptypes/sends_data_to-receives_data_from.kmd#Reltype_it_architecture_component_sends_data_to_receives_data_from_it_architecture_component_UUID"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

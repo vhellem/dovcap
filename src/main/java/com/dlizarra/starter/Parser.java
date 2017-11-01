@@ -141,6 +141,17 @@ public class Parser extends DefaultHandler {
     }
 
     public String lookupFileName(String filename) {
+        if(filename.startsWith("http://") && filename.matches(".*\\.(kmv|kmd).*")){
+            // This is assumed to be on the correct form.
+            try {
+                int endIndex = filename.lastIndexOf(".");
+                int startIndex = 7;
+                return "models/http/" + filename.substring(startIndex, endIndex+4);
+            }
+            catch (Exception e) {
+                // It was not on the correct form.
+            }
+        }
         try{
             return "models/" + removeDirectory(filename);
         } catch (Exception e){
