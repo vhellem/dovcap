@@ -78,7 +78,8 @@ class ContainerObject extends React.Component {
     emitter.emit(this.state.id, x, y, width, height);
   }
 
-  componentWillUnMount = () => {
+
+  componentWillUnMount() {
     // This does not work, but should be fixed in relationships?
     const emitter = ObjectEmitter;
     emitter.emit(this.state.id, -1, -1, -1, -1);
@@ -93,6 +94,11 @@ class ContainerObject extends React.Component {
       emitter.emit('Users');
     }
   };
+
+  componentWillMount() {
+    const emitter = ObjectEmitter;
+    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
+  }
 
   handleDragMove = e => {
     this.setState({
@@ -203,6 +209,12 @@ class ContainerObject extends React.Component {
       this.props.container.name === 'Name'
     ) {
       offSetX = 7;
+    }
+
+    if (
+      isNaN(this.state.x)
+    ) {
+      return <Group />;
     }
 
     return (

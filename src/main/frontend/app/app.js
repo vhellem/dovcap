@@ -6,6 +6,14 @@ import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
 import ObjectEmitter from './component/ObjectEmitter';
 
+
+var options = [
+  { value: 'one', label: 'One' },
+  { value: 'two', label: 'Two' },
+  { value: 'three', label: 'Three' },
+  { value: 'four', label: 'Four' },
+];
+
 class App extends React.Component {
   constructor() {
     super();
@@ -21,7 +29,8 @@ class App extends React.Component {
       modelViewWidth: 0,
       modelViewHeight: 0,
       direction: '',
-      lastScrollPos: 0
+      lastScrollPos: 0,
+      relTypesSelected: [],
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
@@ -177,7 +186,14 @@ class App extends React.Component {
     }
   }
 
+
+
   render() {
+
+
+
+
+
     if ((this.state.selectedModel || this.state.selectedModel === 0) && this.state.modelViews) {
       return (
         <div>
