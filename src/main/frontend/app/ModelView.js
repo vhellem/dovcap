@@ -1,5 +1,5 @@
 import React from 'react';
-import ContainerObject from './component/ContainerObject.js';
+import Container from './Container.js';
 import Relationship from './component/Relationship.js';
 import { Layer, Stage } from 'react-konva';
 import Select from 'react-select';
@@ -65,7 +65,7 @@ class ModelView extends React.Component {
         </div>
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
-            <ContainerObject
+            <Container
               container={this.state.children[0]}
               parentWidth={this.state.width * this.state.zoom}
               parentHeight={this.state.height * this.state.zoom}
