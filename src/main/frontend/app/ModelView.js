@@ -62,7 +62,7 @@ class ModelView extends React.Component {
     return (
       <div>
         <center>
-          <div style={{ width: 500 }}>
+          <div style={{ marginLeft: 100, marginRight: 100 }}>
             <h3> Show relationship types:</h3>
             <Select
               name="form-field-name"
