@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from './Container.js';
+import ContainerObject from './component/ContainerObject.js';
 import Relationship from './component/Relationship.js';
 import { Layer, Stage } from 'react-konva';
 import Select from 'react-select';
@@ -29,6 +29,7 @@ class ModelView extends React.Component {
       width: props.width,
       height: props.height,
       relTypesSelected: ["Has property"],
+
     };
         this.handleSelectChange = this.handleSelectChange.bind(this);
   }
@@ -41,7 +42,7 @@ class ModelView extends React.Component {
       xOffset: newProps.xOffset,
       yOffset: newProps.yOffset,
       width: newProps.width,
-      height: newProps.height,
+      height: newProps.height
     });
   }
 
@@ -64,7 +65,7 @@ class ModelView extends React.Component {
         </div>
         <Stage width={this.state.width} height={this.state.height}>
           <Layer>
-            <Container
+            <ContainerObject
               container={this.state.children[0]}
               parentWidth={this.state.width * this.state.zoom}
               parentHeight={this.state.height * this.state.zoom}
