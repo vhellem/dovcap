@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+
+ <typeview id="oid1" xlink:role="type" xlink:title="BPM Text" xlink:href="../objecttypes/bpm_text.kmd#CompType_MEAF:BPMText_UUID" tree-size="0.4" nested-size="0.125" behavior="tree" position="top" placement="external" gui-behavior="guibehaviorset guirmbm guiincludeincopy ">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm/bpm_text.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property text))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm/bpm_text.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property text))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="BPM Text" xlink:href="../objecttypes/bpm_text.kmd#CompType_MEAF:BPMText_UUID" tree-size="0.4" nested-size="0.125" behavior="tree" position="top" placement="external" gui-behavior="guibehaviorset guirmbm guiincludeincopy">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm/bpm_text.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:7pt&#62;&#34; (property text) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Text" xlink:href="../symbols/bpm/bpm_text.svg#oid61" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9pt&#62;&#34; (property text) &#34;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

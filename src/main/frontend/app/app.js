@@ -6,13 +6,6 @@ import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
 import ObjectEmitter from './component/ObjectEmitter';
 
-var options = [
-  { value: 'one', label: 'One' },
-  { value: 'two', label: 'Two' },
-  { value: 'three', label: 'Three' },
-  { value: 'four', label: 'Four' },
-];
-
 class App extends React.Component {
   constructor() {
     super();
@@ -38,7 +31,7 @@ class App extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   componentWillMount() {
-    selectModelFromBackend(this.props.model).then(res => {
+    selectModelFromBackend(this.props.match.params.modelID).then(res => {
       const json = JSON.parse(res.text);
 
       this.setState({
@@ -47,6 +40,16 @@ class App extends React.Component {
         relationships: json.relationshipL,
         objectViews: json.viewL,
       });
+      if (this.props.match.params.viewID) {
+        const model = json.modelViewL.find(
+          object => object.attributes.title === this.props.match.params.viewID
+        );
+        const modelIndex = json.modelViewL.indexOf(model);
+
+        this.setState({
+          selectedModel: modelIndex,
+        });
+      }
 
       console.log(json);
       this.updateWindowDimensions();
@@ -194,9 +197,13 @@ class App extends React.Component {
             />
           </div>
           <Tabs activeKey={this.state.selectedModel.toString()} onChange={this.onChange}>
-            {this.state.modelViews.map((modelView, index) => (
-              <TabPane tab={modelView.attributes.title} key={index} />
-            ))}
+            {this.state.modelViews.map((modelView, index) => {
+              return (
+                <TabPane tab={modelView.attributes.title} key={index}>
+                  {modelView.attributes.title}
+                </TabPane>
+              );
+            })}
           </Tabs>
         </div>
       );

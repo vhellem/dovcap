@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002asno00seb6lcl5nbu" name="Tasks" desc="Types used for defiuning typesa dn other kinds of automatic or manual actions, usch as rules, as well as control elements, e.g. events and conditions.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Rule modeling" xlink:href="../../rule/templates/rule.kmd#rule_modeling"/>
+  </metamodel-links>
+  <complex-type-links size="12">
+   <complex-type-link xlink:role="type" xlink:title="Task (EKA)" xlink:href="../../eka/languages/eka_task.kmd#ekaTask" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Project" xlink:href="../languages/project.kmd#AKM_Project" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Decision (EKA)" xlink:href="../../eka/languages/eka_decision.kmd#ekaDecision" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Rule (EKA)" xlink:href="../../eka/languages/eka_rule.kmd#ekaRule" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Event (EKA)" xlink:href="../../eka/languages/eka_event.kmd#ekaEvent" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="trigger" xlink:href="../../eka/languages/eka_relships.kmd#trigger"/>
+   <complex-type-link xlink:role="type" xlink:title="works on" xlink:href="../../eka/languages/eka_relships.kmd#works_on"/>
+   <complex-type-link xlink:role="type" xlink:title="Has parameter" xlink:href="../../eka/languages/has_parameter.kmd#Has_parameter"/>
+   <complex-type-link xlink:role="type" xlink:title="Has input" xlink:href="../../eka/languages/has_parameter.kmd#Has_input"/>
+   <complex-type-link xlink:role="type" xlink:title="Has output" xlink:href="../../eka/languages/has_parameter.kmd#Has_output"/>
+   <complex-type-link xlink:role="type" xlink:title="Depends on" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:DependsOn_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Applies view" xlink:href="../languages/applies_view.kmd#IRTV:Applies"/>
+  </complex-type-links>
+  <primitive-type-links size="1">
+   <primitive-type-link xlink:role="integer-type" xlink:title="Task Status" xlink:href="../../eka/languages/eka_task.kmd#Task_Status"/>
+  </primitive-type-links>
+  <typeview-links size="1">
+   <typeview-link xlink:role="typeview" xlink:href="../../eka/views/task_process_coloured.kmd#_002as5m00u9m7cjrcrqp"/>
+  </typeview-links>
+  <viewstyle-links size="2">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Task tree" xlink:href="../../eka/views/viewstyles_task.kmd#AKM_viewstyle_task_tree"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="Task process" xlink:href="../../eka/views/viewstyles_task.kmd#AKM_viewstyle_task_nested"/>
+  </viewstyle-links>
+ </metamodel>
+
+
+</metis>

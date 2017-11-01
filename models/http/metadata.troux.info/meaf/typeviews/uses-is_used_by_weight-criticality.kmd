@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+ <typeview id="oid1" xlink:role="type" xlink:href="../relationshiptypes/uses-is_used_by_weight-criticality.kmd#Reltype_business_process_uses_is_used_by_weight_criticality_application_UUID" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:href="metis:stdsyms#oid104" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34;W: &#34; (property weight) (newline) &#34;C: &#34; (property criticality))"/>
+   <replace tag="line" property="linewidth" macro="(expand &#34;2&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="1"
+ nextoid="1">
+
+ <template id="_002asno00vqc21ss9ss3" name="Workplace_configuration" title="IRTV" desc="Template used for defining model-configurd workplaces, using the IRTV (Information, Role, Task, View) approach">
+  <metamodel-links size="3">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis Modeling" xlink:href="http://metadata.troux.info/meaf/metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="IRTV" xlink:href="workplace_configuration.kmd#_002asno00mcdjvabftgc" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Design Rationale" xlink:href="../../design-rationale/templates/rationale.kmd#_002asmg01795lcgoljtj" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="Metis EA Framework Blank" xlink:href="blank.kmv#_002as5401d4bqcg5f0b3" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Data" xlink:href="blank.kmv#_002as0b01f99768ufljt" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+
+
+</metis>

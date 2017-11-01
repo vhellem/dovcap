@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="has_stereotype-is_stereotype_for" name="has_stereotype_is_stereotype_for" title="has stereotype-is stereotype for" desc="Stereotype for Processes" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="has stereotype/is stereotype for" xlink:href="http://xml.metis.no/xml/relationship_types/has_stereotype-is_stereotype_for.kmd#oid1"/>
+  <connect-rule exactly="true">
+   <origin-rule min="0" max="1" xlink:role="type" xlink:title="Process" xlink:href="http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="1" xlink:role="type" xlink:title="Process" xlink:href="http://metadata.troux.info/meaf/objecttypes/process.kmd#CompType_MEAF:Process_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="2" xlink:role="type" xlink:title="has stereotype-is stereotype for" xlink:href="#has_stereotype-is_stereotype_for" xlink:actuate="user">
+   <string name="from">has stereotype</string>
+   <string name="to">is stereotype for</string>
+  </valueset>
+  <valueset vset="default" size="1" xlink:role="type" xlink:title="has stereotype-is stereotype for" xlink:href="#has_stereotype-is_stereotype_for" xlink:actuate="user">
+   <string name="externalID"></string>
+  </valueset>
+ </type>
+
+ <typeview id="UUID4_13B5B97A-1F08-4AED-951F-5632D1EE9F38" xlink:role="type" xlink:title="has stereotype-is stereotype for" xlink:href="#has_stereotype-is_stereotype_for" typelabel="stereotype" tree-size="0.5" nested-size="0.125" behavior="tree">
+ </typeview>
+
+
+</metis>

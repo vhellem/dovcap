@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ methods="4"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="ObjType_EKA:Property_UUID" name="ekaProperty" title="Property (EKA)" desc="Is used to define a (global) property." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="datatype" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="datatype" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Datatype_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Value&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="tempvalue" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Temporary value" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:TempValue&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" visible-flag="false"/>
+  <property name="unit" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Unit" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Unit&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="tolerance" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Tolerance" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Tolerance&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="labelProp" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Label" method-flag="true" default-visible="bottom"/>
+  <property name="iconProp" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Icon" method-flag="true" default-visible="bottom"/>
+  <named-method-link name="getIcon_" xlink:role="cpp-method" xlink:title="getIcon" xlink:href="#oid17"/>
+  <named-method-link name="getLabel_" xlink:role="cpp-method" xlink:title="getLabel" xlink:href="#oid16"/>
+  <named-method-link name="iconProp" xlink:role="cpp-method" xlink:title="getPropertyIcon" xlink:href="../operations/eka_methods.kmd#Method_EKA:getPropertyIcon_UUID"/>
+  <named-method-link name="labelProp" xlink:role="cpp-method" xlink:title="getPropertyLabel" xlink:href="../operations/eka_methods.kmd#Method_EKA:getPropertyLabel_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Property (EKA)" xlink:href="#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="15" xlink:role="type" xlink:title="Property (EKA)" xlink:href="#ObjType_EKA:Property_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="datatype"></string>
+   <string name="value"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="labelProp" class="volatile"></string>
+   <string name="iconProp" class="volatile"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_EKA:PropertyView_UUID" name="ekaPropertyView" title="Property view (EKA)" desc="Is used to visualize inherited properties." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <property name="datatype" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="datatype" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Datatype_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Value&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="unit" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Unit" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Unit&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="tolerance" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Tolerance" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Tolerance&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="minval" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Minimum" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Minimum&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="bottom"/>
+  <property name="maxval" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Maximum" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_EKA:Maximum&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="bottom"/>
+  <property name="status" xlink:role="string-type" xlink:title="integer" xlink:href="eka_primitivetypes.kmd#PrimType_EKA:PropertyStatus_UUID" label="Status" desc="" method-flag="true"/>
+  <property name="color" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Color" desc="" method-flag="true" default-visible="top"/>
+  <property name="linecolor" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Line Color" desc="" method-flag="true" default-visible="top"/>
+  <named-method-link name="status" xlink:role="cpp-method" xlink:title="" xlink:href="../operations/eka_methods.kmd#Method_EKA:getPropertyViewStatus"/>
+  <named-method-link name="color" xlink:role="cpp-method" xlink:title="" xlink:href="../operations/eka_methods.kmd#Method_EKA:calcPropertyStatusColor"/>
+  <named-method-link name="linecolor" xlink:role="cpp-method" xlink:title="" xlink:href="../operations/eka_methods.kmd#Method_EKA:calcPropertyLineColor"/>
+  <named-method-link name="getPropertyViewStatus_" xlink:role="cpp-method" xlink:title="" xlink:href="../operations/eka_methods.kmd#Method_EKA:getPropertyViewStatus2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Property (EKA)" xlink:href="#ObjType_EKA:PropertyView_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="15" xlink:role="type" xlink:title="Property (EKA)" xlink:href="#ObjType_EKA:PropertyView_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="datatype"></string>
+   <string name="value"></string>
+   <string name="unit"></string>
+   <string name="tolerance"></string>
+   <string name="minval"></string>
+   <string name="maxval"></string>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid12" name="createAndViewAsHierarchy" title="createAndViewAsHierarchy" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/akm/operations/view_hierarchy.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid121" name="AttributesTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+  <arg-list size="9">
+   <string name="ReadOnly">name</string>
+   <string name="Row1">name</string>
+   <string name="Row2">Subform</string>
+   <string name="Subform.Caption">Properties:</string>
+   <string name="Subform.Columns">name,description</string>
+   <string name="Subform.Link">relationship-to</string>
+   <string name="Subform.Link.RelDir">out</string>
+   <string name="Subform.Link.RelType">eka_relships.kmd#RelType_EKA:Member_UUID</string>
+   <string name="Subform.Link.Type">#ObjType_EKA:Property_UUID</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid16" name="getLabel" title="getLabel" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">stop
+   MsgBox ekaGetPropertyLabel</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid17" name="getIcon" title="getIcon" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">stop
+   MsgBox ekaGetPropertyIcon</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <typeview id="_002asji012urjsbhnb16" xlink:role="type" xlink:title="Property (EKA)" xlink:href="#ObjType_EKA:Property_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="false"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="false"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="false"/>
+   <propertyview name="troux_color" visible-flag="false"/>
+   <propertyview name="troux_iconAlias" visible-flag="false"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="false"/>
+   <propertyview name="troux_toplevel" visible-flag="false"/>
+   <propertyview name="comments" visible-flag="false"/>
+   <propertyview name="datatype" visible-flag="false"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="unit" visible-flag="true"/>
+   <propertyview name="tolerance" visible-flag="true"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="../views/symbols/property_as_fields.svg#_002asjh0112trm19rboq" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="test_method" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="remarks" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property labelProp))"/>
+   <replace tag="icon" property="value" macro="(expand (property iconProp))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="../views/symbols/property_as_fields.svg#_002asjh0112trm19rboq" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="test_method" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="remarks" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property labelProp))"/>
+   <replace tag="icon" property="value" macro="(expand (property iconProp))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Property (EKA)" xlink:href="#ObjType_EKA:Property_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="http://metadata.troux.info/meaf/layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="datatype" visible-flag="true"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="unit" visible-flag="true"/>
+   <propertyview name="tolerance" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+   <propertyview name="tempvalue" visible-flag="false"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../views/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/CPPD/views/productproperty.svg#_002as7v00mlb3ja0j65g&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../views/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/CPPD/views/productproperty.svg#_002as7v00mlb3ja0j65g&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../views/icons/productproperty.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Property (EKA)" xlink:href="#ObjType_EKA:Property_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="http://metadata.troux.info/meaf/layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="datatype" visible-flag="true"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="unit" visible-flag="true"/>
+   <propertyview name="tolerance" visible-flag="true"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../views/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property labelProp))"/>
+   <replace tag="icon" property="value" macro="(expand (property iconProp))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../views/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property labelProp))"/>
+   <replace tag="icon" property="value" macro="(expand (property iconProp))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../views/icons/productproperty.png"/>
+ </typeview>
+
+
+</metis>

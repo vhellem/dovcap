@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<?metis version="3.2.3"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="5"
+ criteria="2"
+ nextoid="10">
+
+ <cpp-method id="oid1" title="getCompetence" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="4">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getCompetence" xlink:href="#oid2" xlink:actuate="user"/>
+   <string name="Property">competenceText</string>
+   <string name="Separator">
+</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" title="getLibraryName" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="4">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid5" xlink:actuate="user"/>
+   <string name="Property">LibraryName</string>
+   <string name="Separator">
+</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid4" title="getLibraryDescription" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <arg-list size="4">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid5" xlink:actuate="user"/>
+   <string name="Property">LibraryDescription</string>
+   <string name="Separator">
+</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="getdateinstalled" title="Get Date Installed" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria"/>
+   <string name="Default"></string>
+   <string name="Property">DateInstalled</string>
+   <string name="RemoveDuplicates">false</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid9" name="getphaseoutdate" title="Get Phase Out Date" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria"/>
+   <string name="Default"></string>
+   <string name="Property">PhaseOutDate</string>
+   <string name="RemoveDuplicates">false</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid2" name="getCompetence" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="originof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:title="has competence/of competence profile" xlink:href="../relationship_types/has_competence-of_competence_profile.kmd#oid1"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid5" object-flag="true">
+  <c-op kind="path">
+   <c-op kind="from">
+    <c-op kind="collection"/>
+   </c-op>
+   <c-op kind="originof">
+    <c-op kind="type">
+     <complex-type-link xlink:role="type" xlink:title="instance of/instantiated in" xlink:href="../relationship_types/instance_of-instantiated_in.kmd#oid1"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+
+</metis>

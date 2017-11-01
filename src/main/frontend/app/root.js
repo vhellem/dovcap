@@ -4,6 +4,8 @@ import 'antd/lib/tabs/style/css';
 import App from './app';
 import Uploader from './upload';
 import Landingpage from './landingpage';
+import Main from './main.js';
+import { Link } from 'react-router-dom';
 
 class Root extends React.Component {
   constructor(props) {
@@ -14,9 +16,10 @@ class Root extends React.Component {
       activeComponent: <Landingpage handleButtonSelect={model => this.handleSelect(model)} />,
     };
   }
+  /*
   onChange = activeKey => {
     this.setState({
-      selectedTab: activeKey,
+      selectedTab: activeKey
     });
   };
   handleSelect(model) {
@@ -26,19 +29,20 @@ class Root extends React.Component {
   renderWorkspace() {
     console.log('Load workspace!');
     this.setState({
-      activeComponent: <Workplace model={this.state.model} />,
+      activeComponent: <Workplace model={this.state.model} />
     });
   }
   renderLandingpage() {
     this.setState({
-      activeComponent: <Landingpage handleButtonSelect={model => this.handleSelect(model)} />,
+      activeComponent: <Landingpage handleButtonSelect={model => this.handleSelect(model)} />
     });
   }
   renderUploader() {
     this.setState({
-      activeComponent: <Uploader handleButtonSelect={model => this.handleSelect(model)} />,
+      activeComponent: <Uploader handleButtonSelect={model => this.handleSelect(model)} />
     });
   }
+  */
   render() {
     const comp = this.state.activeComponent;
     return (
@@ -46,32 +50,18 @@ class Root extends React.Component {
         <ul className="landing-page-navigation">
           <div className="nav-inner">
             <li className="nav-item nav-brand">
-              <a
-                className="nav-link"
-                onClick={() =>
-                  this.setState({
-                    activeComponent: (
-                      <Landingpage handleButtonSelect={model => this.handleSelect(model)} />
-                    ),
-                  })}
-              >
+              <Link className="nav-link" to="/">
                 DOVCAP
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                onClick={() =>
-                  this.setState({
-                    activeComponent: <Uploader />,
-                  })}
-              >
-                <Icon type="file-add" />Upload
-              </a>
+              <Link className="nav-link" to="/upload">
+                Upload
+              </Link>
             </li>
           </div>
         </ul>
-        {comp}
+        <Main />
       </div>
     );
   }

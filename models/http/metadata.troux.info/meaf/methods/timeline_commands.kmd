@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9" 
+ instances="24" 
+ modelviews="0" 
+ instanceviews="0" 
+ nextoid="1003">
+
+
+ <cpp-method id="oid1201" title="Create Events From Selection" desc="Create Events" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createTimelineEventsFromSelection" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="TypeToCreate" xlink:role="type" 
+     xlink:title="Timeline Event" 
+     xlink:href="../objecttypes/timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID"
+     xlink:actuate="user"/>
+   <pointer name="TypeOfConnectionRelationship" xlink:role="type" 
+     xlink:title="TimelineInterfaceBasetype" 
+     xlink:href="../abstracttypes/timeline_interface_basetype.kmd#Reltype_timeline_interface_basetype_UUID"
+     xlink:actuate="user"/>
+   <string name="Kind">Event</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1202" title="Create Events From Clipboard" desc="Create Events" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createTimelineEventsFromClipboard" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="3">
+   <pointer name="TypeToCreate" xlink:role="type" 
+     xlink:title="Timeline Event" 
+     xlink:href="../objecttypes/timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID"
+     xlink:actuate="user"/>
+   <pointer name="TypeOfConnectionRelationship" xlink:role="type" 
+     xlink:title="TimelineInterfaceBasetype" 
+     xlink:href="../abstracttypes/timeline_interface_basetype.kmd#Reltype_timeline_interface_basetype_UUID"
+     xlink:actuate="user"/>
+   <string name="Kind">Event</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1203" title="Create Event-Milestone Relationships" desc="Create Event-Milestone Relationships" 
+	     language="c++" bind="NO.METIS.GEM.DIAGRAM.createEventMilestoneRelationships" 
+	     required-dll="gem_diagram" object-flag="true">
+  <arg-list size="8">
+   <pointer name="Diagram" xlink:role="type" 
+     xlink:title="Timeline Diagram" 
+     xlink:href="../objecttypes/timeline_diagram.kmd#CompType_MEAF:TimelineDiagram_UUID"
+     xlink:actuate="user"/>
+   <pointer name="Event" xlink:role="type" 
+     xlink:title="Timeline Event" 
+     xlink:href="../objecttypes/timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID"
+     xlink:actuate="user"/>
+   <string name="EventDateProp">date</string>
+   <pointer name="Milestone" xlink:role="type" 
+     xlink:title="Timeline Milestones" 
+     xlink:href="../abstracttypes/timeline_milestones.kmd#CompType_MEAF:TimelineMilestones_UUID"
+     xlink:actuate="user"/>
+   <string name="MilestoneDateProp">date</string>
+   <pointer name="MilestoneCriteria" xlink:role="criteria" 
+     xlink:title="allMilestonesFromTimeline" 
+     xlink:href="../criteria/timeline_criteria.kmd#oid2005"
+     xlink:actuate="user"/>
+   <pointer name="Relationship" xlink:role="type" 
+     xlink:title="TimelineEventMilestone" 
+     xlink:href="../relationshiptypes/timeline_event_milestone.kmd#Reltype_timeline_event_milestone_UUID"
+     xlink:actuate="user"/>
+   <string name="HighToleranceProp">highTolerance</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

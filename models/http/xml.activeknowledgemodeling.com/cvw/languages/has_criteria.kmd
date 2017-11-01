@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="has_Criteria" name="has_Criteria" title="has Criteria" desc="Relates an object type that is being searched for to a &#10;- property that defines a search criteria (e.g. Price &#60;100)&#10;- a neighbour object or relationship that should exist. &#10;- or a Condition that must be fullfilled (a more complex scripted criteria)" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <property name="Not" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Not" desc="Check this field if the criteria should defines features that the elements in the result set should not have." default-visible="bottom"/>
+  <property name="Operator" xlink:role="integer-type" xlink:title="Operator" xlink:href="cvw_primitives.kmd#PrimType_CVW:Operator_UUID" label="Operator" desc="Operator, used for property criteria, e.g. &#62;, &#60;." default-visible="bottom"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="has Criteria" xlink:href="#has_Criteria" xlink:actuate="user">
+   <string name="from">has criteria</string>
+   <string name="to">criteria for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="has Criteria" xlink:href="#has_Criteria" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="Not">0</integer>
+   <integer name="Operator">3</integer>
+  </valueset>
+ </type>
+
+
+</metis>

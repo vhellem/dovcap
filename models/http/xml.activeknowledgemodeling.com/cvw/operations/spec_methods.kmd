@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ criteria="1"
+ nextoid="1">
+
+ <cpp-method id="addVirtualMetamodel" name="addVirtualMetamodel" title="addVirtualMetamodel" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">addVirtualMetamodel</string>
+   <pointer name="IsTopType" xlink:role="type" xlink:title="isTop" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:isTop_UUID" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="removeVirtualMetamodels" name="removeVirtualMetamodels" title="removeVirtualMetamodels" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">removeVirtualMetamodels</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="addPartRules" name="addPartRules" title="addPartRules" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">addPartRuleToType</string>
+   <pointer name="IsTopType" xlink:role="type" xlink:title="isTop" xlink:href="http://xml.activeknowledgemodeling.com/cvw/languages/spec_relships.kmd#RelType_CVW:isTop_UUID" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="removePartRules" name="removePartRules" title="removePartRules" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">removePartRuleFromType</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>
+

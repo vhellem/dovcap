@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="Method_AKM:initBaseType_UUID" name="ModelView_onLoaded" title="Initialize Basetype" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">addMethodToType</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="method" xlink:title="relocateToModel" xlink:href="#Method_AKM:relocateToModel_UUID" xlink:actuate="auto"/>
+   <string name="LinkName1">basic_component</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:relocateToModel_UUID" name="relocateToModel" title="Relocate to model" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">relocateToModel</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:disconnectObject_UUID" name="disconnectObject" title="disconnectObject" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">disconnectObject</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:isDeleteInstance_UUID" name="isDeleteInstance" title="isDeleteInstance" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">markDeleted</string>
+  </arg-list>
+ </cpp-method>
+
+<!--
+ <cpp-method id="Method_AKM:copyFromTemplate_UUID" title="copyFromTemplate" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">copyFromTemplate</string>
+   <pointer name="HasTemplateType" xlink:role="type" xlink:title="hasTemplate" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:HasTemplate_UUID"/>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConsistOf_UUID"/>
+   <pointer name="CorrespondsToType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:CorrespondsTo_UUID"/>
+  </arg-list>
+ </cpp-method>
+-->
+
+<!-- Workspace methods
+ <cpp-method id="Method_AKM:initWorkspace_UUID" name="initWorkspace_1" title="Initialize workspace" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">initWorkspace</string>
+   <pointer name="workspaceType" xlink:role="type" xlink:title="Workspace" xlink:href="../objecttypes/workspace.kmd#CompType_AKM:Workspace_UUID" xlink:actuate="auto"/>
+   <pointer name="workareaType" xlink:role="type" xlink:title="Workarea" xlink:href="../objecttypes/workarea.kmd#CompType_AKM:Workarea_UUID" xlink:actuate="auto"/>
+   <pointer name="menuType" xlink:role="type" xlink:title="Workmenu" xlink:href="../objecttypes/workmenu.kmd#CompType_AKM:Workmenu_UUID" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:loadWorkspace_UUID" name="loadWorkspace_1" title="Load workspace" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="1">
+   <string name="Command">loadWorkspace</string>
+  </arg-list>
+ </cpp-method>
+
+-->
+ <cpp-method id="Method_AKM:clearWorkview_UUID" name="clearWorkview_1" title="Clear workview" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="1">
+   <string name="Command">clearWorkview</string>
+  </arg-list>
+ </cpp-method>
+
+<!-- View methods -->
+ <cpp-method id="Method_AKM:removeChildViews_UUID" name="removeChildViews" title="Remove child views" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">removeChildViews</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:setGeometryValues_UUID" name="setGeometryValues" title="setGeometryValues" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="1">
+   <string name="Command">saveGraphicalProperties</string>
+  </arg-list>
+ </cpp-method>
+
+<!-- onObjectAndViewCreated methods -->
+ <cpp-method id="Method_AKM:viewAsHierarchy_UUID" name="ViewAsHierarchy" title="View as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnCreate">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewAsHierarchy2_UUID" name="ViewAsHierarchy" title="View as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnPaste">1</integer>
+   <integer name="OnRelocate">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewAsHierarchy3_UUID" name="ViewAsHierarchy" title="View as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnPaste">1</integer>
+   <integer name="OnRelocate">0</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+  </arg-list>
+ </cpp-method>
+
+<!--
+ <cpp-method id="Method_AKM:viewActionItemAsHierarchy_UUID" name="ViewActionItemAsHierarchy" title="View ActionItem as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnDecompose">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasActionItem_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewConceptAsHierarchy_UUID" name="viewConceptAsHierarchy" title="View Concept as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnDecompose">1</integer>
+   <integer name="ScaleFactor">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:solvesFunction_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewParameterAsHierarchy_UUID" name="ViewParameterAsHierarchy" title="View Parameter as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnDecompose">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasParameter_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewPropertyAsHierarchy_UUID" name="viewPropertyAsHierarchy" title="View Property as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnDecompose">1</integer>
+   <integer name="ScaleFactor">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasProperty_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewValueAsHierarchy_UUID" name="viewValueAsHierarchy" title="View Value as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnDecompose">1</integer>
+   <integer name="ScaleFactor">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasValue_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:viewFunctionAsHierarchy_UUID" name="viewFunctionAsHierarchy" title="View Function as hierarchy" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">viewAsHierarchy</string>
+   <integer name="OnDecompose">1</integer>
+   <integer name="ScaleFactor">1</integer>
+   <string name="Mode">ViewAsHierarchy</string>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:requiresFunction_UUID"/>
+  </arg-list>
+ </cpp-method>
+-->
+<!--
+ <cpp-method id="Method_AKM:addMethod1ToConcept_UUID" name="addMethodToConcept" title="addMethodToConcept" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">addMethodToType</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Concept" xlink:href="../objecttypes/concept.kmd#CompType_AKM:Concept_UUID" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="method" xlink:title="viewConceptAsHierarchy" xlink:href="#Method_AKM:viewConceptAsHierarchy_UUID" xlink:actuate="auto"/>
+   <string name="LinkName1">View.onObjectAndViewCreated</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:addMethod2ToConcept_UUID" name="addMethodToConcept" title="addMethodToConcept" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">addMethodToType</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Concept" xlink:href="../objecttypes/concept.kmd#CompType_AKM:Concept_UUID" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="method" xlink:title="viewConceptAsHierarchy" xlink:href="#Method_AKM:viewConceptAsHierarchy_UUID" xlink:actuate="auto"/>
+   <string name="LinkName1">View.onObjectAndViewPasted</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:addMethod1ToFunction_UUID" name="addMethodToFunction" title="addMethodToFunction" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">addMethodToType</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Concept" xlink:href="../objecttypes/function.kmd#CompType_AKM:Function_UUID" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="method" xlink:title="viewFunctionAsHierarchy" xlink:href="#Method_AKM:viewFunctionAsHierarchy_UUID" xlink:actuate="auto"/>
+   <string name="LinkName1">View.onObjectAndViewCreated</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:addMethod2ToFunction_UUID" name="addMethodToFunction" title="addMethodToFunction" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">addMethodToType</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Concept" xlink:href="../objecttypes/function.kmd#CompType_AKM:Function_UUID" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="method" xlink:title="viewFunctionAsHierarchy" xlink:href="#Method_AKM:viewFunctionAsHierarchy_UUID" xlink:actuate="auto"/>
+   <string name="LinkName1">View.onObjectAndViewPasted</string>
+  </arg-list>
+ </cpp-method>
+-->
+
+ <!--  Show Related objects Methods  -->
+ <cpp-method id="Method_AKM:showPurpose_UUID" name="showPurpose" title="Show purpose" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">createChildViews</string>
+   <pointer name="ObjectType" xlink:role="type" xlink:title="Purpose" xlink:href="../objecttypes/purpose.kmd#CompType_AKM:Purpose_UUID"/>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConsistOf_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:showProperty_UUID" name="showProperty" title="Show properties" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">createChildViews</string>
+   <pointer name="ObjectType" xlink:role="type" xlink:title="Property" xlink:href="../objecttypes/property.kmd#CompType_AKM:Property_UUID"/>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConsistOf_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:showPart_UUID" name="showPart" title="Show part" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">createChildViews</string>
+   <pointer name="ObjectType" xlink:role="type" xlink:title="Product Element" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID"/>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConsistOf_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:showClassifications_UUID" name="showClassifications" title="Show classifications" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">createChildViews</string>
+   <pointer name="ObjectType" xlink:role="type" xlink:title="Property" xlink:href="../objecttypes/classification.kmd#CompType_AKM:Classification_UUID"/>
+   <pointer name="ConsistsOfType" xlink:role="type" xlink:title="consistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConsistOf_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <!--  GUI Methods
+ <cpp-method id="Method_AKM:moveObject_UUID" title="Move Object" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="2">
+   <string name="Command">guiInteractor</string>
+   <string name="GuiCommand">move-interactor</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:resizeObject_UUID" title="Resize Object" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="2">
+   <string name="Command">guiInteractor</string>
+   <string name="GuiCommand">resize-interactor</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:createProduct_UUID" title="New Product" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="2">
+   <string name="Command">guiCreator</string>
+   <string name="GuiCommand">newObject</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Product" xlink:href="../objecttypes/productelement.kmd#CompType_AKM:ProductElement_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:createConcept_UUID" title="New Concept" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="2">
+   <string name="Command">guiCreator</string>
+   <string name="GuiCommand">newObject</string>
+   <pointer name="Type" xlink:role="type" xlink:title="Concept" xlink:href="../objecttypes/concept.kmd#CompType_AKM:Concept_UUID"/>
+  </arg-list>
+ </cpp-method>
+-->
+
+ <!--  Methods to set partial metamodels
+ <cpp-method id="Method_AKM:setProductDefinitionDomain_UUID" title="Set Product Definition domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel" xlink:role="metamodel" xlink:title="Product Definition" xlink:href="../metamodels/product_definition.kmd#MetaModel_AKM:ProductDefinition_UUID"/>
+   <string name="Toolbar">UriToolBar.ProductDefinition</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:setProductPropertyDomain_UUID" title="Set Product Property domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel" xlink:role="metamodel" xlink:title="Product Property" xlink:href="../metamodels/product_property.kmd#MetaModel_AKM:ProductProperty_UUID"/>
+   <string name="Toolbar">UriToolBar.ProductProperty</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:setConseptualDesignDomain_UUID" title="Set Conceptual Design domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel" xlink:role="metamodel" xlink:title="Concept_domain" xlink:href="../metamodels/conceptual_design.kmd#MetaModel_AKM:ConceptualDesign_UUID"/>
+   <string name="Toolbar">UriToolBar.ConceptualDesign</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_AKM:setProductDesignDomain_UUID" title="Set Product Design domain" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" container-flag="true">
+  <arg-list size="2">
+   <string name="Command">setMetamodels</string>
+   <pointer name="Metamodel1" xlink:role="metamodel" xlink:title="Modeling" xlink:href="metis:stddomains#oid7"/>
+   <string name="Toolbar1">UriToolBar.Modeling</string>
+   <pointer name="Metamodel2" xlink:role="metamodel" xlink:title="Product_Design" xlink:href="../metamodels/product_design.kmd#MetaModel_AKM:ProductDesign_UUID"/>
+  </arg-list>
+ </cpp-method>
+-->
+
+ <!--  Methods to initiate domain modeling
+
+ <cpp-method id="Method_AKM:setConseptualDesign_UUID" title="setConseptualDesign" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" container-flag="true">
+  <arg-list size="2">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="Set Conceptual Design domain" xlink:href="#Method_AKM:setConseptualDesignDomain_UUID"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="Concept.onObjectAndViewCreated" xlink:href="#Method_AKM:addMethod1ToConcept_UUID"/>
+   <pointer name="Method3" xlink:role="cpp-method" xlink:title="Concept.onObjectAndViewPasted" xlink:href="#Method_AKM:addMethod2ToConcept_UUID"/>
+   <pointer name="Method4" xlink:role="cpp-method" xlink:title="Function.onObjectAndViewCreated" xlink:href="#Method_AKM:addMethod1ToFunction_UUID"/>
+   <pointer name="Method5" xlink:role="cpp-method" xlink:title="Function.onObjectAndViewPasted" xlink:href="#Method_AKM:addMethod2ToFunction_UUID"/>
+  </arg-list>
+ </cpp-method>
+-->
+
+</metis>

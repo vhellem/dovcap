@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="3">
+
+ <type id="oid1" name="SalesItem" title="Sales Item" usage="object" desc="A Sales Item is something a supplier offers for sale to a customer, having a price tag or listed in a price list. &#10;A Sales Item can be decomposed and Used By other Sales Items, but the definition of a Sales Item is that it is listed as an individual item in a price list. As defined here a Sales Item can be one or more Products or Services, or a combination of Product and Services. As defined here Product and Services are the items that make up a Sales Item, but not the Sales Item  itself.">
+  <complex-type-link xlink:role="type" xlink:href="catalogpart.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <property name="productId" xlink:role="string-type" xlink:href="metis:std#oid42" label="Product id"/>
+  <property name="typicalRevenue" xlink:role="integer-type" xlink:href="metis:std#oid1" label="Typical revenue (USD)"/>
+  <property name="typicalProfit" xlink:role="integer-type" xlink:href="metis:std#oid1" label="Typical profit (USD)"/>
+  <property name="typicalEngagementTime" xlink:role="integer-type" xlink:href="metis:std#oid1" label="Typical engagement time (wks)"/>
+  <property name="targetTimeToCustomer" xlink:role="integer-type" xlink:href="metis:std#oid1" label="Target time-to. customer (wrk)"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid1"/>
+  <valueset vset="default" size="7" xlink:role="type" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="productId"></string>
+   <integer name="typicalRevenue">0</integer>
+   <integer name="typicalProfit">0</integer>
+   <integer name="typicalEngagementTime">0</integer>
+   <integer name="targetTimeToCustomer">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/sales_item.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/sales_item.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/sales_item.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <type id="UiType_AKM:UiContainer_UUID" name="ui_container" title="UI container (AKM)" desc="UI container." usage="abstract" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+ </type>
+
+</metis>

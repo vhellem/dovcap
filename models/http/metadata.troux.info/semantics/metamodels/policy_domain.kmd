@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_25662418-3D16-469F-B139-2F3F00519AA6" name="Policy_Domain" title="Policy Domain" desc="Mirrors the metamodel of the same name in Troux Semantics.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="policy_domain_relationship_types.kmd#UUID4_02F64D93-6146-415D-A5AA-839DC60DDA71"/>
+  </metamodel-links>
+  <complex-type-links size="1">
+   <complex-type-link xlink:role="type" xlink:title="Architecture Principle" xlink:href="../object_types/architecture_principle.kmd#CompType_Semantics_IT Architecture:Architecture_Principle_UUID" xlink:actuate="user"/>
+  </complex-type-links>
+ </metamodel>
+
+
+</metis>

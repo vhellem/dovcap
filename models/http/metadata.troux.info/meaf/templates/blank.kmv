@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <modelview id="oid1" name="Main" title="Main" primary-flag="true" standalone-flag="true" zoom-level="1" x="0" y="0" seq="1" xlink:role="model" xlink:title="Blank MEAF model" xlink:href="blank.kmd#oid1" behavior="nested" text-scale="1" decomp-scale="0">
+  <viewstyle-links size="2">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="MEAF Default View Style" xlink:href="http://metadata.troux.info/meaf/viewstyles/meaf_viewstyle.kmd#oid1"/>
+   <viewstyle-link xlink:role="viewstyle" xlink:title="BPM 1 Viewstyle: Object ICOMs, Autoline" xlink:href="http://metadata.troux.info/meaf/viewstyles/bpm_viewstyle.kmd#oid1000"/>
+  </viewstyle-links>
+ </modelview>
+
+</metis>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="2">
+
+
+ <type id="CompType_MEAF:TimelineDiagram_UUID" name="TimelineDiagram" title="Timeline Diagram" desc="Timeline Diagram is a set of object and relationship types that can be used to give a one-page summary of a number of events that mark progress from some known state (e.g., &#34;as is&#34;) to a specified future state (e.g., &#34;to be&#34;). Typically, major programs,  projects and other change acitvities are broken down into a set of discrete steps, indicated by milestones, that is,  points of progress towards the end state of the change activity.  Each of the milestones is &#34;achieved&#34; by the accomplishment of one or more &#34;events&#34; that contribute to the achievement of the milestone.  The Timeline Diagram provides a compact way to show (initially) the plan and then track &#34;progress&#34; as time marches on with the change activity. &#10; &#10;The Timeline Diagram consists of a Timeline that is used to visualize the time period during which the change activity takes place. Timeline Milestone objects are used to define the milestones on the timeline. These milestones are automatically placed correctly on the timeline according to the date specified for each milestone.&#10; &#10;Timeline Event objects are used to model the change activity events. These events are normally related to Timeline Milestones using a special relationship whose color and pattern provide indication of when things begin to get &#34;off target&#34;.&#10; &#10;Templates, like the ITM template support connections to these Timeline Events and directly to Timeline Milestones, so that the timeline can, e. g., be used to illustrate project tasks that fail to live up to the planned dates for completion.&#10;&#10;" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Metis Diagram" xlink:href="../abstracttypes/diagram.kmd#CompType_MEAF:Diagram_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:title="Timeline Diagram" xlink:href="#oid2"/>
+  <property name="highTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="High Tolerance" desc="Number of days AFTER current date that is still considered a hit" method-flag="true" visible-flag="false"/>
+  <property name="lowTolerance" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Low Tolerance" desc="Number of days BEFORE current date that is still considered a hit" method-flag="true" visible-flag="false"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Timeline Event" xlink:href="timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID"/>
+  <part-rule min="0" max="1" xlink:role="type" xlink:title="Timeline" xlink:href="timeline.kmd#CompType_MEAF:Timeline_UUID"/>
+  <named-method-link name="TimelineDiagram" xlink:role="cpp-method" xlink:title="TimelineDiagramConstructor" xlink:href="../methods/timeline_methods.kmd#oid1001"/>
+  <named-method-link name="highTolerance" xlink:role="cpp-method" xlink:title="getHighTolerance" xlink:href="../methods/timeline_methods.kmd#oid1016"/>
+  <named-method-link name="lowTolerance" xlink:role="cpp-method" xlink:title="getLowTolerance" xlink:href="../methods/timeline_methods.kmd#oid1017"/>
+  <valueset vset="shared" size="1" xlink:role="type" xlink:title="Timeline Diagram" xlink:href="#CompType_MEAF:TimelineDiagram_UUID">
+   <string name="troux_iconAlias">Icon_CompType_MEAF:TimelineDiagram_UUID</string>
+  </valueset>
+ </type>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Timeline Diagram" xlink:href="#CompType_MEAF:TimelineDiagram_UUID" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutlocked autolayoutme fixedlayoutset fixedlayoutlocked ">
+  <layout-link xlink:role="object" xlink:title="Standard Timeline Layout Strategy" xlink:href="../layoutstrategies/timeline_layout.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Diagram" xlink:href="../symbols/diagrams/diagram.svg#oid5" xlink:actuate="auto">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Timeline Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagrams/diagram.svg#oid4&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Diagram" xlink:href="../symbols/diagrams/diagram.svg#oid1" xlink:actuate="auto">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="kind" property="value" macro="(expand &#34;Timeline Diagram&#34;)"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/diagrams/diagram.svg#oid4&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/diagrams/timeline_diagram.png"/>
+ </typeview>
+
+</metis>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Gateway" xlink:href="../objecttypes/process_gateway.kmd#CompType_TRM:ProcessDecision_UUID" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="processModelChange"/>
+   <propertyview name="gatewayType"/>
+   <propertyview name="condition"/>
+   <propertyview name="value"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="XOR-1" xlink:href="../symbols/bpm/process_gateway2.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/bpm/process_gateway2.svg&#34; (property BPM_GatewaySymbol))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="XOR-1" xlink:href="../symbols/bpm/process_gateway2.svg#oid2" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_Object_Color))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;../symbols/bpm/process_gateway2.svg&#34; (property BPM_GatewaySymbol))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/processgateway1.png"/>
+ </typeview>
+
+</metis>

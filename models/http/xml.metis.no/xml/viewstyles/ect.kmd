@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?metis version="3.0.1"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ typeviews="3"
+ viewstyles="1"
+ nextoid="5">
+
+ <viewstyle id="oid1" name="EET" title="EET Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/ect.kmd#oid129" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/ect.kmd#oid130" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/ect.kmd#oid131" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="../object_types/ect.kmd#oid132" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2" xlink:actuate="user"/>
+ </viewstyle>
+
+<typeview id="oid2" xlink:role="type" xlink:href="metis:stdtypes#oid3" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/proj_model_open_sym.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/proj_model_closed_sym.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>

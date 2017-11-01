@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<integer-type id="PrimType_AKM:Datatype_UUID" title="Data type" desc="Used to specify datatype of property." default="1">
+ <range name="Integer" min="1" max="1"/>
+ <range name="Float" min="2" max="2"/>
+ <range name="String" min="3" max="3"/>
+ <range name="Text" min="4" max="4"/>
+ <range name="Enum" min="5" max="5"/>
+</integer-type>
+
+</metis>

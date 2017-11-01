@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?metis version="3.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ methods="5"
+ typeviews="2"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="oid1" title="TrouxSource Queries" name="ME_Repository_Queries" desc="Metaobjects used for querying the TrouxSource repository.">
+  <method-links size="3">
+   <method-link xlink:role="cpp-method" xlink:href="../methods/repository_queries.kmd#QueryApplications"/>
+   <method-link xlink:role="cpp-method" xlink:href="../methods/repository_queries.kmd#QueryOrgs"/>
+   <method-link xlink:role="cpp-method" xlink:href="../methods/repository_queries.kmd#QueryNeighbors"/>
+   <method-link xlink:role="cpp-method" xlink:href="../methods/repository_queries.kmd#QueryTypeOf"/>
+   <method-link xlink:role="cpp-method" xlink:href="../methods/repository_queries.kmd#QueryParts"/>
+   <method-link xlink:role="cpp-method" xlink:href="../methods/repository_queries.kmd#QueryObjectUseDescription"/>
+   <method-link xlink:role="cpp-method" xlink:href="../methods/repository_queries.kmd#QueryRelsUseDescription"/>
+  </method-links>
+ </metamodel>
+
+</metis>
+

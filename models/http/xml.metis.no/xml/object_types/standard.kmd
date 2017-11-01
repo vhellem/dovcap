@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="2"
+ typeviews="2"
+ nextoid="5">
+
+ <type id="oid1" name="Standard" title="Standard" desc="A Standard is an approved example against which something is measured. &#10;A Standard can Refer To another Standard. &#10;In the IT context we think of industry standards that control and support the development and maintenance of applications, and technology items as well as IT products." usage="object" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Modeling Object with no properties - User" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <property name="name" xlink:role="string-type" xlink:title="Name with Rich Text" xlink:href="metis:std#oid42" label="Name" desc="Enter a short name for the object" label-flag="true" default-visible="top"/>
+  <property name="description" xlink:role="text-type" xlink:title="Description with Rich Text" xlink:href="metis:std#oid43" label="Description" desc="Enter a description of the object" description-flag="true" default-visible="top"/>
+  <property name="StartDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Valid From" desc="The date from which the Standard is valid" default-visible="top"/>
+  <property name="StopDate" xlink:role="date-time-type" xlink:title="date" xlink:href="metis:std#oid40" label="Valid To" desc="The date the Standard is phased out" default-visible="top"/>
+  <named-criteria-link name="FindPhasedOutAtDateByType" xlink:role="criteria" xlink:title="Find entities phased out at given date (this type)" xlink:href="../criterias/date_span.kmd#oid18"/>
+  <named-criteria-link name="FindNotValidAtDateByType" xlink:role="criteria" xlink:title="Find entities not yet valid at given date (this type)" xlink:href="../criterias/date_span.kmd#oid17"/>
+  <named-criteria-link name="FindValidAtDateByType" xlink:role="criteria" xlink:title="Find entities valid at given date (this type)" xlink:href="../criterias/date_span.kmd#oid16"/>
+  <valueset vset="default" size="4" xlink:role="type" xlink:title="Standard" xlink:href="#oid1" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <date name="StartDate">00000000</date>
+   <date name="StopDate">00000000</date>
+  </valueset>
+ </type>
+
+ <forward-reference id="oid4" stamp="20001129 195900000"
+     xlink:role="type" xlink:title="Standard" xlink:href="#oid1" xlink:actuate="user"/>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Standard" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Standard" xlink:href="../symbols/gem/gem_standard.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Standard" xlink:href="../symbols/gem/gem_standard.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_standard.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Standard" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="IT Standard" xlink:href="../symbols/it_standard.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="IT Standard" xlink:href="../symbols/it_standard.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/iso.png"/>
+ </typeview>
+
+
+</metis>

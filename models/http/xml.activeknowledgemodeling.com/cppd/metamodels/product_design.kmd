@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="MetaModel_AKM:ProductDesign_UUID" name="Product_Design" title="Product Design" desc="Product design metamodels.">
+  <metamodel-links size="5">
+   <metamodel-link xlink:role="metamodel" xlink:title="Product Definition" xlink:href="product_definition.kmd#MetaModel_AKM:ProductDefinition_UUID"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Product Property" xlink:href="product_property.kmd#MetaModel_AKM:ProductProperty_UUID"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Conceptual Design" xlink:href="conceptual_design.kmd#MetaModel_AKM:ConceptualDesign_UUID"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Object Types" xlink:href="#oid2"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="#oid3"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Methods" xlink:href="#oid4"/>
+  </metamodel-links>
+ </metamodel>
+
+  <metamodel id="oid2" name="ObjectTypes" title="Object Types" desc="">
+  <complex-type-links size="11">
+<!-- Objects -->
+   <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="../objecttypes/object.kmd#CompType_AKM:Object_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Organization" xlink:href="../objecttypes/organization.kmd#CompType_AKM:Organization_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Classification" xlink:href="../objecttypes/classification.kmd#CompType_AKM:Classification_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="GeometricalObject" xlink:href="../objecttypes/geometricalobject.kmd#CompType_AKM:GeometricalObject_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Requirement" xlink:href="../objecttypes/requirement.kmd#CompType_AKM:Requirement_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Value" xlink:href="../objecttypes/value.kmd#CompType_AKM:Value_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Criteria" xlink:href="../objecttypes/criteria.kmd#CompType_AKM:Criteria_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Method" xlink:href="../objecttypes/method.kmd#CompType_AKM:Method_UUID" xlink:actuate="auto"/>
+<!--
+   <complex-type-link xlink:role="type" xlink:title="ActionItem" xlink:href="../objecttypes/actionitem.kmd#CompType_AKM:ActionItem_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Archetype" xlink:href="../objecttypes/archetype.kmd#CompType_AKM:Archetype_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Aspect" xlink:href="../objecttypes/aspect.kmd#CompType_AKM:Aspect_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint" xlink:href="../objecttypes/constraint.kmd#CompType_AKM:Constraint_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Parameter" xlink:href="../objecttypes/parameter.kmd#CompType_AKM:Parameter_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="IntegerValue" xlink:href="../objecttypes/value.kmd#CompType_AKM:IntegerValue_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="StringValue" xlink:href="../objecttypes/value.kmd#CompType_AKM:StringValue_UUID" xlink:actuate="auto"/>
+-->
+<!-- OnHold Objects -->
+<!--
+
+   <complex-type-link xlink:role="type" xlink:title="Modelspace" xlink:href="../objecttypes/modelspace.kmd#CompType_AKM:Modelspace_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="ModelContentSpecification" xlink:href="../objecttypes/modelcontentspec.kmd#CompType_AKM:ModelContentSpecification_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="MenuContentSpecification" xlink:href="../objecttypes/menucontentspec.kmd#CompType_AKM:MenuContentSpecification_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="ViewSpecification" xlink:href="../objecttypes/viewspecification.kmd#CompType_AKM:ViewSpecification_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="ObjectViewSpecification" xlink:href="../objecttypes/objectviewspec.kmd#CompType_AKM:ObjectViewSpecification_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="RelshipViewSpecification" xlink:href="../objecttypes/relshipviewspec.kmd#CompType_AKM:RelshipViewSpecification_UUID" xlink:actuate="auto"/>
+-->
+<!-- UI Objects -->
+   <complex-type-link xlink:role="type" xlink:title="Workspace" xlink:href="../objecttypes/workspace.kmd#UiType_AKM:Workspace_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Workarea" xlink:href="../objecttypes/workarea.kmd#UiType_AKM:Workarea_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Workmenu" xlink:href="../objecttypes/workmenu.kmd#UiType_AKM:Workmenu_UUID" xlink:actuate="auto"/>
+
+<!-- OnHold Objects -->
+<!--
+   <complex-type-link xlink:role="type" xlink:title="MenuItem" xlink:href="../objecttypes/menuitem.kmd#UiType_AKM:MenuItem_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Viewport" xlink:href="../objecttypes/viewport.kmd#UiType_AKM:Viewport_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="WorkspaceContext" xlink:href="../objecttypes/workspace_context.kmd#CompType_AKM:WorkspaceContext_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="WorkareaContext" xlink:href="../objecttypes/workarea_context.kmd#CompType_AKM:WorkareaContext_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="WorkmenuContext" xlink:href="../objecttypes/workmenu_context.kmd#CompType_AKM:WorkmenuContext_UUID" xlink:actuate="auto"/>
+-->
+<!-- Utilities -->
+<!--
+   <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="../objecttypes/vbscript.kmd#oid1" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Object" xlink:href="../objecttypes/vbscript.kmd#oid2" xlink:actuate="user"/>
+-->
+  </complex-type-links>
+ </metamodel>
+
+  <metamodel id="oid3" name="RelationshipTypes" title="Relationship Types" desc="">
+  <complex-type-links size="11">
+<!-- Relationships -->
+   <complex-type-link xlink:role="type" xlink:title="Is" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:Is_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Is-a" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:IsA_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Template" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:HasTemplate_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="ConsistsOf" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConsistOf_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Solves function" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:solvesFunction_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Concept" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasConcept_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Geometry" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasGeometry_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Implements function" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:implementsFunction2_UUID" xlink:actuate="user"/>
+
+<!-- OnHold Relationships -->
+<!--
+   <complex-type-link xlink:role="type" xlink:title="Classifies" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:Classifies_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="ConnectsGeometry" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConnectsGeometry_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="ConsistsOfGeometricalObject" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:ConsistOfGeometry_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Action Item" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasActionItem_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Aspect" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasAspect_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Constraint" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasConstraint_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Criteria" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasCriteria_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Method" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasMethod_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Parameter" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasParameter_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Part" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasPart_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Partstructure" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasPartStructure_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Property" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasProperty_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Purpose" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasPurpose_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Requirement" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasRequirement_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Implements function" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:implementsFunction_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Invokes Method" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:invokesMethod_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Requires" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:requires_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Requires function" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:requiresFunction_UUID" xlink:actuate="user"/>
+-->
+<!--   <complex-type-link xlink:role="type" xlink:title="Has Task" xlink:href="../relationshiptypes/akm_relships.kmd#Reltype_AKM:hasTask_UUID" xlink:actuate="user"/> -->
+
+<!-- UI Relationships -->
+<!--
+   <complex-type-link xlink:role="type" xlink:title="Has ContentSpecification" xlink:href="../relationshiptypes/akm_ui_relships.kmd#UiReltype_AKM:hasContentSpecification_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has Viewport" xlink:href="../relationshiptypes/akm_ui_relships.kmd#UiReltype_AKM:hasViewport_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has ViewSpecification" xlink:href="../relationshiptypes/akm_ui_relships.kmd#UiReltype_AKM:hasViewSpecification_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has WorkContext" xlink:href="../relationshiptypes/akm_ui_relships.kmd#UiReltype_AKM:hasWorkContext_UUID" xlink:actuate="user"/>
+-->
+  </complex-type-links>
+ </metamodel>
+
+  <metamodel id="oid4" name="Methods" title="Methods" desc="">
+  <method-links size="6">
+  <!--
+   <method-link xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:initWorkspace_UUID"/>
+   <method-link xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:loadWorkspace_UUID"/>
+   <method-link xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:setProductDefinitionDomain_UUID"/>
+   <method-link xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:setProductPropertyDomain_UUID"/>
+   <method-link xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:setConseptualDesign_UUID"/>
+   <method-link xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:initBaseType_UUID"/>
+-->
+  </method-links>
+ </metamodel>
+
+</metis>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002askm01b9vpuafrd4g" xlink:role="type" xlink:title="Relationship(EKA)" xlink:href="../languages/eka_relationship_object.kmd#ekaRelationshipObject" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Hierarchical Layout Strategy" xlink:href="layoutstrategies/tree_object.kmd#oid1"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Relationship (Obj)" xlink:href="symbols/relationship_object_symbols.svg#oid1" xlink:actuate="user">
+   <replace tag="text_" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Relationship (Obj)" xlink:href="symbols/relationship_object_symbols.svg#oid1" xlink:actuate="user">
+   <replace tag="text_" property="value" macro="(expand (property name))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="icons/trend.png"/>
+ </typeview>
+
+
+</metis>

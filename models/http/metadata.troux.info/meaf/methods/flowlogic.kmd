@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ types="19" 
+ methods="40" 
+ criteria="9" 
+ typeviews="31" 
+ viewstyles="2" 
+ nextoid="1325">
+
+ <cpp-method id="oid311" language="c++" bind="NO.METIS.GEM.getIdentificationValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <string name="PrefixProperty">prefix</string>
+   <string name="PunctuationProperty">punctuationMark</string>
+   <string name="SequenceProperty">sequenceNumber</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid1202" name="ProcessModelingCommands" language="c++" bind="NO.METIS.GEM.PROCESS.enableProcess" required-dll="gem_process">
+  <arg-list size="2">
+   <url name="CommandObjectUrl" xlink:href="../commands/process_commands.kmd" xlink:role="url" xlink:title="Command Object Url" xlink:actuate="auto"/>
+   <pointer name="ProcessType" xlink:role="type" xlink:title="Process" xlink:href="../objecttypes/process.kmd#CompType_MEAF:Process_UUID"/>
+   <pointer name="AlternativeType" xlink:role="type" xlink:title="Process Gateway" xlink:href="../objecttypes/process_gateway.kmd#CompType_TRM:ProcessDecision_UUID"/>
+   <pointer name="EventType" xlink:role="type" xlink:title="Process Intermediate Event" xlink:href="../objecttypes/process_intermediate_event.kmd#CompType_MEAF:ProcessIntermediateEvent_UUID"/>
+   <pointer name="InputType" xlink:role="type" xlink:title="Process Input" xlink:href="../objecttypes/process_input.kmd#CompType_MEAF:ProcessInput_UUID"/>
+   <pointer name="ControlType" xlink:role="type" xlink:title="Process Control" xlink:href="../objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID"/>
+   <pointer name="OutputType" xlink:role="type" xlink:title="Process Output" xlink:href="../objecttypes/process_output.kmd#CompType_MEAF:ProcessOutput_UUID"/>
+   <pointer name="MechanismType" xlink:role="type" xlink:title="Process Mechanism" xlink:href="../objecttypes/process_mechanism.kmd#CompType_MEAF:ProcessMechanism_UUID"/>
+   <pointer name="StartType" xlink:role="type" xlink:title="Process Start" xlink:href="../objecttypes/process_start_event.kmd#CompType_MEAF:ProcessStartEvent_UUID"/>
+   <pointer name="EndType" xlink:role="type" xlink:title="Process End" xlink:href="../objecttypes/process_end_event.kmd#CompType_MEAF:ProcessEndEvent_UUID"/>
+   <pointer name="FlowType" xlink:role="type" xlink:title="Process Data" xlink:href="../objecttypes/process_data.kmd#CompType_MEAF:ProcessData_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ 
+
+
+</metis>

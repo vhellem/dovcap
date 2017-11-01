@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ typeviews="3"
+ nextoid="1">                                                                                     
+
+ <type id="ObjType_CPPD:Requirement_UUID" name="Requirement_CPPD" title="Requirement (CPPD)" desc="Customer or market requirement" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Object (EKA)" xlink:href="../../eka/languages/eka_object.kmd#ObjType_EKA:Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Requirement " xlink:href="#ObjType_CPPD:Requirement_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Requirement " xlink:href="#ObjType_CPPD:Requirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CPPD:FunctionalRequirement_UUID" name="Functional_Requirement_CPPD" title="Functional requirement (CPPD)" desc="Customer or market requirement" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Requirement (CPPD)" xlink:href="#ObjType_CPPD:Requirement_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Requirement " xlink:href="#ObjType_CPPD:FunctionalRequirement_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Requirement " xlink:href="#ObjType_CPPD:FunctionalRequirement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CPPD:Constraint_UUID" name="Constraint_CPPD" title="Constraint (CPPD)" desc="Constraint." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Requirement (CPPD)" xlink:href="#ObjType_CPPD:Requirement_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Constraint" xlink:href="#ObjType_CPPD:Constraint_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Constraint" xlink:href="#ObjType_CPPD:Constraint_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="status">0</integer>
+   <integer name="delayed">1</integer>
+   <string name="icon_Status" class="volatile"></string>
+   <string name="color_Status" class="volatile"></string>
+   <string name="delayed_Color" class="volatile"></string>
+   <string name="rulePreCode"></string>
+   <string name="ruleCode"></string>
+   <string name="ruleInitCode"></string>
+   <string name="rulePostCode"></string>
+   <integer name="expressionEvaluatedTo">0</integer>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CPPD:ConstraintFamily_UUID" name="ConstraintFamily_CPPD" title="Constraint family (CPPD)" desc="Constraint family." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Requirement (CPPD)" xlink:href="#ObjType_CPPD:Requirement_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Constraint" xlink:href="#ObjType_CPPD:ConstraintFamily_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Constraint" xlink:href="#ObjType_CPPD:ConstraintFamily_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="status">0</integer>
+   <integer name="delayed">1</integer>
+   <string name="icon_Status" class="volatile"></string>
+   <string name="color_Status" class="volatile"></string>
+   <string name="delayed_Color" class="volatile"></string>
+   <string name="rulePreCode"></string>
+   <string name="ruleCode"></string>
+   <string name="ruleInitCode"></string>
+   <string name="rulePostCode"></string>
+   <integer name="expressionEvaluatedTo">0</integer>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CPPD:ConstraintElement_UUID" name="ConstraintElement_CPPD" title="Constraint element (CPPD)" desc="Constraint element." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Requirement (CPPD)" xlink:href="#ObjType_CPPD:Requirement_UUID"/>
+  <named-method-link name="buildPropertyViews_" xlink:role="cpp-method" xlink:title="buildPropertyViews" xlink:href="#oid101"/>
+  <named-method-link name="editProperties_" xlink:role="cpp-method" xlink:title="" xlink:href="../operations/virtual_methods.kmd#editProperties"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Constraint" xlink:href="#ObjType_CPPD:ConstraintElement_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="19" xlink:role="type" xlink:title="Constraint" xlink:href="#ObjType_CPPD:ConstraintElement_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="status">0</integer>
+   <integer name="delayed">1</integer>
+   <string name="icon_Status" class="volatile"></string>
+   <string name="color_Status" class="volatile"></string>
+   <string name="delayed_Color" class="volatile"></string>
+   <string name="rulePreCode"></string>
+   <string name="ruleCode"></string>
+   <string name="ruleInitCode"></string>
+   <string name="rulePostCode"></string>
+   <integer name="expressionEvaluatedTo">0</integer>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid101" name="buildPropertyViews" title="buildPropertyViews" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/buildPropertyViews.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <type id="ObjType_CPPD:DesignSolution_UUID" name="Design_solution__CPPD_" title="Design solution (CPPD)" desc="Design solution" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Design principle (CPPD)" xlink:href="productelement.kmd#CPPD_Design_Principle"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Requirement " xlink:href="#ObjType_CPPD:FunctionalRequirement_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Design solution" xlink:href="#ObjType_CPPD:DesignSolution_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Design solution" xlink:href="#ObjType_CPPD:DesignSolution_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Requirement (CPPD)" xlink:href="#ObjType_CPPD:Requirement_UUID" tree-size="0.9" nested-size="0.225" behavior="tree" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../../cvw/views/hierarchy_layouts.kmd#_002asgf00sj14lu510jk"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/function.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/function.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/function.png"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Functional requirement (CPPD)" xlink:href="#ObjType_CPPD:FunctionalRequirement_UUID" tree-size="0.9" nested-size="0.225" behavior="tree" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="CC tree layout" xlink:href="../../cvw/views/hierarchy_layouts.kmd#_002asgf00sj14lu510jk"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/function.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/function.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/function.png"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Constraint (CPPD)" xlink:href="#ObjType_CPPD:Constraint_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="http://metadata.troux.info/meaf/layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/constraint.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/constraint.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/constraint.png"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Design solution (CPPD)" xlink:href="#ObjType_CPPD:DesignSolution_UUID" tree-size="0.9" nested-size="0.225" behavior="tree" layout-flags="autolayoutset autolayoutme ">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="http://metadata.troux.info/meaf/layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/concept.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/concept.png"/>
+ </typeview>
+
+ <typeview id="oid31" xlink:role="type" xlink:title="Constraint element (CPPD)" xlink:href="#ObjType_CPPD:ConstraintElement_UUID" tree-size="0.9" nested-size="0.225" behavior="tree">
+  <layout-link xlink:role="object" xlink:title="Compact Hierarchical Layout, Straight Part-Of Lines" xlink:href="http://metadata.troux.info/meaf/layoutstrategies/tree_object.kmd#oid1"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/constraint.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#BED08C&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/constraint.svg#oid1&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="oid32" xlink:role="type" xlink:title="Constraint element (CPPD)" xlink:href="#ObjType_CPPD:ConstraintElement_UUID" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="Specifications" xlink:href="http://xml.activeknowledgemodeling.com/cvw/views/property_layout_nested.kmd#oid2"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_collection.svg#_002asr900ivenura1dap" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="color" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="color" property="linecolor" macro="(expand &#34;white&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_collection.svg#_002asr900ivenura1dap" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="color" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="color" property="linecolor" macro="(expand &#34;white&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

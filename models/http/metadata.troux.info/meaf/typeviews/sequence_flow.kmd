@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Sequence Flow" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_sequence_flow_UUID" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/bpm/sequence_flow1.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/sequence_flow.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Sequence Flow" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_sequence_flow_UUID" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/bpm/sequence_flow1.svg#oid4" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand (property name))"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/sequence_flow.png" xlink:actuate="auto"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Sequence Flow" xlink:href="../relationshiptypes/sequence_flow.kmd#Reltype_sequence_flow_UUID" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:href="../symbols/bpm/sequence_flow1.svg#oid1" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="midpointtext" property="value" macro="(expand &#34;&#60;span style=font-size:7.0pt&#62;&#34; (property name) &#34;&#34;)"/>
+   <replace tag="targettext" property="value" macro="(expand &#34;&#34;)"/>
+   <replace tag="line" property="linecolor" macro="(expand (property BPM_FlowColor))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/sequence_flow.png" xlink:actuate="auto"/>
+ </typeview>
+
+</metis>

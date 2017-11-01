@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="ObjType_EKA:Element_UUID" name="ekaElement" title="Element (EKA)" desc="Element is the base type in the EKA type hierarchy." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../views/eka_element.kmd#_002ask101e619e2uq53d"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="#ObjType_EKA:Element_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Image" xlink:href="metis:stdtypes#oid132"/>
+  <named-method-link name="Disable double click behaviour_" xlink:role="cpp-method" xlink:title="Disable doubleclick behaviour" xlink:href="../../cvw/operations/action_methods.kmd#removeDoubleClickMethod"/>
+  <named-method-link name="EkaDelete_" xlink:role="cpp-method" xlink:title="Delete" xlink:href="../operations/eka_methods.kmd#Method_EKA:delete_UUID"/>
+  <named-method-link name="Enable double click behaviour_" xlink:role="cpp-method" xlink:title="Enable doubleclick behaviour" xlink:href="../../cvw/operations/action_methods.kmd#addDoubleClickMethod"/>
+  <named-method-link name="ekaElement" xlink:role="cpp-method" xlink:title="initGlobals" xlink:href="../operations/eka_methods.kmd#Method_EKA:initGlobals_UUID"/>
+  <named-method-link name="getSymbol" xlink:role="cpp-method" xlink:title="getSymbol" xlink:href="../operations/eka_methods.kmd#Method_EKA:GetSymbol_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Element (EKA)" xlink:href="#ObjType_EKA:Element_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Element (EKA)" xlink:href="#ObjType_EKA:Element_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">0</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+
+</metis>
