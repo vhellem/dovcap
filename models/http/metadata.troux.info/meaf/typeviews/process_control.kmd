@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Process Control" xlink:href="../objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID" tree-size="0.5" nested-size="0.125" behavior="tree" position="top" placement="external">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="processModelChange"/>
+   <propertyview name="value"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/bpm/process_control1.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property symbolLabel))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/bpm/process_control1.svg#oid8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property symbolLabel))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/control.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Process Control" xlink:href="../objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID" tree-size="0.5" nested-size="0.125" behavior="tree" position="top" placement="external">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="processModelChange"/>
+   <propertyview name="value"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Control closed (Idef0)" xlink:href="../symbols/bpm/process_control1.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property symbolLabel))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Control closed (Idef0)" xlink:href="../symbols/bpm/process_control1.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property symbolLabel))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/control.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Process Control" xlink:href="../objecttypes/process_control.kmd#CompType_MEAF:ProcessControl_UUID" tree-size="0.5" nested-size="0.125" behavior="tree" position="top" placement="external">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="processModelChange"/>
+   <propertyview name="value"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Control closed (Idef0)" xlink:href="../symbols/bpm/process_control1.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property symbolLabel) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Control closed (Idef0)" xlink:href="../symbols/bpm/process_control1.svg#oid10" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;p&#62;&#60;span style=font-size:9.0pt&#62;&#34; (property symbolLabel) &#34;&#60;/p&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/control.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

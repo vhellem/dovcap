@@ -1,0 +1,609 @@
+<?xml version="1.0"?>
+<?metis version="9.3"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="75"
+ nextoid="1">
+
+ <integer-type id="Primtype_analysis_status_UUID" title="Analysis Status" desc="Indicates the status of the active object." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Pending" min="0" max="0"/>
+  <range name="Started" min="1" max="1"/>
+  <range name="Completed" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_applicable_regulation_UUID" title="Applicable Regulation" desc="The regulation type that this rule applies to" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Basel l" min="0" max="0"/>
+  <range name="Basel ll" min="1" max="1"/>
+  <range name="CAN-SPAM" min="2" max="2"/>
+  <range name="COBIT" min="3" max="3"/>
+  <range name="Gramm-Leach-Bliley (GLBA)" min="4" max="4"/>
+  <range name="HIPAA" min="5" max="5"/>
+  <range name="ISO 17799" min="6" max="6"/>
+  <range name="ITAR" min="7" max="7"/>
+  <range name="SOX" min="8" max="8"/>
+  <range name="None" min="9" max="9"/>
+ </integer-type>
+
+ <integer-type id="Primtype_application_phase_UUID" title="Application Phase" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Vision" min="0" max="0"/>
+  <range name="Planning" min="1" max="1"/>
+  <range name="Developing" min="2" max="2"/>
+  <range name="Testing" min="3" max="3"/>
+  <range name="Stabilizing" min="4" max="4"/>
+  <range name="Deploying" min="5" max="5"/>
+  <range name="Supporting" min="6" max="6"/>
+  <range name="Retiring" min="7" max="7"/>
+ </integer-type>
+
+ <integer-type id="Primtype_application_recommendation_UUID" title="Application Recommendation" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Replace" min="0" max="0"/>
+  <range name="Sustain" min="1" max="1"/>
+  <range name="Decommission" min="2" max="2"/>
+  <range name="Remediate" min="3" max="3"/>
+  <range name="Re-Platform" min="4" max="4"/>
+  <range name="Consolidate" min="5" max="5"/>
+  <range name="Enhance" min="6" max="6"/>
+ </integer-type>
+
+ <integer-type id="Primtype_automation_UUID" title="Automation" desc="The type of process step, manual or automated." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Manual" min="0" max="0"/>
+  <range name="Automated" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_bpm_flow_colormap_UUID" name="BPM_Flow_Colormap">
+  <range name="black" min="0" max="0"/>
+  <range name="#339900" min="1" max="1"/>
+  <range name="red" min="2" max="2"/>
+  <range name="blue" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_bpm_object_colormap_UUID" name="BPM_Object_Colormap" desc="Color map for BPM objects (Start Events, Intermediate Events, End Events)">
+  <range name="white" min="0" max="0"/>
+  <range name="#B3FFB3" min="1" max="1"/>
+  <range name="#FF9595" min="2" max="2"/>
+  <range name="#96BFFF" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_bpm_process_model_change_closed_colormap_UUID" name="BPM_Process_Model_Change_Closed_Colormap" desc="Colormap for object symbols in closed state according to the Process Model Change attribute">
+  <range name="#FFFFCC" min="0" max="0"/>
+  <range name="#B3FFB3" min="1" max="1"/>
+  <range name="#FF9595" min="2" max="2"/>
+  <range name="#96BFFF" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_bpm_process_model_change_open_colormap_UUID" name="BPM_Process_Model_Change_Open_Colormap" default="2">
+  <range name="#FFFFEB" min="0" max="0"/>
+  <range name="#D5FFD5" min="1" max="1"/>
+  <range name="#FFC5C5" min="2" max="2"/>
+  <range name="#C5DBFF" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_bpm_process_model_change_patternmap_UUID" name="BPM_Process_Model_Change_Patternmap">
+  <range name="solid" min="0" max="0"/>
+  <range name="dense1" min="1" max="1"/>
+  <range name="bdiag" min="2" max="2"/>
+  <range name="dense3" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_bpm_process_model_change_value_UUID" name="BPM_Process_Model_Change_Value" desc="Value of attribute for processmodel change (baseline, added, removed, changed)">
+  <range name="Baseline" min="0" max="0"/>
+  <range name="Added" min="1" max="1"/>
+  <range name="Removed" min="2" max="2"/>
+  <range name="Updated" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_bpm_sequence_flow_symbolmap_UUID" name="BPM_Sequence_Flow_Symbolmap" desc="Symbol map for BPM sequence flows">
+  <range name="http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid1" min="-1" max="0"/>
+  <range name="http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid2" min="1" max="1"/>
+  <range name="http://metadata.troux.info/meaf/symbols/bpm/sequence_flow1.svg#oid3" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_business_criticality_score_UUID" title="Business Criticality Score" desc="A rating (score) of how critical the application is to the business. Defined by business people." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="0" min="0" max="0"/>
+  <range name="1" min="1" max="1"/>
+  <range name="2" min="2" max="2"/>
+  <range name="3" min="3" max="3"/>
+  <range name="4" min="4" max="4"/>
+  <range name="5" min="5" max="5"/>
+  <range name="6" min="6" max="6"/>
+  <range name="7" min="7" max="7"/>
+ </integer-type>
+
+ <integer-type id="Primtype_capability_status_UUID" title="Capability Status" desc="Indicates the status of the active object." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Planned" min="0" max="0"/>
+  <range name="Existing" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_connectionstrength_UUID" name="connectionStrength" title="Connection Strength" default="100">
+  <range name="valid" min="0" max="100"/>
+ </integer-type>
+
+ <integer-type id="Primtype_cost_type_UUID" title="Cost Type" desc="Type of Cost" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Acquisition" min="0" max="0"/>
+  <range name="Maintenance" min="1" max="1"/>
+  <range name="Depreciation" min="2" max="2"/>
+  <range name="License" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_creates_UUID" title="Creates" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship.">
+  <range min="0" max="0"/>
+  <range name="C" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_deletes_UUID" title="Deletes" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship.">
+  <range min="0" max="0"/>
+  <range name="D" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_development_platform_UUID" title="Development Platform" desc="The primary development platform of the software." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name=".NET" min="0" max="0"/>
+  <range name="ActionScript" min="1" max="1"/>
+  <range name="Active Server Pages" min="2" max="2"/>
+  <range name="ASP.NET" min="3" max="3"/>
+  <range name="Basic" min="4" max="4"/>
+  <range name="BATCH Windows" min="5" max="5"/>
+  <range name="C" min="6" max="6"/>
+  <range name="C#" min="7" max="7"/>
+  <range name="C#.NET" min="8" max="8"/>
+  <range name="C++" min="9" max="9"/>
+  <range name="CGI" min="10" max="10"/>
+  <range name="CICS" min="11" max="11"/>
+  <range name="Cobol" min="12" max="12"/>
+  <range name="DB2" min="13" max="13"/>
+  <range name="Delphi" min="14" max="14"/>
+  <range name="DHTML" min="15" max="15"/>
+  <range name="Excel" min="16" max="16"/>
+  <range name="Extensible Markup Language" min="17" max="17"/>
+  <range name="FLASH" min="18" max="18"/>
+  <range name="FLASH MX" min="19" max="19"/>
+  <range name="HTML" min="20" max="20"/>
+  <range name="J#.NET" min="21" max="21"/>
+  <range name="JAVA" min="22" max="22"/>
+  <range name="Java Server Pages (JSP)" min="23" max="23"/>
+  <range name="JAVASCRIPT" min="24" max="24"/>
+  <range name="JScript.NET" min="25" max="25"/>
+  <range name="Lotus Notes" min="26" max="26"/>
+  <range name="MATLAB" min="27" max="27"/>
+  <range name="OS/390" min="28" max="28"/>
+  <range name="Pascal" min="29" max="29"/>
+  <range name="Perl" min="30" max="30"/>
+  <range name="PHP" min="31" max="31"/>
+  <range name="QBasic" min="32" max="32"/>
+  <range name="Shell Script - Linux" min="33" max="33"/>
+  <range name="Shell Script - Unix" min="34" max="34"/>
+  <range name="SQL" min="35" max="35"/>
+  <range name="Turbo Pascal" min="36" max="36"/>
+  <range name="VB.NET" min="37" max="37"/>
+  <range name="VBA" min="38" max="38"/>
+  <range name="Visual Basic (VB)" min="39" max="39"/>
+  <range name="WHL (WAP)" min="40" max="40"/>
+  <range name="XML" min="41" max="41"/>
+  <range name="z/OS" min="42" max="42"/>
+ </integer-type>
+
+ <integer-type id="Primtype_disk_capacity_free_unit_UUID" title="Disk Capacity Free Unit" desc="The units this metric is measured in." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Kilobytes" min="0" max="0"/>
+  <range name="Megabytes" min="1" max="1"/>
+  <range name="Gigabytes" min="2" max="2"/>
+  <range name="Terabytes" min="3" max="3"/>
+  <range name="Petabytes" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="Primtype_duration_unit_UUID" title="Duration Unit" desc="Days, weeks, or minutes of duration." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Minutes" min="0" max="0"/>
+  <range name="Hours" min="1" max="1"/>
+  <range name="Days" min="2" max="2"/>
+  <range name="Weeks" min="3" max="3"/>
+  <range name="Months" min="4" max="4"/>
+  <range name="Years" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="Primtype_effect_type_UUID" title="Effect Type" desc="Specifies the type of the effect." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Adds" min="0" max="0"/>
+  <range name="Removes" min="1" max="1"/>
+  <range name="Modifies" min="2" max="2"/>
+  <range name="Improves" min="6" max="6"/>
+  <range name="Degrades" min="7" max="7"/>
+ </integer-type>
+
+ <integer-type id="Primtype_employment_UUID" title="Employment" desc="The person&#39;s current employment status." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Full Time" min="0" max="0"/>
+  <range name="Part Time" min="1" max="1"/>
+  <range name="Leave of Absence" min="2" max="2"/>
+  <range name="Terminated" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_end_event_type_UUID" title="End Event Type" desc="Specifies the type of the event." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="None" min="0" max="0"/>
+  <range name="Message" min="1" max="1"/>
+  <range name="Error" min="3" max="3"/>
+  <range name="Cancel" min="4" max="4"/>
+  <range name="Compensate" min="5" max="5"/>
+  <range name="Link" min="7" max="7"/>
+  <range name="Multiple" min="8" max="8"/>
+  <range name="Terminate" min="9" max="9"/>
+ </integer-type>
+
+ <integer-type id="Primtype_end_of_life_UUID" name="End_of_Life" title="End of Life" desc="End of Life Value Enum">
+  <range name="Live" min="0" max="0"/>
+  <range name="End of Life" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_enterprise_policy_status_UUID" title="Enterprise Policy Status" desc="Indicates the status of the active object." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Assigned" min="0" max="0"/>
+  <range name="Approved" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_frequency_UUID" title="Frequency" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Periodic" min="0" max="0"/>
+  <range name="Continuous" min="1" max="1"/>
+  <range name="Event-driven" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_gateway_type_UUID" title="Gateway Type" desc="Specifies the type of the gateway." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="XOR-Data" min="0" max="0"/>
+  <range name="XOR-Event" min="1" max="1"/>
+  <range name="OR" min="2" max="2"/>
+  <range name="Complex" min="3" max="3"/>
+  <range name="AND" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="Primtype_gender_UUID" title="Gender" desc="The gender of the person, if needed." default="2">
+  <range name="Male" min="0" max="0"/>
+  <range name="Female" min="1" max="1"/>
+  <range name="Unknown" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_impact_UUID" title="Impact" desc="An evaluation of how strong the impact will be if the risk occurs." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="None" min="0" max="0"/>
+  <range name="Negligible" min="1" max="1"/>
+  <range name="Minor" min="2" max="2"/>
+  <range name="Moderate" min="3" max="3"/>
+  <range name="Major" min="4" max="4"/>
+  <range name="Catastrophic" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="Primtype_intermediate_event_type_UUID" title="Intermediate Event Type" desc="Specifies the type of the event." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="None" min="0" max="0"/>
+  <range name="Message" min="1" max="1"/>
+  <range name="Timer" min="2" max="2"/>
+  <range name="Error" min="3" max="3"/>
+  <range name="Cancel" min="4" max="4"/>
+  <range name="Compensate" min="5" max="5"/>
+  <range name="Rule" min="6" max="6"/>
+  <range name="Link" min="7" max="7"/>
+  <range name="Multiple" min="8" max="8"/>
+ </integer-type>
+
+ <integer-type id="Primtype_internalexternal_UUID" title="Internal/External" desc="An indication, if needed, of whether this organization element is part of the enterprise, or belongs to another, external enterprise." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Internal" min="0" max="0"/>
+  <range name="External" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_investingharvesting_UUID" title="Investing/Harvesting" desc="Investing / Harvesting are indicators used to describe financial phases for investment and profit management." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Investing" min="0" max="0"/>
+  <range name="Harvesting" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_kind_UUID" title="Kind" desc="Specifies the kind of sequence flow. Select from the drop-down list." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="normal" min="0" max="0"/>
+  <range name="conditional" min="1" max="1"/>
+  <range name="default" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_leadinglagging_UUID" title="Leading/Lagging" desc="Leading / Lagging are business cycle indicators (BCI&#39;s) used for financial analysis. &#34;Leading&#34; is an indicator that signals future events, while &#34;Lagging&#34; is an indicator that follows an event." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Leading" min="0" max="0"/>
+  <range name="Lagging" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_lifecycle_phase_UUID" title="Lifecycle Phase" desc="The current lifecycle phase of this component." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Vision" min="0" max="0"/>
+  <range name="Planning" min="1" max="1"/>
+  <range name="Developing" min="2" max="2"/>
+  <range name="Testing" min="3" max="3"/>
+  <range name="Stabilizing" min="4" max="4"/>
+  <range name="Deploying" min="5" max="5"/>
+  <range name="Supporting" min="6" max="6"/>
+  <range name="Retiring" min="7" max="7"/>
+ </integer-type>
+
+ <integer-type id="Primtype_memory_ram_unit_UUID" title="Memory (RAM) Unit" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Kilobytes" min="0" max="0"/>
+  <range name="Megabytes" min="1" max="1"/>
+  <range name="Gigabytes" min="2" max="2"/>
+  <range name="Terabytes" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_operator_UUID" title="Operator" desc="Defines the comparison operator." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Is Equal To" min="0" max="0"/>
+  <range name="Is Not Equal To" min="1" max="1"/>
+  <range name="Is In Range" min="2" max="2"/>
+  <range name="Is Less Than" min="3" max="3"/>
+  <range name="Is Greater Than" min="4" max="4"/>
+  <range name="Contains" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="Primtype_percentage0_UUID" name="percentage0" title="Percentage">
+  <range name="valid" min="0" max="100"/>
+ </integer-type>
+
+ <integer-type id="Primtype_percentage100_UUID" name="percentage100" title="Percentage" default="100">
+  <range name="valid" min="0" max="..."/>
+ </integer-type>
+
+ <integer-type id="Primtype_period_unit_UUID" title="Period Unit" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Year" min="0" max="0"/>
+  <range name="Quarter" min="1" max="1"/>
+  <range name="Month" min="2" max="2"/>
+  <range name="Week" min="3" max="3"/>
+  <range name="Day" min="4" max="4"/>
+  <range name="Hour" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="Primtype_plan_status_UUID" title="Plan Status" desc="Indicates the status of the active object" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Writing" min="0" max="0"/>
+  <range name="Awaiting Approval" min="1" max="1"/>
+  <range name="Tested" min="2" max="2"/>
+  <range name="Active" min="3" max="3"/>
+  <range name="Complete" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="Primtype_policy_rule_type_UUID" title="Policy Rule Type" desc="Defines the type of policy rule, property, relationship, or missing relationship." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Has Property" min="0" max="0"/>
+  <range name="Has Relationship" min="1" max="1"/>
+  <range name="Missing Relationship" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_positive_integer_UUID" name="positive_integer" title="Positive Integer">
+  <range name="valid" min="0" max="..."/>
+ </integer-type>
+
+ <integer-type id="Primtype_priority_UUID" name="Priority" title="Priority" desc="Priority to be selected. The priority may affect the color of the object." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Low" min="0" max="0"/>
+  <range name="Medium" min="1" max="1"/>
+  <range name="High" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_process_model_change_UUID" title="Process Model Change" desc="Used to indicate process model change (baseline, added, removed, updated)." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Baseline" min="0" max="0"/>
+  <range name="Added" min="1" max="1"/>
+  <range name="Removed" min="2" max="2"/>
+  <range name="Updated" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_processor_cpu_clock_speed_unit_UUID" title="Processor (CPU) Clock Speed Unit" desc="The unit that clock speed is listed in." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Kilohertz (KHz)" min="0" max="0"/>
+  <range name="Megahertz (MHz)" min="1" max="1"/>
+  <range name="Gigahertz (GHz)" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_reads_UUID" title="Reads" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship.">
+  <range min="0" max="0"/>
+  <range name="R" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_recurring_cost_interval_UUID" title="Recurring Cost Interval" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Yearly" min="0" max="0"/>
+  <range name="Quarterly" min="1" max="1"/>
+  <range name="Monthly" min="2" max="2"/>
+  <range name="Weekly" min="3" max="3"/>
+  <range name="Daily" min="4" max="4"/>
+  <range name="Hourly" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="Primtype_response_UUID" title="Response" desc="Classification of the risk by possible response." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="None" min="0" max="0"/>
+  <range name="Avoid" min="1" max="1"/>
+  <range name="Control" min="2" max="2"/>
+  <range name="Assume" min="3" max="3"/>
+  <range name="Transferred" min="4" max="4"/>
+  <range name="Shared" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="Primtype_service_tier_UUID" title="Service Tier" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Silver" min="0" max="0"/>
+  <range name="Gold" min="1" max="1"/>
+  <range name="Platinum" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Primtype_skill_level_UUID" title="Skill Level" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="0" min="0" max="0"/>
+  <range name="1" min="1" max="1"/>
+  <range name="2" min="2" max="2"/>
+  <range name="3" min="3" max="3"/>
+  <range name="4" min="4" max="4"/>
+  <range name="5" min="5" max="5"/>
+ </integer-type>
+
+ <integer-type id="Primtype_start_event_type_UUID" title="Start Event Type" desc="Specifies the type of the event." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="None" min="0" max="0"/>
+  <range name="Message" min="1" max="1"/>
+  <range name="Timer" min="2" max="2"/>
+  <range name="Rule" min="6" max="6"/>
+  <range name="Link" min="7" max="7"/>
+  <range name="Multiple" min="8" max="8"/>
+ </integer-type>
+
+ <integer-type id="Primtype_status_phase_UUID" title="Status Phase" desc="The current status of this project." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Planning" min="0" max="0"/>
+  <range name="Requirements Gathering and Analysis" min="1" max="1"/>
+  <range name="Construction Phase" min="2" max="2"/>
+  <range name="Transition Phase" min="3" max="3"/>
+  <range name="Deployment Phase" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="Primtype_support_and_maintenance_contract_UUID" title="Support and Maintenance Contract" desc="The type of maintenance contract the business has for the product." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="None" min="0" max="0"/>
+  <range name="Guarantee" min="1" max="1"/>
+  <range name="Fixed" min="2" max="2"/>
+  <range name="Hourly" min="3" max="3"/>
+  <range name="Unsupported" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="Primtype_swot_UUID" title="SWOT" desc="First letter of the SWOT used in visualization." default="-1">
+  <range name=" " min="-1" max="-1"/>
+  <range name="S" min="0" max="0"/>
+  <range name="W" min="1" max="1"/>
+  <range name="O" min="2" max="2"/>
+  <range name="T" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_swot_classification_UUID" title="SWOT Classification" desc="Classification of the factor as used during SWOT analysis." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Strength" min="0" max="0"/>
+  <range name="Weakness" min="1" max="1"/>
+  <range name="Opportunity" min="2" max="2"/>
+  <range name="Threat" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="Primtype_task_status_UUID" title="Task Status" desc="Indicates the status of the active object." default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Proposed" min="0" max="0"/>
+  <range name="Pending Approval" min="1" max="1"/>
+  <range name="In Progress" min="2" max="2"/>
+  <range name="On Hold" min="3" max="3"/>
+  <range name="Complete" min="4" max="4"/>
+ </integer-type>
+
+ <integer-type id="Primtype_updates_UUID" title="Updates" desc="Use this property to select (using the drop-down options) one or more interactions performed on the target object via the relationship.">
+  <range min="0" max="0"/>
+  <range name="U" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Primtype_weight_UUID" title="Weight" desc="Relative weight of the IT Principle.">
+  <range name="Undefined" min="0" max="0"/>
+  <range name="1" min="1" max="1"/>
+  <range name="2" min="2" max="2"/>
+  <range name="3" min="3" max="3"/>
+  <range name="4" min="4" max="4"/>
+  <range name="5" min="5" max="5"/>
+  <range name="6" min="6" max="6"/>
+  <range name="7" min="7" max="7"/>
+ </integer-type>
+
+ <integer-type id="Primtype_yesno_UUID" title="YesNo" desc="Select Yes, No or Undefined" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Yes" min="0" max="0"/>
+  <range name="No" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:ApplicationArchitectureModel_UUID" name="Application_Architecture_Model" title="Application Architecture Model" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="N-Tier" min="0" max="0"/>
+  <range name="Client/Server" min="1" max="1"/>
+  <range name="Centralized" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:ApprovalStatus_UUID" name="Workflow_Approval_Status" title="Workflow Approval Status" desc="Used to record the approval state of a service.">
+  <range name="Not Submitted" min="0" max="0"/>
+  <range name="Pending" min="1" max="1"/>
+  <range name="Failed" min="2" max="2"/>
+  <range name="Approved" min="3" max="3"/>
+  <range name="Rejected" min="4" max="4"/>
+ </integer-type>
+
+ <decimal-type id="PropType_ITG:CorrespondingLiveID_UUID" name="Corresponding_Live_ID" title="Corresponding Live ID" precision="0">
+ </decimal-type>
+
+ <integer-type id="PropType_ITG:CustomizationLevel_UUID" name="Customization_Level" title="Customization Level" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Low" min="0" max="0"/>
+  <range name="Medium" min="1" max="1"/>
+  <range name="High" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:DataExchanged_UUID" name="Data_Exchanged" title="Data Exchanged">
+  <range name="Empty" min="0" max="0"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:InterfaceTechnology_UUID" name="Interface_Technology" title="Interface Technology">
+  <range name="Empty" min="0" max="0"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:JobDefinitionResourceType_UUID" name="Job_Definition_Resource_Type" title="Job Definition Resource Type" desc="A type of job definition." default="1">
+  <range name="Information Request" min="1" max="1"/>
+  <range name="Service Issue" min="2" max="2"/>
+  <range name="Promotion Request" min="3" max="3"/>
+ </integer-type>
+
+ <decimal-type id="PropType_ITG:LockingWorkspaceID_UUID" name="Locking_Workspace_ID" title="Locking Workspace ID" precision="0">
+ </decimal-type>
+
+ <integer-type id="PropType_ITG:OperationalResourceType_UUID" name="Operational_Resource_Type" title="Operational Resource Type" desc="A type of operational resource." default="1">
+  <range name="Application" min="1" max="1"/>
+  <range name="Function" min="2" max="2"/>
+  <range name="Infrastructure" min="3" max="3"/>
+  <range name="Information" min="4" max="4"/>
+  <range name="Process" min="5" max="5"/>
+  <range name="Other" min="6" max="6"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:ReviewCycle_UUID" name="Review_Cycle" title="Review Cycle" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Monthly" min="0" max="0"/>
+  <range name="Quarterly" min="1" max="1"/>
+  <range name="Semi-annually" min="2" max="2"/>
+  <range name="Annually" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:Scope_UUID" name="Scope" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Business" min="1" max="1"/>
+  <range name="Enterprise" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="PropType_ITG:SoftwareProductCategory_UUID" name="Software_Product_Category" title="Software Product Category">
+  <range name="Empty" min="0" max="0"/>
+ </integer-type>
+
+ <decimal-type id="PropType_ITG:TotalBudgetedCost_UUID" name="Total_Budgeted_Cost" title="Total Budgeted Cost" precision="6">
+  <range name="valid" min="0" max="..."/>
+ </decimal-type>
+
+ <decimal-type id="PropType_ITG:WorkspaceID_UUID" name="Workspace_ID" title="Workspace ID" precision="0">
+ </decimal-type>
+
+
+</metis>

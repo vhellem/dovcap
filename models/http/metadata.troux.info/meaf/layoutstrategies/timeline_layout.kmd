@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ instances="1"
+ nextoid="2">
+
+ <object id="oid1">
+  <valueset size="24" xlink:role="type" xlink:href="metis:layout#oid100">
+   <string name="IDENTIFIER">Standard Timeline Layout Strategy</string>
+   <string name="DESCRIPTION" class="shared"></string>
+   <integer name="ObjectSpacing">25</integer>
+   <float name="HorizontalObjectSpacing">25</float>
+   <float name="VerticalObjectSpacing">25</float>
+   <integer name="ReductionMethod" class="shared">0</integer>
+   <integer name="ObjectSorting">4</integer>
+   <integer name="SortingDirection">0</integer>
+   <integer name="LayoutRelationships">1</integer>
+   <integer name="SortObjects">0</integer>
+   <integer name="MergeInputPorts">1</integer>
+   <integer name="MergeOutputPorts">1</integer>
+   <float name="BreakPointMagnification">75</float>
+   <integer name="BreakPointResolution">2</integer>
+   <integer name="AdvancedObjectSpacing">0</integer>
+   <float name="TopMargin">6</float>
+   <float name="BottomMargin">1</float>
+   <float name="LeftMargin">1</float>
+   <float name="RightMargin">7</float>
+   <integer name="GroupByType">0</integer>
+   <integer name="ScaleObjects">0</integer>
+   <pointer name="SortingType" class="shared"/>
+   <string name="SortPropertyName" class="shared"></string>
+   <pointer name="EventType" xlink:role="type" xlink:title="Timeline Event" xlink:href="../objecttypes/timeline_event.kmd#CompType_MEAF:TimelineEvent_UUID" xlink:actuate="user"/>
+   <pointer name="TimelineType" xlink:role="type" xlink:title="Timeline" xlink:href="../objecttypes/timeline.kmd#CompType_MEAF:Timeline_UUID" xlink:actuate="user"/>
+   <pointer name="MilestoneType" xlink:role="type" xlink:title="Timeline Milestone" xlink:href="../objecttypes/timeline_milestone.kmd#CompType_MEAF:TimelineMilestone_UUID" xlink:actuate="user"/>
+   <pointer name="MilestoneToEventType" xlink:role="type" xlink:title="Event-Milestone" xlink:href="../relationshiptypes/timeline_event_milestone.kmd#Reltype_timeline_event_milestone_UUID" xlink:actuate="user"/>
+   <string name="EventLayoutAreaTag">EventLayoutArea</string>
+  </valueset>
+ </object>
+
+
+
+
+</metis>

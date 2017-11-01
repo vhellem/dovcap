@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="previousRevisionDate"/>
+   <propertyview name="nextRevisionDate"/>
+   <propertyview name="recommendationDate"/>
+   <propertyview name="recommendation"/>
+   <propertyview name="recommendationComments"/>
+   <propertyview name="strategicValue"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="accounts"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="failureProbabilityScore"/>
+   <propertyview name="businessRiskScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="sessions"/>
+   <propertyview name="sessionDurationDays"/>
+   <propertyview name="serviceLevelAgreement"/>
+   <propertyview name="initialDeploymentCost"/>
+   <propertyview name="loginDate"/>
+   <propertyview name="annualExternalStaffCosts"/>
+   <propertyview name="annualHardwareCosts"/>
+   <propertyview name="annualInternalStaffCosts"/>
+   <propertyview name="annualOtherCosts"/>
+   <propertyview name="annualSoftwarCosts"/>
+   <propertyview name="architectureModel"/>
+   <propertyview name="staffedFTE"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;SV: &#34; (property strategicValue))" />
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="previousRevisionDate"/>
+   <propertyview name="nextRevisionDate"/>
+   <propertyview name="recommendationDate"/>
+   <propertyview name="recommendation"/>
+   <propertyview name="recommendationComments"/>
+   <propertyview name="strategicValue"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="accounts"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="failureProbabilityScore"/>
+   <propertyview name="businessRiskScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="sessions"/>
+   <propertyview name="sessionDurationDays"/>
+   <propertyview name="serviceLevelAgreement"/>
+   <propertyview name="initialDeploymentCost"/>
+   <propertyview name="loginDate"/>
+   <propertyview name="annualExternalStaffCosts"/>
+   <propertyview name="annualHardwareCosts"/>
+   <propertyview name="annualInternalStaffCosts"/>
+   <propertyview name="annualOtherCosts"/>
+   <propertyview name="annualSoftwarCosts"/>
+   <propertyview name="architectureModel"/>
+   <propertyview name="staffedFTE"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;SV: &#34; (property strategicValue))" />
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="previousRevisionDate"/>
+   <propertyview name="nextRevisionDate"/>
+   <propertyview name="recommendationDate"/>
+   <propertyview name="recommendation"/>
+   <propertyview name="recommendationComments"/>
+   <propertyview name="strategicValue"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="accounts"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="failureProbabilityScore"/>
+   <propertyview name="businessRiskScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="sessions"/>
+   <propertyview name="sessionDurationDays"/>
+   <propertyview name="serviceLevelAgreement"/>
+   <propertyview name="initialDeploymentCost"/>
+   <propertyview name="loginDate"/>
+   <propertyview name="annualExternalStaffCosts"/>
+   <propertyview name="annualHardwareCosts"/>
+   <propertyview name="annualInternalStaffCosts"/>
+   <propertyview name="annualOtherCosts"/>
+   <propertyview name="annualSoftwarCosts"/>
+   <propertyview name="architectureModel"/>
+   <propertyview name="staffedFTE"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid4" xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="previousRevisionDate"/>
+   <propertyview name="nextRevisionDate"/>
+   <propertyview name="recommendationDate"/>
+   <propertyview name="recommendation"/>
+   <propertyview name="recommendationComments"/>
+   <propertyview name="strategicValue"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="accounts"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="failureProbabilityScore"/>
+   <propertyview name="businessRiskScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="sessions"/>
+   <propertyview name="sessionDurationDays"/>
+   <propertyview name="serviceLevelAgreement"/>
+   <propertyview name="initialDeploymentCost"/>
+   <propertyview name="loginDate"/>
+   <propertyview name="annualExternalStaffCosts"/>
+   <propertyview name="annualHardwareCosts"/>
+   <propertyview name="annualInternalStaffCosts"/>
+   <propertyview name="annualOtherCosts"/>
+   <propertyview name="annualSoftwarCosts"/>
+   <propertyview name="architectureModel"/>
+   <propertyview name="staffedFTE"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="previousRevisionDate"/>
+   <propertyview name="nextRevisionDate"/>
+   <propertyview name="recommendationDate"/>
+   <propertyview name="recommendation"/>
+   <propertyview name="recommendationComments"/>
+   <propertyview name="strategicValue"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="accounts"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="failureProbabilityScore"/>
+   <propertyview name="businessRiskScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="sessions"/>
+   <propertyview name="sessionDurationDays"/>
+   <propertyview name="serviceLevelAgreement"/>
+   <propertyview name="initialDeploymentCost"/>
+   <propertyview name="loginDate"/>
+   <propertyview name="annualExternalStaffCosts"/>
+   <propertyview name="annualHardwareCosts"/>
+   <propertyview name="annualInternalStaffCosts"/>
+   <propertyview name="annualOtherCosts"/>
+   <propertyview name="annualSoftwarCosts"/>
+   <propertyview name="architectureModel"/>
+   <propertyview name="staffedFTE"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;SV: &#34; (property strategicValue))" />
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid6" xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="previousRevisionDate"/>
+   <propertyview name="nextRevisionDate"/>
+   <propertyview name="recommendationDate"/>
+   <propertyview name="recommendation"/>
+   <propertyview name="recommendationComments"/>
+   <propertyview name="strategicValue"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="accounts"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="failureProbabilityScore"/>
+   <propertyview name="businessRiskScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="developmentPlatform"/>
+   <propertyview name="customizationDegree"/>
+   <propertyview name="sessions"/>
+   <propertyview name="sessionDurationDays"/>
+   <propertyview name="serviceLevelAgreement"/>
+   <propertyview name="initialDeploymentCost"/>
+   <propertyview name="loginDate"/>
+   <propertyview name="annualExternalStaffCosts"/>
+   <propertyview name="annualHardwareCosts"/>
+   <propertyview name="annualInternalStaffCosts"/>
+   <propertyview name="annualOtherCosts"/>
+   <propertyview name="annualSoftwarCosts"/>
+   <propertyview name="architectureModel"/>
+   <propertyview name="staffedFTE"/>
+   <propertyview name="relatedArtifacts"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="extratext" property="value" macro="(expand &#34;SV: &#34; (property strategicValue))" />
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/application.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/application.png" xlink:actuate="user"/>
+ </typeview>
+</metis>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_403D06EA-F76C-4203-9C0D-31E1CC1E2AD7" name="Process_Domain" title="Process Domain" desc="Mirrors the metamodel of the same name in Troux Semantics.">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Relationship Types" xlink:href="process_domain_relationship_types.kmd#UUID4_28F2D036-6D90-4FFF-A2B5-DAEED0EA5311"/>
+  </metamodel-links>
+ </metamodel>
+
+
+</metis>

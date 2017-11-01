@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<?metis version="9.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="5"
+ nextoid="1">
+
+ <type id="RelType_ITG:Application_sends_data_to_Application_UUID" name="Application_sends_data_to_Application" title="Application sends data to Application" desc="Specifies that one Application sends data to another Application. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="sends data to" xlink:href="#Reltype_sends_data_to-receives_data_from_UUID"/>
+  <property name="dataExchanged" xlink:role="integer-type" xlink:title="Data Exchanged" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:DataExchanged_UUID" label="Data Exchanged" desc="One of several values indicating the type of data that is sent between the applications." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:ApplicationSendsDataToApplication_typeOfDataExchanged_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="interfaceTechnology" xlink:role="integer-type" xlink:title="Interface Technology" xlink:href="../primitivetypes/primitive_types.kmd#PropType_ITG:InterfaceTechnology_UUID" label="Interface Technology" desc="One of several values indicating the technology by which the two applications communicate." default-visible="top" mer-property-metadata="uuid=&#34;PropDef_ITG:ApplicationSendsDataToApplication_interfaceTechnology_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Application" xlink:href="../objecttypes/application.kmd#CompType_TRM:Application_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Application sends data to Application" xlink:href="#RelType_ITG:Application_sends_data_to_Application_UUID" xlink:actuate="user">
+   <string name="from">sends data to</string>
+   <string name="to">receives data from</string>
+   <string name="troux_color">#000000</string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">1</integer>
+   <integer name="troux_component1EndType">1</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Application sends data to Application" xlink:href="#RelType_ITG:Application_sends_data_to_Application_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <integer name="dataExchanged">0</integer>
+   <integer name="interfaceTechnology">0</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_datastore_sends_data_to_receives_data_from_datastore_UUID" name="datastore_sends_data_to_receives_data_from_datastore" title="Datastore sends data to Datastore" desc="Use this relationship to model flow from physical datastore (or database) to physical datastore (or database)" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="sends data to" xlink:href="#Reltype_sends_data_to-receives_data_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Datastore" xlink:href="../objecttypes/datastore.kmd#CompType_TRM:DataStore_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Datastore sends data to Datastore" xlink:href="#Reltype_datastore_sends_data_to_receives_data_from_datastore_UUID" xlink:actuate="user">
+   <string name="from">sends data to</string>
+   <string name="to">receives data from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Datastore sends data to Datastore" xlink:href="#Reltype_datastore_sends_data_to_receives_data_from_datastore_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_deployed_software_sends_data_to_receives_data_from_deployed_software_UUID" name="deployed_software_sends_data_to_receives_data_from_deployed_software" title="Deployed Software sends data to Deployed Software" desc="Use this relationship to model the direction of data flowing between applications. For more detailed modeling, use the message object to show what is actually flowing between the applications." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="sends data to" xlink:href="#Reltype_sends_data_to-receives_data_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Deployed Software" xlink:href="../objecttypes/deployed_software.kmd#CompType_TRM:DeployedInstance_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Deployed Software sends data to Deployed Software" xlink:href="#Reltype_deployed_software_sends_data_to_receives_data_from_deployed_software_UUID" xlink:actuate="user">
+   <string name="from">sends data to</string>
+   <string name="to">receives data from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Deployed Software sends data to Deployed Software" xlink:href="#Reltype_deployed_software_sends_data_to_receives_data_from_deployed_software_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_it_architecture_component_sends_data_to_receives_data_from_it_architecture_component_UUID" name="it_architecture_component_sends_data_to_receives_data_from_it_architecture_component" title="IT Architecture Component sends data to IT Architecture Component" desc="Use this relationship to model the direction of data flowing between IT architecture components. For more detailed modeling, use the message object to show what is actually flowing between the logical architecture elements." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="sends data to" xlink:href="#Reltype_sends_data_to-receives_data_from_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Component" xlink:href="../abstracttypes/it_architecture_component.kmd#CompType_MEAF:ITArchitectureComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="IT Architecture Component" xlink:href="../abstracttypes/it_architecture_component.kmd#CompType_MEAF:ITArchitectureComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="IT Architecture Component sends data to IT Architecture Component" xlink:href="#Reltype_it_architecture_component_sends_data_to_receives_data_from_it_architecture_component_UUID" xlink:actuate="user">
+   <string name="from">sends data to</string>
+   <string name="to">receives data from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="IT Architecture Component sends data to IT Architecture Component" xlink:href="#Reltype_it_architecture_component_sends_data_to_receives_data_from_it_architecture_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="Reltype_sends_data_to-receives_data_from_UUID" name="sends_data_to-receives_data_from" title="sends data to" desc="Allows you to show communication between two physical applications without going into the direction or the type of communication. Use it when you just wish to show there is some kind of communication." usage="abstract">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <named-criteria-link name="FindAllsends_data_to-receives_data_from" xlink:role="criteria" xlink:title="Find all Sends data to relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_sends_data_to-receives_data_from_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="sends data to" xlink:href="#Reltype_sends_data_to-receives_data_from_UUID" xlink:actuate="user">
+   <string name="from">sends data to</string>
+   <string name="to">receives data from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="sends data to" xlink:href="#Reltype_sends_data_to-receives_data_from_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

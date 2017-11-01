@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Service_Configuration" name="Service_Configuration" title="Service Configuration" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Configuration" xlink:href="configuration.kmd#AKM_Configuration"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/service_configuration.kmd#_002as5e00vl9dje8fc42"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="User Interface Configuration" xlink:href="user_interface_configuration.kmd#AKM_User_Interface_Configuration"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Document" xlink:href="http://metadata.troux.info/meaf/objecttypes/document.kmd#CompType_MEAF:Document_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="General Object" xlink:href="http://metadata.troux.info/meaf/objecttypes/general_object.kmd#CompType_MEAF:GeneralObject_UUID"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Service Configuration" xlink:href="#AKM_Service_Configuration"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Parameter" xlink:href="parameter.kmd#AKM_Parameter"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Generic Object" xlink:href="metis:std#oid33"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="IT Service" xlink:href="http://metadata.troux.info/meaf/objecttypes/it_service.kmd#CompType_TRM:ServiceOffering_UUID"/>
+  <named-method-link name="View.DClickAction" xlink:role="cpp-method" xlink:title="Execute" xlink:href="../../task/methods/execution_methods.kmd#_002asmt00ul6hpgnifce"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Service Configuration" xlink:href="#AKM_Service_Configuration" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Service Configuration" xlink:href="#AKM_Service_Configuration" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="Inherited">1</integer>
+  </valueset>
+ </type>
+
+
+</metis>

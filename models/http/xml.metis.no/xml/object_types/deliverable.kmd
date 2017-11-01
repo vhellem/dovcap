@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="1"
+ nextoid="5">
+
+ <type id="oid1" name="Deliverable" title="Deliverable" usage="object" desc="A Deliverable is generally something that a supplier delivers to a customer. &#10;A special case of Deliverable is Project Deliverable. This is another object type. &#10;As defined here a deliverable is something that can be directly associated with some user or customer needs. It is different from the sales items, products or services that is sold and paid for. Typically, a passenger receives a specific transportation deliverable from an air liner even if he has purchased and paid for a ticket. The transportation deliverable takes him from one place to another in a pleasant and fast way. The deliverable could for instance include meals on the flight and on ground connection transportation from his home and to his hotel.">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.computas.com/xml/user/object.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid4"/>
+  <property name="name" xlink:role="string-type" xlink:href="metis:std#oid42" label="Name" label-flag="true" desc="Enter a short name for the object"/>
+  <property name="description" xlink:role="text-type" xlink:href="metis:std#oid43" label="Description" description-flag="true" desc="Enter a description of the object"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid1"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+<forward-reference id="oid2" stamp="20000308 195900000" xlink:role="type" xlink:href="#oid1"/>
+<forward-reference id="oid3" stamp="20000308 195900000" xlink:role="type" xlink:href="project_deliverable.kmd#oid1"/>
+
+ <typeview id="oid4" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/smpm_deliverable.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/smpm_deliverable.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/deliverable.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>
+

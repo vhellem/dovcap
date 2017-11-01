@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="UUID4_0B30B1BE-242F-4D71-9C3E-3670F0B85156" xlink:role="type" xlink:title="Virtual Machine Image" xlink:href="../object_types/virtual_machine_image.kmd#CompType_Semantics_AppDomain:Virtual_Machine_Image_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="phase" visible-flag="true"/>
+   <propertyview name="startDate" visible-flag="true"/>
+   <propertyview name="stopDate" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" protected-flag="true" visible-flag="false"/>
+   <propertyview name="dbms-admin.propertyList" visible-flag="false"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="journalID" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+   <propertyview name="cost" visible-flag="true"/>
+   <propertyview name="recurringCost" visible-flag="true"/>
+   <propertyview name="recurringCostInterval" visible-flag="true"/>
+   <propertyview name="monetaryUnit" visible-flag="true"/>
+   <propertyview name="businessImpactAnalysisScore" visible-flag="true"/>
+   <propertyview name="color" visible-flag="false"/>
+   <propertyview name="diskCount" visible-flag="true"/>
+   <propertyview name="diskCapacity" visible-flag="true"/>
+   <propertyview name="diskCapacityUnit" visible-flag="true"/>
+   <propertyview name="diskCapacityFreeTimestamp" visible-flag="true"/>
+   <propertyview name="diskCapacityFree" visible-flag="true"/>
+   <propertyview name="diskCapacityFreeUnit" visible-flag="true"/>
+   <propertyview name="diskCapacityUsedTimestamp" visible-flag="true"/>
+   <propertyview name="diskCapacityUsed" visible-flag="true"/>
+   <propertyview name="diskCapacityUsedUnit" visible-flag="true"/>
+   <propertyview name="diskPercentageUsedTimestamp" visible-flag="true"/>
+   <propertyview name="diskPercentageUsed" visible-flag="true"/>
+   <propertyview name="processorCpuCount" visible-flag="true"/>
+   <propertyview name="processorCpuClockSpeed" visible-flag="true"/>
+   <propertyview name="processorCpuClockSpeedUnit" visible-flag="true"/>
+   <propertyview name="processorPercentageUsedTimestamp" visible-flag="true"/>
+   <propertyview name="processorPercentageUsed" visible-flag="true"/>
+   <propertyview name="memoryRamUnit" visible-flag="true"/>
+   <propertyview name="memoryRamAmount" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/virtual_machine_image.svg#oid1&#34;)"/>
+   <replace tag="textbackground" property="value" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/virtual_machine_image.svg#oid1&#34;)"/>
+   <replace tag="textbackground" property="value" macro="(expand &#34;#C9EFBE&#34;)"/>
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#C9EFBE&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/virtual_machine_image.png"/>
+ </typeview>
+
+
+</metis>

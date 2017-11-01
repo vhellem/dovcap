@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="9"
+ nextoid="1">
+
+ <type id="RelType_CPPD:CC_relship_UUID" name="CC_relship" title="CC relship" usage="abstract">
+  <complex-type-link xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="CC relship" xlink:href="#RelType_CPPD:CC_relship_UUID" xlink:actuate="user">
+   <string name="from">relationship to</string>
+   <string name="to">relationship from</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="CC relship" xlink:href="#RelType_CPPD:CC_relship_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_CPPD:IsComposedUsing_UUID" name="isComposedUsing" title="Is Composed Using" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_CPPD:CC_relship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Configurable Component" xlink:href="cc_objects.kmd#ObjType_CPPD:ConfigurableComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Composition Element" xlink:href="cc_objects.kmd#ObjType_CPPD:CompositionElement_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Is Composed Using" xlink:href="#RelType_CPPD:IsComposedUsing_UUID" xlink:actuate="user">
+   <string name="from">is composed using</string>
+   <string name="to">composes</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Is Composed Using" xlink:href="#RelType_CPPD:IsComposedUsing_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_CPPD:UsesConfigurableComponent_UUID" name="usesConfigurableComponent" title="Uses configurable component" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_CPPD:CC_relship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Composition Element" xlink:href="cc_objects.kmd#ObjType_CPPD:CompositionElement_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Configurable Component" xlink:href="cc_objects.kmd#ObjType_CPPD:ConfigurableComponent_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Uses configurable component" xlink:href="#RelType_CPPD:UsesConfigurableComponent_UUID" xlink:actuate="user">
+   <string name="from">uses component</string>
+   <string name="to">is used by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Uses configurable component" xlink:href="#RelType_CPPD:UsesConfigurableComponent_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="RelType_CPPD:HasAlternativeSolution_UUID" name="hasAlternativeSolution" title="Has alternative solution" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="#RelType_CPPD:CC_relship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Configurable Component" xlink:href="cc_objects.kmd#ObjType_CPPD:ConfigurableComponent_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Design solution" xlink:href="fm_objects.kmd#ObjType_CPPD:DesignSolution_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has alternative solution" xlink:href="#RelType_CPPD:HasAlternativeSolution_UUID" xlink:actuate="user">
+   <string name="from">has solution</string>
+   <string name="to">solution of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Has alternative solution" xlink:href="#RelType_CPPD:HasAlternativeSolution_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+
+</metis>

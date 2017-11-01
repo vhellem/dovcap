@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="6"
+ nextoid="5">
+
+ <cpp-method id="oid5" name="getManager1" desc=" " language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getManager1" xlink:href="../criteria/organization_criteria.kmd#oid1"/>
+   <string name="Default"> </string>
+   <string name="Property">name</string>
+   <string name="RemoveDuplicates">false</string>
+   <string name="Separator"> </string>
+  </arg-list>
+ </cpp-method>
+
+ </metis>

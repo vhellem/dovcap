@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="_002asno00mlkpeegqbla" name="Roles" desc="Types for representing role and their responsibilities, as well as the actor that fill these roles.">
+  <complex-type-links size="15">
+   <complex-type-link xlink:role="type" xlink:title="Role (Actor)" xlink:href="../languages/role_actor.kmd#Role_Actor" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Person" xlink:href="../languages/person.kmd#IRTV:Person" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="fills" xlink:href="../../eka/languages/eka_relships.kmd#fills"/>
+   <complex-type-link xlink:role="type" xlink:title="Uses" xlink:href="../languages/uses.kmd#IRTV:Uses"/>
+   <complex-type-link xlink:role="type" xlink:title="Editor" xlink:href="../languages/editor.kmd#IRTV:Editor"/>
+   <complex-type-link xlink:role="type" xlink:title="Owner" xlink:href="../languages/owns.kmd#IRTV:Owner"/>
+   <complex-type-link xlink:role="type" xlink:title="Reader" xlink:href="../languages/reader.kmd#IRTV:Reader"/>
+   <complex-type-link xlink:role="type" xlink:title="Participates" xlink:href="../languages/participates.kmd#IRTV:Participates"/>
+   <complex-type-link xlink:role="type" xlink:title="Customer" xlink:href="../languages/customer.kmd#IRTV:Customer"/>
+   <complex-type-link xlink:role="type" xlink:title="Manages" xlink:href="../languages/manages.kmd#IRTV:Manages"/>
+   <complex-type-link xlink:role="type" xlink:title="Applies view" xlink:href="../languages/applies_view.kmd#IRTV:Applies"/>
+   <complex-type-link xlink:role="type" xlink:title="Operator" xlink:href="../languages/operator.kmd#IRTV:Operator"/>
+   <complex-type-link xlink:role="type" xlink:title="Definer" xlink:href="../languages/definer.kmd#IRTV:Definer"/>
+   <complex-type-link xlink:role="type" xlink:title="Content manager" xlink:href="../languages/content_manager.kmd#IRTV:Content_manager"/>
+   <complex-type-link xlink:role="type" xlink:title="Context manager" xlink:href="../languages/context_manager.kmd#IRTV:Context_manager"/>
+  </complex-type-links>
+  <typeview-links size="1">
+   <typeview-link xlink:role="typeview" xlink:href="../views/definer.kmd#_002aspo013gt3ftsdirn"/>
+  </typeview-links>
+ </metamodel>
+
+
+</metis>

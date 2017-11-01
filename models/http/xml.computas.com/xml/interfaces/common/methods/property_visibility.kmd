@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+
+<!--
+Troux Technologies, Inc. Confidential and Proprietary.
+This work contains valuable confidential, proprietary and trade secret
+information of Troux Technologies, Inc. and is protected by the laws of 
+the United States and other countries. Any disclosure, use or reproduction
+of this work without the prior written authorization of Troux Technologies, Inc.
+is strictly prohibited.
+Copyright (C) 2000-2006 Troux Technologies, Inc. All rights reserved.
+-->
+
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="3"
+ nextoid="4">
+
+ <cpp-method id="oid1" name="Property_Visibility_Line_Style" title="Property Visibility Line Style" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="Property Visibility Line Style" xlink:href="../primitive_types/property_visibility.kmd#oid1"/>
+   <string name="Property">propertyInformation.isVisible</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="Property_Visibility_Fill_Color" title="Property Visibility Fill Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="Property Visibility Fill Color" xlink:href="../primitive_types/property_visibility.kmd#oid2"/>
+   <string name="Property">propertyInformation.isVisible</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="Property_Visibility_Fill_Pattern" title="Property Visibility Fill Pattern" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="Property Visibility Fill Pattern" xlink:href="../primitive_types/property_visibility.kmd#oid3"/>
+   <string name="Property">propertyInformation.isVisible</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ typeviews="5"
+ nextoid="21">
+
+ <type id="oid1" name="Tool" title="Tool" desc="A Tool is anything used as a means of performing an operation." usage="object" container-flag="true">
+  <complex-type-link xlink:role="type" xlink:href="resource.kmd#oid1"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid3"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:href="#oid1"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:href="#oid1">
+   <string name="name"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+<forward-reference id="oid4" stamp="20001129 195900000" xlink:role="type" xlink:href="#oid1"/>
+<forward-reference id="oid13" stamp="20001129 195900000" xlink:role="type" xlink:href="#oid1"/>
+<forward-reference id="oid14" stamp="20001129 195900000" xlink:role="type" xlink:href="#oid1"/>
+
+ <typeview id="oid2" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/gem/gem_tool.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/gem/gem_tool.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/gem/gem_tool.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid3" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/tool.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/tool.svg#oid0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="PictureBackground" property="fillpattern" macro="(expand &#34;diagcross&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../smallicons/tool.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:href="#oid1" tree-size="0.5" nested-size="0.125">
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/smpm_product_tool.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/smpm_product_tool.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+ </typeview>
+
+</metis>
+

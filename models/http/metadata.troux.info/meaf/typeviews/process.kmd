@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="2">
+
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Process" xlink:href="../objecttypes/process.kmd#CompType_MEAF:Process_UUID" typedesc="In the Process BPM template, the &#34;traditional&#34; Process in Metis is also used for BPMN-style modeling. A process here corresponds to a BPMN activity; which may be both a sub-process (i.e. an activity that has a decomposition as a process) and a task (i.e. a leaf-node activity). In BPMN terminology, a process corresponds to a particular assembly of process elements in a graph; i.e. a set of activities, gateways and events connected with flows.&#10;&#10;Original description of logical process: A series of operations that transforms Input into Output by use of certain Mechanisms under the Control of some external system or higher-level Logical Processes. A Process takes up a certain interval in the information space, defined by a start action and close action. Actions are events or subprocesses. A Process may be regarded as a &#39;black box&#39;. The internals of a Process may be broken down in sub-processes in a recursive manner. A Process is named by a verb or verb phrase and the default symbol is a rectangle." tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="strategicValue"/> 
+   <propertyview name="prefix"/>
+   <propertyview name="punctuationMark"/>
+   <propertyview name="sequenceNumber"/>
+   <propertyview name="identification"/> 
+   <propertyview name="versionId"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="itEffectivenessPercentage"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="duration"/>
+   <propertyview name="durationUnit"/>
+   <propertyview name="automation"/>
+   <propertyview name="processModelChange"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="../symbols/bpm/process2.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62;&#34; (property identification) &#34; &#34; (property name) (property BPM_Name) &#34;&#60;/qt&#62;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_OpenColor))"/>
+   <replace tag="pmchange" property="value" macro="(expand (property processModelChange))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Closed" xlink:href="../symbols/bpm/process2.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62;&#34; (property identification) &#34; &#34; (property name) (property BPM_Name) &#34;&#60;/qt&#62;&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property BPM_ClosedColor))"/>
+   <replace tag="pmchange" property="value" macro="(expand (property processModelChange))"/>
+   <replace tag="canvas" property="fillpattern" macro="(expand (property BPM_FillPattern))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/process.png"/>
+ </typeview>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Process" xlink:href="../objecttypes/process.kmd#CompType_MEAF:Process_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="strategicValue"/> 
+   <propertyview name="prefix"/>
+   <propertyview name="punctuationMark"/>
+   <propertyview name="sequenceNumber"/>
+   <propertyview name="identification"/> 
+   <propertyview name="versionId"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="itEffectivenessPercentage"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="duration"/>
+   <propertyview name="durationUnit"/>
+   <propertyview name="automation"/>
+   <propertyview name="processModelChange"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="../symbols/bpm/process2.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9.0pt&#62;&#60;qt&#62;&#34; (property identification) &#34; &#60;b&#62; &#34; (label) &#34;&#60;/b&#62;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Closed" xlink:href="../symbols/bpm/process2.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;span style=font-size:9.0pt&#62;&#60;qt&#62;&#34; (property identification) &#34; &#60;b&#62; &#34; (label) &#34;&#60;/b&#62;&#60;br&#62;&#60;I&#62;&#34; (property description) &#34;&#60;/I&#62;&#60;/span&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/process.png"/>
+ </typeview>
+
+ <typeview id="oid10" xlink:role="type" xlink:title="Process" xlink:href="../objecttypes/process.kmd#CompType_MEAF:Process_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="strategicValue"/> 
+   <propertyview name="prefix"/>
+   <propertyview name="punctuationMark"/>
+   <propertyview name="sequenceNumber"/>
+   <propertyview name="identification"/> 
+   <propertyview name="versionId"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="itEffectivenessPercentage"/>
+   <propertyview name="businessCriticalityScore"/>
+   <propertyview name="duration"/>
+   <propertyview name="durationUnit"/>
+   <propertyview name="automation"/>
+   <propertyview name="processModelChange"/>
+  </propertyviews>
+  <layout-link xlink:role="object" xlink:title="Process Node-Tree Layout" xlink:href="../layoutstrategies/process_layout.kmd#oid1" xlink:actuate="auto"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="../symbols/bpm/process2.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62;&#34; (property identification) &#34; &#34; (label) &#34;&#60;/qt&#62;&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="../symbols/bpm/process2.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#60;qt&#62;&#34; (property identification) &#34; &#34; (label) &#34;&#60;/qt&#62;&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/bpm/process.png"/>
+ </typeview>
+
+</metis>

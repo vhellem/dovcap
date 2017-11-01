@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="buildConfigurationScript" title="buildConfigurationScript" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/buildConfigurationScript.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="transformRules" title="transformRules" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/transformRules.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="editRule" title="Edit rule" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/editRule.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="editRelRule" title="Edit relship rule" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/editRule.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="addRule" title="Add rule" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/addRule.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="refreshRule" title="Refresh rule" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/refreshRule.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="openRuleView" title="Open rule view" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/openRuleView.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="evaluateRule" title="Apply rule" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="Script">(expand (property ruleCode))</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="evaluateExpression" title="Apply expression" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="Script">(expand (property ruleInitCode) (property ruleCode) (property rulePostCode) )</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="evaluateRule2" title="Apply rules" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/evaluateRule.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="configureCC" title="Configure" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/configureCC.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="test_getVPV" title="Test getVPV" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/test_getVPV.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="test_setVPV" title="Test setVPV" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/test_setVPV.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="includeInConfiguration" title="Test includeInConfiguration" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/includeInConfiguration.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="excludeFromConfiguration" title="Test excludeFromConfiguration" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <arg-list size="4">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.chalmers.se/scripts/excludeFromConfiguration.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

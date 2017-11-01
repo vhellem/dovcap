@@ -145,7 +145,7 @@ public class Model {
 
         // Attempts to find and add icons for the files that does not have any icons yet.
         // Will probably add more icons than wanted, so uncomment with caution.
-        File folder = new File("models/");
+        File folder = new File("src/main/frontend/app/image/");
         File[] listOfFiles = folder.listFiles();
         objectIterator = objectL.iterator();
         while(objectIterator.hasNext()){

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <type id="RelType_EKA:HasSymbol_UUID" name="hasSymbol" title="Has symbol" desc="The has symbol relationship is used to model links to view symbols." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="eka_relships.kmd#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_symbol.kmd#ObjType_EKA:Symbol_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="hasSymbol" xlink:href="#RelType_EKA:HasSymbol_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has symbol</string>
+   <string name="to">symbol of</string>
+  </valueset>
+ </type>
+
+ <type id="RelType_EKA:HasIcon_UUID" name="hasIcon" title="Has icon" desc="The has icon relationship is used to model links to icon symbols." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:href="eka_relships.kmd#RelType_EKA:Member_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:href="http://xml.activeknowledgemodeling.com/EKA/languages/eka_symbol.kmd#ObjType_EKA:Symbol_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="3" xlink:role="type" xlink:title="hasIcon" xlink:href="#RelType_EKA:HasIcon_UUID">
+   <integer name="troux_component2EndType">1</integer>
+   <string name="from">has icon</string>
+   <string name="to">icon of</string>
+  </valueset>
+ </type>
+
+ </metis>

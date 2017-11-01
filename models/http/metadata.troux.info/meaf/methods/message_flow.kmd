@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ types="19" 
+ methods="40" 
+ criteria="9" 
+ typeviews="31" 
+ viewstyles="2" 
+ nextoid="1325">
+
+ <cpp-method id="oid1" name="MessageFlowConstructor" title="Enable Message Flow Commands" language="c++" bind="NO.METIS.GEM.DIAGRAM.enableGenericTypeCommands" required-dll="gem_diagram">
+  <arg-list size="3">
+   <url name="CommandObjectUrl" xlink:href="../commands/message_flow_commands.kmd" xlink:role="url" xlink:title="Command Object Url" xlink:actuate="auto"/>
+   <pointer name="TypeUri" xlink:role="type" xlink:title="Message Flow" xlink:href="../relationshiptypes/message_flow.kmd#Reltype_message_flow_UUID"/>
+   <string name="Command1">is-message-flow</string>
+  </arg-list>
+ </cpp-method>
+
+
+
+</metis>

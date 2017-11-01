@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="6"
+ nextoid="1">
+
+ <type id="CPPD_External_property" name="External_property" title="External property" desc="A property that the product element has, which is of interest to the external world. Often external property values should match requested and constraint values imposed from the outside." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+  <property name="min" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines minum value" default-visible="bottom"/>
+  <property name="max" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines maximum value" default-visible="bottom"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="External property" xlink:href="#CPPD_External_property" xlink:actuate="user">
+   <string name="from">has external property</string>
+   <string name="to">external property of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="External property" xlink:href="#CPPD_External_property" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="min">0</integer>
+   <integer name="max">0</integer>
+  </valueset>
+ </type>
+
+ <type id="CPPD_Internal_property" name="Internal_property" title="Internal property" desc="A property that the product element has, which is of no interest to the external world, just for its internal components, subsystems, and variants." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+  <property name="min" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines minum value" default-visible="bottom"/>
+  <property name="max" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines maximum value" default-visible="bottom"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Internal property" xlink:href="#CPPD_Internal_property" xlink:actuate="user">
+   <string name="from">has internal property</string>
+   <string name="to">internal property of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Internal property" xlink:href="#CPPD_Internal_property" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="min">0</integer>
+   <integer name="max">0</integer>
+  </valueset>
+ </type>
+
+ <type id="CPPD_MandatoryConstraint" name="MandatoryConstraint" title="Mandatory constraint" desc="An external property demanded by a customer requirement, a technical constraint, or targets set during the design process." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Requested property" xlink:href="#Requested_property"/>
+  <property name="min" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines minum value" default-visible="bottom"/>
+  <property name="max" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines maximum value" default-visible="bottom"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Mandatory constraint" xlink:href="#CPPD_MandatoryConstraint" xlink:actuate="user">
+   <string name="from">Constraint</string>
+   <string name="to">Constraint for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Mandatory constraint" xlink:href="#CPPD_MandatoryConstraint" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name=":Requested_property.min">0</integer>
+   <integer name=":Requested_property.max">0</integer>
+   <integer name="min">0</integer>
+   <integer name="max">0</integer>
+  </valueset>
+ </type>
+
+ <type id="CPPD_Requested_by" name="Requests" title="Requests" desc="A relationship between a property and the element that is the source of the requirement of contraint, e.g. person or role if it is a user requirement, task if it deals with agreed design targets, product element if there are connection or tolerance boundaries, etc." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Depends on" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:DependsOn_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Element (EKA)" xlink:href="../../eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requests" xlink:href="#CPPD_Requested_by" xlink:actuate="user">
+   <string name="from">requests</string>
+   <string name="to">requested by</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Requests" xlink:href="#CPPD_Requested_by" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="CPPD_Variant_property" name="Variant_property" title="Variant property" desc="A variant property is an external property that defines (through modelled rules or by m,anual selection) which variant compisition sets should be chosen for the configurable component." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="External property" xlink:href="#CPPD_External_property"/>
+  <property name="min" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines minum value" default-visible="bottom"/>
+  <property name="max" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines maximum value" default-visible="bottom"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Variant property" xlink:href="#CPPD_Variant_property" xlink:actuate="user">
+   <string name="from">has variant property</string>
+   <string name="to">defines variant of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="10" xlink:role="type" xlink:title="Variant property" xlink:href="#CPPD_Variant_property" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name=":External_property.min">0</integer>
+   <integer name=":External_property.max">0</integer>
+   <integer name="min">0</integer>
+   <integer name="max">0</integer>
+  </valueset>
+ </type>
+
+ <type id="Requested_property" name="Requested_property" title="Requested property" desc="An external property requested by a customer requirement, a technical constraint, or targets set during the design process." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+  <property name="min" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines minum value" default-visible="bottom"/>
+  <property name="max" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Defines maximum value" default-visible="bottom"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Requested property" xlink:href="#Requested_property" xlink:actuate="user">
+   <string name="from">Requirement</string>
+   <string name="to">Requirement for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="8" xlink:role="type" xlink:title="Requested property" xlink:href="#Requested_property" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+   <integer name="min">0</integer>
+   <integer name="max">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

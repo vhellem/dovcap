@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="23"
+ nextoid="1">
+
+ <cpp-method id="oid1" name="Pick_BPM_Process_Model_Change_Closed_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Closed_Colormap" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_bpm_process_model_change_closed_colormap_UUID"/>
+   <string name="Property">processModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" name="Pick_BPM_Process_Model_Change_Open_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Open_Colormap" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_bpm_process_model_change_open_colormap_UUID"/>
+   <string name="Property">processModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" name="Pick_BPM_Object_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Object_Colormap" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_bpm_object_colormap_UUID"/>
+   <string name="Property">processModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid4" name="Pick_BPM_Flow_Color" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Flow_Colormap" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_bpm_flow_colormap_UUID"/>
+   <string name="Property">processModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" name="Pick_BPM_Process_Model_Change_FillPattern" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Process_Model_Change_Patternmap" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_bpm_process_model_change_patternmap_UUID"/>
+   <string name="Property">processModelChange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid6" name="BPM_Get_Stereotype_Name" title="BPM_Get_Stereotype_Name" desc="The name of  the stereotype process of a particular process, found by following the has-stereotype relationship," language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 2" xlink:href="metis:stdmethods#oid542"/>
+  <arg-list size="8">
+   <string name="BreakAfter">1</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="BPM_Find_Process_Stereotype" xlink:href="../criteria/bpm_find_process_stereotype.kmd#oid1" xlink:actuate="auto"/>
+   <string name="Macro1">(expand &#34;&#60;br&#62;&#38;lt;&#38;lt;&#34;(property name)&#34;&#38;gt;&#38;gt;&#60;/br&#62;&#34;)</string>
+   <string name="Macro2"></string>
+   <string name="Macro3"></string>
+   <string name="Macro4"></string>
+   <string name="Macro5"></string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="BPM_Get_Stereotype_Description" title="BPM_Get_Stereotype_Description" desc="The description to use for a particular process on process symbols. Defaults to the description of the stereotype process (if any), otherwise the process&#39; own description" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Macro Value 2" xlink:href="metis:stdmethods#oid542"/>
+  <arg-list size="8">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="BPM_Find_Process_Stereotype" xlink:href="../criteria/bpm_find_process_stereotype.kmd#oid1" xlink:actuate="auto"/>
+   <string name="Macro1">(expand (property description))</string>
+   <string name="Macro2">(expand (property description))</string>
+   <string name="Macro3"></string>
+   <string name="Macro4"></string>
+   <string name="Macro5"></string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid8" name="setTitleTextscale" language="c++" bind="NO.METIS.GEM.setTextScale" required-dll="gem_modeling">
+  <arg-list size="1">
+   <float name="TextScaleFactor">0.25</float>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid9" name="BPM_RefreshTextObject" title="Refresh text-object" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="3">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="showTextObject" xlink:href="#oid10"  xlink:actuate="auto"/>
+   <pointer name="Method2" xlink:role="cpp-method" xlink:title="updateMacros" xlink:href="#oid11" xlink:actuate="auto"/>
+   <pointer name="Method3" xlink:role="cpp-method" xlink:title="hideTextRelationship" xlink:href="#oid23" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid10" name="showTextObject" language="c++" bind="NO.METIS.GEM.showTextObject" required-dll="gem_qt_utilities">
+  <arg-list size="2">
+   <string name="Property">symbolLabel</string>
+   <pointer name="TextType" xlink:role="type" xlink:title="BPM Text" xlink:href="../objecttypes/bpm_text.kmd#CompType_MEAF:BPMText_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid11" name="updateMacros" language="c++" bind="NO.METIS.GEM.updateMacro" required-dll="gem_modeling">
+  <arg-list size="2">
+   <pointer name="ChildrenOf" xlink:role="type" xlink:title="BPM Text" xlink:href="../objecttypes/bpm_text.kmd#CompType_MEAF:BPMText_UUID"/>
+   <string name="AllViews">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid12" name="BPM_TextConstructor" language="c++" bind="NO.METIS.GEM.setTypeFilter" required-dll="gem_modeling">
+  <arg-list size="2">
+   <string name="Filter1">PropertyList</string>
+   <string name="Filter2">PropertyListAtCreate</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid13" name="hideRelViewFromParent" language="c++" bind="NO.METIS.GEM.hideRelViews" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">FromOrigin</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid14" name="setTextPosition" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="4">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getParent" xlink:href="../criteria/bpm_criteria.kmd#oid1" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="Perform Layout" xlink:href="#oid15" xlink:actuate="auto"/>
+   <string name="Mode">UseCriteria</string>
+   <string name="ReferenceView">All</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid15" name="PerformLayout" title="Perform Layout" desc="Perform Matrix Layout." language="c++" bind="NO.METIS.GEM.LAYOUT.autoLayout" required-dll="gem_layout">
+ </cpp-method>
+
+ <cpp-method id="oid16" name="findGatewaySymbol" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+  <arg-list size="11">
+    <string name="Property">gatewayType</string>
+    <string name="Value1">XOR-Data</string>
+    <string name="Return1">#oid35</string>
+    <string name="Value2">XOR-Event</string>
+    <string name="Return2">#oid40</string>
+    <string name="Value3">OR</string>
+    <string name="Return3">#oid36</string>
+    <string name="Value4">Complex</string>
+    <string name="Return4">#oid37</string>
+    <string name="Value5">AND</string>
+    <string name="Return5">#oid38</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid17" name="findStartEventSymbol" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+  <arg-list size="13">
+    <string name="Property">eventType</string>
+    <string name="Value1">Default</string>
+    <string name="Return1">#oid40</string>
+    <string name="Value2">Message</string>
+    <string name="Return2">#oid8</string>
+    <string name="Value3">Timer</string>
+    <string name="Return3">#oid17</string>
+    <string name="Value4">Rule</string>
+    <string name="Return4">#oid18</string>
+    <string name="Value5">Link</string>
+    <string name="Return5">#oid19</string>
+    <string name="Value6">Multiple</string>
+    <string name="Return6">#oid20</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid18" name="findIntermediateEventSymbol" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+  <arg-list size="19">
+    <string name="Property">eventType</string>
+    <string name="Value1">Default</string>
+    <string name="Return1">#oid40</string>
+    <string name="Value2">Message</string>
+    <string name="Return2">#oid5</string>
+    <string name="Value3">Timer</string>
+    <string name="Return3">#oid22</string>
+    <string name="Value4">Error</string>
+    <string name="Return4">#oid23</string>
+    <string name="Value5">Cancel</string>
+    <string name="Return5">#oid24</string>
+    <string name="Value6">Compensate</string>
+    <string name="Return6">#oid25</string>
+    <string name="Value7">Rule</string>
+    <string name="Return7">#oid26</string>
+    <string name="Value8">Link</string>
+    <string name="Return8">#oid27</string>
+    <string name="Value9">Multiple</string>
+    <string name="Return9">#oid28</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid19" name="findEndEventSymbol" language="c++" bind="NO.METIS.GEM.checkValue" required-dll="gem_analyse">
+  <arg-list size="17">
+    <string name="Property">eventType</string>
+    <string name="Value1">Default</string>
+    <string name="Return1">#oid40</string>
+    <string name="Value2">Message</string>
+    <string name="Return2">#oid6</string>
+    <string name="Value3">Error</string>
+    <string name="Return3">#oid29</string>
+    <string name="Value4">Cancel</string>
+    <string name="Return4">#oid30</string>
+    <string name="Value5">Compensate</string>
+    <string name="Return5">#oid31</string>
+    <string name="Value6">Link</string>
+    <string name="Return6">#oid32</string>
+    <string name="Value7">Multiple</string>
+    <string name="Return7">#oid33</string>
+    <string name="Value8">Terminate</string>
+    <string name="Return8">#oid34</string>
+   </arg-list>
+ </cpp-method>
+ 
+ <cpp-method id="oid20" name="getParentName" title="Get Parent Name" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="2">
+   <string name="Property">symbolLabel</string>
+   <string name="Structure">Parent</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid21" name="Pick_BPM_Flow_Symbol" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="BPM_Sequence_Flow_Symbolmap" xlink:href="../primitivetypes/primitive_types.kmd#Primtype_bpm_sequence_flow_symbolmap_UUID"/>
+   <string name="Property">kind</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid22" name="ModelView_onLoaded" title="Repair all Process-modelling texts" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" background-flag="true" container-flag="true">
+  <arg-list size="3">
+   <string name="Mode">UseCriteria</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="findAllBpmTextCandidates" xlink:href="../criteria/bpm_criteria.kmd#oid2" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="BPM_RefreshTextObject" xlink:href="#oid9"  xlink:actuate="auto"/>
+  </arg-list>
+  </cpp-method>
+
+ <cpp-method id="oid23" name="hideTextRelationship" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="4">
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="allConnectedTextObjects" xlink:href="../criteria/bpm_criteria.kmd#oid3"/>
+   <pointer name="Method" xlink:role="cpp-method" xlink:title="hideRelViewFromParent" xlink:href="#oid13"/>
+   <string name="Mode">UseCriteria</string>
+   <string name="ReferenceView">All</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="MetaModel_CPPD:FunctionMeans_UUID" name="DeveloperEd.ModelEd.UriToolBar.FunctionMeans" title="Function-Means analysis" desc="Metamodel for doing Function-Means analysis.">
+  <complex-type-links size="1">
+   <!-- Objects -->
+   <complex-type-link xlink:role="type" xlink:title="Functional Requirement (CPPD)" xlink:href="../languages/fm_objects.kmd#ObjType_CPPD:FunctionalRequirement_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Design solution (CPPD)" xlink:href="../languages/fm_objects.kmd#ObjType_CPPD:DesignSolution_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint (CPPD)" xlink:href="../languages/fm_objects.kmd#ObjType_CPPD:Constraint_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint family (CPPD)" xlink:href="../languages/fm_objects.kmd#ObjType_CPPD:ConstraintFamily_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Constraint element (CPPD)" xlink:href="../languages/fm_objects.kmd#ObjType_CPPD:ConstraintElement_UUID" xlink:actuate="auto"/>
+   <!-- Relationships -->
+   <complex-type-link xlink:role="type" xlink:title="Is solved by" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:IsSolvedBy_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Is influenced by" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:IsInfluencedBy_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Is constrained by" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:IsConstrainedBy_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Is partly met by" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:IsPartlyMetBy_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Interacts with" xlink:href="../languages/fm_relships.kmd#RelType_CPPD:InteractsWith_UUID" xlink:actuate="auto"/>
+   <complex-type-link xlink:role="type" xlink:title="Is an implementation of" xlink:href="../languages/is_an_implementation_of.kmd#RelType_CPPD:IsAnImplementationOf_UUID" xlink:actuate="auto"/>
+  </complex-type-links>
+  <method-links size="1">
+<!--
+   <method-link xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:setProductDesignDomain_UUID"/>
+-->
+  </method-links>
+ </metamodel>
+</metis>

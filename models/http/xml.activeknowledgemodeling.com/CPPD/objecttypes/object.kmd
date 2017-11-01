@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="CompType_AKM:Object_UUID" name="AKM_Object" title="Object (AKM)" desc="Object." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid2"/>
+  <named-method-link name="View.onObjectAndViewCreated" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:viewAsHierarchy_UUID"/>
+  <named-method-link name="View.onObjectAndViewPasted" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:viewAsHierarchy2_UUID"/>
+  <named-method-link name="onObjectPasted" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:viewAsHierarchy3_UUID"/>
+  <named-method-link name="removeChildViews_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:removeChildViews_UUID"/>
+<!--
+  <named-method-link name="View.isDeleteInstance" xlink:role="cpp-method" xlink:title="isDeleteInstance" xlink:href="../methods/akm_methods.kmd#Method_AKM:isDeleteInstance_UUID"/>
+  <named-method-link name="moveObject_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:moveObject_UUID"/>
+  <named-method-link name="resizeObject_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:resizeObject_UUID"/>
+  <named-method-link name="createConcept_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:createConcept_UUID"/>
+  <named-method-link name="copyFromTemplate_" xlink:role="cpp-method" xlink:title="" xlink:href="../methods/akm_methods.kmd#Method_AKM:copyFromTemplate_UUID"/>
+-->
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Object" xlink:href="#CompType_AKM:Object_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="13" xlink:role="type" xlink:title="Object" xlink:href="#CompType_AKM:Object_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="value"></string>
+  </valueset>
+ </type>
+
+
+</metis>

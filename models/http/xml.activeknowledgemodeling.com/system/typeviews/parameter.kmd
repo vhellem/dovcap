@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="2"
+ nextoid="1">
+
+ <typeview id="_002as5m00sjn4fgd3f75" xlink:role="type" xlink:title="Parameter" xlink:href="../objecttypes/parameter.kmd#AKM_Parameter" tree-size="0.25" nested-size="0.25" behavior="tree" position="bottom" placement="internal">
+  <layout-link xlink:role="object" xlink:title="Source Attribute Layout - Sort By Sequence Number" xlink:href="http://xml.computas.com/xml/interfaces/common/layouts/attribute.kmd#oid2"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Nested Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/system/symbols/icons/parameter.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name) &#34; : &#34; (property value))"/>
+   <replace tag="extratext" property="value" macro="(expand (property dataType))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Nested Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/system/symbols/icons/parameter.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name) &#34; : &#34; (property value))"/>
+   <replace tag="extratext" property="value" macro="(expand (property dataType))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.metis.no/xml/smallicons/business_question.png"/>
+ </typeview>
+
+ <typeview id="_002as5m010onaknh2d41" xlink:role="type" xlink:title="Parameter" xlink:href="../objecttypes/parameter.kmd#AKM_Parameter" tree-size="0.25" nested-size="0.25" behavior="tree" position="bottom" placement="internal">
+  <layout-link xlink:role="object" xlink:title="Source Attribute Layout - Sort By Sequence Number" xlink:href="http://xml.computas.com/xml/interfaces/common/layouts/attribute.kmd#oid2"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/system/symbols/icons/parameter.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name) &#34; : &#34; (property value))"/>
+   <replace tag="extratext" property="value" macro="(expand (property dataType))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="icon" property="value" macro="(expand &#34;http://xml.activeknowledgemodeling.com/system/symbols/icons/parameter.svg#oid1&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (property name) &#34; : &#34; (property value))"/>
+   <replace tag="extratext" property="value" macro="(expand (property dataType))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://xml.metis.no/xml/smallicons/business_question.png"/>
+ </typeview>
+
+
+</metis>
