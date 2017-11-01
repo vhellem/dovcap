@@ -5,6 +5,8 @@ import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
 import ObjectEmitter from './component/ObjectEmitter';
+import { Link } from 'react-router-dom';
+import NavTab from 'react-router-navtab';
 
 var options = [
   { value: 'one', label: 'One' },
@@ -38,7 +40,9 @@ class App extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   componentWillMount() {
-    selectModelFromBackend(this.props.model).then(res => {
+    console.log(this.props.match.params.modelID);
+
+    selectModelFromBackend(this.props.match.params.modelID).then(res => {
       const json = JSON.parse(res.text);
 
       this.setState({
@@ -47,6 +51,16 @@ class App extends React.Component {
         relationships: json.relationshipL,
         objectViews: json.viewL
       });
+      if (this.props.match.params.viewID) {
+        const model = json.modelViewL.find(
+          object => object.attributes.title === this.props.match.params.viewID
+        );
+        const modelIndex = json.modelViewL.indexOf(model);
+
+        this.setState({
+          selectedModel: modelIndex
+        });
+      }
 
       console.log(json);
       this.updateWindowDimensions();
@@ -192,9 +206,15 @@ class App extends React.Component {
             />
           </div>
           <Tabs activeKey={this.state.selectedModel.toString()} onChange={this.onChange}>
-            {this.state.modelViews.map((modelView, index) => (
-              <TabPane tab={modelView.attributes.title} key={index} />
-            ))}
+            {this.state.modelViews.map((modelView, index) => {
+              const link =
+                'model/' + this.props.match.params.modelID + '/' + modelView.attributes.title;
+              return (
+                <TabPane tab={modelView.attributes.title} key={index}>
+                  <Link to={link} />
+                </TabPane>
+              );
+            })}
           </Tabs>
           <button className="" onClick={() => this.zoom(0.25)}>
             Zoom in

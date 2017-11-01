@@ -3,28 +3,34 @@ import { selectModelFromBackend } from './utlities';
 const Dropzone = require('react-dropzone');
 const request = require('superagent');
 
-
 class Uploader extends Component {
   constructor(props) {
     super(props);
     this.state = {
       fileNames: [],
-      selected: '',
+      selected: ''
     };
   }
   componentWillMount() {
     fetch('/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
+        fileNames.sort();
         this.setState({ fileNames });
-      }).catch(err => console.error(err.toString()));
+      })
+      .catch(err => console.error(err.toString()));
   }
   getFileNameRows() {
-    const fileNames = this.state.fileNames.map((file) =>
+    const fileNames = this.state.fileNames.map(file => (
       <tr key={file}>
         <td>{file}</td>
-        <td><button o nClick={() => this.handleDelete(file)}>Delete</button></td>
-      </tr>);
+        <td>
+          <button o nClick={() => this.handleDelete(file)}>
+            Delete
+          </button>
+        </td>
+      </tr>
+    ));
     return fileNames;
   }
   updateModels() {
@@ -32,15 +38,17 @@ class Uploader extends Component {
       .then(response => response.json())
       .then(fileNames => {
         this.setState({ fileNames });
-      }).catch(err => console.error(err.toString()));
+      })
+      .catch(err => console.error(err.toString()));
   }
   dropHandler(files) {
-    console.log("HELLO");
+    console.log('HELLO');
     const file = files[0];
     const fileRequest = new FormData();
     fileRequest.append('file', file);
     fileRequest.append('name', file.name);
-    request.post('/api/uploadModel')
+    request
+      .post('/api/uploadModel')
       .send(fileRequest)
       .end((err, res) => {
         if (err) {
@@ -49,13 +57,13 @@ class Uploader extends Component {
         console.log(res);
         this.updateModels();
         return res;
-      }
-    );
+      });
   }
   handleDelete(fileName) {
     const req = new FormData();
     req.append('name', fileName.toString());
-    request.post('/api/deleteModel')
+    request
+      .post('/api/deleteModel')
       .send(req)
       .end((err, res) => {
         if (err) {
@@ -63,13 +71,11 @@ class Uploader extends Component {
         }
         this.updateModels();
         return res;
-      }
-    );
+      });
   }
   render() {
     return (
       <div className="upload-container">
-
         <h1>Model Upload</h1>
 
         <h3>Select model to be uploaded: </h3>
@@ -85,23 +91,28 @@ class Uploader extends Component {
         <table className="model-table table">
           <thead>
             <tr className="theader">
-              <td><strong>Model name</strong></td>
-              <td><strong>Delete model</strong></td>
+              <td>
+                <strong>Model name</strong>
+              </td>
+              <td>
+                <strong>Delete model</strong>
+              </td>
             </tr>
           </thead>
           <tbody id="upload-table-body">
-            {this.state.fileNames.map(file =>
-              (<tr key={file}>
+            {this.state.fileNames.map(file => (
+              <tr key={file}>
                 <td>{file}</td>
                 {/* <td><button className="button"
                   onClick={() => this.props.handleButtonSelect(file)}
                 >Select</button></td>*/}
                 <td>
-                  <button className="button"
-                    onClick={() => this.handleDelete(file)}
-                  >Delete</button></td>
-              </tr>)
-            )}
+                  <button className="button" onClick={() => this.handleDelete(file)}>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
