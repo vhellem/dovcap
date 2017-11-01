@@ -22,18 +22,18 @@ public class Model {
         typeviewL           = new ArrayList<myObject>();
     }
 
-    public void setLists(   List<myObject> objectL,
-                            List<myObject> viewL,
-                            List<myObject> modelViewL,
-                            List<myObject> relationshipL,
-                            List<myObject> relationshipViewL,
-                            List<myObject> typeviewL) {
-        this.objectL = objectL;
-        this.viewL = viewL;
-        this.modelViewL = modelViewL;
-        this.relationshipL = relationshipL;
-        this.relationshipViewL = relationshipViewL;
-        this.typeviewL = typeviewL;
+    public void setLists(   Collection<myObject> objectL,
+                            Collection<myObject> viewL,
+                            Collection<myObject> modelViewL,
+                            Collection<myObject> relationshipL,
+                            Collection<myObject> relationshipViewL,
+                            Collection<myObject> typeviewL) {
+        this.objectL = new ArrayList<myObject>(objectL);
+        this.viewL = new ArrayList<myObject>(viewL);
+        this.modelViewL = new ArrayList<myObject>(modelViewL);
+        this.relationshipL = new ArrayList<myObject>(relationshipL);
+        this.relationshipViewL = new ArrayList<myObject>(relationshipViewL);
+        this.typeviewL = new ArrayList<myObject>(typeviewL);
     }
 
     public void setObjectL(List<myObject> list){
@@ -91,7 +91,7 @@ public class Model {
                 }
                 this.findObjectReference(curr);
                 for (String childReference: curr.viewChildren){
-                    String childRef = childReference.substring(1);
+                    String childRef = childReference.replace("#", "");
                     for (myObject child: this.viewL){
                         if (child.id.equals(childRef)){
 
@@ -112,7 +112,6 @@ public class Model {
                             }
                         }
                     }
-
                 }
             }
             this.putNewScalesOnObjects(newScales);
@@ -144,9 +143,22 @@ public class Model {
             }
         }
 
+        // Hardcoded to get the built-in icons from TA.
+        objectIterator = objectL.iterator();
+        while(objectIterator.hasNext()){
+            myObject currObject = objectIterator.next();
+            if(currObject.type.equals("Button (CVW)")){
+                currObject.addValueset("icon", "button_plus.png");
+            }
+            else if (currObject.type.equals("Role (Actor)")){
+                currObject.addValueset("icon", "role.svg");
+            }
+        }
+
         // Attempts to find and add icons for the files that does not have any icons yet.
         // Will probably add more icons than wanted, so uncomment with caution.
-        File folder = new File("models/");
+        /*
+        File folder = new File("src/main/frontend/app/image/");
         File[] listOfFiles = folder.listFiles();
         objectIterator = objectL.iterator();
         while(objectIterator.hasNext()){
@@ -185,6 +197,23 @@ public class Model {
                 }
             }
         }
+        */
+
+        //Sorts the modelviews based on their "seq" attribute.
+        ArrayList<Integer> seqs = new ArrayList();
+        for(myObject modelView: this.modelViewL){
+            seqs.add(Integer.parseInt(modelView.attributes.get("seq")));
+        }
+        Collections.sort(seqs);
+        ArrayList<myObject> sorted = new ArrayList();
+        for(Integer curr: seqs){
+            for(myObject modelView: this.modelViewL){
+                if(Integer.parseInt(modelView.attributes.get("seq")) == curr){
+                    sorted.add(modelView);
+                }
+            }
+        }
+        this.modelViewL = sorted;
     }
 
 

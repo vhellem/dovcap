@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <model id="oid1" name="MEAF model" title="Semantics model" desc="Blank Semantics model" standalone-flag="true">
+  <metamodel-links size="4">
+   <metamodel-link xlink:role="metamodel" xlink:title="Metis EA Framework Metamodel" xlink:href="../metamodels/meaf_metamodel.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:href="../metamodels/metis_modeling.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="TrouxSource Queries" xlink:href="../metamodels/repository_queries.kmd#oid1" xlink:actuate="user"/>
+   <metamodel-link xlink:role="metamodel" xlink:title="Model Reporting" xlink:href="http://xml.computas.com/xml/reporting_object/metamodels/metisreporting.kmd#oid1" xlink:actuate="user"/>
+  </metamodel-links>
+  <valueset size="3" xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user">
+   <string name="name"></string>
+   <string name="description"></string>
+   <string name="externalID"></string>
+  </valueset>
+  <bundle-rules>
+   <bundle-rule>
+    <origin-link xlink:role="model" xlink:title="Semantics model" xlink:href="#oid1" xlink:actuate="user"/>
+    <target-link xlink:role="model" xlink:title="Semantics model" xlink:href="#oid1" xlink:actuate="user"/>
+   </bundle-rule>
+  </bundle-rules>
+ </model>
+
+</metis>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="UUID4_8E2F9332-9A2C-4BFD-B10A-590653A8424F" xlink:role="type" xlink:title="Milestone depends on-has dependent Milestone" xlink:href="../relationship_types/milestone_depends_on-has_dependent_milestone.kmd#RelType_Semantics:Milestone_depends_on-has_dependent_Milestone_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="eaGov Relationship" xlink:href="../symbols/relationship_with_from-to_text.svg#UUID4_66101DCC-6AF1-4B88-8B91-F5A2B9F9F2BD" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property from))"/>
+   <replace tag="targettext" property="value" macro="(expand (property to))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/relationship.png"/>
+ </typeview>
+
+
+</metis>

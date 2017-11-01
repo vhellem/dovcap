@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<?metis version="3.2"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="7"
+ criteria="9"
+ nextoid="21">
+
+ <cpp-method id="oid1" title="getStrategicValue1" language="c++" bind="NO.METIS.GEM.getOriginValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Property">stratValue</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid2" title="getStrategicValue2" language="c++" bind="NO.METIS.GEM.getOriginValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Property">strategicValue</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid3" title="getWeight" language="c++" bind="NO.METIS.GEM.getOriginValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Property">weight</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid4" title="getColor1" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse" relationship-flag="true">
+  <arg-list size="6">
+   <pointer name="Criteria1" xlink:role="criteria" xlink:title="testHigh" xlink:href="#oid16" xlink:actuate="user"/>
+   <pointer name="Criteria2" xlink:role="criteria" xlink:title="testMid" xlink:href="#oid17" xlink:actuate="user"/>
+   <pointer name="Criteria3" xlink:role="criteria" xlink:title="testLow" xlink:href="#oid18" xlink:actuate="user"/>
+   <string name="Macro1">Blue</string>
+   <string name="Macro2">Green</string>
+   <string name="Macro3">Red</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid5" title="getStrategicValue3" language="c++" bind="NO.METIS.GEM.getOriginValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Property">StrategicValue</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid6" title="getStrategicValueFromGoal" language="c++" bind="NO.METIS.GEM.getOriginValue" required-dll="gem_analyse">
+  <arg-list size="1">
+   <string name="Property">stratValue</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid7" name="getGRID" language="c++" bind="NO.METIS.GEM.getMacroValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="getMacroValue1" xlink:href="metis:stdmethods#oid541"/>
+  <arg-list size="4">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria"/>
+   <string name="Macro">(expand (property Creates) (property Reads) (property Updates) (property Deletes))</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid8" title="getStrategicValueCount" language="c++" bind="NO.METIS.GEM.getCalculatedValue" required-dll="gem_analyse">
+  <arg-list size="3">
+   <string name="Function">sum</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:href="#oid11" xlink:actuate="user"/>
+   <string name="Expression">add (property svCount)</string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="oid11" name="getOrigin" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="origin"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid12" name="findMe" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="repeat">
+     <c-number>0</c-number>
+     <c-number>0</c-number>
+     <c-op kind="target"/>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid13" name="highWeight" selection-flag="true">
+  <c-op kind="and">
+   <c-op kind="property-range">
+    <c-id>weight</c-id>
+    <c-string>6</c-string>
+    <c-string>7</c-string>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid14" name="midWeight" selection-flag="true">
+  <c-op kind="and">
+   <c-op kind="property-range">
+    <c-id>weight</c-id>
+    <c-string>4</c-string>
+    <c-string>5</c-string>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid15" name="lowWeight" selection-flag="true">
+  <c-op kind="and">
+   <c-op kind="property-range">
+    <c-id>weight</c-id>
+    <c-string>2</c-string>
+    <c-string>3</c-string>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid16" name="testHigh" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="findMe" xlink:href="#oid12"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="highWeight" xlink:href="#oid13"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid17" name="testMid" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="findMe" xlink:href="#oid12"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="midWeight" xlink:href="#oid14"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <criteria id="oid18" name="testLow" relationship-flag="true">
+  <c-op kind="and">
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="findMe" xlink:href="#oid12"/>
+   </c-op>
+   <c-op kind="criteria">
+    <criteria-link xlink:role="criteria" xlink:title="lowWeight" xlink:href="#oid15"/>
+   </c-op>
+  </c-op>
+ </criteria>
+
+</metis>

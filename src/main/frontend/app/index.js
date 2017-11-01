@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../style/style.css';
-import App from './app.js';
+import Root from './root';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
+import Main from './main.js';
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(
+  <HashRouter>
+    <Root />
+  </HashRouter>,
+  document.querySelector('.container')
+);

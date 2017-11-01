@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ methods="2"
+ nextoid="1">
+
+ <type id="has_action" name="has_action" title="Has_action" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Part" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Part_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Rule (EKA)" xlink:href="../../eka/languages/eka_rule.kmd#ekaRule" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task (EKA)" xlink:href="../../eka/languages/eka_task.kmd#ekaTask" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has_action" xlink:href="#has_action" xlink:actuate="user">
+   <string name="from">has action</string>
+   <string name="to">action of</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has_action" xlink:href="#has_action" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="has_condition" name="has_condition" title="Has_condition" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Part" xlink:href="../../eka/languages/eka_relships.kmd#RelType_EKA:Part_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Rule (EKA)" xlink:href="../../eka/languages/eka_rule.kmd#ekaRule" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Condition" xlink:href="rule_condition.kmd#condition" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="Has_condition" xlink:href="#has_condition" xlink:actuate="user">
+   <string name="from">has condition</string>
+   <string name="to">condition for</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="Has_condition" xlink:href="#has_condition" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <type id="if_then" name="if_then" title="If_then" usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="trigger" xlink:href="../../eka/languages/eka_relships.kmd#trigger"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Condition" xlink:href="rule_condition.kmd#condition" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Task (EKA)" xlink:href="../../eka/languages/eka_task.kmd#ekaTask" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="If_then" xlink:href="#if_then" xlink:actuate="user">
+   <string name="from">then</string>
+   <string name="to">if</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="6" xlink:role="type" xlink:title="If_then" xlink:href="#if_then" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <integer name="connectionStrength">100</integer>
+  </valueset>
+ </type>
+
+ <cpp-method id="oid110" name="RulePropertyDialog" language="c++" bind="NO.METIS.TOOLS.setupPropertyDialogTabs" required-dll="metis_ui">
+  <arg-list size="4">
+   <string name="TabName1">MetisModelTab</string>
+   <string name="TabName2">MetisDataTab</string>
+   <string name="Visibility1">Hide</string>
+   <pointer name="Widget2" xlink:role="cpp-method" xlink:title="RuleDataTab" xlink:href="#oid120"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid120" name="RuleDataTab" language="c++" bind="NO.METIS.TOOLS.defineDataTab" required-dll="metis_ui">
+  <arg-list size="5">
+   <string name="Row1">name</string>
+   <string name="Row2">ruleEngine</string>
+   <string name="Row3">ruleKind</string>
+   <string name="Row4">ruleEvaluatedTo</string>
+   <string name="Row5">ruleCode</string>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

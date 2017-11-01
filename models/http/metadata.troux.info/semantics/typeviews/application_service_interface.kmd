@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="8.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="UUID4_36E73808-1BE5-4EAD-832F-6856035D3C97" xlink:role="type" xlink:title="Application Service Interface" xlink:href="../object_types/application_service_interface.kmd#CompType_Semantics:Application_Service_Interface_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/application_service_interface.svg#oid1&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (property name))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/semantics/symbols/symbol_icons/application_service_interface.svg#oid1&#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../small_icons/application_service_interface.png"/>
+ </typeview>
+
+
+</metis>

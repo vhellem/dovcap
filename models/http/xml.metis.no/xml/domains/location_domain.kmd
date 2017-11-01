@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9"
+ domains="3"
+ nextoid="5">
+
+ <domain id="oid1" name="LocationDomain" title="Location Domain" desc="Locations where the business operates. Locations can be generic (e g sales offices) or specific (e g the sales office in Athens.">
+  <domain-link xlink:role="domain" xlink:href="#oid3"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/location.kmd#oid1" xlink:actuate="user"/>
+  <complex-type-link xlink:role="type" xlink:href="../object_types/location.kmd#oid5" xlink:actuate="user"/>
+ </domain>
+
+
+ <domain id="oid3" name="RelshipTypes" title="Relationship Types" desc="Contains the relationship types for this domain">
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/category_of-belongs_to.kmd#oid1" xlink:actuate="auto"/>
+  <complex-type-link xlink:role="type" xlink:href="../relationship_types/type_of-of_type.kmd#oid1" xlink:actuate="auto"/>
+ </domain>
+
+</metis>
+

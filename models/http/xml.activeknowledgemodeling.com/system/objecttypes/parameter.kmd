@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="AKM_Parameter" name="Parameter" desc="A parameter is a named value within a task context. A parameter also has a dataType. Parameter names should be unique, in so far as two parameters with the same name will be regarded as synonyms, that wiull inherit values from each other." usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="Basic Component" xlink:href="http://metadata.troux.info/meaf/abstracttypes/generic_component.kmd#BasicComponentType"/>
+  <typeview-link xlink:role="typeview" xlink:href="../typeviews/parameter.kmd#_002as5m00sjn4fgd3f75"/>
+  <property name="value" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Value" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Parameter_Value_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" description-flag="true" default-visible="top"/>
+  <property name="dataType" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Type" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Parameter_dataType_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="sequenceNumber" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Sequnence Number" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Parameter_sequencenumber_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="content_type" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Content type" desc="The type can be e.g. XML or HTML. If an output parameter is HTML, we should just diaply the content, rather than interpret it. &#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Parameter_content_type_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="mandatory" xlink:role="integer-type" xlink:title="Boolean" xlink:href="metis:mer#bool" label="Mandatory" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Parameter_mandatory_UUID&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <part-rule min="0" max="..." xlink:role="type" xlink:title="Parameter" xlink:href="#AKM_Parameter"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Parameter" xlink:href="#AKM_Parameter" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="14" xlink:role="type" xlink:title="Parameter" xlink:href="#AKM_Parameter" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="value"></string>
+   <string name="dataType"></string>
+   <integer name="sequenceNumber">0</integer>
+   <string name="content_type">XML</string>
+   <integer name="mandatory">0</integer>
+  </valueset>
+ </type>
+
+
+</metis>

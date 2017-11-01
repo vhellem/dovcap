@@ -3,11 +3,11 @@ import renderer from 'react-test-renderer';
 import ModelView from '../ModelView';
 
 const mockModel = {
-  children: []
+  children: [],
 };
 
 const mockRelationships = {
-  relationships: []
+  relationships: [],
 };
 
 describe('<ModelView />', () => {

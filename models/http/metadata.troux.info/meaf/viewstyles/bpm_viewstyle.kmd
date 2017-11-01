@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<?metis version="3.4.7"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="24"
+ viewstyles="5"
+ nextoid="28">
+
+
+ <viewstyle id="oid1000" name="BPM_Viewstyle" title="BPM 1 Viewstyle: Object ICOMs, Autoline" desc="BPM 1 Viewstyle: Object ICOMs, Autoline">
+  <typeview-link xlink:role="typeview" xlink:title="Process Start Event" xlink:href="../typeviews/process_start_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Intermediate Event" xlink:href="../typeviews/process_intermediate_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process End Event" xlink:href="../typeviews/process_end_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process" xlink:href="../typeviews/process.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Gateway" xlink:href="../typeviews/process_gateway.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Data" xlink:href="../typeviews/process_data.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Input" xlink:href="../typeviews/process_input.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Control" xlink:href="../typeviews/process_control.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Output" xlink:href="../typeviews/process_output.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Mechanism" xlink:href="../typeviews/process_mechanism.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="BPM Text" xlink:href="../typeviews/bpm_text.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="../typeviews/horizontal_swimlane.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="../typeviews/vertical_swimlane.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Flow" xlink:href="../typeviews/sequence_flow.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Message Flow" xlink:href="../typeviews/message_flow.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Asssociation" xlink:href="../typeviews/association.kmd#oid1" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="oid1001" name="BPM_2_Viewstyle__Normal_line__Object_ICOM" title="BPM 2 Viewstyle: Object ICOMs" desc="BPM 2 Viewstyle: Object ICOMs, Normal line">
+  <typeview-link xlink:role="typeview" xlink:title="Process Start Event" xlink:href="../typeviews/process_start_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Intermediate Event" xlink:href="../typeviews/process_intermediate_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process End Event" xlink:href="../typeviews/process_end_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process" xlink:href="../typeviews/process.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Gateway" xlink:href="../typeviews/process_gateway.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Data" xlink:href="../typeviews/process_data.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Input" xlink:href="../typeviews/process_input.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Control" xlink:href="../typeviews/process_control.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Output" xlink:href="../typeviews/process_output.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Mechanism" xlink:href="../typeviews/process_mechanism.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="BPM Text" xlink:href="../typeviews/bpm_text.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Flow" xlink:href="../typeviews/sequence_flow.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Message Flow" xlink:href="../typeviews/message_flow.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Asssociation" xlink:href="../typeviews/association.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="../typeviews/horizontal_swimlane.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="../typeviews/vertical_swimlane.kmd#oid1" xlink:actuate="user"/>
+
+ </viewstyle>
+
+ <viewstyle id="oid1002" name="BPM_3_Viewstyle__Autoline__Line_ICOM" title="BPM 3 Viewstyle: Line ICOMs, Autoline" desc="BPM 3 Viewstyle: Line ICOMs, Autoline">
+  <typeview-link xlink:role="typeview" xlink:title="Process Start Event" xlink:href="../typeviews/process_start_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Intermediate Event" xlink:href="../typeviews/process_intermediate_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process End Event" xlink:href="../typeviews/process_end_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process" xlink:href="../typeviews/process.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Gateway" xlink:href="../typeviews/process_gateway.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Data" xlink:href="../typeviews/process_data.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Input" xlink:href="../typeviews/process_input.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Control" xlink:href="../typeviews/process_control.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Output" xlink:href="../typeviews/process_output.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Mechanism" xlink:href="../typeviews/process_mechanism.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="BPM Text" xlink:href="../typeviews/bpm_text.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Flow" xlink:href="../typeviews/sequence_flow.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Message Flow" xlink:href="../typeviews/message_flow.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Asssociation" xlink:href="../typeviews/association.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="../typeviews/horizontal_swimlane.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="../typeviews/vertical_swimlane.kmd#oid1" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="oid1003" name="BPM_4_Viewstyle__Normal_Line__Line_ICOM" title="BPM 4 Viewstyle: Line ICOMs" desc="BPM 4 Viewstyle: Line ICOMs, Normal line">
+  <typeview-link xlink:role="typeview" xlink:title="Process Start Event" xlink:href="../typeviews/process_start_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Intermediate Event" xlink:href="../typeviews/process_intermediate_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process End Event" xlink:href="../typeviews/process_end_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process" xlink:href="../typeviews/process.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Gateway" xlink:href="../typeviews/process_gateway.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Data" xlink:href="../typeviews/process_data.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Input" xlink:href="../typeviews/process_input.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Control" xlink:href="../typeviews/process_control.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Output" xlink:href="../typeviews/process_output.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Mechanism" xlink:href="../typeviews/process_mechanism.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="BPM Text" xlink:href="../typeviews/bpm_text.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Flow" xlink:href="../typeviews/sequence_flow.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Message Flow" xlink:href="../typeviews/message_flow.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Asssociation" xlink:href="../typeviews/association.kmd#oid2" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="../typeviews/horizontal_swimlane.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="../typeviews/vertical_swimlane.kmd#oid1" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="oid1004" name="BPM_5_Viewstyle__Normal_Line__Line_ICOM" title="BPM 5 Viewstyle: Line ICOMs, Autoline, Fixed Font" desc="BPM 5 Viewstyle: Line ICOMs, Autoline, Fixed Font">
+  <typeview-link xlink:role="typeview" xlink:title="Process Start Event" xlink:href="../typeviews/process_start_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Intermediate Event" xlink:href="../typeviews/process_intermediate_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process End Event" xlink:href="../typeviews/process_end_event.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process" xlink:href="../typeviews/process.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Gateway" xlink:href="../typeviews/process_gateway.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Data" xlink:href="../typeviews/process_data.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Input" xlink:href="../typeviews/process_input.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Control" xlink:href="../typeviews/process_control.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Output" xlink:href="../typeviews/process_output.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Process Mechanism" xlink:href="../typeviews/process_mechanism.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="BPM Text" xlink:href="../typeviews/bpm_text.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Sequence Flow" xlink:href="../typeviews/sequence_flow.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Message Flow" xlink:href="../typeviews/message_flow.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Asssociation" xlink:href="../typeviews/association.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Swimlane Diagram" xlink:href="../typeviews/swimlane_diagram.kmd#oid5" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Horizontal Swimlane" xlink:href="../typeviews/horizontal_swimlane.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Left" xlink:href="../typeviews/horizontal_swimlane.kmd#oid101" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Right" xlink:href="../typeviews/horizontal_swimlane.kmd#oid102" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Vertical Swimlane" xlink:href="../typeviews/vertical_swimlane.kmd#oid1" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Top" xlink:href="../typeviews/vertical_swimlane.kmd#oid101" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Title Bottom" xlink:href="../typeviews/vertical_swimlane.kmd#oid102" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="oid1010" name="BPM_Process_Tree_Viewstyle" title="BPM Process Tree Viewstyle">
+  <typeview-link xlink:role="typeview" xlink:title="Process" xlink:href="../typeviews/process.kmd#oid10" xlink:actuate="user"/>
+  <typeview-link xlink:role="typeview" xlink:title="Container" xlink:href="../typeviews/container.kmd#oid10" xlink:actuate="user"/>
+ </viewstyle>
+
+
+</metis>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="3"
+ instances="1"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="Flammability_requirement" name="Flammability requirement" title="Flammability requirement" usage="abstract">
+  <property name="Minimum" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" default-visible="bottom"/>
+  <property name="Maximum" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" default-visible="bottom"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Flammability requirement" xlink:href="#Flammability_requirement" xlink:actuate="user">
+   <string name="Minimum"></string>
+   <string name="Maximum"></string>
+  </valueset>
+ </type>
+
+ <type id="Fogging_requirement" name="Fogging requirement" title="Fogging requirement" usage="abstract">
+  <property name="Minimum" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" default-visible="bottom"/>
+  <property name="Maximum" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" default-visible="bottom"/>
+  <valueset vset="default" size="2" xlink:role="type" xlink:title="Fogging requirement" xlink:href="#Fogging_requirement" xlink:actuate="user">
+   <string name="Minimum"></string>
+   <string name="Maximum"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CPPD:ProductElement_UUID_Test 1" name="ProductElement_Test 1" title="ProductElement Test 1" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="../../cppd/languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID"/>
+<!--  <typeview-link xlink:role="typeview" xlink:href="#_002asod01fgi88gpi8vk"/> -->
+  <property name="Hot_spot_quality" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Hot spot quality" default-visible="bottom"/>
+  <property name="Fogging_requirement" xlink:role="type" xlink:title="Fogging requirement" xlink:href="#Fogging_requirement" label="Fogging requirement (mg)" default-visible="bottom"/>
+  <property name="Flammability_requirement" xlink:role="type" xlink:title="Flammability requirement" xlink:href="#Flammability_requirement" label="Flammability requirement (mm/min)" default-visible="bottom"/>
+  <named-method-link name="onChange" xlink:role="cpp-method" xlink:title="Properties..." xlink:href="../operations/virtual_methods.kmd#Method_EKA:updateProperties_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="ProductElement Test 1" xlink:href="#ObjType_CPPD:ProductElement_UUID_Test 1" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="14" xlink:role="type" xlink:title="ProductElement Test 1" xlink:href="#ObjType_CPPD:ProductElement_UUID_Test 1" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="Hot_spot_quality"></string>
+   <string name="Fogging_requirement.Minimum"></string>
+   <string name="Fogging_requirement.Maximum"></string>
+   <string name="Flammability_requirement.Minimum"></string>
+   <string name="Flammability_requirement.Maximum"></string>
+  </valueset>
+ </type>
+
+ <typeview id="_002asod01fgi88gpi8vk" xlink:role="type" xlink:title="ProductElement Test 1" xlink:href="#ObjType_CPPD:ProductElement_UUID_Test 1" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="Hot_spot_quality" label="Hot_spot_quality" visible-flag="true"/>
+   <propertyview name="Fogging_requirement" label="Fogging requirement" visible-flag="true"/>
+   <propertyview name="Flammability_requirement" label="Flammability requirement" visible-flag="true"/>
+  </propertyviews>
+ </typeview>
+
+ <object id="_002asod01fgm8i5rpsfp">
+  <valueset size="14" xlink:role="type" xlink:title="ProductElement Test 1" xlink:href="#ObjType_CPPD:ProductElement_UUID_Test 1" xlink:actuate="user">
+   <string name="externalID">file:///D|/dag/metismodels/customers/ka/activity1/models/cc_encapsulation.kmv#_002asod00tfitgtca5m4</string>
+   <string name="name">Test 1</string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <time name="dbms-admin.commitTime">000000000</time>
+   <date-time name="dbms-admin.system-modifiedTime">20070703 135103530</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="Hot_spot_quality"></string>
+   <string name="Fogging_requirement.Minimum"></string>
+   <string name="Fogging_requirement.Maximum">0,3</string>
+   <string name="Flammability_requirement.Minimum"></string>
+   <string name="Flammability_requirement.Maximum">80</string>
+  </valueset>
+ </object>
+
+
+</metis>

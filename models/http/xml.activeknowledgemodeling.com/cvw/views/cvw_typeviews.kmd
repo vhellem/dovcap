@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="3"
+ nextoid="1">
+
+ <typeview id="Typeview_CVW:EKA_material" xlink:role="type" xlink:title="ProductElement (CPPD)" xlink:href="../../cppd/languages/productelement.kmd#ObjType_CPPD:ProductElement_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Specifications" xlink:href="material_specification_layout.kmd#_002asji014340a2qup1l"/>
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="../../eka/views/symbols/property_collection.svg#_002asjh011sc6nkq7cui" xlink:actuate="user">
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="../../eka/views/symbols/property_collection.svg#_002asjh011sc6nkq7cui" xlink:actuate="user">
+  </symbol-override>
+ </typeview>
+
+ <typeview id="Typeview_CVW:EKA_property" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="datatype" visible-flag="false"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="unit" visible-flag="false"/>
+   <propertyview name="tolerance" visible-flag="false"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Argument_gray_blu" xlink:href="akm.svg#_002asjd026g4pld53o26" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Argument_gray_blu" xlink:href="akm.svg#_002asjd026g4pld53o26" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="Typeview_CVW:EKA_specification" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="datatype" visible-flag="false"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="unit" visible-flag="false"/>
+   <propertyview name="tolerance" visible-flag="true"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="../../eka/views/symbols/property_as_fields.svg#_002asjh0112trm19rboq" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="tolerance" property="value" macro="(expand (property tolerance))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="../../eka/views/symbols/property_as_fields.svg#_002asjh0112trm19rboq" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="tolerance" property="value" macro="(expand (property tolerance))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="Typeview_CVW:EKA_specification" xlink:role="type" xlink:title="Property (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="datatype" visible-flag="true"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="unit" visible-flag="true"/>
+   <propertyview name="tolerance" visible-flag="false"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+   <propertyview name="description" visible-flag="false"/>
+   <propertyview name="comments" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_as_fields.svg#_002asr900jbdar88a5lq" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="NomValue" property="value" macro="(expand (property value))"/>
+   <replace tag="MinValue" property="value" macro="(expand (property minval))"/>
+   <replace tag="MaxValue" property="value" macro="(expand (property maxval))"/>
+   <replace tag="Tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="remarks" property="value" macro="(expand (property description))"/>
+   <replace tag="color" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="color" property="linecolor" macro="(expand &#34;white&#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="../../eka/views/symbols/property_as_fields.svg#_002aso0027pic776vsc4" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="NomValue" property="value" macro="(expand (property value))"/>
+   <replace tag="MinValue" property="value" macro="(expand (property minval))"/>
+   <replace tag="MaxValue" property="value" macro="(expand (property maxval))"/>
+   <replace tag="Tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="remarks" property="value" macro="(expand (property description))"/>
+   <replace tag="color" property="fillcolor" macro="(expand &#34;white&#34;)"/>
+   <replace tag="color" property="linecolor" macro="(expand &#34;white&#34;)"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="Typeview_CVW:EKA_specification2" xlink:role="type" xlink:title="Property view (EKA)" xlink:href="../../eka/languages/eka_property.kmd#ObjType_EKA:PropertyView_UUID" tree-size="0.5" nested-size="0.0625" behavior="tree">
+  <propertyviews>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="datatype" visible-flag="true"/>
+   <propertyview name="value" visible-flag="true"/>
+   <propertyview name="unit" visible-flag="true"/>
+   <propertyview name="tolerance" visible-flag="false"/>
+   <propertyview name="labelProp" visible-flag="false"/>
+   <propertyview name="iconProp" visible-flag="false"/>
+   <propertyview name="description" visible-flag="false"/>
+   <propertyview name="comments" visible-flag="false"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Untitled" xlink:href="http://xml.activeknowledgemodeling.com/eka/views/symbols/property_as_fields.svg#_002asr900jbdar88a5lq" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="NomValue" property="value" macro="(expand (property value))"/>
+   <replace tag="MinValue" property="value" macro="(expand (property minval))"/>
+   <replace tag="MaxValue" property="value" macro="(expand (property maxval))"/>
+   <replace tag="Tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="remarks" property="value" macro="(expand (property description))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Untitled" xlink:href="../../eka/views/symbols/property_as_fields.svg#_002aso0027pic776vsc4" xlink:actuate="user">
+   <replace tag="name" property="value" macro="(expand (property name))"/>
+   <replace tag="unit" property="value" macro="(expand (property unit))"/>
+   <replace tag="value" property="value" macro="(expand (property value))"/>
+   <replace tag="NomValue" property="value" macro="(expand (property value))"/>
+   <replace tag="MinValue" property="value" macro="(expand (property minval))"/>
+   <replace tag="MaxValue" property="value" macro="(expand (property maxval))"/>
+   <replace tag="Tolerance" property="value" macro="(expand (property tolerance))"/>
+   <replace tag="remarks" property="value" macro="(expand (property description))"/>
+   <replace tag="color" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="color" property="linecolor" macro="(expand (property linecolor))"/>
+  </symbol-override>
+ </typeview>
+
+ <typeview id="Typeview_CVW:CC_Nested" xlink:role="type" xlink:title="" xlink:href="http://xml.activeknowledgemodeling.com/cppd/languages/cc_objects.kmd#ObjType_CPPD:ConfigurableComponent_UUID" tree-size="0.5" nested-size="0.125" behavior="nested" layout-flags="autolayoutset autolayoutme">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="cvw_layout_strategies.kmd#Layout_CVW:ContainerLayout"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Open Object" xlink:href="symbols/compact_container.svg#_002asvv019847s0oc2g8" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34; (property name))"/>
+   <replace tag="icon" property="value" macro="(expand (method getSymbol))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Closed Object" xlink:href="symbols/nested_objects.svg#_002aspt00qftqdt2fiu0" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand &#34;&#34; (property name))"/>
+   <replace tag="symbol" property="value" macro="(expand (method getSymbol))"/>
+  </symbol-override>
+ </typeview>
+
+
+</metis>

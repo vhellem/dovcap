@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ viewstyles="1"
+ nextoid="1">
+
+ <viewstyle id="AKM_viewstyle_task_tree" name="Task_tree" title="Task tree" desc="Represents the work breakdown structure as a tree.">
+  <typeview-link xlink:role="typeview" xlink:href="task_tree_coloured.kmd#_002askm019ssgn73rorb" xlink:actuate="user"/>
+ </viewstyle>
+
+ <viewstyle id="AKM_viewstyle_task_nested" name="Task_process" title="Task process" desc="Represents the task structure and relationships as a process model">
+  <typeview-link xlink:role="typeview" xlink:href="task_process_coloured.kmd#_002as5m00u9m7cjrcrqp" xlink:actuate="user"/>
+ </viewstyle>
+
+</metis>

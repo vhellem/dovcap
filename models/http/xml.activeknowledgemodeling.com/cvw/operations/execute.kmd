@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="execute" name="Execute" desc="Called when the user clicks on an object, switched on and off by add/remove dbclikmethod methods," language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting">
+  <complex-type-link xlink:role="type" xlink:title="Execute Script" xlink:href="metis:stdmethods#oid601"/>
+  <arg-list size="8">
+   <string name="Encoded">false</string>
+   <integer name="ExecuteOnParent">0</integer>
+   <string name="Language">VBScript</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Reset">false</string>
+   <string name="Script">
+dim instview
+set instView = metis.currentModel.currentModelView.currentInstanceView
+if metis.currentModel.currentModelView.title = &#34;Workplace&#34; then
+  Dim action
+  set action = new CVW_GenericAction
+  call action.execute
+else 
+metis.currentModel.runmethod(metis.findMethod(&#34;http://xml.activeknowledgemodeling.com/cvw/operations/view_methods.kmd&#35;Method_CVW:openClose_UUID&#34;))
+end if
+</string>
+   <string name="SynchronousExecution">false</string>
+   <integer name="Timeout">-1</integer>
+  </arg-list>
+ </cpp-method>
+
+
+</metis>

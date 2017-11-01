@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?metis version="5.2.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ templates="1"
+ nextoid="1">
+
+ <template id="oid1" name="Product_modeling" title="Product modeling">
+  <metamodel-links size="2">
+   <metamodel-link xlink:role="metamodel" xlink:title="Product Modeling" xlink:href="product_metamodel.kmd#MetaModel_CPPD:CPPDMetamodel_UUID" xlink:actuate="user"/>
+  </metamodel-links>
+  <model-link xlink:role="model" xlink:title="CPPD model" xlink:href="product_model_template.kmv#_002ashm00rbb9rrrqvi3" xlink:actuate="user"/>
+  <modelview-links size="1">
+   <modelview-link xlink:role="modelview" xlink:title="Main" xlink:href="product_model_template.kmv#oid1" xlink:actuate="user"/>
+  </modelview-links>
+ </template>
+
+
+</metis>

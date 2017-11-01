@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="Method_EKA:editProperties_UUID" name="editProperties" title="Properties..." desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">editProperties</string>
+   <string name="VirtualFile">virtual:eka_types</string>
+   <string name="IdPropertyName">name</string>
+<!--   <pointer name="EnumerationType" xlink:role="type" xlink:title="Enumeration" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/> -->
+<!--   <pointer name="ParameterSetType" xlink:role="type" xlink:title="ParameterSet" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_parameterset.kmd#ObjType_EKA:ParameterSet_UUID" xlink:actuate="auto"/> -->
+   <pointer name="PropertyType" xlink:role="type" xlink:title="Property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+   <pointer name="ParameterType" xlink:role="type" xlink:title="Property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+   <pointer name="ValueType" xlink:role="type" xlink:title="Value" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+   <pointer name="EnumPropertyType" xlink:role="type" xlink:title="EnumerationValues" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_primitivetypes.kmd#PrimType_EKA:EnumerationValues_UUID" xlink:actuate="auto"/>
+   <pointer name="EnumValueType" xlink:role="type" xlink:title="Value" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+<!--   <pointer name="ValueOfType"  xlink:role="type" xlink:title="is" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Is_UUID" xlink:actuate="auto"/> -->
+<!--   <pointer name="HasEnumerationType"  xlink:role="type" xlink:title="hasEnumeration" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasAllowedValue_UUID" xlink:actuate="auto"/> -->
+   <pointer name="HasPropertyType"  xlink:role="type" xlink:title="hasProperty" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="auto"/>
+   <pointer name="HasParameterType"  xlink:role="type" xlink:title="hasProperty" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasParameter_UUID" xlink:actuate="auto"/>
+<!--   <pointer name="HasParameterSetType"  xlink:role="type" xlink:title="hasParameterSet" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasParameterSet_UUID" xlink:actuate="auto"/> -->
+<!--   <pointer name="HasValueType"  xlink:role="type" xlink:title="hasValue" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasValue_UUID" xlink:actuate="auto"/> -->
+   <pointer name="HasEnumValueType"  xlink:role="type" xlink:title="hasAllowedValue" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasAllowedValue_UUID" xlink:actuate="auto"/>
+<!--   <pointer name="PropagateType"  xlink:role="type" xlink:title="IsComposedUsing" xlink:href="http://xml.activeknowledgemodeling.com/cppd new/product/languages/cc_relships.kmd#RelType_CPPD:IsComposedUsing_UUID" xlink:actuate="auto"/> -->
+   <pointer name="IsType"  xlink:role="type" xlink:title="is" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Is_UUID" xlink:actuate="auto"/>
+   <pointer name="IsAType"  xlink:role="type" xlink:title="is" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Is_UUID" xlink:actuate="auto"/>
+   <pointer name="OnChangeMethod"  xlink:role="method" xlink:title="updateProperties" xlink:href="#Method_EKA:updateProperties_UUID" xlink:actuate="auto"/>
+   <string name="DatatypeProperty">datatype</string>
+   <string name="UnitProperty">unit</string>
+   <string name="ToleranceProperty">tolerance</string>
+   <string name="ValueProperty">value</string>
+   <string name="EnumProperty">value</string>
+   <integer name="ValueAsProperty">1</integer>
+   <integer name="NoPropertySubTypes">0</integer>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:updateProperties_UUID" name="updateProperties" title="Properties..." desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">updateProperties</string>
+   <string name="IdPropertyName">name</string>
+   <pointer name="EnumerationType" xlink:role="type" xlink:title="Enumeration" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+<!--   <pointer name="EnumPropertyType" xlink:role="type" xlink:title="EnumerationValues" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_primitivetypes.kmd#PrimType_EKA:EnumerationValues_UUID" xlink:actuate="auto"/>
+   <pointer name="ParameterType" xlink:role="type" xlink:title="Parameter" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_parameter.kmd#ObjType_EKA:Parameter_UUID" xlink:actuate="auto"/>
+   <pointer name="ParameterSetType" xlink:role="type" xlink:title="ParameterSet" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_parameterset.kmd#ObjType_EKA:ParameterSet_UUID" xlink:actuate="auto"/>  -->
+   <pointer name="PropertyType" xlink:role="type" xlink:title="Property" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+   <pointer name="ValueType" xlink:role="type" xlink:title="Value" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+   <pointer name="EnumValueType" xlink:role="type" xlink:title="Value" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="auto"/>
+   <pointer name="ValueOfType"  xlink:role="type" xlink:title="is" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Is_UUID" xlink:actuate="auto"/>
+<!--   <pointer name="HasEnumerationType"  xlink:role="type" xlink:title="hasEnumeration" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasEnumeration_UUID" xlink:actuate="auto"/>
+   <pointer name="HasParameterSetType"  xlink:role="type" xlink:title="hasParameterSet" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasParameterSet_UUID" xlink:actuate="auto"/>  -->
+   <pointer name="HasPropertyType"  xlink:role="type" xlink:title="hasProperty" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID" xlink:actuate="auto"/>
+   <pointer name="HasParameterType"  xlink:role="type" xlink:title="hasParameter" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasParameter_UUID" xlink:actuate="auto"/>
+<!--   <pointer name="HasValueType"  xlink:role="type" xlink:title="hasValue" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasValue_UUID" xlink:actuate="auto"/> -->
+   <pointer name="HasEnumValueType"  xlink:role="type" xlink:title="hasAllowedValue" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:HasAllowedValue_UUID" xlink:actuate="auto"/>
+<!--   <pointer name="PropagateType"  xlink:role="type" xlink:title="IsComposedUsing" xlink:href="http://xml.activeknowledgemodeling.com/cppd new/product/languages/cc_relships.kmd#RelType_CPPD:IsComposedUsing_UUID" xlink:actuate="auto"/> -->
+   <pointer name="IsType"  xlink:role="type" xlink:title="is" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Is_UUID" xlink:actuate="auto"/>
+   <pointer name="IsAType"  xlink:role="type" xlink:title="is" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Is_UUID" xlink:actuate="auto"/>
+   <pointer name="OnChangeMethod"  xlink:role="method" xlink:title="updateProperties" xlink:href="#Method_EKA:updateProperties_UUID" xlink:actuate="auto"/>
+   <string name="DatatypeProperty">datatype</string>
+   <string name="UnitProperty">unit</string>
+   <string name="ToleranceProperty">tolerance</string>
+   <string name="ValueProperty">value</string>
+   <string name="EnumProperty">value</string>
+   <integer name="ValueAsProperty">1</integer>
+   <integer name="NoPropertySubTypes">0</integer>
+  </arg-list>
+ </cpp-method>
+
+</metis>

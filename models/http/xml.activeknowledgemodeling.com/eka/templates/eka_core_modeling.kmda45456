@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="MetaModel_EKA:CoreTypes_UUID" name="DeveloperEd.ModelEd.UriToolBar.EKAcore" title="EKA core types" desc="Metamodel to support basic modeling.">
+  <complex-type-links size="28">
+   <complex-type-link xlink:role="type" xlink:title="Object (EKA)" xlink:href="../languages/eka_object.kmd#ObjType_EKA:Object_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Space (EKA)" xlink:href="../languages/eka_space.kmd#ObjType_EKA:Space_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Property (EKA)" xlink:href="../languages/eka_property.kmd#ObjType_EKA:Property_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has property" xlink:href="../languages/eka_relships.kmd#RelType_EKA:HasProperty_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Enumeration (EKA)" xlink:href="../languages/eka_enumeration.kmd#ObjType_EKA:Enumeration_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has value" xlink:href="../../cvw/languages/cvw_relships.kmd#RelType_CVW:hasValue_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Has allowed value" xlink:href="../languages/eka_relships.kmd#RelType_EKA:HasAllowedValue_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Relationship(EKA)" xlink:href="../languages/eka_relationship_object.kmd#ekaRelationshipObject" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has origin role" xlink:href="../languages/eka_relationship.kmd#hasOriginRole"/>
+   <complex-type-link xlink:role="type" xlink:title="Has target role" xlink:href="../languages/eka_relationship.kmd#hasTargetRole"/>
+   <complex-type-link xlink:role="type" xlink:title="Relationship" xlink:href="../languages/eka_relships.kmd#RelType_EKA:Relationship_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Depends on" xlink:href="../languages/eka_relships.kmd#RelType_EKA:DependsOn_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Equals" xlink:href="../languages/eka_relships.kmd#RelType_EKA:Equals_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Is a" xlink:href="../languages/eka_relships.kmd#RelType_EKA:IsA_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Is" xlink:href="../languages/eka_relships.kmd#RelType_EKA:Is_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Member" xlink:href="../languages/eka_relships.kmd#RelType_EKA:Member_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Part" xlink:href="../languages/eka_relships.kmd#RelType_EKA:Part_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Implies" xlink:href="../languages/eka_relships.kmd#RelType_EKA:Implies_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Role (EKA)" xlink:href="../languages/eka_role.kmd#ekaRole" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Task (EKA)" xlink:href="../languages/eka_task.kmd#ekaTask" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Event (EKA)" xlink:href="../languages/eka_event.kmd#ekaEvent" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Rule (EKA)" xlink:href="../languages/eka_rule.kmd#ekaRule" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="trigger" xlink:href="../languages/eka_relships.kmd#trigger"/>
+   <complex-type-link xlink:role="type" xlink:title="fills" xlink:href="../languages/eka_relships.kmd#fills"/>
+   <complex-type-link xlink:role="type" xlink:title="works on" xlink:href="../languages/eka_relships.kmd#works_on"/>
+   <complex-type-link xlink:role="type" xlink:title="Symbol (EKA)" xlink:href="../languages/eka_symbol.kmd#ObjType_EKA:Symbol_UUID" xlink:actuate="user"/>
+   <complex-type-link xlink:role="type" xlink:title="Has symbol" xlink:href="../languages/symbol_relships.kmd#RelType_EKA:HasSymbol_UUID"/>
+   <complex-type-link xlink:role="type" xlink:title="Has icon" xlink:href="../languages/symbol_relships.kmd#RelType_EKA:HasIcon_UUID"/>
+  </complex-type-links>
+  <method-links size="1">
+   <method-link xlink:role="cpp-method" xlink:title="Execute" xlink:href="../operations/execute.kmd#_002asoc01dct9amqn4fa"/>
+  </method-links>
+  <viewstyle-links size="1">
+   <viewstyle-link xlink:role="viewstyle" xlink:title="EKA_viewstyle" xlink:href="../views/eka_viewstyle.kmd#_002asji01a81g2qc2p35"/>
+  </viewstyle-links>
+ </metamodel>
+
+
+</metis>

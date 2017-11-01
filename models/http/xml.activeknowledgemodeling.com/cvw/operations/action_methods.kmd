@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="2"
+ criteria="1"
+ nextoid="1">
+
+ <cpp-method id="Method_CVW:getScript_UUID" name="getScript" language="c++" bind="NO.METIS.GEM.getReferencedValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Get Referenced Value 1" xlink:href="metis:stdmethods#oid561"/>
+  <arg-list size="6">
+   <string name="BreakAfter">...</string>
+   <pointer name="Criteria" xlink:role="criteria" xlink:title="getScriptObject" xlink:href="#Criteria_CVW:getScriptObject_UUID"/>
+   <string name="Default">Dim action
+set action = new CVW_GenericAction
+call action.execute
+</string>
+   <string name="Property">script</string>
+   <string name="RemoveDuplicates">false</string>
+   <string name="Separator"></string>
+  </arg-list>
+ </cpp-method>
+
+ <criteria id="Criteria_CVW:getScriptObject_UUID" name="getScriptObject" title="getScriptObject" object-flag="true">
+  <c-op kind="and">
+   <c-op kind="path">
+    <c-op kind="from" use-off-flag="true">
+     <c-op kind="collection"/>
+    </c-op>
+    <c-op kind="originof">
+     <c-op kind="relshp">
+      <complex-type-link xlink:role="type" xlink:title="usesScript" xlink:href="../languages/action_relships.kmd#RelType_CVW:usesScript_UUID"/>
+     </c-op>
+    </c-op>
+    <c-op kind="target">
+     <c-op kind="object">
+      <complex-type-link xlink:role="type" xlink:title="VB Script (AKM)" xlink:href="../languages/script_types.kmd#ObjType_AKM:VBScript_UUID"/>
+     </c-op>
+    </c-op>
+   </c-op>
+  </c-op>
+ </criteria>
+
+ <cpp-method id="addDoubleClickMethod" name="Enable doubleclick behaviour" title="Enable doubleclick behaviour" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">addMethodToType</string>
+   <pointer name="Type" xlink:role="type" xlink:title="EKA_object" xlink:href="../../eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="auto"/>
+   <pointer name="Method" xlink:role="method" xlink:title="relocateToModel" xlink:href="http://xml.activeknowledgemodeling.com/cvw/operations/execute.kmd#execute" xlink:actuate="auto"/>
+   <string name="LinkName1">View.DClickAction</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="removeDoubleClickMethod" name="Disable doubleclick behaviour" title="Disable doubleclick behaviour" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm">
+  <arg-list size="2">
+   <string name="Command">removeMethodsFromType</string>
+   <pointer name="Type" xlink:role="type" xlink:title="EKA_object" xlink:href="../../eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID" xlink:actuate="auto"/>
+   <string name="LinkName1">View.DClickAction</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="addNeighbours" name="addNeighbours" title="addNeighbours" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/cvw/operations/DoCircularLayout.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

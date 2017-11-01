@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?metis version="7.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="oid1" name="Utilities" title="Utilities">
+  <metamodel-links size="1">
+   <metamodel-link xlink:role="metamodel" xlink:title="Tip Configurator" xlink:href="../tip_configurator/metamodels/tip_config.kmd#oid1"/>
+  </metamodel-links>
+ </metamodel>
+
+
+</metis>

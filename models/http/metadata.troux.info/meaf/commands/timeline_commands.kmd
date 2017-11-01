@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9" 
+ instances="24" 
+ modelviews="0" 
+ instanceviews="0" 
+ nextoid="1003">
+
+
+ <object id="oid1">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-create-events-from-selection</string>
+   <string name="category">TimelineDiagram</string>
+   <string name="title">New Events from Selection</string>
+   <string name="desc">Creates new Event objects based on the current selection. 
+Connects the new Event to the selected object using a relationship.</string>
+   <string name="dll"></string>
+   <string name="state">create-events-from-selection</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="../methods/timeline_commands.kmd#oid1201" 
+	    xlink:actuate="auto"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Creates new Event objects based on the current selection</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid2">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-create-events-from-clipboard</string>
+   <string name="category">TimelineDiagram</string>
+   <string name="title">New Events from Copied</string>
+   <string name="desc">Creates new Event objects based on the current clipboard copy. 
+Connects the new Event to the object using a relationship.</string>
+   <string name="dll"></string>
+   <string name="state">create-events-from-clipboard</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="../methods/timeline_commands.kmd#oid1202" 
+	    xlink:actuate="auto"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Creates new Event objects based on the current clipboard copy</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid3">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">mtd-create-event-milestone-rels</string>
+   <string name="category">TimelineDiagram</string>
+   <string name="title">Connect Selected Events to Milestones</string>
+   <string name="desc">Connects the selected Events to the most appropriate Milestones according to the date in the Event and the date on the Milestones, using a dedicated relationship. Already connected Events are silently ignored.</string>
+   <string name="dll"></string>
+   <string name="state">create-event-milestone-rels</string>
+   <pointer name="method" 
+	    xlink:role="cpp-method" 
+	    xlink:href="../methods/timeline_commands.kmd#oid1203" 
+	    xlink:actuate="auto"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Connects the selected Events to the most appropriate Milestones according to the date in the Event and the date on the Milestones.</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid101">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">TimelineDiagram.Menu</string>
+   <string name="kind">Replace</string>
+   <string name="reference"></string>
+   <collection name="commands" structure="list" size="4" 
+	       xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>mtd-create-events-from-selection</string>
+    <string>mtd-create-events-from-clipboard</string>
+    <string>mtd-create-event-milestone-rels</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1001">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">TimelineDiagram.Menu</string>
+   <string name="category">Menus</string>
+   <string name="title">Timeline Diagram &#38;Modeling</string>
+   <string name="desc">Special menu designed for the timeline diagram.</string>
+   <string name="dll"></string>
+   <string name="state"></string>
+   <pointer name="method"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip"></string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid1002">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DeveloperEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" 
+	       xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>TimelineDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1003">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ModelEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>TimelineDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1004">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DesignerEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>TimelineDiagram.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+
+</metis>

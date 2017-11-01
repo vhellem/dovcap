@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="1"
+ nextoid="1">
+
+ <typeview id="_002as5m00u9m7cjrcrqp" xlink:role="type" xlink:title="Task (EKA)" xlink:href="../languages/eka_task.kmd#ekaTask" tree-size="0.5" nested-size="0.0625" behavior="nested">
+  <layout-link xlink:role="object" xlink:title="Container layout" xlink:href="../../cvw/views/cvw_layout_strategies.kmd#Layout_CVW:ContainerLayout"/>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Process w/opaque Open" xlink:href="symbols/process2.svg#oid28" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;1&#34;)"/>
+   <replace tag="pmchange" property="value" macro="(expand &#34; &#34;)"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Process Closed" xlink:href="symbols/process2.svg#oid3" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color_Status))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property delayed_Color))"/>
+   <replace tag="canvas" property="linewidth" macro="(expand &#34;1&#34;)"/>
+   <replace tag="pmchange" property="value" macro="(expand &#34; &#34;)"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="icons/process.png"/>
+ </typeview>
+
+
+</metis>

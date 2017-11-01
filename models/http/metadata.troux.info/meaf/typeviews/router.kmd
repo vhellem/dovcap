@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<?metis version="5.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ typeviews="2"
+ nextoid="3">
+
+ <typeview id="oid1" xlink:role="type" xlink:title="Router" xlink:href="../objecttypes/router.kmd#CompType_TRM:Router_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="purchaseDate"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="productName"/>
+   <propertyview name="productVersion"/>
+   <propertyview name="productSerialNumber"/>
+   <propertyview name="vendorName"/>
+   <propertyview name="vendorSalesPhone"/>
+   <propertyview name="vendorSalesEmail"/>
+   <propertyview name="vendorSupportPhone"/>
+   <propertyview name="vendorSupportEmail"/>
+   <propertyview name="diskCount"/>
+   <propertyview name="diskCapacity"/>
+   <propertyview name="diskCapacityUnit"/>
+   <propertyview name="diskCapacityFreeTimestamp"/>
+   <propertyview name="diskCapacityFree"/>
+   <propertyview name="diskCapacityFreeUnit"/>
+   <propertyview name="diskCapacityUsedTimestamp"/>
+   <propertyview name="diskCapacityUsed"/>
+   <propertyview name="diskCapacityUsedUnit"/>
+   <propertyview name="diskPercentageUsedTimestamp"/>
+   <propertyview name="diskPercentageUsed"/>
+   <propertyview name="processorCpuCount"/>
+   <propertyview name="processorCpuClockSpeed"/>
+   <propertyview name="processorCpuClockSpeedUnit"/>
+   <propertyview name="processorPercentageUsedTimestamp"/>
+   <propertyview name="processorPercentageUsed"/>
+   <propertyview name="memoryRamAmount"/>
+   <propertyview name="memoryRamUnit"/>
+   <propertyview name="gridLocation"/>
+   <propertyview name="throughputMbsec"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/router.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/router.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/router.png" xlink:actuate="user"/>
+ </typeview>
+
+ <typeview id="oid2" xlink:role="type" xlink:title="Router" xlink:href="../objecttypes/router.kmd#CompType_TRM:Router_UUID" tree-size="0.5" nested-size="0.125" behavior="nested">
+  <propertyviews>
+   <propertyview name="name"/>
+   <propertyview name="description"/>
+   <propertyview name="comments"/>
+   <propertyview name="phase"/>
+   <propertyview name="startDate"/>
+   <propertyview name="stopDate"/>
+   <propertyview name="purchaseDate"/>
+   <propertyview name="cost"/>
+   <propertyview name="recurringCost"/>
+   <propertyview name="recurringCostInterval"/>
+   <propertyview name="monetaryUnit"/>
+   <propertyview name="businessImpactAnalysisScore"/>
+   <propertyview name="openIncidentCount"/>
+   <propertyview name="serviceManHours"/>
+   <propertyview name="productName"/>
+   <propertyview name="productVersion"/>
+   <propertyview name="productSerialNumber"/>
+   <propertyview name="vendorName"/>
+   <propertyview name="vendorSalesPhone"/>
+   <propertyview name="vendorSalesEmail"/>
+   <propertyview name="vendorSupportPhone"/>
+   <propertyview name="vendorSupportEmail"/>
+   <propertyview name="diskCount"/>
+   <propertyview name="diskCapacity"/>
+   <propertyview name="diskCapacityUnit"/>
+   <propertyview name="diskCapacityFreeTimestamp"/>
+   <propertyview name="diskCapacityFree"/>
+   <propertyview name="diskCapacityFreeUnit"/>
+   <propertyview name="diskCapacityUsedTimestamp"/>
+   <propertyview name="diskCapacityUsed"/>
+   <propertyview name="diskCapacityUsedUnit"/>
+   <propertyview name="diskPercentageUsedTimestamp"/>
+   <propertyview name="diskPercentageUsed"/>
+   <propertyview name="processorCpuCount"/>
+   <propertyview name="processorCpuClockSpeed"/>
+   <propertyview name="processorCpuClockSpeedUnit"/>
+   <propertyview name="processorPercentageUsedTimestamp"/>
+   <propertyview name="processorPercentageUsed"/>
+   <propertyview name="memoryRamAmount"/>
+   <propertyview name="memoryRamUnit"/>
+   <propertyview name="gridLocation"/>
+   <propertyview name="throughputMbsec"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:href="../symbols/object_nested_open.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/router.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:href="../symbols/object_nested_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="textbackground" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="extratext" property="fillcolor" macro="(expand &#34;#A9DFDF&#34;)"/>
+   <replace tag="text" property="value" macro="(expand (label))"/>
+   <replace tag="description" property="value" macro="(expand (description))"/>
+   <replace tag="icon" property="value" macro="(expand &#34;http://metadata.troux.info/meaf/symbols/icons/router.svg#oid1&#34;)"/>
+   <replace tag="canvas" property="fillcolor" macro="(expand (property color))"/>
+   <replace tag="canvas" property="linecolor" macro="(expand (property color))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/router.png" xlink:actuate="user"/>
+ </typeview>
+
+</metis>

@@ -4,7 +4,7 @@ import ContainerObject from '../components/ContainerObject.js';
 
 const mockContainer = {
   objectReference: {
-    id: 2
+    id: 2,
   },
   type: 'Mock',
   name: 'Mock',
@@ -12,8 +12,8 @@ const mockContainer = {
     scaleX: 5,
     scaleY: 5,
     scaleWidth: 10,
-    scaleHeight: 10
-  }
+    scaleHeight: 10,
+  },
 };
 
 describe('<ContainerObject />', () => {

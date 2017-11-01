@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="5"
+ typeviews="1"
+ nextoid="1">
+
+ <type id="Reltype_container_general_relationship_container_UUID" name="container_general_relationship_container" title="General Container Relationship" desc="Drag the General Relationship and drop it on any objects.&#10;The General Relationship is a semantical-free relationship that can be used to represent any relationship between two objects.&#10;The &#60;to text&#62; and &#60;from text&#62; are entered by the user by the Edit - Property command on the relationship Right Mouse Button menu." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="General Relationship" xlink:href="#Reltype_general_relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="General Container Relationship" xlink:href="#Reltype_container_general_relationship_container_UUID" xlink:actuate="user">
+   <string name="from">General Relationship</string>
+   <string name="to">General Relationship</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="General Container Relationship" xlink:href="#Reltype_container_general_relationship_container_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <string name="fromText"></string>
+   <string name="toText"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_container_general_relationship_generic_component_UUID" name="container_general_relationship_generic_component" title="General Container Component Relationship" desc="The General Relationship can be used to represent any relationship between an object and a container. This type does not represent any specific type of relationship and has no semantic meaning. The &#39;to&#39; text and &#39;from&#39; text are entered by the user. Edit the relationship&#39;s properties to specify the &#39;to&#39; and &#39;from&#39; text. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="General Relationship" xlink:href="#Reltype_general_relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="#Reltype_container_general_relationship_generic_component_UUID" xlink:actuate="user">
+   <string name="from">General Relationship</string>
+   <string name="to">General Relationship</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="General Container Component Relationship" xlink:href="#Reltype_container_general_relationship_generic_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <string name="fromText"></string>
+   <string name="toText"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_general_relationship_UUID" name="general_relationship" title="General Relationship" desc="The General Relationship can be used to represent any relationship between two objects. This type does not represent any specific type of relationship and has no semantic meaning. The &#39;to&#39; text and &#39;from&#39; text are entered by the user. Edit the relationship&#39;s properties to specify the &#39;to&#39; and &#39;from&#39; text. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="Basic Relationship Type" xlink:href="../abstracttypes/generic_relationship_type.kmd#BasicRelationshipType"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid1"/>
+  <property name="fromText" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="From text" desc="This text is associated with the &#39;from&#39; end of the relationship" default-visible="top" origin-text-flag="true" mer-property-metadata="uuid=&#34;PropDef_general_relationship_from_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="toText" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="To text" desc="This text is associated with the &#39;to&#39; end of the relationship" default-visible="top" target-text-flag="true" mer-property-metadata="uuid=&#34;PropDef_general_relationship_to_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <property name="description" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Description" desc="Add description text" default-visible="top" mer-property-metadata="uuid=&#34;PropDef_general_relationship_description_UUID&#34;;category=&#34;&#34;;isRequired=0;isVisibleInInput=1;isVisibleInOutput=1;isVisibleInQueryParameters=1;position=-1;isVisibleInDiagramExport=1;"/>
+  <named-criteria-link name="FindAllgeneral_relationship" xlink:role="criteria" xlink:title="Find all General Relationship relationships" xlink:href="../criteria/find_relationship_types_autogenerated.kmd#Reltype_general_relationship_UUID"/>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="General Relationship" xlink:href="#Reltype_general_relationship_UUID" xlink:actuate="user">
+   <string name="from">from</string>
+   <string name="to">to</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">0</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="General Relationship" xlink:href="#Reltype_general_relationship_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <string name="fromText"></string>
+   <string name="toText"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_generic_component_general_relationship_container_UUID" name="generic_component_general_relationship_container" title="General Component Container Relationship" desc="The General Relationship can be used to represent any relationship between an object and a container. This type does not represent any specific type of relationship and has no semantic meaning. The &#39;to&#39; text and &#39;from&#39; text are entered by the user. Edit the relationship&#39;s properties to specify the &#39;to&#39; and &#39;from&#39; text. " usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="General Relationship" xlink:href="#Reltype_general_relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Container" xlink:href="metis:stdtypes#oid3" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="#Reltype_generic_component_general_relationship_container_UUID" xlink:actuate="user">
+   <string name="from">General Relationship</string>
+   <string name="to">General Relationship</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="General Component Container Relationship" xlink:href="#Reltype_generic_component_general_relationship_container_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <string name="fromText"></string>
+   <string name="toText"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <type id="Reltype_generic_component_general_relationship_generic_component_UUID" name="generic_component_general_relationship_generic_component" title="General Component Relationship" desc="The General Relationship can be used to represent any relationship between two objects. This type does not represent any specific type of relationship and has no semantic meaning. The &#39;to&#39; text and &#39;from&#39; text are entered by the user. Edit the relationship&#39;s properties to specify the &#39;to&#39; and &#39;from&#39; text." usage="relationship">
+  <complex-type-link xlink:role="type" xlink:title="General Relationship" xlink:href="#Reltype_general_relationship_UUID"/>
+  <connect-rule>
+   <origin-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+   <target-rule min="0" max="..." xlink:role="type" xlink:title="Basic Component" xlink:href="../abstracttypes/generic_component.kmd#BasicComponentType" xlink:actuate="user"/>
+  </connect-rule>
+  <valueset vset="shared" size="9" xlink:role="type" xlink:title="General Component Relationship" xlink:href="#Reltype_generic_component_general_relationship_generic_component_UUID" xlink:actuate="user">
+   <string name="from">General Relationship</string>
+   <string name="to">General Relationship</string>
+   <string name="troux_color"></string>
+   <integer name="troux_component1DependsOnComponent2">0</integer>
+   <integer name="troux_component2DependsOnComponent1">0</integer>
+   <integer name="troux_component1EndType">0</integer>
+   <integer name="troux_component2EndType">1</integer>
+   <string name="troux_originRole"></string>
+   <string name="troux_targetRole"></string>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="General Component Relationship" xlink:href="#Reltype_generic_component_general_relationship_generic_component_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="journalID"></string>
+   <integer name="connectionStrength">100</integer>
+   <string name="fromText"></string>
+   <string name="toText"></string>
+   <string name="description"></string>
+  </valueset>
+ </type>
+
+ <typeview id="oid1" xlink:role="type" xlink:title="General Relationship" xlink:href="#Reltype_general_relationship_UUID" tree-size="0.5" nested-size="0.125" behavior="tree">
+  <symbol-override state="relationship" xlink:role="symbol" xlink:title="Userdefined properties" xlink:href="metis:stdsyms#oid35" xlink:actuate="user">
+   <replace tag="origintext" property="value" macro="(expand (property fromText))"/>
+   <replace tag="targettext" property="value" macro="(expand (property toText))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="../icons/relshp.png"/>
+ </typeview>
+
+
+</metis>

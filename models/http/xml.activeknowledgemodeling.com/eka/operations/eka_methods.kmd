@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<?metis version="5.1"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ methods="1"
+ nextoid="1">
+
+ <cpp-method id="Method_EKA:initGlobals_UUID" name="initGlobals" title="initGlobals" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/ekaInitGlobals.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:findEnumValues_UUID" name="findEnumValues" title="findEnumValues" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">getDynamicRange</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:relocateToModel_UUID" name="relocateToModel" title="relocateToModel" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/relocateToModel.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:relocateToModel2_UUID" name="relocateToModel" title="relocateToModel" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/relocateToModel2.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:relocateToModel3_UUID" name="relocateToModel" title="relocateToModel" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+<!--   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/relocateToModel3.vbs</string> -->
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/onObjectCreated.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:viewAsHierarchy_UUID" name="viewAsHierarchy" title="viewAsHierarchy" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/viewashierarchy.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:delete_UUID" name="delete" title="Delete" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">ExecuteStatement</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="ScriptFile">http://xml.activeknowledgemodeling.com/eka/operations/eka_delete.vbs</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:getPropertyLabel_UUID" name="getPropertyLabel" title="getPropertyLabel" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">Eval</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="Script">ekaGetPropertyLabel</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:getPropertyIcon_UUID" name="getPropertyIcon" title="getPropertyIcon" desc="" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="1">
+   <string name="Mode">Eval</string>
+   <string name="ExecuteOnParent">false</string>
+   <string name="Script">ekaGetPropertyIcon</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:BeginNewType_UUID" name="Arguments" title="Arguments" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">BeginNewType</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:AddToNewType_UUID" name="BuildType" title="BuildType" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">BuildType</string>
+   <pointer name="typeMethod"  xlink:role="method" xlink:title="BuildType" xlink:href="#Method_EKA:BeginNewType_UUID" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:EndNewType_UUID" name="Arguments" title="Arguments" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">Arguments</string>
+   <pointer name="typeMethod"  xlink:role="method" xlink:title="BuildType" xlink:href="#Method_EKA:BeginNewType_UUID" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:SetSymbol_UUID" name="SetSymbol" title="SetSymbol" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">setObjectSymbol</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:SetTypeView_UUID" name="SetTypeView" title="SetTypeView" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">setDefaultTypeView</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:GetSymbol_UUID" name="getSymbol" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="6">
+   <string name="Command">getObjectSymbol</string>
+<!--   <string name="Default">http://xml.activeknowledgemodeling.com/cppd/views/product.svg#oid1</string> -->
+   <string name="Default"></string>
+   <pointer name="IsAType" xlink:role="type" xlink:title="Is" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_relships.kmd#RelType_EKA:Is_UUID"/>
+   <string name="SymbolProperty">symbol</string>
+   <pointer name="SymbolType" xlink:role="type" xlink:title="Symbol (EKA)" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/eka_symbol.kmd#ObjType_EKA:Symbol_UUID"/>
+   <pointer name="hasIconType" xlink:role="type" xlink:title="Has symbol" xlink:href="http://xml.activeknowledgemodeling.com/eka/languages/symbol_relships.kmd#RelType_EKA:HasSymbol_UUID"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:isReadOnly_UUID" name="isReadOnly" title="isReadOnly" desc="" language="c++" bind="NO.METIS.AKM.LibraryCommand" required-dll="metis_akm" object-flag="true">
+  <arg-list size="1">
+   <string name="Command">isReadOnly</string>
+  </arg-list>
+ </cpp-method>
+
+  <cpp-method id="Method_EKA:getPropertyViewStatus" name="getPropertyViewStatus" title="getPropertyViewStatus" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">Eval</string>
+   <string name="Script">getPropertyViewStatus</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:getPropertyViewStatus2" name="getPropertyViewStatus2" title="getPropertyViewStatus2" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">ExecuteStatement</string>
+   <string name="Script">
+   stop
+   status = getPropertyViewStatus
+   MsgBox status
+   </string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:calcPropertyStatusColor" name="calcPropertyStatusColor" title="calcPropertyStatusColor" language="c++" bind="NO.METIS.GEM.computeColorValue" required-dll="gem_analyse">
+  <complex-type-link xlink:role="type" xlink:title="Compute Color Value" xlink:href="metis:stdmethods#oid501"/>
+  <arg-list size="2">
+   <pointer name="MappingTable" xlink:role="integer-type" xlink:title="CC_status_color_map" xlink:href="../languages/eka_primitivetypes.kmd#PrimType_EKA:PropertyStatusColorMap"/>
+   <string name="Property">status</string>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="Method_EKA:calcPropertyLineColor" name="calcPropertyLineColor" title="calcPropertyLineColor" language="c++" bind="NO.METIS.COM.scriptingHost" required-dll="metiscom_scripting" object-flag="true">
+  <arg-list size="4">
+   <string name="ExecuteOnParent">false</string>
+   <string name="Mode">Eval</string>
+   <string name="Script">getStatusLineColor(true)</string>
+   <string name="SynchronousExecution">true</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>

@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="4"
+ typeviews="2"
+ nextoid="1">
+
+ <type id="ObjType_CVW:Button_UUID" name="cvw_button" title="Button (CVW)" desc="Button" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Element (EKA)" xlink:href="../../eka/languages/eka_element.kmd#ObjType_EKA:Element_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid5"/>
+  <property name="kind" xlink:role="integer-type" xlink:title="Node kind" xlink:href="cvw_primitives.kmd#PrimType_CVW:NodeKind_UUID" label="Kind" desc="&#10;&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Button_Kind&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="script" xlink:role="text-type" xlink:title="text" xlink:href="metis:std#oid4" label="Script" desc="&#10;&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:Button_Script&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;false&#34;&#10;isVisibleInOutput=&#34;false&#34;&#10;isVisibleInDiagramExport=&#34;false&#34;  &#10;isVisibleInQueryParameters=&#34;false&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" method-flag="true" visible-flag="false"/>
+  <named-method-link name="View.DClickAction" xlink:role="cpp-method" xlink:title="Execute Statement" xlink:href="script_types.kmd#Method_CVW:ExecuteStatement_UUID"/>
+  <named-method-link name="editProperties_" xlink:role="cpp-method" xlink:title="Properties..." xlink:href="../../eka/operations/virtual_methods.kmd#Method_EKA:editProperties_UUID"/>
+  <named-method-link name="script" xlink:role="cpp-method" xlink:title="getScript" xlink:href="../operations/action_methods.kmd#Method_CVW:getScript_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Button (CVW)" xlink:href="#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="11" xlink:role="type" xlink:title="Button (CVW)" xlink:href="#ObjType_CVW:Button_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <integer name="kind">3</integer>
+   <string name="script" class="volatile">Dim action
+set action = new CVW_GenericAction
+call action.execute
+</string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CVW:Node_UUID" name="node" title="Node (CVW)" desc="Node" usage="object" decomposition-flag="true">
+  <complex-type-link xlink:role="type" xlink:title="CVW object" xlink:href="cvw_object.kmd#ObjType_CVW:CVW_Object_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="Node (CVW)" xlink:href="#ObjType_CVW:Node_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="Node (CVW)" xlink:href="#ObjType_CVW:Node_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+ <type id="ObjType_CVW:ViewContext_UUID" name="ViewContext" title="View context (CVW)" desc="View context" usage="object">
+  <complex-type-link xlink:role="type" xlink:title="CVW object" xlink:href="cvw_object.kmd#ObjType_CVW:CVW_Object_UUID"/>
+  <typeview-link xlink:role="typeview" xlink:href="#oid8"/>
+  <property name="currentModel" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Current content model" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ViewContext_currentModel&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="currentObject" xlink:role="string-type" xlink:title="string" xlink:href="metis:std#oid3" label="Current object" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ViewContext_currentObject&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="neighbourLevels" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Neighbour levels" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ViewContext_neighbourlevels&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <property name="option" xlink:role="integer-type" xlink:title="integer" xlink:href="metis:std#oid1" label="Option" desc="&#60;!--&#10;category=&#34;&#34;&#10;uuid=&#34;PropDef_AKM:ViewContext_option&#34;&#10;isRequired=&#34;false&#34;&#10;isVisibleInInput=&#34;true&#34;&#10;isVisibleInOutput=&#34;true&#34;&#10;isVisibleInDiagramExport=&#34;true&#34;  &#10;isVisibleInQueryParameters=&#34;true&#34;&#10;position=&#34;0&#34;&#10;precision=&#34;0&#34;&#10;--!&#62;" default-visible="top"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="View context (CVW)" xlink:href="#ObjType_CVW:ViewContext_UUID" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="13" xlink:role="type" xlink:title="View context (CVW)" xlink:href="#ObjType_CVW:ViewContext_UUID" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+   <string name="currentModel"></string>
+   <string name="currentObject"></string>
+   <integer name="neighbourLevels">0</integer>
+   <integer name="option">0</integer>
+  </valueset>
+ </type>
+
+ <typeview id="oid5" xlink:role="type" xlink:title="Button (CVW)" xlink:href="#ObjType_CVW:Button_UUID" tree-size="0.5" nested-size="0.25" behavior="tree">
+  <propertyviews>
+   <propertyview name="externalID" visible-flag="false"/>
+   <propertyview name="name" visible-flag="true"/>
+   <propertyview name="kind" visible-flag="true"/>
+   <propertyview name="description" visible-flag="true"/>
+   <propertyview name="script" visible-flag="true"/>
+   <propertyview name="comments" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitFlag" visible-flag="true"/>
+   <propertyview name="dbms-admin.commitTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-modifiedTime" protected-flag="true" visible-flag="true"/>
+   <propertyview name="dbms-admin.system-uploaded" visible-flag="true"/>
+   <propertyview name="parentId" visible-flag="false"/>
+   <propertyview name="troux_shape" visible-flag="true"/>
+   <propertyview name="troux_color" visible-flag="true"/>
+   <propertyview name="troux_iconAlias" visible-flag="true"/>
+   <propertyview name="troux_terminalForTracing" visible-flag="true"/>
+   <propertyview name="troux_toplevel" visible-flag="true"/>
+  </propertyviews>
+  <symbol-override state="open" xlink:role="symbol" xlink:title="ToolButton_gray_blu" xlink:href="../symbols/ka.svg#_002asht025gbhac8tf7s" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="ToolButton_gray_blu" xlink:href="../symbols/ka.svg#_002asht025gbhac8tf7s" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/actionbutton.png"/>
+ </typeview>
+
+ <typeview id="oid8" xlink:role="type" xlink:title="View context (CVW)" xlink:href="#ObjType_CVW:ViewContext_UUID" tree-size="0.5" nested-size="0.25" behavior="nested">
+  <symbol-override state="open" xlink:role="symbol" xlink:title="Object Tree Open" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_open.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <symbol-override state="closed" xlink:role="symbol" xlink:title="Object Tree Closed" xlink:href="http://metadata.troux.info/meaf/symbols/object_tree_closed.svg#oid1" xlink:actuate="user">
+   <replace tag="text" property="value" macro="(expand (label))"/>
+  </symbol-override>
+  <image-link xlink:role="image" xlink:title="small-icon" xlink:href="http://metadata.troux.info/meaf/icons/knowledgesource.png"/>
+ </typeview>
+
+
+</metis>

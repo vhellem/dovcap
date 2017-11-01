@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<?metis version="5.2.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <integer-type id="CC_boolean" name="Rule_Engine" default="-1">
+  <range name="Unknown" min="-1" max="-1"/>
+  <range name="False" min="0" max="0"/>
+  <range name="True" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Rule_Engine" name="Rule_Engine" default="1">
+  <range name=" " min="0" max="0"/>
+  <range name="AKM rule handling" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="Rule_Kind" name="Rule_Kind" default="0">
+  <range name="Logical rule" min="0" max="0"/>
+  <range name="Expression" min="1" max="1"/>
+  <range name="Service" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Template_Kind" name="Template_Kind" default="0">
+  <range name="Default" min="0" max="0"/>
+  <range name="Excel" min="1" max="1"/>
+ </integer-type>
+
+ <integer-type id="CC_status" name="CC_status" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Requirement missing" min="0" max="0"/>
+  <range name="Solution missing" min="1" max="1"/>
+  <range name="Solution partially fulfilled" min="2" max="2"/>
+  <range name="Solution fulfilled" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="CC_property_status" name="CC_property_status" default="-1">
+  <range name="Undefined" min="-1" max="-1"/>
+  <range name="Not valid" min="0" max="0"/>
+  <range name="Partly valid" min="1" max="1"/>
+  <range name="Valid" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="CC_status_color_map" name="CC_status_color_map" default="-1">
+  <range name="White" min="-1" max="-1"/>
+  <range name="Orange" min="0" max="0"/>
+  <range name="Tomato" min="1" max="1"/>
+  <range name="Yellow" min="2" max="2"/>
+  <range name="Green" min="3" max="3"/>
+ </integer-type>
+
+ <integer-type id="CC_property_status_color_map" name="CC_property_status_color_map" default="-1">
+  <range name="White" min="-1" max="-1"/>
+  <range name="Tomato" min="0" max="0"/>
+  <range name="Yellow" min="1" max="1"/>
+  <range name="Green" min="2" max="2"/>
+ </integer-type>
+
+ <integer-type id="Min_Max" name="Min_Max" default="2">
+  <range name="Min only" min="0" max="0"/>
+  <range name="Max only" min="1" max="1"/>
+  <range name="Min and Max" min="2" max="2"/>
+  <range name="Nominal only" min="3" max="3"/>
+  <range name="Nominal and Tolerance(%)" min="4" max="4"/>
+  <range name="Min, Max, Nominal and Tolerance(%)" min="5" max="5"/>
+ </integer-type>
+
+
+</metis>

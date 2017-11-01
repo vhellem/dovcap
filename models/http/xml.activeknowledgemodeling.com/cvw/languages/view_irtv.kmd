@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?metis version="5.2"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ types="1"
+ nextoid="1">
+
+ <type id="View_IRTV" name="View_IRTV" title="View" desc="A view is a user interface component. It is the V in IRTV solution configuration modeling. A view normally represents a task (related through some kind of dependency relationship, e.g. Is). A view also shows one or more objects. During solution configuration modeling, the objects are derviced from the elements that the task &#34;works on&#34;, but when the view is created in the user interface, actual object and relationship views are created. A view object in the configuration model may also define a query which results in a set of objects that may be displayed. In such cases, the task should have a works on relationship to the view." usage="object">
+  <complex-type-link xlink:role="type" xlink:title="Space (EKA)" xlink:href="../../eka/languages/eka_space.kmd#ObjType_EKA:Space_UUID"/>
+  <valueset vset="shared" size="5" xlink:role="type" xlink:title="View" xlink:href="#View_IRTV" xlink:actuate="user">
+   <string name="troux_shape"></string>
+   <string name="troux_color"></string>
+   <string name="troux_iconAlias"></string>
+   <integer name="troux_terminalForTracing">0</integer>
+   <integer name="troux_toplevel">1</integer>
+  </valueset>
+  <valueset vset="default" size="9" xlink:role="type" xlink:title="View" xlink:href="#View_IRTV" xlink:actuate="user">
+   <string name="externalID"></string>
+   <string name="name"></string>
+   <string name="description"></string>
+   <integer name="dbms-admin.commitFlag">1</integer>
+   <date-time name="dbms-admin.commitTime">00000000 000000000</date-time>
+   <date-time name="dbms-admin.system-modifiedTime">00000000 000000000</date-time>
+   <integer name="dbms-admin.system-uploaded">0</integer>
+   <string name="parentId"></string>
+   <string name="comments"></string>
+  </valueset>
+ </type>
+
+
+</metis>

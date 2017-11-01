@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?metis version="9.0"?>
+<?metisxml version="1.2"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.2//EN" "http://xml.metis.no/metis12.dtd">
+<metis
+ xmlns="http://www.metis.no/metis"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ metamodels="1"
+ nextoid="1">
+
+ <metamodel id="UUID4_FF188E7F-E7A6-43E2-AC09-7B7CB635C720" name="Primitive_Types" title="Primitive Types">
+  <primitive-type-links size="7">
+   <primitive-type-link xlink:role="integer-type" xlink:title="Exception Status" xlink:href="../../semantics/primitive_types/exception_status.kmd#PrimType_Semantics:Exception_Status_UUID"/>
+   <primitive-type-link xlink:role="integer-type" xlink:title="Integer 0 to 10" xlink:href="../../semantics/primitive_types/integer_0_to_10.kmd#PrimType_Semantics:Integer_0_to_10_UUID"/>
+   <primitive-type-link xlink:role="integer-type" xlink:title="Integer 1 to 10" xlink:href="../../semantics/primitive_types/integer_1_to_10.kmd#PrimType_Semantics:Integer_1_to_10_UUID"/>
+   <primitive-type-link xlink:role="integer-type" xlink:title="Allocation Color Mapping" xlink:href="../primitivetypes/allocation_color_mapping_primitive_types.kmd#Primtype_allocation_color_mapping_UUID"/>
+   <primitive-type-link xlink:role="integer-type" xlink:title="Color Mapping" xlink:href="metis:stdmethods#oid418"/>
+   <primitive-type-link xlink:role="integer-type" xlink:title="Review Status" xlink:href="../../semantics/primitive_types/review_status.kmd#PrimType_Semantics:Review_Status_UUID"/>
+   <primitive-type-link xlink:role="integer-type" xlink:title="Review Period" xlink:href="../../semantics/primitive_types/review_period.kmd#PrimType_Semantics:Review_Period_UUID"/>
+  </primitive-type-links>
+ </metamodel>
+
+
+</metis>

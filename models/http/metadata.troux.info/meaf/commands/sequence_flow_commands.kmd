@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<?metis version="3.0"?>
+<?metisxml version="1.0"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.0//EN" "http://xml.metis.no/dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/XML/XLink/0.9" 
+ instances="24" 
+ modelviews="0" 
+ instanceviews="0" 
+ nextoid="1003">
+
+<!-- ALWAYS REPLACE ENTIRE GENERATED CONTENTS WITH HANDCODED -->
+
+ <object id="oid1">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">toggle-auto-sequence-flow</string>
+   <string name="category">ProcessModeling</string>
+   <string name="title">Toggle Autoline</string>
+   <string name="desc">Toggles the automatic layout of the relationship line allowing you to edit the relationship path. For example, you can add breakpoints and manually arrange the relationship.</string>
+   <string name="dll"></string>
+   <string name="state">is-sequence-flow</string>
+   <pointer name="method" xlink:role="cpp-method" xlink:href="../methods/sequence_flow_commands.kmd#oid1" xlink:actuate="auto"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip">Toggle Autoline</string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid101">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ProcessModeling.SequenceFlow.Menu</string>
+   <string name="kind">Replace</string>
+   <string name="reference"></string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>toggle-auto-sequence-flow</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1001">
+  <valueset size="11" xlink:role="type" xlink:href="metis:stdtypes#oid115">
+   <string name="name">ProcessModeling.SequenceFlow.Menu</string>
+   <string name="category">Menus</string>
+   <string name="title">Process &#38;Modeling</string>
+   <string name="desc">Special menu designed for this project.</string>
+   <string name="dll"></string>
+   <string name="state"></string>
+   <pointer name="method"/>
+   <url name="pixmap"/>
+   <url name="pixmap_g"/>
+   <string name="tooltip"></string>
+   <string name="accel"></string>
+  </valueset>
+ </object>
+
+ <object id="oid1002">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DeveloperEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>ProcessModeling.SequenceFlow.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1003">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">ModelEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>ProcessModeling.SequenceFlow.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+ <object id="oid1004">
+  <valueset size="4" xlink:role="type" xlink:href="metis:stdtypes#oid118">
+   <string name="name">DesignerEd.Canvas.RMBM</string>
+   <string name="kind">Prepend</string>
+   <string name="reference">CreateInstanceMenu</string>
+   <collection name="commands" structure="list" size="1" xlink:role="string-type" xlink:href="metis:std#oid3">
+    <string>ProcessModeling.SequenceFlow.Menu</string>
+   </collection>
+  </valueset>
+ </object>
+
+</metis>

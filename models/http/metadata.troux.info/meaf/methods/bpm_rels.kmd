@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?metis version="3.6"?>
+<?metisxml version="1.1"?>
+<!DOCTYPE metis PUBLIC "-//METIS/METIS XML 1.1//EN" "http://xml.metis.no/metis11.dtd">
+<metis 
+ xmlns="http://www.metis.no/metis" 
+ xmlns:xlink="http://www.w3.org/1999/xlink" 
+ types="5" 
+ methods="2" 
+ typeviews="11" 
+ nextoid="1022">
+
+ <cpp-method id="oid101" name="BPM_OnChange" title="BPM Gateway on Change" language="c++" bind="NO.METIS.GEM.executeMethods" required-dll="gem_analyse" object-flag="true">
+  <arg-list size="1">
+   <pointer name="Method1" xlink:role="cpp-method" xlink:title="setSequenceFlowSymbol" xlink:href="#oid102" xlink:actuate="auto"/>
+  </arg-list>
+ </cpp-method>
+
+ <cpp-method id="oid102" name="setSequenceFlowSymbol" language="c++" bind="NO.METIS.GEM.toggleSymbol" required-dll="gem_qt_utilities" object-flag="true">
+  <arg-list size="2">
+   <string name="Mode">SymbolProperty</string>
+   <string name="Property">BPM_FlowSymbol</string>
+  </arg-list>
+ </cpp-method>
+
+</metis>
