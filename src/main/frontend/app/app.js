@@ -6,13 +6,6 @@ import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
 import ObjectEmitter from './component/ObjectEmitter';
 
-var options = [
-  { value: 'one', label: 'One' },
-  { value: 'two', label: 'Two' },
-  { value: 'three', label: 'Three' },
-  { value: 'four', label: 'Four' }
-];
-
 class App extends React.Component {
   constructor() {
     super();
@@ -29,7 +22,7 @@ class App extends React.Component {
       modelViewHeight: 0,
       direction: '',
       lastScrollPos: 0,
-      relTypesSelected: []
+      relTypesSelected: [],
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
@@ -38,15 +31,25 @@ class App extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
   componentWillMount() {
-    selectModelFromBackend(this.props.model).then(res => {
+    selectModelFromBackend(this.props.match.params.modelID).then(res => {
       const json = JSON.parse(res.text);
 
       this.setState({
         selectedModel: 0,
         modelViews: json.modelViewL,
         relationships: json.relationshipL,
-        objectViews: json.viewL
+        objectViews: json.viewL,
       });
+      if (this.props.match.params.viewID) {
+        const model = json.modelViewL.find(
+          object => object.attributes.title === this.props.match.params.viewID
+        );
+        const modelIndex = json.modelViewL.indexOf(model);
+
+        this.setState({
+          selectedModel: modelIndex,
+        });
+      }
 
       console.log(json);
       this.updateWindowDimensions();
@@ -74,7 +77,7 @@ class App extends React.Component {
       newModelViews[2].children[0].children[2].children.push(newView);
 
       this.setState({
-        modelViews: newModelViews
+        modelViews: newModelViews,
       });
     });
 
@@ -91,7 +94,7 @@ class App extends React.Component {
       newModelViews[2].children[0].children[2].children.push(newView);
 
       this.setState({
-        modelViews: newModelViews
+        modelViews: newModelViews,
       });
     });
   };
@@ -109,7 +112,7 @@ class App extends React.Component {
 
   onChange = activeKey => {
     this.setState({
-      selectedModel: parseInt(activeKey, 10)
+      selectedModel: parseInt(activeKey, 10),
     });
   };
 
@@ -130,7 +133,7 @@ class App extends React.Component {
       this.setState({
         zoom: (this.state.zoom += num),
         xOffset: this.state.xOffset + xDiffMove + xDiffZoom / 2,
-        yOffset: this.state.yOffset + yDiffMove + yDiffZoom / 2
+        yOffset: this.state.yOffset + yDiffMove + yDiffZoom / 2,
       });
     }
   }
@@ -138,14 +141,14 @@ class App extends React.Component {
   offsetRight(num) {
     this.setState({
       movedX: (this.state.movedX += num / this.state.zoom),
-      xOffset: (this.state.xOffset += num)
+      xOffset: (this.state.xOffset += num),
     });
   }
 
   offsetDown(num) {
     this.setState({
       movedY: (this.state.movedY += num / this.state.zoom),
-      yOffset: (this.state.yOffset += num)
+      yOffset: (this.state.yOffset += num),
     });
   }
 
@@ -156,7 +159,7 @@ class App extends React.Component {
   updateWindowDimensions() {
     this.setState({
       modelViewWidth: window.innerWidth * 1,
-      modelViewHeight: window.innerHeight * 0.9
+      modelViewHeight: window.innerHeight * 0.9,
     });
   }
 
@@ -192,9 +195,13 @@ class App extends React.Component {
             />
           </div>
           <Tabs activeKey={this.state.selectedModel.toString()} onChange={this.onChange}>
-            {this.state.modelViews.map((modelView, index) => (
-              <TabPane tab={modelView.attributes.title} key={index} />
-            ))}
+            {this.state.modelViews.map((modelView, index) => {
+              return (
+                <TabPane tab={modelView.attributes.title} key={index}>
+                  {modelView.attributes.title}
+                </TabPane>
+              );
+            })}
           </Tabs>
           <button className="" onClick={() => this.zoom(0.25)}>
             Zoom in

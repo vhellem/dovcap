@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 // import { selectModelFromBackend } from './utlities';
-
+import { Link } from 'react-router-dom';
 class Landingpage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       fileNames: [],
-      selectedModel: '',
+      selectedModel: ''
     };
   }
   componentWillMount() {
     fetch('/api/getModelNames')
       .then(response => response.json())
       .then(fileNames => {
+        fileNames.sort();
         this.setState({ fileNames });
-      }).catch(err => console.error(err.toString()));
+      })
+      .catch(err => console.error(err.toString()));
   }
   handleModelSelect(model) {
     this.setState({ selectedModel: model });
@@ -26,18 +28,19 @@ class Landingpage extends Component {
       groups.push(arr.slice(i, i + chunkSize));
     }
     return groups;
-  }
+  };
   render() {
+    const link = 'model/' + this.state.selectedModel;
     const groups = this.createGroupedArray(this.state.fileNames, 30);
-    const groupLists = groups.map(ls =>
-        <ul key={ls[0]} className="landing-page-list">
-          {ls.map(val =>
-              <li key={val} onClick={() => this.handleModelSelect(val)}>
-              {val}
-              </li>
-          )}
-        </ul>
-    );
+    const groupLists = groups.map(ls => (
+      <ul key={ls[0]} className="landing-page-list">
+        {ls.map(val => (
+          <li key={val} onClick={() => this.handleModelSelect(val)}>
+            {val}
+          </li>
+        ))}
+      </ul>
+    ));
     return (
       <div className="landing-page-container">
         <h3> Select a model: </h3>
@@ -46,12 +49,14 @@ class Landingpage extends Component {
         <div className="landing-page-selected">
           <h3>Selected model:</h3>
           <hr />
-          { this.state.selectedModel ? (
+          {this.state.selectedModel ? (
             <div>
-              <h4><strong>{this.state.selectedModel}</strong></h4>
-              <button className="button"
-                onClick={() => this.props.handleButtonSelect(this.state.selectedModel)}
-              > Load model in workplace</button>
+              <h4>
+                <strong>{this.state.selectedModel}</strong>
+              </h4>
+              <button className="button">
+                <Link to={link}>Load model in workplace</Link>
+              </button>
             </div>
           ) : (
             'No model selected'
