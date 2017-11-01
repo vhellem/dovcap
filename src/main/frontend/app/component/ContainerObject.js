@@ -30,7 +30,7 @@ class ContainerObject extends React.Component {
       type: containerJson.type,
       imageWidth: 1,
       imageHeight: 1,
-      id: containerJson.objectReference.id
+      id: containerJson.objectReference.id,
     };
 
     // console.log(this.props.container.name);
@@ -46,13 +46,18 @@ class ContainerObject extends React.Component {
       image.src = images[containerJson.objectReference.valueset.icon];
       image.onload = () => {
         this.setState({
-          image
+          image,
         });
         this.drawImage();
       };
     }
 
     this.drawImage = this.drawImage.bind(this);
+  }
+
+  componentWillMount() {
+    const emitter = ObjectEmitter;
+    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -66,7 +71,7 @@ class ContainerObject extends React.Component {
       width,
       height,
       x,
-      y
+      y,
     });
     // fix undefined
 
@@ -78,12 +83,11 @@ class ContainerObject extends React.Component {
     emitter.emit(this.state.id, x, y, width, height);
   }
 
-
   componentWillUnMount() {
     // This does not work, but should be fixed in relationships?
     const emitter = ObjectEmitter;
     emitter.emit(this.state.id, -1, -1, -1, -1);
-  };
+  }
 
   handleClick = () => {
     const emitter = ObjectEmitter;
@@ -95,15 +99,10 @@ class ContainerObject extends React.Component {
     }
   };
 
-  componentWillMount() {
-    const emitter = ObjectEmitter;
-    emitter.emit(this.state.id, this.state.x, this.state.y, this.state.width, this.state.height);
-  }
-
   handleDragMove = e => {
     this.setState({
       x: e.target.position().x,
-      y: e.target.position().y
+      y: e.target.position().y,
     });
 
     const emitter = ObjectEmitter;
@@ -113,7 +112,7 @@ class ContainerObject extends React.Component {
   drawImage() {
     this.setState({
       imageWidth: this.state.image.naturalHeight,
-      imageHeight: this.state.image.naturalWidth
+      imageHeight: this.state.image.naturalWidth,
     });
   }
 
@@ -211,9 +210,7 @@ class ContainerObject extends React.Component {
       offSetX = 7;
     }
 
-    if (
-      isNaN(this.state.x)
-    ) {
+    if (isNaN(this.state.x) || isNaN(this.state.y)) {
       return <Group />;
     }
 

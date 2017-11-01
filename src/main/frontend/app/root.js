@@ -13,7 +13,7 @@ class Root extends React.Component {
     this.state = {
       selectedTab: '0',
       model: 'simple.kmv',
-      activeComponent: <Landingpage handleButtonSelect={model => this.handleSelect(model)} />
+      activeComponent: <Landingpage handleButtonSelect={model => this.handleSelect(model)} />,
     };
   }
   /*

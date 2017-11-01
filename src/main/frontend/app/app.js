@@ -59,6 +59,25 @@ class App extends React.Component {
     this.addListeningToEvents();
   }
 
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+    document.addEventListener('keydown', this.handleKeyDown, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+    document.removeEventListener('keydown', this.handleKeyDown, false);
+  }
+
+  onChange = activeKey => {
+    this.setState({
+      selectedModel: parseInt(activeKey, 10),
+    });
+    const emitter = ObjectEmitter;
+    emitter.emit('forceUpdate', true);
+  };
+
   addListeningToEvents = () => {
     const emitter = ObjectEmitter;
 
@@ -96,23 +115,6 @@ class App extends React.Component {
       this.setState({
         modelViews: newModelViews,
       });
-    });
-  };
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-    document.addEventListener('keydown', this.handleKeyDown, false);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-    document.removeEventListener('keydown', this.handleKeyDown, false);
-  }
-
-  onChange = activeKey => {
-    this.setState({
-      selectedModel: parseInt(activeKey, 10),
     });
   };
 
@@ -159,7 +161,7 @@ class App extends React.Component {
   updateWindowDimensions() {
     this.setState({
       modelViewWidth: window.innerWidth * 1,
-      modelViewHeight: window.innerHeight * 0.9,
+      modelViewHeight: window.innerHeight * 0.85,
     });
   }
 
@@ -203,26 +205,6 @@ class App extends React.Component {
               );
             })}
           </Tabs>
-          <button className="" onClick={() => this.zoom(0.25)}>
-            Zoom in
-          </button>
-          <button className="" onClick={() => this.zoom(-0.25)}>
-            Zoom out
-          </button>
-
-          <button className="" onClick={() => this.offsetRight(50)}>
-            Left
-          </button>
-          <button className="" onClick={() => this.offsetRight(-50)}>
-            Right
-          </button>
-
-          <button className="" onClick={() => this.offsetDown(50)}>
-            Up
-          </button>
-          <button className="" onClick={() => this.offsetDown(-50)}>
-            Down
-          </button>
         </div>
       );
     }
