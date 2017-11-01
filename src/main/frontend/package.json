@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --hot --inline ",
-    "eslint": "eslint app"
+    "eslint": "eslint app",
+    "test": "jest app/tests/"
   },
   "repository": {
     "type": "git",
