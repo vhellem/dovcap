@@ -28,6 +28,29 @@ class Container extends React.Component {
     });
   }
 
+  handleClick() {
+    console.log("click", this, this.state);
+    console.log("data", this.props.fullData);
+    // this.setState({
+    //   name: "Pes"
+    // })
+    var newJson = this.props.fullData;
+    var properties = null;
+    //find properties
+    for (let prop of this.props.fullData.viewL) {
+      if (prop.objectReference.id === this.state.id) {
+        properties = prop.objectReference;
+      }
+    }
+
+    //newJson.modelViewL[0].children[0].children[1].children[1].children[0].name="kk"
+
+    console.log("Properties", properties);
+    //this.props.propertiesView(properties);
+
+  }
+
+
   render() {
     const children =
       this.props.container.children.length > 0
@@ -41,6 +64,8 @@ class Container extends React.Component {
                   parentX={this.state.x}
                   parentY={this.state.y}
                   key={child.id}
+                  fullData={this.props.fullData}
+                  propertiesView={this.props.propertiesView}
                 />
               );
             } else if (child.type !== 'Action Button') {
@@ -52,6 +77,8 @@ class Container extends React.Component {
                   parentX={this.state.x}
                   parentY={this.state.y}
                   key={child.id}
+                  fullData={this.props.fullData}
+                  propertiesView={this.props.propertiesView}
                 />
               );
             } else {
@@ -63,6 +90,8 @@ class Container extends React.Component {
                   parentX={this.state.x}
                   parentY={this.state.y}
                   key={child.id}
+                  fullData={this.props.fullData}
+                  propertiesView={this.props.propertiesView}
                 />
               );
             }

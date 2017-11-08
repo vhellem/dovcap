@@ -5,6 +5,7 @@ import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
 import ObjectEmitter from './component/ObjectEmitter';
+import PropertiesView from './component/PropertiesView.js'
 
 class App extends React.Component {
   constructor() {
@@ -23,22 +24,24 @@ class App extends React.Component {
       direction: '',
       lastScrollPos: 0,
       relTypesSelected: [],
+      propertiesView: false
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
     this.offsetDown = this.offsetDown.bind(this);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.propertiesView = this.propertiesView.bind(this);
+    this.renderEnvironment = this.renderEnvironment.bind(this);
   }
   componentWillMount() {
     selectModelFromBackend(this.props.match.params.modelID).then(res => {
       const json = JSON.parse(res.text);
-
+      this.renderEnvironment(json);
+      this.updateWindowDimensions();
+      this.zoom(-0.1);
       this.setState({
         selectedModel: 0,
-        modelViews: json.modelViewL,
-        relationships: json.relationshipL,
-        objectViews: json.viewL,
       });
       if (this.props.match.params.viewID) {
         const model = json.modelViewL.find(
@@ -50,10 +53,6 @@ class App extends React.Component {
           selectedModel: modelIndex,
         });
       }
-
-      console.log(json);
-      this.updateWindowDimensions();
-      this.zoom(-0.1);
     });
 
     this.addListeningToEvents();
@@ -68,6 +67,35 @@ class App extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateWindowDimensions);
     document.removeEventListener('keydown', this.handleKeyDown, false);
+  }
+
+  renderEnvironment(json) {
+    console.log("Whole model render", json);
+    this.setState({
+      fullData: json,
+      modelViews: json.modelViewL,
+      relationships: json.relationshipL,
+      objectViews: json.viewL,
+    });
+  }
+
+  propertiesView(json, part) {
+    console.log("Properties called", json, part);
+    //called from properties
+    if (part) {
+      for (let prop of this.state.fullData.viewL) {
+        if (prop.objectReference.id === this.state.properties.id) {
+          prop.objectReference.valueset = json;
+          console.log("Wants rerender")
+          this.renderEnvironment(this.state.fullData);
+        }
+      }
+    }
+
+    this.setState({
+      propertiesView: !this.state.propertiesView,
+      properties: json
+    });
   }
 
   onChange = activeKey => {
@@ -185,6 +213,9 @@ class App extends React.Component {
     if ((this.state.selectedModel || this.state.selectedModel === 0) && this.state.modelViews) {
       return (
         <div>
+        {this.state.propertiesView ?
+          <PropertiesView width={300} height={400} toggle={this.propertiesView} properties={this.state.properties.valueset}></PropertiesView>
+          : null}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <ModelView
               modelView={this.state.modelViews[this.state.selectedModel]}
@@ -194,6 +225,8 @@ class App extends React.Component {
               yOffset={this.state.yOffset}
               width={this.state.modelViewWidth}
               height={this.state.modelViewHeight}
+              fullData={this.state.fullData}
+              propertiesView={this.propertiesView}
             />
           </div>
           <Tabs activeKey={this.state.selectedModel.toString()} onChange={this.onChange}>
