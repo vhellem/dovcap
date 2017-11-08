@@ -45,6 +45,7 @@ class ModelView extends React.Component {
               fullData={this.props.fullData}
               renderEnvironment={this.props.renderEnvironment}
               propertiesView={this.props.propertiesView}
+              hiddenObjects={this.props.hiddenObjects}
             />
             {this.state.relationships.map(a => <Relationship data={a} />)}
           </Layer>

@@ -21,7 +21,9 @@ class App extends React.Component {
       yOffset: 0,
       modelViewWidth: 0,
       modelViewHeight: 0,
-      propertiesView: false
+      propertiesView: false,
+      hiddenTypes: [],
+      hiddenObjects: [] //objectL UUID4_EB538DC1-8556-438F-A0EE-6B4F8CC6DE3C
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
@@ -29,6 +31,9 @@ class App extends React.Component {
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.renderEnvironment = this.renderEnvironment.bind(this);
     this.propertiesView = this.propertiesView.bind(this);
+    this.saveModel = this.saveModel.bind(this);
+    this.visibility = this.visibility.bind(this);
+    this.clearVisibility = this.clearVisibility.bind(this);
   }
   componentWillMount() {
     getModelsFromBackend().then(res => {
@@ -37,6 +42,30 @@ class App extends React.Component {
       this.updateWindowDimensions();
       this.zoom(-0.1);
     });
+  }
+
+  visibility(id) {
+    var found = false;
+    for (var key in this.state.hiddenObjects) {
+      if (this.state.hiddenObjects[key] === id) {
+        this.state.hiddenObjects[key] = null;
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      this.state.hiddenObjects.push(id);
+    }
+    console.log(id, this.state.hiddenObjects);
+    this.renderEnvironment(this.state.fullData);
+  }
+
+  clearVisibility() {
+    console.log("Clearing visiblity")
+    this.setState({
+      hiddenTypes: [],
+      hiddenObjects: []
+     }, this.renderEnvironment(this.state.fullData));
   }
 
   renderEnvironment(json) {
@@ -109,7 +138,7 @@ class App extends React.Component {
     });
   }
 
-  propertiesView(json, part?) {
+  propertiesView(json, part) {
     console.log("called", json, part);
     //called from properties
     if (part) {
@@ -127,6 +156,15 @@ class App extends React.Component {
     });
   }
 
+  saveModel() {
+    console.log("Save", this.state.fullData)
+    var element = document.createElement("a");
+    var file = new Blob([JSON.stringify(this.state.fullData)], { type: 'text/plain' });
+    element.href = URL.createObjectURL(file);
+    element.download = "model.txt";
+    element.click();
+  }
+
   render() {
     if (
       (this.state.selectedModel || this.state.selectedModel === 0) &&
@@ -141,6 +179,13 @@ class App extends React.Component {
             zoom={this.zoom}
             offsetRight={this.offsetRight}
             offsetDown={this.offsetDown}
+            fullData={this.state.fullData}
+            renderEnvironment={this.renderEnvironment}
+            propertiesView={this.propertiesView}
+            saveModel={this.saveModel}
+            visibility={this.visibility}
+            hiddenObjects={this.state.hiddenObjects}
+            clearVisibility={this.clearVisibility}
           ></Panel>
           {this.state.propertiesView ?
             <PropertiesView width={300} height={400} toggle={this.propertiesView} properties={this.state.properties.valueset}></PropertiesView>
@@ -157,6 +202,7 @@ class App extends React.Component {
               fullData={this.state.fullData}
               renderEnvironment={this.renderEnvironment}
               propertiesView={this.propertiesView}
+              hiddenObjects={this.state.hiddenObjects}
             />
           </div>
         </div>

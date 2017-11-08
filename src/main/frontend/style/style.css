@@ -89,3 +89,26 @@ body .dialog .content input {
   margin: 0 0 0 15px;
   font-size: 12px;
 }
+body .dialog .content select {
+  width: 90%;
+  margin: 0 0 0 15px;
+  font-size: 12px;
+}
+body .dialog .content button {
+  float: left;
+  margin: 15px 0 0 15px;
+}
+body .dialog .tree ul {
+  margin-left: 15px;
+}
+body .dialog .tree ul span {
+  margin-right: 5px;
+}
+body .dialog .tree ul i {
+  color: #727272;
+  margin-left: 5px;
+  cursor: pointer;
+}
+body .dialog .tree ul i:hover {
+  color: #494949;
+}

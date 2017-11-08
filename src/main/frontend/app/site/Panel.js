@@ -3,6 +3,8 @@ import '../../style/bootstrap.css';
 import Tabs from 'antd/lib/tabs'; // for js
 import TreeView from './treeview.js';
 import TypeView from './typeview.js';
+import CreateView from './createview.js';
+import LoadView from './loadview.js';
 
 const TabPane = Tabs.TabPane;
 
@@ -11,9 +13,18 @@ class Panel extends React.Component {
     super(props);
     this.state = {
       treeView: false,
-      typeView: false
+      typeView: false,
+      createView: false,
+      loadView: false
+
     };
     this.toggle = this.toggle.bind(this);
+    this.loadModel = this.loadModel.bind(this);
+  }
+
+  loadModel(files) {
+    console.log("Load file");
+
   }
 
   toggle(name) {
@@ -27,22 +38,40 @@ class Panel extends React.Component {
         typeView: !this.state.typeView
       });
     }
+    else if (name === "CreateView") {
+      this.setState({
+        createView: !this.state.createView
+      });
+    }
+    else if (name === "LoadView") {
+      this.setState({
+        loadView: !this.state.loadView
+      });
+    }
   }
 
   render() {
     return (
       <div className="col-12 header">
         {this.state.treeView ?
-          <TreeView width={300} height={400} toggle={this.toggle}></TreeView>
+          <TreeView toggle={this.toggle} fullData={this.props.fullData} renderEnvironment={this.props.renderEnvironment} propertiesView={this.props.propertiesView} visibility={this.props.visibility} hiddenObjects={this.state.hiddenObjects}></TreeView>
           : null}
 
         {this.state.typeView ?
-          <TypeView width={300} height={400} toggle={this.toggle}></TypeView>
+          <TypeView toggle={this.toggle} fullData={this.props.fullData} renderEnvironment={this.props.renderEnvironment}></TypeView>
           : null}
+
+        {this.state.createView ?
+          <CreateView toggle={this.toggle} fullData={this.props.fullData} renderEnvironment={this.props.renderEnvironment}></CreateView>
+          : null}
+
+          {this.state.loadView ?
+            <LoadView toggle={this.toggle} fullData={this.props.fullData} renderEnvironment={this.props.renderEnvironment}></LoadView>
+            : null}
 
         <div className="row">
 
-          <div className="col-4">
+          <div className="col-3">
             <Tabs
               activeKey={this.props.selectedModel.toString()}
               onChange={this.props.onChange}
@@ -53,19 +82,28 @@ class Panel extends React.Component {
             </Tabs>
           </div>
 
-          <div className="col-4">
+          <div className="col-6">
             <button className="btn button" onClick={() => this.toggle("TreeView")}>
-              Tree view
+              Element view
       </button>
-            <button className="btn button" onClick={() => this.toggle("TypeView")}>
+            {/*<button className="btn button" onClick={() => this.toggle("TypeView")}>
               Type view
+            </button>*/}
+            <button className="btn button" onClick={() => this.toggle("CreateView")}>
+              Create object
     </button>
-            <button className="btn button">
+            <button className="btn button" onClick={() => this.props.clearVisibility()}>
+              Reset visibility
+</button>
+            <button className="btn button" onClick={() => this.props.saveModel()}>
               Save
   </button>
-          </div>
+  <button className="btn button" onClick={() => this.toggle("LoadView")}>
+  Load
+</button>
+         </div>
 
-          <div className="col-4 icons">
+          <div className="col-3 icons">
 
             <div className="zoom">
               <i className="fa fa-plus" onClick={() => this.props.zoom(0.25)}></i>

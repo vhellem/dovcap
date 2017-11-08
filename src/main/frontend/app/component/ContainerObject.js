@@ -145,6 +145,7 @@ class ContainerObject extends React.Component {
                 fullData={this.props.fullData}
                 renderEnvironment={this.props.renderEnvironment}
                 propertiesView={this.props.propertiesView}
+                hiddenObjects={this.props.hiddenObjects}
               />
             );
           } else {
@@ -156,6 +157,7 @@ class ContainerObject extends React.Component {
                 parentX={this.state.x}
                 parentY={this.state.y}
                 key={child.id}
+                hiddenObjects={this.props.hiddenObjects}
               />
             );
           }
@@ -202,45 +204,65 @@ class ContainerObject extends React.Component {
       color2 = "black";
     }
 
-    return (
-      <Group>
-        <Rect
-          x={this.state.x}
-          y={this.state.y}
-          width={this.state.width}
-          height={this.state.height}
-          strokeWidth={strokeWidth}
-          stroke={stroke}
-          cornerRadius={0}
-          draggable
-          onDragMove={this.handleDragMove}
-          onClick={this.handleClick.bind(this)}
 
-          fillLinearGradientStartPoint= {{ x : 0, y : 0}}
-          fillLinearGradientEndPoint= {{ x : 0, y : 50}}
-          fillLinearGradientColorStops= {[0, color1, 1, color2]}
-        />
-        <Image
-          x={this.state.x + (this.state.width / 2 - imageWidth) / 2}
-          y={this.state.y + (this.state.height - imageHeight) / 2}
-          height={imageHeight}
-          width={imageWidth}
-          image={this.state.image}
-        />
-        <Text
-          width={this.state.width * (1 / 2)}
-          height={this.state.height}
-          align="center"
-          x={this.state.x + this.state.width * (1 / 2)}
-          y={this.state.y + this.state.height / 2 - 7}
-          text={this.state.name}
-          witdth={14}
-          fontSize={12}
-          fontFamily="Arial"
-        />
-        {children}
-      </Group>
-    );
+    //hide object
+    var hide = false;
+    for (var key in this.props.hiddenObjects) {
+      if (this.props.hiddenObjects[key] === this.state.id) {
+        hide = true;
+        console.log("HIDING", this.state)
+        break;
+      }
+    }
+
+    if (!hide) {
+      return (
+        <Group>
+          <Rect
+            x={this.state.x}
+            y={this.state.y}
+            width={this.state.width}
+            height={this.state.height}
+            strokeWidth={strokeWidth}
+            stroke={stroke}
+            cornerRadius={0}
+            draggable
+            onDragMove={this.handleDragMove}
+            onClick={this.handleClick.bind(this)}
+
+            fillLinearGradientStartPoint={{ x: 0, y: 0 }}
+            fillLinearGradientEndPoint={{ x: 0, y: 50 }}
+            fillLinearGradientColorStops={[0, color1, 1, color2]}
+          />
+          <Image
+            x={this.state.x + (this.state.width / 2 - imageWidth) / 2}
+            y={this.state.y + (this.state.height - imageHeight) / 2}
+            height={imageHeight}
+            width={imageWidth}
+            image={this.state.image}
+          />
+          <Text
+            width={this.state.width * (1 / 2)}
+            height={this.state.height}
+            align="center"
+            x={this.state.x + this.state.width * (1 / 2)}
+            y={this.state.y + this.state.height / 2 - 7}
+            text={this.state.name}
+            witdth={14}
+            fontSize={12}
+            fontFamily="Arial"
+          />
+          {children}
+        </Group>
+      );
+    }
+    else {
+      return (
+        <Group>
+
+        </Group>
+      )
+    }
   }
 }
 
