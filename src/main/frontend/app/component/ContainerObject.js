@@ -33,8 +33,6 @@ class ContainerObject extends React.Component {
       id: containerJson.objectReference.id,
     };
 
-    // console.log(this.props.container.name);
-
     if (containerJson.objectReference.valueset.iconProp) {
       let img = containerJson.objectReference.valueset.iconProp;
       img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
@@ -98,15 +96,12 @@ class ContainerObject extends React.Component {
       emitter.emit('Users');
     }
 
-    //click
-    console.log("click", this, this.state);
-    console.log("data", this.props.fullData);
     // this.setState({
     //   name: "Pes"
     // })
     var newJson = this.props.fullData;
     var properties = null;
-    //find properties
+    // find properties
     for (let prop of this.props.fullData.viewL) {
       if (prop.objectReference.id === this.state.id) {
         properties = prop.objectReference;

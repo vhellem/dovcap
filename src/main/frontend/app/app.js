@@ -5,7 +5,7 @@ import Tabs from 'antd/lib/tabs'; // for js
 import 'antd/lib/tabs/style/css';
 const TabPane = Tabs.TabPane;
 import ObjectEmitter from './component/ObjectEmitter';
-import PropertiesView from './component/PropertiesView.js'
+import PropertiesView from './component/PropertiesView.js';
 
 class App extends React.Component {
   constructor() {
@@ -24,7 +24,7 @@ class App extends React.Component {
       direction: '',
       lastScrollPos: 0,
       relTypesSelected: [],
-      propertiesView: false
+      propertiesView: false,
     };
     this.zoom = this.zoom.bind(this);
     this.offsetRight = this.offsetRight.bind(this);
@@ -37,6 +37,7 @@ class App extends React.Component {
   componentWillMount() {
     selectModelFromBackend(this.props.match.params.modelID).then(res => {
       const json = JSON.parse(res.text);
+      console.log('Whole JSON', json);
       this.renderEnvironment(json);
       this.updateWindowDimensions();
       this.zoom(-0.1);
@@ -70,7 +71,6 @@ class App extends React.Component {
   }
 
   renderEnvironment(json) {
-    console.log("Whole model render", json);
     this.setState({
       fullData: json,
       modelViews: json.modelViewL,
@@ -80,13 +80,11 @@ class App extends React.Component {
   }
 
   propertiesView(json, part) {
-    console.log("Properties called", json, part);
-    //called from properties
+    // called from properties
     if (part) {
       for (let prop of this.state.fullData.viewL) {
         if (prop.objectReference.id === this.state.properties.id) {
           prop.objectReference.valueset = json;
-          console.log("Wants rerender")
           this.renderEnvironment(this.state.fullData);
         }
       }
@@ -94,7 +92,7 @@ class App extends React.Component {
 
     this.setState({
       propertiesView: !this.state.propertiesView,
-      properties: json
+      properties: json,
     });
   }
 
@@ -213,9 +211,14 @@ class App extends React.Component {
     if ((this.state.selectedModel || this.state.selectedModel === 0) && this.state.modelViews) {
       return (
         <div>
-        {this.state.propertiesView ?
-          <PropertiesView width={300} height={400} toggle={this.propertiesView} properties={this.state.properties.valueset}></PropertiesView>
-          : null}
+          {this.state.propertiesView ? (
+            <PropertiesView
+              width={300}
+              height={400}
+              toggle={this.propertiesView}
+              properties={this.state.properties.valueset}
+            />
+          ) : null}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <ModelView
               modelView={this.state.modelViews[this.state.selectedModel]}
