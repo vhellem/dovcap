@@ -81,6 +81,8 @@ class ModelView extends React.Component {
               parentHeight={this.state.height * this.state.zoom}
               parentX={this.state.x + this.state.xOffset}
               parentY={this.state.y + this.state.yOffset}
+              fullData={this.props.fullData}
+              propertiesView={this.props.propertiesView}
             />
             {this.state.relationships.map(a => <Relationship data={a} visible={visible} />)}
           </Layer>
