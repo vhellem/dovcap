@@ -33,8 +33,6 @@ class ContainerObject extends React.Component {
       id: containerJson.objectReference.id,
     };
 
-    // console.log(this.props.container.name);
-
     if (containerJson.objectReference.valueset.iconProp) {
       let img = containerJson.objectReference.valueset.iconProp;
       img = img.substring(img.lastIndexOf('/') + 1, img.lastIndexOf('.') + 4);
@@ -97,6 +95,19 @@ class ContainerObject extends React.Component {
     if (this.state.name === 'Users') {
       emitter.emit('Users');
     }
+
+    // this.setState({
+    //   name: "Pes"
+    // })
+    var newJson = this.props.fullData;
+    var properties = null;
+    // find properties
+    for (let prop of this.props.fullData.viewL) {
+      if (prop.objectReference.id === this.state.id) {
+        properties = prop.objectReference;
+      }
+    }
+    this.props.propertiesView(properties);
   };
 
   handleDragMove = e => {
@@ -129,6 +140,8 @@ class ContainerObject extends React.Component {
                   parentX={this.state.x}
                   parentY={this.state.y}
                   key={child.id}
+                  fullData={this.props.fullData}
+                  propertiesView={this.props.propertiesView}
                 />
               );
             } else if (child.type !== 'Action Button') {
@@ -140,6 +153,8 @@ class ContainerObject extends React.Component {
                   parentX={this.state.x}
                   parentY={this.state.y}
                   key={child.id}
+                  fullData={this.props.fullData}
+                  propertiesView={this.props.propertiesView}
                 />
               );
             } else {
@@ -151,6 +166,8 @@ class ContainerObject extends React.Component {
                   parentX={this.state.x}
                   parentY={this.state.y}
                   key={child.id}
+                  fullData={this.props.fullData}
+                  propertiesView={this.props.propertiesView}
                 />
               );
             }
@@ -226,7 +243,7 @@ class ContainerObject extends React.Component {
           draggable
           onDragMove={this.handleDragMove}
           fill={col}
-          onClick={this.handleClick}
+          onClick={this.handleClick.bind(this)}
         />
         <Image
           x={this.state.x + (this.state.width / 2 - imageWidth) / 2}
@@ -235,7 +252,7 @@ class ContainerObject extends React.Component {
           width={imageWidth}
           image={this.state.image}
           offsetX={offSetX}
-          onClick={this.handleClick}
+          onClick={this.handleClick.bind(this)}
         />
         <Text
           width={this.state.width * (1 / 2)}
