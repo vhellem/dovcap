@@ -91,23 +91,22 @@ class ContainerObject extends React.Component {
     const emitter = ObjectEmitter;
     if (this.state.name === 'Tasks') {
       emitter.emit('tasks');
-    }
-    if (this.state.name === 'Users') {
+    } else if (this.state.name === 'Users') {
       emitter.emit('Users');
-    }
-
-    // this.setState({
-    //   name: "Pes"
-    // })
-    var newJson = this.props.fullData;
-    var properties = null;
-    // find properties
-    for (let prop of this.props.fullData.viewL) {
-      if (prop.objectReference.id === this.state.id) {
-        properties = prop.objectReference;
+    } else {
+      // this.setState({
+      //   name: "Pes"
+      // })
+      var newJson = this.props.fullData;
+      var properties = null;
+      // find properties
+      for (let prop of this.props.fullData.viewL) {
+        if (prop.objectReference.id === this.state.id) {
+          properties = prop.objectReference;
+        }
       }
+      this.props.propertiesView(properties);
     }
-    this.props.propertiesView(properties);
   };
 
   handleDragMove = e => {
