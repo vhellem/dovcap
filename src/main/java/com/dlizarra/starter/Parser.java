@@ -185,7 +185,7 @@ public class Parser extends DefaultHandler {
     @Override
     public void startElement(String s, String s1, String elementName,
                             Attributes attributes) throws SAXException {
-      //try {
+      try {
         if (elementName.equals("metis")) {
           // Maybe we will need this info later
         }
@@ -274,29 +274,28 @@ public class Parser extends DefaultHandler {
             addIcon(attributes.getValue("macro"));
           }
         }
+
         if (elementName.equals("string")) {
-          try{
+
           String name = attributes.getValue("name");
           if (name.length() >= 4) {
             if (name.substring(0, 4).equals("icon")) {
               readingIcon = true;
             }
-          }}
-          catch(NullPointerException e){
-            //avoid wrong assumptions
           }
-
-
         }
+
+
+
         if (elementName.equals("url")) {
           if (attributes.getValue("name").equals("filename")) {
             addIcon(attributes.getValue("xlink:href"));
           }
         }
-   //   }
-      //catch(NullPointerException e){
+      }
+      catch(NullPointerException e){
         //This is to avoid missing objects, when we have taken wrong assumptions
-      //}
+      }
     }
 
     private void addOrUpdateElement(Map<String, myObject> map, String name,
