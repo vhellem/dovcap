@@ -185,37 +185,37 @@ public class Parser extends DefaultHandler {
     @Override
     public void startElement(String s, String s1, String elementName,
                             Attributes attributes) throws SAXException {
-
+      try {
         if (elementName.equals("metis")) {
-            // Maybe we will need this info later
+          // Maybe we will need this info later
         }
         if (elementName.equals("object")) {
-            addOrUpdateElement(objectM, attributes.getValue("id"), attributes);
+          addOrUpdateElement(objectM, attributes.getValue("id"), attributes);
         }
         if (elementName.equals("objectview")) {
-            addOrUpdateElement(viewM, attributes.getValue("id"), attributes);
+          addOrUpdateElement(viewM, attributes.getValue("id"), attributes);
         }
         if (elementName.equals("child-link")) {
-            objectTmp.addChild(attributes.getValue("xlink:href"));
+          objectTmp.addChild(attributes.getValue("xlink:href"));
         }
         if (readingValueset) {
-            tmpName = attributes.getValue("name");
+          tmpName = attributes.getValue("name");
         }
-        if(elementName.equals("modelview")) {
-            addOrUpdateElement(modelViewM, attributes.getValue("id"), attributes);
+        if (elementName.equals("modelview")) {
+          addOrUpdateElement(modelViewM, attributes.getValue("id"), attributes);
         }
         if (elementName.equals("valueset")) {
-            HashMap<String, String> modelAtt = new HashMap();
-            for (int i =0; i<attributes.getLength(); i++){
-                modelAtt.put(attributes.getQName(i), attributes.getValue(i));
-            }
+          HashMap<String, String> modelAtt = new HashMap();
+          for (int i = 0; i < attributes.getLength(); i++) {
+            modelAtt.put(attributes.getQName(i), attributes.getValue(i));
+          }
 
-            readingValueset = true;
-            if (attributes.getValue("xlink:role").equals("type")) {
-                objectTmp.setType(attributes.getValue("xlink:title"));
-            }
-            linkedDocsL.add(attributes.getValue("xlink:href"));
-            objectTmp.setAttributes(modelAtt);
+          readingValueset = true;
+          if (attributes.getValue("xlink:role").equals("type")) {
+            objectTmp.setType(attributes.getValue("xlink:title"));
+          }
+          linkedDocsL.add(attributes.getValue("xlink:href"));
+          objectTmp.setAttributes(modelAtt);
         }
         // If this is uncommented, the ITRV submodels will be loaded.
         // They get their own panes though, and are not displayed properly.
@@ -227,66 +227,73 @@ public class Parser extends DefaultHandler {
         //   }
         // }
         if (elementName.equals("relationship")) {
-            addOrUpdateElement(relationshipM, attributes.getValue("id"), attributes);
-            readingRelationship = true;
+          addOrUpdateElement(relationshipM, attributes.getValue("id"), attributes);
+          readingRelationship = true;
         }
         if (elementName.equals("relationshipview")) {
-            addOrUpdateElement(relationshipViewM, attributes.getValue("id"), attributes);
-            readingRelationshipView = true;
+          addOrUpdateElement(relationshipViewM, attributes.getValue("id"), attributes);
+          readingRelationshipView = true;
         }
         if (elementName.equals("origin-link")) {
-            if (readingRelationshipView){
-                objectTmp.addValueset("origin_role" , attributes.getValue("xlink:role"));
-                objectTmp.addValueset("origin_title", attributes.getValue("xlink:title"));
-                objectTmp.addValueset("origin_href" , attributes.getValue("xlink:href"));
-            }
+          if (readingRelationshipView) {
+            objectTmp.addValueset("origin_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("origin_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("origin_href", attributes.getValue("xlink:href"));
+          }
         }
         if (elementName.equals("target-link")) {
-            if (readingRelationshipView){
-                objectTmp.addValueset("target_role" , attributes.getValue("xlink:role"));
-                objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
-                objectTmp.addValueset("target_href" , attributes.getValue("xlink:href"));
-            }
+          if (readingRelationshipView) {
+            objectTmp.addValueset("target_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("target_href", attributes.getValue("xlink:href"));
+          }
         }
         if (elementName.equals("origin")) {
-            if (readingRelationship) {
-                objectTmp.addValueset("origin_seq"  , attributes.getValue("seq"));
-                objectTmp.addValueset("origin_role" , attributes.getValue("xlink:role"));
-                objectTmp.addValueset("origin_title", attributes.getValue("xlink:title"));
-                objectTmp.addValueset("origin_href" , attributes.getValue("xlink:href"));
-            }
+          if (readingRelationship) {
+            objectTmp.addValueset("origin_seq", attributes.getValue("seq"));
+            objectTmp.addValueset("origin_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("origin_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("origin_href", attributes.getValue("xlink:href"));
+          }
         }
         if (elementName.equals("target")) {
-            if (readingRelationship){
-                objectTmp.addValueset("target_seq"  , attributes.getValue("seq"));
-                objectTmp.addValueset("target_role" , attributes.getValue("xlink:role"));
-                objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
-                objectTmp.addValueset("target_href" , attributes.getValue("xlink:href"));
-            }
+          if (readingRelationship) {
+            objectTmp.addValueset("target_seq", attributes.getValue("seq"));
+            objectTmp.addValueset("target_role", attributes.getValue("xlink:role"));
+            objectTmp.addValueset("target_title", attributes.getValue("xlink:title"));
+            objectTmp.addValueset("target_href", attributes.getValue("xlink:href"));
+          }
         }
         if (elementName.equals("typeview")) {
-            addOrUpdateElement(typeviewM,
-                              objectXmlFileName+":"+attributes.getValue("id"),
-                              attributes);
+          addOrUpdateElement(typeviewM,
+            objectXmlFileName + ":" + attributes.getValue("id"),
+            attributes);
         }
         if (elementName.equals("replace")) {
-            if (attributes.getValue("tag").equals("icon")) {
-                addIcon(attributes.getValue("macro"));
-            }
+          if (attributes.getValue("tag").equals("icon")) {
+            addIcon(attributes.getValue("macro"));
+          }
         }
         if (elementName.equals("string")) {
-            String name = attributes.getValue("name");
-            if (name.length() >= 4) {
-                if (name.substring(0, 4).equals("icon")) {
-                    readingIcon = true;
-                }
+
+          String name = attributes.getValue("name");
+          if (name.length() >= 4) {
+            if (name.substring(0, 4).equals("icon")) {
+              readingIcon = true;
             }
+          }
+
+
         }
         if (elementName.equals("url")) {
-            if (attributes.getValue("name").equals("filename")) {
-                addIcon(attributes.getValue("xlink:href"));
-            }
+          if (attributes.getValue("name").equals("filename")) {
+            addIcon(attributes.getValue("xlink:href"));
+          }
         }
+      }
+      catch(NullPointerException e){
+        //This is to avoid missing objects, when we have taken wrong assumptions
+      }
     }
 
     private void addOrUpdateElement(Map<String, myObject> map, String name,
