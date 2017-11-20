@@ -314,30 +314,34 @@ public class Parser extends DefaultHandler {
 
     @Override
     public void endElement(String s, String s1, String element) throws SAXException {
+      try {
         if (element.equals("valueset")) {
-            readingValueset = false;
+          readingValueset = false;
         }
         if (readingValueset) {
-            if (tmpName != null) {
-                if (tmpName.equals("name")) {
-                    objectTmp.setName(tmpValue);
-                }
-                else {
-                    objectTmp.addValueset(tmpName, tmpValue);
-                }
+          if (tmpName != null) {
+            if (tmpName.equals("name")) {
+              objectTmp.setName(tmpValue);
+            } else {
+              objectTmp.addValueset(tmpName, tmpValue);
             }
+          }
         }
         if (element.equals("relationshipview")) {
-            readingRelationshipView = false;
+          readingRelationshipView = false;
         }
         if (element.equals("relationship")) {
-            readingRelationship = false;
+          readingRelationship = false;
         }
         if (element.equals("string")) {
-            if (readingIcon & tmpValue != null) {
-                addIcon(tmpValue);
-            }
+          if (readingIcon & tmpValue != null) {
+            addIcon(tmpValue);
+          }
         }
+      }
+      catch(NullPointerException e){
+        //This is here to avoid errors when we have made the wrong assumptions for what values can come
+      }
     }
 
     @Override
